@@ -8,7 +8,7 @@
   };
   config = lib.mkIf config.bundles.desktopFull.retroarch.enable {
     environment.systemPackages = with pkgs; [
-      retroarch.withCores [
+      (retroarch.withCores [
         libretro.snes9x
         libretro.beetle-psx-hw
         libretro.beetle-gba
@@ -20,7 +20,7 @@
         libretro.ppsspp
         libretro.nestopia
         libretro.easyrpg
-      ]
+      ])
     ];
   };
 }
