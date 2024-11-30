@@ -1,8 +1,8 @@
 {osConfig, lib, ...}: 
 lib.mkIf (osConfig.networking.hostName == "cyberia") {
   home = {
-    username = "${osConfig.userAccount.username}";
-    homeDirectory = "/home/${osConfig.userAccount.username}";
+    username = "${osConfig.myOptions.userAccount.username}";
+    homeDirectory = "/home/${osConfig.myOptions.userAccount.username}";
     sessionVariables = {
       EDITOR = "nvim";
       TERMINAL = "foot";
