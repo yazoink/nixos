@@ -6,7 +6,7 @@ pkgs.stdenv.mkDerivation {
       owner = "yazoink";
       repo = "carob-theme";
       rev = "30959777a63c9d21e6ed7cf2b10b2fcdca142dbd";
-      sha256 = "sha256-/fnXQ7df08/KP6Gs/GWY2zn1tw6GdhHrI2L+vcNwwF0=";
+      sha256 = "sha256-z+lEZYVgRWc2Hv07K/UFK2/fOJPtWLd1m3P65UQSBr8=";
     };
 
     dontUnpack = true;
