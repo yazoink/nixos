@@ -1,4 +1,4 @@
-{config, lib, ...}:
+{config, lib, osConfig, ...}:
 {
   options = {
     bundles.desktopBase.foot.enable = lib.mkOption {
@@ -12,7 +12,7 @@
       #server.enable = true;
       settings = {
         main = {
-          pad = "24x24";
+          pad = if osConfig.networking.hostName == "cyberia" then "15x15" else (if osConfig.networking.hostName == "fluoride" then "24x24" else "20x20");
         };
         cursor = {
           style = "beam";
