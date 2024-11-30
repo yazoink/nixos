@@ -95,6 +95,11 @@
             #overrideGaps = false;
           };
         };
+        dwindle = {
+          no_gaps_when_only = false;
+          pseudotile = true;
+          preserve_split = true;
+        };
         /*master = {
           new_status = "slave";
           };*/
@@ -117,7 +122,7 @@
           "$mainMod, F, togglefloating,"
 
           "$mainMod, Tab, overview:toggle,"
-          "$mainMod SHIFT, P, pseudotile,"
+          "$mainMod SHIFT, P, pseudo,"
 
           #"$mainMod, left, scroller:movefocus, l"
           #"$mainMod, right, scroller:movefocus, r"
