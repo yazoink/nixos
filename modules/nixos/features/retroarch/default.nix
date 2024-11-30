@@ -8,7 +8,7 @@
   };
   config = lib.mkIf config.bundles.desktopFull.retroarch.enable {
     environment.systemPackages = with pkgs; [
-      (retroarch.override {
+      (retroarch-full.override {
         cores = with libretro; [
           genesis-plus-gx
           snes9x
