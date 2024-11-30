@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=HyprViewBinds
+Comment=GTK3 GUI for quickly viewing Hyprland keybinds
+Type=Application
+Categories=System
+Exec=hyprviewbinds.py
+Icon=~/.local/share/hyprviewbinds/icon.png

@@ -1,0 +1,9 @@
+keys:
+  - &fluoride age1czyrvmxw24zd6dmyhu3px4dwfc7ej2n5e5lg50cvyzp4ar8pmyaqu3h2n0
+  - &cyberia age1409ase7dt3egkqxrlhrd6y92gj8er70glazhltxsygmhf94hudts299kek
+creation_rules:
+  - path_regex: secrets/secrets.yaml$
+    key_groups:
+      - age:
+        - *fluoride
+        - *cyberia

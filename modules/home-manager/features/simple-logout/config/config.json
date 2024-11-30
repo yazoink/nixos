@@ -1,0 +1,43 @@
+{
+  "max_buttons_per_row": 6,
+  "show_images": true,
+  "show_labels": false,
+  "buttons": [
+    {
+      "name": "lock",
+      "image": "icons/lock.png",
+      "label": "Lock",
+      "command": "gtklock"
+    },
+    {
+      "name": "hibernate",
+      "image": "icons/hibernate.png",
+      "label": "Hibernate",
+      "command": "systemctl hibernate"
+    },
+    {
+      "name": "shutdown",
+      "image": "icons/shutdown.png",
+      "label": "Shutdown",
+      "command": "systemctl shutdown"
+    },
+    {
+      "name": "suspend",
+      "image": "icons/suspend.png",
+      "label": "Suspend",
+      "command": "systemctl suspend"
+    },
+    {
+      "name": "logout",
+      "image": "icons/logout.png",
+      "label": "Logout",
+      "command": "hyprctl dispatch exit"
+    },
+    {
+      "name": "reboot",
+      "image": "icons/reboot.png",
+      "label": "Reboot",
+      "command": "systemctl reboot"
+    }
+  ]
+}
