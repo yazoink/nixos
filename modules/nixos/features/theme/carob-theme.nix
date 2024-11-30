@@ -5,21 +5,21 @@ pkgs.stdenv.mkDerivation {
     src = pkgs.fetchFromGitHub {
       owner = "yazoink";
       repo = "carob-theme";
-      rev = "45f336b99f228e30fcd073d66720f11827eb43fd";
-      sha256 = "sha256-/fnXQ7dp08/KP6Gs/GWY2zn1tw6GdhHrI2L+vcNwwF0=";
+      rev = "30959777a63c9d21e6ed7cf2b10b2fcdca142dbd";
+      sha256 = "sha256-/fnXQ7df08/KP6Gs/GWY2zn1tw6GdhHrI2L+vcNwwF0=";
     };
 
     dontUnpack = true;
 
     installPhase = ''
       mkdir -p $out/share/sddm/themes
-      mkdir -p $out/share/icons/Carob
-      mkdir -p $out/share/icons/Bibata-Carob
+      mkdir -p $out/share/icons
+      mkdir -p $out/share/icons
       mkdir -p $out/share/themes
       #mkdir -p $out/share/Kvantum
 
-      cp -r $src/cursors/Bibata-Carob/* $out/share/icons/Bibata-Carob
-      cp -r $src/icons/carob/* $out/share/icons/Carob
+      cp -r $src/cursors/* $out/share/icons
+      cp -r $src/icons/* $out/share/icons
       cp -r $src/sddm/* $out/share/sddm/themes
       #cp -r $src/kvantum/* $out/share/Kvantum
     '';
