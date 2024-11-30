@@ -7,6 +7,7 @@
         mainBar = {
           modules-right = [
             #"mpd"
+            "idle_inhibitor"
             "tray"
           ];
           "mpd".max-length = 50;

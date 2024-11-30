@@ -8,6 +8,8 @@
           modules-right = [
             #"mpd"
             "wireplumber"
+            "group/bat"
+            "idle_inhibitor"
             "tray"
           ];
           "group/bat" = {

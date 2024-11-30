@@ -30,10 +30,6 @@
           modules-center = [
             "clock"
           ];
-          modules-right = [
-            "group/bat"
-            "idle_inhibitor"
-          ];
           "group/usage" = {
             orientation = "horizontal";
             modules = [
