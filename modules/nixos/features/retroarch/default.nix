@@ -9,19 +9,17 @@
   config = lib.mkIf config.bundles.desktopFull.retroarch.enable {
     environment.systemPackages = with pkgs; [
       retroarch.withCores [
-        genesis-plus-gx
-        snes9x
-        beetle-psx-hw
-        beetle-gba
-        desmume
-        dolphin
-        dosbox-pure
-        easyrpg
-        mupen64plus
-        nestopia
-        pcsx2
-        ppsspp
-        flycast
+        libretro.snes9x
+        libretro.beetle-psx-hw
+        libretro.beetle-gba
+        libretro.desmume
+        libretro.pcsx2
+        libretro.mupen64plus
+        libretro.dolphin
+        libretro.flycast
+        libretro.ppsspp
+        libretro.nestopia
+        libretro.easyrpg
       ]
     ];
   };
