@@ -32,7 +32,7 @@
           "application/pdf" = ["firefox.desktop"]; # .pdf
           "application/zip" = ["org.gnome.FileRoller.desktop"];
           "text/*" = ["org.xfce.mousepad.desktop"]; # Any text files
-          "video/*" = ["mpv.desktop"]; # Any video files
+          "video/*" = ["vlc.desktop"]; # Any video files
           "x-scheme-handler/https" = ["firefox.desktop"]; # Links
           "x-scheme-handler/http" = ["firefox.desktop"]; # Links
           "x-scheme-handler/mailto" = ["firefox.desktop"]; # Links
