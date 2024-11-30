@@ -3,14 +3,16 @@
   config = lib.mkIf config.bundles.base.nixvim.enable {
     programs.nixvim = {
       plugins = {
-        lualine = {
+        /*lualine = {
           enable = true;
           settings = {
             options = {
               theme = "auto";
             };
           };
-        };
+        };*/
+
+        airline.enable = true;
 
         floaterm = {
           enable = true;
