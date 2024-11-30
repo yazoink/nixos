@@ -15,6 +15,7 @@
       material-symbols
       terminus_font
       terminus_font_ttf
+      nerd-fonts.terminess-ttf
       _0xproto
     ];
 
