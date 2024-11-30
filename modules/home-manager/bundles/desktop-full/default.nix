@@ -24,10 +24,10 @@
       ### gui file viewers ###
       vlc
       evince
-      xfce.mousepad
       sublime-music
 
       ### gui file editors ###
+      mate.pluma
       audacity
       gimp-with-plugins
       libreoffice-qt
