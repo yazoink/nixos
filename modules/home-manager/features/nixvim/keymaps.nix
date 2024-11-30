@@ -18,13 +18,21 @@
           action = "<Cmd>Neotree toggle<CR>";
           key = "<leader>e";
         }
-        {
+        /*{
           key = "<Tab>";
           action = "<Cmd>BufferNext<CR>";
         }
         {
           key = "<S-Tab>";
           action = "<cmd>BufferLast<CR>";
+        }*/
+        {
+          key = "<Tab>";
+          action = "<Cmd>tabNext<CR>";
+        }
+        {
+          key = "<S-Tab>";
+          action = "<cmd>tabLast<CR>";
         }
         {
           mode = "n";

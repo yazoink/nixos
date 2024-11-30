@@ -37,7 +37,7 @@
           };
         };
 
-        barbar.enable = true;
+        /*barbar.enable = true;
         dressing = {
           enable = true;
           settings = {
@@ -74,7 +74,7 @@
               enabled = true;
             };
           };
-        };
+        };*/
 
         alpha = {
           enable = true;
