@@ -6,9 +6,9 @@
       plugin = "base16-nvim";
     };
 
-    programs.nixvim = {
+    /*programs.nixvim = {
       colorschemes.base16 = {
-        enable = false;
+        enable = true;
         colorscheme = {
           base00 = "#${config.stylix.base16Scheme.base00}";
           base01 = "#${config.stylix.base16Scheme.base01}";
@@ -28,6 +28,6 @@
           base0F = "#${config.stylix.base16Scheme.base0F}";
         };
       };
-    };
+    };*/
   };
 }
