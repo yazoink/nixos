@@ -15,7 +15,7 @@
     services.displayManager.sddm = {
       enable = true;
       wayland.enable = true;
-      theme = "carob";
+      theme = if config.networking.hostname == "cyberia" then "carob-small-resolution" else (if (config.networking.hostname == "fluoride") then "carob-large-resolution" else "carob");
       settings = {
         Theme = {
           CursorTheme = "Bibata-Carob";
