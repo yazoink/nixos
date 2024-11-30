@@ -13,7 +13,8 @@
     services.mako = {
       enable = true;
       anchor = "top-right";
-      borderRadius = 4;
+      borderRadius = 5;
+      borderColor = lib.mkForce "#3B3431";
       padding = "10";
       margin = "5";
       borderSize = 2;
