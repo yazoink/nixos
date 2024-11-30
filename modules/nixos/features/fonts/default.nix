@@ -11,7 +11,6 @@
       noto-fonts
       noto-fonts-emoji
       font-awesome
-      nerdfonts
       twemoji-color-font
       material-symbols
       terminus_font
