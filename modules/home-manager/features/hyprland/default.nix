@@ -117,6 +117,7 @@
           "$mainMod, F, togglefloating,"
 
           "$mainMod, Tab, overview:toggle,"
+          "$mainMod SHIFT, P, pseudotile,"
 
           #"$mainMod, left, scroller:movefocus, l"
           #"$mainMod, right, scroller:movefocus, r"
