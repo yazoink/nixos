@@ -8,7 +8,7 @@
   };
   config = lib.mkIf config.bundles.desktopFull.retroarch.enable {
     environment.systemPackages = with pkgs; [
-      retroarch.withCores(ps: [
+      retroarch.withCores [
         genesis-plus-gx
         snes9x
         beetle-psx-hw
@@ -22,7 +22,7 @@
         pcsx2
         ppsspp
         flycast
-      ])
+      ]
     ];
   };
 }
