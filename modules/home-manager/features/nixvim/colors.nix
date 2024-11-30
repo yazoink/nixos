@@ -1,11 +1,14 @@
 {config, lib, ...}:
 {
   config = lib.mkIf config.bundles.base.nixvim.enable {
-    stylix.targets.nixvim.enable = false;
+    stylix.targets.nixvim = {
+      enable = true;
+      plugin = "base16-nvim";
+    };
 
     programs.nixvim = {
       colorschemes.base16 = {
-        enable = true;
+        enable = false;
         colorscheme = {
           base00 = "#${config.stylix.base16Scheme.base00}";
           base01 = "#${config.stylix.base16Scheme.base01}";
