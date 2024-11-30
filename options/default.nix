@@ -41,6 +41,10 @@
           type = lib.types.bool;
           default = false;
         };
+        tlp.enable = lib.mkOption {
+          type = lib.types.bool;
+          default = false;
+        };
         virtManager.enable = lib.mkOption {
           type = lib.types.bool;
           default = false;
