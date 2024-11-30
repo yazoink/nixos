@@ -23,7 +23,7 @@
 
       ### gui file viewers ###
       vlc
-      bookworm
+      evince
       xfce.mousepad
       sublime-music
 
