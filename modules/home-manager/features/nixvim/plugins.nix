@@ -168,7 +168,7 @@
               };
             };
             popupmenu = {
-              enabled = true;
+              enabled = false;
               backend = "nui";
             };
             format = {
