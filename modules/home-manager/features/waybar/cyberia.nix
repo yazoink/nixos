@@ -8,6 +8,7 @@
           modules-right = [
             #"mpd"
             "wireplumber"
+            "tray"
           ];
           "group/bat" = {
             orientation = "horizontal";

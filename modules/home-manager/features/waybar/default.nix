@@ -33,8 +33,6 @@
           modules-right = [
             "group/bat"
             "idle_inhibitor"
-            "tray"
-            "custom/notification"
           ];
           "group/usage" = {
             orientation = "horizontal";

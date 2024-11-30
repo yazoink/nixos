@@ -5,7 +5,10 @@
     programs.waybar = {
       settings = {
         mainBar = {
-          #modules-right = ["mpd"];
+          modules-right = [
+            #"mpd"
+            "tray"
+          ];
           "mpd".max-length = 50;
         };
       };
