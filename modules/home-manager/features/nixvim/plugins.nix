@@ -12,7 +12,7 @@
           };
         };*/
 
-        airline.enable = true;
+        lightline.enable = true;
 
         floaterm = {
           enable = true;
