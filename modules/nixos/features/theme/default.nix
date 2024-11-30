@@ -20,11 +20,7 @@ in
     stylix = {
       enable = true;
       targets = {
-        nixos-icons.enable = true;
         grub.enable = false;
-        regreet.enable = true;
-        gtk.enable = true;
-        #console.enable = false;
       };
       cursor = {
         name = "Bibata-Carob";
