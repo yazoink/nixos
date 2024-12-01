@@ -17,8 +17,9 @@
       prismlauncher
       osu-lazer-bin
       mangohud
-      gnome-chess
+      pychess
       space-cadet-pinball
+      kdePackages.knavalbattle
 
       ### communication ###
       signal-desktop
@@ -40,13 +41,13 @@
       keepassxc
       easyeffects
       transmission_4-gtk
+      bleachbit
       #qbittorrent-enhanced
       nicotine-plus
       kdePackages.kruler
       gnome-maps
       gnome-weather
       gnome-clocks
-      gnome-calendar
       gnome-disk-utility
       gnome-font-viewer
       galculator
