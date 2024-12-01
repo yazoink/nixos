@@ -4,7 +4,6 @@
     bundles.desktopFull = {
       etterna.enable = true;
       firefox.enable = true;
-      kdeconnect.enable = true;
       kjtocal.enable = true;
       kooha.enable = true;
       ncmpcpp.enable = true;
@@ -71,7 +70,6 @@
   imports = [
     ../../features/etterna
     ../../features/firefox
-    ../../features/kdeconnect
     ../../features/kjtocal
     ../../features/kooha
     ../../features/ncmpcpp

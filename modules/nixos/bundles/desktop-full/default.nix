@@ -3,6 +3,7 @@
   imports = [
     ../../features/adb
     ../../features/gamemode
+    ../../features/kdeconnect
     ../../features/mpd
     ../../features/mullvad
     ../../features/printing
@@ -14,6 +15,7 @@
     bundles.desktopFull = {
       adb.enable = true;
       gamemode.enable = true;
+      kdeconnect.enable = true;
       mpd.enable = true;
       mullvad.enable = true;
       printing.enable = true;

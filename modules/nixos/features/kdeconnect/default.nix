@@ -7,6 +7,8 @@
     };
   };
   config = lib.mkIf config.bundles.desktopFull.kdeconnect.enable {
-    services.kdeconnect.enable = true;
+    programs.kdeconnect.enable = true;
+    networking.firewall.allowedTCPPorts = [1764];
+    networking.firewall.allowedUDPPorts = [1764];
   };
 }
