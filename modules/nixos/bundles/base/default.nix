@@ -35,6 +35,8 @@
       curl
       psmisc
       coreutils-full
+      ntfs3g
+      util-linux
 
       ##### Compression/Decompression #####
       zip
