@@ -72,7 +72,8 @@
           libredirect
           floccus
           firefox-color
-        ] ++ (if osConfig.networking.hostName == "cyberia" then [inputs.firefox-addons.packages.h264ify] else []);
+          enhanced-github
+        ] ++ (if osConfig.networking.hostName == "cyberia" then [inputs.firefox-addons.packages.enhanced-h264ify] else []);
         extraConfig = builtins.readFile ./user.js;
       };
     };
