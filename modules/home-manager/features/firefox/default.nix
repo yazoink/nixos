@@ -73,7 +73,7 @@
           floccus
           firefox-color
           enhanced-github
-        ] ++ (if osConfig.networking.hostName == "cyberia" then [inputs.firefox-addons.packages.enhanced-h264ify] else []);
+        ] ++ (if osConfig.networking.hostName == "cyberia" then [enhanced-h264ify] else []);
         extraConfig = builtins.readFile ./user.js;
       };
     };
