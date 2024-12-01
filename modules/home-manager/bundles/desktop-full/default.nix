@@ -17,13 +17,15 @@
       prismlauncher
       osu-lazer-bin
       mangohud
+      gnome-chess
+      space-cadet-pinball
 
       ### communication ###
       signal-desktop
 
       ### gui file viewers ###
       vlc
-      evince
+      mate.atril
       sublime-music
 
       ### gui file editors ###
@@ -38,8 +40,16 @@
       keepassxc
       easyeffects
       transmission_4-gtk
+      #qbittorrent-enhanced
       nicotine-plus
       kdePackages.kruler
+      gnome-maps
+      gnome-weather
+      gnome-clocks
+      gnome-calendar
+      gnome-disk-utility
+      gnome-font-viewer
+      galculator
 
       ### programming ####
       texliveFull

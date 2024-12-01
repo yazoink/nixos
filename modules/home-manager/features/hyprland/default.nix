@@ -239,6 +239,7 @@
         windowrulev2 = nomaxsize, title:^(Wine configuration)$
         windowrulev2 = float, class:^(org.kde.kruler)$
         windowrulev2 = float, title:^(HyprViewBinds)$
+        windowrulev2 = float, title:^(galculator)$
         windowrulev2 = fullscreen, title:^((E|e)tterna)(.*)$
       '';
     };
