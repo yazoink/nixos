@@ -4,8 +4,8 @@ let
     "rebuild" = "sudo nixos-rebuild switch --flake ~/nixos#$(hostname)";
     "rebuild-test" = "sudo nixos-rebuild test --flake ~/nixos#$(hostname)";
     "update" = "cd ~/nixos && sudo nix flake update";
-    "clean" = "sudo nix-collect-garbage -d";
-    "optimise" = "sudo nix-store --optimise";
+    "clean" = "sudo nix-store --gc && nix-store --gc && sudo nix-collect-garbage -d && nix-collect-garbage -d";
+    "optimise" = "sudo nix-store --optimise && nix-store --optimise";
     "firefox-edit" = "nvim ~/nixos/modules/home-manager/applications/firefox/default.nix";
     "chx" = "chmod u+x";
     "cp" = "cp -v";

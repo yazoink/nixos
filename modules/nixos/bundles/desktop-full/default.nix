@@ -15,7 +15,7 @@
     bundles.desktopFull = {
       adb.enable = true;
       gamemode.enable = true;
-      kdeconnect.enable = true;
+      kdeconnect.enable = false; # didn't work
       mpd.enable = true;
       mullvad.enable = true;
       printing.enable = true;
