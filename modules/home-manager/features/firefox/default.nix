@@ -13,7 +13,6 @@
     ];
 
     home.sessionVariables = {
-      MOZ_ENABLE_WAYLAND = 1;
       MOZ_USE_XINPUT2 = 1;
     };
 
@@ -72,8 +71,13 @@
           libredirect
           floccus
           firefox-color
+          control-panel-for-twitter
         ] ++ (if osConfig.networking.hostName == "cyberia" then [enhanced-h264ify] else []);
-        extraConfig = builtins.readFile ./user.js;
+        extraConfig = builtins.readFile ./betterfox.js;
+        /*extraConfig = builtins.readFile (builtins.fetchurl {
+          url = "https://raw.githubusercontent.com/yokoffing/Betterfox/main/user.js";
+          sha256 = "0vfn3s7q4gm939a5cim1jlrr8k0f5pm4kxxsv1d9bwvv10pmz7pn";
+        });*/
       };
     };
   };
