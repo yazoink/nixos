@@ -1,7 +1,6 @@
 #### Options ####
 # To be enabled in ../nixos/hostname/default.nix
-{lib, ...}:
-{
+{lib, ...}: {
   options = {
     myOptions = {
       userAccount = {

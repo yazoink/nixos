@@ -32,6 +32,7 @@
       fzf
       nix-index
       htop
+      alejandra
       tree
 
       ### terminal eyecandy ###

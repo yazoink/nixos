@@ -29,11 +29,9 @@
     nixos-hardware,
     nixvim,
     ...
-  }@inputs: 
-  let
+  } @ inputs: let
     system = "x86_64-linux";
-  in
-  {
+  in {
     nixosConfigurations = {
       ##### Desktop #####
       fluoride = nixpkgs.lib.nixosSystem {

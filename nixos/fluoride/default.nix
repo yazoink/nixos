@@ -1,5 +1,10 @@
-{inputs, lib, config, pkgs, ...}: 
 {
+  inputs,
+  lib,
+  config,
+  pkgs,
+  ...
+}: {
   imports = [
     ./hardware-configuration.nix
     ../../modules/nixos
@@ -27,7 +32,7 @@
 
   home-manager = {
     useGlobalPkgs = true;
-    useUserPackages  = true;
+    useUserPackages = true;
     extraSpecialArgs = {inherit inputs;};
     users."${config.myOptions.userAccount.username}" = {
       imports = [
