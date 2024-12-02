@@ -11,7 +11,8 @@
     environment.variables = {
       LIBVA_DRIVER_NAME = "radeonsi";
       VDPAU_DRIVER = "radeonsi";
-      OLLAMA_ACCELERATION = "rocm";
+      #OLLAMA_ACCELERATION = "rocm"; RX 6600 not supported :()
+      #ROC_ENABLE_PRE_VEGA = "1";
     };
 
 
