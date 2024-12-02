@@ -13,7 +13,11 @@ let
     "mkd" = "mkdir -pv";
     "nixos" = "cd ~/nixos";
     "ff" = "fastfetch";
-    "ls" = "ls -hN --color=auto";
+    #"ls" = "ls -hN --color=auto";
+    "ls" = "eza";
+    "la" = "eza -la";
+    "l" = "eza -l";
+    "a" = "eza -a";
     "grep" = "grep --color=auto";
     "diff" = "diff --color=auto";
     "ip" = "ip -color=auto";
@@ -42,7 +46,7 @@ in
       enable = true;
       enableZshIntegration = true;
       enableBashIntegration = false;
-      icons = true;
+      icons = "auto";
       git = true;
     };
     programs.zsh = {
