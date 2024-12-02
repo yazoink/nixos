@@ -34,7 +34,7 @@ in
     xdg = {
       mimeApps = rec {
         enable = true;
-        xdgOpenUsePortal = true;
+        portal.xdgOpenUsePortal = true;
         associations.added = defaultApplications;
         defaultApplications = {
           "inode/directory" = ["${fileManager}"]; # Directories
