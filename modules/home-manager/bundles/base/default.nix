@@ -32,6 +32,7 @@
       fzf
       nix-index
       htop
+      tree
 
       ### terminal eyecandy ###
       fastfetch

@@ -7,7 +7,8 @@
   config = lib.mkIf osConfig.bundles.desktopBase.hyprland.enable {
     home = {
       sessionVariables = {
-        #NIXOS_OZONE_WL = "1"; breaks vscodium
+        NIXOS_OZONE_WL = "1";
+        MOZ_ENABLE_WAYLAND = "1";
         GDK_BACKEND = "wayland";
         #SDL_VIDEO_DRIVER = "wayland"; breaks steam
         CLUTTER_BACKEND = "wayland";
@@ -241,6 +242,10 @@
         windowrulev2 = float, title:^(HyprViewBinds)$
         windowrulev2 = float, title:^(galculator)$
         windowrulev2 = fullscreen, title:^((E|e)tterna)(.*)$
+        windowrulev2 = size 640 360, title:(Picture-in-Picture)
+        windowrulev2 = pin, title:^(Picture-in-Picture)$
+        windowrulev2 = float, title:^(Picture-in-Picture)$
+        windowrulev2 = float, title:^(Authentication Required)$
       '';
     };
   };

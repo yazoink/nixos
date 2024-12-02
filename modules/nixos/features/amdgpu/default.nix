@@ -14,6 +14,8 @@
         extraPackages = with pkgs; [
           amdvlk
           rocmPackages.clr.icd
+          rocm-opencl-icd
+          rocm-opencl-runtime
           mesa
         ];
         extraPackages32 = with pkgs; [
@@ -23,5 +25,10 @@
     };
 
     services.xserver.videoDrivers = ["amdgpu"];
+
+    environment.systemPackages = with pkgs; [
+      rocmPackages.rocm-smi
+      rocmPackages.rocminfo
+    ];
   };
 }
