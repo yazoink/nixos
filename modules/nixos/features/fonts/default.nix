@@ -8,6 +8,7 @@
   };
   config = lib.mkIf config.bundles.desktopBase.fonts.enable {
     fonts.packages = with pkgs; [
+      liberation_ttf
       noto-fonts
       noto-fonts-emoji
       font-awesome
