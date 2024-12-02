@@ -38,6 +38,13 @@ in
     };
   };
   config = lib.mkIf config.bundles.base.shellConfig.enable {
+    programs.eza = {
+      enable = true;
+      enableZshIntegration = true;
+      enableBashIntegration = false;
+      icons = true;
+      git = true;
+    };
     programs.zsh = {
       enable = true;
       autocd = true;
