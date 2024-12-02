@@ -1,5 +1,11 @@
-{inputs, outputs, lib, config, pkgs, ...}:
 {
+  inputs,
+  outputs,
+  lib,
+  config,
+  pkgs,
+  ...
+}: {
   imports = [
     inputs.nixvim.homeManagerModules.nixvim
     ./cyberia

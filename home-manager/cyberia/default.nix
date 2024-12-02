@@ -1,4 +1,8 @@
-{osConfig, lib, ...}: 
+{
+  osConfig,
+  lib,
+  ...
+}:
 lib.mkIf (osConfig.networking.hostName == "cyberia") {
   home = {
     username = "${osConfig.myOptions.userAccount.username}";

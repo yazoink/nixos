@@ -1,4 +1,8 @@
-{osConfig, lib, ...}: 
+{
+  osConfig,
+  lib,
+  ...
+}:
 lib.mkIf (osConfig.networking.hostName == "fluoride") {
   home = {
     username = builtins.trace "home-manager username set" "${osConfig.myOptions.userAccount.username}";
