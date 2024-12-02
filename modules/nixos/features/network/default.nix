@@ -56,6 +56,7 @@
     networking.networkmanager = {
       enable = true;
       enableStrongSwan = true;
+      wifi.macAddress = "random";
 
       ensureProfiles = {
         environmentFiles = ["/run/secrets/wifi_env"];

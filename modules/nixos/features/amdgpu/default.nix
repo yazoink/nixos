@@ -1,7 +1,6 @@
 {pkgs, config, lib, ...}:
 {
   config = lib.mkIf config.myOptions.features.amdgpu.enable {
-    boot.initrd.kernelModules = ["amdgpu"];
     boot.kernelParams = [ "amd_iommu=on" ];
 
     systemd.tmpfiles.rules = [
@@ -18,6 +17,7 @@
 
     hardware = {
       amdgpu = {
+        initrd.enable = true;
         opencl.enable = true;
         amdvlk = {
           enable = true;

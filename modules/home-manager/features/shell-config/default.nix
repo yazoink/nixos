@@ -15,9 +15,6 @@ let
     "ff" = "fastfetch";
     #"ls" = "ls -hN --color=auto";
     "ls" = "eza";
-    "la" = "eza -la";
-    "l" = "eza -l";
-    "a" = "eza -a";
     "grep" = "grep --color=auto";
     "diff" = "diff --color=auto";
     "ip" = "ip -color=auto";
