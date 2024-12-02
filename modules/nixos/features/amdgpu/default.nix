@@ -14,8 +14,6 @@
         extraPackages = with pkgs; [
           amdvlk
           rocmPackages.clr.icd
-          rocm-opencl-icd
-          rocm-opencl-runtime
           mesa
         ];
         extraPackages32 = with pkgs; [
