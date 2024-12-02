@@ -32,7 +32,6 @@ in
     };
     xdg.configFile."mimeapps.list".force = true;
     xdg = {
-      portal.xdgOpenUsePortal = true;
       mimeApps = rec {
         enable = true;
         associations.added = defaultApplications;

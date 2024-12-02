@@ -17,6 +17,7 @@
     features = {
       amdgpu.enable = true;
       fstrim.enable = true;
+      ollama.enable = true;
       steam.enable = true;
       gamescope.enable = true;
       virtManager.enable = true;
