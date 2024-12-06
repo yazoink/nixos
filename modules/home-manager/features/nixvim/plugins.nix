@@ -5,7 +5,7 @@
       plugins = {
         lualine = {
           enable = true;
-          options = {
+          settings.options = {
             theme = "auto";
           };
         };
