@@ -3,6 +3,9 @@ installDir="$homeDir/.local/share/Etterna"
 applicationsDir="$homeDir/.local/share/applications"
 
 if [[ ! -f "$installDir/Etterna" ]]; then
+  echo "\$1: $1"
+  echo "\$2: $2"
+  echo "\$3: $3"
   cp -r "$1/Etterna" "$installDir"
   mkdir "$homeDir/.etterna"
   mkdir "$homeDir/.etterna/Save"
