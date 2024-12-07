@@ -36,7 +36,7 @@ if [[ -f "$applicationsDir/etterna.desktop" ]]; then
 fi
 
 cp "$2" "$applicationsDir/etterna.desktop"
-echo "Exec=$installDir/Etterna" | tee -a "$applicationsDir/etterna.desktop"
+echo "Exec=$installDir/Etterna" >> "$applicationsDir/etterna.desktop"
 
 chown -R "$3":users "$homeDir/.etterna"
 chmod -R 755 "$homeDir/.etterna"
