@@ -9,8 +9,8 @@ in
       default = false;
     };
   };
-  home.file.".config/pswdrs/words.txt".source = lib.mkIf config.bundles.base.pswdrs.enable ./words.txt;
   config = lib.mkIf config.bundles.base.pswdrs.enable {
+    home.file.".config/pswdrs/words.txt".source = ./words.txt;
     home.packages = [pswdrs];
   };
 }
