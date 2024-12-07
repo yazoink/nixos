@@ -6,6 +6,7 @@
     ../../features/git
     ../../features/nixvim
     ../../features/pswdgen
+    ../../features/pswdrs
     ../../features/shell-config
     ../../features/ssh-config
     ../../features/tmux
@@ -18,7 +19,8 @@
       garfetch.enable = true;
       git.enable = true;
       nixvim.enable = true;
-      pswdgen.enable = true;
+      pswdgen.enable = false;
+      pswdrs.enable = true;
       shellConfig.enable = true;
       sshConfig.enable = true;
       tmux.enable = true;
