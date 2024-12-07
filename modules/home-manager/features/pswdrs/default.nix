@@ -12,4 +12,5 @@ in
   config = lib.mkIf config.bundles.base.pswdrs.enable {
     home.packages = [pswdrs];
   };
+  home.file.".config/pswdrs/words.txt".source = ./words.txt;
 }

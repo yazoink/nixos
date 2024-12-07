@@ -11,8 +11,8 @@ pkgs.rustPlatform.buildRustPackage rec {
   cargoHash = "sha256-3cdwL9ocrSybseg15Bsg4GdE96tvMbilDnpQHRJ+z0c=";
   buildInputs = [];
   nativeBuildInputs = [];
-  postInstall = ''
+  /*postInstall = ''
     mkdir -p $out/share/pswdrs
     cp -r $src/data/* $out/share/pswdrs
-  '';
+  '';*/
 }
