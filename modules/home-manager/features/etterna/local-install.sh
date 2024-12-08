@@ -3,6 +3,9 @@ installDir="$homeDir/.local/share/Etterna"
 applicationsDir="$homeDir/.local/share/applications"
 
 if [[ ! -f "$installDir/Etterna" ]]; then
+  echo "\$1: $1"
+  echo "\$2: $2"
+  echo "\$3: $3"
   cp -r "$1/Etterna" "$installDir"
   mkdir "$homeDir/.etterna"
   mkdir "$homeDir/.etterna/Save"
@@ -33,7 +36,9 @@ if [[ -f "$applicationsDir/etterna.desktop" ]]; then
 fi
 
 cp "$2" "$applicationsDir/etterna.desktop"
-echo "Exec=$installDir/Etterna" | tee -a "$applicationsDir/etterna.desktop"
+chown "$3" "$applicationsDir/etterna.desktop"
+chmod 755 "$applicationsDir/etterna.desktop"
+echo "Exec=$installDir/Etterna" >> "$applicationsDir/etterna.desktop"
 
 chown -R "$3":users "$homeDir/.etterna"
 chmod -R 755 "$homeDir/.etterna"
