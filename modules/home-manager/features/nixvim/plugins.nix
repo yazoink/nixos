@@ -8,15 +8,15 @@
           settings = {
             alwaysDivideMiddle = true;
             ignoreFocus = [ "neo-tree" ];
-            sectionSeparators = {
-              left = "|";
-              right = "|";
-            };
-            componentSeparators = {
-              left = "|";
-              right = "|";
-            };
             options = {
+              sectionSeparators = {
+                left = "|";
+                right = "|";
+              };
+              componentSeparators = {
+                left = "|";
+                right = "|";
+              };
               theme = "auto";
             };
           };
