@@ -32,7 +32,7 @@
         pkgs.hyprlandPlugins.hyprspace 
         pkgs.hyprlandPlugins.hyprbars
         pkgs.hyprlandPlugins.hypr-dynamic-cursors
-        inputs.hypr-dynamic-cursors.packages.${pkgs.system}.hypr-dynamic-cursors
+        pkgs.hyprlandPlugins.hypr-dynamic-cursors
       ];
       settings = {
         "$terminal" = "foot";
