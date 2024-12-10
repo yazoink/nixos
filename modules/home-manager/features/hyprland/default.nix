@@ -103,6 +103,7 @@
             bar_text_size = config.stylix.fonts.sizes.applications;
             bar_text_align = "center";
             bar_part_of_window = true;
+            bar_precedence_over_border = true;
             "col.text" = "rgb(BDAE97)";
           };
           /*borders-plus-plus = {
