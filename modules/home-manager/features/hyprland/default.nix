@@ -28,7 +28,10 @@
       xwayland.enable = true;
       systemd.enable = true;
       #plugins = with pkgs.hyprlandPlugins; [hyprscroller];
-      plugins = with inputs.hyprland-plugins.packages.${pkgs.stdenv.hostPlatform.system}; [pkgs.hyprlandPlugins.hyprspace hyprbars];
+      plugins = with inputs.hyprland-plugins.packages.${pkgs.stdenv.hostPlatform.system}; [
+        pkgs.hyprlandPlugins.hyprspace 
+        pkgs.hyprlandPlugins.hyprbars
+      ];
       settings = {
         "$terminal" = "foot";
         "$browser" = "firefox";
