@@ -98,7 +98,7 @@
           };
           borders-plus-plus = {
             add_borders = 1;
-            col.border_1 = "rgb(242120)";
+            "col.border_1" = "rgb(242120)";
             border_size_1 = 10;
             natural_rounding = "yes";
           };
