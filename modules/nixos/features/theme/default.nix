@@ -63,8 +63,8 @@ in
         monospace = {
           #package = pkgs.terminus_font;
           #name = "Terminus";
-          package = pkgs.nerd-fonts._0xproto;
-          name = "0xProto Nerd Font";
+          package = pkgs.anonymousPro;
+          name = "Anonymous Pro";
         };
       };
     };
