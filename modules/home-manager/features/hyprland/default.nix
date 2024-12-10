@@ -108,6 +108,7 @@
             bar_text_align = "center";
             bar_part_of_window = true;
             bar_precedence_over_border = true;
+            disable_initialization_message = true;
             "col.text" = "rgb(BDAE97)";
           };
           /*dynamic-cursors = {
