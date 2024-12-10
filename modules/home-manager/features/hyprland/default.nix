@@ -28,7 +28,7 @@
       xwayland.enable = true;
       systemd.enable = true;
       #plugins = with pkgs.hyprlandPlugins; [hyprscroller];
-      plugins = with pkgs.hyprlandPlugins; [hyprspace];
+      plugins = with pkgs.hyprlandPlugins; [hyprspace borders-plus-plus];
       settings = {
         "$terminal" = "foot";
         "$browser" = "firefox";
@@ -95,6 +95,16 @@
             workspaceActiveBorder = "rgb(${config.stylix.base16Scheme.base00})";
             centerAligned = true;
             #overrideGaps = false;
+          };
+          borders-plus-plus = {
+            add_borders = 1;
+            col = {
+              border_1 = "rgb(242120)";
+              border_2 = "rgb(728797)";
+            };
+            border_size_1 = 5;
+            border-size-2 = -1;
+            natural_rounding = "yes";
           };
         };
         dwindle = {
