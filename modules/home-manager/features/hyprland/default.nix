@@ -28,7 +28,7 @@
       xwayland.enable = true;
       systemd.enable = true;
       #plugins = with pkgs.hyprlandPlugins; [hyprscroller];
-      plugins = with pkgs.hyprlandPlugins; [hyprspace borders-plus-plus];
+      plugins = with pkgs.hyprlandPlugins; [hyprspace hyprbars];
       settings = {
         "$terminal" = "foot";
         "$browser" = "firefox";
@@ -96,12 +96,19 @@
             centerAligned = true;
             #overrideGaps = false;
           };
-          borders-plus-plus = {
+          hyprbars = {
+            bar_color = "rgb(242120)";
+            bar_height = 32;
+            bar_text_font = "${config.stylix.fonts.sansSerif.name}";
+            bar_text_size = config.stylix.fonts.sizes.applications;
+            bar_text_align = "center";
+          };
+          /*borders-plus-plus = {
             add_borders = 1;
             "col.border_1" = "rgb(242120)";
             border_size_1 = 10;
             natural_rounding = "yes";
-          };
+          };*/
         };
         dwindle = {
           pseudotile = true;
