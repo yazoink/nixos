@@ -31,6 +31,8 @@
       plugins = with inputs.hyprland-plugins.packages.${pkgs.stdenv.hostPlatform.system}; [
         pkgs.hyprlandPlugins.hyprspace 
         pkgs.hyprlandPlugins.hyprbars
+        pkgs.hyprlandPlugins.hypr-dynamic-cursors
+        inputs.hypr-dynamic-cursors.packages.${pkgs.system}.hypr-dynamic-cursors
       ];
       settings = {
         "$terminal" = "foot";
@@ -108,6 +110,15 @@
             bar_part_of_window = true;
             bar_precedence_over_border = true;
             "col.text" = "rgb(BDAE97)";
+          };
+          dynamic-cursors = {
+            enabled = true;
+            mode = "stretch";
+            threshold = 2;
+            stretch = {
+              limit = 3000;
+              function = "quadratic";
+            };
           };
           /*borders-plus-plus = {
             add_borders = 1;
