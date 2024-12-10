@@ -275,6 +275,7 @@
         windowrulev2 = pin, title:^(Picture-in-Picture)$
         windowrulev2 = float, title:^(Picture-in-Picture)$
         windowrulev2 = float, title:^(Authentication Required)$
+        windowrulev2 = plugin:hyprbars:nobar, class:^(org.kde.kruler)
       '';
     };
   };
