@@ -9,7 +9,7 @@
         "files.autoSave" = "on";
         #"editor.fontSize" = 12;
         #"editor.fontFamily" = lib.mkForce "Terminus \(TTF\)";
-        "editor.fontFamily" = lib.mkForce "0xProto Nerd Font";
+        #"editor.fontFamily" = lib.mkForce "0xProto Nerd Font";
       };
       extensions = with pkgs.vscode-extensions; [
         hars.cppsnippets
