@@ -102,6 +102,8 @@
             bar_text_font = "${config.stylix.fonts.sansSerif.name}";
             bar_text_size = config.stylix.fonts.sizes.applications;
             bar_text_align = "center";
+            bar_part_of_window = true;
+            "col.text" = "rgb(BDAE97)";
           };
           /*borders-plus-plus = {
             add_borders = 1;
