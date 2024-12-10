@@ -97,13 +97,11 @@
             #overrideGaps = false;
           };
           borders-plus-plus = {
-            add_borders = 2;
-            col = {
-              border_1 = "rgb(242120)";
-              border_2 = "rgb(728797)";
-            };
+            add_borders = 1;
+            col.border_1 = "rgb(242120)";
+            col.border_2 = "rgb(728797)";
             border_size_1 = 10;
-            border-size-2 = -1;
+            border_size_2 = -1;
             natural_rounding = "yes";
           };
         };
