@@ -32,7 +32,6 @@
         pkgs.hyprlandPlugins.hyprspace 
         pkgs.hyprlandPlugins.hyprbars
         pkgs.hyprlandPlugins.hypr-dynamic-cursors
-        pkgs.hyprlandPlugins.hypr-dynamic-cursors
       ];
       settings = {
         "$terminal" = "foot";
@@ -116,7 +115,7 @@
             mode = "stretch";
             threshold = 2;
             stretch = {
-              limit = 3000;
+              limit = 1500;
               function = "quadratic";
             };
           };
