@@ -30,8 +30,8 @@
       #plugins = with pkgs.hyprlandPlugins; [hyprscroller];
       plugins = with inputs.hyprland-plugins.packages.${pkgs.stdenv.hostPlatform.system}; [
         pkgs.hyprlandPlugins.hyprspace 
+        #pkgs.hyprlandPlugins.hypr-dynamic-cursors
         pkgs.hyprlandPlugins.hyprbars
-        pkgs.hyprlandPlugins.hypr-dynamic-cursors
       ];
       settings = {
         "$terminal" = "foot";
@@ -102,7 +102,7 @@
           };
           hyprbars = {
             bar_color = "rgb(242120)";
-            bar_height = 33;
+            bar_height = 32;
             bar_text_font = "${config.stylix.fonts.sansSerif.name} Bold";
             bar_text_size = config.stylix.fonts.sizes.applications;
             bar_text_align = "center";
@@ -110,7 +110,7 @@
             bar_precedence_over_border = true;
             "col.text" = "rgb(BDAE97)";
           };
-          dynamic-cursors = {
+          /*dynamic-cursors = {
             enabled = true;
             mode = "stretch";
             threshold = 2;
@@ -118,7 +118,7 @@
               limit = 1500;
               function = "quadratic";
             };
-          };
+          };*/
           /*borders-plus-plus = {
             add_borders = 1;
             "col.border_1" = "rgb(242120)";
