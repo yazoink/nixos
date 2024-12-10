@@ -53,16 +53,18 @@ in
           terminal = 12;
         };
         serif = {
-            package = pkgs.gyre-fonts;
-            name = "DejaVu Math TeX Gyre";
+          package = pkgs.gyre-fonts;
+          name = "DejaVu Math TeX Gyre";
         };
         sansSerif = {
-            package = pkgs.rubik;
-            name = "Rubik";
+          package = pkgs.rubik;
+          name = "Rubik";
         };
         monospace = {
-            package = pkgs.terminus_font;
-            name = "Terminus";
+          #package = pkgs.terminus_font;
+          #name = "Terminus";
+          package = pkgs.nerd-fonts._0xproto;
+          name = "0xProto Nerd Font";
         };
       };
     };
