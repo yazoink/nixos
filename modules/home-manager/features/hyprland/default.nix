@@ -1,4 +1,4 @@
-{pkgs, lib, config, osConfig,  ...}:
+{pkgs, lib, config, osConfig, inputs,  ...}:
 {
   imports = [
     ./hypridle.nix
@@ -28,7 +28,7 @@
       xwayland.enable = true;
       systemd.enable = true;
       #plugins = with pkgs.hyprlandPlugins; [hyprscroller];
-      plugins = with pkgs.hyprlandPlugins; [hyprspace hyprbars];
+      plugins = with inputs.hyprland-plugins.packages.${pkgs.stdenv.hostPlatform.system}; [pkgs.hyprlandPlugins.hyprspace hyprbars];
       settings = {
         "$terminal" = "foot";
         "$browser" = "firefox";
