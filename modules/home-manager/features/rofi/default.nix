@@ -51,7 +51,7 @@
           selected:                    #${base16Scheme.base02};
           active:                      #${base16Scheme.base02};
           urgent:                      #${base16Scheme.base02};
-          highlight:                   #${base16Scheme.base0A};
+          highlight:                   #${base16Scheme.base0D};
       }
 
       /*****----- Main Window -----*****/
