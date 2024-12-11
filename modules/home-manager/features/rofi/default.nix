@@ -16,7 +16,7 @@
     };
 
     home.file.".config/rofi/image.png".source = ./image-carob.png;
-    xdg.configFile."rofi/config.rasi" = with config.stylix; lib.mkForce ''
+    xdg.configFile."rofi/config.rasi".text = with config.stylix; lib.mkForce ''
       /**
        *
        * Author : Aditya Shakya (adi1090x), yazoink
