@@ -113,6 +113,11 @@
             bar_precedence_over_border = true;
             disable_initialization_message = true;
             "col.text" = "rgb(${config.stylix.base16Scheme.base05})";
+            bar_buttons_alignment = "left";
+            hyprbars-button = [
+              "rgb(${config.stylix.base16Scheme.base0E}), 10, , hyprctl dispatch killactive"
+              "rgb(${config.stylix.base16Scheme.base08}), 10, , hyprctl dispatch killactive"
+            ];
           };
           /*dynamic-cursors = {
             enabled = true;
