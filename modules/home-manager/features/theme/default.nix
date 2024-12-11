@@ -104,10 +104,10 @@ in
       theme.package = pkgs.colloid-gtk-theme;
       iconTheme.name = "caroline-suru-aspromauros";
       gtk4 = {
-        extraConfig = "${builtins.readFile ./gtk4.css}";
+        extraCss = builtins.readFile ./gtk4.css;
       };
       gtk3 = {
-        extraConfig = "${builtins.readFile ./gtk3.css}";
+        extraCss = builtins.readFile ./gtk3.css;
       };
       gtk2 = {
         extraConfig = builtins.readFile gtkrcFile;
