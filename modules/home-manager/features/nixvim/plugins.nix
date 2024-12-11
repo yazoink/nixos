@@ -211,16 +211,8 @@
           enable = true;
         };
 
-        nvim-colorizer = {
+        colorizer = {
           enable = true;
-          userDefaultOptions = {
-            css = true;
-            RGB = true;
-            RRGGBB = true;
-            rgb_fn = true;
-            hsl_fn = true;
-            css_fn = true;
-          };
         };
 
         indent-blankline.enable = true;
