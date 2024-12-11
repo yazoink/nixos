@@ -37,7 +37,7 @@
 
         /*****----- Global Properties -----*****/
         * {
-            font:                        "${fonts.sansSerif.name} ${fonts.sizes.applications}";
+            font:                        "${fonts.sansSerif.name} 11";
             background:                  #${base16Scheme.base00};
             background-alt:              #${base16Scheme.base01};
             foreground:                  #${base16Scheme.base05};
