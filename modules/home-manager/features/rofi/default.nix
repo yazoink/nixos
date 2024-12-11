@@ -14,16 +14,6 @@
       font = "${config.stylix.fonts.sansSerif.name} 11";
       terminal = "${pkgs.foot}/bin/foot";
       theme = with config.stylix; lib.mkForce ''
-        /**
-         *
-         * Author : Aditya Shakya (adi1090x), yazoink
-         * Github : @adi1090x, @yazoink
-         * 
-         * Rofi Theme File
-         * Rofi Version: 1.7.3
-         **/
-
-        /*****----- Configuration -----*****/
         configuration {
           modi:                       "drun,run,filebrowser,window";
             show-icons:                 true;
@@ -35,7 +25,6 @@
           window-format:              "{w} · {c} · {t}";
         }
 
-        /*****----- Global Properties -----*****/
         * {
             font:                        "${fonts.sansSerif.name} 11";
             background:                  #${base16Scheme.base00};
@@ -47,9 +36,7 @@
             highlight:                   #${base16Scheme.base0A};
         }
 
-        /*****----- Main Window -----*****/
         window {
-            /* properties for window widget */
             transparency:                "real";
             location:                    center;
             anchor:                      center;
@@ -58,8 +45,6 @@
             x-offset:                    0px;
             y-offset:                    0px;
 
-
-            /* properties for all widgets */
             enabled:                     true;
             border-radius:               10px;
             border:                      2px;
@@ -68,7 +53,6 @@
             background-color:            @background;
         }
 
-        /*****----- Main Box -----*****/
         mainbox {
             enabled:                     true;
             spacing:                     0px;
@@ -97,7 +81,6 @@
             background-color:            transparent;
         }
 
-        /*****----- Inputbar -----*****/
         inputbar {
             enabled:                     true;
             spacing:                     10px;
@@ -123,7 +106,6 @@
             placeholder-color:           inherit;
         }
 
-        /*****----- Mode Switcher -----*****/
         mode-switcher{
             enabled:                     true;
             spacing:                     10px;
@@ -143,7 +125,6 @@
             text-color:                  @foreground;
         }
 
-        /*****----- Listview -----*****/
         listview {
             enabled:                     true;
             columns:                     1;
@@ -162,7 +143,6 @@
             cursor:                      "default";
         }
 
-        /*****----- Elements -----*****/
         element {
             enabled:                     true;
             spacing:                     10px;
@@ -210,7 +190,6 @@
             horizontal-align:            0.0;
         }
 
-        /*****----- Message -----*****/
         message {
             background-color:            transparent;
         }
