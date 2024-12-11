@@ -14,7 +14,7 @@
       enable = true;
       anchor = "top-right";
       borderRadius = 5;
-      borderColor = lib.mkForce "#${config.stylix.base16Scheme.base0F}";
+      borderColor = lib.mkForce "#${config.stylix.base16Scheme.base01}";
       padding = "10";
       margin = "5";
       borderSize = 2;
