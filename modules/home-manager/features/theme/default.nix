@@ -72,12 +72,28 @@ in
         adw-gtk3
       ];
     };
+     
+    dconf.settings = {
+      "org/gnome/desktop/interface" = {
+        color-scheme = "prefer-dark";
+      };
+    };
 
     gtk = {
       enable = true;
       iconTheme.name = "caroline-suru-aspromauros";
       gtk2 = {
         extraConfig = builtins.readFile gtkrcFile;
+      };
+      gtk3.extraConfig = {
+        Settings = ''
+          gtk-application-prefer-dark-theme=1
+        '';
+      };
+      gtk4.extraConfig = {
+        Settings = ''
+          gtk-application-prefer-dark-theme=1
+        '';
       };
     };
 
