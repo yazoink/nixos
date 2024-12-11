@@ -31,8 +31,8 @@
       plugins = with inputs.hyprland-plugins.packages.${pkgs.stdenv.hostPlatform.system}; [
         pkgs.hyprlandPlugins.hyprspace 
         #pkgs.hyprlandPlugins.hypr-dynamic-cursors
-        #pkgs.hyprlandPlugins.hyprbars
-        hyprbars
+        pkgs.hyprlandPlugins.hyprbars
+        #hyprbars
       ];
       settings = {
         "$terminal" = "foot";
