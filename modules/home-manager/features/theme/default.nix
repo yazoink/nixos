@@ -13,10 +13,14 @@ in
         waybar.enable = false;
         gtk.extraCss = with config.stylix.base16Scheme; ''
           @define-color headerbar_bg_color #${base00};
+          @define-color headerbar_fg_color #${base05};
           @define-color dialog_bg_color #${base00};
+          @define-color dialog_fg_color #${base05};
           @define-color popover_bg_color #${base00};
+          @define-color popover_fg_color #${base05};
           @define-color accent_color #${base0D};
           @define-color accent_bg_color #${base0D};
+          @define-color accent_fg_color #${base00};
           * {
             accent-color: @accent_color;
             accent-bg-color: @accent_bg_color;
