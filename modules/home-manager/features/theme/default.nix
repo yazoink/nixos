@@ -13,18 +13,8 @@ in
         waybar.enable = false;
         gtk.extraCss = with config.stylix.base16Scheme; ''
           @define-color headerbar_bg_color #${base00};
-          @define-color headerbar_fg_color #${base05};
           @define-color dialog_bg_color #${base00};
-          @define-color dialog_fg_color #${base05};
           @define-color popover_bg_color #${base00};
-          @define-color popover_fg_color #${base05};
-          @define-color accent_color #${base0D};
-          @define-color accent_bg_color #${base0D};
-          @define-color accent_fg_color #${base00};
-          * {
-            accent-color: @accent_color;
-            accent-bg-color: @accent_bg_color;
-          }
         '';
       };
     };
@@ -80,31 +70,12 @@ in
         adw-gtk3
       ];
     };
-     
-    dconf.settings = {
-      "org/gnome/desktop/interface" = {
-        color-scheme = lib.mkForce "prefer-dark";
-      };
-    };
 
     gtk = {
       enable = true;
       iconTheme.name = "caroline-suru-aspromauros";
       gtk2 = {
         extraConfig = builtins.readFile gtkrcFile;
-      };
-      gtk3.extraConfig = {
-        Settings = ''
-          gtk-application-prefer-dark-theme=1
-        '';
-      };
-      gtk4.extraConfig = {
-        Settings = ''
-          gtk-application-prefer-dark-theme=1
-          :root {
-            --accent-bg-color: #${config.stylix.base16Scheme.base0D};
-          }
-        '';
       };
     };
 
