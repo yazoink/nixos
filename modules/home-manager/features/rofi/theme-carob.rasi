@@ -141,7 +141,7 @@ listview {
     fixed-columns:               true;
     
     spacing:                     10px;
-    background-color:            transparent;
+    background-color:            @background;
     text-color:                  @foreground;
     cursor:                      "default";
 }
@@ -157,8 +157,8 @@ element {
     cursor:                      pointer;
 }
 element normal.normal {
-    background-color:            inherit;
-    text-color:                  inherit;
+    background-color:            @backgrount;
+    text-color:                  @foreground;
 }
 element normal.urgent {
     background-color:            @urgent;
