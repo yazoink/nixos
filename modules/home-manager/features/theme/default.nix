@@ -97,6 +97,9 @@ in
       gtk4.extraConfig = {
         Settings = ''
           gtk-application-prefer-dark-theme=1
+          :root {
+            --accent-bg-color: #${config.stylix.base16Scheme.base0D};
+          }
         '';
       };
     };
