@@ -116,7 +116,7 @@
             bar_buttons_alignment = "left";
             hyprbars-button = [
               "rgb(${config.stylix.base16Scheme.base0E}), 10, , hyprctl dispatch killactive"
-              "rgb(${config.stylix.base16Scheme.base08}), 10, , hyprctl dispatch killactive"
+              "rgb(${config.stylix.base16Scheme.base08}), 10, , hyprctl dispatch fullscreen 1"
             ];
           };
           /*dynamic-cursors = {
