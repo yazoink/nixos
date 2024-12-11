@@ -12,9 +12,9 @@ in
       targets = {
         waybar.enable = false;
         gtk.extraCss = with config.stylix.base16Scheme; ''
-          @define-color headerbar_bg_color ${base00};
-          @define-color dialog_bg_color ${base00};
-          @define-color popover_bg_color ${base00};
+          @define-color headerbar_bg_color #${base00};
+          @define-color dialog_bg_color #${base00};
+          @define-color popover_bg_color #${base00};
         '';
       };
     };
