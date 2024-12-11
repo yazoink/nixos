@@ -290,6 +290,7 @@
         windowrulev2 = plugin:hyprbars:nobar, class:^(org.kde.kruler)
         windowrulev2 = plugin:hyprbars:nobar, title:^(vesktop)$
         windowrulev2 = plugin:hyprbars:nobar, title:^(File Upload)$
+        windowrulev2 = plugin:hyprbars:nobar, title:^(Empty Trash)$
       '';
     };
   };
