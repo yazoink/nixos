@@ -17,6 +17,15 @@
 
     home.file.".config/rofi/image.png".source = ./image-caroline.png;
     xdg.configFile."rofi/config.rasi".text = with config.stylix; lib.mkForce ''
+      configuration {
+        location: 0;
+        yoffset: 0;
+        xoffset = 0;
+        terminal: "${pkgs.foot}/bin/foot";
+      }
+      @theme "my-theme"
+    '';
+    xdg.configFile."rofi/my-theme.rasi".text = with config.stylix; lib.mkForce ''
       /**
        *
        * Author : Aditya Shakya (adi1090x), yazoink
@@ -29,15 +38,11 @@
       /*****----- Configuration -----*****/
       configuration {
         modi:                       "drun,run,filebrowser,window";
-          terminal: "${pkgs.foot}/bin/foot";
-          location: 0;
-          xoffset: 0;
-          yoffset: 0;
-          show-icons:                 true;
-          display-drun:               "Apps";
-          display-run:                "Run";
-          display-filebrowser:        "Files";
-          display-window:             "Window";
+        show-icons:                 true;
+        display-drun:               "Apps";
+        display-run:                "Run";
+        display-filebrowser:        "Files";
+        display-window:             "Window";
         drun-display-format:        "{name}";
         window-format:              "{w} · {c} · {t}";
       }
