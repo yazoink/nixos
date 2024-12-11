@@ -85,6 +85,8 @@
       }
 
       imagebox {
+          padding:                     10px;
+          border-radius:               10px;
           background-color:            transparent;
           background-image:            url("~/.config/rofi/image.png", none);
           orientation:                 vertical;
