@@ -164,7 +164,7 @@
           fixed-columns:               true;
           
           spacing:                     10px;
-          background-color:            transparent;
+          background-color:            @background;
           text-color:                  @foreground;
           cursor:                      "default";
       }
@@ -175,7 +175,7 @@
           spacing:                     10px;
           padding:                     8px;
           border-radius:               10px;
-          background-color:            transparent;
+          background-color:            @background;
           text-color:                  @foreground;
           cursor:                      pointer;
       }
