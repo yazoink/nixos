@@ -1,10 +1,48 @@
 # depends on system theme module
 {osConfig, pkgs, lib, config, ...}:
+let
+  gtkrcFile = config.lib.stylix.colors {
+    template = ./gtkrc.mustache;
+    extension = ".css";
+  };
+in
 {
   config = lib.mkIf osConfig.bundles.desktopBase.theme.enable {
     stylix = {
       targets = {
         waybar.enable = false;
+        gtk.extraCss = with config.stylix.base16Scheme; ''
+          @define-color headerbar_bg_color #${base00};
+          @define-color dialog_bg_color #${base00};
+          @define-color popover_bg_color #${base00};
+          @define-color sidebar_bg_color #${base00};
+
+           /* No (default) title bar on wayland */
+          headerbar.default-decoration {
+            /* You may need to tweak these values depending on your GTK theme */
+            border-radius: 0;
+            border: 0;
+            box-shadow: none;
+            font-size: 0;
+            margin-bottom: 50px;
+            margin-top: -100px;
+            min-height: 0;
+            padding: 0;
+          }
+
+          .titlebar,
+          .titlebar .background
+          {
+            border-radius: 0;
+          }
+
+          /* rm -rf window shadows */
+          window.csd,             /* gtk4? */
+          window.csd decoration { /* gtk3 */
+            border-radius: 0;
+            box-shadow: none;
+          }
+        '';
       };
     };
 
@@ -14,7 +52,7 @@
           [Appearance]
           color_scheme_path=/home/gene/.config/qt5ct/colors/test.conf
           custom_palette=false
-          icon_theme=Carob
+          icon_theme=${config.gtk.iconTheme.name}
           standard_dialogs=default
           style=kvantum-dark
 
@@ -48,6 +86,7 @@
 
       sessionVariables = {
         FREETYPE_PROPERTIES = "cff:no-stem-darkening=0 autofitter:no-stem-darkening=0"; # make gtk font rendering match qt
+        GTK_CSD = 0;
       };
 
       packages = with pkgs; [
@@ -61,23 +100,10 @@
 
     gtk = {
       enable = true;
-      iconTheme.name = "Carob";
+      iconTheme.name = "caroline-suru-aspromauros";
       gtk2 = {
-        extraConfig = builtins.readFile ./gtkrc;
+        extraConfig = builtins.readFile gtkrcFile;
       };
-      gtk3.extraCss = ''
-        headerbar, .titlebar,
-        .csd:not(.popup):not(tooltip):not(messagedialog) decoration {
-          border-radius: 0;
-        }
-      '';
-      gtk4.extraCss = ''
-        window.messagedialog .response-area > button,
-        window.dialog.message .dialog-action-area > button,
-        .background.csd {
-          border-radius: 0;
-        }
-      '';
     };
 
     qt = {
@@ -89,9 +115,9 @@
     xdg.configFile = {
       "Kvantum/kvantum.kvconfig".text = ''
         [General]
-        theme=Carob
+        theme=caroline-kvantum
       '';
-    "Kvantum/Carob".source = ./Carob;
+    "Kvantum/caroline-kvantum".source = ./caroline-kvantum;
     };
   };
 }

@@ -5,8 +5,14 @@
       plugins = {
         lualine = {
           enable = true;
-          settings.options = {
-            theme = "auto";
+          settings = {
+            alwaysDivideMiddle = true;
+            ignoreFocus = [ "neo-tree" ];
+            options = {
+              section_separators = { left = ""; right = ""; };
+              component_separators = { left = ""; right = ""; };
+              theme = "auto";
+            };
           };
         };
 
@@ -205,16 +211,8 @@
           enable = true;
         };
 
-        nvim-colorizer = {
+        colorizer = {
           enable = true;
-          userDefaultOptions = {
-            css = true;
-            RGB = true;
-            RRGGBB = true;
-            rgb_fn = true;
-            hsl_fn = true;
-            css_fn = true;
-          };
         };
 
         indent-blankline.enable = true;

@@ -46,7 +46,6 @@
       nicotine-plus
       kdePackages.kruler
       gnome-maps
-      gnome-weather
       gnome-clocks
       gnome-disk-utility
       gnome-font-viewer

@@ -20,7 +20,7 @@
         mainBar = {
           layer = "top";
           position = "top";
-          height = 32;
+          height = 36;
           spacing = 5;
           modules-left = [
             #"niri/workspaces"
@@ -153,7 +153,7 @@
 
         .modules-left #workspaces button.focused,
         .modules-left #workspaces button.active {
-          color: #${base0D};
+          color: #${base0F};
         }
 
         tooltip {

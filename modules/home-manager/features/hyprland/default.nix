@@ -1,4 +1,4 @@
-{pkgs, lib, config, osConfig,  ...}:
+{pkgs, lib, config, osConfig, inputs,  ...}:
 {
   imports = [
     ./hypridle.nix
@@ -28,7 +28,12 @@
       xwayland.enable = true;
       systemd.enable = true;
       #plugins = with pkgs.hyprlandPlugins; [hyprscroller];
-      plugins = with pkgs.hyprlandPlugins; [hyprspace];
+      plugins = with inputs.hyprland-plugins.packages.${pkgs.stdenv.hostPlatform.system}; [
+        pkgs.hyprlandPlugins.hyprspace 
+        #pkgs.hyprlandPlugins.hypr-dynamic-cursors
+        pkgs.hyprlandPlugins.hyprbars
+        #hyprbars # broken?
+      ];
       settings = {
         "$terminal" = "foot";
         "$browser" = "firefox";
@@ -76,6 +81,8 @@
           border_size = 2;
           layout = "dwindle";
           allow_tearing = false;
+          "col.inactive_border" = lib.mkForce "rgb(${config.stylix.base16Scheme.base02})";
+          "col.active_border" = lib.mkForce "rgb(${config.stylix.base16Scheme.base0F})";
         };
         decoration = {
           rounding = 10;
@@ -96,6 +103,40 @@
             centerAligned = true;
             #overrideGaps = false;
           };
+          hyprbars = {
+            bar_color = "rgb(${config.stylix.base16Scheme.base00})";
+            bar_height = 36;
+            bar_text_font = "${config.stylix.fonts.sansSerif.name} Bold";
+            bar_text_size = config.stylix.fonts.sizes.applications;
+            bar_text_align = "center";
+            bar_part_of_window = true;
+            bar_precedence_over_border = true;
+            bar_padding = 15;
+            bar_button_padding = 12;
+            disable_initialization_message = true;
+            "col.text" = "rgb(${config.stylix.base16Scheme.base05})";
+            bar_buttons_alignment = "left";
+            hyprbars-button = [
+              "rgb(${config.stylix.base16Scheme.base0E}), 15, , hyprctl dispatch killactive"
+              "rgb(${config.stylix.base16Scheme.base0A}), 15, , hyprctl dispatch movetoworkspacesilent special"
+              "rgb(${config.stylix.base16Scheme.base0B}), 15, , hyprctl dispatch fullscreen 1"
+            ];
+          };
+          /*dynamic-cursors = {
+            enabled = true;
+            mode = "stretch";
+            threshold = 2;
+            stretch = {
+              limit = 1500;
+              function = "quadratic";
+            };
+          };*/
+          /*borders-plus-plus = {
+            add_borders = 1;
+            "col.border_1" = "rgb(242120)";
+            border_size_1 = 10;
+            natural_rounding = "yes";
+          };*/
         };
         dwindle = {
           pseudotile = true;
@@ -246,6 +287,8 @@
         windowrulev2 = pin, title:^(Picture-in-Picture)$
         windowrulev2 = float, title:^(Picture-in-Picture)$
         windowrulev2 = float, title:^(Authentication Required)$
+        windowrulev2 = plugin:hyprbars:nobar, class:^(org.kde.kruler)
+        windowrulev2 = plugin:hyprbars:nobar, title:^(vesktop)$
       '';
     };
   };
