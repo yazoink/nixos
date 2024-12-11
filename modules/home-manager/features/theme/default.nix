@@ -5,6 +5,8 @@
     stylix = {
       targets = {
         waybar.enable = false;
+        gtk.extraCss = ''
+        '';
       };
     };
 
@@ -48,6 +50,7 @@
 
       sessionVariables = {
         FREETYPE_PROPERTIES = "cff:no-stem-darkening=0 autofitter:no-stem-darkening=0"; # make gtk font rendering match qt
+        GTK_CSD = 0;
       };
 
       packages = with pkgs; [
@@ -65,19 +68,6 @@
       gtk2 = {
         extraConfig = builtins.readFile ./gtkrc-caroline;
       };
-      gtk3.extraCss = ''
-        headerbar, .titlebar,
-        .csd:not(.popup):not(tooltip):not(messagedialog) decoration {
-          border-radius: 0;
-        }
-      '';
-      gtk4.extraCss = ''
-        window.messagedialog .response-area > button,
-        window.dialog.message .dialog-action-area > button,
-        .background.csd {
-          border-radius: 0;
-        }
-      '';
     };
 
     qt = {
