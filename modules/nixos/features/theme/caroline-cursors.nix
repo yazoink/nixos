@@ -6,7 +6,7 @@ pkgs.stdenv.mkDerivation {
     owner = "yazoink";
     repo = "caroline-cursors";
     rev = "a6f347f4b9fdb6187e357bb7eec3a9b3d36a917b";
-    sha256 = "sha256-z+lEZYVgRWc2Hv07K/UFK2/fOJPtWLd1m3P65UQSBr8=";
+    sha256 = "sha256-sEKxLyhLfUXacIdEE4PjAwyPKYqJU43/vzXGPIAdlPw=";
   };
 
   dontUnpack = true;
