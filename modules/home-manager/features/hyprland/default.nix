@@ -80,6 +80,8 @@
           border_size = 2;
           layout = "dwindle";
           allow_tearing = false;
+          "col.inactive_border" = "rgb(${config.stylix.base16Scheme.base02})";
+          "col.active_border" = "rgb(${config.stylix.base16Scheme.base0F})";
         };
         decoration = {
           rounding = 10;
