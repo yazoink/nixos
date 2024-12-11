@@ -13,8 +13,8 @@
       package = pkgs.rofi-wayland;
       font = "${config.stylix.fonts.sansSerif.name} 11";
       terminal = "${pkgs.foot}/bin/foot";
-      theme = ./theme.rasi;
+      theme = ./theme-carob.rasi;
     };
-    home.file.".config/rofi/image.png".source = ./image.png;
+    #home.file.".config/rofi/image.png".source = ./image.png;
   };
 }
