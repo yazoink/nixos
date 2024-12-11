@@ -16,14 +16,10 @@ in
           @define-color dialog_bg_color #${base00};
           @define-color popover_bg_color #${base00};
           @define-color accent_color #${base0D};
+          @define-color accent_bg_color #${base0D};
           * {
             accent-color: @accent_color;
             accent-bg-color: @accent_bg_color;
-          }
-
-          .accent {
-            color: @accent_color;
-            background-color: @accent_bg_color;
           }
         '';
       };
