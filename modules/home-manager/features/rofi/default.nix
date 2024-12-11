@@ -15,7 +15,7 @@
       terminal = "${pkgs.foot}/bin/foot";
     };
 
-    home.file.".config/rofi/image.png".source = ./image-carob.png;
+    home.file.".config/rofi/image.png".source = ./image-caroline.png;
     xdg.configFile."rofi/config.rasi".text = with config.stylix; lib.mkForce ''
       /**
        *
