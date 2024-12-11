@@ -32,6 +32,7 @@
         pkgs.hyprlandPlugins.hyprspace 
         #pkgs.hyprlandPlugins.hypr-dynamic-cursors
         #pkgs.hyprlandPlugins.hyprbars
+        hyprbars
       ];
       settings = {
         "$terminal" = "foot";
@@ -102,7 +103,7 @@
             centerAligned = true;
             #overrideGaps = false;
           };
-          /*hyprbars = {
+          hyprbars = {
             bar_color = "rgb(242120)";
             bar_height = 32;
             bar_text_font = "${config.stylix.fonts.sansSerif.name} Bold";
@@ -112,7 +113,7 @@
             bar_precedence_over_border = true;
             disable_initialization_message = true;
             "col.text" = "rgb(BDAE97)";
-          };*/
+          };
           /*dynamic-cursors = {
             enabled = true;
             mode = "stretch";
