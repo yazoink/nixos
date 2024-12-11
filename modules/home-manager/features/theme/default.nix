@@ -11,7 +11,6 @@ in
     stylix = {
       targets = {
         waybar.enable = false;
-        gtk.enable = false;
         gtk.extraCss = with config.stylix.base16Scheme; ''
           @define-color headerbar_bg_color #${base00};
           @define-color dialog_bg_color #${base00};
@@ -94,21 +93,13 @@ in
         #kdePackages.qtstyleplugin-kvantum
         libsForQt5.qt5ct
         #kdePackages.qt6ct
-        #adw-gtk3
+        adw-gtk3
       ];
     };
 
     gtk = {
       enable = true;
-      theme.name = "Colloid";
-      theme.package = pkgs.colloid-gtk-theme;
       iconTheme.name = "caroline-suru-aspromauros";
-      gtk4 = {
-        extraCss = builtins.readFile ./gtk4.css;
-      };
-      gtk3 = {
-        extraCss = builtins.readFile ./gtk3.css;
-      };
       gtk2 = {
         extraConfig = builtins.readFile gtkrcFile;
       };
