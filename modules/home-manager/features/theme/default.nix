@@ -89,9 +89,9 @@
     xdg.configFile = {
       "Kvantum/kvantum.kvconfig".text = ''
         [General]
-        theme=Carob
+        theme=caroline-kvantum
       '';
-    "Kvantum/Carob".source = ./Carob;
+    "Kvantum/caroline-kvantum".source = ./caroline-kvantum;
     };
   };
 }
