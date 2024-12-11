@@ -111,7 +111,8 @@
             bar_text_align = "center";
             bar_part_of_window = true;
             bar_precedence_over_border = true;
-            bar_padding = 10;
+            bar_padding = 20;
+            bar_button_padding = 20;
             disable_initialization_message = true;
             "col.text" = "rgb(${config.stylix.base16Scheme.base05})";
             bar_buttons_alignment = "left";
