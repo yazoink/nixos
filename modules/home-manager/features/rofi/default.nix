@@ -20,7 +20,7 @@
       configuration {
         location: 0;
         yoffset: 0;
-        xoffset = 0;
+        xoffset: 0;
         terminal: "${pkgs.foot}/bin/foot";
       }
       @theme "my-theme"
