@@ -78,7 +78,7 @@
         general = {
           gaps_in = 5;
           gaps_out = 10;
-          border_size = 3;
+          border_size = 2;
           layout = "dwindle";
           allow_tearing = false;
           "col.inactive_border" = lib.mkForce "rgb(${config.stylix.base16Scheme.base02})";
