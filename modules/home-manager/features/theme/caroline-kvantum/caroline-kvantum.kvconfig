@@ -432,8 +432,7 @@ frame.left=8
 frame.right=8
 frame.element=menu
 interior.element=menu
-text.normal.color=#dedede
-background.normal.color=#3A2425
+text.normal.color=#A87569
 text.shadow=false
 text.bold=false
 
@@ -443,10 +442,8 @@ frame=true
 frame.element=menuitem
 interior.element=menuitem
 indicator.element=menuitem
-text.normal.color=#dedede
-text.focus.color=#dedede
-background.normal.color=#3A2425
-background.focus.color=#442B2B
+text.normal.color=#A87569
+text.focus.color=#A87569
 text.margin.top=0
 text.margin.bottom=0
 text.margin.left=6
@@ -556,8 +553,6 @@ text.margin=6
 interior.element=tooltip
 frame.element=tooltip
 frame.expansion=6
-background.normal.color=#3A2425
-background.focus.color=#442B2B
 
 [StatusBar]
 inherits=GenericFrame
