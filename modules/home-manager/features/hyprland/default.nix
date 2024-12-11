@@ -111,12 +111,13 @@
             bar_text_align = "center";
             bar_part_of_window = true;
             bar_precedence_over_border = true;
+            bar_padding = 10;
             disable_initialization_message = true;
             "col.text" = "rgb(${config.stylix.base16Scheme.base05})";
             bar_buttons_alignment = "left";
             hyprbars-button = [
-              "rgb(${config.stylix.base16Scheme.base0E}), 10, , hyprctl dispatch killactive"
-              "rgb(${config.stylix.base16Scheme.base08}), 10, , hyprctl dispatch fullscreen 1"
+              "rgb(${config.stylix.base16Scheme.base0E}), 15, , hyprctl dispatch killactive"
+              "rgb(${config.stylix.base16Scheme.base08}), 15, , hyprctl dispatch fullscreen 1"
             ];
           };
           /*dynamic-cursors = {
