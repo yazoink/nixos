@@ -52,7 +52,7 @@ in
           [Appearance]
           color_scheme_path=/home/gene/.config/qt5ct/colors/test.conf
           custom_palette=false
-          icon_theme=Carob
+          icon_theme=${config.home.gtk.iconTheme.name}
           standard_dialogs=default
           style=kvantum-dark
 
