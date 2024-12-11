@@ -29,10 +29,10 @@
       /*****----- Configuration -----*****/
       configuration {
         modi:                       "drun,run,filebrowser,window";
-          terminal = "${pkgs.foot}/bin/foot";
-          location = 0;
-          xoffset = 0;
-          yoffset = 0;
+          terminal: "${pkgs.foot}/bin/foot";
+          location: 0;
+          xoffset: 0;
+          yoffset: 0;
           show-icons:                 true;
           display-drun:               "Apps";
           display-run:                "Run";
