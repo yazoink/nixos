@@ -1,5 +1,11 @@
 # depends on system theme module
 {osConfig, pkgs, lib, config, ...}:
+let
+  gtkrcFile = config.lib.stylix.colors {
+    template = ./gtkrc.mustache;
+    extension = ".css";
+  };
+in
 {
   config = lib.mkIf osConfig.bundles.desktopBase.theme.enable {
     stylix = {
@@ -66,7 +72,7 @@
       enable = true;
       iconTheme.name = "caroline-suru-aspromauros";
       gtk2 = {
-        extraConfig = builtins.readFile ./gtkrc-caroline;
+        extraConfig = builtins.readFile gtkrcFile;
       };
     };
 
