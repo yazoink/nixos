@@ -434,7 +434,6 @@ frame.element=menu
 interior.element=menu
 text.normal.color=#dedede
 background.normal.color=#3A2425
-background.focus.color=#442B2B
 text.shadow=false
 text.bold=false
 
@@ -446,6 +445,8 @@ interior.element=menuitem
 indicator.element=menuitem
 text.normal.color=#dedede
 text.focus.color=#dedede
+background.normal.color=#3A2425
+background.focus.color=#442B2B
 text.margin.top=0
 text.margin.bottom=0
 text.margin.left=6
