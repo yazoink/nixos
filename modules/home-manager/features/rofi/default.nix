@@ -16,7 +16,7 @@
     };
 
     home.file.".config/rofi/image.png".source = ./image-carob.png;
-    programs.rofi.theme = with config.stylix; ''
+    programs.rofi.theme = with config.stylix; lib.mkForce ''
 /**
  *
  * Author : Aditya Shakya (adi1090x), yazoink
