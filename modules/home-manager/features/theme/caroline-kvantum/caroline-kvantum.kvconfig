@@ -433,6 +433,8 @@ frame.right=8
 frame.element=menu
 interior.element=menu
 text.normal.color=#dedede
+background.normal.color=#3A2425
+background.focus.color=#442B2B
 text.shadow=false
 text.bold=false
 
@@ -553,6 +555,8 @@ text.margin=6
 interior.element=tooltip
 frame.element=tooltip
 frame.expansion=6
+background.normal.color=#3A2425
+background.focus.color=#442B2B
 
 [StatusBar]
 inherits=GenericFrame
