@@ -10,11 +10,11 @@
 /*****----- Configuration -----*****/
 configuration {
 	modi:                       "drun,run,filebrowser,window";
-    show-icons:                 true;
-    display-drun:               "Apps";
-    display-run:                "Run";
-    display-filebrowser:        "Files";
-    display-window:             "Window";
+  show-icons:                 true;
+  display-drun:               "Apps";
+  display-run:                "Run";
+  display-filebrowser:        "Files";
+  display-window:             "Window";
 	drun-display-format:        "{name}";
 	window-format:              "{w} · {c} · {t}";
 }
@@ -152,7 +152,7 @@ element {
     spacing:                     10px;
     padding:                     8px;
     border-radius:               10px;
-    background-color:            transparent;
+    background-color:            @background;
     text-color:                  @foreground;
     cursor:                      pointer;
 }
