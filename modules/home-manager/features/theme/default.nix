@@ -61,7 +61,7 @@
 
     gtk = {
       enable = true;
-      iconTheme.name = "caroline-icons";
+      iconTheme.name = "caroline-suru-aspromauros";
       gtk2 = {
         extraConfig = builtins.readFile ./gtkrc-caroline;
       };
