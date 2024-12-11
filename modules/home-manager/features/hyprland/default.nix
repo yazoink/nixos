@@ -32,7 +32,7 @@
         pkgs.hyprlandPlugins.hyprspace 
         #pkgs.hyprlandPlugins.hypr-dynamic-cursors
         pkgs.hyprlandPlugins.hyprbars
-        #hyprbars
+        #hyprbars # broken?
       ];
       settings = {
         "$terminal" = "foot";
@@ -280,6 +280,7 @@
         windowrulev2 = float, title:^(Picture-in-Picture)$
         windowrulev2 = float, title:^(Authentication Required)$
         windowrulev2 = plugin:hyprbars:nobar, class:^(org.kde.kruler)
+        windowrulev2 = plugin:hyprbars:nobar, title:^(vesktop)$
       '';
     };
   };
