@@ -15,10 +15,10 @@
     services.displayManager.sddm = {
       enable = true;
       wayland.enable = true;
-      theme = if config.networking.hostName == "cyberia" then "carob-small-resolution" else (if (config.networking.hostName == "fluoride") then "carob-large-resolution" else "carob");
+      theme = if config.networking.hostName == "cyberia" then "caroline-small-resolution" else (if (config.networking.hostName == "fluoride") then "caroline-large-resolution" else "caroline");
       settings = {
         Theme = {
-          CursorTheme = "Bibata-Carob";
+          CursorTheme = config.stylix.cursor.name;
         };
       };
     };

@@ -1,6 +1,9 @@
 {pkgs, config, lib, ...}:
 let
-  carobTheme = pkgs.callPackage ./carob-theme.nix {};
+  #carobTheme = pkgs.callPackage ./carob-theme.nix {};
+  carolineSddm = pkgs.callPackage ./caroline-sddm.nix {};
+  carolineCursors = pkgs.callPackage ./caroline-cursors.nix {};
+  carolineIcons = pkgs.callPackage ./caroline-icons.nix {};
 in
 {
   options = {
@@ -15,7 +18,7 @@ in
       libsForQt5.qtquickcontrols2
       libsForQt5.qtgraphicaleffects
       gtk-engine-murrine
-    ] ++ [carobTheme];
+    ] ++ [carolineSddm carolineCursors carolineIcons];
 
     stylix = {
       enable = true;
@@ -23,7 +26,7 @@ in
         grub.enable = false;
       };
       cursor = {
-        name = "Bibata-Carob";
+        name = "caroline-bibata-modern";
         size = 24;
       };
       /*base16Scheme = {

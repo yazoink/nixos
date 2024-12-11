@@ -61,9 +61,9 @@
 
     gtk = {
       enable = true;
-      iconTheme.name = "Carob";
+      iconTheme.name = "caroline-icons";
       gtk2 = {
-        extraConfig = builtins.readFile ./gtkrc;
+        extraConfig = builtins.readFile ./gtkrc-caroline;
       };
       gtk3.extraCss = ''
         headerbar, .titlebar,
