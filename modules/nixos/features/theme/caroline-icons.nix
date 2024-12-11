@@ -5,8 +5,8 @@ pkgs.stdenv.mkDerivation {
   src = pkgs.fetchFromGitHub {
     owner = "yazoink";
     repo = "caroline-icons";
-    rev = "cfd7503a729d72ad785229fc9a12c97285ddf440";
-    sha256 = "sha256-pmVMqBZFDTnItUVwRcx185RgZJUNFyrG4k4qNU3EM5c=";
+    rev = "4665fe1a26d1fdc333e223d66aa99b7ad7164aac";
+    sha256 = "sha256-pmVMqBtFDTnItUVwRcx185RgZJUNFyrG4k4qNU3EM5c=";
   };
 
   dontUnpack = true;
