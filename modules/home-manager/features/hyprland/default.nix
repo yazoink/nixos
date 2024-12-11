@@ -289,6 +289,7 @@
         windowrulev2 = float, title:^(Authentication Required)$
         windowrulev2 = plugin:hyprbars:nobar, class:^(org.kde.kruler)
         windowrulev2 = plugin:hyprbars:nobar, title:^(vesktop)$
+        windowrulev2 = plugin:hyprbars:nobar, title:^(File Upload)$
       '';
     };
   };
