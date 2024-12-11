@@ -1,4 +1,4 @@
-{config, pkgs, lib, osConfig, ...}:
+{config, pkgs, lib, ...}:
 {
   options = {
     bundles.desktopBase.rofi.enable = lib.mkOption {
@@ -13,11 +13,10 @@
       package = pkgs.rofi-wayland;
       font = "${config.stylix.fonts.sansSerif.name} 11";
       terminal = "${pkgs.foot}/bin/foot";
-      theme = "/home/${osConfig.myOptions.userAccount.username}/.config/rofi/my-theme.rasi";
     };
 
     home.file.".config/rofi/image.png".source = ./image-carob.png;
-    xdg.configFile."rofi/my-theme.rasi" = with config.stylix; lib.mkForce ''
+    xdg.configFile."rofi/config.rasi" = with config.stylix; lib.mkForce ''
       /**
        *
        * Author : Aditya Shakya (adi1090x), yazoink
@@ -30,6 +29,10 @@
       /*****----- Configuration -----*****/
       configuration {
         modi:                       "drun,run,filebrowser,window";
+          terminal = "${pkgs.foot}/bin/foot";
+          location = 0;
+          xoffset = 0;
+          yoffset = 0;
           show-icons:                 true;
           display-drun:               "Apps";
           display-run:                "Run";
