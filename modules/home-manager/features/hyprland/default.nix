@@ -104,7 +104,7 @@
             #overrideGaps = false;
           };
           hyprbars = {
-            bar_color = "rgb(242120)";
+            bar_color = "rgb(${config.stylix.base16Scheme.base00})";
             bar_height = 32;
             bar_text_font = "${config.stylix.fonts.sansSerif.name} Bold";
             bar_text_size = config.stylix.fonts.sizes.applications;
@@ -112,7 +112,7 @@
             bar_part_of_window = true;
             bar_precedence_over_border = true;
             disable_initialization_message = true;
-            "col.text" = "rgb(BDAE97)";
+            "col.text" = "rgb(${config.stylix.base16Scheme.base05})";
           };
           /*dynamic-cursors = {
             enabled = true;
