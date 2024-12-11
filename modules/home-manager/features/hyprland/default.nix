@@ -112,13 +112,13 @@
             bar_part_of_window = true;
             bar_precedence_over_border = true;
             bar_padding = 15;
-            bar_button_padding = 15;
+            bar_button_padding = 10;
             disable_initialization_message = true;
             "col.text" = "rgb(${config.stylix.base16Scheme.base05})";
             bar_buttons_alignment = "left";
             hyprbars-button = [
               "rgb(${config.stylix.base16Scheme.base0E}), 15, , hyprctl dispatch killactive"
-              "rgb(${config.stylix.base16Scheme.base0A}), 15, , hyprctl dispatch movetoworkspace special"
+              "rgb(${config.stylix.base16Scheme.base0A}), 15, , hyprctl dispatch movetoworkspacesilent special"
               "rgb(${config.stylix.base16Scheme.base0B}), 15, , hyprctl dispatch fullscreen 1"
             ];
           };
