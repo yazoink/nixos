@@ -47,10 +47,11 @@
           font:                        "${fonts.sansSerif.name} 11";
           background:                  #${base16Scheme.base00};
           background-alt:              #${base16Scheme.base01};
+          background-alt-2:            #${base16Scheme.base02};
           foreground:                  #${base16Scheme.base05};
-          selected:                    #${base16Scheme.base02};
-          active:                      #${base16Scheme.base02};
-          urgent:                      #${base16Scheme.base02};
+          selected:                    #${base16Scheme.base01};
+          active:                      #${base16Scheme.base01};
+          urgent:                      #${base16Scheme.base01};
           highlight:                   #${base16Scheme.base0D};
       }
 
@@ -147,7 +148,7 @@
           cursor:                      pointer;
       }
       button selected {
-          background-color:            @selected;
+          background-color:            @background-alt-2;
           text-color:                  @foreground;
       }
 
