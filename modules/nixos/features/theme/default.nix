@@ -85,7 +85,7 @@ in
           #package = pkgs.gohufont;
           #name = "Gohufont";
           package = pkgs.proggyfonts;
-          name = "ProggyCleanSZ";
+          name = "ProggyCleanTTSZ";
         };
       };
     };
