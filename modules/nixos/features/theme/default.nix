@@ -5,7 +5,7 @@ let
   carolineCursors = pkgs.callPackage ./caroline-cursors.nix {};
   carolineIcons = pkgs.callPackage ./caroline-icons.nix {};
   #kirsch = pkgs.callPackage ./kirsch {};
-  castella = pkgs.callPackage ./castella {};
+  #castella = pkgs.callPackage ./castella {};
 in
 {
   options = {
@@ -73,7 +73,7 @@ in
           applications = 11;
           desktop = 11;
           popups = 11;
-          terminal = 14;
+          terminal = 11;
         };
         serif = {
           package = pkgs.gyre-fonts;
@@ -84,10 +84,10 @@ in
           name = "Rubik";
         };
         monospace = {
-          #package = pkgs.gohufont;
-          #name = "Gohufont";
-          package = castella;
-          name = "castella";
+          package = pkgs.gohufont;
+          name = "Gohufont";
+          #package = castella;
+          #name = "castella";
         };
       };
     };
