@@ -5,7 +5,6 @@ let
     "update" = "cd ~/nixos && sudo nix flake update";
     "clean" = "sudo nix-store --gc && nix-store --gc && sudo nix-collect-garbage -d && nix-collect-garbage -d";
     "optimise" = "sudo nix-store --optimise && nix-store --optimise";
-    "firefox-edit" = "nvim ~/nixos/modules/home-manager/applications/firefox/default.nix";
     "chx" = "chmod u+x";
     "cp" = "cp -v";
     "rm" = "rm -v";
@@ -29,7 +28,7 @@ let
     "php-dev" = "nix shell github:loophp/nix-shell#php82 --impure";
     "music" = "ncmpcpp";
   };
-  rebuild = pkgs.callPackage ./scripts/rebuild {};
+  rebuild = pkgs.callPackage ./scripts/rebuild/default.nix {};
 in
 {
   options = {
