@@ -82,8 +82,8 @@ in
           name = "Rubik";
         };
         monospace = {
-          package = pkgs.dina-font;
-          name = "Dina";
+          package = pkgs.cozette;
+          name = "Cozette";
           #package = pkgs.anonymousPro;
           #name = "Anonymous Pro";
         };
