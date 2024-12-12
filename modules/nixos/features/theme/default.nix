@@ -82,10 +82,10 @@ in
           name = "Rubik";
         };
         monospace = {
-          #package = pkgs.gohufont;
-          #name = "Gohufont";
-          package = pkgs.termsyn;
-          name = "Termsyn";
+          package = pkgs.gohufont;
+          name = "Gohufont";
+          #package = pkgs.termsyn;
+          #name = "Termsyn";
         };
       };
     };
