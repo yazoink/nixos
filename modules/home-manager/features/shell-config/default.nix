@@ -29,6 +29,7 @@ let
     "music" = "ncmpcpp";
   };
   rebuild = pkgs.callPackage ./scripts/rebuild {};
+  clean = pkgs.callPackage ./scripts/clean {};
 in
 {
   options = {
@@ -39,7 +40,7 @@ in
   };
 
   config = lib.mkIf config.bundles.base.shellConfig.enable {
-    home.packages = [rebuild];
+    home.packages = [rebuild clean];
     programs.zsh = {
       enable = true;
       autocd = true;
