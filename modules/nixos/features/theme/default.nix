@@ -83,7 +83,7 @@ in
         };
         monospace = {
           package = pkgs.cozette;
-          name = "CozetteHiDpi";
+          name = "CozetteVector";
           #package = pkgs.anonymousPro;
           #name = "Anonymous Pro";
         };
