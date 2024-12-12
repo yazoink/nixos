@@ -5,7 +5,7 @@ let
   carolineCursors = pkgs.callPackage ./caroline-cursors.nix {};
   carolineIcons = pkgs.callPackage ./caroline-icons.nix {};
   #kirsch = pkgs.callPackage ./kirsch {};
-  castella = pkgs.callPackage ./kirsch {};
+  castella = pkgs.callPackage ./castella {};
 in
 {
   options = {
