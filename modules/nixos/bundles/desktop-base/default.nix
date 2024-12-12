@@ -31,6 +31,5 @@
       theme.enable = true;
       thunar.enable = true;
     };
-    environment.localBinInPath = true;
   };
 }

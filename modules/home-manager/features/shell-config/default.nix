@@ -1,8 +1,7 @@
-{config, lib, pkgs, osConfig, ...}:
+{config, lib, pkgs, ...}:
 let
   myAliases = {
-    "rebuild" = "$HOME/.local/bin/rebuild";
-    "rebuild-test" = "$HOME/.local/bin/rebuild-test";
+    "rebuild-test" = "${rebuild}/bin/rebuild -t";
     "update" = "cd ~/nixos && sudo nix flake update";
     "clean" = "sudo nix-store --gc && nix-store --gc && sudo nix-collect-garbage -d && nix-collect-garbage -d";
     "optimise" = "sudo nix-store --optimise && nix-store --optimise";
@@ -30,6 +29,7 @@ let
     "php-dev" = "nix shell github:loophp/nix-shell#php82 --impure";
     "music" = "ncmpcpp";
   };
+  rebuild = pkgs.callPackage ./scripts/rebuild {};
 in
 {
   options = {
@@ -40,11 +40,7 @@ in
   };
 
   config = lib.mkIf config.bundles.base.shellConfig.enable {
-    home.file = {
-      ".local/bin/rebuild".source = ./scripts/rebuild;
-      ".local/bin/rebuild-test".source = ./scripts/rebuild-test;
-    };
-
+    home.packages = [rebuild];
     programs.zsh = {
       enable = true;
       autocd = true;
