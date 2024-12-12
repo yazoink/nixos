@@ -85,10 +85,10 @@ in
           name = "Rubik";
         };
         monospace = {
-          #package = pkgs.gohufont;
-          #name = "Gohufont";
-          package = triskweline;
-          name = "Triskweline";
+          package = pkgs.gohufont;
+          name = "Gohufont";
+          #package = triskweline;
+          #name = "Triskweline";
         };
       };
     };
