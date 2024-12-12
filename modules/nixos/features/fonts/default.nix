@@ -1,4 +1,7 @@
 {pkgs, config, lib, ...}:
+let
+  kirsch = pkgs.callPackage ./kirsch.nix {};
+in
 {
   options = {
     bundles.desktopBase.fonts.enable = lib.mkOption {
@@ -18,7 +21,7 @@
       terminus_font_ttf
       nerd-fonts.terminess-ttf
       _0xproto
-    ];
+    ] ++ [kirsch];
 
     fonts = {
       fontconfig.allowBitmaps = true;
