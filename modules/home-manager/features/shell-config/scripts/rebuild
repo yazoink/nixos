@@ -1,0 +1,10 @@
+#!/run/current-system/sw/bin/bash
+
+HOSTNAME=$(hostname)
+
+sudo nixos-rebuild switch --flake "$HOME/nixos#$HOSTNAME"
+
+case $? in
+  0) notify-send "Rebuild complete!";;
+  *) notify-send "Rebuild failed!";;
+esac

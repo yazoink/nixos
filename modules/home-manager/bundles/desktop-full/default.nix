@@ -73,6 +73,7 @@
     ../../features/kjtocal
     ../../features/kooha
     ../../features/ncmpcpp
+    ../../features/newsboat
     ../../features/vesktop
     ../../features/vscode
     ../../features/yt-dlp

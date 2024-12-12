@@ -1,0 +1,10 @@
+#!/run/current-system/sw/bin/bash
+
+HOSTNAME=$(hostname)
+
+sudo nixos-rebuild test --flake "$HOME/nixos#$HOSTNAME"
+
+case $? in
+  0) notify-send "Test rebuild complete!";;
+  *) notify-send "Test rebuild failed!";;
+esac

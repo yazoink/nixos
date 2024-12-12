@@ -1,8 +1,8 @@
-{config, lib, pkgs, ...}:
+{config, lib, pkgs, osConfig, ...}:
 let
   myAliases = {
-    "rebuild" = "sudo nixos-rebuild switch --flake ~/nixos#$(hostname)";
-    "rebuild-test" = "sudo nixos-rebuild test --flake ~/nixos#$(hostname)";
+    #"rebuild" = "sudo nixos-rebuild switch --flake ~/nixos#$(hostname) && notify-send 'Rebuild complete!'";
+    #"rebuild-test" = "sudo nixos-rebuild test --flake ~/nixos#$(hostname) && notify-send 'Test rebuild complete!";
     "update" = "cd ~/nixos && sudo nix flake update";
     "clean" = "sudo nix-store --gc && nix-store --gc && sudo nix-collect-garbage -d && nix-collect-garbage -d";
     "optimise" = "sudo nix-store --optimise && nix-store --optimise";
@@ -38,14 +38,16 @@ in
       default = false;
     };
   };
+
   config = lib.mkIf config.bundles.base.shellConfig.enable {
-    programs.eza = {
-      enable = true;
-      enableZshIntegration = true;
-      enableBashIntegration = false;
-      #icons = "auto";
-      git = true;
+    home.sessionPath = [
+      "/home/${osConfig.myOptions.userAccount.username}/.local/bin"
+    ];
+    home.file = {
+      ".local/bin/rebuild".source = ./scripts/rebuild;
+      ".local/bin/rebuild-test".source = ./scripts/rebuild-test;
     };
+
     programs.zsh = {
       enable = true;
       autocd = true;
@@ -65,6 +67,7 @@ in
           };
         }
       ];
+
       oh-my-zsh = {
         enable = true;
         theme = "robbyrussell";
@@ -77,6 +80,14 @@ in
       };
 
       shellAliases = myAliases;
+    };
+
+    programs.eza = {
+      enable = true;
+      enableZshIntegration = true;
+      enableBashIntegration = false;
+      #icons = "auto";
+      git = true;
     };
   };
 }
