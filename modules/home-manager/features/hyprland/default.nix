@@ -291,6 +291,7 @@
         windowrulev2 = plugin:hyprbars:nobar, title:^(vesktop)$
         windowrulev2 = plugin:hyprbars:nobar, title:^(File Upload)$
         windowrulev2 = plugin:hyprbars:nobar, title:^(Empty Trash)$
+        windowrulev2 = plugin:hyprbars:nobar, title:^(File Manager Preferences)$
       '';
     };
   };
