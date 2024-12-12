@@ -6,7 +6,7 @@ pkgs.stdenv.mkDerivation {
     owner = "yazoink";
     repo = "caroline-sddm-theme";
     rev = "20013ab14561c01b6e22e689bba98fe95ae73d85";
-    sha256 = "sha256-ErP863eYIyY8s3QgVH6USVpzQlRykAOleiS45szcR1E=";
+    sha256 = "sha256-ErP863eYIyY8s3tgVH6USVpzQlRykAOleiS45szcR1E=";
   };
 
   dontUnpack = true;
