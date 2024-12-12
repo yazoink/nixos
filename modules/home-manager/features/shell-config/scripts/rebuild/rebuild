@@ -43,6 +43,7 @@ function main() {
     0) notify-send "Rebuild complete!";;
     *) notify-send "Rebuild failed!";;
   esac
+  aplay "$HOME/.config/mako/sounds/default.wav"
 }
 
 function help() {
