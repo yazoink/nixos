@@ -71,7 +71,7 @@ in
           applications = 11;
           desktop = 11;
           popups = 11;
-          terminal = 14;
+          terminal = 11;
         };
         serif = {
           package = pkgs.gyre-fonts;
@@ -82,10 +82,10 @@ in
           name = "Rubik";
         };
         monospace = {
-          package = pkgs.nerd-fonts.gohufont;
-          name = "GohuFont 14 Nerd Font";
-          #package = pkgs.anonymousPro;
-          #name = "Anonymous Pro";
+          #package = pkgs.gohufont;
+          #name = "Gohufont";
+          package = pkgs.departure-mono;
+          name = "Departure Mono";
         };
       };
     };
