@@ -71,7 +71,7 @@ in
           applications = 11;
           desktop = 11;
           popups = 11;
-          terminal = 11;
+          terminal = 14;
         };
         serif = {
           package = pkgs.gyre-fonts;
@@ -83,7 +83,7 @@ in
         };
         monospace = {
           package = pkgs.nerd-fonts.gohufont;
-          name = "GohuFont Nerd Font";
+          name = "GohuFont 14 Nerd Font";
           #package = pkgs.anonymousPro;
           #name = "Anonymous Pro";
         };
