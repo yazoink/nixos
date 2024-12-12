@@ -7,7 +7,7 @@ function main() {
     help && exit 0
   fi
 
-  switch_arg=""
+  switch_arg="switch"
   extra_args=""
   do_update=false
   git_enabled=false
