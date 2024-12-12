@@ -65,7 +65,7 @@ in
         base0E = "a63650";
         base0F = "893f45";
       };
-      image = if config.networking.hostName == "cyberia" then ./wallpaper-cyberia.png else ./wallpaper-fluoride.png;
+      image = if config.networking.hostName == "cyberia" then ./wallpapers/cyberia/caroline-flowers.png else ./wallpapers/fluoride/caroline-flowers.png;
       fonts = {
         sizes = {
           applications = 11;

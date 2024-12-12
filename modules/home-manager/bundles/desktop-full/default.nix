@@ -7,6 +7,7 @@
       kjtocal.enable = true;
       kooha.enable = true;
       ncmpcpp.enable = true;
+      newsboat.enable = true;
       vesktop.enable = true;
       ytDlp.enable = true;
     };
