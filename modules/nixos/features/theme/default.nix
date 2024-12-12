@@ -83,7 +83,7 @@ in
         };
         monospace = {
           package = pkgs.tewi-font;
-          name = "tewi-medium";
+          name = "tewi";
           #package = pkgs.anonymousPro;
           #name = "Anonymous Pro";
         };
