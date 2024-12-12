@@ -12,6 +12,7 @@
     ];
     services.mako = {
       enable = true;
+      icons = true;
       anchor = "top-right";
       borderRadius = 5;
       borderColor = lib.mkForce "#${config.stylix.base16Scheme.base01}";
@@ -19,6 +20,7 @@
       margin = "5";
       borderSize = 2;
       defaultTimeout = 5000;
+      iconPath = "/run/current-system/sw/share/icons/${config.gtk.iconTheme.name}";
     };
   };
 }

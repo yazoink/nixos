@@ -40,9 +40,6 @@ in
   };
 
   config = lib.mkIf config.bundles.base.shellConfig.enable {
-    home.sessionPath = [
-      "$HOME/.local/bin"
-    ];
     home.file = {
       ".local/bin/rebuild".source = ./scripts/rebuild;
       ".local/bin/rebuild-test".source = ./scripts/rebuild-test;
