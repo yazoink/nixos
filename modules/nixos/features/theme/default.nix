@@ -82,8 +82,8 @@ in
           name = "Rubik";
         };
         monospace = {
-          package = pkgs.unifont;
-          name = "Unifont";
+          package = pkgs.gohufont;
+          name = "Gohufont";
           #package = pkgs.anonymousPro;
           #name = "Anonymous Pro";
         };
