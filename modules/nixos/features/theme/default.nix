@@ -71,7 +71,7 @@ in
           applications = 11;
           desktop = 11;
           popups = 11;
-          terminal = 14;
+          terminal = 11;
         };
         serif = {
           package = pkgs.gyre-fonts;
