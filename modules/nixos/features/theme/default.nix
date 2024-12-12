@@ -82,8 +82,8 @@ in
           name = "Rubik";
         };
         monospace = {
-          package = pkgs.tamsyn;
-          name = "Tamsyn";
+          package = pkgs.uw-ttyp0;
+          name = "uw-ttyp0";
           #package = pkgs.anonymousPro;
           #name = "Anonymous Pro";
         };
