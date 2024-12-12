@@ -18,7 +18,7 @@ let
     "ip" = "ip -color=auto";
     "vim" = "nvim";
     "make" = "make -j$(nproc)";
-    "vpssh" = "ssh vps";
+    "vpssh" = "tmux && ssh vps";
     "ga" = "git add";
     "gaa" = "git add .";
     "gc" = "git commit";
