@@ -20,11 +20,11 @@
      inkscape:pageopacity="0"
      inkscape:pagecheckerboard="0"
      showgrid="false"
-     inkscape:zoom="1.0818734"
-     inkscape:cx="-9.7053872"
-     inkscape:cy="543.96384"
-     inkscape:window-width="1908"
-     inkscape:window-height="1384"
+     inkscape:zoom="48.960001"
+     inkscape:cx="179.87132"
+     inkscape:cy="601.72589"
+     inkscape:window-width="2536"
+     inkscape:window-height="1344"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
@@ -4643,7 +4643,8 @@
     <path
        d="m265.5 865h-0.5v2h0.5z"
        fill="#2d363c"
-       id="path1748" />
+       id="path1748"
+       style="fill:#1c1213;fill-opacity:1" />
   </g>
   <use
      id="tabframe-normal-top-rightjunct"
