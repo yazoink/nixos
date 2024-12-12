@@ -4,6 +4,7 @@ let
   carolineSddm = pkgs.callPackage ./caroline-sddm.nix {};
   carolineCursors = pkgs.callPackage ./caroline-cursors.nix {};
   carolineIcons = pkgs.callPackage ./caroline-icons.nix {};
+  kirsch = pkgs.callPackage ./kirsch {};
 in
 {
   options = {
@@ -82,7 +83,7 @@ in
           name = "Rubik";
         };
         monospace = {
-          #package = pkgs.gohufont;
+          package = kirsch;
           name = "kirsch";
           #package = pkgs.profont;
           #name = "ProFont";

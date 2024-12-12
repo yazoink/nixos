@@ -21,7 +21,7 @@ in
       terminus_font_ttf
       nerd-fonts.terminess-ttf
       _0xproto
-    ] ++ [kirsch];
+    ];
 
     fonts = {
       fontconfig.allowBitmaps = true;
