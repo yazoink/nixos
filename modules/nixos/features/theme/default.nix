@@ -71,7 +71,7 @@ in
           applications = 11;
           desktop = 11;
           popups = 11;
-          terminal = 13;
+          terminal = 12;
         };
         serif = {
           package = pkgs.gyre-fonts;
@@ -83,7 +83,7 @@ in
         };
         monospace = {
           package = pkgs.cozette;
-          name = "Cozette";
+          name = "CozetteHiDpi";
           #package = pkgs.anonymousPro;
           #name = "Anonymous Pro";
         };
