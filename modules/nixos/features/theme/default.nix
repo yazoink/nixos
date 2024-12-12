@@ -83,7 +83,7 @@ in
         };
         monospace = {
           package = pkgs.uw-ttyp0;
-          name = "uw-ttyp0";
+          name = "UW ttyp0";
           #package = pkgs.anonymousPro;
           #name = "Anonymous Pro";
         };
