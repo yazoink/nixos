@@ -1,8 +1,8 @@
 {config, lib, pkgs, osConfig, ...}:
 let
   myAliases = {
-    #"rebuild" = "sudo nixos-rebuild switch --flake ~/nixos#$(hostname) && notify-send 'Rebuild complete!'";
-    #"rebuild-test" = "sudo nixos-rebuild test --flake ~/nixos#$(hostname) && notify-send 'Test rebuild complete!";
+    "rebuild" = "$HOME/.local/bin/rebuild";
+    "rebuild-test" = "$HOME/.local/bin/rebuild-test";
     "update" = "cd ~/nixos && sudo nix flake update";
     "clean" = "sudo nix-store --gc && nix-store --gc && sudo nix-collect-garbage -d && nix-collect-garbage -d";
     "optimise" = "sudo nix-store --optimise && nix-store --optimise";
