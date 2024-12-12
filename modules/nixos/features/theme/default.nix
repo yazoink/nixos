@@ -71,7 +71,7 @@ in
           applications = 11;
           desktop = 11;
           popups = 11;
-          terminal = 12;
+          terminal = 11;
         };
         serif = {
           package = pkgs.gyre-fonts;
@@ -82,8 +82,8 @@ in
           name = "Rubik";
         };
         monospace = {
-          package = pkgs.cozette;
-          name = "CozetteVector";
+          package = pkgs.tewi-font;
+          name = "tewi-medium";
           #package = pkgs.anonymousPro;
           #name = "Anonymous Pro";
         };
