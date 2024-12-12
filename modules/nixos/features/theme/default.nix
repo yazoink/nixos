@@ -84,8 +84,8 @@ in
         monospace = {
           #package = pkgs.gohufont;
           #name = "Gohufont";
-          package = pkgs.proggyfonts;
-          name = "ProggyCleanTTSZ";
+          package = pkgs.termsyn;
+          name = "Termsyn";
         };
       };
     };
