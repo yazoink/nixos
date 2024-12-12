@@ -4,7 +4,7 @@ pkgs.stdenv.mkDerivation {
   src = ./bdf;
   dontUnpack = true;
   installPhase = ''
-    mkdir -p $out/share/fonts/misc/triskweline.
+    mkdir -p $out/share/fonts/misc/triskweline
     cp $src/* $out/share/fonts/misc/triskweline
   '';
 }
