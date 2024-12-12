@@ -31,7 +31,7 @@ function main() {
     [ "$git_enabled" == true ] && {
       echo "Committing flake update to git repo..."
       git -C "$HOME/nixos" add "$HOME/nixos/flake.lock"
-      git commit -m "Update flake inputs"
+      git -C "$HOME/nixos" commit -m "Update flake inputs"
     }
   }
 
