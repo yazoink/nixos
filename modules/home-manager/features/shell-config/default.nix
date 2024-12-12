@@ -3,7 +3,6 @@ let
   myAliases = {
     "rebuild-test" = "${rebuild}/bin/rebuild -t";
     "update" = "cd ~/nixos && sudo nix flake update";
-    "clean" = "sudo nix-store --gc && nix-store --gc && sudo nix-collect-garbage -d && nix-collect-garbage -d";
     "optimise" = "sudo nix-store --optimise && nix-store --optimise";
     "chx" = "chmod u+x";
     "cp" = "cp -v";
