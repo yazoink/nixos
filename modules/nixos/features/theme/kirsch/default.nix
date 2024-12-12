@@ -1,7 +1,7 @@
 {pkgs, ...}:
 pkgs.stdenv.mkDerivation {
   name = "kirsch-font";
-  src = ./custom/kirsch.bdf;
+  src = ./kirsch.bdf;
   dontUnpack = true;
   installPhase = ''
     mkdir -p $out/share/fonts/misc
