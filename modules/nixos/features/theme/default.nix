@@ -6,6 +6,7 @@ let
   carolineIcons = pkgs.callPackage ./caroline-icons.nix {};
   #kirsch = pkgs.callPackage ./kirsch {};
   #castella = pkgs.callPackage ./castella {};
+  triskweline = pkgs.callPackage ./triskweline {};
 in
 {
   options = {
@@ -84,10 +85,10 @@ in
           name = "Rubik";
         };
         monospace = {
-          package = pkgs.gohufont;
-          name = "Gohufont";
-          #package = castella;
-          #name = "castella";
+          #package = pkgs.gohufont;
+          #name = "Gohufont";
+          package = triskweline;
+          name = "Triskweline";
         };
       };
     };
