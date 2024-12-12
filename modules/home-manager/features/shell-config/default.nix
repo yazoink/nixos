@@ -41,7 +41,7 @@ in
 
   config = lib.mkIf config.bundles.base.shellConfig.enable {
     home.sessionPath = [
-      "/home/${osConfig.myOptions.userAccount.username}/.local/bin"
+      "$HOME/.local/bin"
     ];
     home.file = {
       ".local/bin/rebuild".source = ./scripts/rebuild;
