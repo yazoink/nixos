@@ -28,7 +28,7 @@ let
     "php-dev" = "nix shell github:loophp/nix-shell#php82 --impure";
     "music" = "ncmpcpp";
   };
-  rebuild = pkgs.callPackage ./scripts/rebuild/default.nix {};
+  rebuild = pkgs.callPackage ./scripts/rebuild {};
 in
 {
   options = {
