@@ -83,8 +83,8 @@ in
           name = "Rubik";
         };
         monospace = {
-          package = kirsch;
-          name = "kirsch";
+          package = pkgs.gohufont;
+          name = "Gohufont";
           #package = pkgs.profont;
           #name = "ProFont";
         };
