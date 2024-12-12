@@ -84,8 +84,8 @@ in
         monospace = {
           #package = pkgs.gohufont;
           #name = "Gohufont";
-          package = pkgs.departure-mono;
-          name = "Departure Mono";
+          package = pkgs.proggyfonts;
+          name = "ProggyClean";
         };
       };
     };
