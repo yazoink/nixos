@@ -1,12 +1,9 @@
 {config, lib, pkgs, ...}:
 let
   myAliases = {
-    "rebuild" = "sudo nixos-rebuild switch --flake ~/nixos#$(hostname)";
-    "rebuild-test" = "sudo nixos-rebuild test --flake ~/nixos#$(hostname)";
+    "rebuild-test" = "${rebuild}/bin/rebuild -t";
     "update" = "cd ~/nixos && sudo nix flake update";
-    "clean" = "sudo nix-store --gc && nix-store --gc && sudo nix-collect-garbage -d && nix-collect-garbage -d";
     "optimise" = "sudo nix-store --optimise && nix-store --optimise";
-    "firefox-edit" = "nvim ~/nixos/modules/home-manager/applications/firefox/default.nix";
     "chx" = "chmod u+x";
     "cp" = "cp -v";
     "rm" = "rm -v";
@@ -20,7 +17,7 @@ let
     "ip" = "ip -color=auto";
     "vim" = "nvim";
     "make" = "make -j$(nproc)";
-    "vpssh" = "ssh vps";
+    "vpssh" = "tmux && ssh vps";
     "ga" = "git add";
     "gaa" = "git add .";
     "gc" = "git commit";
@@ -30,6 +27,8 @@ let
     "php-dev" = "nix shell github:loophp/nix-shell#php82 --impure";
     "music" = "ncmpcpp";
   };
+  rebuild = pkgs.callPackage ./scripts/rebuild {};
+  clean = pkgs.callPackage ./scripts/clean {};
 in
 {
   options = {
@@ -38,14 +37,9 @@ in
       default = false;
     };
   };
+
   config = lib.mkIf config.bundles.base.shellConfig.enable {
-    programs.eza = {
-      enable = true;
-      enableZshIntegration = true;
-      enableBashIntegration = false;
-      #icons = "auto";
-      git = true;
-    };
+    home.packages = [rebuild clean];
     programs.zsh = {
       enable = true;
       autocd = true;
@@ -65,6 +59,7 @@ in
           };
         }
       ];
+
       oh-my-zsh = {
         enable = true;
         theme = "robbyrussell";
@@ -77,6 +72,14 @@ in
       };
 
       shellAliases = myAliases;
+    };
+
+    programs.eza = {
+      enable = true;
+      enableZshIntegration = true;
+      enableBashIntegration = false;
+      #icons = "auto";
+      git = true;
     };
   };
 }

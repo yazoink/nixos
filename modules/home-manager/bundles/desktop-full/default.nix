@@ -7,6 +7,7 @@
       kjtocal.enable = true;
       kooha.enable = true;
       ncmpcpp.enable = true;
+      newsboat.enable = true;
       vesktop.enable = true;
       ytDlp.enable = true;
     };
@@ -72,6 +73,7 @@
     ../../features/kjtocal
     ../../features/kooha
     ../../features/ncmpcpp
+    ../../features/newsboat
     ../../features/vesktop
     ../../features/vscode
     ../../features/yt-dlp
