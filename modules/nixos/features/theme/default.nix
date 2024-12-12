@@ -82,8 +82,8 @@ in
           name = "Rubik";
         };
         monospace = {
-          package = pkgs.terminus_font;
-          name = "Terminus";
+          package = pkgs.tamsyn;
+          name = "Tamsyn";
           #package = pkgs.anonymousPro;
           #name = "Anonymous Pro";
         };
