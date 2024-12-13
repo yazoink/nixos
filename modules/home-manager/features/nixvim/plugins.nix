@@ -5,16 +5,18 @@
       plugins = {
         lualine = {
           enable = true;
-          settings.options.globalstatus = true;
+          settings.options = {
+            globalstatus = true;
 
-          componentSeparators = {
-            left = "";
-            right = "";
-          };
+            componentSeparators = {
+              left = "";
+              right = "";
+            };
 
-          sectionSeparators = {
-            left = "";
-            right = "";
+            sectionSeparators = {
+              left = "";
+              right = "";
+            };
           };
         };
 
