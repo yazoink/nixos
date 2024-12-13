@@ -6,7 +6,8 @@ let
   carolineIcons = pkgs.callPackage ./caroline-icons.nix {};
   #kirsch = pkgs.callPackage ./kirsch {};
   #castella = pkgs.callPackage ./castella {};
-  triskweline = pkgs.callPackage ./triskweline {};
+  #triskweline = pkgs.callPackage ./triskweline {};
+  necAcpIII = pkgs.callPackage ./nec-acp-3 {};
 in
 {
   options = {
@@ -85,10 +86,10 @@ in
           name = "Rubik";
         };
         monospace = {
-          package = pkgs.gohufont;
-          name = "Gohufont";
-          #package = triskweline;
-          #name = "Triskweline";
+          #package = pkgs.gohufont;
+          #name = "Gohufont";
+          package = necAcpIII;
+          name = "Bm437 NEC ACP3 8x16";
         };
       };
     };
