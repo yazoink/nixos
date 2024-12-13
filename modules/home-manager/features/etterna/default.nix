@@ -13,6 +13,7 @@ in
   };
   config = lib.mkIf config.bundles.desktopFull.etterna.enable {
     home.packages = [etterna];
+    home.file.".local/share/Etterna/icon.png".source = ./icon.png;
     systemd.user.services.etterna-local-install = {
       Unit = {
         Description = "Install Etterna locally";
