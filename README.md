@@ -6,6 +6,6 @@ My NixOS desktop configs with home-manager and Hyprland, featuring the [Carob](h
 - Fluoride: Desktop PC (R5 5600/RX 6600)
 
 ## Screenshots
-![20241128_00:39:45_screenshot](https://github.com/user-attachments/assets/48b913c5-31a0-438a-8ec5-01c7b23c69f2)
-![bqmSlq0](https://github.com/user-attachments/assets/99a2fe8e-7ae4-485d-8d72-9e646a5eebec)
-![HMFuix7](https://github.com/user-attachments/assets/5215a4b7-7812-4334-8bc1-0e852930d165)
+![MnLLY2e](https://github.com/user-attachments/assets/120a415c-dc7b-42f0-a8cd-1f86dd0b51fc)
+![LJ3qkgN](https://github.com/user-attachments/assets/16b4c1f7-5871-4f15-bf97-b84dffd8d93f)
+![qPquzo0](https://github.com/user-attachments/assets/12822382-1bbe-4645-9b7a-e8129b3366de)
