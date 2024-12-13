@@ -60,9 +60,13 @@ in
         }
       ];
 
+      initExtra = ''
+        PROMPT="%F{blue}>%f%F{red}>%f%F{yellow}>%f "
+      '';
+
       oh-my-zsh = {
         enable = true;
-        theme = "robbyrussell";
+        #theme = "robbyrussell";
         plugins = [
           "copyfile"
           "copypath"
