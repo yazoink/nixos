@@ -63,6 +63,7 @@
       python3
 
       ### misc ###
+      cbonsai
       wineWowPackages.waylandFull
     ] ++ (if osConfig.services.printing.enable then 
         with pkgs; [system-config-printer] else []);
