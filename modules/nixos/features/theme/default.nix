@@ -90,7 +90,7 @@ in
           #package = pkgs.gohufont;
           #name = "Gohufont";
           package = necAcpIII;
-          name = "Bm437 NEC APC3 8x13";
+          name = "Bm437 NEC APC3 8x14";
         };
       };
     };
