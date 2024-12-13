@@ -90,7 +90,7 @@ in
           #package = pkgs.gohufont;
           #name = "Gohufont";
           package = ibmModel3x;
-          name = "Bm437 IBM Model3x Alt1";
+          name = "Bm437 IBM Model3x Alt4";
         };
       };
     };
