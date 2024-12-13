@@ -7,8 +7,8 @@ let
   #kirsch = pkgs.callPackage ./kirsch {};
   #castella = pkgs.callPackage ./castella {};
   #triskweline = pkgs.callPackage ./triskweline {};
-  #necAcpIII = pkgs.callPackage ./nec-acp-3 {};
-  ibmModel3x = pkgs.callPackage ./ibm-model3x {};
+  necAcpIII = pkgs.callPackage ./nec-acp-3 {};
+  #ibmModel3x = pkgs.callPackage ./ibm-model3x {};
 in
 {
   options = {
@@ -89,8 +89,8 @@ in
         monospace = {
           #package = pkgs.gohufont;
           #name = "Gohufont";
-          package = ibmModel3x;
-          name = "Bm437 IBM Model3x Alt4";
+          package = necAcpIII;
+          name = "Bm437 NEC APC3 8x13";
         };
       };
     };
