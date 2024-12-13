@@ -3,7 +3,7 @@
   config = lib.mkIf config.bundles.base.nixvim.enable {
     programs.nixvim = {
       plugins = {
-        plugins.lualine = {
+        lualine = {
           enable = true;
           globalstatus = true;
 
