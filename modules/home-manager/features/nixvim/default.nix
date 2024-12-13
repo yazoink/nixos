@@ -18,7 +18,7 @@
       enable = true;
       opts = {
         number = true;
-        relativenumber = true;
+        #relativenumber = true;
         signcolumn = "yes";
         tabstop = 2;
         shiftwidth = 2;
@@ -27,11 +27,14 @@
         smarttab = true;
         cursorline = true;
         ruler = true;
-        scrolloff = 5;
+        scrolloff = 15;
         termguicolors = true;
         mouse = "a";
         fileencoding = "utf-8";
         swapfile = false;
+        ignorecase = true;
+        smartcase = true;
+        wrap = false;
       };
       clipboard = {
         register = "unnamedplus";
