@@ -27,11 +27,14 @@
         smarttab = true;
         cursorline = true;
         ruler = true;
-        scrolloff = 5;
+        scrolloff = 15;
         termguicolors = true;
         mouse = "a";
         fileencoding = "utf-8";
         swapfile = false;
+        ignorecase = true;
+        smartcase = true;
+        wrap = false;
       };
       clipboard = {
         register = "unnamedplus";
