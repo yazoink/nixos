@@ -5,17 +5,14 @@
       plugins = {
         lualine = {
           enable = true;
-          settings.options = {
+          settings = {
+            alwaysDivideMiddle = true;
+            ignoreFocus = [ "neo-tree" ];
             globalstatus = true;
-
-            componentSeparators = {
-              left = "";
-              right = "";
-            };
-
-            sectionSeparators = {
-              left = "";
-              right = "";
+            options = {
+              section_separators = { left = ""; right = ""; };
+              component_separators = { left = ""; right = ""; };
+              theme = "auto";
             };
           };
         };
