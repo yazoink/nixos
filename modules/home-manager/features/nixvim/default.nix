@@ -18,7 +18,7 @@
       enable = true;
       opts = {
         number = true;
-        relativenumber = true;
+        #relativenumber = true;
         signcolumn = "yes";
         tabstop = 2;
         shiftwidth = 2;
