@@ -29,6 +29,7 @@ let
   };
   rebuild = pkgs.callPackage ./scripts/rebuild {};
   clean = pkgs.callPackage ./scripts/clean {};
+  ascii = pkgs.callPackage ./scripts/ascii {};
 in
 {
   options = {
@@ -39,7 +40,7 @@ in
   };
 
   config = lib.mkIf config.bundles.base.shellConfig.enable {
-    home.packages = [rebuild clean];
+    home.packages = [rebuild clean ascii];
     programs.zsh = {
       enable = true;
       autocd = true;
