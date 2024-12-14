@@ -26,10 +26,15 @@ let
     "gpl" = "git pull";
     "php-dev" = "nix shell github:loophp/nix-shell#php82 --impure";
     "music" = "ncmpcpp";
+    "mu-dl" = "yt-dlp -x -f best --audio-format flac";
+    "search" = "nix --extra-experimental-features \"nix-command flakes\" search nixpkgs";
+    "diskspace" = "sudo df -h | grep -E \"sd|lv|Size\" | sort";
   };
   rebuild = pkgs.callPackage ./scripts/rebuild {};
   clean = pkgs.callPackage ./scripts/clean {};
   ascii = pkgs.callPackage ./scripts/ascii {};
+  nsfind = pkgs.callPackage ./scripts/nsfind {};
+  dict = pkgs.callPackage ./scripts/dict {};
 in
 {
   options = {
@@ -40,7 +45,7 @@ in
   };
 
   config = lib.mkIf config.bundles.base.shellConfig.enable {
-    home.packages = [rebuild clean ascii];
+    home.packages = [rebuild clean ascii nsfind dict];
     programs.zsh = {
       enable = true;
       autocd = true;

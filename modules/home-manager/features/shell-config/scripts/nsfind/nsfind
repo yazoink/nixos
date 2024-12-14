@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+function main() {
+  path="$(ls /nix/store | grep -i "$1" | fzf)"
+  yazi /nix/store/"$path"
+}
+
+main "$@"
