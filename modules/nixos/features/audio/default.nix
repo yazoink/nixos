@@ -19,7 +19,7 @@
     environment.systemPackages = with pkgs; [
       alsa-utils
       pipewire
-      pavucontrol
+      lxqt.pavucontrol-qt
       pamixer
       playerctl
       pulseaudio
