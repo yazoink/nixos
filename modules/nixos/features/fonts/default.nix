@@ -32,5 +32,19 @@
       fontDir.enable = true;
       enableGhostscriptFonts = true;
     };
+
+    environment.etc."fonts/local.conf".text = ''
+      <?xml version="1.0"?>
+      <!DOCTYPE fontconfig SYSTEM "fonts.dtd">
+      <fontconfig>
+        <alias>
+          <family>monospace</family>
+          <prefer>
+            <family>${config.home-manager.users."${config.myOptions.userAccount.username}".stylix.fonts.monospace.name}</family>
+            <family>Terminus</family>
+          </prefer>
+        </alias>
+      </fontconfig>
+    '';
   };
 }
