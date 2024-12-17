@@ -24,7 +24,6 @@
     ];
 
     fonts = {
-      enable = true;
       enableGhostscriptFonts = true;
       fontDir.enable = true;
       fontconfig.allowBitmaps = true;
