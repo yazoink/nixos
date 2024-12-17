@@ -12,7 +12,7 @@ stdenv.mkDerivation {
     owner = "etternagame";
     repo  = "etterna";
     rev   = "develop";
-    sha256 = "sha256-YXjrjBpBJGxa51doIWOSpfnq3ExJ1Ay0IaCI78OfOHw=";
+    sha256 = "sha256-YXjrjBpBJGxa5gdoIWOSpfnq3ExJ1Ay0IaCI78OfOHw=";
   };
 
   # patches = [
