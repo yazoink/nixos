@@ -102,7 +102,7 @@ in
     fonts = {
       fontconfig = {
         enable = true;
-        defaultFonts.monospace = ["Bm437 NEC APC3 8x16" "Terminus (TTF)"];
+        defaultFonts.monospace = [config.stylix.fonts.monospace.name "Terminus (TTF)"];
       };
     };
 
