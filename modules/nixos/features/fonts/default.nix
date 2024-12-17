@@ -24,10 +24,13 @@
     ];
 
     fonts = {
-      fontconfig.allowBitmaps = true;
+      fontConfig = {
+        enable = true;
+        allowBitmaps = true;
+        defaultFonts.monospace = [config.home-manager.users."${config.myOptions.userAccount.username}".stylix.fonts.monospace.name "Terminus"];
+      };
       fontDir.enable = true;
       enableGhostscriptFonts = true;
-      fontconfig.defaultFonts.monospace = [config.home-manager.users."${config.myOptions.userAccount.username}".stylix.fonts.monospace.name "Terminus"];
     };
   };
 }
