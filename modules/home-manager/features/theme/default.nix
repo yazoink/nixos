@@ -90,16 +90,6 @@ in
         GTK_CSD = 0;
       };
 
-      fonts = {
-        fontconfig = {
-          enable = true;
-          allowBitmaps = true;
-          defaultFonts.monospace = ["Bm437 NEC APC3 8x16" "Terminus (TTF)"];
-        };
-        fontDir.enable = true;
-        enableGhostscriptFonts = true;
-      };
-
       packages = with pkgs; [
         libsForQt5.qtstyleplugin-kvantum
         #kdePackages.qtstyleplugin-kvantum
@@ -107,6 +97,16 @@ in
         #kdePackages.qt6ct
         adw-gtk3
       ];
+    };
+
+    fonts = {
+      fontconfig = {
+        enable = true;
+        allowBitmaps = true;
+        defaultFonts.monospace = ["Bm437 NEC APC3 8x16" "Terminus (TTF)"];
+      };
+      fontDir.enable = true;
+      enableGhostscriptFonts = true;
     };
 
     gtk = {
