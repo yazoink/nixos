@@ -2,7 +2,7 @@ homeDir="/home/$3"
 installDir="$homeDir/.local/share/Etterna"
 applicationsDir="$homeDir/.local/share/applications"
 
-if [[ ! -f "$installDir/Etterna" ]]; then
+if [[ ! -d "$installDir/Etterna" ]]; then
   echo "\$1: $1"
   echo "\$2: $2"
   echo "\$3: $3"
@@ -17,7 +17,6 @@ if [[ ! -f "$installDir/Etterna" ]]; then
     mv "$installDir/Themes" "$homeDir/.etterna"
   }
 else
-  echo "??"
   rm -rf "$installDir"
   cp -r "$1/Etterna" "$installDir"
   rm -rf "$installDir/Announcers"
