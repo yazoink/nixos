@@ -102,7 +102,6 @@ in
     fonts = {
       fontconfig = {
         enable = true;
-        allowBitmaps = true;
         defaultFonts.monospace = ["Bm437 NEC APC3 8x16" "Terminus (TTF)"];
       };
     };
