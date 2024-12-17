@@ -22,5 +22,9 @@
       nerd-fonts.terminess-ttf
       _0xproto
     ];
+
+    fonts = {
+      enableGhostscriptFonts = true;
+    };
   };
 }
