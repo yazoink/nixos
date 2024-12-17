@@ -19,10 +19,13 @@
 
         floaterm = {
           enable = true;
-          width = 0.8;
-          height = 0.8;
-          title = "bababooey";
-          keymaps.toggle = "<leader>tt";
+          settings = {
+            width = 0.8;
+            height = 0.8;
+            title = "bababooey";
+            keymap_toggle = "<leader>tt";
+            titleposition = "center";
+          };
         };
 
         ts-autotag.enable = true;

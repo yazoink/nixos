@@ -1,7 +1,7 @@
 {pkgs, config, lib, ...}:
-let
-  kirsch = pkgs.callPackage ./kirsch.nix {};
-in
+#let
+  #kirsch = pkgs.callPackage ./kirsch.nix {};
+#in
 {
   options = {
     bundles.desktopBase.fonts.enable = lib.mkOption {
@@ -27,6 +27,7 @@ in
       fontconfig.allowBitmaps = true;
       fontDir.enable = true;
       enableGhostscriptFonts = true;
+      fonts.fontConfig.defaultFonts.monospace = [config.home-manager.users."${config.myOptions.userAccount.username}".stylix.fonts.monospace.name "Terminus"];
     };
   };
 }
