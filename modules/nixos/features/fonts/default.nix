@@ -24,8 +24,10 @@
     ];
 
     fonts = {
+      enable = true;
       enableGhostscriptFonts = true;
       fontDir.enable = true;
+      allowBitmaps = true;
     };
   };
 }
