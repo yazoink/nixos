@@ -27,24 +27,10 @@
       fontconfig = {
         enable = true;
         allowBitmaps = true;
-        defaultFonts.monospace = [config.home-manager.users."${config.myOptions.userAccount.username}".stylix.fonts.monospace.name "Terminus"];
+        defaultFonts.monospace = ["Bm437 NEC APC3 8x16" "Terminus"];
       };
       fontDir.enable = true;
       enableGhostscriptFonts = true;
     };
-
-    environment.etc."fonts/local.conf".text = ''
-      <?xml version="1.0"?>
-      <!DOCTYPE fontconfig SYSTEM "fonts.dtd">
-      <fontconfig>
-        <alias>
-          <family>monospace</family>
-          <prefer>
-            <family>${config.home-manager.users."${config.myOptions.userAccount.username}".stylix.fonts.monospace.name}</family>
-            <family>Terminus</family>
-          </prefer>
-        </alias>
-      </fontconfig>
-    '';
   };
 }
