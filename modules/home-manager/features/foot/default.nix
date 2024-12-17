@@ -13,6 +13,7 @@
       settings = {
         main = {
           pad = if osConfig.networking.hostName == "cyberia" then "15x15" else (if osConfig.networking.hostName == "fluoride" then "24x24" else "20x20");
+          font = "${config.stylix.fonts.monospace.name}:size=11, Terminus:size=12";
         };
         cursor = {
           style = "beam";
