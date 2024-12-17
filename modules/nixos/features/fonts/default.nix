@@ -24,7 +24,7 @@
     ];
 
     fonts = {
-      fontConfig = {
+      fontconfig = {
         enable = true;
         allowBitmaps = true;
         defaultFonts.monospace = [config.home-manager.users."${config.myOptions.userAccount.username}".stylix.fonts.monospace.name "Terminus"];
