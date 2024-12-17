@@ -17,6 +17,7 @@ if [[ ! -f "$installDir/Etterna" ]]; then
     mv "$installDir/Themes" "$homeDir/.etterna"
   }
 else
+  echo "??"
   rm -rf "$installDir"
   cp -r "$1/Etterna" "$installDir"
   rm -rf "$installDir/Announcers"
