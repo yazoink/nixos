@@ -25,6 +25,7 @@
 
     fonts = {
       enableGhostscriptFonts = true;
+      fontDir.enable = true;
     };
   };
 }
