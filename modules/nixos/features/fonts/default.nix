@@ -27,7 +27,7 @@
       enable = true;
       enableGhostscriptFonts = true;
       fontDir.enable = true;
-      allowBitmaps = true;
+      fontconfig.allowBitmaps = true;
     };
   };
 }
