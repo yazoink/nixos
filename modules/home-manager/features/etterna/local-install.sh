@@ -38,7 +38,7 @@ fi
 cp "$2" "$applicationsDir/etterna.desktop"
 chown "$3" "$applicationsDir/etterna.desktop"
 chmod 755 "$applicationsDir/etterna.desktop"
-#echo "Icon=$homeDir/.local/share/icons/etterna.png" >> "$applicationsDir/etterna.desktop"
+echo "Icon=$homeDir/.local/share/icons/etterna.png" >> "$applicationsDir/etterna.desktop"
 echo "Exec=$installDir/Etterna" >> "$applicationsDir/etterna.desktop"
 
 chown -R "$3":users "$homeDir/.etterna"
