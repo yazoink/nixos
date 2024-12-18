@@ -1,0 +1,42 @@
+#!/usr/bin/env python3
+
+import sys
+import requests
+from bs4 import BeautifulSoup
+
+URL = "https://www.google.com/finance/quote/USD-AUD"
+
+def main():
+    argc = len(sys.argv)
+    if argc > 2 or argc == 1:
+        help()
+        exit(1)
+    input = sys.argv[1]
+    if input == "--help" or input == "-h":
+        help()
+        exit(0)
+    if input.isdigit() == False:
+        print("Error: \"" + input + "\" is not a numerical value.")
+        exit(1)
+    input = int(input)
+    r = requests.get(URL)
+    if r.status_code != 200:
+        print("Error: cannot connect to " + URL + ".")
+        exit(1)
+    soup = BeautifulSoup(r.content, 'xml')
+    div = soup.find('div', class_='YMlKec fxKbKc')
+    val = div.text.strip()
+    if val.replace('.', '', 1).isdigit() == False:
+        print("Error: the dev needs to fix the scraper.")
+        exit(1)
+    val = float(val)
+    output = input * val
+    print("$" + str(input) + " USD is equal to $" + str(round(output, 2)) + " AUD.")
+
+def help():
+    print("usdtoaud -- yazoink 2024")
+    print("a simple USD to AUD converter")
+    print("Usage:")
+    print("    Uusdtoaud (numerical value)")
+
+main()

@@ -10,6 +10,7 @@
       lyricli.enable = true;
       ncmpcpp.enable = true;
       newsboat.enable = true;
+      usdtoaud.enable = true;
       vesktop.enable = true;
       ytDlp.enable = true;
     };
@@ -79,6 +80,7 @@
     ../../features/lyricli
     ../../features/ncmpcpp
     ../../features/newsboat
+    ../../features/usdtoaud
     ../../features/vesktop
     ../../features/vscode
     ../../features/yt-dlp

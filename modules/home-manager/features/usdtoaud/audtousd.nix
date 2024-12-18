@@ -1,9 +1,9 @@
 { pkgs, ... }:
 pkgs.python312Packages.buildPythonApplication rec {
-  pname = "audtousd";
+  pname = "usdtoaud";
   version = "1.0";
 
-  src = ./audtousd;
+  src = ./usdtoaud;
 
   propagatedBuildInputs = with pkgs.python312Packages; [
     requests
