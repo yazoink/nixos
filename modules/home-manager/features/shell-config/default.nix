@@ -46,7 +46,7 @@ in
   };
 
   config = lib.mkIf config.bundles.base.shellConfig.enable {
-    home.packages = [rebuild clean ascii nsfind dict];
+    home.packages = [rebuild clean ascii nsfind dict audtousd];
     programs.zsh = {
       enable = true;
       autocd = true;
