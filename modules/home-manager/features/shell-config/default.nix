@@ -35,6 +35,7 @@ let
   ascii = pkgs.callPackage ./scripts/ascii {};
   nsfind = pkgs.callPackage ./scripts/nsfind {};
   dict = pkgs.callPackage ./scripts/dict {};
+  audtousd = pkgs.callPackage ./scripts/audtousd {};
 in
 {
   options = {
