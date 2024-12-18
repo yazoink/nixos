@@ -8,7 +8,7 @@
     '';
     xdg.configFile."gtklock/config.ini".text = ''
       [main]
-      time-format=%I:%M %p %d %b %Y
+      time-format=%I:%M %p
       style=.config/gtklock/style.css
     '';
   };
