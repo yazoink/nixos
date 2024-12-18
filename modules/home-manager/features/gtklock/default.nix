@@ -1,9 +1,15 @@
-{osConfig, lib, ...}:
+{osConfig, config, lib, ...}:
 {
   config = lib.mkIf osConfig.bundles.desktopBase.gtklock.enable {
+    xdg.configFile."gtklock/style.css".text = ''
+      button {
+        color: #${config.stylix.base16Scheme.base05};
+      }
+    '';
     xdg.configFile."gtklock/config.ini".text = ''
       [main]
-      gtk-theme=adw-gtk3
+      time-format=%I:%M %p %d %b %Y
+      style=.config/gtklock/style.css
     '';
   };
 }
