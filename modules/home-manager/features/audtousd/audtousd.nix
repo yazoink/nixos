@@ -6,7 +6,7 @@ pkgs.python312Packages.buildPythonApplication rec {
   src = ./audtousd;
 
   propagatedBuildInputs = with pkgs.python312Packages; [
-    request
+    requests
     beautifulsoup4
   ];
 
