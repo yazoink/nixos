@@ -16,6 +16,7 @@
   imports = [
     ../../features/direnv
     ../../features/foot
+    ../../features/gtklock
     ../../features/hyprland
     ../../features/hyprviewbinds
     ../../features/mako

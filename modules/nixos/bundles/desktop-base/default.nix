@@ -6,6 +6,7 @@
     ../../features/dconf
     ../../features/fonts
     ../../features/gnome-keyring
+    ../../features/gtklock
     ../../features/hyprland
     ../../features/plymouth
     ../../features/polkit
@@ -23,6 +24,7 @@
       dconf.enable = true;
       fonts.enable = true;
       gnomeKeyring.enable = true;
+      gtklock.enable = true;
       hyprland.enable = true;
       plymouth.enable = true;
       polkit.enable = true;

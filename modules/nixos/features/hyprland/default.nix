@@ -29,7 +29,6 @@
       hyprpicker
       hyprcursor
       hypridle
-      gtklock
       swaybg
     ];
 
@@ -52,7 +51,5 @@
         xdg-desktop-portal-wlr
       ];
     };
-
-    security.pam.services.gtklock.text = lib.readFile "${pkgs.gtklock}/etc/pam.d/gtklock";
   };
 }
