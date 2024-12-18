@@ -7,7 +7,7 @@ pkgs.python312Packages.buildPythonApplication rec {
     owner = "yazoink";
     repo = "lyricli";
     rev = "main";
-    sha256 = "sha256-B3Nei90osL1k9qpVI6gdgGXgNa+8WFQBQkroL5CLUIM=";
+    sha256 = "sha256-EvBdDrGVo6CSrsFxWw8/k2YANUvgtjPUETOy3GyCMnU=";
   };
 
   propagatedBuildInputs = with pkgs.python312Packages; [
