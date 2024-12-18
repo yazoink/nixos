@@ -7,7 +7,7 @@ stdenv.mkDerivation {
     owner = "stark";
     repo = "Color-Scripts";
     rev = "master";
-    sha256 = "sha256-JCQbcQPLNxCfbDiRKa/mDaWAUEwDsm5g+yoEYHgaa3Y=";
+    sha256 = "sha256-7lwR9QINTMyJ+9joMeEjZvzSvSZXT2VUvxxs9pMZLx0=";
   };
 
   buildInputs = [bash];
