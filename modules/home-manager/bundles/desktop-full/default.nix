@@ -2,6 +2,7 @@
 {
   config = lib.mkIf osConfig.myOptions.bundles.desktopFull.enable {
     bundles.desktopFull = {
+      audtousd.enable = true;
       etterna.enable = true;
       firefox.enable = true;
       kjtocal.enable = true;
@@ -70,6 +71,7 @@
         with pkgs; [system-config-printer] else []);
   };
   imports = [
+    ../../features/audtousd
     ../../features/etterna
     ../../features/firefox
     ../../features/kjtocal

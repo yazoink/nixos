@@ -35,7 +35,6 @@ let
   ascii = pkgs.callPackage ./scripts/ascii {};
   nsfind = pkgs.callPackage ./scripts/nsfind {};
   dict = pkgs.callPackage ./scripts/dict {};
-  audtousd = pkgs.callPackage ./scripts/audtousd {};
 in
 {
   options = {
@@ -46,7 +45,7 @@ in
   };
 
   config = lib.mkIf config.bundles.base.shellConfig.enable {
-    home.packages = [rebuild clean ascii nsfind dict audtousd];
+    home.packages = [rebuild clean ascii nsfind dict];
     programs.zsh = {
       enable = true;
       autocd = true;
