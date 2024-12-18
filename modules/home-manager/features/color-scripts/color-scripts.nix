@@ -14,6 +14,6 @@ stdenv.mkDerivation {
 
   installPhase = ''
     mkdir -p $out/bin
-    cp -r $src/color-scripts/* /out/bin
+    cp -r $src/color-scripts/* $out/bin
   '';
 }
