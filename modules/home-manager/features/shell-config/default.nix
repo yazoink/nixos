@@ -35,6 +35,8 @@ let
   ascii = pkgs.callPackage ./scripts/ascii {};
   nsfind = pkgs.callPackage ./scripts/nsfind {};
   dict = pkgs.callPackage ./scripts/dict {};
+  palette = pkgs.callPackage ./scripts/palette {};
+  ex = pkgs.callPackage ./scripts/ex {};
 in
 {
   options = {
@@ -45,7 +47,7 @@ in
   };
 
   config = lib.mkIf config.bundles.base.shellConfig.enable {
-    home.packages = [rebuild clean ascii nsfind dict];
+    home.packages = [rebuild clean ascii nsfind dict palette ex];
     programs.zsh = {
       enable = true;
       autocd = true;
