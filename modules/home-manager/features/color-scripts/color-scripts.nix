@@ -6,7 +6,7 @@ stdenv.mkDerivation {
   src = fetchFromGitHub {
     owner = "stark";
     repo = "Color-Scripts";
-    rev = "main";
+    rev = "master";
     sha256 = "sha256-JCQbcQPLNxCfbDiRKa/mDaWAUEwDsm5g+yoEYHgaa3Y=";
   };
 
