@@ -23,7 +23,7 @@ def main():
     if r.status_code != 200:
         print("Error: cannot connect to " + URL + ".")
         exit(1)
-    soup = BeautifulSoup(r.content, 'xml')
+    soup = BeautifulSoup(r.content, 'html.parser')
     div = soup.find('div', class_='YMlKec fxKbKc')
     val = div.text.strip()
     if val.replace('.', '', 1).isdigit() == False:
