@@ -6,6 +6,7 @@
       firefox.enable = true;
       kjtocal.enable = true;
       kooha.enable = true;
+      lyricli.enable = true;
       ncmpcpp.enable = true;
       newsboat.enable = true;
       vesktop.enable = true;
@@ -73,6 +74,7 @@
     ../../features/firefox
     ../../features/kjtocal
     ../../features/kooha
+    ../../features/lyricli
     ../../features/ncmpcpp
     ../../features/newsboat
     ../../features/vesktop
