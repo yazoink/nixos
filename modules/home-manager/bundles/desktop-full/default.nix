@@ -3,6 +3,7 @@
   config = lib.mkIf osConfig.myOptions.bundles.desktopFull.enable {
     bundles.desktopFull = {
       audtousd.enable = true;
+      colorScripts.enable = true;
       etterna.enable = true;
       firefox.enable = true;
       kjtocal.enable = true;
@@ -73,6 +74,7 @@
   };
   imports = [
     ../../features/audtousd
+    ../../features/color-scripts
     ../../features/etterna
     ../../features/firefox
     ../../features/kjtocal
