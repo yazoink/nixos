@@ -91,9 +91,22 @@ in
       starship = {
         enable = true;
         settings = {
-          add_newline = false;
+          add_newline = true;
           format = ''
-            [>](blue)[>](red)[>](yellow)
+            [>](blue)[>](red)[>](yellow) 
+          '';
+          right_format = ''
+            $cmd_duration\
+            $nix_shell\
+            $rust\
+            $python\
+            $php\
+            $zig\
+            $c\
+            $git_status\
+            $git_state\
+            $git_branch\
+            $hostname
           '';
         };
       };
