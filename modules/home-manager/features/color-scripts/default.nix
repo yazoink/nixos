@@ -4,7 +4,7 @@ let
   dollarSign = "$";
   rcs = pkgs.writeShellScriptBin "rcs" ''
     #!/usr/bin/env bash
-
+    clear
     ls_output="$(ls ${colorScripts}/bin)"
     scripts=($ls_output)
     index=$((RANDOM % ${dollarSign}{#scripts[@]}))
