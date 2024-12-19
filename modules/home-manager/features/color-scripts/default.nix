@@ -8,7 +8,7 @@ let
     ls_output="$(ls ${colorScripts})"
     IFS=" " read -ra scripts <<< "ls_output"
     index=$(echo $((1 + $RANDOM % ${dollarSign}{#scripts[@]})))
-    ${colorScripts}/scripts[index]
+    ${colorScripts}/$scripts[index]
   '';
 in
 {
