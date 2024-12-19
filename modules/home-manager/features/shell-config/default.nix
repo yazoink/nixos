@@ -96,17 +96,7 @@ in
             [>](blue)[>](red)[>](yellow) 
           '';
           right_format = ''
-            $cmd_duration\
-            $nix_shell\
-            $rust\
-            $python\
-            $php\
-            $zig\
-            $c\
-            $git_status\
-            $git_state\
-            $git_branch\
-            $hostname
+            $cmd_duration$nix_shell$rust$python$php$zig$c$git_status$git_state$git_branch$hostname
           '';
         };
       };
