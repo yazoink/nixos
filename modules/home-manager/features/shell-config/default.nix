@@ -73,15 +73,6 @@ in
         eval "$(starship init zsh)"
       '';
 
-      programs.starship = {
-        enable = true;
-        add_newline = true;
-        characher = {
-          success_symbol = ">(blue)>(red)>(yellow)";
-          error_symbol = ">(magenta)>(red)>(yellow)";
-        };
-      };
-
       oh-my-zsh = {
         enable = true;
         #theme = "robbyrussell";
@@ -94,6 +85,15 @@ in
       };
 
       shellAliases = myAliases;
+    };
+
+    programs.starship = {
+      enable = true;
+      add_newline = true;
+      characher = {
+        success_symbol = ">(blue)>(red)>(yellow)";
+        error_symbol = ">(magenta)>(red)>(yellow)";
+      };
     };
 
     programs.eza = {
