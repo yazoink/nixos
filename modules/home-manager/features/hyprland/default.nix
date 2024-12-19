@@ -287,6 +287,7 @@
         windowrulev2 = pin, title:^(Picture-in-Picture)$
         windowrulev2 = float, title:^(Picture-in-Picture)$
         windowrulev2 = float, title:^(Authentication Required)$
+        windowrulev2 = float, title:^(Soundboard)$
         windowrulev2 = plugin:hyprbars:nobar, class:^(org.kde.kruler)
         windowrulev2 = plugin:hyprbars:nobar, title:^(vesktop)$
         windowrulev2 = plugin:hyprbars:nobar, title:^(File Upload)$
