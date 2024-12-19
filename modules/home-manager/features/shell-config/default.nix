@@ -93,8 +93,8 @@ in
         settings = {
         add_newline = true;
           characher = {
-            success_symbol = ">(blue)>(red)>(yellow)";
-            error_symbol = ">(magenta)>(red)>(yellow)";
+            success_symbol = "[>](blue)[>](red)[>](yellow)";
+            error_symbol = "[>](magenta)[>](red)[>](yellow)";
           };
         };
       };
