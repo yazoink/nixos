@@ -28,7 +28,7 @@ pkgs.python312Packages.buildPythonApplication rec {
     "--prefix LD_LIBRARY_PATH : ${pkgs.gtk3}/lib"
   ];
 
-  installPhase = ''
+  postInstall = ''
     mkdir -p $out/share/soundboard
     cp -r sounds $out/share/soundboard/sounds
   '';
