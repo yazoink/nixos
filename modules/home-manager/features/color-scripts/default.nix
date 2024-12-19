@@ -5,7 +5,7 @@ let
   rcs = pkgs.writeShellScriptBin "rcs" ''
     #!/usr/bin/env bash
 
-    ls_output="$(ls ${colorScripts})"
+    ls_output="$(ls ${colorScripts}/bin)"
     scripts=($ls_output)
     index=$((RANDOM % ${dollarSign}{#scripts[@]}))
     ${colorScripts}/bin/${dollarSign}{scripts[$index]}
