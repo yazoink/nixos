@@ -11,7 +11,7 @@ let
     "nixos" = "cd ~/nixos";
     "ff" = "fastfetch";
     #"ls" = "ls -hN --color=auto";
-    "ls" = "eza";
+    "ls" = "eza -l -T -L=1";
     "grep" = "grep --color=auto";
     "diff" = "diff --color=auto";
     "ip" = "ip -color=auto";
@@ -91,11 +91,10 @@ in
       starship = {
         enable = true;
         settings = {
-        add_newline = true;
-          characher = {
-            success_symbol = "[>](blue)[>](red)[>](yellow)";
-            error_symbol = "[>](magenta)[>](red)[>](yellow)";
-          };
+          add_newline = false;
+          format = ''
+            [>]{blue}[>](red)[>](yellow)
+          '';
         };
       };
 
