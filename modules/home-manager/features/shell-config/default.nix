@@ -93,6 +93,7 @@ in
         settings = {
           add_newline = true;
           format = ''
+            [$directory](green)
             [>](blue)[>](red)[>](yellow) 
           '';
           right_format = ''
