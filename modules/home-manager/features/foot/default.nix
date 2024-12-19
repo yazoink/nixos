@@ -12,7 +12,7 @@
       #server.enable = true;
       settings = {
         main = {
-          pad = if osConfig.networking.hostName == "cyberia" then "15x15" else (if osConfig.networking.hostName == "fluoride" then "24x24" else "20x20");
+          pad = if osConfig.networking.hostName == "cyberia" then "16x16" else (if osConfig.networking.hostName == "fluoride" then "24x24" else "20x20");
           font = lib.mkForce "${config.stylix.fonts.monospace.name}:size=11, Terminus:size=12";
         };
         cursor = {
