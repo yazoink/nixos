@@ -11,6 +11,7 @@
       lyricli.enable = true;
       ncmpcpp.enable = true;
       newsboat.enable = true;
+      soundboard.enable = true;
       usdtoaud.enable = true;
       vesktop.enable = true;
       ytDlp.enable = true;
@@ -82,6 +83,7 @@
     ../../features/lyricli
     ../../features/ncmpcpp
     ../../features/newsboat
+    ../../features/soundboard
     ../../features/usdtoaud
     ../../features/vesktop
     ../../features/vscode

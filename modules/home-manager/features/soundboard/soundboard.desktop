@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=Soundboard
+Comment=GTK3 soundboard
+Type=Application
+Exec=soundboard.py
+Icon=~/.local/share/icons/soundboard.png
