@@ -8,7 +8,7 @@ let
     ls_output="$(ls ${colorScripts})"
     scripts=($ls_output)
     index=$((RANDOM % ${dollarSign}{#scripts[@]}))
-    ${colorScripts}/${dollarSign}{scripts[$index]}
+    ${colorScripts}/bin/${dollarSign}{scripts[$index]}
   '';
 in
 {
