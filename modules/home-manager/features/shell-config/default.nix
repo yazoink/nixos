@@ -93,7 +93,7 @@ in
         settings = {
           add_newline = false;
           format = ''
-            [>]{blue}[>](red)[>](yellow)
+            [\>]{blue}[\>](red)[\>](yellow)
           '';
         };
       };
