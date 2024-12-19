@@ -97,8 +97,13 @@ in
             [>](blue)[>](red)[>](yellow) 
           '';
           right_format = ''
-            $cmd_duration$nix_shell$rust$python$php$zig$c$git_status$git_state$git_branch$hostname
+            $cmd_duration$nix_shell$git_status$git_state$git_branch$hostname
           '';
+          directory = {
+            read_only = " ";
+            home_symbol = "~";
+            format = " [$path]($style)[$read_only]($read_only_style) ";
+          };
         };
       };
 
