@@ -55,11 +55,11 @@ in
     },
     {
       "label": "Kahoot",
-      "audio": "${soundboard}/share/soundboard/sounds/cartoon-run-1.wav"
+      "audio": "${soundboard}/share/soundboard/sounds/kahoot.wav"
     },
     {
       "label": "Cartoon Run 1",
-      "audio": "${soundboard}/share/soundboard/sounds/kahoot.wav"
+      "audio": "${soundboard}/share/soundboard/sounds/cartoon-run-1.wav"
     },
     {
       "label": "Cartoon Run 2",
