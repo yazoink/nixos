@@ -52,6 +52,22 @@ in
     {
       "label": "Windows XP Shutdown",
       "audio": "${soundboard}/share/soundboard/sounds/winxp-shutdown.wav"
+    },
+    {
+      "label": "Cartoon Run 1",
+      "audio": "${soundboard}/share/soundboard/sounds/cartoon-run-1.wav"
+    },
+    {
+      "label": "Cartoon Run 2",
+      "audio": "${soundboard}/share/soundboard/sounds/cartoon-run-2.wav"
+    },
+    {
+      "label": "Cartoon Run 3",
+      "audio": "${soundboard}/share/soundboard/sounds/cartoon-run-3.wav"
+    },
+    {
+      "label": "Cartoon Run 4",
+      "audio": "${soundboard}/share/soundboard/sounds/cartoon-run-4.wav"
     }
   ]
 }

@@ -7,7 +7,7 @@ pkgs.python312Packages.buildPythonApplication rec {
     owner = "yazoink";
     repo = "soundboard";
     rev = "main";
-    sha256 = "sha256-5aUjJ/vfTNQ49bNqSEvGLZ8ffVofYjpxc2N7RdABoN8=";
+    sha256 = "sha256-5aUjJ/vfTNQ49bNqSEvGLZ8fgVofYjpxc2N7RdABoN8=";
   };
 
   nativeBuildInputs = [
