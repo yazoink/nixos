@@ -4,7 +4,7 @@ let
 in
 {
   options = {
-    bundles.desktopfull.soundboard.enable = lib.mkOption {
+    bundles.desktopFull.soundboard.enable = lib.mkOption {
       type = lib.types.bool;
       default = false;
     };
