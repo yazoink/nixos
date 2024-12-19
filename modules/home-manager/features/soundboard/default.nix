@@ -54,8 +54,12 @@ in
       "audio": "${soundboard}/share/soundboard/sounds/winxp-shutdown.wav"
     },
     {
-      "label": "Cartoon Run 1",
+      "label": "Kahoot",
       "audio": "${soundboard}/share/soundboard/sounds/cartoon-run-1.wav"
+    },
+    {
+      "label": "Cartoon Run 1",
+      "audio": "${soundboard}/share/soundboard/sounds/kahoot.wav"
     },
     {
       "label": "Cartoon Run 2",
