@@ -15,7 +15,7 @@ in
     ];
     xdg.configFile."soundboard/config.json".text = ''
 {
-  "max_per_row": 3,
+  "max_per_row": 4,
   "buttons": [
     {
       "label": "Ahhh",
