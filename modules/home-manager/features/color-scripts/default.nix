@@ -6,7 +6,7 @@ let
     #!/usr/bin/env bash
 
     ls_output="$(ls ${colorScripts})"
-    IFS=" " read -ra scripts <<< "ls_output"
+    IFS=" " read -ra scripts <<< "$ls_output"
     index=$(echo $((1 + $RANDOM % ${dollarSign}{#scripts[@]})))
     ${colorScripts}/$scripts[index]
   '';
