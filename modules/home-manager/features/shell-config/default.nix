@@ -69,8 +69,8 @@ in
       ];
 
       initExtra = ''
-        #PROMPT="%F{blue}>%f%F{red}>%f%F{yellow}>%f "
-        eval "$(starship init zsh)"
+        PROMPT="%F{blue}>%f%F{red}>%f%F{yellow}>%f "
+        #eval "$(starship init zsh)"
       '';
 
       oh-my-zsh = {
@@ -88,7 +88,7 @@ in
     };
 
     programs = {
-      starship = {
+      /*starship = {
         enable = true;
         settings = {
           add_newline = true;
@@ -103,7 +103,7 @@ in
             read_only = " ";
             home_symbol = "~";
             format = " [$path]($style)[$read_only]($read_only_style) ";
-            truncation_length = 4;
+            truncation_length = 8;
             truncation_symbol = "./";
             truncate_to_repo = true;
           };
@@ -111,7 +111,7 @@ in
             symbol = " ";
           };
         };
-      };
+      };*/
 
       eza = {
         enable = true;
