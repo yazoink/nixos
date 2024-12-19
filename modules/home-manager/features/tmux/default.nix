@@ -32,46 +32,35 @@
         # Enable mouse control (clickable windows, panes, resizable panes)
         set -g mouse on
 
+        set -g pane-border-style fg=default
+        set -g pane-active-border-style fg=default
 
-        # DESIGN TWEAKS
+        set-window-option -g window-status-style fg=brightblack,bg=default,dim
+        set-window-option -g window-status-current-style fg=green,bg=default,bright
+        set -g window-status-separator '#[fg=brightblack] | '
 
-        # don't do anything when a 'bell' rings
-        set -g visual-activity off
-        set -g visual-bell off
-        set -g visual-silence off
-        setw -g monitor-activity off
-        set -g bell-action none
+        set-option -g pane-border-style fg=black
+        set-option -g pane-active-border-style fg=green
 
-        # clock mode
-        setw -g clock-mode-colour yellow
+        set -g status-left ' #[fg=blue,bg=default]  #[fg=blue]#(check-ssh) '
+        set -g status-right '#[fg=blue] #[fg=blue]#{b:pane_current_path} #[fg=magenta] #[fg=magenta,bg=default]%d.%a %H:%M:%S#[fg=cyan]#[push-default]#(bat_info=$(bat-stat); if [ -n "$bat_info" ]; then echo " $bat_info"; else echo " "; fi)#[fg=cyan] #S'
+        set -g status-style bg=default,fg=default
+        set -g status-left-length 40
+        set -g status-right-length 80
 
-        # copy mode
-        setw -g mode-style 'fg=black bg=red bold'
-        set -g pane-border-style 'fg=red'
-        set -g pane-active-border-style 'fg=yellow'
+        set-window-option -g window-status-format "#I:#W"
 
-        # statusbar
-        set -g status-position bottom
-        set -g status-justify left
-        set -g status-style 'fg=red'
+        set-option -g pane-border-style fg=brightblack
+        set-option -g pane-active-border-style fg=green
 
-        set -g status-left \'\'
-        set -g status-left-length 10
+        set -g status-interval 1 # Update status every second
 
-        set -g status-right-style 'fg=black bg=yellow'
-        set -g status-right '%Y-%m-%d %H:%M '
-        set -g status-right-length 50
+        set -g message-style bg=default,fg=white
 
-        setw -g window-status-current-style 'fg=black bg=red'
-        setw -g window-status-current-format ' #I #W #F '
-
-        setw -g window-status-style 'fg=red bg=black'
-        setw -g window-status-format ' #I #[fg=white]#W #[fg=yellow]#F '
-
-        setw -g window-status-bell-style 'fg=yellow bg=red bold'
-
-        # messages
-        set -g message-style 'fg=yellow bg=red bold'
+        set-window-option -g allow-rename on
+        set-option -g set-titles off
+        set-option -sa terminal-overrides ',xterm*:Tc'
+        set-option -g renumber-windows on
       '';
     };
   };
