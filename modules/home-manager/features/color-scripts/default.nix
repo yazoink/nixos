@@ -1,6 +1,14 @@
 {pkgs, config, lib, ...}:
 let
-  color-scripts = pkgs.callPackage ./color-scripts.nix {};
+  colorScripts = pkgs.callPackage ./color-scripts.nix {};
+  rcs = pkgs.writeShellScriptBin "rcs" ''
+    #!/usr/bin/env bash
+
+    ls_output="$(ls ${colorScripts})"
+    IFS=" " read -ra scripts <<< "ls_output"
+    index=$(echo $((1 + $RANDOM % $\{#scripts[@]})))
+    ${colorScripts}/scripts[index]
+  '';
 in
 {
   options = {
@@ -10,6 +18,7 @@ in
     };
   };
   config = lib.mkIf config.bundles.desktopFull.colorScripts.enable {
-    home.packages = [color-scripts];
+    inherit colorScripts;
+    home.packages = [colorScripts rcs];
   };
 }
