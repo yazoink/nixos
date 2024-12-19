@@ -69,8 +69,18 @@ in
       ];
 
       initExtra = ''
-        PROMPT="%F{blue}>%f%F{red}>%f%F{yellow}>%f "
+        #PROMPT="%F{blue}>%f%F{red}>%f%F{yellow}>%f "
+        eval "$(starship init zsh)"
       '';
+
+      programs.starship = {
+        enable = true;
+        add_newline = true;
+        characher = {
+          success_symbol = ">(blue)>(red)>(yellow)";
+          error_symbol = ">(magenta)>(red)>(yellow)";
+        };
+      };
 
       oh-my-zsh = {
         enable = true;
