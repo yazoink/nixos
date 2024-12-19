@@ -30,9 +30,6 @@
 
         # Enable mouse control (clickable windows, panes, resizable panes)
         set -g mouse on
-
-        set -g pane-border-style fg=default
-        set -g pane-active-border-style fg=default
       '';
     };
   };
