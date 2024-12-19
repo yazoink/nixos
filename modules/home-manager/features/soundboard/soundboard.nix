@@ -13,6 +13,7 @@ pkgs.python312Packages.buildPythonApplication rec {
   nativeBuildInputs = [
     pkgs.gobject-introspection
     pkgs.wrapGAppsHook
+    pkgs.alsa-utils
   ];
 
   propagatedBuildInputs = with pkgs.python312Packages; [
