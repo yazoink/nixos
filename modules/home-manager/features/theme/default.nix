@@ -99,12 +99,12 @@ in
       ];
     };
 
-    fonts = {
+    /*fonts = {
       fontconfig = {
         enable = true;
         defaultFonts.monospace = [config.stylix.fonts.monospace.name "Terminus (TTF)"];
       };
-    };
+    };*/
 
     gtk = {
       enable = true;

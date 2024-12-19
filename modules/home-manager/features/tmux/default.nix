@@ -10,9 +10,8 @@
     programs.tmux = {
       enable = true;
       terminal = "screen-256color";
+      clock24 = false;
       extraConfig = ''
-        set -g -a terminal-overrides ',*:Ss=\E[%p1%d q:Se=\E[2 q
-
         # remap prefix from 'C-b' to 'C-a'
         unbind C-b
         set-option -g prefix C-a
