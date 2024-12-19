@@ -27,7 +27,7 @@
         smarttab = true;
         cursorline = true;
         ruler = true;
-        scrolloff = 15;
+        scrolloff = 7;
         termguicolors = true;
         mouse = "a";
         fileencoding = "utf-8";
