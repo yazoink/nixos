@@ -87,21 +87,25 @@ in
       shellAliases = myAliases;
     };
 
-    programs.starship = {
-      enable = true;
-      add_newline = true;
-      characher = {
-        success_symbol = ">(blue)>(red)>(yellow)";
-        error_symbol = ">(magenta)>(red)>(yellow)";
+    programs = {
+      starship = {
+        enable = true;
+        settings = {
+        add_newline = true;
+          characher = {
+            success_symbol = ">(blue)>(red)>(yellow)";
+            error_symbol = ">(magenta)>(red)>(yellow)";
+          };
+        };
       };
-    };
 
-    programs.eza = {
-      enable = true;
-      enableZshIntegration = true;
-      enableBashIntegration = false;
-      #icons = "auto";
-      git = true;
+      eza = {
+        enable = true;
+        enableZshIntegration = true;
+        enableBashIntegration = false;
+        icons = "auto";
+        git = true;
+      };
     };
   };
 }
