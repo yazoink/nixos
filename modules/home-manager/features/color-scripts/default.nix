@@ -18,7 +18,6 @@ in
     };
   };
   config = lib.mkIf config.bundles.desktopFull.colorScripts.enable {
-    inherit colorScripts;
     home.packages = [colorScripts rcs];
   };
 }
