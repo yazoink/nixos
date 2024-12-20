@@ -58,8 +58,8 @@ in
           style=kvantum-dark
 
           [Fonts]
-          fixed="${config.stylix.fonts.monospace.name},11,-1,5,5,50,0,0,0,0,Regular"
-          general="${config.stylix.fonts.sansSerif.name},11,-1,5,50,0,0,0,0,0,Regular"
+          fixed="${config.stylix.fonts.monospace.name},${toString config.stylix.fonts.sizes.applications},-1,5,5,50,0,0,0,0,Regular"
+          general="${config.stylix.fonts.sansSerif.name},${toString config.stylix.fonts.sizes.applications},-1,5,50,0,0,0,0,0,Regular"
 
           [Interface]
           activate_item_on_single_click=1
