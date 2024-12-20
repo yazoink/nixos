@@ -61,6 +61,10 @@
           follow_mouse = 1;
           scroll_points = "flat";
           kb_model = lib.mkIf (osConfig.networking.hostName == "cyberia") "thinkpad";
+          touchpad = {
+            disable_while_typing = false;
+            scroll_factor = 0.7;
+          };
         };
         device = {
           name = "tpps/2-ibm-trackpoint";
