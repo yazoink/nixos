@@ -25,7 +25,7 @@
       dconf.enable = true;
       fonts.enable = true;
       gnomeKeyring.enable = true;
-      greetd.enable = true;
+      greetd.enable = false;
       gtklock.enable = true;
       hyprland.enable = true;
       plymouth.enable = true;
