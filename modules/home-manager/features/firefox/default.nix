@@ -1,4 +1,3 @@
-# https://color.firefox.com/?theme=XQAAAAKyAQAAAAAAAABBKYhm849SCia9U4KEGccwS-xMDPr7OiSkmEqZoDFAdHn8wrcCRKZVNaicEt9L0hR39QIzgEAnfE5LiDWTVN3sg1VhC8lzVdDFYmaJWStOtijYuqFjKwhTsFv2jF7KWtGM1Q3wWSGCyg2ax_mN9Xb6IVQ0rb104b4mCNM8zMuW24HUFgF7VjEqx9puSb7mq8hYGfp6RCxpZYu6WmMZuCXIJVS-FZV3WxEg5tJXS8ALyw1cZ51oR6Ol4eUIrUTFIn-0g_YsyZhvuyXvbS-dU8Xr9DayX__Mc4xG
 {pkgs, inputs, config, lib, osConfig, ...}:
 {
   options = {
@@ -54,6 +53,7 @@
       profiles."${osConfig.myOptions.userAccount.username}" = {
         isDefault = true;
         search = {
+          order = ["4get" "DuckDuckGo" "Google" "Bookmarks" "Tabs"];
           force = true;
           default = "4get";
           privateDefault = "4get";
@@ -73,10 +73,10 @@
           violentmonkey
           localcdn
           clearurls
-          foxytab
+          #foxytab
           libredirect
           floccus
-          firefox-color
+          #firefox-color
           control-panel-for-twitter
           sidebery
           userchrome-toggle-extended
