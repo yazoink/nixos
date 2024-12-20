@@ -11,13 +11,19 @@
     home.packages = with pkgs; [
       libnotify
     ];
+    stylix.targets.mako.enable = false;
     xdg.configFile."mako/sounds/default.wav".source = ./sounds/vine-boom.wav;
     services.mako = {
       enable = true;
+      actions = true;
       icons = true;
       anchor = "top-right";
       borderRadius = 5;
-      borderColor = lib.mkForce "#${config.stylix.base16Scheme.base01}";
+      borderColor = "#${config.stylix.base16Scheme.base01}";
+      backgroundColor = "#${config.stylix.base16Scheme.base00}";
+      textColor = "#${config.stylix.base16Scheme.base05}";
+      progressColor = "over #${config.stylix.base16Scheme.base05}";
+      font = "${config.stylix.fonts.sansSerif.name} ${toString config.stylix.fonts.sizes.popups}";
       padding = "10";
       margin = "5";
       borderSize = 2;
@@ -26,6 +32,17 @@
       /*extraConfig = ''
         on-notify=exec aplay $HOME/.config/mako/sounds/default.wav
       '';*/
+      extraConfig = ''
+        [urgency=low]
+        border-color=#$(config.stylix.base16Scheme.base01)
+        background-color=#$(config.stylix.base16Scheme.base00)
+        text-color=#$(config.stylix.base16Scheme.base05)
+
+        [urgency=high]
+        border-color=#$(config.stylix.base16Scheme.base0F)
+        background-color=#$(config.stylix.base16Scheme.base00)
+        text-color=#$(config.stylix.base16Scheme.base05)
+      '';
     };
   };
 }
