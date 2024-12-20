@@ -18,11 +18,13 @@ in
     ];
     xdg.configFile = {
       "vesktop/themes/my.theme.css".source = themeFile;
-      "vesktop/config.json".text = ''
+      /*"vesktop/config.json".text = ''
         {
           "discordBranch": "ptb",
           "minimizeToTray": true,
           "arRPC": false,
+          "splashColor": "#${config.stylix.base16Scheme.base05}",
+          "splashBackground": "#${config.stylix.base16Scheme.base00}",
           "splashTheming": true,
           "tray": true,
           "clickTrayToShowHide": true,
@@ -33,7 +35,7 @@ in
             "en"
           ]
         }
-      '';
+      '';*/
       "vesktop/settings/settings.json".text = ''
         {
           "autoUpdate": true,
