@@ -6,6 +6,7 @@
     ../../features/dconf
     ../../features/fonts
     ../../features/gnome-keyring
+    ../../features/greetd
     ../../features/gtklock
     ../../features/hyprland
     ../../features/plymouth
@@ -24,6 +25,7 @@
       dconf.enable = true;
       fonts.enable = true;
       gnomeKeyring.enable = true;
+      greetd.enable = true;
       gtklock.enable = true;
       hyprland.enable = true;
       plymouth.enable = true;
