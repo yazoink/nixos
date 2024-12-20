@@ -63,7 +63,7 @@
           kb_model = lib.mkIf (osConfig.networking.hostName == "cyberia") "thinkpad";
           touchpad = {
             disable_while_typing = false;
-            scroll_factor = 0.7;
+            scroll_factor = 0.5;
           };
         };
         device = {
