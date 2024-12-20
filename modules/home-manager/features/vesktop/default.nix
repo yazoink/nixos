@@ -209,7 +209,7 @@ in
               "enabled": false
             },
             "FakeNitro": {
-              "enabled": false
+              "enabled": false,
               "enableEmojiBypass": true,
               "emojiSize": 48,
               "transformEmojis": true,
@@ -271,7 +271,7 @@ in
               "enabled": true
             },
             "ImageZoom": {
-              "enabled": true
+              "enabled": true,
               "size": 345.481152601645,
               "zoom": 4.352109237455986,
               "nearestNeighbour": false,
@@ -675,7 +675,7 @@ in
           },
           "notifications": {
             "timeout": 5000,
-            "position": top-right,
+            "position": "top-right",
             "useNative": "not-focused",
             "logLimit": 50
           },
