@@ -9,9 +9,6 @@
   };
   config = lib.mkIf config.bundles.desktopFull.firefox.enable {
     home = {
-      packages = [
-        (pkgs.wrapFirefox (pkgs.firefox-unwrapped.override { pipewireSupport = true;}) {})
-      ];
       sessionVariables = {
         MOZ_USE_XINPUT2 = 1;
       };
@@ -23,7 +20,7 @@
 
     programs.firefox = {
       enable = true;
-      package = pkgs.wrapFirefox pkgs.firefox-unwrapped {
+      package = (pkgs.wrapFirefox (pkgs.firefox-unwrapped.override { pipewireSupport = true;}) {}) {
         extraPolicies = {
           DisableTelemetry = true;
           DisableFirefoxStudies = true;
