@@ -8,12 +8,17 @@
     };
   };
   config = lib.mkIf config.bundles.desktopFull.firefox.enable {
-    home.packages = with pkgs; [
-      firefox-unwrapped
-    ];
-
-    home.sessionVariables = {
-      MOZ_USE_XINPUT2 = 1;
+    home = {
+      packages = with pkgs; [
+        firefox-unwrapped
+      ];
+      sessionVariables = {
+        MOZ_USE_XINPUT2 = 1;
+      };
+      file.".mozilla/firefox/${osConfig.myOptions.userAccount.username}/chrome" = {
+        source = ./chrome;
+        recursive = true;
+      };
     };
 
     programs.firefox = {
@@ -31,7 +36,7 @@
           DisablePocket = true;
           DisableFirefoxAccounts = true;
           DisableAccounts = true;
-          DisableFirefoxScreenshots = true;
+          DisableFirefoxScreenshots = false;
           OverrideFirstRunPage = "";
           OverridePostUpdatePage = "";
           DontCheckDefaultBrowser = true;
@@ -45,6 +50,10 @@
           BlockAboutProfiles = false;
           BlockAboutSupport = false;
           AppAutoUpdate = false;
+          UserMessaging = {
+            ExtensionRecommendations = false;
+            SkipOnboarding = true;
+          };
         };
       };
       profiles."${osConfig.myOptions.userAccount.username}" = {
@@ -72,6 +81,7 @@
           floccus
           firefox-color
           control-panel-for-twitter
+          sideberry
         ] ++ (if osConfig.networking.hostName == "cyberia" then [enhanced-h264ify] else []);
         extraConfig = builtins.readFile ./betterfox.js;
         /*extraConfig = builtins.readFile (builtins.fetchurl {
