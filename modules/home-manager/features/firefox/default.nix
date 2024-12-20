@@ -20,7 +20,7 @@
 
     programs.firefox = {
       enable = true;
-      extraPolicies = {
+      policies = {
         DisableTelemetry = true;
         DisableFirefoxStudies = true;
         EnableTrackingProtection = {
