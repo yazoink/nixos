@@ -23,8 +23,6 @@ in
           "discordBranch": "ptb",
           "minimizeToTray": true,
           "arRPC": false,
-          "splashColor": "#${config.stylix.base16Scheme.base05}",
-          "splashBackground": "#${config.stylix.base16Scheme.base00}",
           "splashTheming": true,
           "tray": true,
           "clickTrayToShowHide": true,
