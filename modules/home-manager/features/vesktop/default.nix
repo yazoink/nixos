@@ -271,6 +271,13 @@ in
           },
           "ImageZoom": {
             "enabled": true
+            "size": 345.481152601645,
+            "zoom": 4.352109237455986,
+            "nearestNeighbour": false,
+            "square": true,
+            "saveZoomValues": true,
+            "invertScroll": true,
+            "zoomSpeed": 0.5
           },
           "ImplicitRelationships": {
             "enabled": true,
@@ -664,6 +671,18 @@ in
           "FixImagesQuality": {
             "enabled": true
           }
+        },
+        "notifications": {
+          "timeout": 5000,
+          "position": top-right,
+          "useNative": "not-focused",
+          "logLimit": 50
+        },
+        "cloud": {
+          "authenticated": false,
+          "url": "https://api.vencord.dev/",
+          "settingsSync": false,
+          "settingsSyncVersion": 1724624485343
         }
       '';
     };
