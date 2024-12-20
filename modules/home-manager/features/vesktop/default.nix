@@ -36,7 +36,7 @@ in
           ]
         }
       '';
-      "vesktop/settings/settings2.json".text = ''
+      "vesktop/settings/settings.json".text = ''
         {
           "autoUpdate": true,
           "autoUpdateNotification": true,
@@ -676,7 +676,7 @@ in
           "notifications": {
             "timeout": 5000,
             "position": "top-right",
-            "useNative": "not-focused",
+            "useNative": "always",
             "logLimit": 50
           },
           "cloud": {
