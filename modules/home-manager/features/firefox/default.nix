@@ -76,7 +76,7 @@
           #foxytab
           libredirect
           floccus
-          #firefox-color
+          firefox-color
           control-panel-for-twitter
           sidebery
           userchrome-toggle-extended
