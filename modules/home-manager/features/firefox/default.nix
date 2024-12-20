@@ -1,4 +1,4 @@
-# https://color.firefox.com/?theme=XQAAAAJYAgAAAAAAAABBKYhm849SCicxcUF-LXcGHf3p79EhVPWc07va6AgP3IA9THaAdrddvk_9TsDbquoO7joJkG4nQZDC-Z-1sgMyDGh5RRNNa_mFlPaOOTQOWQfGZh0KTyYqzZQv6zM5rgUH7Y9C9OkpF-e4J0OMBrjk39Wsr4L8oEHFaEN58_oyF8JQIZvHlxNSIMYG2alq6v3wFxDX6SgDeydCoQ4e6zQueQFDBN2wag6jHRM9mTcl3hUKs5QipCscB1i7h-0MDZzT8clMrcaGETdoWJTPE-NzdQrPhEDwh_uHalD7GLhKqUowlJhDx976Dn6CA53tjJGkdC9vSYkn8_59Lw3L_5JmY0qQFh17b8QxZtEdj3vyiHB_4k1spG0SS4WhYk9MWYPny_VMxoJU8f19Tzk
+# https://color.firefox.com/?theme=XQAAAAL_AgAAAAAAAABBKYhm849SCicxcUN7ViuG_ebZUZXOFqnmjhZm1VFQCfj9bl943WDccz_Akz8SdUz8TFDGjl_ZSYYSICc2Zbsikn4WogycX4Aie2e8UIx8D0-R1bJlWOnsaWYvvowcHXh2ADAwxi27AXVZyrKfixs7vGPbYXqVtT4SaXQv9ggsolbZNrStW3mxj6bVYfAAnSi3t5-i-43_qmD59hj83e3pcFhlZN5GBTm6_ERzrdCap3Aoog7iGO-nb4dUL1ay7q9-9rTNqKruawiWDvdR813n6v_PeVKseRW4sIC6j0rwvUs_fopDoztHJi5FdjnDgOMzD_It2eC81zKm_6vshk0omkie3-a6kFULzbqWzErFq81W96ldlvO6do-X2YLYsyTzWqTPXqZxX3XU0FkIl4kUwEBn_XlfO4f0uUOxpsJ0t7L8NY6m1AvjGjROm_9S138A
 {inputs, config, lib, osConfig, ...}:
 {
   options = {
@@ -49,6 +49,12 @@
         UserMessaging = {
           ExtensionRecommendations = false;
           SkipOnboarding = true;
+        };
+        ExtensionSettings = {
+          "CarolineForShyfox" = {
+            install_url = "file://${./caroline-for-shyfox.xpi}";
+            installation_mode = "force_installed";
+          };
         };
       };
       profiles."${osConfig.myOptions.userAccount.username}" = {
