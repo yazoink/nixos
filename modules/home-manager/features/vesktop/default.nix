@@ -18,7 +18,7 @@ in
     ];
     xdg.configFile = {
       "vesktop/themes/my.theme.css".source = themeFile;
-      "vesktop/config.json".text = ''
+      "vesktop/config2.json".text = ''
         {
           "discordBranch": "ptb",
           "minimizeToTray": true,
