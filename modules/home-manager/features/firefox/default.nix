@@ -1,4 +1,5 @@
-{pkgs, inputs, config, lib, osConfig, ...}:
+# https://color.firefox.com/?theme=XQAAAAJYAgAAAAAAAABBKYhm849SCicxcUF-LXcGHf3p79EhVPWc07va6AgP3IA9THaAdrddvk_9TsDbquoO7joJkG4nQZDC-Z-1sgMyDGh5RRNNa_mFlPaOOTQOWQfGZh0KTyYqzZQv6zM5rgUH7Y9C9OkpF-e4J0OMBrjk39Wsr4L8oEHFaEN58_oyF8JQIZvHlxNSIMYG2alq6v3wFxDX6SgDeydCoQ4e6zQueQFDBN2wag6jHRM9mTcl3hUKs5QipCscB1i7h-0MDZzT8clMrcaGETdoWJTPE-NzdQrPhEDwh_uHalD7GLhKqUowlJhDx976Dn6CA53tjJGkdC9vSYkn8_59Lw3L_5JmY0qQFh17b8QxZtEdj3vyiHB_4k1spG0SS4WhYk9MWYPny_VMxoJU8f19Tzk
+{inputs, config, lib, osConfig, ...}:
 {
   options = {
     bundles.desktopFull.firefox.enable = lib.mkOption {
