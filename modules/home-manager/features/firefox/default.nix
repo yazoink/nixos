@@ -50,12 +50,6 @@
           ExtensionRecommendations = false;
           SkipOnboarding = true;
         };
-        ExtensionSettings = {
-          "CarolineForShyfox@yazo.ink" = {
-            install_url = "file://${./caroline-for-shyfox.xpi}";
-            installation_mode = "force_installed";
-          };
-        };
       };
       profiles."${osConfig.myOptions.userAccount.username}" = {
         isDefault = true;
