@@ -19,7 +19,7 @@
         QT_WAYLAND_DISABLE_WINDOWDECORATION = "1";
         QT_QPA_PLATFORM = "wayland";
       };
-      file.".config/hyprland/scripts".source = ./scripts;
+      file.".config/hypr/scripts".source = ./scripts;
     };
 
     wayland.windowManager.hyprland = builtins.trace "hyprland config module enabled" {
@@ -39,10 +39,11 @@
         "$browser" = "firefox";
         "$fileManager" = "thunar";
         "$menu" = "rofi -show drun";
-        "$screenshot" = "bash /home/${osConfig.myOptions.userAccount.username}/.config/hyprland/scripts/screenshot.sh";
+        "$screenshot" = "/home/${osConfig.myOptions.userAccount.username}/.config/hypr/scripts/screenshot.sh";
         "$power" = "simple-logout";
         "$lock" = "gtklock";
-        "$colorPicker" = "bash /home/${osConfig.myOptions.userAccount.username}/.config/hyprland/scripts/color.sh";
+        "$colorPicker" = "/home/${osConfig.myOptions.userAccount.username}/.config/hypr/scripts/color.sh";
+        "$bar" = "/home/${osConfig.myOptions.userAccount.username}/.config/hypr/scripts/waybar.sh";
         "$screenRecorder" = "kooha";
         "$mainMod" = "SUPER";
         exec-once = [
