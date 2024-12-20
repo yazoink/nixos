@@ -9,8 +9,8 @@
   };
   config = lib.mkIf config.bundles.desktopFull.firefox.enable {
     home = {
-      packages = with pkgs; [
-        firefox-unwrapped
+      packages = [
+        (pkgs.wrapFirefox (pkgs.firefox-unwrapped.override { pipewireSupport = true;}) {})
       ];
       sessionVariables = {
         MOZ_USE_XINPUT2 = 1;
@@ -24,7 +24,7 @@
     programs.firefox = {
       enable = true;
       package = pkgs.wrapFirefox pkgs.firefox-unwrapped {
-        extraPolicies = {
+        policies = {
           DisableTelemetry = true;
           DisableFirefoxStudies = true;
           EnableTrackingProtection = {
@@ -57,9 +57,11 @@
         };
       };
       profiles."${osConfig.myOptions.userAccount.username}" = {
+        isDefault = true;
         search = {
           force = true;
           default = "4get";
+          privateDefault = "4get";
           engines = {
             "4get" = {
               urls = [{
@@ -81,7 +83,7 @@
           floccus
           firefox-color
           control-panel-for-twitter
-          sideberry
+          sidebery
         ] ++ (if osConfig.networking.hostName == "cyberia" then [enhanced-h264ify] else []);
         extraConfig = builtins.readFile ./betterfox.js;
         /*extraConfig = builtins.readFile (builtins.fetchurl {
