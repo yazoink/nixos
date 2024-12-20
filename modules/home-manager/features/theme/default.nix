@@ -17,6 +17,7 @@ in
           @define-color popover_bg_color #${base00};
           @define-color sidebar_bg_color #${base00};
           @define-color accent_color #${base0F};
+          @define-color accent_bg_color #${base0F};
 
            /* No (default) title bar on wayland */
           headerbar.default-decoration {
