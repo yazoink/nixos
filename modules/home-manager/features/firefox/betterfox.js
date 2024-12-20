@@ -280,3 +280,5 @@ user_pref("widget.gtk.ignore-bogus-leave-notify", 1);
 user_pref("shyfox.disable.floating.search", true);
 user_pref("shyfox.remove.window.controls", true);
 user_pref("shyfox.enable.ext.mono.toolbar.icons", true);
+user_pref("shyfox.enable.ext.mono.context.icons", true);
+user_pref("shyfox.enable.ext.mono.menu.icons", true);
