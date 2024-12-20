@@ -49,7 +49,7 @@
 
       /*****----- Global Properties -----*****/
       * {
-          font:                        "${fonts.sansSerif.name} 11";
+          font:                        "${fonts.sansSerif.name} ${toString config.stylix.fonts.sizes.popups}";
           background:                  #${base16Scheme.base00};
           background-alt:              #${base16Scheme.base01};
           background-alt-2:            #${base16Scheme.base02};
