@@ -79,6 +79,7 @@
           firefox-color
           control-panel-for-twitter
           sidebery
+          userchrome-toggle-extended
         ] ++ (if osConfig.networking.hostName == "cyberia" then [enhanced-h264ify] else []);
         extraConfig = builtins.readFile ./betterfox.js;
         /*extraConfig = builtins.readFile (builtins.fetchurl {
