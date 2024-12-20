@@ -34,14 +34,14 @@
       '';*/
       extraConfig = ''
         [urgency=low]
-        border-color=#$(config.stylix.base16Scheme.base01)
-        background-color=#$(config.stylix.base16Scheme.base00)
-        text-color=#$(config.stylix.base16Scheme.base05)
+        border-color=#${config.stylix.base16Scheme.base01}
+        background-color=#${config.stylix.base16Scheme.base00}
+        text-color=#${config.stylix.base16Scheme.base05}
 
         [urgency=high]
-        border-color=#$(config.stylix.base16Scheme.base0F)
-        background-color=#$(config.stylix.base16Scheme.base00)
-        text-color=#$(config.stylix.base16Scheme.base05)
+        border-color=#${config.stylix.base16Scheme.base0F}
+        background-color=#${config.stylix.base16Scheme.base00}
+        text-color=#${config.stylix.base16Scheme.base05}
       '';
     };
   };
