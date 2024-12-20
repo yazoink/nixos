@@ -24,7 +24,7 @@
     programs.firefox = {
       enable = true;
       package = pkgs.wrapFirefox pkgs.firefox-unwrapped {
-        policies = {
+        extraPolicies = {
           DisableTelemetry = true;
           DisableFirefoxStudies = true;
           EnableTrackingProtection = {
