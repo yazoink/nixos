@@ -23,6 +23,7 @@ in
       libsForQt5.qtquickcontrols2
       libsForQt5.qtgraphicaleffects
       gtk-engine-murrine
+      alacritty
     ] ++ [carolineSddm carolineCursors carolineIcons];
     #fonts.packages = with pkgs; [uw-ttyp0];
 
@@ -30,6 +31,7 @@ in
       enable = true;
       targets = {
         grub.enable = false;
+        alacritty.enable = true;
       };
       cursor = {
         name = "caroline-bibata-modern";
@@ -91,7 +93,7 @@ in
           #package = pkgs.gohufont;
           #name = "Gohufont";
           package = pkgs.cozette;
-          name = "CozetteHiDpi";
+          name = "Cozette";
           #package = necApcIII;
           #name = "Bm437 NEC APC3 8x16";
         };
