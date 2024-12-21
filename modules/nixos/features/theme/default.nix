@@ -23,7 +23,6 @@ in
       libsForQt5.qtquickcontrols2
       libsForQt5.qtgraphicaleffects
       gtk-engine-murrine
-      wezterm
     ] ++ [carolineSddm carolineCursors carolineIcons];
     #fonts.packages = with pkgs; [uw-ttyp0];
 
@@ -78,7 +77,7 @@ in
           applications = 11;
           desktop = 11;
           popups = 11;
-          terminal = 13;
+          terminal = 12;
         };
         serif = {
           package = pkgs.gyre-fonts;
@@ -91,8 +90,8 @@ in
         monospace = {
           #package = pkgs.gohufont;
           #name = "Gohufont";
-          package = pkgs.cozette;
-          name = "Cozette";
+          package = pkgs.tamsyn;
+          name = "Tamsyn";
           #package = necApcIII;
           #name = "Bm437 NEC APC3 8x16";
         };
