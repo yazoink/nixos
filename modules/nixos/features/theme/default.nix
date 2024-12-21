@@ -76,7 +76,7 @@ in
           applications = 11;
           desktop = 11;
           popups = 11;
-          terminal = 11;
+          terminal = 12;
         };
         serif = {
           package = pkgs.gyre-fonts;
@@ -89,8 +89,10 @@ in
         monospace = {
           #package = pkgs.gohufont;
           #name = "Gohufont";
-          package = necApcIII;
-          name = "Bm437 NEC APC3 8x16";
+          package = pkgs.curie;
+          name = "curie";
+          #package = necApcIII;
+          #name = "Bm437 NEC APC3 8x16";
         };
       };
     };
