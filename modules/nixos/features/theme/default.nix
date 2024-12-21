@@ -90,8 +90,8 @@ in
         monospace = {
           #package = pkgs.gohufont;
           #name = "Gohufont";
-          package = pkgs.tamsyn;
-          name = "Tamsyn";
+          package = pkgs.termsyn;
+          name = "Termsyn";
           #package = necApcIII;
           #name = "Bm437 NEC APC3 8x16";
         };
