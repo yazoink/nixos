@@ -77,7 +77,7 @@ in
           applications = 11;
           desktop = 11;
           popups = 11;
-          terminal = 13;
+          terminal = 11;
         };
         serif = {
           package = pkgs.gyre-fonts;
@@ -91,7 +91,7 @@ in
           #package = pkgs.gohufont;
           #name = "Gohufont";
           package = pkgs.cozette;
-          name = "Cozette-13";
+          name = "Cozette-11";
           #package = necApcIII;
           #name = "Bm437 NEC APC3 8x16";
         };
