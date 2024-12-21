@@ -25,7 +25,6 @@ in
       gtk-engine-murrine
     ] ++ [carolineSddm carolineCursors carolineIcons];
     #fonts.packages = with pkgs; [uw-ttyp0];
-    programs.alacritty.enable = true;
 
     stylix = {
       enable = true;
@@ -92,7 +91,7 @@ in
           #package = pkgs.gohufont;
           #name = "Gohufont";
           package = pkgs.cozette;
-          name = "Cozette";
+          name = "CozetteVector";
           #package = necApcIII;
           #name = "Bm437 NEC APC3 8x16";
         };
