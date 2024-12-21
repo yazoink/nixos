@@ -91,7 +91,7 @@ in
           #package = pkgs.gohufont;
           #name = "Gohufont";
           package = pkgs.cozette;
-          name = "CozetteVector";
+          name = "Cozette-13";
           #package = necApcIII;
           #name = "Bm437 NEC APC3 8x16";
         };
