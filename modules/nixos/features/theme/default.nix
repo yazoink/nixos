@@ -23,9 +23,9 @@ in
       libsForQt5.qtquickcontrols2
       libsForQt5.qtgraphicaleffects
       gtk-engine-murrine
-      alacritty
     ] ++ [carolineSddm carolineCursors carolineIcons];
     #fonts.packages = with pkgs; [uw-ttyp0];
+    programs.alacritty.enable = true;
 
     stylix = {
       enable = true;
