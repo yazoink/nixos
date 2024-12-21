@@ -24,6 +24,7 @@ in
       libsForQt5.qtgraphicaleffects
       gtk-engine-murrine
     ] ++ [carolineSddm carolineCursors carolineIcons];
+    fonts.packages = with pkgs; [unifont];
 
     stylix = {
       enable = true;
@@ -82,7 +83,6 @@ in
           package = pkgs.gyre-fonts;
           name = "DejaVu Math TeX Gyre";
         };
-        fonts.packages = with pkgs; [unifont];
         sansSerif = {
           package = pkgs.rubik;
           name = "Rubik";
