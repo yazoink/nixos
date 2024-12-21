@@ -82,15 +82,16 @@ in
           package = pkgs.gyre-fonts;
           name = "DejaVu Math TeX Gyre";
         };
+        fonts.packages = with pkgs; [unifont];
         sansSerif = {
           package = pkgs.rubik;
           name = "Rubik";
         };
         monospace = {
-          #package = pkgs.gohufont;
-          #name = "Gohufont";
-          package = pkgs.curie;
-          name = "curie";
+          package = pkgs.gohufont;
+          name = "Gohufont";
+          #package = pkgs.curie;
+          #name = "curie";
           #package = necApcIII;
           #name = "Bm437 NEC APC3 8x16";
         };
