@@ -24,7 +24,6 @@ in
       libsForQt5.qtgraphicaleffects
       gtk-engine-murrine
     ] ++ [carolineSddm carolineCursors carolineIcons];
-    #fonts.packages = with pkgs; [uw-ttyp0];
 
     stylix = {
       enable = true;
@@ -90,10 +89,10 @@ in
         monospace = {
           #package = pkgs.gohufont;
           #name = "Gohufont";
-          package = pkgs.terminus_font;
-          name = "Terminus";
-          #package = necApcIII;
-          #name = "Bm437 NEC APC3 8x16";
+          #package = pkgs.terminus_font;
+          #name = "Terminus";
+          package = necApcIII;
+          name = "Bm437 NEC APC3 8x16";
         };
       };
     };
