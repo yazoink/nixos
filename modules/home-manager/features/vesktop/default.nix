@@ -410,7 +410,7 @@ in
               "enabled": false
             },
             "OpenInApp": {
-              "enabled": true
+              "enabled": false
             },
             "OverrideForumDefaults": {
               "enabled": false
