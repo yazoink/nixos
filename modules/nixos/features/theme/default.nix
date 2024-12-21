@@ -24,6 +24,7 @@ in
       libsForQt5.qtgraphicaleffects
       gtk-engine-murrine
     ] ++ [carolineSddm carolineCursors carolineIcons];
+    fonts.packages = with pkgs; [uw-ttyp0];
 
     stylix = {
       enable = true;
@@ -87,10 +88,10 @@ in
           name = "Rubik";
         };
         monospace = {
-          #package = pkgs.gohufont;
-          #name = "Gohufont";
-          package = pkgs.unifont;
-          name = "unifont";
+          package = pkgs.gohufont;
+          name = "Gohufont";
+          #package = pkgs.curie;
+          #name = "curie";
           #package = necApcIII;
           #name = "Bm437 NEC APC3 8x16";
         };
