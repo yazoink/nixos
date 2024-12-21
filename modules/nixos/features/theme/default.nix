@@ -23,7 +23,7 @@ in
       libsForQt5.qtquickcontrols2
       libsForQt5.qtgraphicaleffects
       gtk-engine-murrine
-      alacritty
+      wezterm
     ] ++ [carolineSddm carolineCursors carolineIcons];
     #fonts.packages = with pkgs; [uw-ttyp0];
 
@@ -31,7 +31,6 @@ in
       enable = true;
       targets = {
         grub.enable = false;
-        alacritty.enable = true;
       };
       cursor = {
         name = "caroline-bibata-modern";
