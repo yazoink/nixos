@@ -1,4 +1,4 @@
-{pkgs, config, lib, ...}:
+{pkgs, config, lib, osConfig, ...}:
 let
   simpleLogout = pkgs.callPackage ./simple-logout.nix {};
   styleCss = config.lib.stylix.colors {
@@ -17,7 +17,9 @@ in
     home = {
       packages = [simpleLogout];
       file = {
-        ".config/simple-logout/icons".source = ./config/icons;
+        ".config/simple-logout/icons".source = 
+          if (osConfig.myOptions.desktopTheme.name == "caroline") then ./config/icons/caroline
+          else (if (osConfig.myOptions.desktopTheme.name == "carob") then ./config/icons/carob else null);
         ".config/simple-logout/config.json".source = ./config/config.json;
         ".config/simple-logout/style.css".source = styleCss;
       };
