@@ -16,7 +16,7 @@ in
       cursor = {
         name = "caroline-bibata-modern";
       };
-      /*base16Scheme = {
+      base16Scheme = {
         base00 = "1c1213";
         base01 = "3a2425";
         base02 = "563837";
@@ -33,24 +33,6 @@ in
         base0D = "684c59";
         base0E = "a63650";
         base0F = "893f45";
-      };*/
-      base16Scheme = {
-        base00 = "101127";
-        base01 = "1e2048";
-        base02 = "2f306a";
-        base03 = "3e418e";
-        base04 = "a1a1aa";
-        base05 = "bcbcc2";
-        base06 = "d7d7db";
-        base07 = "e9e9eb";
-        base08 = "C77A7F";
-        base09 = "5D5D6B";
-        base0A = "DCCEAD";
-        base0B = "979F93";
-        base0C = "8BB7C2";
-        base0D = "6E95BA";
-        base0E = "4B4D79";
-        base0F = "5D5D6B";
       };
     };
   };

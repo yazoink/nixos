@@ -4,6 +4,5 @@
     ./carob
     ./rosepine
     ./tarot
-    ./rouge2
   ];
 }
