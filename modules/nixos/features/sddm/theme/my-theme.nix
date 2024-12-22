@@ -6,8 +6,8 @@ stdenv.mkDerivation {
   installPhase = with config.stylix.base16Scheme; ''
     mkdir -p $out/share/sddm/themes/my-theme
     cp -r $src/* $out/share/sddm/themes/my-theme
-    touch $out/share/sddm/themes/theme/my-theme/theme.conf
-    cat > $out/share/sddm/themes/theme/my-theme/theme.conf << 'EOL' 
+    touch $out/share/sddm/themes/my-theme/theme.conf
+    cat > $out/share/sddm/themes/my-theme/theme.conf << 'EOL' 
     ## Please see https://github.com/aczw/sddm-theme-corners/blob/main/CONFIG.md for
     ## more information about these options. Happy configuring!
     [General]
