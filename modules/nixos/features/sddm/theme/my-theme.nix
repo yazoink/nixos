@@ -1,5 +1,5 @@
-{pkgs, config, ...}:
-pkgs.stdenv.mkDerivation {
+{config, stdenv, ...}:
+stdenv.mkDerivation {
   src = ./my-theme;
   name = "my-sddm-theme";
   dontUnpack = true;
