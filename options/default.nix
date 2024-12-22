@@ -9,6 +9,32 @@
           default = "gene";
         };
       };
+      deskopTheme = {
+        enable = lib.mkOption {
+          type = lib.types.bool;
+          default = false;
+        };
+        name = lib.mkOption {
+          type = lib.types.string;
+          default = "caroline";
+          description = "options: caroline";
+        };
+        wallpaper = lib.mkOption {
+          type = lib.types.path;
+          description = "path to wallpaper";
+        };
+        firefoxCss = {
+          shyfox = {
+            enable = lib.mkOption {
+              type = lib.types.bool;
+              default = false;
+            };
+            wallpaper = lib.mkOption {
+              type = lib.types.path;
+            };
+          };
+        };
+      };
       bundles = {
         base.enable = lib.mkOption {
           type = lib.types.bool;

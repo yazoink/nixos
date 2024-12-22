@@ -1,6 +1,10 @@
 {pkgs, config, lib, ...}:
 let
   simpleLogout = pkgs.callPackage ./simple-logout.nix {};
+  styleCss = config.lib.stylix.colors {
+    template = ./config/style.css.mustache;
+    extension = ".css";
+  };
 in
 {
   options = {
@@ -10,7 +14,13 @@ in
     };
   };
   config = lib.mkIf config.bundles.desktopBase.simpleLogout.enable {
-    home.packages = [simpleLogout];
-    home.file.".config/simple-logout".source = ./config;
+    home = {
+      home.packages = [simpleLogout];
+      file = {
+        ".config/simple-logout/icons".source = ./config/icons;
+        ".config/simple-logout/config.json".source = ./config/config.json;
+        ".config/simple-logout/style.css".source = styleCss;
+      };
+    };
   };
 }

@@ -1,4 +1,4 @@
-{config, pkgs, lib, ...}:
+{config, pkgs, lib, osConfig, ...}:
 {
   options = {
     bundles.desktopBase.rofi.enable = lib.mkOption {
@@ -15,8 +15,10 @@
       terminal = "${pkgs.foot}/bin/foot";
     };
 
-    home.file.".config/rofi/image.png".source = ./image-caroline.png;
-    xdg.configFile."rofi/config.rasi".text = with config.stylix; lib.mkForce ''
+    home.file.".config/rofi/image.png".source = 
+      if (osConfig.myOptions.desktopTheme.name == "caroline") then ./images/image-caroline.png else
+      (if (osConfig.myOptions.desktopTheme.name == "carob") then ./images/image-carob.png else null);
+    xdg.configFile."rofi/config.rasi".text = lib.mkForce ''
       configuration {
         location: 0;
         yoffset: 0;

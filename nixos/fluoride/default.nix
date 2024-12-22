@@ -16,6 +16,14 @@
     userAccount = {
       username = "gene";
     };
+    desktopTheme = {
+      name = "caroline";
+      wallpaper = ./wallpapers/caroline-flowers.png;
+      firefoxCss.shyfox = {
+        enable = true;
+        wallpaper = ./wallpapers/caroline-waves.png;
+      };
+    };
     bundles = {
       desktopFull.enable = true;
     };
@@ -26,7 +34,7 @@
       steam.enable = true;
       gamescope.enable = true;
       virtManager.enable = true;
-      vscode.enable = true;
+      vscode.enable = false;
     };
   };
 

@@ -18,7 +18,10 @@
   ];
 
   config = lib.mkIf config.myOptions.bundles.desktopBase.enable {
-    myOptions.bundles.base.enable = true;
+    myOptions = {
+      bundles.base.enable = true;
+      desktopTheme.enable = true;
+    };
     bundles.desktopBase = {
       acpi.enable = true;
       audio.enable = true;
@@ -32,7 +35,6 @@
       polkit.enable = true;
       sddm.enable = true;
       silentBoot.enable = true;
-      theme.enable = true;
       thunar.enable = true;
     };
   };

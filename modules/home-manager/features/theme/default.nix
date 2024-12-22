@@ -7,7 +7,11 @@ let
   };
 in
 {
-  config = lib.mkIf osConfig.bundles.desktopBase.theme.enable {
+  imports = [
+    ./themes/caroline
+    ./themes/carob
+  ];
+  config = lib.mkIf osConfig.myOptions.desktopTheme.enable {
     stylix = {
       targets = {
         waybar.enable = false;
@@ -95,7 +99,7 @@ in
         libsForQt5.qtstyleplugin-kvantum
         #kdePackages.qtstyleplugin-kvantum
         libsForQt5.qt5ct
-        libsForQt5.qtstyleplugins
+        #libsForQt5.qtstyleplugins
         #kdePackages.qt6ct
         adw-gtk3
       ];
@@ -110,7 +114,6 @@ in
 
     gtk = {
       enable = true;
-      iconTheme.name = "caroline-suru-aspromauros";
       gtk2 = {
         extraConfig = builtins.readFile gtkrcFile;
       };
@@ -118,19 +121,11 @@ in
 
     qt = {
       enable = true;
-      #platformTheme.name = "qtct";
-      #style.name = "kvantum";
-      platformTheme.name = "gtk";
-      style.name = "adwaita-dark";
-      style.package = pkgs.adwaita-qt;
-    };
-
-    xdg.configFile = {
-      "Kvantum/kvantum.kvconfig".text = ''
-        [General]
-        theme=caroline-kvantum
-      '';
-    "Kvantum/caroline-kvantum".source = ./caroline-kvantum;
+      platformTheme.name = "qtct";
+      style.name = "kvantum";
+      #platformTheme.name = "gtk";
+      #style.name = "adwaita-dark";
+      #style.package = pkgs.adwaita-qt;
     };
   };
 }

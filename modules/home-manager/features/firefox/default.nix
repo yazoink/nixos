@@ -7,14 +7,11 @@
       default = false;
     };
   };
+  imports = [./shyfox];
   config = lib.mkIf config.bundles.desktopFull.firefox.enable {
     home = {
       sessionVariables = {
         MOZ_USE_XINPUT2 = 1;
-      };
-      file.".mozilla/firefox/${osConfig.myOptions.userAccount.username}/chrome" = {
-        source = ./chrome;
-        recursive = true;
       };
     };
 
@@ -82,7 +79,7 @@
           sidebery
           userchrome-toggle-extended
         ] ++ (if osConfig.networking.hostName == "cyberia" then [enhanced-h264ify] else []);
-        extraConfig = builtins.readFile ./betterfox.js;
+        extraConfig = builtins.readFile ./user.js;
         /*extraConfig = builtins.readFile (builtins.fetchurl {
           url = "https://raw.githubusercontent.com/yokoffing/Betterfox/main/user.js";
           sha256 = "0vfn3s7q4gm939a5cim1jlrr8k0f5pm4kxxsv1d9bwvv10pmz7pn";
