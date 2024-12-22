@@ -10,8 +10,6 @@ in
       carolineIcons
     ];
 
-    #desktopTheme.base16Accent = "base0F";
-
     stylix = {
       cursor = {
         name = "caroline-bibata-modern";
