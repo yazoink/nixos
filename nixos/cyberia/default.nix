@@ -17,7 +17,7 @@
     userAccount.username = "gene";
     desktopTheme = {
       name = "rosepine";
-      wallpaper = ./wallpapers/rosepine-flowers.png;
+      wallpaper = ./wallpapers/rosepine-flowers.jpg;
       sddm = {
         scale = 1.3;
         wallpaper = ./wallpapers/rosepine-waves.png;
