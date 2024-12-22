@@ -1,6 +1,6 @@
 {pkgs, config, ...}:
 let
-  themeConfig = with config.stylix.base16Scheme; ''
+  themeConfig = with config; ''
 ## Please see https://github.com/aczw/sddm-theme-corners/blob/main/CONFIG.md for
 ## more information about these options. Happy configuring!
 
@@ -21,9 +21,9 @@ let
 # Scale:        number. Adjusts the size of UI elements. Can be anything, but I
 #               would stick between 1 and 2 (e.g. 1.5).
 
-BgSource="${config.myOptions.desktopTheme.sddm.wallpaper}"
-FontFamily="${config.stylix.fonts.sansSerif.name}"
-FontSize=${toString config.stylix.fonts.sizes.applications}
+BgSource="${myOptions.desktopTheme.sddm.wallpaper}"
+FontFamily="${stylix.fonts.sansSerif.name}"
+FontSize=${toString stylix.fonts.sizes.applications}
 Padding=50
 Radius=10
 Scale=1.3
@@ -59,10 +59,10 @@ UserPictureEnabled=false
 #
 # HidePassword:         boolean. Whether to replace your entered password with dots.
 
-InputColor="#${base01}"
-InputTextColor="#${base05}"
+InputColor="#${stylix.base16Scheme.base01}"
+InputTextColor="#${stylix.base16Scheme.base05}"
 InputBorderWidth=2
-InputBorderColor="#${base0F}"
+InputBorderColor="#${stylix.base16Scheme.base0F}"
 UserPlaceholderText="user"
 PassPlaceholderText="password"
 HidePassword=true
@@ -73,9 +73,9 @@ HidePassword=true
 #
 # LoginButtonColor:         color. Background color of the button.
 
-LoginButtonTextColor="#${base05}"
+LoginButtonTextColor="#${stylix.base16Scheme.base05}"
 LoginButtonText="Login"
-LoginButtonColor="#${base0F}"
+LoginButtonColor="#${stylix.base16Scheme.base0F}"
 
 # PopupColor:               color. Background color of popup window.
 #
@@ -84,9 +84,9 @@ LoginButtonColor="#${base0F}"
 # PopupActiveTextColor:     color. Text color of the currently selected entry.
 #                           Mainly provided for potential contrast issues.
 
-PopupColor="#${base01}"
-PopupActiveColor="#${base02}"
-PopupActiveTextColor="#${base05}"
+PopupColor="#${stylix.base16Scheme.base01}"
+PopupActiveColor="#${stylix.base16Schemebase.02}"
+PopupActiveTextColor="#${stylix.base16Scheme.base05}"
 
 # SessionButtonColor:   color. Session button background color.
 #
@@ -96,10 +96,10 @@ PopupActiveTextColor="#${base05}"
 #
 # PowerIconColor:       color. Color of the icon inside the power button.
 
-SessionButtonColor="#${base01}"
-SessionIconColor="#${base05}"
-PowerButtonColor="#${base01}"
-PowerIconColor="#${base05}"
+SessionButtonColor="#${stylix.base16Scheme.base01}"
+SessionIconColor="#${stylix.base16Scheme.base05}"
+PowerButtonColor="#${stylix.base16Scheme.base01}"
+PowerIconColor="#${stylix.base16Scheme.base05}"
 
 # DateTimeSpacing:      number. Spacing between the date and time.
 #
@@ -116,13 +116,13 @@ PowerIconColor="#${base05}"
 
 DateTimeSpacing=-20
 
-DateColor="#${base05}"
+DateColor="#${stylix.base16Scheme.base05}"
 DateSize=36
 DateIsBold=false
 DateOpacity=1.0
 DateFormat="dddd, MMMM d"
 
-TimeColor="#${base05}"
+TimeColor="#${stylix.base16Scheme.base05}"
 TimeSize=48
 TimeIsBold=true
 TimeOpacity=1.0
