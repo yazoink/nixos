@@ -17,14 +17,14 @@
     userAccount.username = "gene";
     desktopTheme = {
       name = "tarot";
-      wallpaper = ./wallpapers/caroline-flowers.png;
+      wallpaper = ./wallpapers/tarot-flowers.jpg;
       sddm = {
         scale = 1.3;
-        wallpaper = ./wallpapers/caroline-flowers.png;
+        wallpaper = ./wallpapers/tarot-flowers.jpg;
       };
       firefoxCss.shyfox = {
         enable = true;
-        wallpaper = ./wallpapers/caroline-waves.png;
+        wallpaper = ./wallpapers/tarot-flowers.jpg;
       };
     };
     bundles = {
