@@ -35,22 +35,22 @@ in
         base0F = "893f45";
       };*/
       base16Scheme = {
-        base00 = "241D1A";
-        base01 = "362B27";
-        base02 = "473933";
-        base03 = "594740";
-        base04 = "A78E84";
-        base05 = "B8A59D";
-        base06 = "CABBB5";
-        base07 = "DCD2CE";
-        base08 = "F6998F";
-        base09 = "FFA888";
-        base0A = "FFC37A";
-        base0B = "B6C68A";
-        base0C = "C0BCDB";
-        base0D = "B0A4C3";
-        base0E = "D8A2B0";
-        base0F = "F1AE97";
+        base00 = "1e1e2e";
+        base01 = "181825";
+        base02 = "313244";
+        base03 = "45475a";
+        base04 = "585b70";
+        base05 = "cdd6f4";
+        base06 = "f5e0dc";
+        base07 = "b4befe";
+        base08 = "f38ba8";
+        base09 = "fab387";
+        base0A = "f9e2af";
+        base0B = "a6e3a1";
+        base0C = "94e2d5";
+        base0D = "89b4fa";
+        base0E = "cba6f7";
+        base0F = "f2cdcd";
       };
     };
   };
