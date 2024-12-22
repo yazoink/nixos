@@ -17,7 +17,7 @@
 
     home.file.".config/rofi/image.png".source = 
       if (osConfig.myOptions.desktopTheme.name == "caroline") then ./images/image-caroline.png else
-      (if (osConfig.myOptions.desktopTheme.name == "carob") then ./images/image-carob.png else null);
+      (if (osConfig.myOptions.desktopTheme.name == "carob") then ./images/image-carob.png else ./images/image-tarot.png);
     xdg.configFile."rofi/config.rasi".text = lib.mkForce ''
       configuration {
         location: 0;
