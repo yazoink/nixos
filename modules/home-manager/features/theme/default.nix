@@ -95,6 +95,7 @@ in
         libsForQt5.qtstyleplugin-kvantum
         #kdePackages.qtstyleplugin-kvantum
         libsForQt5.qt5ct
+        libsForQt5.qtstyleplugins
         #kdePackages.qt6ct
         adw-gtk3
       ];
@@ -117,8 +118,11 @@ in
 
     qt = {
       enable = true;
-      platformTheme.name = "qtct";
-      style.name = "kvantum";
+      #platformTheme.name = "qtct";
+      #style.name = "kvantum";
+      platformTheme.name = "gtk";
+      style.name = "adwaita-dark";
+      style.package = pkgs.adwaita-qt;
     };
 
     xdg.configFile = {
