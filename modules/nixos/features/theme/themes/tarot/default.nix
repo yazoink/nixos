@@ -10,7 +10,7 @@ in
       carolineIcons
     ];
 
-    desktopTheme.base16Accent = "base09";
+    desktopTheme.base16Accent = "base0A";
 
     stylix = {
       cursor = {

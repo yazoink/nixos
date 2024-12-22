@@ -8,6 +8,8 @@ in
       carobTheme
     ];
 
+    desktopTheme.base16Accent = "base0D";
+
     stylix = {
       cursor = {
         name = "Bibata-Carob";
