@@ -3,7 +3,7 @@ stdenv.mkDerivation {
   src = ./my-theme;
   name = "my-sddm-theme";
   dontUnpack = true;
-  installPhase = with config.stylix.base16Scheme; ''
+  installPhase = with config.stylix.base16Scheme; builtins.trace "set sddm colors" ''
     mkdir -p $out/share/sddm/themes/my-theme
     cp -r $src/* $out/share/sddm/themes/my-theme
     touch $out/share/sddm/themes/my-theme/theme.conf
