@@ -25,7 +25,7 @@ stdenv.mkDerivation {
     UserPlaceholderText="user"
     PassPlaceholderText="password"
     HidePassword=true
-    LoginButtonTextColor="#${base05}"
+    LoginButtonTextColor="#${base00}"
     LoginButtonText="Login"
     LoginButtonColor="#${config.stylix.base16Scheme.${config.desktopTheme.base16Accent}}"
     PopupColor="#${base01}"
