@@ -9,7 +9,7 @@
           default = "gene";
         };
       };
-      deskopTheme = {
+      desktopTheme = {
         enable = lib.mkOption {
           type = lib.types.bool;
           default = false;
