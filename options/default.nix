@@ -15,7 +15,7 @@
           default = false;
         };
         name = lib.mkOption {
-          type = lib.types.string;
+          type = lib.types.str;
           default = "caroline";
           description = "options: caroline";
         };
