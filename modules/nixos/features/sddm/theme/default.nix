@@ -2,14 +2,8 @@
 {
   config = lib.mkIf config.bundles.desktopBase.sddm.enable {
     environment.etc = {
-      "sddm/themes/my-theme/components".source = {
-        source = ./backgrounds;
-        recursive = true;
-      };
-      "sddm/themes/my-theme/icons".source = {
-        source = ./icons;
-        recursive = true;
-      };
+      "sddm/themes/my-theme/components".source = ./backgrounds;
+      "sddm/themes/my-theme/icons".source = ./icons;
       "sddm/themes/my-theme/Main.qml".source = ./Main.qml;
       "sddm/themes/my-theme/theme.conf".text = with config.stylix.base16Scheme; ''
 ## Please see https://github.com/aczw/sddm-theme-corners/blob/main/CONFIG.md for
