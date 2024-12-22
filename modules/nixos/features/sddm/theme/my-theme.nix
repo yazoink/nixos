@@ -3,7 +3,7 @@ pkgs.stdenv.mkDerivation {
   src = ./my-theme;
   name = "my-sddm-theme";
   dontUnpack = true;
-  installPhase = ''
+  installPhase = with config.stylix.base16Scheme; ''
     mkdir -p $out/share/sddm/themes/my-theme
     cp -r $src/* $out/share/sddm/themes/my-theme
     cat > $out/share/sddm/themes/theme/my-theme/theme.conf << 'EOL' 
