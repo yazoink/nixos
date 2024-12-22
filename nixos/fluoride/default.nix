@@ -17,15 +17,15 @@
       username = "gene";
     };
     desktopTheme = {
-      name = "caroline";
-      wallpaper = ./wallpapers/caroline-flowers.png;
+      name = "tarot";
+      wallpaper = ./wallpapers/tarot-flowers.jpg;
       sddm = {
         scale = 0.7;
-        wallpaper = ./wallpapers/caroline-flowers.png;
+        wallpaper = ./wallpapers/tarot-waves.png;
       };
       firefoxCss.shyfox = {
         enable = true;
-        wallpaper = ./wallpapers/caroline-waves.png;
+        wallpaper = ./wallpapers/tarot-waves.png;
       };
     };
     bundles = {
