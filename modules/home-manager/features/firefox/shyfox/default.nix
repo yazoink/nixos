@@ -1,7 +1,7 @@
 {osConfig, lib, config, ...}:
 let
   shyVars = config.lib.stylix.colors {
-    template = ./chrome/ShyFox/shy-variables.css.mustache;
+    template = ./chrome/ShyFox/${osConfig.desktopTheme.base16Accent}-shy-variables.css.mustache;
     extension = ".css";
   };
 in

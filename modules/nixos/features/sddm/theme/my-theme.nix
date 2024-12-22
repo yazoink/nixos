@@ -21,13 +21,13 @@ stdenv.mkDerivation {
     InputColor="#${base01}"
     InputTextColor="#${base05}"
     InputBorderWidth=2
-    InputBorderColor="#${config.stylix.base16Scheme.${config.myOptions.desktopTheme.base16Accent}}"
+    InputBorderColor="#${config.stylix.base16Scheme.${config.desktopTheme.base16Accent}}"
     UserPlaceholderText="user"
     PassPlaceholderText="password"
     HidePassword=true
     LoginButtonTextColor="#${base05}"
     LoginButtonText="Login"
-    LoginButtonColor="#${config.stylix.base16Scheme.${config.myOptions.desktopTheme.base16Accent}}"
+    LoginButtonColor="#${config.stylix.base16Scheme.${config.desktopTheme.base16Accent}}"
     PopupColor="#${base01}"
     PopupActiveColor="#${base02}"
     PopupActiveTextColor="#${base05}"

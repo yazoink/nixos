@@ -59,7 +59,7 @@
           selected:                    #${base16Scheme.base01};
           active:                      #${base16Scheme.base01};
           urgent:                      #${base16Scheme.base01};
-          highlight:                   #${base16Scheme.base0F};
+          highlight:                   #${base16Scheme.${osConfig.desktopTheme.base16Accent}};
       }
 
       /*****----- Main Window -----*****/

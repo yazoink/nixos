@@ -19,11 +19,6 @@
           default = "caroline";
           description = "options: caroline, carob";
         };
-        base16Accent = lib.mkOption {
-          type = lib.types.str;
-          default = "base0D";
-          description = "options: base0D, base0F, base09";
-        };
         wallpaper = lib.mkOption {
           type = lib.types.path;
           description = "path to wallpaper";

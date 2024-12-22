@@ -1,5 +1,12 @@
 {pkgs, config, lib, ...}:
 {
+  options = {
+    desktopTheme.base16Accent = {
+      type = lib.types.str;
+      default = "base0D";
+      description = "options: base0D, base0F, base09";
+    };
+  };
   imports = [
     ./themes
     ./terminal-fonts

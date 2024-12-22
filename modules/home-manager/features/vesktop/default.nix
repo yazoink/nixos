@@ -1,7 +1,7 @@
 {pkgs, config, lib, osConfig, ...}:
 let
   themeFile = config.lib.stylix.colors {
-    template = ./${osConfig.myOptions.desktopTheme.base16Accent}.theme.css.mustache;
+    template = ./${osConfig.desktopTheme.base16Accent}.theme.css.mustache;
     extension = ".css";
   };
 in
