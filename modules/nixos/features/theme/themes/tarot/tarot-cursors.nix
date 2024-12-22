@@ -4,8 +4,8 @@ pkgs.stdenv.mkDerivation {
 
   src = pkgs.fetchFromGitHub {
     owner = "yazoink";
-    repo = "caroline-cursors";
-    rev = "a6f347f4b9fdb6187e357bb7eec3a9b3d36a917b";
+    repo = "tarot-cursor";
+    rev = "main";
     sha256 = "sha256-sEKxLyhLfUXacIdEE4PjAwyPKYqJU43/vzXGPIAdlPw=";
   };
 
@@ -13,7 +13,6 @@ pkgs.stdenv.mkDerivation {
 
   installPhase = ''
     mkdir -p $out/share/icons
-    cp -r $src/caroline-bibata-modern $out/share/icons
-    cp -r $src/caroline-bibata-original $out/share/icons
+    cp -r $src/Bibata-Tarot $out/share/icons
   '';
 }

@@ -1,12 +1,12 @@
 {pkgs, config, lib, ...}:
 let
-  carolineCursors = pkgs.callPackage ./caroline-cursors.nix {};
+  tarotCursors = pkgs.callPackage ./tarot-cursors.nix {};
   carolineIcons = pkgs.callPackage ./caroline-icons.nix {};
 in
 {
   config = lib.mkIf (config.myOptions.desktopTheme.enable && config.myOptions.desktopTheme.name == "tarot") {
     environment.systemPackages = [
-      carolineCursors
+      tarotCursors
       carolineIcons
     ];
 
@@ -14,7 +14,7 @@ in
 
     stylix = {
       cursor = {
-        name = "caroline-bibata-modern";
+        name = "Bibata-Tarot";
       };
       base16Scheme = {
         base00 = "0E091D";
