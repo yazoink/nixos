@@ -14,6 +14,9 @@
     ];
 
     stylix = {
+      settings = {
+        accentColor = "EA4D60";
+      };
       enable = true;
       targets = {
         grub.enable = false;
