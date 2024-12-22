@@ -15,7 +15,7 @@ in
   };
   config = lib.mkIf config.bundles.desktopBase.simpleLogout.enable {
     home = {
-      home.packages = [simpleLogout];
+      packages = [simpleLogout];
       file = {
         ".config/simple-logout/icons".source = ./config/icons;
         ".config/simple-logout/config.json".source = ./config/config.json;
