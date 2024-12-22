@@ -91,7 +91,7 @@ in
           layout = "dwindle";
           allow_tearing = false;
           "col.inactive_border" = lib.mkForce "rgb(${config.stylix.base16Scheme.base02})";
-          "col.active_border" = lib.mkForce "rgb(${config.stylix.base16Scheme.base0F})";
+          "col.active_border" = lib.mkForce "rgb(${config.stylix.base16Scheme.${osConfig.myOptions.desktopTheme.base16Accent}})";
         };
         decoration = {
           rounding = 10;

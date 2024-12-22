@@ -1,5 +1,5 @@
 # depends on theme module for theming
-{config, lib, ...}:
+{config, lib, osConfig, ...}:
 {
   options = {
     bundles.desktopBase.waybar.enable = lib.mkOption {
@@ -153,7 +153,7 @@
 
         .modules-left #workspaces button.focused,
         .modules-left #workspaces button.active {
-          color: #${base0F};
+          color: #${config.stylix.base16Scheme.${osConfig.myOptions.desktopTheme.base16Accent}};
         }
 
         tooltip {
