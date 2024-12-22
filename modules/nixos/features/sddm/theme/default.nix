@@ -1,6 +1,6 @@
 {pkgs, config, lib, ...}:
 let
-  myTheme = pkgs.callPackage ./my-theme.nix {};
+  myTheme = pkgs.callPackage ./my-theme.nix {inherit config;};
 in
 {
   config = lib.mkIf config.bundles.desktopBase.sddm.enable {
