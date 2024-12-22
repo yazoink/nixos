@@ -7,10 +7,7 @@ let
   };
 in
 {
-  imports = [
-    ./themes/caroline
-    ./themes/carob
-  ];
+  imports = [./themes];
   config = lib.mkIf osConfig.myOptions.desktopTheme.enable {
     stylix = {
       targets = {
