@@ -16,7 +16,7 @@
   myOptions = {
     userAccount.username = "gene";
     desktopTheme = {
-      name = "caroline";
+      name = "tarot";
       wallpaper = ./wallpapers/caroline-flowers.png;
       sddm = {
         scale = 1.3;
