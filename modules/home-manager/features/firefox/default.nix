@@ -7,7 +7,9 @@
       default = false;
     };
   };
+
   imports = [./shyfox];
+
   config = lib.mkIf config.bundles.desktopFull.firefox.enable {
     home = {
       sessionVariables = {
