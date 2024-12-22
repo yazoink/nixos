@@ -1,8 +1,10 @@
-{pkgs, config, lib, ...}:
+{pkgs, config, lib, osConfig, ...}:
 let
+  customAccent = osConfig.myOptions.desktopTheme.base16Accent;
   themeFile = config.lib.stylix.colors {
     template = ./my.theme.css.mustache;
     extension = ".css";
+    extraParams = customAccent;
   };
 in
 {
