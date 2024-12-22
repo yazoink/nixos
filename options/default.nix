@@ -40,6 +40,9 @@
             default = 1;
             description = "scale for the theme";
           };
+          wallpaper = lib.mkOption {
+            type = lib.types.path;
+          };
         };
       };
       bundles = {

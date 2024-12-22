@@ -2,7 +2,7 @@
 {
   config = lib.mkIf config.bundles.desktopBase.sddm.enable {
     environment.etc = {
-      "sddm/themes/my-theme/components".source = ./backgrounds;
+      "sddm/themes/my-theme/components".source = ./components;
       "sddm/themes/my-theme/icons".source = ./icons;
       "sddm/themes/my-theme/Main.qml".source = ./Main.qml;
       "sddm/themes/my-theme/theme.conf".text = with config.stylix.base16Scheme; ''
@@ -26,7 +26,7 @@
 # Scale:        number. Adjusts the size of UI elements. Can be anything, but I
 #               would stick between 1 and 2 (e.g. 1.5).
 
-BgSource="${config.stylix.wallpaper}"
+BgSource="${config.myOptions.desktopTheme.sddm.wallpaper}"
 FontFamily="${config.stylix.fonts.sansSerif.name}"
 FontSize=${toString config.stylix.fonts.sizes.applications}
 Padding=50
