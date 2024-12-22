@@ -6,13 +6,12 @@
       default = false;
     };
   };
+  imports = [./themes];
   config = lib.mkIf config.bundles.desktopBase.sddm.enable {
     environment.systemPackages = [
       pkgs.libsForQt5.qt5.qtgraphicaleffects
       pkgs.libsForQt5.qt5.qtquickcontrols2
     ];
-
-    imports = [./themes];
 
     services.displayManager.sddm = {
       enable = true;
