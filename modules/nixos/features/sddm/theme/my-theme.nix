@@ -131,7 +131,8 @@ TimeFormat="hh:mm AP"
 in
 pkgs.stdenv.mkDerivation {
   src = ./my-theme;
-    dontUnpack = true;
+  name = "my-sddm-theme";
+  dontUnpack = true;
   installPhase = ''
     mkdir -p $out/share/sddm/themes/my-theme
     cp -r $src/* $out/share/sddm/themes/my-theme
