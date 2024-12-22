@@ -3,7 +3,7 @@
   options = {
     desktopTheme.base16Accent = lib.mkOption {
       type = lib.types.str;
-      description = "options: base0D, base0F, base09, base0A";
+      description = "options: base0D, base0F, base09, base0A, base0B";
     };
   };
   imports = [
