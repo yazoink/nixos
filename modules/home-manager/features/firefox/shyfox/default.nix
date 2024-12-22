@@ -22,6 +22,7 @@ in
       ".mozilla/firefox/${osConfig.myOptions.userAccount.username}/chrome/ShyFox/shy-compact.css".source = ./chrome/ShyFox/shy-compact.css;
       ".mozilla/firefox/${osConfig.myOptions.userAccount.username}/chrome/ShyFox/shy-controls.css".source = ./chrome/ShyFox/shy-controls.css;
       ".mozilla/firefox/${osConfig.myOptions.userAccount.username}/chrome/ShyFox/shy-findbar.css".source = ./chrome/ShyFox/shy-findbar.css;
+      ".mozilla/firefox/${osConfig.myOptions.userAccount.username}/chrome/ShyFox/shy-floating-search.css".source = ./chrome/ShyFox/shy-floating-search.css;
       ".mozilla/firefox/${osConfig.myOptions.userAccount.username}/chrome/ShyFox/shy-global.css".source = ./chrome/ShyFox/shy-global.css;
       ".mozilla/firefox/${osConfig.myOptions.userAccount.username}/chrome/ShyFox/shy-icons.css".source = ./chrome/ShyFox/shy-icons.css;
       ".mozilla/firefox/${osConfig.myOptions.userAccount.username}/chrome/ShyFox/shy-navbar.css".source = ./chrome/ShyFox/shy-navbar.css;
