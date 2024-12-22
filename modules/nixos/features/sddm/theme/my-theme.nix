@@ -1,5 +1,6 @@
 {pkgs, config, ...}:
 let
+  wallpaper = config.myOptions.desktopTheme.sddm.wallpaper;
   themeConfig = ''
 ## Please see https://github.com/aczw/sddm-theme-corners/blob/main/CONFIG.md for
 ## more information about these options. Happy configuring!
@@ -21,7 +22,7 @@ let
 # Scale:        number. Adjusts the size of UI elements. Can be anything, but I
 #               would stick between 1 and 2 (e.g. 1.5).
 
-BgSource="${config.myOptions.desktopTheme.sddm.wallpaper}"
+BgSource="${wallpaper}"
 FontFamily="${config.stylix.fonts.sansSerif.name}"
 FontSize=${toString config.stylix.fonts.sizes.applications}
 Padding=50
