@@ -2,11 +2,11 @@
 {
   config = lib.mkIf config.bundles.desktopBase.sddm.enable {
     environment.etc = {
-      "sddm/themes/my-theme/components" = {
+      "sddm/themes/my-theme/components".source = {
         source = ./backgrounds;
         recursive = true;
       };
-      "sddm/themes/my-theme/icons" = {
+      "sddm/themes/my-theme/icons".source = {
         source = ./icons;
         recursive = true;
       };
