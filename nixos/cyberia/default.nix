@@ -20,7 +20,7 @@
       wallpaper = ./wallpapers/caroline-flowers.png;
       sddm = {
         scale = 1.3;
-        wallpaper = ./wallpapers/caroline-flowers.png;
+        wallpaper = ./wallpapers/caroline-waves.png;
       };
       firefoxCss.shyfox = {
         enable = true;
