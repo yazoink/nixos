@@ -1,7 +1,7 @@
 {pkgs, config, ...}:
 let
   wallpaper = config.myOptions.desktopTheme.sddm.wallpaper;
-  themeConfig = ''
+  themeConfig = with config.stylix.base16Scheme; ''
 ## Please see https://github.com/aczw/sddm-theme-corners/blob/main/CONFIG.md for
 ## more information about these options. Happy configuring!
 
