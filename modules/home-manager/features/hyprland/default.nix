@@ -122,7 +122,7 @@
             "col.text" = "rgb(${config.stylix.base16Scheme.base05})";
             bar_buttons_alignment = "left";
             hyprbars-button = [
-              "rgb(${config.stylix.base16Scheme.base0E}), 15, , hyprctl dispatch killactive"
+              "rgb(${config.stylix.base16Scheme.base08}), 15, , hyprctl dispatch killactive"
               "rgb(${config.stylix.base16Scheme.base0A}), 15, , hyprctl dispatch movetoworkspacesilent special"
               "rgb(${config.stylix.base16Scheme.base0B}), 15, , hyprctl dispatch fullscreen 1"
             ];
