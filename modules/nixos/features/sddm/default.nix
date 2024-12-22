@@ -6,7 +6,7 @@
       default = false;
     };
   };
-  imports = [./themes];
+  imports = [./theme];
   config = lib.mkIf config.bundles.desktopBase.sddm.enable {
     environment.systemPackages = [
       pkgs.libsForQt5.qt5.qtgraphicaleffects

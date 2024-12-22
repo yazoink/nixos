@@ -12,7 +12,7 @@ pkgs.stdenv.mkDerivation {
     dontUnpack = true;
 
     installPhase = ''
-      mkdir -p $out/share/sddm/themes
+      #mkdir -p $out/share/sddm/themes
       mkdir -p $out/share/icons
       mkdir -p $out/share/icons
       mkdir -p $out/share/themes
@@ -20,7 +20,7 @@ pkgs.stdenv.mkDerivation {
 
       cp -r $src/cursors/* $out/share/icons
       cp -r $src/icons/* $out/share/icons
-      cp -r $src/sddm/* $out/share/sddm/themes
+      #cp -r $src/sddm/* $out/share/sddm/themes
       #cp -r $src/kvantum/* $out/share/Kvantum
     '';
   }

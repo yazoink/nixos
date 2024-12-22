@@ -19,6 +19,7 @@
     desktopTheme = {
       name = "caroline";
       wallpaper = ./wallpapers/caroline-flowers.png;
+      sddm.wallpaper = ./wallpapers/caroline-flowers.png;
       firefoxCss.shyfox = {
         enable = true;
         wallpaper = ./wallpapers/caroline-waves.png;

@@ -1,13 +1,13 @@
 {pkgs, config, lib, ...}:
 let
-  carolineSddm = pkgs.callPackage ./caroline-sddm.nix {};
+  #carolineSddm = pkgs.callPackage ./caroline-sddm.nix {};
   carolineCursors = pkgs.callPackage ./caroline-cursors.nix {};
   carolineIcons = pkgs.callPackage ./caroline-icons.nix {};
 in
 {
   config = lib.mkIf (config.myOptions.desktopTheme.enable && config.myOptions.desktopTheme.name == "caroline") {
     environment.systemPackages = [
-      carolineSddm
+      #carolineSddm
       carolineCursors
       carolineIcons
     ];
