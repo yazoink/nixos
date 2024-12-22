@@ -17,7 +17,6 @@
     userAccount.username = "gene";
     desktopTheme = {
       name = "tarot";
-      base16Accent = "base09";
       wallpaper = ./wallpapers/tarot-flowers.jpg;
       sddm = {
         scale = 1.3;
