@@ -1,9 +1,11 @@
 {pkgs, config, lib, ...}:
+let
+  themeName = config.desktopTheme.name;
+in
 {
   options = {
-    desktopTheme.base16Accent = {
+    desktopTheme.base16Accent = lib.mkOption {
       type = lib.types.str;
-      default = "base0D";
       description = "options: base0D, base0F, base09";
     };
   };
@@ -12,6 +14,9 @@
     ./terminal-fonts
   ];
   config = lib.mkIf config.myOptions.desktopTheme.enable {
+    desktopTheme.base16Accent = if (themeName == "caroline") then "base0F" else 
+      (if (themeName == "carob") then "base0D" else 
+      (if (themeName == "tarot") then "base09" else "base0D"));
     desktopTheme.customTerminalFont.enable = true;
 
     environment.systemPackages = with pkgs; [
