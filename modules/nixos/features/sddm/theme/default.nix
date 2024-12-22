@@ -26,7 +26,7 @@
 # Scale:        number. Adjusts the size of UI elements. Can be anything, but I
 #               would stick between 1 and 2 (e.g. 1.5).
 
-BgSource="${config.myOptions.desktopTheme.sddm.wallpaper}"
+BgSource="${config.stylix.wallpaper}"
 FontFamily="${config.stylix.fonts.sansSerif.name}"
 FontSize=${toString config.stylix.fonts.sizes.applications}
 Padding=50
