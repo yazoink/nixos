@@ -1,12 +1,12 @@
 {pkgs, config, lib, ...}:
 let
-  tarotCursors = pkgs.callPackage ./tarot-cursors.nix {};
+  rosepineCursors = pkgs.callPackage ./rosepine-cursors.nix {};
   rosepineIcons = pkgs.callPackage ./rosepine-icons.nix {};
 in
 {
   config = lib.mkIf (config.myOptions.desktopTheme.enable && config.myOptions.desktopTheme.name == "rosepine") {
     environment.systemPackages = [
-      tarotCursors
+      rosepineCursors
       rosepineIcons
     ];
 
@@ -14,7 +14,7 @@ in
 
     stylix = {
       cursor = {
-        name = "Bibata-Tarot";
+        name = "Bibata-Rose-Pine";
       };
       base16Scheme = {
         base00 = "232136";

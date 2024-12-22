@@ -1,6 +1,6 @@
 {pkgs, ...}:
 pkgs.stdenv.mkDerivation {
-  name = "caroline-cursors";
+  name = "rosepine-cursors";
 
   src = pkgs.fetchFromGitHub {
     owner = "yazoink";
