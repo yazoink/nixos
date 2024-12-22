@@ -2,6 +2,7 @@
 
 function main() {
   path="$(ls /nix/store | grep -i "$1" | fzf)"
+  echo "/nix/store/$path" | wl-copy
   yazi /nix/store/"$path"
 }
 

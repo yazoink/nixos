@@ -15,6 +15,7 @@ My NixOS desktop configs with home-manager and Hyprland, featuring the [caroline
 
 # Features
 - Consistent theming across GTK/Qt and pretty much everything else
+- Ability to easily toggle between desktop colorschemes in config
 - Declarative Etterna package/installation
 - [Wrapper script](https://github.com/yazoink/nixos/blob/main/modules/home-manager/features/shell-config/scripts/rebuild/rebuild) for rebuilding the system that notifies you when it's done
 - [Wrapper script](https://github.com/yazoink/nixos/blob/main/modules/home-manager/features/shell-config/scripts/clean/clean) for cleaning the system that notifies you when it's done
