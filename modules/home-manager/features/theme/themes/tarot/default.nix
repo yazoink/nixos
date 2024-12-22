@@ -3,14 +3,14 @@
 {
   config = lib.mkIf (osConfig.myOptions.desktopTheme.enable && osConfig.myOptions.desktopTheme.name == "tarot") {
     gtk = {
-      iconTheme.name = "caroline-suru-aspromauros";
+      iconTheme.name = "Tarot-Icons";
     };
     xdg.configFile = {
       "Kvantum/kvantum.kvconfig".text = ''
         [General]
-        theme=caroline-kvantum
+        theme=tarot-kvantum
       '';
-    "Kvantum/caroline-kvantum".source = ./caroline-kvantum;
+    "Kvantum/tarot-kvantum".source = ./tarot-kvantum;
     };
   };
 }

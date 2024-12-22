@@ -1,11 +1,11 @@
 {pkgs, ...}:
 pkgs.stdenv.mkDerivation {
-  name = "caroline-icons";
+  name = "tarot-icons";
 
   src = pkgs.fetchFromGitHub {
     owner = "yazoink";
-    repo = "caroline-icons";
-    rev = "4665fe1a26d1fdc333e223d66aa99b7ad7164aac";
+    repo = "tarot-icons";
+    rev = "main";
     sha256 = "sha256-RzhihJwyA0dq/RJtWizLTyaNenXzEaAeOlTD66gvDFI=";
   };
 
@@ -13,6 +13,6 @@ pkgs.stdenv.mkDerivation {
 
   installPhase = ''
     mkdir -p $out/share/icons
-    cp -r $src/caroline-suru-aspromauros $out/share/icons
+    cp -r $src/Tarot-Icons $out/share/icons
   '';
 }
