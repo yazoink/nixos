@@ -16,7 +16,7 @@ stdenv.mkDerivation {
     FontSize=${toString config.stylix.fonts.sizes.applications}
     Padding=50
     Radius=10
-    Scale=1.3
+    Scale=${toString config.myOptions.desktopTheme.sddm.scale}
     UserPictureEnabled=false
     InputColor="#${base01}"
     InputTextColor="#${base05}"

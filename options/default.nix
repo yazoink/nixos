@@ -17,7 +17,7 @@
         name = lib.mkOption {
           type = lib.types.str;
           default = "caroline";
-          description = "options: caroline";
+          description = "options: caroline, carob";
         };
         wallpaper = lib.mkOption {
           type = lib.types.path;
