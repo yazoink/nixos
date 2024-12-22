@@ -6,7 +6,7 @@ pkgs.stdenv.mkDerivation {
     owner = "yazoink";
     repo = "tarot-icons";
     rev = "main";
-    sha256 = "sha256-RzhihJwyA0dq/RJtWizLTyaNenXzEaAeOlTD66gvDFI=";
+    sha256 = "sha256-Rz36eFSH++OFkw7v3TjOwNI44foIdoAVILAWrr4szHQ=";
   };
 
   dontUnpack = true;
