@@ -9,16 +9,10 @@ in
         type = lib.types.bool;
         default = false;
       };
-      name = lib.mkOption {
-        type = lib.types.string;
-      };
-      package = lib.mkOption {
-        type = lib.types.package;
-      };
     };
   };
-  config = lib.mkIf config.bundles.desktopTheme.customTerminalFont.enable {
-    desktopTheme.customTerminalFont = {
+  config = lib.mkIf config.desktopTheme.customTerminalFont.enable {
+    stylix.fonts.monospace = {
       name = "Bm437 NEC APC3 8x16";
       package = customTerminalFont;
     };

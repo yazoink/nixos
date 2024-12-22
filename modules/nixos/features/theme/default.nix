@@ -41,8 +41,6 @@
           #name = "Gohufont";
           #package = pkgs.terminus_font;
           #name = "Terminus";
-          name = config.desktopTheme.customTerminalFont.name;
-          package = config.desktopTheme.customTerminalFont.package;
         };
       };
       image = config.myOptions.desktopTheme.wallpaper;
