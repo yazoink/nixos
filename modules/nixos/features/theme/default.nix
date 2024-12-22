@@ -1,6 +1,6 @@
 {pkgs, config, lib, ...}:
 let
-  themeName = config.desktopTheme.name;
+  themeName = config.myOptions.desktopTheme.name;
 in
 {
   options = {
