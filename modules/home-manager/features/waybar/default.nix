@@ -121,7 +121,7 @@
           };
         };
       };
-      style = with config.stylix.base16Scheme; ''
+      style = with config.stylix.base16Scheme; builtins.trace "set accent color in waybar" ''
         * {
           font-family: "${config.stylix.fonts.sansSerif.name}", "Font Awesome 6 Free";
           font-weight: bold;
