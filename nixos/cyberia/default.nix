@@ -17,7 +17,7 @@
     userAccount.username = "gene";
     desktopTheme = {
       name = "tarot";
-      wallpaper = ./wallpapers/tarot-flowers.png;
+      wallpaper = ./wallpapers/tarot-flowers.jpg;
       sddm = {
         scale = 1.3;
         wallpaper = ./wallpapers/tarot-waves.png;
