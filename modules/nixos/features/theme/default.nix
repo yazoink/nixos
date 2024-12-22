@@ -14,9 +14,9 @@ in
     ./terminal-fonts
   ];
   config = lib.mkIf config.myOptions.desktopTheme.enable {
-    desktopTheme.base16Accent = if (themeName == "caroline") then "base0F" else 
+    /*desktopTheme.base16Accent = if (themeName == "caroline") then "base0F" else 
       (if (themeName == "carob") then "base0D" else 
-      (if (themeName == "tarot") then "base09" else "base0D"));
+      (if (themeName == "tarot") then "base09" else "base0D"));*/
     desktopTheme.customTerminalFont.enable = true;
 
     environment.systemPackages = with pkgs; [
