@@ -27,7 +27,6 @@ in
       ".mozilla/firefox/${osConfig.myOptions.userAccount.username}/chrome/ShyFox/shy-navbar.css".source = ./chrome/ShyFox/shy-navbar.css;
       ".mozilla/firefox/${osConfig.myOptions.userAccount.username}/chrome/ShyFox/shy-sidebar.css".source = ./chrome/ShyFox/shy-sidebar.css;
       ".mozilla/firefox/${osConfig.myOptions.userAccount.username}/chrome/ShyFox/shy-toolbar.css".source = ./chrome/ShyFox/shy-toolbar.css;
-      ".mozilla/firefox/${osConfig.myOptions.userAccount.username}/chrome/ShyFox/shy-toolbar.css".source = ./chrome/ShyFox/shy-toolbar.css;
       ".mozilla/firefox/${osConfig.myOptions.userAccount.username}/chrome/ShyFox/shy-variables.css".source = shyVars;
     };
     programs.firefox.profiles."${osConfig.myOptions.userAccount.username}".settings = {
