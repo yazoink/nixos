@@ -16,15 +16,15 @@
   myOptions = {
     userAccount.username = "gene";
     desktopTheme = {
-      name = "tarot";
-      wallpaper = ./wallpapers/tarot-flowers.jpg;
+      name = "caroline";
+      wallpaper = ./wallpapers/caroline-flowers.png;
       sddm = {
         scale = 1.3;
-        wallpaper = ./wallpapers/tarot-waves.png;
+        wallpaper = ./wallpapers/caroline-waves.png;
       };
       firefoxCss.shyfox = {
         enable = true;
-        wallpaper = ./wallpapers/tarot-waves.png;
+        wallpaper = ./wallpapers/caroline-waves.png;
       };
     };
     bundles = {
