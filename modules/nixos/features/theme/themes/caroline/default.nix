@@ -36,24 +36,6 @@ in
         base0F = "B04F41";
       };*/
       base16Scheme = {
-        base00 = "292A2A";
-        base01 = "403E38";
-        base02 = "575347";
-        base03 = "6E6755";
-        base04 = "9C9071";
-        base05 = "CAB98E";
-        base06 = "CAB98E";
-        base07 = "CAB98E";
-        base08 = "C24B47";
-        base09 = "A64D3D";
-        base0A = "9A8351";
-        base0B = "658254";
-        base0C = "876250";
-        base0D = "424977";
-        base0E = "34748D";
-        base0F = "7A5646";
-      };
-      /*base16Scheme = {
         base00 = "1c1213";
         base01 = "3a2425";
         base02 = "563837";
@@ -70,7 +52,7 @@ in
         base0D = "684c59";
         base0E = "a63650";
         base0F = "893f45";
-      };*/
+      };
     };
   };
 }

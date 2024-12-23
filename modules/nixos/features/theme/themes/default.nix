@@ -1,7 +1,8 @@
 {
   imports = [
-    ./caroline
     ./carob
+    ./caroline
+    ./manuscript
     ./rosepine
     ./tarot
   ];

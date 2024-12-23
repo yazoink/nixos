@@ -16,15 +16,19 @@
   myOptions = {
     userAccount.username = "gene";
     desktopTheme = {
-      name = "caroline";
-      wallpaper = ./wallpapers/caroline-flowers.png;
+      #name = "caroline";
+      name = "manuscript";
+      #wallpaper = ./wallpapers/caroline-flowers.png;
+      wallpaper = ./wallpapers/leaves-manuscript.jpg;
       sddm = {
         scale = 1.3;
-        wallpaper = ./wallpapers/caroline-waves.png;
+        #wallpaper = ./wallpapers/caroline-waves.png;
+        wallpaper = ./wallpapers/leaves-manuscript.jpg;
       };
       firefoxCss.shyfox = {
         enable = true;
-        wallpaper = ./wallpapers/caroline-waves.png;
+        #wallpaper = ./wallpapers/caroline-waves.png;
+        wallpaper = ./wallpapers/leaves-manuscript.jpg;
       };
     };
     bundles = {
