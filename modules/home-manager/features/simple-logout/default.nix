@@ -2,7 +2,7 @@
 let
   script = ./script.sh;
   simpleLogout = pkgs.callPackage ./simple-logout.nix {};
-  replacecolor = pkgs.callPackage ./replacecolor.nix.nix {};
+  replacecolor = pkgs.callPackage ./replacecolor.nix {};
   styleCss = config.lib.stylix.colors {
     template = ./config/style.css.mustache;
     extension = ".css";
