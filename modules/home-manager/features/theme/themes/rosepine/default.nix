@@ -8,9 +8,9 @@
     xdg.configFile = {
       "Kvantum/kvantum.kvconfig".text = ''
         [General]
-        theme=rosepine-kvantum
+        theme=KvRosePineMoon
       '';
-    "Kvantum/rosepine-kvantum".source = ./rosepine-kvantum;
+    "Kvantum/KvRosePineMoon".source = ./KvRosePineMoon;
     };
   };
 }

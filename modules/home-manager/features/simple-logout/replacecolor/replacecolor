@@ -1,0 +1,33 @@
+#!/usr/bin/env python3
+
+from PIL import Image
+import numpy as np
+import sys
+from os import path
+
+def main():
+    if len(sys.argv) != 5:
+        print("usage: ./replacecolor <image> <#originalcolor> <#newcolor> <output>")
+        sys.exit(1)
+
+    if path.exists(sys.argv[1]) == False:
+        print(f"Error: file '{sys.argv[1]}' not found")
+        sys.exit(1)
+
+    img = Image.open(sys.argv[1])
+    data = np.array(img)
+    original_rgb = hex_to_rgb(sys.argv[2])
+    new_rgb = hex_to_rgb(sys.argv[3])
+
+    red, green, blue = data[:,:,0], data[:,:,1], data[:,:,2]
+    mask = (red == original_rgb[0]) & (green == original_rgb[1]) & (blue == original_rgb[2])
+    data[:,:,:3][mask] = [new_rgb[0], new_rgb[1], new_rgb[2]]
+
+    img = Image.fromarray(data)
+    img.save(sys.argv[4])
+
+def hex_to_rgb(hex):
+    hex = hex.lstrip("#")
+    return tuple(int(hex[i:i+2], 16) for i in (0, 2, 4))
+
+main()

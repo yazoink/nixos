@@ -8,9 +8,9 @@
     xdg.configFile = {
       "Kvantum/kvantum.kvconfig".text = ''
         [General]
-        theme=tarot-kvantum
+        theme=KvTarot
       '';
-    "Kvantum/tarot-kvantum".source = ./tarot-kvantum;
+    "Kvantum/KvTarot".source = ./KvTarot;
     };
   };
 }
