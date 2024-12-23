@@ -11,6 +11,12 @@ in
   config = lib.mkIf osConfig.myOptions.desktopTheme.enable {
     stylix = {
       targets = {
+        iconTheme = {
+          enable = true;
+          dark = "Papirus-Dark";
+          light = "Papirus";
+          package = pkgs.papirus-icon-theme.override {color = "adwaita";};
+        };
         waybar.enable = false;
         gtk.extraCss = with config.stylix.base16Scheme; ''
           @define-color headerbar_bg_color #${base00};
@@ -53,18 +59,14 @@ in
       file = {
         ".config/qt5ct/qt5ct.conf".text = ''
           [Appearance]
-          #custom_palette=false
-          #style=kvantum-dark
+          custom_palette=false
+          style=kvantum-dark
           icon_theme=${config.gtk.iconTheme.name}
           standard_dialogs=default
-          style=Breeze
-          standard_dialogs=kde
-          custom_palette=true
-          color_scheme_path=/home/gene/.config/qt5ct/colors/oomox-current.conf
 
-          #[Fonts]
-          #fixed="${config.stylix.fonts.monospace.name},${toString config.stylix.fonts.sizes.applications},-1,5,5,50,0,0,0,0,Regular"
-          #general="${config.stylix.fonts.sansSerif.name},${toString config.stylix.fonts.sizes.applications},-1,5,50,0,0,0,0,0,Regular"
+          [Fonts]
+          fixed="${config.stylix.fonts.monospace.name},${toString config.stylix.fonts.sizes.applications},-1,5,5,50,0,0,0,0,Regular"
+          general="${config.stylix.fonts.sansSerif.name},${toString config.stylix.fonts.sizes.applications},-1,5,50,0,0,0,0,0,Regular"
 
           [Interface]
           activate_item_on_single_click=1
@@ -88,18 +90,6 @@ in
           force_raster_widgets=1
           ignored_applications=@Invalid()
         '';
-        ".config/qt5ct/colors/oomox-current.conf".source = config.lib.stylix.colors {
-          template = builtins.readFile ./dotfiles/oomox-current.conf.mustache;
-          extension = ".conf";
-        };
-        ".config/Trolltech.conf".source = config.lib.stylix.colors {
-          template = builtins.readFile ./dotfiles/Trolltech.conf.mustache;
-          extension = ".conf";
-        };
-        ".config/kdeglobals".source = config.lib.stylix.colors {
-          template = builtins.readFile ./dotfiles/Trolltech.conf.mustache;
-          extension = "";
-        };
       };
 
       sessionVariables = {
@@ -134,10 +124,8 @@ in
     qt = {
       enable = true;
       platformTheme.name = "qtct";
-      style.name = "breeze-dark";
-      #platformTheme.name = "qtct";
-      #style.name = "adwaita-dark";
-      style.package = pkgs.libsForQt5.breeze-qt5;
+      #style.name = "breeze-dark";
+      style.name = "kvantum-dark";
     };
   };
 }
