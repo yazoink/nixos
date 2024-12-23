@@ -124,8 +124,7 @@ in
     qt = {
       enable = true;
       platformTheme.name = "qtct";
-      #style.name = "breeze-dark";
-      style.name = "kvantum-dark";
+      style.name = "kvantum";
     };
   };
 }
