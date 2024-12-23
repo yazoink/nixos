@@ -1,6 +1,6 @@
 {pkgs, config, lib, ...}:
 let
-  manuscriptTheme = pkgs.callPackage ./manuscript-cursors.nix {};
+  manuscriptTheme = pkgs.callPackage ./manuscript-theme.nix {};
 in
 {
   config = lib.mkIf (config.myOptions.desktopTheme.enable && config.myOptions.desktopTheme.name == "manuscript") {
