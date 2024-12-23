@@ -15,11 +15,7 @@
       terminal = "${pkgs.foot}/bin/foot";
     };
 
-    home.file.".config/rofi/image.png".source = 
-      if (osConfig.myOptions.desktopTheme.name == "caroline") then ./images/image-caroline.png else
-        (if (osConfig.myOptions.desktopTheme.name == "carob") then ./images/image-carob.png else
-          (if (osConfig.myOptions.desktopTheme.name == "tarot") then ./images/image-tarot.png else 
-            (if (osConfig.myOptions.desktopTheme.name == "rosepine") then ./images/image-rosepine.png else osConfig.myOptions.desktopTheme.wallpaper)));
+    home.file.".config/rofi/image.png".source =  ./images/image-${osConfig.myOptions.desktopTheme.name}.png;
     xdg.configFile."rofi/config.rasi".text = lib.mkForce ''
       configuration {
         location: 0;
