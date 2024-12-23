@@ -17,6 +17,24 @@ in
         name = "caroline-bibata-modern";
       };
       base16Scheme = {
+        base00 = "#00132D";
+        base01 = "#00204D";
+        base02 = "#003580";
+        base03 = "#004AB3";
+        base04 = "#4D94FF";
+        base05 = "#80B3FF";
+        base06 = "#b3d2ff";
+        base07 = "#E6F0FF";
+        base08 = "#8F1E22";
+        base09 = "#B2301B";
+        base0A = "#DFB859";
+        base0B = "#505745";
+        base0C = "#BC90AC";
+        base0D = "#543566";
+        base0E = "#4451AA";
+        base0F = "#65503B";
+      };
+      /*base16Scheme = {
         base00 = "1c1213";
         base01 = "3a2425";
         base02 = "563837";
@@ -33,7 +51,7 @@ in
         base0D = "684c59";
         base0E = "a63650";
         base0F = "893f45";
-      };
+      };*/
     };
   };
 }
