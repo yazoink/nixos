@@ -1,13 +1,11 @@
 {pkgs, config, lib, ...}:
 let
-  manuscriptCursors = pkgs.callPackage ./manuscript-cursors.nix {};
-  carolineIcons = pkgs.callPackage ./caroline-icons.nix {};
+  manuscriptTheme = pkgs.callPackage ./manuscript-cursors.nix {};
 in
 {
   config = lib.mkIf (config.myOptions.desktopTheme.enable && config.myOptions.desktopTheme.name == "manuscript") {
     environment.systemPackages = [
-      manuscriptCursors
-      carolineIcons
+      manuscriptTheme
     ];
 
     desktopTheme.base16Accent = "base0A";

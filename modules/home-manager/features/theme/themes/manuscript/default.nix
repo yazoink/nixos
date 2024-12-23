@@ -3,7 +3,7 @@
 {
   config = lib.mkIf (osConfig.myOptions.desktopTheme.enable && osConfig.myOptions.desktopTheme.name == "manuscript") {
     gtk = {
-      iconTheme.name = "caroline-suru-aspromauros";
+      iconTheme.name = "Manuscript-Icons";
     };
     xdg.configFile = {
       "Kvantum/kvantum.kvconfig".text = ''
