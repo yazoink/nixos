@@ -16,6 +16,7 @@ in
       cursor = {
         name = "caroline-bibata-modern";
       };
+      /* http://dotshare.it/dots/1416/
       base16Scheme = {
         base00 = "0E181A";
         base01 = "192225";
@@ -33,8 +34,8 @@ in
         base0D = "6D826F";
         base0E = "CA8D67";
         base0F = "B04F41";
-      };
-      /*base16Scheme = {
+      };*/
+      base16Scheme = {
         base00 = "1c1213";
         base01 = "3a2425";
         base02 = "563837";
@@ -51,7 +52,7 @@ in
         base0D = "684c59";
         base0E = "a63650";
         base0F = "893f45";
-      };*/
+      };
     };
   };
 }
