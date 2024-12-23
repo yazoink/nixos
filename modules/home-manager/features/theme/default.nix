@@ -118,11 +118,11 @@ in
 
     qt = {
       enable = true;
-      platformTheme.name = "qtct";
-      style.name = "kvantum";
-      #platformTheme.name = "gtk";
-      #style.name = "adwaita-dark";
-      #style.package = pkgs.adwaita-qt;
+      #platformTheme.name = "qtct";
+      #style.name = "kvantum";
+      platformTheme.name = "gtk";
+      style.name = "adwaita-dark";
+      style.package = pkgs.adwaita-qt;
     };
   };
 }
