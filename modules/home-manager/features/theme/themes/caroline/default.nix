@@ -8,9 +8,9 @@
     xdg.configFile = {
       "Kvantum/kvantum.kvconfig".text = ''
         [General]
-        theme=KvLibadwaita
+        theme=caroline-kvantum
       '';
-    "Kvantum/KvLibadwaita".source = ./KvLibadwaita;
+    "Kvantum/caroline-kvantum".source = ./caroline-kvantum;
     };
   };
 }
