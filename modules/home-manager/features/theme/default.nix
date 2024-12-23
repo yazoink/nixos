@@ -118,8 +118,8 @@ in
 
     qt = {
       enable = true;
-      platformTheme.name = "gtk3";
-      #style.name = "kvantum";
+      #platformTheme.name = "gtk3";
+      style.name = "kvantum-dark";
       #platformTheme.name = "qtct";
       #style.name = "adwaita-dark";
       #style.package = pkgs.adwaita-qt;
