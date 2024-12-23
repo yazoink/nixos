@@ -5,12 +5,12 @@
     gtk = {
       iconTheme.name = "caroline-suru-aspromauros";
     };
-    xdg.configFile = {
+    /*xdg.configFile = {
       "Kvantum/kvantum.kvconfig".text = ''
         [General]
         theme=caroline-kvantum
       '';
     "Kvantum/caroline-kvantum".source = ./caroline-kvantum;
-    };
+    };*/
   };
 }
