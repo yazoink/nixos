@@ -50,18 +50,21 @@ in
     };
 
     home = {
-      /*file = {
+      file = {
         ".config/qt5ct/qt5ct.conf".text = ''
           [Appearance]
-          color_scheme_path=/home/gene/.config/qt5ct/colors/test.conf
-          custom_palette=false
+          #custom_palette=false
+          #style=kvantum-dark
           icon_theme=${config.gtk.iconTheme.name}
           standard_dialogs=default
-          style=kvantum-dark
+          style=Breeze
+          standard_dialogs=kde
+          custom_palette=true
+          color_scheme_path=/home/gene/.config/qt5ct/colors/oomox-current.conf
 
-          [Fonts]
-          fixed="${config.stylix.fonts.monospace.name},${toString config.stylix.fonts.sizes.applications},-1,5,5,50,0,0,0,0,Regular"
-          general="${config.stylix.fonts.sansSerif.name},${toString config.stylix.fonts.sizes.applications},-1,5,50,0,0,0,0,0,Regular"
+          #[Fonts]
+          #fixed="${config.stylix.fonts.monospace.name},${toString config.stylix.fonts.sizes.applications},-1,5,5,50,0,0,0,0,Regular"
+          #general="${config.stylix.fonts.sansSerif.name},${toString config.stylix.fonts.sizes.applications},-1,5,50,0,0,0,0,0,Regular"
 
           [Interface]
           activate_item_on_single_click=1
@@ -85,7 +88,19 @@ in
           force_raster_widgets=1
           ignored_applications=@Invalid()
         '';
-      };*/
+        ".config/qt5ct/colors/oomox-current.conf".source = config.lib.stylix.colors {
+          template = builtins.readFile ./dotfiles/oomox-current.conf.mustache;
+          extension = ".conf";
+        };
+        ".config/Trolltech.conf".source = config.lib.stylix.colors {
+          template = builtins.readFile ./dotfiles/Trolltech.conf.mustache;
+          extension = ".conf";
+        };
+        ".config/kdeglobals".source = config.lib.stylix.colors {
+          template = builtins.readFile ./dotfiles/Trolltech.conf.mustache;
+          extension = "";
+        };
+      };
 
       sessionVariables = {
         FREETYPE_PROPERTIES = "cff:no-stem-darkening=0 autofitter:no-stem-darkening=0"; # make gtk font rendering match qt
@@ -118,11 +133,11 @@ in
 
     qt = {
       enable = true;
-      #platformTheme.name = "gtk3";
-      style.name = "kvantum-dark";
+      platformTheme.name = "qtct";
+      style.name = "breeze-dark";
       #platformTheme.name = "qtct";
       #style.name = "adwaita-dark";
-      #style.package = pkgs.adwaita-qt;
+      style.package = pkgs.libsForQt5.breeze-qt5;
     };
   };
 }
