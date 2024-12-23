@@ -84,8 +84,8 @@ in
           [Troubleshooting]
           force_raster_widgets=1
           ignored_applications=@Invalid()
-        '';*/
-      };
+        '';
+      };*/
 
       sessionVariables = {
         FREETYPE_PROPERTIES = "cff:no-stem-darkening=0 autofitter:no-stem-darkening=0"; # make gtk font rendering match qt
