@@ -10,13 +10,13 @@ in
   imports = [./themes];
   config = lib.mkIf osConfig.myOptions.desktopTheme.enable {
     stylix = {
+      iconTheme = {
+        enable = true;
+        dark = "Papirus-Dark";
+        light = "Papirus";
+        package = pkgs.papirus-icon-theme.override {color = "adwaita";};
+      };
       targets = {
-        iconTheme = {
-          enable = true;
-          dark = "Papirus-Dark";
-          light = "Papirus";
-          package = pkgs.papirus-icon-theme.override {color = "adwaita";};
-        };
         waybar.enable = false;
         gtk.extraCss = with config.stylix.base16Scheme; ''
           @define-color headerbar_bg_color #${base00};
