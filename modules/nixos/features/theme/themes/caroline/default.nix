@@ -21,17 +21,17 @@ in
         base01 = "00204D";
         base02 = "003580";
         base03 = "004AB3";
-        base04 = "4D94FF";
-        base05 = "80B3FF";
-        base06 = "b3d2ff";
-        base07 = "E6F0FF";
+        base04 = "A97094";
+        base05 = "BC90AC";
+        base06 = "CFAFC4";
+        base07 = "E2CFDB";
         base08 = "8F1E22";
         base09 = "B2301B";
         base0A = "DFB859";
         base0B = "505745";
-        base0C = "BC90AC";
+        base0C = "4451AA";
         base0D = "543566";
-        base0E = "4451AA";
+        base0E = "8B84D1";
         base0F = "65503B";
       };
       /*base16Scheme = {
