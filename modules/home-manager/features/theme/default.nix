@@ -10,12 +10,12 @@ in
   imports = [./themes];
   config = lib.mkIf osConfig.myOptions.desktopTheme.enable {
     stylix = {
-      iconTheme = {
+      /*iconTheme = {
         enable = true;
         dark = "Papirus-Dark";
         light = "Papirus";
         package = pkgs.papirus-icon-theme.override {color = "adwaita";};
-      };
+      };*/
       targets = {
         waybar.enable = false;
         gtk.extraCss = with config.stylix.base16Scheme; ''

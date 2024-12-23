@@ -3,14 +3,14 @@
 {
   config = lib.mkIf (osConfig.myOptions.desktopTheme.enable && osConfig.myOptions.desktopTheme.name == "caroline") {
     gtk = {
-      #iconTheme.name = "caroline-suru-aspromauros";
+      iconTheme.name = "caroline-suru-aspromauros";
     };
     xdg.configFile = {
       "Kvantum/kvantum.kvconfig".text = ''
         [General]
-        theme=caroline-kvantum
+        theme=KvLibadwaita
       '';
-    "Kvantum/caroline-kvantum".source = ./caroline-kvantum;
+    "Kvantum/KvLibadwaita".source = ./KvLibadwaita;
     };
   };
 }
