@@ -17,9 +17,7 @@ in
     home = {
       packages = [simpleLogout];
       file = {
-        ".config/simple-logout/icons".source = 
-          if (osConfig.myOptions.desktopTheme.name == "caroline") then ./config/icons/caroline
-          else (if (osConfig.myOptions.desktopTheme.name == "carob") then ./config/icons/carob else ./config/icons/tarot);
+        ".config/simple-logout/icons".source = ./config/icons/${osConfig.myOptions.desktopTheme.name};
         ".config/simple-logout/config.json".source = ./config/config.json;
         ".config/simple-logout/style.css".source = styleCss;
       };
