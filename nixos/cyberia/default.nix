@@ -19,16 +19,16 @@
       #name = "caroline";
       name = "manuscript";
       #wallpaper = ./wallpapers/caroline-flowers.png;
-      wallpaper = ./wallpapers/leaves-manuscript.jpg;
+      wallpaper = ./wallpapers/manuscript-trees.jpg;
       sddm = {
         scale = 1.3;
         #wallpaper = ./wallpapers/caroline-waves.png;
-        wallpaper = ./wallpapers/leaves-manuscript.jpg;
+        wallpaper = ./wallpapers/manuscript-trees.jpg;
       };
       firefoxCss.shyfox = {
         enable = true;
         #wallpaper = ./wallpapers/caroline-waves.png;
-        wallpaper = ./wallpapers/leaves-manuscript.jpg;
+        wallpaper = ./wallpapers/manuscript-trees.jpg;
       };
     };
     bundles = {
