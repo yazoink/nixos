@@ -48,9 +48,9 @@ in
         base09 = "A64D3D";
         base0A = "9A8351";
         base0B = "658254";
-        base0C = "424977";
-        base0D = "34748D";
-        base0E = "876250";
+        base0C = "876250";
+        base0D = "424977";
+        base0E = "34748D";
         base0F = "7A5646";
       };
       /*base16Scheme = {
