@@ -50,7 +50,7 @@ in
     };
 
     home = {
-      file = {
+      /*file = {
         ".config/qt5ct/qt5ct.conf".text = ''
           [Appearance]
           color_scheme_path=/home/gene/.config/qt5ct/colors/test.conf
@@ -84,7 +84,7 @@ in
           [Troubleshooting]
           force_raster_widgets=1
           ignored_applications=@Invalid()
-        '';
+        '';*/
       };
 
       sessionVariables = {
