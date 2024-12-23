@@ -18,13 +18,13 @@ in
       };
       base16Scheme = {
         base00 = "0E181A";
-        base01 = "1B2E32";
-        base02 = "2D4D53";
-        base03 = "3E6C74";
-        base04 = "CF8D7D";
+        base01 = "104242";
+        base02 = "20715E";
+        base03 = "54A16C";
+        base04 = "BF8B94";
         base05 = "D8A396";
-        base06 = "E3BEB5";
-        base07 = "E3BEB5";
+        base06 = "D8A396";
+        base07 = "D8A396";
         base08 = "494A3E";
         base09 = "666465";
         base0A = "B04F41";
