@@ -15,7 +15,7 @@ in
   config = lib.mkIf config.desktopTheme.customTerminalFont.enable {
     stylix.fonts.monospace = {
       #name = "Bm437 NEC APC3 8x16";
-      name = "JF Dot Shinome Gothic 12";
+      name = "JF Dot Shinonome Gothic 12";
       package = customTerminalFont;
     };
   };

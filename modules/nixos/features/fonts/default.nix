@@ -36,10 +36,10 @@
               <string>Jf Dot Kappa 20</string>
             </test>
             <test name="family" qual="any">
-              <string>Jf Dot Shinome Gothic 12</string>
+              <string>Jf Dot Shinonome Gothic 12</string>
             </test>
             <test name="family" qual="any">
-              <string>Jf Dot Shinome Gothic 16</string>
+              <string>Jf Dot Shinonome Gothic 16</string>
             </test>
             <test name="family" qual="any">
               <string>Jf Dot K12</string>
@@ -72,7 +72,7 @@
               <bool>false</bool>
             </edit>
             <edit name="lcdfilter" mode="assign">
-              <bool>lcddefault</bool>
+              <const>lcddefault</const>
             </edit>
           </match>
         '';
