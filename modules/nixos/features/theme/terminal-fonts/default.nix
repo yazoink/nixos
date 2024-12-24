@@ -1,7 +1,7 @@
 {config, lib, pkgs, ...}:
 let
   #customTerminalFont = pkgs.callPackage ./nec-apc-3 {};
-  customTerminalFont = pkgs.callPackage ./jf-dot {};
+  customTerminalFont = pkgs.callPackage ./castella {};
 in
 {
   options = {
@@ -15,7 +15,7 @@ in
   config = lib.mkIf config.desktopTheme.customTerminalFont.enable {
     stylix.fonts.monospace = {
       #name = "Bm437 NEC APC3 8x16";
-      name = "JF Dot M+H 12";
+      name = "castella";
       package = customTerminalFont;
     };
   };
