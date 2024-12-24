@@ -51,10 +51,22 @@
               <string>Jf Dot K14-2004</string>
             </test>
             <test name="family" qual="any">
+              <string>Jf Dot K12</string>
+            </test>
+            <test name="family" qual="any">
               <string>Jf Dot jiskan16-1990</string>
             </test>
             <test name="family" qual="any">
               <string>Jf Dot milkjf 16</string>
+            </test>
+            <test name="family" qual="any">
+              <string>Jf Dot Kanamecho 12</string>
+            </test>
+            <test name="family" qual="any">
+              <string>Jf Dot Shinonome Marumoji 12</string>
+            </test>
+            <test name="family" qual="any">
+              <string>Jf Dot Shinonome Mincho 12</string>
             </test>
             <test name="family" qual="any">
               <string>Cozette</string>
