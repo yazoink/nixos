@@ -9,9 +9,11 @@
   imports = [
     ./themes
     ./terminal-fonts
+    ./desktop-fonts
   ];
   config = lib.mkIf config.myOptions.desktopTheme.enable {
     desktopTheme.customTerminalFont.enable = true;
+    desktopTheme.customDesktopFont.enable = true;
 
     environment.systemPackages = with pkgs; [
       libsForQt5.qtquickcontrols2
@@ -38,15 +40,15 @@
           package = pkgs.gyre-fonts;
           name = "DejaVu Math TeX Gyre";
         };
-        sansSerif = {
+        sansSerif = lib.mkIf config.desktopTheme.customDesktopFont.enable == false {
           package = pkgs.rubik;
           name = "Rubik";
         };
-        monospace = {
+        monospace = lib.mkIf config.desktopTheme.customTerminalFont.enable == false {
           #package = pkgs.gohufont;
           #name = "Gohufont";
-          #package = pkgs.terminus_font;
-          #name = "Terminus";
+          package = pkgs.terminus_font;
+          name = "Terminus";
         };
       };
       image = config.myOptions.desktopTheme.wallpaper;
