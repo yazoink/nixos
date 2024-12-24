@@ -12,7 +12,7 @@
     ./desktop-fonts
   ];
   config = lib.mkIf config.myOptions.desktopTheme.enable {
-    desktopTheme.customTerminalFont.enable = false;
+    desktopTheme.customTerminalFont.enable = true;
     desktopTheme.customDesktopFont.enable = true;
 
     environment.systemPackages = with pkgs; [
@@ -47,10 +47,8 @@
         monospace = lib.mkIf (config.desktopTheme.customTerminalFont.enable == false) {
           #package = pkgs.gohufont;
           #name = "Gohufont";
-          #package = pkgs.terminus_font;
-          #name = "Terminus";
-          package = pkgs.cozette;
-          name = "Cozette";
+          package = pkgs.terminus_font;
+          name = "Terminus";
         };
       };
       image = config.myOptions.desktopTheme.wallpaper;

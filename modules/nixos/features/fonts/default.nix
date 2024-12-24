@@ -36,6 +36,27 @@
               <string>Jf Dot Kappa 20</string>
             </test>
             <test name="family" qual="any">
+              <string>Jf Dot Shinome Gothic 12</string>
+            </test>
+            <test name="family" qual="any">
+              <string>Jf Dot Shinome Gothic 16</string>
+            </test>
+            <test name="family" qual="any">
+              <string>Jf Dot K12</string>
+            </test>
+            <test name="family" qual="any">
+              <string>Jf Dot M+H 12</string>
+            </test>
+            <test name="family" qual="any">
+              <string>Jf Dot K14-2004</string>
+            </test>
+            <test name="family" qual="any">
+              <string>Jf Dot jiskan16-1990</string>
+            </test>
+            <test name="family" qual="any">
+              <string>Jf Dot milkjf 16</string>
+            </test>
+            <test name="family" qual="any">
               <string>Cozette</string>
             </test>
             <test name="family" qual="any">
