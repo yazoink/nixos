@@ -12,6 +12,9 @@ My NixOS desktop configs with home-manager and Hyprland.
 - Terminal: Foot
 - Editor: Neovim
 - Browser: Firefox
+- File manager: Thunar/Yazi
+- Notifications: Mako
+- Display manager: SDDM
 
 ## Features
 - Consistent theming across GTK/Qt and pretty much everything else
