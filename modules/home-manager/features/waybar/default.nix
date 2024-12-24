@@ -97,8 +97,8 @@
           idle_inhibitor = {
             format = "{icon}";
             format-icons = {
-              activated = "<span font='Material Symbols Outlined' size='large'>visibility</span>";
-              deactivated = "<span font='Material Symbols Outlined' size='large'>visibility_off</span>";
+              activated = "<span class='icon'>visibility</span>";
+              deactivated = "<span class='icon'>visibility_off</span>";
             };
           };
           "custom/notification" = {
@@ -124,11 +124,16 @@
       };
       style = with config.stylix.base16Scheme; builtins.trace "set accent color in waybar" ''
         * {
-          font-family: "${config.stylix.fonts.sansSerif.name}", "Material Symbols Outlined","Font Awesome 6 Free";
+          font-family: "${config.stylix.fonts.sansSerif.name}", "Font Awesome 6 Free";
           font-weight: bold;
           font-size: 15px;
           padding: 0px;
           margin: 0px;
+        }
+
+        .icon {
+          font-family: Material Symbols Outlined;
+          font-size: 17px;
         }
 
         #workspaces button {

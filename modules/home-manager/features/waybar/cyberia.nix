@@ -20,11 +20,16 @@
             ];
           };
           "wireplumber" = {
-            format = "<span font='Material Symbols Outlined' size='large'>volume_up</span> {volume}%";
-            format-muted = "<span font='Material Symbols Outlined' size='large'>volume_mute</span> {volume}%";
+            format = "<span class='icon'>{icon}</span> {volume}%";
+            format-muted = "<span class='icon'>volume_off</span> {volume}%";
             max-volume = 100;
             scroll-step = 5;
             on-click = "pavucontrol";
+            format-icons = [
+              "volume_up"
+              "volume_down"
+              "volume_mute"
+            ];
           };
           "battery" = {
             bat = "BAT0";
