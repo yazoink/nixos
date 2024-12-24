@@ -66,7 +66,7 @@ in
         base08 = "C46169";
         base09 = "984343";
         base0A = "81675C";
-        base0B = "6B777B";
+        base0B = "948E80";
         base0C = "6A6C7F";
         base0D = "835669";
         base0E = "AB6379";
