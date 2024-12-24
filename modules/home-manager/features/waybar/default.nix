@@ -97,8 +97,8 @@
           idle_inhibitor = {
             format = "{icon}";
             format-icons = {
-              activated = "<span font='Material Symbols Outlined'>visibility</span>";
-              deactivated = "<span font='Material Symbols Outlined'>visibility_off</span>";
+              activated = "<span font='Material Symbols Outlined' size='large'>visibility</span>";
+              deactivated = "<span font='Material Symbols Outlined' size='large'>visibility_off</span>";
             };
           };
           "custom/notification" = {
