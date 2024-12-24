@@ -93,7 +93,7 @@ in
       };
 
       sessionVariables = {
-        FREETYPE_PROPERTIES = "cff:no-stem-darkening=0 autofitter:no-stem-darkening=0"; # make gtk font rendering match qt
+        #FREETYPE_PROPERTIES = "cff:no-stem-darkening=0 autofitter:no-stem-darkening=0"; # make gtk font rendering match qt
         GTK_CSD = 0;
       };
 

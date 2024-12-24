@@ -47,7 +47,7 @@ in
           "autoUpdateNotification": true,
           "useQuickCss": true,
           "themeLinks": [],
-          "enabledThemes": ["my.theme.css"],
+          "enabledThemes": ["my.theme.css", "font.css"],
           "enableReactDevTools": true,
           "frameless": false,
           "transparent": false,
