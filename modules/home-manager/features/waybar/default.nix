@@ -48,8 +48,9 @@
             format = "{index}";
           };
           "clock" = {
-            format = "<span font='Material Symbols Outlined'>schedule</span> {:%I:%M %p %d %b %Y}";
+            format = "{:%I:%M %p %d %b %Y}";
             tooltip = false;
+            on-click = "gnome-clocks";
           };
           "memory" = {
             interval = 30;
@@ -96,8 +97,8 @@
           idle_inhibitor = {
             format = "{icon}";
             format-icons = {
-              activated = " ";
-              deactivated = " ";
+              activated = "<span font='Material Symbols Outlined'>visibility</span>";
+              deactivated = "<span font='Material Symbols Outlined'>visibility_off</span>";
             };
           };
           "custom/notification" = {
