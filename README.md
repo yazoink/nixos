@@ -13,7 +13,7 @@ My NixOS desktop configs with home-manager and Hyprland.
 - Editor: Neovim
 - Browser: Firefox
 
-# Features
+## Features
 - Consistent theming across GTK/Qt and pretty much everything else
 - Ability to easily toggle between desktop colorschemes in config
 - Customized Firefox with [Betterfox](https://github.com/yokoffing/BetterFox) and [Shyfox](https://github.com/Naezr/ShyFox)
