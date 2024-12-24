@@ -5,5 +5,6 @@
     ./manuscript
     ./rosepine
     ./tarot
+    ./wizard
   ];
 }

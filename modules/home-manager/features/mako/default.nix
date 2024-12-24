@@ -28,7 +28,7 @@
       margin = "5";
       borderSize = 2;
       defaultTimeout = 5000;
-      #iconPath = "/run/current-system/sw/share/icons/${config.gtk.iconTheme.name}";
+      iconPath = "/run/current-system/sw/share/icons/${config.gtk.iconTheme.name}";
       /*extraConfig = ''
         on-notify=exec aplay $HOME/.config/mako/sounds/default.wav
       '';*/
