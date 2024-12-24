@@ -48,7 +48,7 @@
             format = "{index}";
           };
           "clock" = {
-            format = "{:%I:%M %p %d %b %Y}";
+            format = "<span font='Material Symbols Outlined' size='large'></span> {:%I:%M %p %d %b %Y}";
             tooltip = false;
           };
           "memory" = {
@@ -123,7 +123,7 @@
       };
       style = with config.stylix.base16Scheme; builtins.trace "set accent color in waybar" ''
         * {
-          font-family: "${config.stylix.fonts.sansSerif.name}", "Font Awesome 6 Free";
+          font-family: "${config.stylix.fonts.sansSerif.name}", "Material Symbols Outlined","Font Awesome 6 Free";
           font-weight: bold;
           font-size: 15px;
           padding: 0px;
