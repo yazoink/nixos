@@ -97,8 +97,8 @@
           idle_inhibitor = {
             format = "{icon}";
             format-icons = {
-              activated = "<span class='icon'>visibility</span>";
-              deactivated = "<span class='icon'>visibility_off</span>";
+              activated = " ";
+              deactivated = " ";
             };
           };
           "custom/notification" = {
@@ -129,11 +129,6 @@
           font-size: 15px;
           padding: 0px;
           margin: 0px;
-        }
-
-        .icon {
-          font-family: Material Symbols Outlined;
-          font-size: 17px;
         }
 
         #workspaces button {

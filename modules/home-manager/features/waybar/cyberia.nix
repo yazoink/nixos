@@ -20,15 +20,15 @@
             ];
           };
           "wireplumber" = {
-            format = "<span class='icon'>{icon}</span> {volume}%";
-            format-muted = "<span class='icon'>volume_off</span> {volume}%";
+            format = "{icon} {volume}%";
+            format-muted = " {volume}%";
             max-volume = 100;
             scroll-step = 5;
             on-click = "pavucontrol";
             format-icons = [
-              "volume_up"
-              "volume_down"
-              "volume_mute"
+              ""
+              ""
+              ""
             ];
           };
           "battery" = {
