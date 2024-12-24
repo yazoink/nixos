@@ -10,7 +10,7 @@
         [General]
         theme=KvWizard
       '';
-    "Kvantum/KvCaroline".source = ./KvWizard;
+    "Kvantum/KvWizard".source = ./KvWizard;
     };
   };
 }
