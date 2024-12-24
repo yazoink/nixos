@@ -26,9 +26,9 @@
             scroll-step = 5;
             on-click = "pavucontrol";
             format-icons = [
-              ""
-              ""
               ""
+              ""
+              ""
             ];
           };
           "battery" = {
