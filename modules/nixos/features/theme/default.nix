@@ -50,7 +50,7 @@
           #package = pkgs.terminus_font;
           #name = "Terminus";
           package = pkgs.cozette;
-          name = "CozetteVector";
+          name = "Cozette";
         };
       };
       image = config.myOptions.desktopTheme.wallpaper;
