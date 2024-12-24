@@ -40,11 +40,11 @@
           package = pkgs.gyre-fonts;
           name = "DejaVu Math TeX Gyre";
         };
-        sansSerif = lib.mkIf config.desktopTheme.customDesktopFont.enable == false {
+        sansSerif = lib.mkIf (config.desktopTheme.customDesktopFont.enable == false) {
           package = pkgs.rubik;
           name = "Rubik";
         };
-        monospace = lib.mkIf config.desktopTheme.customTerminalFont.enable == false {
+        monospace = lib.mkIf (config.desktopTheme.customTerminalFont.enable == false) {
           #package = pkgs.gohufont;
           #name = "Gohufont";
           package = pkgs.terminus_font;
