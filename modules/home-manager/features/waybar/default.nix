@@ -48,7 +48,7 @@
             format = "{index}";
           };
           "clock" = {
-            format = "<span font='Material Symbols Outlined' size='large'></span> {:%I:%M %p %d %b %Y}";
+            format = "<span font='Material Symbols Outlined' size='large'>schedule</span> {:%I:%M %p %d %b %Y}";
             tooltip = false;
           };
           "memory" = {
