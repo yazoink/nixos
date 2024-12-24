@@ -35,7 +35,7 @@ in
         base0E = "CA8D67";
         base0F = "B04F41";
       };*/
-      /* wizard*/
+      /* wizard
       base16Scheme = {
         base00 = "1B0823";
         base01 = "371F2E";
@@ -53,7 +53,7 @@ in
         base0D = "727085";
         base0E = "9A1120";
         base0F = "8A3338";
-      };
+      };*/
       /* zephyr
       base16Scheme = {
         base00 = "2E242D";
@@ -73,7 +73,7 @@ in
         base0E = "AB6379";
         base0F = "6C545E";
       };*/
-      /*base16Scheme = {
+      base16Scheme = {
         base00 = "1c1213";
         base01 = "3a2425";
         base02 = "563837";
@@ -90,7 +90,7 @@ in
         base0D = "684c59";
         base0E = "a63650";
         base0F = "893f45";
-      };*/
+      };
     };
   };
 }
