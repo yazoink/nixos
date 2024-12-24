@@ -12,7 +12,7 @@
     ./desktop-fonts
   ];
   config = lib.mkIf config.myOptions.desktopTheme.enable {
-    desktopTheme.customTerminalFont.enable = true;
+    desktopTheme.customTerminalFont.enable = false;
     desktopTheme.customDesktopFont.enable = true;
 
     environment.systemPackages = with pkgs; [
@@ -34,7 +34,7 @@
           applications = 11;
           desktop = 11;
           popups = 11;
-          terminal = 12;
+          terminal = 13;
         };
         serif = {
           package = pkgs.gyre-fonts;
@@ -47,8 +47,10 @@
         monospace = lib.mkIf (config.desktopTheme.customTerminalFont.enable == false) {
           #package = pkgs.gohufont;
           #name = "Gohufont";
-          package = pkgs.terminus_font;
-          name = "Terminus";
+          #package = pkgs.terminus_font;
+          #name = "Terminus";
+          package = pkgs.cozette;
+          name = "CozetteVector";
         };
       };
       image = config.myOptions.desktopTheme.wallpaper;
