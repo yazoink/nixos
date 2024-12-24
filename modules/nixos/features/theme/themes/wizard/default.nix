@@ -8,7 +8,7 @@ in
       wizardTheme
     ];
 
-    desktopTheme.base16Accent = "base0F";
+    desktopTheme.base16Accent = "base0B";
 
     stylix = {
       cursor = {
