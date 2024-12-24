@@ -21,8 +21,8 @@ My NixOS desktop configs with home-manager and Hyprland.
 - Ability to easily toggle between desktop colorschemes in config
 - Customized Firefox with [Betterfox](https://github.com/yokoffing/BetterFox) and [Shyfox](https://github.com/Naezr/ShyFox)
 - Declarative Etterna package/installation
-- [Wrapper script](https://github.com/yazoink/nixos/blob/main/modules/home-manager/features/shell-config/scripts/rebuild/rebuild) for rebuilding the system that notifies you when it's done
-- [Wrapper script](https://github.com/yazoink/nixos/blob/main/modules/home-manager/features/shell-config/scripts/clean/clean) for cleaning the system that notifies you when it's done
+- [Script](https://github.com/yazoink/nixos/blob/main/modules/home-manager/features/shell-config/scripts/rebuild/rebuild) for rebuilding the system that notifies you when it's done
+- [Script](https://github.com/yazoink/nixos/blob/main/modules/home-manager/features/shell-config/scripts/clean/clean) for cleaning the system that notifies you when it's done
 - Custom options for easy toggling of features (see [here](https://github.com/yazoink/nixos/tree/main/options)).
   
 ## Screenshots/Colorschemes
