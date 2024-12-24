@@ -26,7 +26,7 @@
     fonts = {
       enableGhostscriptFonts = true;
       fontDir.enable = true;
-      fontConfig = {
+      fontconfig = {
         allowBitmaps = true;
         useEmbeddedBitmaps = true;
         includeUserConf = true;
