@@ -26,7 +26,36 @@
     fonts = {
       enableGhostscriptFonts = true;
       fontDir.enable = true;
-      fontconfig.allowBitmaps = true;
+      fontConfig = {
+        allowBitmaps = true;
+        useEmbeddedBitmaps = true;
+        includeUserConf = true;
+        localConf = ''
+          <match target="font">
+            <test name="family" qual="any">
+              <string>Jf Dot Kappa 20</string>
+            </test>
+            <test name="family" qual="any">
+              <string>Cozette</string>
+            </test>
+            <test name="family" qual="any">
+              <string>Cozette Vector</string>
+            </test>
+            <test name="family" qual="any">
+              <string>Bm437 NEC APC3 8x16</string>
+            </test>
+            <edit name="hinting" mode="assign">
+              <bool>false</bool>
+            </edit>
+            <edit name="antialias" mode="assign">
+              <bool>false</bool>
+            </edit>
+            <edit name="lcdfilter" mode="assign">
+              <bool>lcddefault</bool>
+            </edit>
+          </match>
+        '';
+      };
     };
   };
 }
