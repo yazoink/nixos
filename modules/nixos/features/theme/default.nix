@@ -31,9 +31,9 @@
       };
       fonts = {
         sizes = {
-          applications = 12;
-          desktop = 12;
-          popups = 12;
+          applications = 11;
+          desktop = 11;
+          popups = 11;
           terminal = 12;
         };
         serif = {
