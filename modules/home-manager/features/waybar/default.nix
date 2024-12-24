@@ -48,7 +48,7 @@
             format = "{index}";
           };
           "clock" = {
-            format = "{:%I:%M %p %d %b %Y}";
+            format = " {:%I:%M %p %d %b %Y}";
             tooltip = false;
             on-click = "gnome-clocks";
           };
