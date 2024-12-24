@@ -1,7 +1,7 @@
 {config, lib, pkgs, ...}:
 let
-  #customTerminalFont = pkgs.callPackage ./nec-apc-3 {};
-  customTerminalFont = pkgs.callPackage ./jf-dot-kappa-20 {};
+  customTerminalFont = pkgs.callPackage ./nec-apc-3 {};
+  #customTerminalFont = pkgs.callPackage ./jf-dot-kappa-20 {};
 in
 {
   options = {
@@ -14,8 +14,8 @@ in
   };
   config = lib.mkIf config.desktopTheme.customTerminalFont.enable {
     stylix.fonts.monospace = {
-      #name = "Bm437 NEC APC3 8x16";
-      name = "Jf Dot Kappa 20";
+      name = "Bm437 NEC APC3 8x16";
+      #name = "Jf Dot Kappa 20";
       package = customTerminalFont;
     };
   };
