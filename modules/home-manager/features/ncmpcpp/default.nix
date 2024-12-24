@@ -51,6 +51,8 @@
         external_editor = "nvim";
         empty_tag_marker=" -- ‼ -- ";
         alternative_ui_separator_color = "white";
+
+        lyrics_fetchers = "musixmatch";
       };
     };
   };
