@@ -19,7 +19,7 @@ in
     xdg.configFile = {
       "vesktop/themes/font.css".text = ''
         * {
-          font-family: ${config.stylix.fonts.sansSerif};
+          font-family: ${config.stylix.fonts.sansSerif.name};
         }
       '';
       "vesktop/themes/my.theme.css".source = themeFile;
