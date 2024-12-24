@@ -20,8 +20,8 @@
             ];
           };
           "wireplumber" = {
-            format = " {volume}%";
-            format-muted = " {volume}%";
+            format = "<span font='Material Symbols Outlined' size='large'>volume_up</span> {volume}%";
+            format-muted = "<span font='Material Symbols Outlined' size='large'>volume_mute</span> {volume}%";
             max-volume = 100;
             scroll-step = 5;
             on-click = "pavucontrol";
