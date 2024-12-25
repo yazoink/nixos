@@ -9,6 +9,7 @@
     };
     hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
     hyprland-qtutils.url = "github:hyprwm/hyprland-qtutils";
+    hyprsysteminfo.url = "github:hyprwm/hyprsysteminfo";
     hyprland-plugins = {
       url = "github:hyprwm/hyprland-plugins";
       inputs.hyprland.follows = "hyprland";
@@ -31,6 +32,7 @@
     home-manager,
     hyprland,
     hyprland-qtutils,
+    hyprsysteminfo,
     stylix,
     nixos-hardware,
     nixvim,
