@@ -6,7 +6,7 @@ pkgs.stdenv.mkDerivation {
     owner = "yazoink";
     repo = "wizard-theme";
     rev = "main";
-    sha256 = "sha256-LGLLQsF4sUGsg99eX0osfYMJzDKabw3WZFYugUu5XIk=";
+    sha256 = "sha256-youGz8wxZYVBO84CUX/QLVP1HX58mIh+WIWrRFAG3uM=";
   };
 
   dontUnpack = true;
