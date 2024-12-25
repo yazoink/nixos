@@ -33,6 +33,7 @@
     nixpkgs,
     home-manager,
     hyprland,
+    hyprland-qtutils,
     stylix,
     nixos-hardware,
     nixvim,
