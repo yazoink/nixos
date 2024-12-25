@@ -30,7 +30,7 @@
       hyprcursor
       hypridle
       swaybg
-      inputs.hyprland-qtutils.packages.${pkgs.stdenv.hostPlatform.system}.hyprland-qtutils
+      inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland-qtutils
     ];
 
     services  = {
