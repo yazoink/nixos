@@ -14,7 +14,7 @@
     };
     hyprland-qtutils = {
       url = "github:hyprwm/hyprland-qtutils";
-      inputs.hyprland.follows = "hyprland";
+      inputs.hyprland-qtutils.follows = "hyprland";
     };
     stylix.url = "github:danth/stylix";
     firefox-addons = {
