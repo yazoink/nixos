@@ -28,7 +28,6 @@ in
 
     wayland.windowManager.hyprland = builtins.trace "hyprland config module enabled" {
       enable = true;
-      package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
       xwayland.enable = true;
       systemd.enable = true;
       #plugins = with pkgs.hyprlandPlugins; [hyprscroller];
