@@ -31,7 +31,7 @@
       hypridle
       swaybg
       inputs.hyprland-qtutils.packages.${pkgs.stdenv.hostPlatform.system}.hyprland-qtutils
-      inputs.hyprsysteminfo.packages.${pkgs.stdenv.hostPlatform.system}.hyprsysteminfo
+      #inputs.hyprsysteminfo.packages.${pkgs.stdenv.hostPlatform.system}.hyprsysteminfo # kvantum theme broken?
     ];
 
     services  = {
