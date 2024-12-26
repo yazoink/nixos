@@ -16,5 +16,6 @@ in
   };
   config = lib.mkIf config.bundles.desktopBase.dither.enable {
     bundles.desktopBase.dither.package = dither;
+    home.packages = [dither];
   };
 }
