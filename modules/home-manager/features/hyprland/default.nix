@@ -42,7 +42,7 @@ in
         "$browser" = "firefox";
         "$fileManager" = "thunar";
         "$menu" = "rofi -show drun";
-        "$screenshot" = "/home/${osConfig.myOptions.userAccount.username}/.config/hypr/scripts/screenshot.sh";
+        "$screenshot" = "${config.desktopBase.screenshot.package}/bin/screenshot -s";
         "$power" = "simple-logout";
         "$lock" = "gtklock";
         "$colorPicker" = "/home/${osConfig.myOptions.userAccount.username}/.config/hypr/scripts/color.sh";
