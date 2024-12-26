@@ -27,7 +27,7 @@ in
         useQuickCss = true;
         enabledThemes = ["my.theme.css"];
         transparent = false;
-        enableReactDevTools = true;
+        enableReactDevtools = true;
         disableMinSize = true;
         plugins = {
           alwaysExpandRoles.enable = true;
