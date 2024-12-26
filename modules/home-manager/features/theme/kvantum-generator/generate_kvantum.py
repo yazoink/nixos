@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 
 # tries to generate a kvantum theme as close as similar as possible to the Gtk theme
+# I know this code is ass, I'm very tired
 
 # args:
 # colors should be hex (without the hashtag at the start)
@@ -69,8 +70,8 @@ def replace_colors(file_content, new_colors):
         "#4A2E2F"
     ]
     for i in range(len(old_colors)):
-        file_content = file_content.replace(old_colors[i], rgb_to_hex(new_colors[i][0], new_colors[i][1], new_colors[i][2]))
-        file_content = file_content.replace(old_colors[i].lower(), rgb_to_hex(new_colors[i][0], new_colors[i][1], new_colors[i][2]))
+        file_content = file_content.replace(old_colors[i], rgb_to_hex(int(new_colors[i][0]), int(new_colors[i][1]), int(new_colors[i][2])))
+        file_content = file_content.replace(old_colors[i].lower(), rgb_to_hex(int(new_colors[i][0]), int(new_colors[i][1]), int(new_colors[i][2])))
     return file_content
 
 def overlay_color(base, overlay, amount):
