@@ -8,6 +8,7 @@
 }: {
   imports = [
     inputs.nixvim.homeManagerModules.nixvim
+    inputs.nixcord.homeManagerModules.nixcord
     ./cyberia
     ./fluoride
     ../modules/home-manager
