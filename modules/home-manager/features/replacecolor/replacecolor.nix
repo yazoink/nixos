@@ -1,6 +1,6 @@
 {pkgs, ...}:
 pkgs.python312Packages.buildPythonApplication rec {
-  pname = "simple-logout";
+  pname = "replacecolor";
   version = "1.0";
 
   src = ./replacecolor;

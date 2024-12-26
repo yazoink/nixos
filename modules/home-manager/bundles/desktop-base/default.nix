@@ -6,6 +6,7 @@
       foot.enable = true;
       hyprViewBinds.enable = true;
       mako.enable = true;
+      replacecolor.enable = true;
       rofi.enable = true;
       screenshot.enable = true;
       simpleLogout.enable = true;
@@ -21,6 +22,7 @@
     ../../features/hyprland
     ../../features/hyprviewbinds
     ../../features/mako
+    ../../features/replacecolor
     ../../features/rofi
     ../../features/screenshot
     ../../features/simple-logout

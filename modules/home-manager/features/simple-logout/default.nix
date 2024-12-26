@@ -2,7 +2,6 @@
 let
   script = ./script.sh;
   simpleLogout = pkgs.callPackage ./simple-logout.nix {};
-  replacecolor = pkgs.callPackage ./replacecolor.nix {};
   styleCss = config.lib.stylix.colors {
     template = ./config/style.css.mustache;
     extension = ".css";
@@ -28,7 +27,7 @@ in
       Unit.Description = "Replace the color of the simple-logout icons";
       Service = {
         Type = "oneshot";
-        ExecStart = "${pkgs.bash}/bin/bash ${script} ${replacecolor}/bin/replacecolor ${./config/icons} #${config.stylix.base16Scheme.base05} ${osConfig.myOptions.userAccount.username}";
+        ExecStart = "${pkgs.bash}/bin/bash ${script} ${config.bundles.desktopBase.replacecolor.package}/bin/replacecolor ${./config/icons} #${config.stylix.base16Scheme.base05} ${osConfig.myOptions.userAccount.username}";
       };
       Install = {
         WantedBy = ["default.target"];
