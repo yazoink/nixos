@@ -7,6 +7,8 @@ stdenv.mkDerivation {
 
   buildInputs = [bash];
 
+  dontUnpack = true;
+
   installPhase = ''
     mkdir -p $out/bin
     cp $src $out/bin
