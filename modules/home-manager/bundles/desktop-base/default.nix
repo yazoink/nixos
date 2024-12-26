@@ -3,6 +3,7 @@
   config = lib.mkIf osConfig.myOptions.bundles.desktopBase.enable {
     bundles.desktopBase = builtins.trace "enabled desktopBase" {
       direnv.enable = true;
+      dither.enable = true;
       foot.enable = true;
       hyprViewBinds.enable = true;
       mako.enable = true;
@@ -17,6 +18,7 @@
 
   imports = [
     ../../features/direnv
+    ../../features/dither
     ../../features/foot
     ../../features/gtklock
     ../../features/hyprland
