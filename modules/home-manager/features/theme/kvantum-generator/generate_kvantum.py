@@ -18,15 +18,15 @@ from os import path, mkdir
 def main():
     new_colors = [
         hex_to_rgb(argv[1]), # bg0
-        overlay_color(argv[1], argv[2], 0.015), # bg1
-        overlay_color(argv[1], argv[2], 0.0235), # bg2
-        overlay_color(argv[1], argv[5], 0.115), # bg3
-        overlay_color(argv[1], argv[2], 0.08), # bg4
+        overlay_color(hex_to_rgb(argv[1]), hex_to_rgb(argv[2]), 0.015), # bg1
+        overlay_color(hex_to_rgb(argv[1]), hex_to_rgb(argv[2]), 0.0235), # bg2
+        overlay_color(hex_to_rgb(argv[1]), hex_to_rgb(argv[5]), 0.115), # bg3
+        overlay_color(hex_to_rgb(argv[1]), hex_to_rgb(argv[2]), 0.08), # bg4
         hex_to_rgb(argv[2]), # fg0
         hex_to_rgb(argv[3]), # fg1
         hex_to_rgb(argv[5]), # accent
         hex_to_rgb(argv[4]), # disabled fg
-        overlay_color(argv[1], argv[2], 0.08), # divider
+        overlay_color(hex_to_rgb(argv[1]), hex_to_rgb(argv[2]), 0.08), # divider
     ]
 
     old_kvconfig = file_to_string(f"{argv[5]}/KvRecolor.kvconfig")
