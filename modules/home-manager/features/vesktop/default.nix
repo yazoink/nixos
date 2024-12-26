@@ -19,10 +19,9 @@ in
     programs.nixcord = {
       enable = true;
       discord = {
-        package = pkgs.discord-ptb;
-        vencord.enable = true;
-        openASAR.enable = true;
+        enable = false;
       };
+      vesktop.enable = true;
       quickCss = ''
         :root {
           --font: ${config.stylix.fonts.sansSerif.name};
