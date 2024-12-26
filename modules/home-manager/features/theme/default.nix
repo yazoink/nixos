@@ -5,10 +5,21 @@ let
     template = ./gtkrc.mustache;
     extension = ".css";
   };
+  kvantumGenerator = ./kvantum-generator/generate_kvantum.py;
 in
 {
   imports = [./themes];
   config = lib.mkIf osConfig.myOptions.desktopTheme.enable {
+    systemd.user.services.generate-kvantum = {
+      Unit.Description = "Generate the Kvantum theme";
+      Service = {
+        Type = "oneshot";
+        ExecStart = with config.stylix.base16Scheme; "${pkgs.python3} ${kvantumGenerator} ${base00} ${base05} ${base06} ${base03} ${config.stylix.base16Scheme.${osConfig.desktopTheme.base16Accent}} ${./kvantum-generator/KvRecolor} /home/${osConfig.myOptions.userAccount.username}/.config/kvantum/KvLibadwaitaRecolor";
+      };
+      Install = {
+        WantedBy = ["default.target"];
+      };
+    };
     stylix = {
       /*iconTheme = {
         enable = true;
