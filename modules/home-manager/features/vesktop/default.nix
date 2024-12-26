@@ -78,7 +78,7 @@ in
           imageZoom = {
             enable = true;
             zoom = 2.5;
-            size = 150;
+            size = 150.0;
           };
           implicitRelationships.enable = true;
           keepCurrentChannel.enable = true;
