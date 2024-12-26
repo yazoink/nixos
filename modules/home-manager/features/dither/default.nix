@@ -15,6 +15,6 @@ in
     };
   };
   config = lib.mkIf config.bundles.desktopBase.dither.enable {
-    bundles.desktopBase.screenshot.package = dither;
+    bundles.desktopBase.dither.package = dither;
   };
 }
