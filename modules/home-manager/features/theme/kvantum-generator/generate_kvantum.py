@@ -29,19 +29,19 @@ def main():
         overlay_color(hex_to_rgb(argv[1]), hex_to_rgb(argv[2]), 0.08), # divider
     ]
 
-    old_kvconfig = file_to_string(f"{argv[5]}/KvRecolor.kvconfig")
-    old_svg = file_to_string(f"{argv[5]}/KvRecolor.svg")
+    old_kvconfig = file_to_string(f"{argv[6]}/KvRecolor.kvconfig")
+    old_svg = file_to_string(f"{argv[6]}/KvRecolor.svg")
 
     new_kvconfig = replace_colors(old_kvconfig, new_colors)
     new_svg = replace_colors(old_svg, new_colors)
 
-    if path.exists(f"{argv[6]}/KvLibadwaitaRecolor") == False:
-        mkdir(f"{argv[6]}/KvLibadwaitaRecolor")
+    if path.exists(f"{argv[7]}/KvLibadwaitaRecolor") == False:
+        mkdir(f"{argv[7]}/KvLibadwaitaRecolor")
 
-    with open(f"{argv[6]}/KvLibadwaitaRecolor/KvLibadwaitaRecolor.kvconfig", "w") as file:
+    with open(f"{argv[7]}/KvLibadwaitaRecolor/KvLibadwaitaRecolor.kvconfig", "w") as file:
         file.write(new_kvconfig)
 
-    with open(f"{argv[6]}/KvLibadwaitaRecolor/KvLibadwaitaRecolor.svg", "w") as file:
+    with open(f"{argv[7]}/KvLibadwaitaRecolor/KvLibadwaitaRecolor.svg", "w") as file:
         file.write(new_svg)
 
 def file_to_string(path):
