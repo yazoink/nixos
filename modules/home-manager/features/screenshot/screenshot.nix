@@ -11,6 +11,6 @@ stdenv.mkDerivation {
 
   installPhase = ''
     mkdir -p $out/bin
-    cp $src $out/bin
+    cp $src $out/bin/screenshot
   '';
 }
