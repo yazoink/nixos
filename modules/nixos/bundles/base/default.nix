@@ -37,6 +37,7 @@
       coreutils-full
       ntfs3g
       util-linux
+      bc
 
       ##### Compression/Decompression #####
       zip
