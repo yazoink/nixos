@@ -18,6 +18,7 @@ My NixOS desktop configs with home-manager and Hyprland.
 
 ## Features
 - Consistent theming across GTK/Qt and pretty much everything else
+- Auto-generated theme based on the current stylix base16 colorscheme for everything except icons and cursors
 - Ability to easily toggle between desktop colorschemes in config
 - Customized Firefox with [Betterfox](https://github.com/yokoffing/BetterFox) and [Shyfox](https://github.com/Naezr/ShyFox)
 - Declarative Etterna package/installation
