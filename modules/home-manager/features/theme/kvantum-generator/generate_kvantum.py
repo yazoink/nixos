@@ -21,7 +21,7 @@ def main():
         hex_to_rgb(argv[1]), # bg0
         overlay_color(hex_to_rgb(argv[1]), hex_to_rgb(argv[2]), 0.1), # bg1
         overlay_color(hex_to_rgb(argv[1]), hex_to_rgb(argv[2]), 0.125), # bg2
-        overlay_color(hex_to_rgb(argv[1]), hex_to_rgb(argv[5]), 0.3), # bg3
+        overlay_color(hex_to_rgb(argv[1]), hex_to_rgb(argv[5]), 0.25), # bg3
         overlay_color(hex_to_rgb(argv[1]), hex_to_rgb(argv[2]), 0.6), # bg4
         hex_to_rgb(argv[2]), # fg0
         hex_to_rgb(argv[3]), # fg1
