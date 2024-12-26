@@ -56,6 +56,7 @@
       gnome-disk-utility
       gnome-font-viewer
       galculator
+      d-spy
 
       ### programming ####
       texliveFull

@@ -292,6 +292,10 @@ in
         windowrulev2 = float, class:^(org.kde.kruler)$
         windowrulev2 = float, title:^(HyprViewBinds)$
         windowrulev2 = float, title:^(galculator)$
+        windowrulev2 = float, title:^(Open File)(.*)$
+        windowrulev2 = float, title:^(Select a File)(.*)$
+        windowrulev2 = float, title:^(Open Folder)(.*)$
+        windowrulev2 = float, title:^(Save As)(.*)$
         windowrulev2 = fullscreen, title:^((E|e)tterna)(.*)$
         windowrulev2 = size 640 360, title:(Picture-in-Picture)
         windowrulev2 = pin, title:^(Picture-in-Picture)$
