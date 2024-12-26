@@ -29,6 +29,7 @@ let
     "mu-dl" = "yt-dlp -x -f best --audio-format flac";
     "search" = "nix --extra-experimental-features \"nix-command flakes\" search nixpkgs";
     "diskspace" = "sudo df -h | grep -E \"sd|lv|Size\" | sort";
+    "weather" = "curl wttr.in/Melbourne";
   };
   rebuild = pkgs.callPackage ./scripts/rebuild {};
   clean = pkgs.callPackage ./scripts/clean {};
