@@ -8,7 +8,7 @@
     xdg.configFile = {
       "Kvantum/kvantum.kvconfig".text = ''
         [General]
-        theme=test
+        theme=KvCaroline
       '';
     "Kvantum/KvCaroline".source = ./KvCaroline;
     };
