@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-# tries to generate a kvantum theme as close as similar as possible to the Gtk theme
+# This tries to generate a Kvantum theme as similar as possible to the Gtk theme
 # I know this code is ass, I'm very tired
 
 # args:

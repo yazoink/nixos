@@ -5,12 +5,5 @@
     gtk = {
       iconTheme.name = "Manuscript-Icons";
     };
-    xdg.configFile = {
-      "Kvantum/kvantum.kvconfig".text = ''
-        [General]
-        theme=KvManuscript
-      '';
-    "Kvantum/KvManuscript".source = ./KvManuscript;
-    };
   };
 }

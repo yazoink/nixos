@@ -5,12 +5,5 @@
     gtk = {
       iconTheme.name = "Carob";
     };
-    xdg.configFile = {
-      "Kvantum/kvantum.kvconfig".text = ''
-        [General]
-        theme=KvCarob
-      '';
-    "Kvantum/KvCarob".source = ./KvCarob;
-    };
   };
 }

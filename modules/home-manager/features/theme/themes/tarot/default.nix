@@ -5,12 +5,5 @@
     gtk = {
       iconTheme.name = "Tarot-Icons";
     };
-    xdg.configFile = {
-      "Kvantum/kvantum.kvconfig".text = ''
-        [General]
-        theme=KvTarot
-      '';
-    "Kvantum/KvTarot".source = ./KvTarot;
-    };
   };
 }

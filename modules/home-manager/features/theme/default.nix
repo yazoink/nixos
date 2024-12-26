@@ -101,6 +101,10 @@ in
           force_raster_widgets=1
           ignored_applications=@Invalid()
         '';
+        ".config/Kvantum/kvantum.kvconfig".text = ''
+          [General]
+          theme=KvLibadwaitaRecolor
+        '';
       };
 
       sessionVariables = {

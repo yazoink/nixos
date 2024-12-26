@@ -5,12 +5,5 @@
     gtk = {
       iconTheme.name = "caroline-suru-aspromauros";
     };
-    xdg.configFile = {
-      "Kvantum/kvantum.kvconfig".text = ''
-        [General]
-        theme=KvLibadwaitaRecolor
-      '';
-    "Kvantum/KvCaroline".source = ./KvCaroline;
-    };
   };
 }

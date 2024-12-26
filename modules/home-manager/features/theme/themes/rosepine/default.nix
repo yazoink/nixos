@@ -5,12 +5,5 @@
     gtk = {
       iconTheme.name = "Rose-Pine-Moon";
     };
-    xdg.configFile = {
-      "Kvantum/kvantum.kvconfig".text = ''
-        [General]
-        theme=KvRosePineMoon
-      '';
-    "Kvantum/KvRosePineMoon".source = ./KvRosePineMoon;
-    };
   };
 }

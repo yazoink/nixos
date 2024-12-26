@@ -5,12 +5,5 @@
     gtk = {
       iconTheme.name = "Wizard-Icons";
     };
-    xdg.configFile = {
-      "Kvantum/kvantum.kvconfig".text = ''
-        [General]
-        theme=KvWizard
-      '';
-    "Kvantum/KvWizard".source = ./KvWizard;
-    };
   };
 }
