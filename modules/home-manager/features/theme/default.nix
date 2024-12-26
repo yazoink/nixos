@@ -14,7 +14,7 @@ in
       Unit.Description = "Generate the Kvantum theme";
       Service = {
         Type = "oneshot";
-        ExecStart = with config.stylix.base16Scheme; "${pkgs.python3} ${kvantumGenerator} ${base00} ${base05} ${base06} ${base03} ${config.stylix.base16Scheme.${osConfig.desktopTheme.base16Accent}} ${./kvantum-generator/KvRecolor} /home/${osConfig.myOptions.userAccount.username}/.config/kvantum/KvLibadwaitaRecolor";
+        ExecStart = with config.stylix.base16Scheme; "${pkgs.python3}/bin/python3 ${kvantumGenerator} ${base00} ${base05} ${base06} ${base03} ${config.stylix.base16Scheme.${osConfig.desktopTheme.base16Accent}} ${./kvantum-generator/KvRecolor} /home/${osConfig.myOptions.userAccount.username}/.config/kvantum/KvLibadwaitaRecolor";
       };
       Install = {
         WantedBy = ["default.target"];
