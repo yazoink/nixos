@@ -36,13 +36,13 @@ def main():
     new_kvconfig = replace_colors(old_kvconfig, new_colors)
     new_svg = replace_colors(old_svg, new_colors)
 
-    if path.exists(f"{argv[7]}/KvLibadwaitaRecolor") == False:
-        mkdir(f"{argv[7]}/KvLibadwaitaRecolor")
+    if path.exists(argv[7]) == False:
+        mkdir(argv[7])
 
-    with open(f"{argv[7]}/KvLibadwaitaRecolor/KvLibadwaitaRecolor.kvconfig", "w") as file:
+    with open(f"{argv[7]}/KvLibadwaitaRecolor.kvconfig", "w") as file:
         file.write(new_kvconfig)
 
-    with open(f"{argv[7]}/KvLibadwaitaRecolor/KvLibadwaitaRecolor.svg", "w") as file:
+    with open(f"{argv[7]}/KvLibadwaitaRecolor.svg", "w") as file:
         file.write(new_svg)
 
 def file_to_string(path):
