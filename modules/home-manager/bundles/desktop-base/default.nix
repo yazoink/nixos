@@ -7,6 +7,7 @@
       hyprViewBinds.enable = true;
       mako.enable = true;
       rofi.enable = true;
+      screenshot.enable = true;
       simpleLogout.enable = true;
       waybar.enable = true;
       xdg.enable = true;
@@ -21,6 +22,7 @@
     ../../features/hyprviewbinds
     ../../features/mako
     ../../features/rofi
+    ../../features/screenshot
     ../../features/simple-logout
     ../../features/theme
     ../../features/waybar
