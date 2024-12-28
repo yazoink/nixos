@@ -59,6 +59,15 @@
           ./nixos/cyberia
         ];
       };
+
+      ##### Portable Laptop #####
+      stardust = nixpkgs.lib.nixosSystem {
+        specialArgs = {inherit inputs system;};
+        modules = [
+          ./options
+          ./nixos/stardust
+        ];
+      };
     };
   };
 }

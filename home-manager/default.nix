@@ -11,6 +11,7 @@
     inputs.nixcord.homeManagerModules.nixcord
     ./cyberia
     ./fluoride
+    ./stardust
     ../modules/home-manager
   ];
 
