@@ -14,7 +14,7 @@ in
       mako.enable = true;
       rofi.enable = true;
       screenshot.enable = true;
-      simple-logout.enable = true;
+      simpleLogout.enable = true;
     };
 
     home = {
