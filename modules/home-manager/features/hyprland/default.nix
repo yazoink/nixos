@@ -88,6 +88,7 @@ in
           {
             name = "etps/2-elantech-touchpad";
             sensitivity = 0.3;
+            accel_profile = "flat";
           }
         ];
         misc = {
