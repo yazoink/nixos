@@ -13,7 +13,7 @@
   ];
   config = lib.mkIf config.myOptions.desktopTheme.enable {
     desktopTheme.customTerminalFont.enable = true;
-    desktopTheme.customDesktopFont.enable = true;
+    desktopTheme.customDesktopFont.enable = false;
 
     environment.systemPackages = with pkgs; [
       libsForQt5.qtquickcontrols2
