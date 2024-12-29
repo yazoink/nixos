@@ -11,6 +11,7 @@ in
   };
   config = lib.mkIf config.bundles.desktopBase.rofi.enable {
     stylix.targets.rofi.enable = false;
+    bundles.desktopBase.dither.enable = true;
     programs.rofi = builtins.trace "rofi module enabled" {
       enable = true;
       package = pkgs.rofi-wayland;

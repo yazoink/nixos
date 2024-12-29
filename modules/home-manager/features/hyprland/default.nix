@@ -172,9 +172,6 @@ in
         /*master = {
           new_status = "slave";
           };*/
-        windowrulev2 = [
-          "suppressevent maximize, class:.*"
-        ];
         bind = [
           "$mainMod, Return, exec, $terminal"
           "$mainMod, W, exec, $browser"
@@ -288,6 +285,28 @@ in
           "$mainMod, mouse:272, movewindow"
           "$mainMod, mouse:273, resizewindow"
         ];
+        windowrulev2 = [
+          "suppressevent maximize, class:.*"
+          "nomaxsize, title:^(Wine configuration)$"
+          "float, class:^(org.kde.kruler)$"
+          "float, title:^(HyprViewBinds)$"
+          "float, title:^(galculator)$"
+          "float, title:^(Open File)(.*)$"
+          "float, title:^(Select a File)(.*)$"
+          "float, title:^(Open Folder)(.*)$"
+          "float, title:^(Save As)(.*)$"
+          "fullscreen, title:^((E|e)tterna)(.*)$"
+          "size 640 360, title:(Picture-in-Picture)"
+          "pin, title:^(Picture-in-Picture)$"
+          "float, title:^(Picture-in-Picture)$"
+          "float, title:^(Authentication Required)$"
+          "float, title:^(Soundboard)$"
+          "plugin:hyprbars:nobar, class:^(org.kde.kruler)"
+          "plugin:hyprbars:nobar, title:^(vesktop)$"
+          "plugin:hyprbars:nobar, title:^(File Upload)$"
+          "plugin:hyprbars:nobar, title:^(Empty Trash)$"
+          "plugin:hyprbars:nobar, title:^(File Manager Preferences)$"
+        ];
       };
       extraConfig = ''
         animations {
@@ -305,26 +324,6 @@ in
           animation = fade, 1, 10, default
           animation = workspaces, 1, 5, wind
         }
-        
-        windowrulev2 = nomaxsize, title:^(Wine configuration)$
-        windowrulev2 = float, class:^(org.kde.kruler)$
-        windowrulev2 = float, title:^(HyprViewBinds)$
-        windowrulev2 = float, title:^(galculator)$
-        windowrulev2 = float, title:^(Open File)(.*)$
-        windowrulev2 = float, title:^(Select a File)(.*)$
-        windowrulev2 = float, title:^(Open Folder)(.*)$
-        windowrulev2 = float, title:^(Save As)(.*)$
-        windowrulev2 = fullscreen, title:^((E|e)tterna)(.*)$
-        windowrulev2 = size 640 360, title:(Picture-in-Picture)
-        windowrulev2 = pin, title:^(Picture-in-Picture)$
-        windowrulev2 = float, title:^(Picture-in-Picture)$
-        windowrulev2 = float, title:^(Authentication Required)$
-        windowrulev2 = float, title:^(Soundboard)$
-        windowrulev2 = plugin:hyprbars:nobar, class:^(org.kde.kruler)
-        windowrulev2 = plugin:hyprbars:nobar, title:^(vesktop)$
-        windowrulev2 = plugin:hyprbars:nobar, title:^(File Upload)$
-        windowrulev2 = plugin:hyprbars:nobar, title:^(Empty Trash)$
-        windowrulev2 = plugin:hyprbars:nobar, title:^(File Manager Preferences)$
       '';
     };
   };
