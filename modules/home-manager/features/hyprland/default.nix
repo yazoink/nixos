@@ -221,10 +221,10 @@ in
           "$mainMod SHIFT, down, movewindow, d"
           "$mainMod SHIFT, up, movewindow, u"
           
-          "$mainMod CTRL, left, resizeactive, -l00 0"
-          "$mainMod CTRL, right, resizeactive, 100 0"
-          "$mainMod CTRL, down, resizeactive, 0 100"
-          "$mainMod CTRL, up, resizeactive, 0 -100"
+          "$mainMod CTRL, left, resizeactive, -l0 0"
+          "$mainMod CTRL, right, resizeactive, 10 0"
+          "$mainMod CTRL, down, resizeactive, 0 10"
+          "$mainMod CTRL, up, resizeactive, 0 -10"
 
           #"$mainMod, bracketleft, scroller:admitwindow,"
           #"$mainMod, bracketright, scroller:expelwindow,"
@@ -261,8 +261,8 @@ in
           "$mainMod SHIFT, 8, movetoworkspace, 8"
           "$mainMod SHIFT, 9, movetoworkspace, 9"
           "$mainMod SHIFT, 0, movetoworkspace, 10"
-          "$mainMod Ctrl, Right, workspace, +1"
-          "$mainMod Ctrl, Left, workspace, -1"
+          #"$mainMod Ctrl, Right, workspace, +1"
+          #"$mainMod Ctrl, Left, workspace, -1"
           "$mainMod SHIFT, S, togglespecialworkspace,"
           "$mainMod Ctrl, Up, movetoworkspacesilent, special"
 
