@@ -30,6 +30,7 @@ let
     "search" = "nix --extra-experimental-features \"nix-command flakes\" search nixpkgs";
     "diskspace" = "sudo df -h | grep -E \"sd|lv|Size\" | sort";
     "weather" = "curl wttr.in/Melbourne";
+    "copypath" = "wl-copy \"$(pwd)\"";
   };
   rebuild = pkgs.callPackage ./scripts/rebuild {};
   clean = pkgs.callPackage ./scripts/clean {};
@@ -38,6 +39,7 @@ let
   dict = pkgs.callPackage ./scripts/dict {};
   palette = pkgs.callPackage ./scripts/palette {};
   ex = pkgs.callPackage ./scripts/ex {};
+  copyfile = pkgs.callPackage ./scripts/copyfile {};
 in
 {
   options = {
@@ -48,7 +50,7 @@ in
   };
 
   config = lib.mkIf config.bundles.base.shellConfig.enable {
-    home.packages = [rebuild clean ascii nsfind dict palette ex];
+    home.packages = [rebuild clean ascii nsfind dict palette ex copyfile];
     programs.zsh = {
       enable = true;
       autocd = true;
