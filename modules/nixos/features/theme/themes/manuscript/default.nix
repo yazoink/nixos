@@ -3,7 +3,7 @@ let
   manuscriptTheme = pkgs.callPackage ./manuscript-theme.nix {};
 in
 {
-  config = lib.mkIf (config.myOptions.desktopTheme.enable && config.myOptions.desktopTheme.name == "manuscript") {
+  config = lib.mkIf (config.myOptions.bundles.desktopBase.enable && config.myOptions.desktopTheme.name == "manuscript") {
     environment.systemPackages = [
       manuscriptTheme
     ];

@@ -11,7 +11,7 @@
     ./terminal-fonts
     ./desktop-fonts
   ];
-  config = lib.mkIf config.myOptions.desktopTheme.enable {
+  config = lib.mkIf config.myOptions.bundles.desktopBase.enable {
     desktopTheme.customTerminalFont.enable = true;
     desktopTheme.customDesktopFont.enable = false;
 

@@ -19,11 +19,11 @@
       wallpaper = ./wallpapers/caroline-sand.jpg;
       sddm = {
         scale = 1.3;
-        wallpaper = ./wallpapers/caroline-flowers.png;
+        wallpaper = ./wallpapers/caroline-sand.jgp;
       };
       firefoxCss.shyfox = {
         enable = true;
-        wallpaper = ./wallpapers/caroline-flowers.png;
+        wallpaper = ./wallpapers/caroline-sand.jpg;
       };
     };
     bundles = {

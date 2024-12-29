@@ -4,7 +4,7 @@ let
   tarotIcons = pkgs.callPackage ./tarot-icons.nix {};
 in
 {
-  config = lib.mkIf (config.myOptions.desktopTheme.enable && config.myOptions.desktopTheme.name == "tarot") {
+  config = lib.mkIf (config.myOptions.bundles.desktopBase.enable && config.myOptions.desktopTheme.name == "tarot") {
     environment.systemPackages = [
       tarotCursors
       tarotIcons

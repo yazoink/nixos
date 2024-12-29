@@ -9,20 +9,15 @@ in
   ];
 
   config = lib.mkIf osConfig.bundles.desktopBase.hyprland.enable {
+    config.bundles.desktopBase = {
+      foot.enable = true;
+      mako.enable = true;
+      rofi.enable = true;
+      screenshot.enable = true;
+      simple-logout.enable = true;
+    };
+
     home = {
-      /*sessionVariables = {
-        NIXOS_OZONE_WL = "1";
-        MOZ_ENABLE_WAYLAND = "1";
-        GDK_BACKEND = "wayland";
-        #SDL_VIDEO_DRIVER = "wayland"; breaks steam
-        CLUTTER_BACKEND = "wayland";
-        XDG_CURRENT_DESKTOP = "Hyprland";
-        XDG_SESSION_DESKTOP = "Hyprland";
-        XDG_SESSION_TYPE = "wayland";
-        QT_AUTO_SCREEN_SCALE_FACTOR = "1";
-        QT_WAYLAND_DISABLE_WINDOWDECORATION = "1";
-        QT_QPA_PLATFORM = "wayland";
-      };*/
       file.".config/hypr/scripts".source = ./scripts;
     };
 

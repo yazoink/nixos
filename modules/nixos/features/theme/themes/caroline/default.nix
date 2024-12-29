@@ -4,7 +4,7 @@ let
   carolineIcons = pkgs.callPackage ./caroline-icons.nix {};
 in
 {
-  config = lib.mkIf (config.myOptions.desktopTheme.enable && config.myOptions.desktopTheme.name == "caroline") {
+  config = lib.mkIf (config.myOptions.bundles.desktopBase.enable && config.myOptions.desktopTheme.name == "caroline") {
     environment.systemPackages = [
       carolineCursors
       carolineIcons

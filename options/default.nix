@@ -10,10 +10,6 @@
         };
       };
       desktopTheme = {
-        enable = lib.mkOption {
-          type = lib.types.bool;
-          default = false;
-        };
         name = lib.mkOption {
           type = lib.types.str;
           default = "caroline";

@@ -3,7 +3,7 @@ let
   carobTheme = pkgs.callPackage ./carob-theme.nix {};
 in
 {
-  config = lib.mkIf (config.myOptions.desktopTheme.enable && config.myOptions.desktopTheme.name == "carob") {
+  config = lib.mkIf (config.myOptions.bundles.desktopBase.enable && config.myOptions.desktopTheme.name == "carob") {
     environment.systemPackages = [
       carobTheme
     ];

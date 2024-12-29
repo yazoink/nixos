@@ -4,7 +4,7 @@ let
   rosepineIcons = pkgs.callPackage ./rosepine-icons.nix {};
 in
 {
-  config = lib.mkIf (config.myOptions.desktopTheme.enable && config.myOptions.desktopTheme.name == "rosepine") {
+  config = lib.mkIf (config.myOptions.bundles.desktopBase.enable && config.myOptions.desktopTheme.name == "rosepine") {
     environment.systemPackages = [
       rosepineCursors
       rosepineIcons
