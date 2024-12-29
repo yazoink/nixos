@@ -24,9 +24,6 @@
   outputs = {
     nixpkgs,
     home-manager,
-    hyprland,
-    hyprland-qtutils,
-    hyprsysteminfo,
     stylix,
     nixos-hardware,
     nixvim,
