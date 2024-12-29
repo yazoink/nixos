@@ -22,7 +22,7 @@
         wallpaper = ./wallpapers/caroline-sand.jpg;
       };
       firefoxCss.shyfox = {
-        enable = true;
+        enable = false;
         wallpaper = ./wallpapers/caroline-sand.jpg;
       };
     };

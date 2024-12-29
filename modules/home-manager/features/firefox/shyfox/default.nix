@@ -1,4 +1,4 @@
-{osConfig, lib, config, ...}:
+{osConfig, lib, config, inputs, ...}:
 let
   shyVars = config.lib.stylix.colors {
     template = ./chrome/ShyFox/${osConfig.desktopTheme.base16Accent}-shy-variables.css.mustache;
@@ -30,21 +30,26 @@ in
       ".mozilla/firefox/${osConfig.myOptions.userAccount.username}/chrome/ShyFox/shy-toolbar.css".source = ./chrome/ShyFox/shy-toolbar.css;
       ".mozilla/firefox/${osConfig.myOptions.userAccount.username}/chrome/ShyFox/shy-variables.css".source = shyVars;
     };
-    programs.firefox.profiles."${osConfig.myOptions.userAccount.username}".settings = {
-      "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
-      "sidebar.revamp" = false;
-      "svg.context-properties.content.enabled" = true;
-      "layout.css.has-selector.enabled" = true;
-      "browser.urlbar.suggest.calculator" = true;
-      "browser.urlbar.unitConversion.enabled" = true;
-      "browser.urlbar.trimHttps" = false;
-      "browser.urlbar.trimURLs" = false;
-      "widget.gtk.rounded-bottom-corners.enabled" = true;
-      "widget.gtk.ignore-bogus-leave-notify" = 1;
-      "shyfox.disable.floating.search" = true;
-      "shyfox.remove.window.controls" = true;
-      "shyfox.enable.ext.mono.toolbar.icons" = true;
-      "shyfox.enable.ext.mono.context.icons" = true;
+    programs.firefox.profiles."${osConfig.myOptions.userAccount.username}" = {
+      settings = {
+        "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
+        "sidebar.revamp" = false;
+        "svg.context-properties.content.enabled" = true;
+        "layout.css.has-selector.enabled" = true;
+        "browser.urlbar.suggest.calculator" = true;
+        "browser.urlbar.unitConversion.enabled" = true;
+        "browser.urlbar.trimHttps" = false;
+        "browser.urlbar.trimURLs" = false;
+        "widget.gtk.rounded-bottom-corners.enabled" = true;
+        "widget.gtk.ignore-bogus-leave-notify" = 1;
+        "shyfox.disable.floating.search" = true;
+        "shyfox.remove.window.controls" = true;
+        "shyfox.enable.ext.mono.toolbar.icons" = true;
+        "shyfox.enable.ext.mono.context.icons" = true;
+      };
     };
+    extensions = with inputs.firefox-addons.packages."x86_64-linux"; [
+      sidebery
+    ];
   };
 }

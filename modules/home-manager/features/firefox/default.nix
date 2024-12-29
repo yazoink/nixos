@@ -78,9 +78,12 @@
           floccus
           firefox-color
           control-panel-for-twitter
-          sidebery
           userchrome-toggle-extended
-        ] ++ (if osConfig.myOptions.hardwareFeatures.h264ify.enable then [enhanced-h264ify] else []);
+        ] ++ (
+            if osConfig.myOptions.hardwareFeatures.h264ify.enable 
+            then [enhanced-h264ify] 
+            else []
+          );
         extraConfig = builtins.readFile ./user.js;
         /*extraConfig = builtins.readFile (builtins.fetchurl {
           url = "https://raw.githubusercontent.com/yokoffing/Betterfox/main/user.js";
