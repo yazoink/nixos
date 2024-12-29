@@ -35,6 +35,12 @@
               default = false;
             };
           };
+          anotherOneline = {
+            enable = lib.mkOption {
+              type = lib.types.bool;
+              default = false;
+            };
+          };
         };
         sddm = {
           scale = lib.mkOption {
