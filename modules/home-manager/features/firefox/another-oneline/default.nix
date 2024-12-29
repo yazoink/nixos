@@ -4,10 +4,5 @@
     home.file = {
       ".mozilla/firefox/${osConfig.myOptions.userAccount.username}/chrome/userChrome.css".source = ./userChrome.css;
     };
-    programs.firefox.profiles."${osConfig.myOptions.userAccount.username}" = {
-      "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
-      "browser.compactmode.show" = true;
-      "extensions.pocket.enabled" = false;
-    };
   };
 }
