@@ -47,9 +47,9 @@ in
         "shyfox.enable.ext.mono.toolbar.icons" = true;
         "shyfox.enable.ext.mono.context.icons" = true;
       };
+      extensions = with inputs.firefox-addons.packages."x86_64-linux"; [
+        sidebery
+      ];
     };
-    extensions = with inputs.firefox-addons.packages."x86_64-linux"; [
-      sidebery
-    ];
   };
 }
