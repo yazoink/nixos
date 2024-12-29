@@ -21,7 +21,7 @@
         scale = 1.3;
         wallpaper = ./wallpapers/caroline-sand.jpg;
       };
-      firefoxCss.anotherOneline.enable = true;
+      firefoxCss.onelineProton.enable = true;
     };
     bundles = {
       desktopFull.enable = true;
