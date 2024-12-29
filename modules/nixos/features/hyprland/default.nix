@@ -8,7 +8,6 @@
     };
   };
   config = lib.mkIf config.bundles.desktopBase.hyprland.enable {
-    myOptions.desktopTheme.enable = true;
     bundles.desktopBase = {
       gtklock.enable = true;
     };
