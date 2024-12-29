@@ -78,7 +78,6 @@
           floccus
           firefox-color
           control-panel-for-twitter
-          userchrome-toggle-extended
         ] ++ (
             if osConfig.myOptions.hardwareFeatures.h264ify.enable 
             then [enhanced-h264ify] 

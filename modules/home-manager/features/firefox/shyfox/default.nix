@@ -48,6 +48,7 @@ in
         "shyfox.enable.ext.mono.context.icons" = true;
       };
       extensions = with inputs.firefox-addons.packages."x86_64-linux"; [
+        userchrome-toggle-extended
         sidebery
       ];
     };
