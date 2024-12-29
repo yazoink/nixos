@@ -1,7 +1,7 @@
 # depends on theme module for theming
 {osConfig, lib, config, ...}:
 {
-  config = lib.mkIf (config.bundles.desktopBase.waybar.enable && osConfig.networking.hostName == "fluoride") {
+  config = lib.mkIf (config.bundles.desktopBase.waybar.enable && osConfig.myOptions.hardwareFeatures.laptop.enable == false) {
     programs.waybar = {
       settings = {
         mainBar = {

@@ -60,15 +60,19 @@
         };
       };
       features = {
-        amdgpu.enable = lib.mkOption {
-          type = lib.types.bool;
-          default = false;
-        };
-        fstrim.enable = lib.mkOption {
+        etterna.enable = lib.mkOption {
           type = lib.types.bool;
           default = false;
         };
         gamescope.enable = lib.mkOption {
+          type = lib.types.bool;
+          default = false;
+        };
+        prismlauncher.enable = lib.mkOption {
+          type = lib.types.bool;
+          default = false;
+        };
+        osu.enable = lib.mkOption {
           type = lib.types.bool;
           default = false;
         };
@@ -96,7 +100,21 @@
           type = lib.types.bool;
           default = false;
         };
+      };
+      hardwareFeatures = {
         diskBurner.enable = lib.mkOption {
+          type = lib.types.bool;
+          default = false;
+        };
+        ssd.enable = lib.mkOption {
+          type = lib.types.bool;
+          default = false;
+        };
+        amdgpu.enable = lib.mkOption {
+          type = lib.types.bool;
+          default = false;
+        };
+        laptop.enable = lib.mkOption {
           type = lib.types.bool;
           default = false;
         };

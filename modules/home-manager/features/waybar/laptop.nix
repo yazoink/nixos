@@ -1,7 +1,7 @@
 # depends on theme module for theming
 {osConfig, lib, config, ...}:
 {
-  config = lib.mkIf (config.bundles.desktopBase.waybar.enable && osConfig.networking.hostName == "cyberia") {
+  config = lib.mkIf (config.bundles.desktopBase.waybar.enable && osConfig.myOptions.hardwareFeatures.laptop.enable) {
     programs.waybar = {
       settings = {
         mainBar = {

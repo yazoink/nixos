@@ -4,7 +4,6 @@
     bundles.desktopFull = {
       audtousd.enable = true;
       colorScripts.enable = true;
-      etterna.enable = true;
       firefox.enable = true;
       kjtocal.enable = true;
       kooha.enable = true;
@@ -20,9 +19,6 @@
 
     home.packages = with pkgs; [
       ### gaming ##
-      prismlauncher
-      osu-lazer-bin
-      mangohud
       pychess
       space-cadet-pinball
       kdePackages.knavalbattle
@@ -77,7 +73,6 @@
   imports = [
     ../../features/audtousd
     ../../features/color-scripts
-    ../../features/etterna
     ../../features/firefox
     ../../features/kjtocal
     ../../features/kooha

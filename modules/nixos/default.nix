@@ -4,8 +4,8 @@
     ./bundles/desktop-base
     ./bundles/desktop-full
     ./features/amdgpu
-    ./features/fstrim
     ./features/ollama
+    ./features/ssd
     ./features/steam
     ./features/virt-manager
     ./features/virtualbox

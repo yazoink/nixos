@@ -29,7 +29,7 @@
       hyprpicker
       hyprcursor
       hypridle
-      inputs.hyprland-qtutils.packages.${pkgs.stdenv.hostPlatform.system}.hyprland-qtutils
+      #inputs.hyprland-qtutils.packages.${pkgs.stdenv.hostPlatform.system}.hyprland-qtutils
       #inputs.hyprsysteminfo.packages.${pkgs.stdenv.hostPlatform.system}.hyprsysteminfo # kvantum theme broken?
     ];
 
@@ -41,8 +41,10 @@
 
     programs.hyprland = {
       enable = true;
-      package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
-      portalPackage = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
+      #package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
+      #portalPackage = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
+      package = pkgs.hyprland;
+      portalPackage = pkgs.xdg-desktop-portal-hyprland;
     };
 
     xdg.portal = {

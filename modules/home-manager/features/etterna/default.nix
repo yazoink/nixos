@@ -1,17 +1,11 @@
-{pkgs, config, lib, osConfig, ...}:
+{pkgs, lib, osConfig, ...}:
 let
   etterna = pkgs.callPackage ./etterna.nix {};
   script = ./local-install.sh;
   desktopFile = ./etterna.desktop;
 in
 {
-  options = {
-    bundles.desktopFull.etterna.enable = lib.mkOption {
-      type = lib.types.bool;
-      default = false;
-    };
-  };
-  config = lib.mkIf config.bundles.desktopFull.etterna.enable {
+  config = lib.mkIf osConfig.myOptions.features.etterna.enable {
     home.packages = [etterna];
     home.file.".local/share/icons/etterna.png".source = ./icon.png;
     systemd.user.services.etterna-local-install = {

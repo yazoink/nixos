@@ -32,13 +32,18 @@
       desktopFull.enable = true;
     };
     features = {
-      amdgpu.enable = true;
-      fstrim.enable = true;
+      etterna.enable = true;
+      prismlauncher.enable = true;
+      osu.enable = true;
       ollama.enable = true;
       steam.enable = true;
       gamescope.enable = true;
       virtManager.enable = true;
       vscode.enable = false;
+    };
+    hardwareFeatures = {
+      amdgpu.enable = true;
+      ssd.enable = true;
     };
   };
 

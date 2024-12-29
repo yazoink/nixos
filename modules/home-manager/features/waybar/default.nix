@@ -9,8 +9,8 @@
   };
 
   imports = [
-    ./cyberia.nix
-    ./fluoride.nix
+    ./desktop.nix
+    ./laptop.nix
   ];
 
   config = lib.mkIf config.bundles.desktopBase.waybar.enable {

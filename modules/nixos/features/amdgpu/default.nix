@@ -1,6 +1,6 @@
 {pkgs, config, lib, ...}:
 {
-  config = lib.mkIf config.myOptions.features.amdgpu.enable {
+  config = lib.mkIf config.myOptions.hardwareFeatures.amdgpu.enable {
     boot.kernelParams = [ "amd_iommu=on" ];
 
     systemd.tmpfiles.rules = [
@@ -10,7 +10,7 @@
     environment.variables = {
       LIBVA_DRIVER_NAME = "radeonsi";
       VDPAU_DRIVER = "radeonsi";
-      #OLLAMA_ACCELERATION = "rocm"; RX 6600 not supported :()
+      #OLLAMA_ACCELERATION = "rocm"; RX 6600 not supported :(
       #ROC_ENABLE_PRE_VEGA = "1";
     };
 

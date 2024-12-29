@@ -1,11 +1,6 @@
 {config, lib, ...}:
 {
-  options.myOptions.features.tlp.enable = lib.mkOption {
-    type = lib.types.bool;
-    default = false;
-  };
-
-  config = lib.mkIf config.myConfig.features.tlp.enable {
+  config = lib.mkIf config.myOptions.hardwareFeatures.laptop.enable {
     services.tlp = {
       enable = true;
       settings = {

@@ -31,11 +31,11 @@
       };
     };
     bundles = {
-      desktopFull.enable = true;
+      desktopBase.enable = true;
     };
-    features = {
-      fstrim.enable = true;
-      #tlp.enable = true;
+    hardwareFeatures = {
+      ssd.enable = true;
+      laptop.enable = true;
     };
   };
 
@@ -51,13 +51,8 @@
   };
 
   boot.loader = {
-    grub = {
-      enable = true;
-      device = "/dev/sda";
-      gfxmodeBios = "1024x768";
-      theme = null;
-      splashImage = null;
-    };
+    systemd-boot.enable = true;
+    efi.canTouchEfiVariables = true;
   };
 
   networking.hostName = "stardust";

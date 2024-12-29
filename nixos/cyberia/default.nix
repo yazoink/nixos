@@ -35,12 +35,14 @@
       desktopFull.enable = true;
     };
     features = {
-      fstrim.enable = true;
-      tlp.enable = true;
       virtManager.enable = true;
       virtualbox.enable = true;
+      vscode.enable = false;
+    };
+    hardwareFeatures = {
       diskBurner.enable = true;
-      vscode.enable = true;
+      ssd.enable = true;
+      laptop.enable = true;
     };
   };
 

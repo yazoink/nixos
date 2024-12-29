@@ -54,9 +54,9 @@ in
           "mpDris2 --music-dir=~/mu &"
           #"dbus-launch --exit-with-session waybar"
           "$bar"
-          "nm-applet"
           "hypridle"
           "poweralertd"
+          "nm-applet"
           "wl-clip-persist --clipboard regular"
         ];
         monitor = if (osConfig.networking.hostName == "fluoride") then ["DP-2,2560x1440@59.95100,0x0,1" ",preferred,auto,1"] else [",preferred,auto,1"];
