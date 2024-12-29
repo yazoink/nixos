@@ -31,6 +31,7 @@ let
     "diskspace" = "sudo df -h | grep -E \"sd|lv|Size\" | sort";
     "weather" = "curl wttr.in/Melbourne";
     "copypath" = "wl-copy \"$(pwd)\"";
+    "solitaire" = "ttysolitaire --no-background-color";
   };
   rebuild = pkgs.callPackage ./scripts/rebuild {};
   clean = pkgs.callPackage ./scripts/clean {};

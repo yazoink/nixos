@@ -58,6 +58,7 @@
       python3
 
       ### misc ###
+      tty-solitaire
       cbonsai
       wineWowPackages.waylandFull
     ] ++ (if osConfig.services.printing.enable then 
