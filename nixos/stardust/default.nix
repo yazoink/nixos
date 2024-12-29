@@ -16,26 +16,25 @@
     userAccount.username = "gene";
     desktopTheme = {
       name = "caroline";
-      #name = "wizard";
       wallpaper = ./wallpapers/caroline-flowers.png;
-      #wallpaper = ./wallpapers/flowers-wizard.jpg;
       sddm = {
         scale = 1.3;
         wallpaper = ./wallpapers/caroline-waves.png;
-        #wallpaper = ./wallpapers/sand-wizard.jpg;
       };
       firefoxCss.shyfox = {
         enable = true;
         wallpaper = ./wallpapers/caroline-waves.png;
-        #wallpaper = ./wallpapers/sand-wizard.jpg;
       };
     };
     bundles = {
-      desktopBase.enable = true;
+      desktopFull.enable = true;
     };
     hardwareFeatures = {
       ssd.enable = true;
-      laptop.enable = true;
+      laptop = {
+        enable = true;
+        touchpadScrollFactor = 0.5;
+      };
     };
   };
 

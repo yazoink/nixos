@@ -42,7 +42,10 @@
     hardwareFeatures = {
       diskBurner.enable = true;
       ssd.enable = true;
-      laptop.enable = true;
+      laptop = {
+        enable = true;
+        touchpadScrollFactor = 0.5;
+      };
     };
   };
 

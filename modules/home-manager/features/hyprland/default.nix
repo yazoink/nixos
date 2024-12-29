@@ -67,14 +67,21 @@ in
           kb_model = lib.mkIf (osConfig.networking.hostName == "cyberia") "thinkpad";
           touchpad = {
             disable_while_typing = false;
-            scroll_factor = 0.5;
+            scroll_factor = osConfig.myOptions.hardwareFeatures.laptop.touchpadScrollFactor;
           };
         };
-        device = {
-          name = "tpps/2-ibm-trackpoint";
-          accel_profile = "flat";
-          sensitivity = 0.5;
-        };
+        device = [
+          {
+            name = "tpps/2-ibm-trackpoint";
+            accel_profile = "flat";
+            sensitivity = 0.5;
+          }
+          {
+            name = "etps/2-elantech-touchpad";
+            sensitivity = 1.5;
+            accel_profile = "flat";
+          }
+        ];
         misc = {
           disable_hyprland_logo = true;
           disable_splash_rendering = true;
