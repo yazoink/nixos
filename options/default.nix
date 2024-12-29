@@ -76,6 +76,18 @@
           type = lib.types.bool;
           default = false;
         };
+        spaceCadetPinball.enable = lib.mkOption {
+          type = lib.types.bool;
+          default = false;
+        };
+        pychess.enable = lib.mkOption {
+          type = lib.types.bool;
+          default = false;
+        };
+        knavalbattle.enable = lib.mkOption {
+          type = lib.types.bool;
+          default = false;
+        };
         ollama.enable = lib.mkOption {
           type = lib.types.bool;
           default = false;
@@ -102,6 +114,10 @@
         };
       };
       hardwareFeatures = {
+        h264ify.enable = lib.mkOption {
+          type = lib.types.bool;
+          default = false;
+        };
         diskBurner.enable = lib.mkOption {
           type = lib.types.bool;
           default = false;

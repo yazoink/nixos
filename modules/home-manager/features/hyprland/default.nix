@@ -74,12 +74,13 @@ in
           {
             name = "tpps/2-ibm-trackpoint";
             accel_profile = "flat";
-            sensitivity = 0.5;
+            sensitivity = 0.2;
           }
           {
             name = "etps/2-elantech-touchpad";
             sensitivity = 1.5;
             accel_profile = "flat";
+            middle_buttons_emulation = true;
           }
         ];
         misc = {

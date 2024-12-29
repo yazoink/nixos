@@ -31,6 +31,7 @@
     };
     hardwareFeatures = {
       ssd.enable = true;
+      h264ify.enable = true;
       laptop = {
         enable = true;
         touchpadScrollFactor = 0.5;
@@ -62,6 +63,15 @@
       PermitRootLogin = "no";
       #PasswordAuthentication = false;
     };
+  };
+
+  hardware.graphics = {
+    enable = true;
+    extraPackages = with pkgs; [
+      intel-vaapi-driver
+      libvdpau-va-gl
+      intel-media-sdk
+    ];
   };
 
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion

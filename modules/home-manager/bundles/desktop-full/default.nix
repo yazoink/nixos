@@ -15,13 +15,7 @@
       ytDlp.enable = true;
     };
 
-
     home.packages = with pkgs; [
-      ### gaming ##
-      pychess
-      space-cadet-pinball
-      kdePackages.knavalbattle
-
       ### communication ###
       signal-desktop
 
@@ -46,9 +40,9 @@
       #qbittorrent-enhanced
       nicotine-plus
       kdePackages.kruler
-      gnome-maps
-      gnome-clocks
-      gnome-disk-utility
+      #gnome-maps
+      #gnome-clocks
+      #gnome-disk-utility
       gnome-font-viewer
       galculator
       d-spy

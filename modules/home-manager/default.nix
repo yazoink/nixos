@@ -5,6 +5,9 @@
     ./bundles/desktop-full
 
     ./features/disk-burner
+    ./features/pychess
+    ./features/space-cadet-pinball
+    ./features/knavalbattle
     ./features/etterna
     ./features/osu
     ./features/prismlauncher
