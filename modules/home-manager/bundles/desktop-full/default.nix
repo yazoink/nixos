@@ -4,6 +4,7 @@
     bundles.desktopFull = {
       audtousd.enable = true;
       colorScripts.enable = true;
+      gimp.enable = true;
       kjtocal.enable = true;
       kooha.enable = true;
       lyricli.enable = true;
@@ -27,7 +28,6 @@
       ### gui file editors ###
       mate.pluma
       audacity
-      gimp-with-plugins
       libreoffice-qt
       inkscape
       shotcut
@@ -66,6 +66,7 @@
   imports = [
     ../../features/audtousd
     ../../features/color-scripts
+    ../../features/gimp
     ../../features/kjtocal
     ../../features/kooha
     ../../features/lyricli
