@@ -4,6 +4,7 @@
     bundles.desktopBase = builtins.trace "enabled desktopBase" {
       direnv.enable = true;
       dither.enable = true;
+      firefox.enable = true;
       foot.enable = true;
       hyprViewBinds.enable = true;
       mako.enable = true;
@@ -19,6 +20,7 @@
   imports = [
     ../../features/direnv
     ../../features/dither
+    ../../features/firefox
     ../../features/foot
     ../../features/gtklock
     ../../features/hyprland

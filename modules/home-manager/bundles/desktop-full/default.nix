@@ -4,7 +4,6 @@
     bundles.desktopFull = {
       audtousd.enable = true;
       colorScripts.enable = true;
-      firefox.enable = true;
       kjtocal.enable = true;
       kooha.enable = true;
       lyricli.enable = true;
@@ -73,7 +72,6 @@
   imports = [
     ../../features/audtousd
     ../../features/color-scripts
-    ../../features/firefox
     ../../features/kjtocal
     ../../features/kooha
     ../../features/lyricli

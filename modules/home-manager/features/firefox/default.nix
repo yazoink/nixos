@@ -2,7 +2,7 @@
 {inputs, config, lib, osConfig, ...}:
 {
   options = {
-    bundles.desktopFull.firefox.enable = lib.mkOption {
+    bundles.desktopBase.firefox.enable = lib.mkOption {
       type = lib.types.bool;
       default = false;
     };
@@ -10,7 +10,7 @@
 
   imports = [./shyfox];
 
-  config = lib.mkIf config.bundles.desktopFull.firefox.enable {
+  config = lib.mkIf config.bundles.desktopBase.firefox.enable {
     home = {
       sessionVariables = {
         MOZ_USE_XINPUT2 = 1;
