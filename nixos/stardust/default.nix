@@ -16,7 +16,7 @@
     userAccount.username = "gene";
     desktopTheme = {
       name = "caroline";
-      wallpaper = ./wallpapers/caroline-flowers-2.png;
+      wallpaper = ./wallpapers/caroline-sand.jpg;
       sddm = {
         scale = 1.3;
         wallpaper = ./wallpapers/caroline-flowers.png;
