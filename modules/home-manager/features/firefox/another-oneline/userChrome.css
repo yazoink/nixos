@@ -21,26 +21,10 @@
   margin-right: 12px !important;
 }
 
-/* Page back and foward buttons */
-#back-button,
-#forward-button
-{
-  display: none !important
-}
-
-/* Extensions button */
-#unified-extensions-button {
-  display: none !important
-}
 
 /* Extension name inside URL bar */
 #identity-box.extensionPage #identity-icon-label {
   visibility: collapse !important
-}
-
-/* All tabs (v-like) button */
-#alltabs-button {
-  display: none !important
 }
 
 /* URL bar icons */
