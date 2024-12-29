@@ -74,7 +74,7 @@ in
         #eval "$(starship init zsh)"
       '';
 
-      oh-my-zsh = {
+      /*oh-my-zsh = {
         enable = true;
         #theme = "robbyrussell";
         plugins = [
@@ -83,7 +83,7 @@ in
           "colorize"
           "colored-man-pages"
         ];
-      };
+      };*/
 
       shellAliases = myAliases;
     };
