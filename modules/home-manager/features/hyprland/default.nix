@@ -37,7 +37,7 @@ in
         hyprlandPlugins.hyprbars
       ];
       settings = {
-        "$terminal" = "foot";
+        "$terminal" = "footclient";
         "$browser" = "firefox";
         "$fileManager" = "thunar";
         "$menu" = "rofi -show drun";
@@ -56,9 +56,13 @@ in
           "hypridle"
           "poweralertd"
           "nm-applet"
+          "foot --server"
           "wl-clip-persist --clipboard regular"
         ];
-        monitor = if (osConfig.networking.hostName == "fluoride") then ["DP-2,2560x1440@59.95100,0x0,1" ",preferred,auto,1"] else [",preferred,auto,1"];
+        monitor = 
+          if (osConfig.networking.hostName == "fluoride") 
+          then ["DP-2,2560x1440@59.95100,0x0,1" ",preferred,auto,1"] 
+          else [",preferred,auto,1"];
         input = {
           kb_layout = "us";
           follow_mouse = 1;
