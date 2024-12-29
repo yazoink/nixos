@@ -79,6 +79,7 @@ in
           {
             name = "etps/2-elantech-touchpad";
             accel_profile = "custom 0.2144477506 0.000 0.307 0.615 1.077 1.539 2.002 2.505 3.208 3.910 4.613 5.315 6.018 6.720 7.423 8.125 8.828 9.530 10.233 10.935 12.387";
+            sensitivity = -0.3;
           }
         ];
         misc = {
@@ -89,6 +90,7 @@ in
           enable_swallow = true;
           swallow_regex = "(foot|kitty|allacritty|Alacritty)";
           force_default_wallpaper = 0;
+          font_family = config.stylix.fonts.sansSerif.name;
         };
         general = {
           gaps_in = 5;
