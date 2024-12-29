@@ -30,12 +30,11 @@ in
       enable = true;
       xwayland.enable = true;
       systemd.enable = true;
-      #plugins = with pkgs.hyprlandPlugins; [hyprscroller];
-      plugins = with inputs.hyprland-plugins.packages.${pkgs.stdenv.hostPlatform.system}; [
-        pkgs.hyprlandPlugins.hyprspace 
-        #pkgs.hyprlandPlugins.hypr-dynamic-cursors
-        pkgs.hyprlandPlugins.hyprbars
-        #hyprbars # broken?
+      plugins = with pkgs; [
+        hyprlandPlugins.hyprspace 
+        #hyprlandPlugins.hypr-dynamic-cursors
+        #hyprscroller
+        hyprlandPlugins.hyprbars
       ];
       settings = {
         "$terminal" = "foot";
@@ -75,6 +74,10 @@ in
             name = "tpps/2-ibm-trackpoint";
             accel_profile = "flat";
             sensitivity = 0.5;
+          }
+          {
+            name = "etps/2-elantech-touchpad";
+            sensitivity = 0.25;
           }
         ];
         misc = {
