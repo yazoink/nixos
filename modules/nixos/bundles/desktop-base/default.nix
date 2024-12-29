@@ -20,7 +20,6 @@
   config = lib.mkIf config.myOptions.bundles.desktopBase.enable {
     myOptions = {
       bundles.base.enable = true;
-      desktopTheme.enable = true;
     };
     bundles.desktopBase = {
       acpi.enable = true;
