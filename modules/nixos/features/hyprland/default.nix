@@ -1,5 +1,5 @@
 # relies on hyprland home-manager module
-{pkgs, inputs, config, lib, ...}:
+{pkgs, config, lib, ...}:
 {
   options = {
     bundles.desktopBase.hyprland.enable = lib.mkOption {
@@ -29,8 +29,6 @@
       hyprpicker
       hyprcursor
       hypridle
-      #inputs.hyprland-qtutils.packages.${pkgs.stdenv.hostPlatform.system}.hyprland-qtutils
-      #inputs.hyprsysteminfo.packages.${pkgs.stdenv.hostPlatform.system}.hyprsysteminfo # kvantum theme broken?
     ];
 
     services  = {
@@ -41,8 +39,6 @@
 
     programs.hyprland = {
       enable = true;
-      #package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
-      #portalPackage = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
       package = pkgs.hyprland;
       portalPackage = pkgs.xdg-desktop-portal-hyprland;
     };

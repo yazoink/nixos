@@ -1,4 +1,4 @@
-{pkgs, lib, config, osConfig, inputs,  ...}:
+{pkgs, lib, config, osConfig, ...}:
 let
   closeButtonColor = if (osConfig.myOptions.desktopTheme.name == "caroline") 
     then config.stylix.base16Scheme.base0E else config.stylix.base16Scheme.base08;
@@ -77,7 +77,7 @@ in
           }
           {
             name = "etps/2-elantech-touchpad";
-            sensitivity = 0.25;
+            sensitivity = 0.35;
           }
         ];
         misc = {
