@@ -21,10 +21,7 @@
         scale = 1.3;
         wallpaper = ./wallpapers/caroline-sand.jpg;
       };
-      firefoxCss.shyfox = {
-        enable = false;
-        wallpaper = ./wallpapers/caroline-sand.jpg;
-      };
+      firefoxCss.firefoxUiFix.enable = true;
     };
     bundles = {
       desktopFull.enable = true;

@@ -8,7 +8,7 @@
     };
   };
 
-  imports = [./shyfox];
+  imports = [./shyfox ./firefox-ui-fix];
 
   config = lib.mkIf config.bundles.desktopBase.firefox.enable {
     home = {
