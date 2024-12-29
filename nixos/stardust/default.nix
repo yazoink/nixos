@@ -16,14 +16,14 @@
     userAccount.username = "gene";
     desktopTheme = {
       name = "caroline";
-      wallpaper = ./wallpapers/caroline-flowers.png;
+      wallpaper = ./wallpapers/caroline-sand.jpg;
       sddm = {
         scale = 1.3;
-        wallpaper = ./wallpapers/caroline-waves.png;
+        wallpaper = ./wallpapers/caroline-sand.jpg;
       };
       firefoxCss.shyfox = {
         enable = true;
-        wallpaper = ./wallpapers/caroline-waves.png;
+        wallpaper = ./wallpapers/caroline-sand.jpg;
       };
     };
     bundles = {
