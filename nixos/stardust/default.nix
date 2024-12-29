@@ -19,7 +19,7 @@
       wallpaper = ./wallpapers/caroline-sand.jpg;
       sddm = {
         scale = 1.3;
-        wallpaper = ./wallpapers/caroline-sand.jgp;
+        wallpaper = ./wallpapers/caroline-sand.jpg;
       };
       firefoxCss.shyfox = {
         enable = true;

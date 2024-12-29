@@ -19,7 +19,7 @@
       "name": "shutdown",
       "image": "icons/shutdown.png",
       "label": "Shutdown",
-      "command": "systemctl shutdown"
+      "command": "shutdown now"
     },
     {
       "name": "suspend",
