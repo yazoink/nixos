@@ -16,10 +16,10 @@
     userAccount.username = "gene";
     desktopTheme = {
       name = "caroline";
-      wallpaper = ./wallpapers/caroline-sand.jpg;
+      wallpaper = ./wallpapers/caroline-flowers3.png;
       sddm = {
         scale = 1.3;
-        wallpaper = ./wallpapers/caroline-sand.jpg;
+        wallpaper = ./wallpapers/caroline-flowers2.png;
       };
       firefoxCss.anotherOneline.enable = true;
     };
