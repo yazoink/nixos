@@ -15,7 +15,7 @@
   myOptions = {
     userAccount.username = "gene";
     desktopTheme = {
-      name = "caroline";
+      name = "tarot";
       wallpaper = ./wallpapers/caroline-flowers3.png;
       sddm = {
         scale = 1.3;
@@ -25,6 +25,11 @@
     };
     bundles = {
       desktopFull.enable = true;
+    };
+    features = {
+      minetest.enable = true;
+      pychess.enable = true;
+      knavalbattle.enable = true;
     };
     hardwareFeatures = {
       ssd.enable = true;

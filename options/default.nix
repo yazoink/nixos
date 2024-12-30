@@ -102,6 +102,10 @@
           type = lib.types.bool;
           default = false;
         };
+        minetest.enable = lib.mkOption {
+          type = lib.types.bool;
+          default = false;
+        };
         ollama.enable = lib.mkOption {
           type = lib.types.bool;
           default = false;
