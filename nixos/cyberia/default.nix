@@ -25,11 +25,7 @@
         wallpaper = ./wallpapers/caroline-waves.png;
         #wallpaper = ./wallpapers/sand-wizard.jpg;
       };
-      firefoxCss.shyfox = {
-        enable = true;
-        wallpaper = ./wallpapers/caroline-waves.png;
-        #wallpaper = ./wallpapers/sand-wizard.jpg;
-      };
+      firefoxCss.anotherOneline.enable = true;
     };
     bundles = {
       desktopFull.enable = true;
