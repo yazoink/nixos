@@ -317,7 +317,7 @@ in
             "winOut, 0.3, -0.3, 0, 1"
             "liner, 1, 1, 1, 1"
           ];
-          animations = [
+          animation = [
             "windows, 1, 6, wind, slide"
             "windowsIn, 1, 6, winIn, slide"
             "windowsOut, 1, 5, winOut, slide"
