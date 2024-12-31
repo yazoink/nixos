@@ -35,6 +35,7 @@
       virtualbox.enable = true;
       vscode.enable = false;
       spaceCadetPinball.enable = true;
+      prismlauncher.enable = true;
     };
     hardwareFeatures = {
       diskBurner.enable = true;
