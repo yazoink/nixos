@@ -3,6 +3,16 @@
 {lib, ...}: {
   options = {
     myOptions = {
+      windowManager = {
+        name = lib.mkOption {
+          type = lib.types.str;
+          default = "hyprland";
+        };
+        isWayland = lib.mkOption {
+          type = lib.types.bool;
+          default = true;
+        };
+      };
       userAccount = {
         username = lib.mkOption {
           type = lib.types.str;
