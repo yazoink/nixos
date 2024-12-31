@@ -4,6 +4,7 @@ My NixOS desktop configs with home-manager and Hyprland.
 ## Hosts
 - Cyberia: Coreboot ThinkPad T430
 - Fluoride: Desktop PC (R5 5600/RX 6600)
+- Stardust: Acer TravelMate B113-E netbook
 
 ## Software
 - WM: Hyprland
