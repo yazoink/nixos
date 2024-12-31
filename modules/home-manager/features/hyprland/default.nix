@@ -47,12 +47,14 @@ in
           "NIXOS_OZONE_WL,1"
           "MOZ_ENABLE_WAYLAND,1"
           "GDK_BACKEND,wayland"
+          "GDK_SCALE,1"
           "CLUTTER_BACKEND,wayland"
           "XDG_CURRENT_DESKTOP,Hyprland"
           "XDG_SESSION_TYPE,wayland"
           "QT_AUTO_SCREEN_SCALE_FACTOR,1"
           "QT_WAYLAND_DISABLE_WINDOWDECORATION,1"
-          "QT_QPA_PLATFORM,wayland"
+          "QT_QPA_PLATFORM,wayland;xcb"
+          "QT_SCALE_FACTOR,1"
         ];
         exec-once = [
           "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
@@ -307,24 +309,26 @@ in
           "plugin:hyprbars:nobar, title:^(Empty Trash)$"
           "plugin:hyprbars:nobar, title:^(File Manager Preferences)$"
         ];
+        animations = {
+          enabled = true;
+          bezier = [
+            "wind, 0.05, 0.9, 0.1, 1.05"
+            "winIn, 0.1, 1.1, 0.1, 1.1"
+            "winOut, 0.3, -0.3, 0, 1"
+            "liner, 1, 1, 1, 1"
+          ];
+          animations = [
+            "windows, 1, 6, wind, slide"
+            "windowsIn, 1, 6, winIn, slide"
+            "windowsOut, 1, 5, winOut, slide"
+            "windowsMove, 1, 5, wind, slide"
+            "border, 1, 1, liner"
+            "borderangle, 1, 30, liner, once"
+            "fade, 1, 10, default"
+            "workspaces, 1, 5, wind"
+          ];
+        };
       };
-      extraConfig = ''
-        animations {
-          enabled = yes
-          bezier = wind, 0.05, 0.9, 0.1, 1.05
-          bezier = winIn, 0.1, 1.1, 0.1, 1.1
-          bezier = winOut, 0.3, -0.3, 0, 1
-          bezier = liner, 1, 1, 1, 1
-          animation = windows, 1, 6, wind, slide
-          animation = windowsIn, 1, 6, winIn, slide
-          animation = windowsOut, 1, 5, winOut, slide
-          animation = windowsMove, 1, 5, wind, slide
-          animation = border, 1, 1, liner
-          animation = borderangle, 1, 30, liner, once
-          animation = fade, 1, 10, default
-          animation = workspaces, 1, 5, wind
-        }
-      '';
     };
   };
 }
