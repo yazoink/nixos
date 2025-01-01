@@ -8,7 +8,7 @@ in
       carobTheme
     ];
 
-    desktopTheme.base16Accent = "base0E";
+    desktopTheme.base16Accent = "base0D";
 
     stylix = {
       cursor = {
