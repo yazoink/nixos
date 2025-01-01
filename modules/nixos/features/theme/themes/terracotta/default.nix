@@ -1,7 +1,7 @@
 {pkgs, config, lib, ...}:
 {
   config = lib.mkIf (config.myOptions.bundles.desktopBase.enable && config.myOptions.desktopTheme.name == "terracotta") {
-    desktopTheme.base16Accent = "base0D";
+    desktopTheme.base16Accent = "base0E";
 
     stylix = {
       base16Scheme = {
