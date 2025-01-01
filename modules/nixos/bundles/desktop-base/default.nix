@@ -1,6 +1,8 @@
 {config, lib, ...}:
 {
   imports = [
+    ../../features/file-managers
+
     ../../features/acpi
     ../../features/audio
     ../../features/dconf
@@ -14,7 +16,6 @@
     ../../features/sddm
     ../../features/silent-boot
     ../../features/theme
-    ../../features/thunar
   ];
 
   config = lib.mkIf config.myOptions.bundles.desktopBase.enable {

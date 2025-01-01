@@ -74,7 +74,6 @@
     ../../features/soundboard
     ../../features/usdtoaud
     ../../features/vesktop
-    ../../features/vscode
     ../../features/yt-dlp
   ];
 }

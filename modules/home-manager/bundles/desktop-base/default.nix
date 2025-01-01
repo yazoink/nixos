@@ -16,24 +16,25 @@
   };
 
   imports = [
-    ../../features/atril
+    ../../features/gui-editors
+    ../../features/document-readers
+    ../../features/terminals
+    ../../features/archivers
+    ../../features/browsers
+    ../../features/image-viewers
+    ../../features/media-players
+
     ../../features/direnv
     ../../features/dither
-    ../../features/firefox
-    ../../features/foot
-    ../../features/file-roller
     ../../features/gtklock
     ../../features/hyprland
     ../../features/hyprviewbinds
     ../../features/mako
-    ../../features/pluma
     ../../features/replacecolor
     ../../features/rofi
-    ../../features/ristretto
     ../../features/screenshot
     ../../features/simple-logout
     ../../features/theme
-    ../../features/vlc
     ../../features/waybar
     ../../features/xdg
   ];
