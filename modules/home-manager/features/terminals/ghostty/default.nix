@@ -43,14 +43,6 @@
       palette = 13=#${base16Scheme.base0E}
       palette = 14=#${base16Scheme.base0C}
       palette = 15=#${base16Scheme.base07}
-
-      # Additional base16 colors
-      palette = 16=#${base16Scheme.base09}
-      palette = 17=#${base16Scheme.base0F}
-      palette = 18=#${base16Scheme.base01}
-      palette = 19=#${base16Scheme.base02}
-      palette = 20=#${base16Scheme.base04}
-      palette = 21=#${base16Scheme.base06}
     '';
   };
 }
