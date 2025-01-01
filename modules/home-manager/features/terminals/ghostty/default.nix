@@ -18,6 +18,14 @@
       background = ${base16Scheme.base00}
       foreground = ${base16Scheme.base05}
 
+      # Cursor colors
+      cursor-color = ${base16Scheme.base05}
+      cursor-text = ${base16Scheme.base00}
+
+      # Selection colors
+      selection-background = ${base16Scheme.base02}
+      selection-foreground = ${base16Scheme.base05}
+
       # Color palette
       palette = 0=#${base16Scheme.base00}
       palette = 1=#${base16Scheme.base08}
@@ -43,14 +51,6 @@
       palette = 19=#${base16Scheme.base02}
       palette = 20=#${base16Scheme.base04}
       palette = 21=#${base16Scheme.base06}
-
-      # Cursor colors
-      cursor-color = ${base16Scheme.base05}
-      cursor-text = ${base16Scheme.base00}
-
-      # Selection colors
-      selection-background = ${base16Scheme.base02}
-      selection-foreground = ${base16Scheme.base05}
     '';
   };
 }
