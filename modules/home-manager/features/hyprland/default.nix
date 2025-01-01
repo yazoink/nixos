@@ -108,7 +108,7 @@ in
           border_size = 2;
           layout = "dwindle";
           allow_tearing = false;
-          "col.inactive_border" = lib.mkForce "rgb(${config.stylix.base16Scheme.base02})";
+          "col.inactive_border" = lib.mkForce "rgb(${config.stylix.base16Scheme.base01})";
           "col.active_border" = builtins.trace "set accent color in hyprland config" lib.mkForce "rgb(${config.stylix.base16Scheme.${osConfig.desktopTheme.base16Accent}})";
         };
         decoration = {
