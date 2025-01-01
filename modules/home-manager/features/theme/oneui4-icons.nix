@@ -13,7 +13,6 @@ pkgs.stdenv.mkDerivation {
 
   installPhase = ''
     mkdir -p $out/share/icons
-    cp -r $src/OneUI $out/share/icons
     cp -r $src/OneUI-dark $out/share/icons
     cp -r $src/OneUI-light $out/share/icons
   '';
