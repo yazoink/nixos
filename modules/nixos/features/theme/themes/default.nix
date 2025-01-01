@@ -13,5 +13,6 @@
     ./terracotta
     ./atelier-savanna
     ./blood-rust
+    ./spirit
   ];
 }
