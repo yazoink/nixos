@@ -51,7 +51,7 @@
       username = "gene";
     };
     desktopTheme = {
-      name = "terracotta";
+      name = "atelier-savanna";
       wallpaper = ./wallpapers/caroline-flowers.png;
       sddm = {
         scale = 1;

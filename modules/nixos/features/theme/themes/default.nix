@@ -11,5 +11,6 @@
     ./swamp
     ./mountain
     ./terracotta
+    ./atelier-savanna
   ];
 }
