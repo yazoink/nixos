@@ -9,5 +9,6 @@
     ./embers
     ./twilight
     ./swamp
+    ./mountain
   ];
 }
