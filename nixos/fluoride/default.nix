@@ -51,7 +51,7 @@
       username = "gene";
     };
     desktopTheme = {
-      name = "atelier-savanna";
+      name = "blood-rust";
       wallpaper = ./wallpapers/caroline-flowers.png;
       sddm = {
         scale = 1;

@@ -12,5 +12,6 @@
     ./mountain
     ./terracotta
     ./atelier-savanna
+    ./blood-rust
   ];
 }
