@@ -8,7 +8,7 @@
     ./one-line-firefox
   ];
 
-  config = if (osConfig.myOptions.bundles.desktopBase.enable && (osConfig.myOptions.defaultApps.webBrowser.command == "firefox")) then {
+  config = lib.mkIf (osConfig.myOptions.bundles.desktopBase.enable && osConfig.myOptions.defaultApps.webBrowser.command == "firefox") {
     home = {
       sessionVariables = {
         MOZ_USE_XINPUT2 = 1;
@@ -88,5 +88,5 @@
         });*/
       };
     };
-  } else {};
+  };
 }

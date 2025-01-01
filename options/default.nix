@@ -8,6 +8,7 @@
           command = lib.mkOption {
             type = lib.types.str;
             default = "thunar";
+            description = "options: thunar";
           };
           desktopFile = lib.mkOption {
             type = lib.types.str;
@@ -18,6 +19,7 @@
           command = lib.mkOption {
             type = lib.types.str;
             default = "pluma";
+            description = "options: pluma";
           };
           desktopFile = lib.mkOption {
             type = lib.types.str;
@@ -28,6 +30,7 @@
           command = lib.mkOption {
             type = lib.types.str;
             default = "atril";
+            description = "options: atril";
           };
           desktopFile = lib.mkOption {
             type = lib.types.str;
@@ -38,6 +41,7 @@
           command = lib.mkOption {
             type = lib.types.str;
             default = "vlc";
+            description = "options: vlc";
           };
           desktopFile = lib.mkOption {
             type = lib.types.str;
@@ -48,6 +52,7 @@
           command = lib.mkOption {
             type = lib.types.str;
             default = "firefox";
+            description = "options: firefox";
           };
           desktopFile = lib.mkOption {
             type = lib.types.str;
@@ -58,6 +63,7 @@
           command = lib.mkOption {
             type = lib.types.str;
             default = "ristretto";
+            description = "options: ristretto";
           };
           desktopFile = lib.mkOption {
             type = lib.types.str;
@@ -68,6 +74,7 @@
           command = lib.mkOption {
             type = lib.types.str;
             default = "file-roller";
+            description = "options: file-roller";
           };
           desktopFile = lib.mkOption {
             type = lib.types.str;
@@ -78,6 +85,7 @@
           command = lib.mkOption {
             type = lib.types.str;
             default = "footclient";
+            description = "options: foot, footclient";
           };
           desktopFile = lib.mkOption {
             type = lib.types.str;
