@@ -7,5 +7,6 @@
     ./tarot
     ./wizard
     ./embers
+    ./twilight
   ];
 }
