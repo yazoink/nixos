@@ -23,10 +23,7 @@
         scale = 0.7;
         wallpaper = ./wallpapers/caroline-waves.png;
       };
-      firefoxCss.shyfox = {
-        enable = true;
-        wallpaper = ./wallpapers/caroline-waves.png;
-      };
+      firefoxCss.anotherOneline.enable = true;
     };
     bundles = {
       desktopFull.enable = true;
