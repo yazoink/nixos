@@ -11,7 +11,7 @@ pkgs.stdenv.mkDerivation {
 
   dontUnpack = true;
 
-  installPhase = ''
+  buildPhase = ''
     mkdir -p $out/share/icons
     cp -r $src/OneUI-dark $out/share/icons
     cp -r $src/OneUI-light $out/share/icons
