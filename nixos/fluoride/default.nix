@@ -42,6 +42,10 @@
         command = "footclient";
         desktopFile = "footclient.desktop";
       };
+      webBrowser = {
+        command = "zen";
+        desktopFile = "zen.desktop";
+      };
     };
     userAccount = {
       username = "gene";
