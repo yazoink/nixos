@@ -7,7 +7,8 @@
     };
   };
   config = lib.mkIf config.bundles.desktopFull.gimp.enable {
-    home.packages = with pkgs; [gimp-with-plugins];
+    #home.packages = with pkgs; [gimp-with-plugins];
+    home.packages = with pkgs; [gimp];
     xdg.configFile = {
       "GIMP/2.10/palettes/carob.gpl".source = ./palettes/carob.gpl;
       "GIMP/2.10/palettes/caroline.gpl".source = ./palettes/caroline.gpl;
