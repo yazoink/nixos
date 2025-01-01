@@ -39,8 +39,8 @@
         desktopFile = "org.gnome.FileRoller.desktop";
       };
       terminal = {
-        command = "footclient";
-        desktopFile = "footclient.desktop";
+        command = "ghostty";
+        desktopFile = "ghostty.desktop";
       };
       webBrowser = {
         command = "zen";
