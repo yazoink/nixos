@@ -1,15 +1,9 @@
 {config, lib, osConfig, ...}:
 {
-  options = {
-    bundles.desktopBase.foot.enable = lib.mkOption {
-      type = lib.types.bool;
-      default = false;
-    };
-  };
-  config = lib.mkIf config.bundles.desktopBase.foot.enable {
+  config = lib.mkIf (osConfig.myOptions.bundles.desktopBase.enable && (osConfig.myOptions.defaultApps.terminal.command == "foot" || osConfig.defaultApps.terminal.command == "footclient")) {
     programs.foot = {
       enable = true;
-      #server.enable = true;
+      server.enable = lib.mkIf (osConfig.myOptions.defaultApps.terminal.command == "footclient") true;
       settings = {
         main = {
           pad = if osConfig.networking.hostName == "cyberia" then "16x16" else (if osConfig.networking.hostName == "fluoride" then "24x24" else "20x20");

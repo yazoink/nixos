@@ -1,12 +1,12 @@
-{config, lib, ...}:
+{config, lib, osConfig, ...}:
 let
-  fileManager = "thunar.desktop";
-  textEditor = "pluma.desktop";
-  documentReader = "atril.desktop";
-  mediaPlayer = "vlc.desktop";
-  browser = "firefox.desktop";
-  imageViewer = "org.xfce.ristretto.desktop";
-  archiver = "org.gnome.FileRoller.desktop";
+  fileManager = osConfig.myOptions.defaultApps.fileManager.desktopFile;
+  textEditor = osConfig.myOptions.defaultApps.fileManager.desktopFile;
+  documentReader = osConfig.myOptions.defaultApps.fileManager.desktopFile;
+  mediaPlayer = osConfig.myOptions.defaultApps.fileManager.desktopFile;
+  browser = osConfig.myOptions.defaultApps.fileManager.desktopFile;
+  imageViewer = osConfig.myOptions.defaultApps.fileManager.desktopFile;
+  archiver = osConfig.myOptions.defaultApps.fileManager.desktopFile;
 in
 {
   options = {

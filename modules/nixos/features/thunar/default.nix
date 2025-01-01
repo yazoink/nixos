@@ -1,13 +1,6 @@
 {pkgs, config, lib, ...}:
 {
-  options = {
-    bundles.desktopBase.thunar.enable = lib.mkOption {
-      type = lib.types.bool;
-      default = false;
-    };
-  };
-  config = lib.mkIf config.bundles.desktopBase.thunar.enable {
-    environment.systemPackages = with pkgs; [xfce.ristretto];
+  config = lib.mkIf (config.myOptions.bundles.desktopBase.enable && config.myOptions.defaultApps.fileManager.command == "thunar") {
     programs = {
       thunar = {
         enable = true;
@@ -18,7 +11,6 @@
         ];
       };
       xfconf.enable = true;
-      file-roller.enable = true;
     };
 
     services = {

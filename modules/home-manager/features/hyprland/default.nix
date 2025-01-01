@@ -32,9 +32,9 @@ in
         hyprlandPlugins.hyprbars
       ];
       settings = {
-        "$terminal" = "footclient";
-        "$browser" = "firefox";
-        "$fileManager" = "thunar";
+        "$terminal" = "${osConfig.myOptions.defaultApps.terminal.command}";
+        "$browser" = "${osConfig.myOptions.defaultApps.browser.command}";
+        "$fileManager" = "${osConfig.myOptions.defaultApps.fileManager.command}";
         "$menu" = "rofi -show drun";
         "$screenshot" = "${config.bundles.desktopBase.screenshot.package}/bin/screenshot -s";
         "$power" = "simple-logout";
@@ -64,7 +64,6 @@ in
           "hypridle"
           "poweralertd"
           "nm-applet"
-          "foot --server"
           "wl-clip-persist --clipboard regular"
         ];
         monitor = 

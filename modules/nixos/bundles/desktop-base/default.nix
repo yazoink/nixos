@@ -34,7 +34,6 @@
       polkit.enable = true;
       sddm.enable = true;
       silentBoot.enable = true;
-      thunar.enable = true;
     };
   };
 }

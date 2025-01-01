@@ -3,6 +3,88 @@
 {lib, ...}: {
   options = {
     myOptions = {
+      defaultApps = {
+        fileManager = {
+          command = lib.mkOption {
+            type = lib.types.str;
+            default = "thunar";
+          };
+          desktopFile = lib.mkOption {
+            type = lib.types.str;
+            default = "thunar.desktop";
+          };
+        };
+        guiTextEditor = {
+          command = lib.mkOption {
+            type = lib.types.str;
+            default = "pluma";
+          };
+          desktopFile = lib.mkOption {
+            type = lib.types.str;
+            default = "pluma.desktop";
+          };
+        };
+        documentReader = {
+          command = lib.mkOption {
+            type = lib.types.str;
+            default = "atril";
+          };
+          desktopFile = lib.mkOption {
+            type = lib.types.str;
+            default = "atril.desktop";
+          };
+        };
+        mediaPlayer = {
+          command = lib.mkOption {
+            type = lib.types.str;
+            default = "vlc";
+          };
+          desktopFile = lib.mkOption {
+            type = lib.types.str;
+            default = "vlc.desktop";
+          };
+        };
+        webBrowser = {
+          command = lib.mkOption {
+            type = lib.types.str;
+            default = "firefox";
+          };
+          desktopFile = lib.mkOption {
+            type = lib.types.str;
+            default = "firefox.desktop";
+          };
+        };
+        imageViewer = {
+          command = lib.mkOption {
+            type = lib.types.str;
+            default = "ristretto";
+          };
+          desktopFile = lib.mkOption {
+            type = lib.types.str;
+            default = "org.xfce.ristretto.desktop";
+          };
+        };
+        archiver = {
+          command = lib.mkOption {
+            type = lib.types.str;
+            default = "file-roller";
+          };
+          desktopFile = lib.mkOption {
+            type = lib.types.str;
+            default = "org.gnome.FileRoller.desktop";
+          };
+        };
+        terminal = {
+          command = lib.mkOption {
+            type = lib.types.str;
+            default = "footclient";
+          };
+          desktopFile = lib.mkOption {
+            type = lib.types.str;
+            default = "footclient.desktop";
+          };
+        };
+      };
       userAccount = {
         username = lib.mkOption {
           type = lib.types.str;

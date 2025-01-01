@@ -13,6 +13,36 @@
   ];
 
   myOptions = builtins.trace "options set" {
+    defaultApps = {
+      fileManager = {
+        command = "thunar";
+        desktopFile = "thunar.desktop";
+      };
+      guiTextEditor = {
+        command = "pluma";
+        desktopFile = "pluma.desktop";
+      };
+      documentReader = {
+        command = "atril";
+        desktopFile = "atril.desktop";
+      };
+      mediaPlayer = {
+        command = "vlc";
+        desktopFile = "vlc.desktop";
+      };
+      imageViewer = {
+        command = "ristretto";
+        desktopFile = "org.xfce.ristretto.desktop";
+      };
+      archiver = {
+        command = "file-roller";
+        desktopFile = "org.gnome.FileRoller.desktop";
+      };
+      terminal = {
+        command = "footclient";
+        desktopFile = "footclient.desktop";
+      };
+    };
     userAccount = {
       username = "gene";
     };

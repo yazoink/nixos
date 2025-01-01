@@ -22,11 +22,9 @@
 
       ### gui file viewers ###
       vlc
-      mate.atril
       sublime-music
 
       ### gui file editors ###
-      mate.pluma
       audacity
       libreoffice-qt
       inkscape
