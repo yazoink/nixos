@@ -20,7 +20,7 @@
     nixcord.url = "github:kaylorben/nixcord";
     sops-nix.url = "github:Mic92/sops-nix";
     zen-browser = {
-      url = "github:NikSneMC/zen-browser-flake";
+      url = "github:linuxmobile/zen-browser-flake";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
