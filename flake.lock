@@ -828,15 +828,15 @@
         ]
       },
       "locked": {
-        "lastModified": 1735175082,
+        "lastModified": 1735173821,
         "narHash": "sha256-t+6c+cbKv9Ff4ctJl5pZpyISPcrtBQEf+tbt1xn9cnw=",
-        "owner": "NikSneMC",
+        "owner": "linuxmobile",
         "repo": "zen-browser-flake",
-        "rev": "c0bbbbd4cfc3ddc2883a31d92d84370f4822cecd",
+        "rev": "e59e0757c1c89dc6d7e3b9774da529b6d2d9605e",
         "type": "github"
       },
       "original": {
-        "owner": "NikSneMC",
+        "owner": "linuxmobile",
         "repo": "zen-browser-flake",
         "type": "github"
       }
