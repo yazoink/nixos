@@ -51,7 +51,7 @@
       username = "gene";
     };
     desktopTheme = {
-      name = "carob";
+      name = "caroline";
       wallpaper = ./wallpapers/caroline-flowers.png;
       sddm = {
         scale = 1;
