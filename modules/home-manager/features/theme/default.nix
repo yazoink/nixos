@@ -41,7 +41,7 @@ in
           .window-frame, .window-frame:backdrop {
             border-style: solid;
             border-width: 1px;
-            border-color: ${base01};
+            border-color: #${base01};
             margin: 0;
           }
 
