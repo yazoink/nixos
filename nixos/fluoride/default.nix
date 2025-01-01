@@ -43,8 +43,8 @@
         desktopFile = "footclient.desktop";
       };
       webBrowser = {
-        command = "zen";
-        desktopFile = "zen.desktop";
+        command = "firefox";
+        desktopFile = "firefox.desktop";
       };
     };
     userAccount = {
