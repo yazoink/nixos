@@ -10,5 +10,6 @@
     ./twilight
     ./swamp
     ./mountain
+    ./terracotta
   ];
 }
