@@ -38,13 +38,6 @@ in
           @define-color accent_color #${config.stylix.base16Scheme.${osConfig.desktopTheme.base16Accent}};
           @define-color accent_bg_color #${config.stylix.base16Scheme.${osConfig.desktopTheme.base16Accent}};
 
-          .window-frame, .window-frame:backdrop {
-            border-style: solid;
-            border-width: 1px;
-            border-color: #${base01};
-            margin: 0;
-          }
-
            /* No (default) title bar on wayland */
           headerbar.default-decoration {
             /* You may need to tweak these values depending on your GTK theme */
