@@ -45,12 +45,12 @@
       palette = 21=#${base16Scheme.base06}
 
       # Cursor colors
-      cursor_color = #${base16Scheme.base05}
-      cursor_text = #${base16Scheme.base00}
+      cursor-color = #${base16Scheme.base05}
+      cursor-text = #${base16Scheme.base00}
 
       # Selection colors
-      selection_background = #${base16Scheme.base02}
-      selection_foreground = #${base16Scheme.base05}
+      selection-background = #${base16Scheme.base02}
+      selection-foreground = #${base16Scheme.base05}
     '';
   };
 }
