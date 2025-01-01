@@ -15,8 +15,8 @@
       font-size = ${builtins.toString fonts.sizes.terminal}
 
       # Base colors
-      background = #${base16Scheme.base00}
-      foreground = #${base16Scheme.base05}
+      background = ${base16Scheme.base00}
+      foreground = ${base16Scheme.base05}
 
       # Color palette
       palette = 0=#${base16Scheme.base00}
@@ -45,12 +45,12 @@
       palette = 21=#${base16Scheme.base06}
 
       # Cursor colors
-      cursor-color = #${base16Scheme.base05}
-      cursor-text = #${base16Scheme.base00}
+      cursor-color = ${base16Scheme.base05}
+      cursor-text = ${base16Scheme.base00}
 
       # Selection colors
-      selection-background = #${base16Scheme.base02}
-      selection-foreground = #${base16Scheme.base05}
+      selection-background = ${base16Scheme.base02}
+      selection-foreground = ${base16Scheme.base05}
     '';
   };
 }
