@@ -1,7 +1,7 @@
 {pkgs, config, lib, ...}:
 {
   config = lib.mkIf (config.myOptions.bundles.desktopBase.enable && config.myOptions.desktopTheme.name == "embers") {
-    desktopTheme.base16Accent = "base0F";
+    desktopTheme.base16Accent = "base09";
 
     stylix = {
       base16Scheme = {
