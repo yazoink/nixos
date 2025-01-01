@@ -6,7 +6,7 @@ let
   };
 in
 {
-  config = lib.mkIf (osConfig.myOptions.bundles.desktopBase.enable && osConfig.myOptions.defaultApps.webBrowser.command == "firefox" && osConfig.myOptions.desktopTheme.firefoxCss.shyfox.enable) {
+  config = lib.mkIf (osConfig.myOptions.bundles.desktopBase.enable && (osConfig.myOptions.defaultApps.webBrowser.command == "firefox") && osConfig.myOptions.desktopTheme.firefoxCss.shyfox.enable) {
     home.file = {
       ".mozilla/firefox/${osConfig.myOptions.userAccount.username}/chrome/icons" = {
         source = ./chrome/icons;
