@@ -1,6 +1,6 @@
 {config, lib, osConfig, ...}:
 {
-  config = lib.mkIf (osConfig.myOptions.bundles.desktopBase.enable && (osConfig.myOptions.defaultApps.terminal.command == "foot" || osConfig.defaultApps.terminal.command == "footclient")) {
+  config = lib.mkIf (osConfig.myOptions.bundles.desktopBase.enable && (osConfig.myOptions.defaultApps.terminal.command == "foot" || osConfig.myOptions.defaultApps.terminal.command == "footclient")) {
     programs.foot = {
       enable = true;
       server.enable = lib.mkIf (osConfig.myOptions.defaultApps.terminal.command == "footclient") true;
