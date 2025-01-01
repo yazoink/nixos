@@ -3,9 +3,9 @@
   config = lib.mkIf config.myOptions.hardwareFeatures.amdgpu.enable {
     boot.kernelParams = [ "amd_iommu=on" ];
 
-    systemd.tmpfiles.rules = [
+    /*systemd.tmpfiles.rules = [
       "L+    /opt/rocm/hip   -    -    -     -    ${pkgs.rocmPackages.clr}"
-    ];
+    ];*/
 
     environment.variables = {
       LIBVA_DRIVER_NAME = "radeonsi";
@@ -35,9 +35,9 @@
 
     services.xserver.videoDrivers = ["amdgpu"];
 
-    environment.systemPackages = with pkgs; [
+    /*environment.systemPackages = with pkgs; [
       rocmPackages.rocm-smi
       rocmPackages.rocminfo
-    ];
+    ];*/
   };
 }
