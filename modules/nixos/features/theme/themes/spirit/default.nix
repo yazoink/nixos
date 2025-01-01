@@ -13,7 +13,7 @@
         base05 = "ABA27F";
         base06 = "ABA27F";
         base07 = "ABA27F";
-        base08 = "734748";
+        base08 = "6B393B";
         base09 = "7B5C4D";
         base0A = "7E6A53";
         base0B = "807858";
