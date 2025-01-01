@@ -10,7 +10,6 @@ in
 
   config = lib.mkIf osConfig.bundles.desktopBase.hyprland.enable {
     bundles.desktopBase = {
-      foot.enable = true;
       mako.enable = true;
       rofi.enable = true;
       screenshot.enable = true;
