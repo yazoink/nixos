@@ -6,5 +6,6 @@
     ./rosepine
     ./tarot
     ./wizard
+    ./embers
   ];
 }
