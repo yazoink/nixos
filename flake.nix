@@ -19,6 +19,10 @@
     };
     nixcord.url = "github:kaylorben/nixcord";
     sops-nix.url = "github:Mic92/sops-nix";
+    zen-browser = {
+      url = "github:NikSneMC/zen-browser-flake";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = {
@@ -26,6 +30,7 @@
     home-manager,
     stylix,
     nixos-hardware,
+    zen-browser,
     nixvim,
     ...
   } @ inputs: let
