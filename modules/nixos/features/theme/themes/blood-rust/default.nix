@@ -1,7 +1,7 @@
 {pkgs, config, lib, ...}:
 {
   config = lib.mkIf (config.myOptions.bundles.desktopBase.enable && config.myOptions.desktopTheme.name == "blood-rust") {
-    desktopTheme.base16Accent = "base0E";
+    desktopTheme.base16Accent = "base08";
 
     stylix = {
       base16Scheme = {
