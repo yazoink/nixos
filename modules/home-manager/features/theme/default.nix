@@ -6,6 +6,7 @@ let
     extension = ".css";
   };
   kvantumGenerator = ./kvantum-generator/generate_kvantum.py;
+  oneUiIcons = pkgs.callPackage ./oneui4-icons.nix {};
 in
 {
   imports = [./themes];
@@ -119,7 +120,7 @@ in
         #libsForQt5.qtstyleplugins
         #kdePackages.qt6ct
         adw-gtk3
-        callPackage ./oneui4-icons.nix {}
+        oneUiIcons
       ];
     };
 
