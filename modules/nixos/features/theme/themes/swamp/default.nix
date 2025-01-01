@@ -1,7 +1,7 @@
 {pkgs, config, lib, ...}:
 {
   config = lib.mkIf (config.myOptions.bundles.desktopBase.enable && config.myOptions.desktopTheme.name == "swamp") {
-    desktopTheme.base16Accent = "base0A";
+    desktopTheme.base16Accent = "base0B";
 
     stylix = {
       base16Scheme = {
