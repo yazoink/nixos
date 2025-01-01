@@ -13,13 +13,13 @@
         base05 = "ABA27F";
         base06 = "ABA27F";
         base07 = "ABA27F";
-        base08 = "6B393B";
+        base08 = "734748";
         base09 = "7B5C4D";
         base0A = "7E6A53";
         base0B = "807858";
         base0C = "63685C";
         base0D = "465860";
-        base0E = "763F41";
+        base0E = "6f4d51";
         base0F = "75554F";
       };
     };
