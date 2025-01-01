@@ -54,7 +54,7 @@
       name = "caroline";
       wallpaper = ./wallpapers/caroline-flowers.png;
       sddm = {
-        scale = 0.8;
+        scale = 1;
         wallpaper = ./wallpapers/caroline-waves.png;
       };
       firefoxCss.anotherOneline.enable = true;
