@@ -32,7 +32,7 @@ in
       ];
       settings = {
         "$terminal" = "${osConfig.myOptions.defaultApps.terminal.command}";
-        "$browser" = "${osConfig.myOptions.defaultApps.browser.command}";
+        "$browser" = "${osConfig.myOptions.defaultApps.webBrowser.command}";
         "$fileManager" = "${osConfig.myOptions.defaultApps.fileManager.command}";
         "$menu" = "rofi -show drun";
         "$screenshot" = "${config.bundles.desktopBase.screenshot.package}/bin/screenshot -s";

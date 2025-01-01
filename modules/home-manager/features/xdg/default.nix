@@ -1,12 +1,12 @@
 {config, lib, osConfig, ...}:
 let
   fileManager = osConfig.myOptions.defaultApps.fileManager.desktopFile;
-  textEditor = osConfig.myOptions.defaultApps.fileManager.desktopFile;
-  documentReader = osConfig.myOptions.defaultApps.fileManager.desktopFile;
-  mediaPlayer = osConfig.myOptions.defaultApps.fileManager.desktopFile;
-  browser = osConfig.myOptions.defaultApps.fileManager.desktopFile;
-  imageViewer = osConfig.myOptions.defaultApps.fileManager.desktopFile;
-  archiver = osConfig.myOptions.defaultApps.fileManager.desktopFile;
+  textEditor = osConfig.myOptions.defaultApps.guiTextEditor.desktopFile;
+  documentReader = osConfig.myOptions.defaultApps.documentReader.desktopFile;
+  mediaPlayer = osConfig.myOptions.defaultApps.mediaPlayer.desktopFile;
+  browser = osConfig.myOptions.defaultApps.webBrowser.desktopFile;
+  imageViewer = osConfig.myOptions.defaultApps.imageViewer.desktopFile;
+  archiver = osConfig.myOptions.defaultApps.archiver.desktopFile;
 in
 {
   options = {
