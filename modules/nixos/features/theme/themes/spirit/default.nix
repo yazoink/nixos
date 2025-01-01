@@ -2,7 +2,7 @@
 {
   config = lib.mkIf (config.myOptions.bundles.desktopBase.enable && config.myOptions.desktopTheme.name == "spirit") {
     # I made this one
-    desktopTheme.base16Accent = "base0E";
+    desktopTheme.base16Accent = "base0F";
     stylix = {
       base16Scheme = {
         base00 = "212121";
