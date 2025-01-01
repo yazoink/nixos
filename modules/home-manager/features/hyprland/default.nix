@@ -102,6 +102,12 @@ in
           force_default_wallpaper = 0;
           font_family = config.stylix.fonts.sansSerif.name;
         };
+        gestures = {
+          workspace_swipe = 1;
+          workspace_swipe_fingers = 3;
+          workspace_swipe_forever = true;
+          workspace_swipe_direction_lock = false;
+        };
         general = {
           gaps_in = 5;
           gaps_out = 10;
