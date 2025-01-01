@@ -51,7 +51,7 @@
       username = "gene";
     };
     desktopTheme = {
-      name = "twilight";
+      name = "swamp";
       wallpaper = ./wallpapers/caroline-flowers.png;
       sddm = {
         scale = 1;

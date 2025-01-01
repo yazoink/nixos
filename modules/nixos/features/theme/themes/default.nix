@@ -8,5 +8,6 @@
     ./wizard
     ./embers
     ./twilight
+    ./swamp
   ];
 }
