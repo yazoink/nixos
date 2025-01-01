@@ -33,7 +33,6 @@
     features = {
       virtManager.enable = true;
       virtualbox.enable = true;
-      vscode.enable = false;
       spaceCadetPinball.enable = true;
       prismlauncher.enable = true;
     };

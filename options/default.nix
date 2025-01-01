@@ -19,7 +19,7 @@
           command = lib.mkOption {
             type = lib.types.str;
             default = "pluma";
-            description = "options: pluma";
+            description = "options: pluma, codium";
           };
           desktopFile = lib.mkOption {
             type = lib.types.str;
@@ -209,10 +209,6 @@
           default = false;
         };
         virtualbox.enable = lib.mkOption {
-          type = lib.types.bool;
-          default = false;
-        };
-        vscode.enable = lib.mkOption {
           type = lib.types.bool;
           default = false;
         };

@@ -1,6 +1,6 @@
 {pkgs, lib, osConfig, ...}:
 {
-  config = lib.mkIf osConfig.myOptions.features.vscode.enable {
+  config = lib.mkIf (osConfig.myOptions.bundles.desktopBase.enable && osConfig.myOptions.defaultApps.guiTextEditor == "codium") {
     programs.vscode = {
       enable = true;
       package = pkgs.vscodium;

@@ -66,7 +66,6 @@
       steam.enable = true;
       gamescope.enable = true;
       virtManager.enable = true;
-      vscode.enable = false;
     };
     hardwareFeatures = {
       amdgpu.enable = true;
