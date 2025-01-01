@@ -28,7 +28,7 @@
       audacity
       libreoffice-qt
       inkscape
-      shotcut
+      #shotcut
 
       ### gui utilities ###
       keepassxc
