@@ -5,7 +5,7 @@ stdenv.mkDerivation {
 
   src = ./dither;
 
-  nativeBuildInputs = [bash imagemagick coreutils];
+  buildInputs = [bash imagemagick coreutils];
 
   dontUnpack = true;
 
