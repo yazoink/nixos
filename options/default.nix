@@ -160,7 +160,7 @@
             default = false;
           };
           windowManager = lib.mkOption {
-            type = lib.types.string;
+            type = lib.types.str;
             default = "hyprland";
             description = "options: hyprland, sway";
           };

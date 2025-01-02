@@ -147,7 +147,7 @@
           "${modifier}+Shift+s" = "scratchpad show";
           "${modifier}+w" = "exec ${osConfig.myOptions.defaultApps.webBrowser.command}";
           "${modifier}+e" = "exec ${osConfig.myOptions.defaultApps.fileManager.command}";
-          "${modifier}+s" = "exec ${lib.getExe config.bundles.desktopBase.screenshot.package} -s";
+          "${modifier}+s" = "exec ${config.bundles.desktopBase.screenshot.package}/bin/screenshot -s";
           "${modifier}+c" = "exec ${../scripts/color.sh}";
           "${modifier}+Shift+b" = "exec ${../scripts/waybar.sh}";
           "${modifier}+Shift+q" = "exec simple-logout";
