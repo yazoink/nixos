@@ -40,6 +40,9 @@
         shadows enable
         shadow_blur_radius 5
         shadow_color #0000007F
+        layer_effects "waybar" shadows enable;
+        layer_effects "rofi" shadows enable;
+        layer_effects "simple-logout" shadows enable;
       '';
       config = rec {
         modifier = "Mod4";
