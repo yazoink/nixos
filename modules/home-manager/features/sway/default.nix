@@ -26,9 +26,7 @@
 
     wayland.windowManager.sway = {
       enable = true;
-      wrapperFeatures.gtk = true;
       checkConfig = false;
-      package = pkgs.swayfx;
       xwayland = true;
       extraConfig = ''
         title_align center
@@ -78,14 +76,14 @@
             #border = "#${config.stylix.base16Scheme.${osConfig.desktopTheme.base16Accent}}";
             border = "#${config.stylix.base16Scheme.base00}";
             background = "#${config.stylix.base16Scheme.base00}";
-            text = "#${config.stylix.base16Scheme.base04}";
+            text = "#${config.stylix.base16Scheme.base03}";
             indicator = "#${config.stylix.base16Scheme.base00}";
             childBorder = "#${config.stylix.base16Scheme.base00}";
           };
           unfocused = {
             border = "#${config.stylix.base16Scheme.base00}";
             background = "#${config.stylix.base16Scheme.base00}";
-            text = "#${config.stylix.base16Scheme.base04}";
+            text = "#${config.stylix.base16Scheme.base03}";
             indicator = "#${config.stylix.base16Scheme.base00}";
             childBorder = "#${config.stylix.base16Scheme.base00}";
           };
@@ -150,7 +148,7 @@
           "${modifier}+e" = "exec ${osConfig.myOptions.defaultApps.fileManager.command}";
           "${modifier}+s" = "exec ${./scripts/screenshot.sh}";
           "${modifier}+c" = "exec ${./scripts/color.sh}";
-          "${modifier}+b" = "exec ${./scripts/waybar.sh}";
+          "${modifier}+Shift+b" = "exec ${./scripts/waybar.sh}";
           "${modifier}+Shift+q" = "exec simple-logout";
           "${modifier}+Control+l" = "exec ${lib.getExe pkgs.gtklock}";
           #"${modifier}+r" = "exec ${lib.getExe pkgs.kooha}";
