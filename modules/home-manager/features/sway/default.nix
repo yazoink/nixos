@@ -28,8 +28,12 @@
       enable = true;
       wrapperFeatures.gtk = true;
       checkConfig = false;
-      package = pkgs.swayfx;
+      #package = pkgs.swayfx;
       xwayland = true;
+      extraConfig = ''
+        title_align center
+        titlebar_padding 6
+      '';
       config = rec {
         modifier = "Mod4";
         floating.modifier = modifier;
@@ -42,7 +46,7 @@
         ];
         gaps = {
           inner = 5;
-          outer = 10;
+          outer = 5;
         };
         bars = [];
         fonts = {
