@@ -12,6 +12,7 @@ in
     bundles.desktopBase = {
       mako.enable = true;
       rofi.enable = true;
+      waybar.enable = true;
       screenshot.enable = true;
       simpleLogout.enable = true;
       hyprViewBinds.enable = true;

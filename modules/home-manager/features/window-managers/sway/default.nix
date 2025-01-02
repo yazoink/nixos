@@ -7,6 +7,7 @@
       rofi.enable = true;
       screenshot.enable = true;
       simpleLogout.enable = true;
+      waybar.enable = true;
     };
 
     home.packages = with pkgs; [
