@@ -46,7 +46,7 @@
       checkConfig = false;
       extraConfig = ''
         title_align center
-        titlebar_padding 8
+        titlebar_padding 10
         corner_radius 10
         #smart_corner_radius on
         default_border normal 4
