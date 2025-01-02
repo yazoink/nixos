@@ -60,7 +60,7 @@
       firefoxCss.anotherOneline.enable = true;
     };
     bundles = {
-      desktopBase.windowManager = "sway";
+      desktopBase.windowManager = "hyprland";
       desktopFull.enable = true;
     };
     features = {
