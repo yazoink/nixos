@@ -50,7 +50,7 @@
         titlebar_padding 10
         corner_radius 10
         #smart_corner_radius on
-        default_border normal 4
+        default_border normal 5
         blur disable
         shadows enable
         shadow_blur_radius 15
@@ -77,7 +77,12 @@
           bindsym Escape mode "default"
         }
 
-        for_window [title="^File Upload$"] floating enable
+        for_window [title="^File Upload.*"] floating enable
+        for_window [title="^Open File.*"] floating enable
+        for_window [title="^Open Folder.*"] floating enable
+        for_window [title="^Save As.*"] floating enable
+        for_window [title="^Select a File.*"] floating enable
+        for_window [title="^Picture-in-Picture$"] floating enable, sticky enable
         for_window [title="^galculator$"] floating enable
         for_window [title="^Empty Trash$"] floating enable
         for_window [title="^File Manager Preferences$"] floating enable
@@ -160,7 +165,9 @@
           "${modifier}+Shift+w" = "exec rofi -show window";
           "${modifier}+Shift+r" = "restart";
           "${modifier}+f" = "floating toggle";
-          "${modifier}+m" = "fullscreen";
+          "${modifier}+m" = "layout tabbed";
+          "${modifier}+Shift+m" = "fullscreen";
+          "${modifier}+x" = "sticky toggle";
           "${modifier}+r" = "mode \"resize\"";
           "${modifier}+space" = "focus mode_toggle";
           "${modifier}+Shift+Left" = "move left";
