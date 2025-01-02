@@ -21,6 +21,15 @@
       slurp
       hyprpicker
     ];
+
+    home.sessionVariables = {
+      NIXOS_OZONE_WL = 1;
+      MOZ_ENABLE_WAYLAND = 1;
+      GDK_BACKEND = "wayland";
+      CLUTTER_BACKEND = "wayland";
+      GDK_SCALE = 1;
+      XDG_SESSION_TYPE = "wayland";
+    };
     
     stylix.targets.sway.enable = false;
 
@@ -37,8 +46,11 @@
         default_border normal 4
         blur disable
         shadows enable
-        shadow_blur_radius 5
-        shadow_color #0000007F
+        shadow_blur_radius 20
+        #shadow_color #0000007F
+        shadow_color #000000BB
+        shadow_inactive_color #000000B0
+        default_dim_inactive 0.2
         layer_effects "waybar" shadows enable;
         layer_effects "rofi" shadows enable;
         layer_effects "simple-logout" shadows enable;
