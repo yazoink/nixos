@@ -4,6 +4,8 @@
     services.mako = {
       borderColor = "#${config.stylix.base16Scheme.base00}";
       borderSize = 0;
+      shadowColor = "#00000090";
+      shadowBlur = 15;
     };
   };
 }
