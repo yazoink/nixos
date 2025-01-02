@@ -66,7 +66,7 @@
             background = "#${config.stylix.base16Scheme.base01}";
             text = "#${config.stylix.base16Scheme.base05}";
             indicator = "#${config.stylix.base16Scheme.base00}";
-            ChildBorder = "#${config.stylix.base16Scheme.base01}";
+            childBorder = "#${config.stylix.base16Scheme.base01}";
           };
           focusedInactive = {
             #border = "#${config.stylix.base16Scheme.${osConfig.desktopTheme.base16Accent}}";
