@@ -1,11 +1,11 @@
-{stdenv, bash, imagemagick, ...}:
+{stdenv, bash, imagemagick, coreutils, ...}:
 stdenv.mkDerivation {
   pname = "dither";
   version = "1.0";
 
   src = ./dither;
 
-  buildInputs = [bash imagemagick];
+  nativeBuildInputs = [bash imagemagick coreutils];
 
   dontUnpack = true;
 

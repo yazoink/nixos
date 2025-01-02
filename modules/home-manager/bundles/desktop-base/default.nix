@@ -3,7 +3,6 @@
   config = lib.mkIf osConfig.myOptions.bundles.desktopBase.enable {
     bundles.desktopBase = builtins.trace "enabled desktopBase" {
       direnv.enable = true;
-      dither.enable = true;
       xdg.enable = true;
     };
   };
