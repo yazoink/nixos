@@ -10,19 +10,17 @@
 
     home.packages = with pkgs; [
       swaybg
+      wl-clipboard
+      wl-clip-persist
+      upower # for poweralertd
+      kdePackages.qtwayland
+      networkmanagerapplet
+      wdisplays
+      poweralertd
+      grim
+      slurp
+      hyprpicker
     ];
-
-    systemd.user.services.kanshi = {
-      description = "kanshi daemon";
-      environment = {
-        WAYLAND_DISPLAY="wayland-1";
-        DISPLAY = ":0";
-      };
-      serviceConfig = {
-        Type = "simple";
-        ExecStart = ''${pkgs.kanshi}/bin/kanshi -c kanshi_config_file'';
-      };
-    };
     
     stylix.targets.sway.enable = false;
 
@@ -34,12 +32,12 @@
       xwayland = true;
       config = rec {
         modifier = "Mod4";
+        floating.modifier = modifier;
         terminal = osConfig.myOptions.defaultApps.terminal.command;
         startup = [
-          {command = "sleep 5; systemctl --user start kanshi.service";}
-          {command = "${lib.getExe pkgs.swaybg} -i ${osConfig.myOptions.desktopTheme.wallpaper}";}
-          {command = "${lib.getExe pkgs.swaybg} -i ${osConfig.myOptions.desktopTheme.wallpaper}";}
-          {command = "${./scripts/waybar.sh}";}
+          {command = "exec ${lib.getExe pkgs.swaybg} -i ${osConfig.myOptions.desktopTheme.wallpaper}";}
+          {command = "exec ${lib.getExe pkgs.swaybg} -i ${osConfig.myOptions.desktopTheme.wallpaper}";}
+          {command = "exec ${./scripts/waybar.sh}";}
         ];
         gaps = {
           inner = 5;
@@ -90,9 +88,7 @@
             childBorder = "#${config.stylix.base16Scheme.base00}";
           };
         };
-        keybindings = let
-          modifier = config.wayland.windowManager.sway.config.modifier;
-        in {
+        keybindings = {
           "${modifier}+Return" = "exec ${pkgs.foot}/bin/footclient";
           "${modifier}+q" = "kill";
           "${modifier}+p" = "exec rofi -show drun";

@@ -16,6 +16,7 @@
     ../../features/sddm
     ../../features/silent-boot
     ../../features/theme
+    ../../features/sway
   ];
 
   config = lib.mkIf config.myOptions.bundles.desktopBase.enable {
