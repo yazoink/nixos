@@ -46,7 +46,7 @@
         default_border normal 4
         blur disable
         shadows enable
-        shadow_blur_radius 20
+        shadow_blur_radius 10
         #shadow_color #0000007F
         shadow_color #000000BB
         shadow_inactive_color #000000B0
