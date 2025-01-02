@@ -32,6 +32,7 @@
       QT_AUTO_SCREEN_SCALE_FACTOR = 1;
       QT_WAYLAND_DISABLE_WINDOWDECORATION = 1;
       QT_QPA_PLATFORM = "wayland";
+      QT_SCALE_FACTOR = 1;
     };
     
     stylix.targets.sway.enable = false;
@@ -51,7 +52,7 @@
         shadows enable
         shadow_blur_radius 15
         shadow_color #00000090
-        default_dim_inactive 0.15
+        #default_dim_inactive 0.15
         layer_effects "waybar" shadows enable;
         layer_effects "rofi" shadows enable;
         layer_effects "simple-logout" shadows enable;
