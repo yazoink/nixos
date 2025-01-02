@@ -10,6 +10,9 @@
     bundles.desktopBase = {
       gtklock.enable = true;
     };
+    security.pam.loginLimits = [
+      { domain = "@users"; item = "rtprio"; type = "-"; value = 1; }
+    ];
     programs.sway = {
       enable = true;
       package = pkgs.swayfx;

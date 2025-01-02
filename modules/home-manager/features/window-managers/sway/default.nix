@@ -59,19 +59,46 @@
         layer_effects "waybar" shadows enable;
         layer_effects "rofi" shadows enable;
         layer_effects "simple-logout" shadows enable;
+
+        for_window [class="Firefox"] inhibit_idle fullscreen
+        for_window [app_id="firefox"] inhibit_idle fullscreen
+
+        input type:touchpad {
+          dwt disabled
+          tap enabled
+        }
+
+        mode "resize" {
+          bindsym Left resize shrink width 10px
+          bindsym Down resize grow height 10px
+          bindsym Up resize shrink height 10px
+          bindsym Right resize grow width 10px
+          bindsym Return mode "default"
+          bindsym Escape mode "default"
+        }
+
+        for_window [title="^File Upload$"] floating enable
+        for_window [title="^galculator$"] floating enable
+        for_window [title="^Empty Trash$"] floating enable
+        for_window [title="^File Manager Preferences$"] floating enable
+        for_window [class="^org.kde.kruler$"] floating enable
+        for_window [title="^Kasutaja.*"] floating enable
+        for_window [instance="Browser" window_role="About"] floating enable
+        for_window [title="Firefox - Jagamise indikaator"] floating enable
       '';
       config = rec {
         modifier = "Mod4";
         floating.modifier = modifier;
         terminal = osConfig.myOptions.defaultApps.terminal.command;
         menu = "exec rofi -show drun";
+        defaultWorkspace = "workspace number 1";
         startup = [
           {command = "exec ${lib.getExe pkgs.swaybg} -i ${osConfig.myOptions.desktopTheme.wallpaper}";}
           {command = "exec ${../scripts/waybar.sh}";}
-          {command = "exec ${lib.getExe pkgs.autotiling-rs}";}
           {command = "exec mpDris2 --music-dir=~/mu &";}
           {command = "exec ${lib.getExe pkgs.poweralertd}";}
           {command = "exec nm-applet";}
+          {command = "exec autotiling-rs";}
         ];
         gaps = {
           inner = 10;
@@ -134,6 +161,7 @@
           "${modifier}+Shift+r" = "restart";
           "${modifier}+f" = "floating toggle";
           "${modifier}+m" = "fullscreen";
+          "${modifier}+r" = "mode \"resize\"";
           "${modifier}+space" = "focus mode_toggle";
           "${modifier}+Shift+Left" = "move left";
           "${modifier}+Shift+Right" = "move right";
