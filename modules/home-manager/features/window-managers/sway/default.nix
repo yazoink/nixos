@@ -149,7 +149,7 @@
           "${modifier}+e" = "exec ${osConfig.myOptions.defaultApps.fileManager.command}";
           "${modifier}+s" = "exec ${lib.getExe config.bundles.desktopBase.screenshot.package} -s";
           "${modifier}+c" = "exec ${../scripts/color.sh}";
-          "${modifier}+Shift+b" = "exec ${./scripts/waybar.sh}";
+          "${modifier}+Shift+b" = "exec ${../scripts/waybar.sh}";
           "${modifier}+Shift+q" = "exec simple-logout";
           "${modifier}+Control+l" = "exec ${lib.getExe pkgs.gtklock}";
           #"${modifier}+r" = "exec ${lib.getExe pkgs.kooha}";
