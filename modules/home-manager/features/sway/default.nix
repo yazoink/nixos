@@ -34,6 +34,7 @@
         title_align center
         titlebar_padding 6
         corner_radius 10
+        default_border pixel 2
       '';
       config = rec {
         modifier = "Mod4";
@@ -58,8 +59,8 @@
         colors = {
           background = "#${config.stylix.base16Scheme.base00}";
           focused = {
-            #border = "#${config.stylix.base16Scheme.${osConfig.desktopTheme.base16Accent}}";
-            border = "#${config.stylix.base16Scheme.base00}";
+            border = "#${config.stylix.base16Scheme.${osConfig.desktopTheme.base16Accent}}";
+            #border = "#${config.stylix.base16Scheme.base00}";
             background = "#${config.stylix.base16Scheme.base00}";
             text = "#${config.stylix.base16Scheme.base05}";
             indicator = "#${config.stylix.base16Scheme.base00}";
@@ -94,9 +95,6 @@
             indicator = "#${config.stylix.base16Scheme.base00}";
             childBorder = "#${config.stylix.base16Scheme.base00}";
           };
-        };
-        window = {
-          border = 4;
         };
         keybindings = {
           "${modifier}+Return" = "exec ${pkgs.foot}/bin/footclient";
