@@ -20,7 +20,6 @@
       enable = true;
       actions = true;
       icons = true;
-      anchor = "top-right";
       borderRadius = 5;
       backgroundColor = "#${config.stylix.base16Scheme.base00}";
       textColor = "#${config.stylix.base16Scheme.base05}";
