@@ -1,6 +1,6 @@
 {config, lib, pkgs, osConfig, ...}:
 {
-  config = lib.mkIf osConfig.bundles.desktopBase.enable {
+  config = lib.mkIf osConfig.myOptions.bundles.desktopBase.enable {
     home.packages = with pkgs; [
       swaybg
     ];
