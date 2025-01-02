@@ -52,7 +52,7 @@
     };
     desktopTheme = {
       name = "caroline";
-      wallpaper = ./wallpapers/caroline-flowers.png;
+      wallpaper = ./wallpapers/caroline-waves.png;
       sddm = {
         scale = 1;
         wallpaper = ./wallpapers/caroline-waves.png;
