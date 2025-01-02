@@ -47,7 +47,7 @@
         fonts = {
           names = [config.stylix.fonts.sansSerif.name "Font Awesome 6 Free"];
           style = "Bold";
-          size  = config.stylix.fonts.sizes.desktop;
+          size  = "${builtins.toString config.stylix.fonts.sizes.desktop}";
         };
         colors = {
           background = "#${config.stylix.base16Scheme.base00}";
