@@ -67,9 +67,11 @@
         menu = "exec rofi -show drun";
         startup = [
           {command = "exec ${lib.getExe pkgs.swaybg} -i ${osConfig.myOptions.desktopTheme.wallpaper}";}
-          {command = "exec ${lib.getExe pkgs.swaybg} -i ${osConfig.myOptions.desktopTheme.wallpaper}";}
           {command = "exec ${../scripts/waybar.sh}";}
           {command = "exec ${lib.getExe pkgs.autotiling-rs}";}
+          {command = "exec mpDris2 --music-dir=~/mu &";}
+          {command = "exec ${lib.getExe pkgs.poweralertd}";}
+          {command = "exec nm-applet";}
         ];
         gaps = {
           inner = 10;
