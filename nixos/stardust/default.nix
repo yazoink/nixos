@@ -58,6 +58,7 @@
       firefoxCss.anotherOneline.enable = true;
     };
     bundles = {
+      desktopBase.windowManager = "sway";
       desktopFull.enable = true;
     };
     features = {
