@@ -89,7 +89,7 @@
         menu = "exec rofi -show drun";
         defaultWorkspace = "workspace number 1";
         startup = [
-          {command = "exec ${lib.getExe pkgs.swaybg} -i ${osConfig.myOptions.desktopTheme.wallpaper}";}
+          {command = "exec ${lib.getExe pkgs.swaybg} -i ${osConfig.myOptions.desktopTheme.wallpaper} -m fill";}
           {command = "exec ${../scripts/waybar.sh}";}
           {command = "exec mpDris2 --music-dir=~/mu &";}
           {command = "exec ${lib.getExe pkgs.poweralertd}";}
