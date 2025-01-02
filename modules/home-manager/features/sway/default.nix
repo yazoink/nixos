@@ -32,7 +32,7 @@
       xwayland = true;
       extraConfig = ''
         title_align center
-        titlebar_padding 6
+        titlebar_padding 8
         corner_radius 10
         smart_corner_radius on
         default_border normal 4
