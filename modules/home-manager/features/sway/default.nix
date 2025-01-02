@@ -23,6 +23,8 @@
         ExecStart = ''${pkgs.kanshi}/bin/kanshi -c kanshi_config_file'';
       };
     };
+    
+    stylix.targets.sway.enable = false;
 
     wayland.windowManager.sway = {
       enable = true;
@@ -47,6 +49,7 @@
         fonts = {
           names = [config.stylix.fonts.sansSerif.name "Font Awesome 6 Free"];
           style = "Bold";
+          size  = "${builtins.toString config.stylix.fonts.sizes.desktop}";
         };
         colors = {
           background = "#${config.stylix.base16Scheme.base00}";
