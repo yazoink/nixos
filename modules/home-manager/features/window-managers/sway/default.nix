@@ -3,7 +3,7 @@
   imports = [./swayidle.nix];
   config = lib.mkIf osConfig.bundles.desktopBase.sway.enable {
     bundles.desktopBase = {
-      #mako.enable = true;
+      mako.enable = true;
       rofi.enable = true;
       screenshot.enable = true;
       simpleLogout.enable = true;
@@ -78,9 +78,7 @@
         for_window [title="^Empty Trash$"] floating enable
         for_window [title="^File Manager Preferences$"] floating enable
         for_window [class="^org.kde.kruler$"] floating enable
-        for_window [title="^Kasutaja.*"] floating enable
         for_window [instance="Browser" window_role="About"] floating enable
-        for_window [title="Firefox - Jagamise indikaator"] floating enable
       '';
       config = rec {
         modifier = "Mod4";

@@ -20,7 +20,7 @@ in
       packages = [simpleLogout];
       file = {
         #".config/simple-logout/icons".source = ./config/icons/${osConfig.myOptions.desktopTheme.name};
-        ".config/simple-logout/config.json".source = ./config/config.json;
+        ".config/simple-logout/config.json".source = ./config/${osConfig.myOptions.bundles.desktopBase.windowManager}.json;
         ".config/simple-logout/style.css".source = styleCss;
       };
     };
