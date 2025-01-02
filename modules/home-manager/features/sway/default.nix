@@ -34,7 +34,9 @@
         title_align center
         titlebar_padding 6
         corner_radius 10
+        smart_corner_radius on
         default_border normal 2
+        titlebar_border_thickness 2
       '';
       config = rec {
         modifier = "Mod4";
