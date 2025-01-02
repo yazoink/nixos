@@ -30,6 +30,8 @@
       GDK_SCALE = 1;
       XDG_SESSION_TYPE = "wayland";
       QT_AUTO_SCREEN_SCALE_FACTOR = 1;
+      QT_WAYLAND_DISABLE_WINDOWDECORATION = 1;
+      QT_QPA_PLATFORM = "wayland";
     };
     
     stylix.targets.sway.enable = false;
@@ -49,7 +51,7 @@
         shadows enable
         shadow_blur_radius 15
         shadow_color #00000090
-        default_dim_inactive 0.1
+        default_dim_inactive 0.15
         layer_effects "waybar" shadows enable;
         layer_effects "rofi" shadows enable;
         layer_effects "simple-logout" shadows enable;
@@ -67,14 +69,8 @@
           {command = "exec ${../scripts/waybar.sh}";}
         ];
         gaps = {
-          inner = 5;
-          outer = 5;
-          bottom = 5;
-          horizontal = 5;
-          vertical = 5;
-          left = 5;
-          right = 5;
-          top = 5;
+          inner = 10;
+          outer = 10;
           smartBorders = "off";
           smartGaps = false;
         };
