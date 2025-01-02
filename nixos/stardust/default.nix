@@ -49,7 +49,7 @@
       };
     };
     desktopTheme = {
-      name = "embers";
+      name = "carob";
       wallpaper = ./wallpapers/caroline-flowers3.png;
       sddm = {
         scale = 1.3;
