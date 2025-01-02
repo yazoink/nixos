@@ -52,14 +52,14 @@
         #smart_corner_radius on
         default_border normal 4
         blur disable
-        shadows enable
-        shadow_blur_radius 15
-        shadow_color #00000090
+        shadows disable
+        #shadow_blur_radius 15
+        #shadow_color #00000090
         #default_dim_inactive 0.15
-        layer_effects "waybar" shadows enable;
-        layer_effects "rofi" shadows enable;
-        layer_effects "simple-logout" shadows enable;
-        layer_effects "mako" shadows enable;
+        #layer_effects "waybar" shadows enable;
+        #layer_effects "rofi" shadows enable;
+        #layer_effects "simple-logout" shadows enable;
+        #layer_effects "mako" shadows enable;
       '';
       config = rec {
         modifier = "Mod4";
