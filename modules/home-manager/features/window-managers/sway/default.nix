@@ -46,7 +46,7 @@
         default_border normal 4
         blur disable
         shadows enable
-        shadow_blur_radius 10
+        shadow_blur_radius 15
         shadow_color #00000090
         default_dim_inactive 0.2
         layer_effects "waybar" shadows enable;
