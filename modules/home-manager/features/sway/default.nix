@@ -52,16 +52,16 @@
         colors = {
           background = "#${config.stylix.base16Scheme.base00}";
           focused = {
-            border = "#${config.stylix.base16Scheme.${osConfig.desktopTheme.base16Accent}}";
-            #border = "#${config.stylix.base16Scheme.base01}";
+            #border = "#${config.stylix.base16Scheme.${osConfig.desktopTheme.base16Accent}}";
+            border = "#${config.stylix.base16Scheme.base00}";
             background = "#${config.stylix.base16Scheme.base00}";
             text = "#${config.stylix.base16Scheme.base05}";
             indicator = "#${config.stylix.base16Scheme.base00}";
             childBorder = "#${config.stylix.base16Scheme.base00}";
           };
           focusedInactive = {
-            border = "#${config.stylix.base16Scheme.${osConfig.desktopTheme.base16Accent}}";
-            #border = "#${config.stylix.base16Scheme.base01}";
+            #border = "#${config.stylix.base16Scheme.${osConfig.desktopTheme.base16Accent}}";
+            border = "#${config.stylix.base16Scheme.base00}";
             background = "#${config.stylix.base16Scheme.base00}";
             text = "#${config.stylix.base16Scheme.base04}";
             indicator = "#${config.stylix.base16Scheme.base00}";
