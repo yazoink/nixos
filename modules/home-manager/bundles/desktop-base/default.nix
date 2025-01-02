@@ -37,5 +37,6 @@
     ../../features/theme
     ../../features/waybar
     ../../features/xdg
+    ../../features/sway
   ];
 }
