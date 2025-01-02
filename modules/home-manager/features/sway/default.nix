@@ -34,7 +34,7 @@
         title_align center
         titlebar_padding 6
         corner_radius 10
-        default_border pixel 2
+        default_border normal 2
       '';
       config = rec {
         modifier = "Mod4";
