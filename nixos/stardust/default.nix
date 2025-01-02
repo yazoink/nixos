@@ -49,7 +49,7 @@
       };
     };
     desktopTheme = {
-      name = "caroline";
+      name = "twilight";
       wallpaper = ./wallpapers/caroline-flowers3.png;
       sddm = {
         scale = 1.3;

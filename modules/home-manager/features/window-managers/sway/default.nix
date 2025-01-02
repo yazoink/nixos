@@ -68,15 +68,6 @@
           tap enabled
         }
 
-        mode "resize" {
-          bindsym Left resize shrink width 10px
-          bindsym Down resize grow height 10px
-          bindsym Up resize shrink height 10px
-          bindsym Right resize grow width 10px
-          bindsym Return mode "default"
-          bindsym Escape mode "default"
-        }
-
         for_window [title="^File Upload.*"] floating enable
         for_window [title="^Open File.*"] floating enable
         for_window [title="^Open Folder.*"] floating enable
@@ -165,8 +156,7 @@
           "${modifier}+Shift+w" = "exec rofi -show window";
           "${modifier}+Shift+r" = "restart";
           "${modifier}+f" = "floating toggle";
-          "${modifier}+m" = "layout tabbed";
-          "${modifier}+Shift+m" = "fullscreen";
+          "${modifier}+m" = "fullscreen";
           "${modifier}+x" = "sticky toggle";
           "${modifier}+r" = "mode \"resize\"";
           "${modifier}+space" = "focus mode_toggle";
