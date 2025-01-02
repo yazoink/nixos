@@ -28,11 +28,12 @@
       enable = true;
       wrapperFeatures.gtk = true;
       checkConfig = false;
-      #package = pkgs.swayfx;
+      package = pkgs.swayfx;
       xwayland = true;
       extraConfig = ''
         title_align center
         titlebar_padding 6
+        corner_radius 10
       '';
       config = rec {
         modifier = "Mod4";
