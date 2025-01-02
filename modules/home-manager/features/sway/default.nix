@@ -27,7 +27,7 @@
     wayland.windowManager.sway = {
       enable = true;
       wrapperFeatures.gtk = true;
-      checkConfig = true;
+      checkConfig = false;
       package = pkgs.swayfx;
       xwayland = true;
       config = rec {
