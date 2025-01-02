@@ -1,5 +1,6 @@
 {config, lib, pkgs, osConfig, ...}:
 {
+  imports = [./swayidle.nix];
   config = lib.mkIf osConfig.bundles.desktopBase.sway.enable {
     bundles.desktopBase = {
       mako.enable = true;

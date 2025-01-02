@@ -7,6 +7,8 @@
     };
   };
 
+  imports = [./sway.nix ./hyprland.nix];
+
   config = lib.mkIf config.bundles.desktopBase.mako.enable {
     home.packages = with pkgs; [
       libnotify
@@ -19,14 +21,12 @@
       icons = true;
       anchor = "top-right";
       borderRadius = 5;
-      borderColor = "#${config.stylix.base16Scheme.base01}";
       backgroundColor = "#${config.stylix.base16Scheme.base00}";
       textColor = "#${config.stylix.base16Scheme.base05}";
       progressColor = "over #${config.stylix.base16Scheme.base05}";
       font = "${config.stylix.fonts.sansSerif.name} ${toString config.stylix.fonts.sizes.popups}";
       padding = "10";
       margin = "5";
-      borderSize = 2;
       defaultTimeout = 5000;
       iconPath = "/run/current-system/sw/share/icons/${config.gtk.iconTheme.name}";
       /*extraConfig = ''
