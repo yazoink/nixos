@@ -36,6 +36,8 @@
       htop
       alejandra
       tree
+      s-tui
+      stress
 
       ### terminal eyecandy ###
       fastfetch
