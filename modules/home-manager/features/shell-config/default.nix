@@ -66,8 +66,8 @@ in
       ];
 
       initExtra = ''
-        PROMPT="%F{blue}>%f%F{red}>%f%F{yellow}>%f "
-        #eval "$(starship init zsh)"
+        #PROMPT="%F{blue}>%f%F{red}>%f%F{yellow}>%f "
+        eval "$(starship init zsh)"
       '';
 
       /*oh-my-zsh = {
