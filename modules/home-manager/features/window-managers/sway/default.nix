@@ -51,7 +51,7 @@
         #smart_corner_radius on
         default_border normal 4
         blur disable
-        shadows enable
+        shadows disable
         shadow_blur_radius 15
         shadow_color #00000090
         #default_dim_inactive 0.15

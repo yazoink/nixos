@@ -52,7 +52,7 @@
     };
     desktopTheme = {
       name = "caroline";
-      wallpaper = ./wallpapers/caroline-waves.png;
+      wallpaper = ./wallpapers/caroline-flowers.png;
       sddm = {
         scale = 1;
         wallpaper = ./wallpapers/caroline-waves.png;
@@ -60,7 +60,7 @@
       firefoxCss.anotherOneline.enable = true;
     };
     bundles = {
-      desktopBase.windowManager = "sway";
+      desktopBase.windowManager = "hyprland";
       desktopFull.enable = true;
     };
     features = {
