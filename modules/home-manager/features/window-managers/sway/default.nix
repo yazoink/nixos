@@ -20,6 +20,7 @@
       grim
       slurp
       hyprpicker
+      autotiling-rs
     ];
 
     home.sessionVariables = {
@@ -68,6 +69,7 @@
           {command = "exec ${lib.getExe pkgs.swaybg} -i ${osConfig.myOptions.desktopTheme.wallpaper}";}
           {command = "exec ${lib.getExe pkgs.swaybg} -i ${osConfig.myOptions.desktopTheme.wallpaper}";}
           {command = "exec ${../scripts/waybar.sh}";}
+          {command = "exec ${lib.getExe pkgs.autotiling-rs}";}
         ];
         gaps = {
           inner = 10;
