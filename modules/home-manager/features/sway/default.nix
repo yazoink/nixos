@@ -28,7 +28,7 @@
       enable = true;
       wrapperFeatures.gtk = true;
       checkConfig = true;
-      package = pkgs.swayfx;
+      #package = pkgs.swayfx;
       xwayland = true;
       config = rec {
         modifier = "Mod4";
