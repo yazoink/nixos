@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 output_dir="/home/$4/.config/simple-logout/icons"
 
-[ -d "$output_dir" ] && rm -rf "$output_dir"
-mkdir -p "$output_dir"
+[ -d "$output_dir" ] && /run/current-system/sw/bin/rm -rf "$output_dir"
+/run/current-system/sw/bin/mkdir -p "$output_dir"
 
-ls_output="$(ls "$2")"
+ls_output="$(/run/current-system/sw/bin/ls "$2")"
 images=($ls_output)
 
 for image in "${images[@]}"; do
