@@ -127,7 +127,7 @@
           "${modifier}+Shift+8" = "move container to workspace number 8";
           "${modifier}+Shift+9" = "move container to workspace number 9";
           "${modifier}+Shift+0" = "move container to workspace number 10";
-          "${modifier}+Shift+up" = "move scratchpad";
+          "${modifier}+Control+up" = "move scratchpad";
           "${modifier}+Shift+s" = "scratchpad show";
           "${modifier}+w" = "exec ${osConfig.myOptions.defaultApps.webBrowser.command}";
           "${modifier}+e" = "exec ${osConfig.myOptions.defaultApps.fileManager.command}";
