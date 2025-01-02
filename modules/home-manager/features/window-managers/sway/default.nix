@@ -42,7 +42,7 @@
         title_align center
         titlebar_padding 8
         corner_radius 10
-        smart_corner_radius on
+        #smart_corner_radius on
         default_border normal 4
         blur disable
         shadows enable
@@ -70,6 +70,14 @@
         gaps = {
           inner = 5;
           outer = 5;
+          bottom = 5;
+          horizontal = 5;
+          vertical = 5;
+          left = 5;
+          right = 5;
+          top = 5;
+          smartBorders = "off";
+          smartGaps = false;
         };
         bars = [];
         fonts = {
