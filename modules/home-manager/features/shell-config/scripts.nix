@@ -1,12 +1,12 @@
 {pkgs, stdenv, ...}:
 stdenv.mkDerivation {
-  pname = "copyfile";
+  pname = "scripts";
   version = "1.0";
-  src = ./copyfile;
-  buildInputs = [pkgs.bash];
+  src = ./scripts;
+  buildInputs = [pkgs.zsh pkgs.bash pkgs.python3];
   dontUnpack = true;
   installPhase = ''
     mkdir -p $out/bin
-    cp $src $out/bin/copyfile
+    cp $src/* $out/bin
   '';
 }

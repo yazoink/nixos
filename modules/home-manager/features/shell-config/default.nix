@@ -1,7 +1,7 @@
 {config, lib, pkgs, ...}:
 let
   myAliases = {
-    "rebuild-test" = "${rebuild}/bin/rebuild -t";
+    "rebuild-test" = "${scripts}/bin/rebuild -t";
     "update" = "cd ~/nixos && sudo nix flake update";
     "optimise" = "sudo nix-store --optimise && nix-store --optimise";
     "chx" = "chmod u+x";
@@ -31,16 +31,9 @@ let
     "diskspace" = "sudo df -h | grep -E \"sd|lv|Size\" | sort";
     "weather" = "curl wttr.in/Melbourne";
     "copypath" = "wl-copy \"$(pwd)\"";
-    "solitaire" = "ttysolitaire --no-background-color";
+    "solitaire" = "ttysolitaire --no-background-color --passes 420";
   };
-  rebuild = pkgs.callPackage ./scripts/rebuild {};
-  clean = pkgs.callPackage ./scripts/clean {};
-  ascii = pkgs.callPackage ./scripts/ascii {};
-  nsfind = pkgs.callPackage ./scripts/nsfind {};
-  dict = pkgs.callPackage ./scripts/dict {};
-  palette = pkgs.callPackage ./scripts/palette {};
-  ex = pkgs.callPackage ./scripts/ex {};
-  copyfile = pkgs.callPackage ./scripts/copyfile {};
+  scripts = pkgs.callPackage ./scripts.nix {};
 in
 {
   options = {
@@ -51,7 +44,7 @@ in
   };
 
   config = lib.mkIf config.bundles.base.shellConfig.enable {
-    home.packages = [rebuild clean ascii nsfind dict palette ex copyfile];
+    home.packages = [scripts];
     programs.zsh = {
       enable = true;
       autocd = true;
@@ -92,16 +85,15 @@ in
     };
 
     programs = {
-      /*starship = {
+      starship = {
         enable = true;
         settings = {
           add_newline = true;
           format = ''
-            [$directory](green)
             [>](blue)[>](red)[>](yellow) 
           '';
           right_format = ''
-            $cmd_duration$nix_shell$git_status$git_state$git_branch$hostname
+            [$directory](green)
           '';
           directory = {
             read_only = " ";
@@ -115,7 +107,7 @@ in
             symbol = " ";
           };
         };
-      };*/
+      };
 
       eza = {
         enable = true;

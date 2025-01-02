@@ -1,0 +1,55 @@
+#!/usr/bin/env python3
+
+from sys import argv
+from sys import exit as sys_exit
+from os import path
+
+def main():
+    argc = len(argv)
+    if argc == 2 and argv[1] == "-h" or argv[1] == "--help":
+        help()
+        sys_exit(0)
+
+    flags = ["-o", "-n", "-f"]
+    args = [str(), str(), str()]
+    current_flag = None
+
+    for i in range(1, argc):
+        if argv[i] in flags:
+            for j in range(len(flags)):
+                if argv[i] == flags[j]:
+                    current_flag = j
+                    continue
+        else:
+            if current_flag == None:
+                print(f"Error: invalid argument \"{argv[i]}\".")
+                sys_exit(1)
+            if args[current_flag] != str():
+                args[current_flag] += " "
+            args[current_flag] += argv[i]
+
+    for arg in args:
+        if arg == str():
+            print("Error: missing argument(s).")
+            sys_exit(1)
+
+    if path.exists(args[2]) == False:
+        print(f"Error: file \"{args[2]}\" not found.")
+        sys_exit(1)
+
+    file_content = str()
+
+    with open(args[2], "r") as file:
+        file_content = file.read()
+
+    file_content = file_content.replace(args[0], args[1])
+
+    with open(args[2], "w") as file:
+        file.write(file_content)
+
+    print(f"Replaced all occurances of string \"{args[0]}\" with \"{args[1]}\" in file \"{args[2]}\".")
+
+def help():
+    print("usage: replace -o <original string> -n <new string> -f <file>")
+
+main()
