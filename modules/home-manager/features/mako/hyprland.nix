@@ -4,6 +4,7 @@
     services.mako = {
       borderColor = "#${config.stylix.base16Scheme.base01}";
       borderSize = 2;
+      anchor = "top-right";
     };
   };
 }
