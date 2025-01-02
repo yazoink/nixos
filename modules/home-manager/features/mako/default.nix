@@ -16,7 +16,7 @@
     stylix.targets.mako.enable = false;
     xdg.configFile."mako/sounds/default.wav".source = ./sounds/vine-boom.wav;
     services.mako = {
-      layer = "top";
+      layer = "overlay";
       enable = true;
       actions = true;
       icons = true;
