@@ -47,9 +47,7 @@
         blur disable
         shadows enable
         shadow_blur_radius 10
-        #shadow_color #0000007F
-        shadow_color #000000BB
-        shadow_inactive_color #000000B0
+        shadow_color #0000007F
         default_dim_inactive 0.2
         layer_effects "waybar" shadows enable;
         layer_effects "rofi" shadows enable;
