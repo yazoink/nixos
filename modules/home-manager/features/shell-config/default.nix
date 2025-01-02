@@ -67,7 +67,7 @@ in
 
       initExtra = ''
         #PROMPT="%F{blue}>%f%F{red}>%f%F{yellow}>%f "
-        eval "$(starship init zsh)"
+        #eval "$(starship init zsh)"
       '';
 
       /*oh-my-zsh = {
@@ -87,14 +87,11 @@ in
     programs = {
       starship = {
         enable = true;
+        enableZshIntegration = true;
         settings = {
           add_newline = true;
-          format = ''
-            [>](blue)[>](red)[>](yellow) 
-          '';
-          right_format = ''
-            [$directory](green)
-          '';
+          format = ''[>](blue)[>](red)[>](yellow) '';
+          right_format = ''[$directory](green)'';
           directory = {
             read_only = " ";
             home_symbol = "~";

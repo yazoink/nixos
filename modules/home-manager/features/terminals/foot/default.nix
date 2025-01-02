@@ -16,6 +16,12 @@
         url = {
           protocols = "http, https, ftp, ftps, file, gemini, gopher";
         };
+        bell = {
+          notify = "no";
+        };
+        scrollback = {
+          lines = 500;
+        };
       };
     };
   };
