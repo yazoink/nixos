@@ -14,6 +14,7 @@ in
       rofi.enable = true;
       screenshot.enable = true;
       simpleLogout.enable = true;
+      hyprViewBinds.enable = true;
     };
 
     home = {

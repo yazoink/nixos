@@ -4,13 +4,6 @@
     bundles.desktopBase = builtins.trace "enabled desktopBase" {
       direnv.enable = true;
       dither.enable = true;
-      hyprViewBinds.enable = true;
-      mako.enable = true;
-      replacecolor.enable = true;
-      rofi.enable = true;
-      screenshot.enable = true;
-      simpleLogout.enable = true;
-      waybar.enable = true;
       xdg.enable = true;
     };
   };
