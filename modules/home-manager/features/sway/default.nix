@@ -36,6 +36,10 @@
         corner_radius 10
         smart_corner_radius on
         default_border normal 4
+        blur disable
+        shadows enable
+        shadow_blur_radius 5
+        shadow_color #0000007F
       '';
       config = rec {
         modifier = "Mod4";
