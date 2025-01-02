@@ -59,7 +59,6 @@
         layer_effects "rofi" shadows enable;
         layer_effects "simple-logout" shadows enable;
         layer_effects "mako" shadows enable;
-        layer_effects "mako" shadows enable;
       '';
       config = rec {
         modifier = "Mod4";
