@@ -1,6 +1,13 @@
 {config, lib, pkgs, osConfig, ...}:
 {
   config = lib.mkIf osConfig.myOptions.bundles.desktopBase.enable {
+    bundles.desktopBase = {
+      mako.enable = true;
+      rofi.enable = true;
+      screenshot.enable = true;
+      simpleLogout.enable = true;
+    };
+
     home.packages = with pkgs; [
       swaybg
     ];
@@ -36,7 +43,7 @@
           inner = 5;
           outer = 10;
         };
-        bars = {};
+        bars = [];
         fonts = {
           names = [config.stylix.fonts.sansSerif.name "Font Awesome 6 Free"];
           style = "Bold";
