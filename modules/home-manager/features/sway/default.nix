@@ -34,6 +34,7 @@
         modifier = "Mod4";
         floating.modifier = modifier;
         terminal = osConfig.myOptions.defaultApps.terminal.command;
+        menu = "exec rofi -show drun";
         startup = [
           {command = "exec ${lib.getExe pkgs.swaybg} -i ${osConfig.myOptions.desktopTheme.wallpaper}";}
           {command = "exec ${lib.getExe pkgs.swaybg} -i ${osConfig.myOptions.desktopTheme.wallpaper}";}
@@ -95,7 +96,7 @@
         keybindings = {
           "${modifier}+Return" = "exec ${pkgs.foot}/bin/footclient";
           "${modifier}+q" = "kill";
-          "${modifier}+p" = "exec rofi -show drun";
+          "${modifier}+p" = "${menu}";
           "${modifier}+Shift+w" = "exec rofi -show window";
           "${modifier}+Shift+r" = "restart";
           "${modifier}+f" = "floating toggle";

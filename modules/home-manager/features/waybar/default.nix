@@ -24,6 +24,7 @@
           spacing = 5;
           modules-left = [
             #"niri/workspaces"
+            "sway/workspaces"
             "hyprland/workspaces"
             "group/usage"
           ];
@@ -45,6 +46,9 @@
             sort-by-number = true;
           };
           "niri/workspaces" = {
+            format = "{index}";
+          };
+          "sway/workspaces" = {
             format = "{index}";
           };
           "clock" = {
