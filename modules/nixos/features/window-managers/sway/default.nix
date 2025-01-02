@@ -1,11 +1,21 @@
 {config, lib, pkgs, ...}:
 {
-  config = lib.mkIf config.myOptions.bundles.desktopBase.enable {
+  options = {
+    bundles.desktopBase.sway.enable = lib.mkOption {
+      type = lib.types.bool;
+      default = false;
+    };
+  };
+  config = lib.mkIf config.bundles.desktopBase.sway.enable {
+    bundles.desktopBase = {
+      gtklock.enable = true;
+    };
     programs.sway = {
       enable = true;
       package = pkgs.swayfx;
       wrapperFeatures.base = true;
       wrapperFeatures.gtk = true;
+      xwayland.enable = true;
     };
     services = {
       upower.enable = true;

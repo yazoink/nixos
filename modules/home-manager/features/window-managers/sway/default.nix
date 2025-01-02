@@ -1,6 +1,6 @@
 {config, lib, pkgs, osConfig, ...}:
 {
-  config = lib.mkIf osConfig.myOptions.bundles.desktopBase.enable {
+  config = lib.mkIf osConfig.bundles.desktopBase.sway.enable {
     bundles.desktopBase = {
       mako.enable = true;
       rofi.enable = true;
@@ -27,7 +27,6 @@
     wayland.windowManager.sway = {
       enable = true;
       checkConfig = false;
-      xwayland = true;
       extraConfig = ''
         title_align center
         titlebar_padding 8
@@ -41,6 +40,8 @@
         layer_effects "waybar" shadows enable;
         layer_effects "rofi" shadows enable;
         layer_effects "simple-logout" shadows enable;
+        layer_effects "mako" shadows enable;
+        layer_effects "mako" shadows enable;
       '';
       config = rec {
         modifier = "Mod4";
@@ -50,7 +51,7 @@
         startup = [
           {command = "exec ${lib.getExe pkgs.swaybg} -i ${osConfig.myOptions.desktopTheme.wallpaper}";}
           {command = "exec ${lib.getExe pkgs.swaybg} -i ${osConfig.myOptions.desktopTheme.wallpaper}";}
-          {command = "exec ${./scripts/waybar.sh}";}
+          {command = "exec ${../scripts/waybar.sh}";}
         ];
         gaps = {
           inner = 5;
@@ -146,8 +147,8 @@
           "${modifier}+Shift+s" = "scratchpad show";
           "${modifier}+w" = "exec ${osConfig.myOptions.defaultApps.webBrowser.command}";
           "${modifier}+e" = "exec ${osConfig.myOptions.defaultApps.fileManager.command}";
-          "${modifier}+s" = "exec ${./scripts/screenshot.sh}";
-          "${modifier}+c" = "exec ${./scripts/color.sh}";
+          "${modifier}+s" = "exec ${lib.getExe config.bundles.desktopBase.screenshot.package} -s";
+          "${modifier}+c" = "exec ${../scripts/color.sh}";
           "${modifier}+Shift+b" = "exec ${./scripts/waybar.sh}";
           "${modifier}+Shift+q" = "exec simple-logout";
           "${modifier}+Control+l" = "exec ${lib.getExe pkgs.gtklock}";

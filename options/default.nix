@@ -154,9 +154,16 @@
           type = lib.types.bool;
           default = false;
         };
-        desktopBase.enable = lib.mkOption {
-          type = lib.types.bool;
-          default = false;
+        desktopBase = {
+          enable = lib.mkOption {
+            type = lib.types.bool;
+            default = false;
+          };
+          windowManager = lib.mkOption {
+            type = lib.types.string;
+            default = "hyprland";
+            description = "options: hyprland, sway";
+          };
         };
         desktopFull.enable = lib.mkOption {
           type = lib.types.bool;

@@ -23,11 +23,11 @@
     ../../features/browsers
     ../../features/image-viewers
     ../../features/media-players
+    ../../features/window-managers
 
     ../../features/direnv
     ../../features/dither
     ../../features/gtklock
-    ../../features/hyprland
     ../../features/hyprviewbinds
     ../../features/mako
     ../../features/replacecolor
@@ -37,6 +37,5 @@
     ../../features/theme
     ../../features/waybar
     ../../features/xdg
-    ../../features/sway
   ];
 }

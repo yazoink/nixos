@@ -17,7 +17,7 @@ in
     };
 
     home = {
-      file.".config/hypr/scripts".source = ./scripts;
+      file.".config/hypr/scripts".source = ../scripts;
     };
 
     wayland.windowManager.hyprland = builtins.trace "hyprland config module enabled" {
@@ -38,8 +38,8 @@ in
         "$screenshot" = "${config.bundles.desktopBase.screenshot.package}/bin/screenshot -s";
         "$power" = "simple-logout";
         "$lock" = "gtklock";
-        "$colorPicker" = "/home/${osConfig.myOptions.userAccount.username}/.config/hypr/scripts/color.sh";
-        "$bar" = "/home/${osConfig.myOptions.userAccount.username}/.config/hypr/scripts/waybar.sh";
+        "$colorPicker" = "${../scripts/color.sh}";
+        "$bar" = "${../scripts/waybar.sh}";
         "$screenRecorder" = "kooha";
         "$mainMod" = "SUPER";
         env = [
