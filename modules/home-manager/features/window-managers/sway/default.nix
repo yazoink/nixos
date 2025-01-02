@@ -26,6 +26,8 @@
 
     wayland.windowManager.sway = {
       enable = true;
+      package = pkgs.swayfx;
+      xwayland = true;
       checkConfig = false;
       extraConfig = ''
         title_align center
