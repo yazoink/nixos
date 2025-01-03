@@ -28,7 +28,7 @@ in
       Unit.Description = "Replace the color of the simple-logout icons";
       Service = {
         Type = "oneshot";
-        ExecStart = "${pkgs.bash}/bin/bash ${script} ${config.bundles.desktopBase.replacecolor.package}/bin/replacecolor ${./config/icons} #${config.stylix.base16Scheme.base05} ${osConfig.myOptions.userAccount.username}";
+        ExecStart = "${pkgs.bash}/bin/bash ${script} ${config.utils.replacecolor.package}/bin/replacecolor ${./config/icons} #${config.stylix.base16Scheme.base05} ${osConfig.myOptions.userAccount.username}";
       };
       Install = {
         WantedBy = ["default.target"];
