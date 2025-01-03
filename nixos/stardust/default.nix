@@ -49,16 +49,16 @@
       };
     };
     desktopTheme = {
-      name = "carob";
-      wallpaper = ./wallpapers/painting3.jpg;
+      name = "caroline";
+      wallpaper = ./wallpapers/caroline-flowers3.png;
       sddm = {
         scale = 1.3;
-        wallpaper = ./wallpapers/painting3.jpg;
+        wallpaper = ./wallpapers/caroline-flowers2.png;
       };
       firefoxCss.anotherOneline.enable = true;
     };
     bundles = {
-      desktopBase.windowManager = "sway";
+      desktopBase.windowManager = "hyprland";
       desktopFull.enable = true;
     };
     features = {
