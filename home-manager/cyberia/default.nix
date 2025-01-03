@@ -3,10 +3,13 @@
   lib,
   ...
 }:
+let
+  inherit (osConfig.myOptions.userAccount) username;
+in
 lib.mkIf (osConfig.networking.hostName == "cyberia") {
   home = {
-    username = "${osConfig.myOptions.userAccount.username}";
-    homeDirectory = "/home/${osConfig.myOptions.userAccount.username}";
+    username = "${username}";
+    homeDirectory = "/home/${username}";
     sessionVariables = {
       EDITOR = "nvim";
       TERMINAL = "foot";

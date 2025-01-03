@@ -93,6 +93,9 @@ See `options/default.nix` for the available features.
 Enable features related to specific hardware.
 See `options/default.nix`.
 
+### myOptions.hardwareFeatures.laptop.touchpadScrollFactor
+Scroll factor to set for laptop touchpad in Hyprland.
+
 ## Custom Options (local to features)
 The options which are not intended for use outside `modules/`. The global custom options are essentially an abstraction for this part of the config.
 
@@ -123,3 +126,164 @@ This option is set for each individual theme in `modules/nixos/features/theme/th
 Enabled a font which is not in nixpkgs. This font is set in `modules/nixos/features/theme/<terminal/desktop>-fonts`
 and the option is enabled in `modules/nixos/features/theme/default.nix`.
 If it's disabled, it will fall back to a font from nixpkgs.
+
+## Adding hosts
+1. Add to `flake.nix`:
+```nix
+{
+    ...
+    nixosConfigurations = {
+        ...
+        <hostname> = nixpkgs.lib.nixosSystem {
+            specialArgs = { inherit inputs system; };
+            modules = [
+                ./options
+                ./nixos/<hostname>
+            ];
+        };
+    };
+    ...
+}
+```
+2. Make directory `nixos/<hostname>` and copy `/etc/nixos/hardware-configuration.nix` into it.
+3. Add to `nixos/<hostname>/default.nix`
+```nix
+{
+    inputs,
+    lib,
+    config,
+    pkgs,
+    ...
+}: {
+    ### Imports ###
+    imports = [
+        ./hardware-configuration.nix
+        ../../modules/nixos
+        inputs.home-manager.nixosModules.home-manager
+        inputs.stylix.nixosModules.stylix
+        
+        ## If supported, import nixos-hardware module ##
+        # inputs.nixos-hardware.nixosModules.<nixos-hardware module>
+    ];
+
+    ### Custom options (see top of page for more info/options) ###
+    ## This will set up a basic desktop ##
+    myOptions = {
+        userAccount.username = "<username>";
+        desktopTheme = {
+            # name = "caroline";
+            wallpaper = ./wallpapers/<image>;
+            sddm = {
+                #scale = 1;
+                wallpaper = ./wallpapers/<image>;
+            };
+            # firefoxCss.anotherOneline.enable = true;
+        };
+        bundles = {
+            ## Enable at least one ##
+            # base.enable = true;
+            desktopBase = {
+                enable = true;
+                # windowManager = "hyprland";
+                # displayManager = "sddm";
+            };
+            # desktopFull.enable = true;
+        };
+        features = {};
+        hardwareFeatures = {
+            # h264ify.enable = true;
+            # diskBurner.enable = true;
+            # laptop.enable = true;
+            # ssd.enable = true;
+        };
+    };
+
+    ### home-manager ###
+    home-manager = {
+        extraSpecialArgs = { inherit inputs; };
+        useGlobalPkgs = true;
+        useUserPackages = true;
+        users."${config.myOptions.userAccount.username}" = {
+            imports = [ ../../home-manager ];
+        };
+    };
+
+    ### Graphics drivers (if not using nixos-hardware) ###
+    hardware = {
+        graphics = {
+            enable = true;
+            # enable32Bit = true; # if using steam
+
+            ## legacy Intel drivers ##
+            /*
+            extraPackages = with pkgs; [
+                intel-vaapi-driver
+                libvdpau-va-gl
+                intel-media-sdk
+            ];
+            */
+        };
+        ## AMDGPU drivers ##
+        /*
+        amdgpu = {
+            initrd.enable = true;
+            amdvlk = {
+                enable = true;
+                support32Bit.enable = true;
+            };
+        };
+        */
+    };
+
+    ## Legacy Intel driver ##
+    /*
+    environment.sessionVariables = {
+        LIBVA_DRIVER_NAME = "i965";
+    };
+    */
+
+    ## AMDGPU driver ##
+    # services.xserver.videoDrivers = ["amdgpu"];
+
+    ### Bootloader ###
+    boot.loader = {
+        ## UEFI ##
+        systemd-boot.enable = true;
+        efi.canTouchEfiVariables = true;
+
+        ## Legacy ##
+        /*
+        grub = {
+            enable = true;
+            device = "/dev/sda"; # change /dev/sda to boot drive if applicable
+            # gfxmodeBios = "1024x768"; # set if applicable
+            theme = null;
+            splashImage = null;
+        };
+        */
+    };
+
+    networking.hostName = "<hostname>";
+
+    services.openssh = {
+        enable = true;
+        settings = {
+            PermitRootLogin = "no";
+            # PasswordAuthentication = false;
+        };
+    };
+
+    system.stateVersion = "24.05";
+}
+```
+4. Create directory `nixos/nixos/<hostname>/wallpapers` and add any specified wallpapers there.
+5. Create directory `home-manager/<hostname>`.
+6. Add to `home-manager/default.nix`:
+```nix
+...
+imports = {
+    ...
+    ./<hostname>
+};
+...
+```

@@ -81,7 +81,7 @@
     extraSpecialArgs = {inherit inputs;};
     useGlobalPkgs = true;
     useUserPackages = true;
-    users."gene" = {
+    users."${config.myOptions.userAccount.username}" = {
       imports = [
         ../../home-manager
       ];
@@ -110,6 +110,10 @@
       libvdpau-va-gl
       intel-media-sdk
     ];
+  };
+
+  environment.sessionVariables = {
+    LIBVA_DRIVER_NAME = "i965";
   };
 
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
