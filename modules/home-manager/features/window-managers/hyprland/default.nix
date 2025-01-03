@@ -87,11 +87,11 @@ in
             accel_profile = "flat";
             sensitivity = 0.5;
           }
-          {
+          /*{
             name = "etps/2-elantech-touchpad";
             sensitivity = 0.3;
             accel_profile = "flat";
-          }
+          }*/
         ];
         misc = {
           disable_hyprland_logo = true;
