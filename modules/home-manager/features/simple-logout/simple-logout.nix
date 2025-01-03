@@ -7,7 +7,7 @@ pkgs.python312Packages.buildPythonApplication rec {
     owner = "yazoink";
     repo = "simple-logout";
     rev = "main";
-    sha256 = "sha256-kUZuj/pe3+B428oY6vfv3fWompnVaaa3w1VS8qbdM/w=";
+    sha256 = "sha256-HxRq7zsVQVxYEnsIQrQ657lT/JDsPeIlRQiAq3MZkec=";
   };
 
   nativeBuildInputs = [
