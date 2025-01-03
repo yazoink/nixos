@@ -3,7 +3,8 @@
     ./carob
     ./caroline
     ./manuscript
-    ./rosepine
+    ./rose-pine-moon
+    ./rose-pine
     ./tarot
     ./wizard
     ./embers
