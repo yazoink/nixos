@@ -1,4 +1,8 @@
 {pkgs, config, lib, ...}:
+let
+  customTerminalFont = config.desktopTheme.customTerminalFont;
+  customTerminalFont = config.desktopTheme.customDesktopFont;
+in
 {
   options = {
     desktopTheme.base16Accent = lib.mkOption {
@@ -12,8 +16,6 @@
     ./desktop-fonts
   ];
   config = lib.mkIf config.myOptions.bundles.desktopBase.enable {
-    inherit (config.desktopTheme.customTerminalFont) customTerminalFont;
-    inherit (config.desktopTheme.customDesktopFont) customDesktopFont;
     desktopTheme.customTerminalFont.enable = true;
     desktopTheme.customDesktopFont.enable = false;
 
