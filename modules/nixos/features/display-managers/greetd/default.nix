@@ -17,20 +17,6 @@
     #stylix.targets.regreet.enable = false;
     programs.regreet = {
       enable = true;
-      package = pkgs.greetd.regreet;
-      extraCss = with config.stylix.base16Scheme; lib.mkForce ''
-        window {
-          color: #${base05};
-          background-color: #${base00};
-        }
-        entry, button, input {
-          color: #${base05};
-          background-color: #${base01};
-        }
-        input:selected {
-          border: 2px solid #${base0F};
-        }
-      '';
     };
     services.greetd = {
       enable = true;

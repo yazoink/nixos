@@ -164,6 +164,11 @@
             default = "hyprland";
             description = "options: hyprland, sway";
           };
+          displayManager = lib.mkOption {
+            type = lib.types.str;
+            default = "sddm";
+            description = "options: sddm, regreet";
+          };
         };
         desktopFull.enable = lib.mkOption {
           type = lib.types.bool;

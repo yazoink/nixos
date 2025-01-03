@@ -59,6 +59,7 @@
     };
     bundles = {
       desktopBase.windowManager = "hyprland";
+      desktopBase.displayManager = "sddm";
       desktopFull.enable = true;
     };
     features = {
