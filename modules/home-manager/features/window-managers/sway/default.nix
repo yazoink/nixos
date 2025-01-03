@@ -84,6 +84,8 @@
         for_window [title="^File Manager Preferences$"] floating enable
         for_window [class="^org.kde.kruler$"] floating enable
         for_window [instance="Browser" window_role="About"] floating enable
+        for_window [title = "About Mozilla Firefox"] floating enable
+        for_window [window_role = "About"] floating enable
       '';
       config = rec {
         modifier = "Mod4";
