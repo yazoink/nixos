@@ -68,6 +68,9 @@
           tap enabled
         }
 
+        bindgesture swipe:right workspace prev
+        bindgesture swipe:left workspace next
+
         for_window [title="^File Upload.*"] floating enable
         for_window [title="^Open File.*"] floating enable
         for_window [title="^Open Folder.*"] floating enable

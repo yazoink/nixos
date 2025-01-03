@@ -98,7 +98,7 @@ in
           mentionAvatars.enable = true;
           messageLatency.enable = lib.mkIf bloat true;
           messageLinkEmbeds.enable = true;
-          messageLogger.enable = true;
+          messageLogger.enable = lib.mkIf bloat true;
           moreKaomoji.enable = lib.mkIf bloat true;
           noDevtoolsWarning.enable = true;
           noF1.enable = true;
@@ -117,8 +117,8 @@ in
           onePingPerDM.enable = true;
           permissionsViewer.enable = lib.mkIf bloat true;
           pictureInPicture.enable = true;
-          pinDMs.enable = true;
-          platformIndicators.enable = true;
+          pinDMs.enable = lib.mkIf bloat true;
+          platformIndicators.enable = lib.mkIf bloat true;
           previewMessage.enable = true;
           relationshipNotifier.enable = true;
           replaceGoogleSearch = {

@@ -49,16 +49,18 @@
       };
     };
     desktopTheme = {
-      name = "caroline";
-      wallpaper = ./wallpapers/caroline-flowers3.png;
+      name = "rosepine";
+      #wallpaper = ./wallpapers/caroline-flowers3.png;
+      wallpaper = ./wallpapers/flowers-rosepine.jpg;
       sddm = {
         scale = 1.3;
-        wallpaper = ./wallpapers/caroline-flowers2.png;
+        #wallpaper = ./wallpapers/caroline-flowers2.png;
+        wallpaper = ./wallpapers/flowers-rosepine2.jpg;
       };
       firefoxCss.anotherOneline.enable = true;
     };
     bundles = {
-      desktopBase.windowManager = "hyprland";
+      desktopBase.windowManager = "sway";
       desktopBase.displayManager = "sddm";
       desktopFull.enable = true;
       desktopFull.vesktop.bloat = false;
