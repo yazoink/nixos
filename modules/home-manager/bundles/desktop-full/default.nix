@@ -21,7 +21,6 @@
       signal-desktop
 
       ### gui file viewers ###
-      vlc
       sublime-music
 
       ### gui file editors ###

@@ -21,7 +21,7 @@ My NixOS desktop configs with home-manager and Hyprland.
 - Consistent theming across GTK/Qt and pretty much everything else
 - Auto-generated theme based on the current stylix base16 colorscheme for everything except icons and cursors
 - Ability to easily toggle between desktop colorschemes in config
-- Customized Firefox with [Betterfox](https://github.com/yokoffing/BetterFox) and [Shyfox](https://github.com/Naezr/ShyFox)
+- Customized Firefox with [Betterfox](https://github.com/yokoffing/BetterFox) and toggleable userChrome.css themes
 - Declarative Etterna package/installation
 - [Script](https://github.com/yazoink/nixos/blob/main/modules/home-manager/features/shell-config/scripts/rebuild/rebuild) for rebuilding the system that notifies you when it's done
 - [Script](https://github.com/yazoink/nixos/blob/main/modules/home-manager/features/shell-config/scripts/clean/clean) for cleaning the system that notifies you when it's done
