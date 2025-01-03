@@ -16,6 +16,6 @@ in
   };
   config = lib.mkIf config.utils.dither.enable {
     home.packages = [pkgs.imagemagick];
-    bundles.desktopBase.dither.package = dither;
+    utils.dither.package = dither;
   };
 }
