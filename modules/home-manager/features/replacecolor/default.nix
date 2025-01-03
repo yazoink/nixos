@@ -5,7 +5,7 @@ let
 in
 {
   options = {
-    bundles.desktopBase.replacecolor = {
+    utils.replacecolor = {
       enable = lib.mkOption {
         type = lib.types.bool;
         default = false;
@@ -16,7 +16,7 @@ in
     };
   };
   config = lib.mkIf config.bundles.desktopBase.simpleLogout.enable {
-    bundles.desktopBase.replacecolor.package = replacecolor;
+    utils.replacecolor.package = replacecolor;
     home.packages = [config.bundles.desktopBase.replacecolor.package];
   };
 }

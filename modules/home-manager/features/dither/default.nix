@@ -4,7 +4,7 @@ let
 in
 {
   options = {
-    bundles.desktopBase.dither = {
+    utils.dither = {
       enable = lib.mkOption {
         type = lib.types.bool;
         default = false;
@@ -14,7 +14,7 @@ in
       };
     };
   };
-  config = lib.mkIf config.bundles.desktopBase.dither.enable {
+  config = lib.mkIf config.utils.dither.enable {
     home.packages = [pkgs.imagemagick];
     bundles.desktopBase.dither.package = dither;
   };

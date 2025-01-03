@@ -18,11 +18,9 @@
     ../../features/window-managers
 
     ../../features/direnv
-    ../../features/dither
     ../../features/gtklock
     ../../features/hyprviewbinds
     ../../features/mako
-    ../../features/replacecolor
     ../../features/rofi
     ../../features/screenshot
     ../../features/simple-logout

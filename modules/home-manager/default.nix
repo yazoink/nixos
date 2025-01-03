@@ -13,5 +13,7 @@
     ./features/osu
     ./features/prismlauncher
     ./features/virt-manager
+    ./features/dither
+    ./features/replacecolor
   ];
 }
