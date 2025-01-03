@@ -22,7 +22,7 @@
       grim
       slurp
       hyprpicker
-      autotiling-rs
+      autotiling
     ];
 
     home.sessionVariables = {
@@ -97,7 +97,7 @@
           {command = "exec mpDris2 --music-dir=~/mu &";}
           {command = "exec ${lib.getExe pkgs.poweralertd}";}
           {command = "exec nm-applet";}
-          {command = "exec autotiling-rs";}
+          {command = "exec autotiling";}
         ];
         gaps = {
           inner = 10;
