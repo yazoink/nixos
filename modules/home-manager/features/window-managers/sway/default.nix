@@ -58,8 +58,8 @@
         #default_dim_inactive 0.15
         titlebar_separator disable
         layer_effects "waybar" shadows enable;
-        layer_effects "rofi" shadows enable;
-        layer_effects "gtk-layer-shell" shadows enable;
+        #layer_effects "rofi" shadows enable;
+        #layer_effects "gtk-layer-shell" shadows enable;
         #layer_effects "notifications" shadows enable;
 
         for_window [class="Firefox"] inhibit_idle fullscreen
