@@ -85,6 +85,9 @@ Choose which display manager to install.
 Enables all desktop features including music players, media editors, libreoffice, vesktop, etc.
 This module automatically enables `myOptions.bundles.desktopBase`.
 
+### myOptions.bundles.desktopFull.vesktop.bloat
+Disabling this installs less vesktop plugins.
+
 ### myOptions.features.\<name>.enable
 Enable individual applications/services/etc which may not need to be included on every host, thus excluding them from bundles.
 See `options/default.nix` for the available features.

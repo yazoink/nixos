@@ -170,9 +170,18 @@
             description = "options: sddm, regreet";
           };
         };
-        desktopFull.enable = lib.mkOption {
-          type = lib.types.bool;
-          default = false;
+        desktopFull = {
+          enable = lib.mkOption {
+            type = lib.types.bool;
+            default = false;
+          };
+          vesktop = {
+            bloat = lib.mkOption {
+              type = lib.types.bool;
+              default = true;
+              description = "setting to false installs less plugins";
+            };
+          };
         };
       };
       features = {

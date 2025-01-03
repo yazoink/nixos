@@ -4,6 +4,7 @@ let
     template = builtins.trace "set vesktop theme template" ./${osConfig.desktopTheme.base16Accent}.theme.css.mustache;
     extension = ".css";
   };
+  inherit (osConfig.myOptions.bundles.desktopFull.vesktop) bloat;
 in
 {
   options = {
@@ -45,18 +46,18 @@ in
             anonymiseByDefault = true;
             method = "timestamp";
           };
-          betterFolders.enable = true;
-          betterGifAltText.enable = true;
+          betterFolders.enable = lib.mkIf bloat true;
+          betterGifAltText.enable = lib.mkIf bloat true;
           betterGifPicker.enable = true;
           betterSettings.enable = true;
           betterUploadButton.enable = true;
-          biggerStreamPreview.enable = true;
-          callTimer.enable = true;
+          biggerStreamPreview.enable = lib.mkIf bloat true;
+          callTimer.enable = true lib.mkIf bloat;
           clearURLs.enable = true;
-          copyFileContents.enable = true;
-          copyUserURLs.enable = true;
-          decor.enable = true;
-          emoteCloner.enable = true;
+          copyFileContents.enable = lib.mkIf bloat true;
+          copyUserURLs.enable = lib.mkIf bloat true;
+          decor.enable = lib.mkIf bloat true;
+          emoteCloner.enable = lib.mkIf bloat true;
           experiments = {
             enable = true;
             toolbarDevMenu = true;
@@ -85,7 +86,7 @@ in
             size = 250.0;
           };
           implicitRelationships.enable = true;
-          keepCurrentChannel.enable = true;
+          keepCurrentChannel.enable = lib.mkIf bloat true;
           loadingQuotes = {
             enable = true;
             replaceEvents = true;
@@ -95,10 +96,10 @@ in
           };
           memberCount.enable = true;
           mentionAvatars.enable = true;
-          messageLatency.enable = true;
+          messageLatency.enable = lib.mkIf bloat true;
           messageLinkEmbeds.enable = true;
           messageLogger.enable = true;
-          moreKaomoji.enable = true;
+          moreKaomoji.enable = lib.mkIf bloat true;
           noDevtoolsWarning.enable = true;
           noF1.enable = true;
           noMaskedUrlPaste.enable = true;
@@ -114,7 +115,7 @@ in
           noUnblockToJump.enable = true;
           nsfwGateBypass.enable = true;
           onePingPerDM.enable = true;
-          permissionsViewer.enable = true;
+          permissionsViewer.enable = lib.mkIf bloat true;
           pictureInPicture.enable = true;
           pinDMs.enable = true;
           platformIndicators.enable = true;

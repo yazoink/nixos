@@ -61,6 +61,7 @@
       desktopBase.windowManager = "hyprland";
       desktopBase.displayManager = "sddm";
       desktopFull.enable = true;
+      desktopFull.vesktop.bloat = false;
     };
     features = {
       minetest.enable = true;
