@@ -73,7 +73,6 @@
       virtManager.enable = true;
     };
     hardwareFeatures = {
-      amdgpu.enable = true;
       ssd.enable = true;
     };
   };
@@ -89,10 +88,37 @@
     };
   };
 
-  boot.loader = {
-    systemd-boot.enable = true;
-    efi.canTouchEfiVariables = true;
+  boot = {
+    loader = {
+      systemd-boot.enable = true;
+      efi.canTouchEfiVariables = true;
+    };
+    kernelParams = ["amd_iommu=on"];
   };
+
+  environment.variables = {
+    LIBVA_DRIVER_NAME = "radeonsi";
+    VDPAU_DRIVER_NAME = "radeonsi";
+  };
+
+  hardware = {
+    amdgpu = {
+      initrd.enable = true;
+      amdvlk = {
+        enable = true;
+        support32Bit.enable = true;
+      };
+    };
+    graphics = {
+      enable = true;
+      enable32Bit = true;
+      extraPackages = with pkgs; [
+        mesa
+      ];
+    };
+  };
+
+  services.xserver.videoDrivers = ["amdgpu"];
 
   networking.hostName = "fluoride";
 
