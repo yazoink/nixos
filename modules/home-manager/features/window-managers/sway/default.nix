@@ -50,11 +50,11 @@
         titlebar_padding 10
         corner_radius 10
         #smart_corner_radius on
-        default_border normal 5
+        default_border normal 0
         blur disable
         shadows enable
-        shadow_blur_radius 15
-        shadow_color #000000AA
+        shadow_blur_radius 20
+        shadow_color #000000B0
         #default_dim_inactive 0.15
         titlebar_separator disable
         layer_effects "waybar" shadows enable;
