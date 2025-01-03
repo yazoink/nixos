@@ -281,10 +281,10 @@ If it's disabled, it will fall back to a font from nixpkgs.
 6. Add to `home-manager/default.nix`:
 ```nix
 ...
-imports = {
+imports = [
     ...
     ./<hostname>
-};
+];
 ...
 ```
 7. Add to `home-manager/<hostname>/default.nix`:
