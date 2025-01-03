@@ -13,7 +13,7 @@ in
 
     stylix = {
       cursor = {
-        name = "BreezeX-RoséPine";
+        name = "BreezeX-RosePine-Linux";
       };
       base16Scheme = {
         base00 = "191724";
