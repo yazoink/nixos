@@ -51,11 +51,11 @@
     desktopTheme = {
       name = "rose-pine";
       #wallpaper = ./wallpapers/caroline-flowers3.png;
-      wallpaper = ./wallpapers/flowers-rosepine.jpg;
+      wallpaper = ./wallpapers/bay.JPG;
       sddm = {
         scale = 1.3;
         #wallpaper = ./wallpapers/caroline-flowers2.png;
-        wallpaper = ./wallpapers/flowers-rosepine2.jpg;
+        wallpaper = ./wallpapers/bay.JPG;
       };
       firefoxCss.anotherOneline.enable = true;
     };
