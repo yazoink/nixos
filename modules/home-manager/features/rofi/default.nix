@@ -23,7 +23,7 @@ in
       Unit.Description = "Dither the Rofi image";
       Service = {
         Type = "oneshot";
-        ExecStart = with config.stylix.base16Scheme; "${config.bundles.desktopBase.dither.package}/bin/dither ${base00} ${base01} ${base02} ${base03} ${base04} ${base05} ${base06} ${base07} ${base08} ${base09} ${base0A} ${base0B} ${base0C} ${base0D} ${base0E} ${base0F} ${baseImage} /home/${osConfig.myOptions.userAccount.username}/.config/rofi/image.png";
+        ExecStart = with config.stylix.base16Scheme; "${config.utils.dither.package}/bin/dither ${base00} ${base01} ${base02} ${base03} ${base04} ${base05} ${base06} ${base07} ${base08} ${base09} ${base0A} ${base0B} ${base0C} ${base0D} ${base0E} ${base0F} ${baseImage} /home/${osConfig.myOptions.userAccount.username}/.config/rofi/image.png";
       };
       Install = {
         WantedBy = ["default.target"];
