@@ -54,7 +54,7 @@
         blur disable
         shadows enable
         shadow_blur_radius 15
-        shadow_color #000000B0
+        shadow_color #000000AA
         #default_dim_inactive 0.15
         titlebar_separator disable
         layer_effects "waybar" shadows enable;
