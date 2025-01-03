@@ -7,15 +7,17 @@ My NixOS desktop configs with home-manager and Hyprland.
 - Stardust: Acer TravelMate B113-E netbook
 
 ## Software
-- WM: Hyprland
+- WM: Hyprland/SwayFX
 - Bar: Waybar
 - Launcher: Rofi
 - Terminal: Foot
 - Editor: Neovim
-- Browser: Firefox
+- Browser: Firefox/Zen
 - File manager: Thunar/Yazi
 - Notifications: Mako
-- Display manager: SDDM
+- Display manager: SDDM/ReGreet
+- Shell: Zsh
+- Prompt: Starship
 
 ## Features
 - Consistent theming across GTK/Qt and pretty much everything else
