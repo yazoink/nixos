@@ -58,7 +58,8 @@
         #default_dim_inactive 0.15
         layer_effects "waybar" shadows enable;
         layer_effects "rofi" shadows enable;
-        layer_effects "simple-logout" shadows enable;
+        layer_effects "gtk-layer-shell" shadows enable;
+        layer_effects "notifications" shadows enable;
 
         for_window [class="Firefox"] inhibit_idle fullscreen
         for_window [app_id="firefox"] inhibit_idle fullscreen
