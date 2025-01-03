@@ -52,7 +52,7 @@ in
           betterSettings.enable = true;
           betterUploadButton.enable = true;
           biggerStreamPreview.enable = lib.mkIf bloat true;
-          callTimer.enable = true lib.mkIf bloat;
+          callTimer.enable = lib.mkIf bloat true;
           clearURLs.enable = true;
           copyFileContents.enable = lib.mkIf bloat true;
           copyUserURLs.enable = lib.mkIf bloat true;
