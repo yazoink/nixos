@@ -4,7 +4,7 @@ let
   script = ./script.sh;
   simpleLogout = pkgs.callPackage ./simple-logout.nix {};
   styleCss = config.lib.stylix.colors {
-    template = ./config/${windowManager}.css.mustache;
+    template = ./config/style.css.mustache;
     extension = ".css";
   };
 in
