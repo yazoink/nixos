@@ -1,7 +1,6 @@
 {pkgs, config, lib, ...}:
 let
-  customTerminalFont = config.desktopTheme.customTerminalFont;
-  customTerminalFont = config.desktopTheme.customDesktopFont;
+  inherit (config.desktopTheme) customTerminalFont customDesktopFont;
 in
 {
   options = {
