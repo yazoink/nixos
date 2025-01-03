@@ -8,10 +8,10 @@ The custom options defined in `options/default.nix` for system configuration. Th
 Default applications.
 See `options/default.nix` for the supported types of applications and their options.
 
-### myOptions.defaultApps.<type>.command
+### myOptions.defaultApps.\<type>.command
 Command to launch the app.
 
-### myOptions.defaultApps.<type>.desktopFile
+### myOptions.defaultApps.\<type>.desktopFile
 Name of the desktop entry file.
 
 ### myOptions.userAccount
@@ -53,7 +53,7 @@ Sets the scale for the SDDM theme.
 ### myOptions.desktopTheme.sddm.wallpaper
 Path to the wallpaper to use for the SDDM theme.
 
-### myOptions.desktopTheme.firefoxCss.<name>.enable
+### myOptions.desktopTheme.firefoxCss.\<name>.enable
 Enables Firefox userChrome.css themes. Not recommended to enable more than one at once.
 
 ### myOptions.desktopTheme.firefoxCss.shyfox.wallpaper
@@ -119,7 +119,7 @@ This option is set for each individual theme in `modules/nixos/features/theme/th
 - base0E
 - base0F
 
-### desktopTheme.custom<Terminal/Desktop>Font.enable
+### desktopTheme.custom\<Terminal/Desktop>Font.enable
 Enabled a font which is not in nixpkgs. This font is set in `modules/nixos/features/theme/<terminal/desktop>-fonts`
 and the option is enabled in `modules/nixos/features/theme/default.nix`.
 If it's disabled, it will fall back to a font from nixpkgs.
