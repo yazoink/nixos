@@ -85,23 +85,23 @@ Choose which display manager to install.
 Enables all desktop features including music players, media editors, libreoffice, vesktop, etc.
 This module automatically enables `myOptions.bundles.desktopBase`.
 
-### myOptions.features.<name>.enable
+### myOptions.features.\<name>.enable
 Enable individual applications/services/etc which may not need to be included on every host, thus excluding them from bundles.
 See `options/default.nix` for the available features.
 
-### myOptions.hardwareFeatures.<name>.enable
+### myOptions.hardwareFeatures.\<name>.enable
 Enable features related to specific hardware.
 See `options/default.nix`.
 
 ## Custom Options (local to features)
 The options which are not intended for use outside `modules/`. The global custom options are essentially an abstraction for this part of the config.
 
-### bundles.<bundle>.<name>.enable
+### bundles.\<bundle>.\<name>.enable
 Enables a module/feature. These options are typically defined in `modules/<home-manager/nixos>/bundles/<name>/default.nix`
 but can also be enabled within `modules/<home-manager/nixos>/features/<name>` if they are only needed if another specific feature is enabled.
 In the case of the latter, the option should not be enabled in `modules/<home-manager/nixos>/bundles/<name>/default.nix`.
 
-### utils.<name>.enable
+### utils.\<name>.enable
 Enables a module which serves as a utility for building the system (such as a script that's run on a rebuild to help configure a specific module).
 
 Depending on the module, `utils.<name>` and `bundles.<bundle>.<name>` may also contain other options such as `.package`, etc.
