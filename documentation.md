@@ -287,3 +287,22 @@ imports = {
 };
 ...
 ```
+7. Add to `home-manager/<hostname>/default.nix`:
+```nix
+{osConfig, lib, ...}:
+let
+    inherit (osConfig.myOptions.userAccount) username;
+in
+lib.mkIf (osConfig.networking.hostName == "<hostname>") {
+    home = {
+        username = "${username}";
+        homeDirectory = "/home/${username}";
+        sessionVariables = {
+            EDITOR = "nvim";
+            BROWSER = "${osConfig.myOptions.defaultApps.webBrowser.command}";
+            # STEAM_EXTRA_COMPAT_TOOLS_PATH = "\${HOME}/.steam/root/compatibilitytools.d";
+        };
+        stateVersion = "24.05";
+    };
+}
+```

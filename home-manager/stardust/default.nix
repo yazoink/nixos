@@ -9,9 +9,8 @@ lib.mkIf (osConfig.networking.hostName == "stardust") {
     homeDirectory = "/home/${osConfig.myOptions.userAccount.username}";
     sessionVariables = {
       EDITOR = "nvim";
-      TERMINAL = "foot";
-      BROWSER = "firefox";
       #STEAM_EXTRA_COMPAT_TOOLS_PATH = "\${HOME}/.steam/root/compatibilitytools.d";
+      BROWSER = "${osConfig.myOptions.defaultApps.webBrowser.command}";
     };
   };
 

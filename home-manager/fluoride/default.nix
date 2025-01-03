@@ -9,8 +9,7 @@ lib.mkIf (osConfig.networking.hostName == "fluoride") {
     homeDirectory = "/home/${osConfig.myOptions.userAccount.username}";
     sessionVariables = {
       EDITOR = "nvim";
-      TERMINAL = "foot";
-      BROWSER = "firefox";
+      BROWSER = "${osConfig.myOptions.defaultApps.webBrowser.command}";
       STEAM_EXTRA_COMPAT_TOOLS_PATH = "\${HOME}/.steam/root/compatibilitytools.d";
     };
   };

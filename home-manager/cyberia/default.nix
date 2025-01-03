@@ -12,8 +12,7 @@ lib.mkIf (osConfig.networking.hostName == "cyberia") {
     homeDirectory = "/home/${username}";
     sessionVariables = {
       EDITOR = "nvim";
-      TERMINAL = "foot";
-      BROWSER = "firefox";
+      BROWSER = "${osConfig.myOptions.defaultApps.webBrowser.command}";
       #STEAM_EXTRA_COMPAT_TOOLS_PATH = "\${HOME}/.steam/root/compatibilitytools.d";
     };
   };
