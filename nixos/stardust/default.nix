@@ -49,7 +49,7 @@
       };
     };
     desktopTheme = {
-      name = "rose-pine-moon";
+      name = "rose-pine";
       #wallpaper = ./wallpapers/caroline-flowers3.png;
       wallpaper = ./wallpapers/flowers-rosepine.jpg;
       sddm = {
