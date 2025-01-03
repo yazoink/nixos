@@ -1,9 +1,10 @@
 {pkgs, config, lib, osConfig, ...}:
 let
+  inherit (osConfig.myOptions.bundles.desktopBase) windowManager;
   script = ./script.sh;
   simpleLogout = pkgs.callPackage ./simple-logout.nix {};
   styleCss = config.lib.stylix.colors {
-    template = ./config/style.css.mustache;
+    template = ./config/${windowManager}.css.mustache;
     extension = ".css";
   };
 in
@@ -20,7 +21,7 @@ in
       packages = [simpleLogout];
       file = {
         #".config/simple-logout/icons".source = ./config/icons/${osConfig.myOptions.desktopTheme.name};
-        ".config/simple-logout/config.json".source = ./config/${osConfig.myOptions.bundles.desktopBase.windowManager}.json;
+        ".config/simple-logout/config.json".source = ./config/${windowManager}.json;
         ".config/simple-logout/style.css".source = styleCss;
       };
     };
