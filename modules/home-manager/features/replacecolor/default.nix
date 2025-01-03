@@ -17,6 +17,6 @@ in
   };
   config = lib.mkIf config.bundles.desktopBase.simpleLogout.enable {
     utils.replacecolor.package = replacecolor;
-    home.packages = [config.bundles.desktopBase.replacecolor.package];
+    home.packages = [config.utils.replacecolor.package];
   };
 }
