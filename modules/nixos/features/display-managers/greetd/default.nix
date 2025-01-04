@@ -18,14 +18,5 @@
     programs.regreet = {
       enable = true;
     };
-    services.greetd = {
-      enable = true;
-      settings = {
-        default_session = {
-          command = "${lib.getExe pkgs.cage} -s -- ${lib.getExe config.programs.regreet.package}";
-          user = "greeter";
-        };
-      };
-    };
   };
 }
