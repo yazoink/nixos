@@ -62,7 +62,7 @@
       firefoxCss.anotherOneline.enable = true;
     };
     bundles = {
-      desktopBase.displayManager = "sddm";
+      desktopBase.displayManager = "regreet";
       desktopFull.enable = true;
     };
     features = {
