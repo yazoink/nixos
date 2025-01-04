@@ -33,7 +33,7 @@ in
         control-center-margin-top = 15;
         control-center-margin-bottom = 15;
         control-center-margin-right = 15;
-        notification-2fa-action = true;
+        notification-2fa-action = false;
         widgets = [
           "inhibitors"
           "dnd"
