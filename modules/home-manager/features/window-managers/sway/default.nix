@@ -47,6 +47,7 @@
       xwayland = true;
       checkConfig = false;
       extraConfig = ''
+        focus_follows_mouse yes
         title_align center
         titlebar_padding 10
         corner_radius 10
@@ -62,6 +63,8 @@
         #layer_effects "rofi" shadows enable;
         #layer_effects "gtk-layer-shell" shadows enable;
         #layer_effects "notifications" shadows enable;
+        layer_effects "swaync-control-center" shadows enable;
+        layer_effects "swaync-notification-window" shadows enable;
 
         for_window [class="Firefox"] inhibit_idle fullscreen
         for_window [app_id="firefox"] inhibit_idle fullscreen
