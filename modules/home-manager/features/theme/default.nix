@@ -22,12 +22,12 @@ in
       };
     };
     stylix = {
-      /*iconTheme = {
+      iconTheme = {
         enable = true;
         dark = "Papirus-Dark";
         light = "Papirus";
-        package = pkgs.papirus-icon-theme.override {color = "adwaita";};
-      };*/
+        package = pkgs.papirus-icon-theme;
+      };
       targets = {
         waybar.enable = false;
         gtk.extraCss = with config.stylix.base16Scheme; ''
@@ -133,7 +133,7 @@ in
 
     gtk = {
       enable = true;
-      iconTheme.name = lib.mkDefault "OneUI-dark";
+      #iconTheme.name = lib.mkDefault "OneUI-dark";
       gtk2 = {
         extraConfig = builtins.readFile gtkrcFile;
       };

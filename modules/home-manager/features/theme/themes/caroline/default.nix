@@ -3,7 +3,7 @@
 {
   config = lib.mkIf (osConfig.myOptions.bundles.desktopBase.enable && osConfig.myOptions.desktopTheme.name == "caroline") {
     gtk = {
-      iconTheme.name = "caroline-suru-aspromauros";
+      #iconTheme.name = "caroline-suru-aspromauros";
     };
   };
 }
