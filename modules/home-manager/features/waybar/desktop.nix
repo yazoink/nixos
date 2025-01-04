@@ -7,10 +7,10 @@
         mainBar = {
           modules-right = [
             #"mpd"
-            "idle_inhibitor"
+            "tray"
           ] ++ (if config.bundles.desktopBase.swaync.enable 
-            then ["custom/notification" "tray"]
-            else ["tray"]);
+            then ["idle_inhibitor" "custom/notification"]
+            else ["idle_inhibitor"]);
           "mpd".max-length = 50;
         };
       };
