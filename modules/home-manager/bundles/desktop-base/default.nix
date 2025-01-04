@@ -16,11 +16,11 @@
     ../../features/image-viewers
     ../../features/media-players
     ../../features/window-managers
+    ../../features/notifications
 
     ../../features/direnv
     ../../features/gtklock
     ../../features/hyprviewbinds
-    ../../features/mako
     ../../features/rofi
     ../../features/screenshot
     ../../features/simple-logout

@@ -3,7 +3,7 @@
   imports = [./swayidle.nix];
   config = lib.mkIf osConfig.bundles.desktopBase.sway.enable {
     bundles.desktopBase = {
-      mako.enable = true;
+      swaync.enable = true;
       rofi.enable = true;
       screenshot.enable = true;
       simpleLogout.enable = true;
