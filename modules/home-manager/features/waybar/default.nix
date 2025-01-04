@@ -37,7 +37,9 @@
               "memory"
               "cpu"
               "temperature"
-            ];
+          ] ++ (if config.bundles.desktopBase.swaync.enable 
+            then ["custom/notifications"]
+            else []);
           };
           "hyprland/workspaces" = {
             format = "{icon}";
