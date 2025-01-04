@@ -50,7 +50,7 @@
       };
     };
     desktopTheme = {
-      name = "darkmoss";
+      name = "caroline";
       #name = "wizard";
       wallpaper = ./wallpapers/caroline-flowers.png;
       #wallpaper = ./wallpapers/flowers-wizard.jpg;
