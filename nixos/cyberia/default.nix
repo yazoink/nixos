@@ -50,14 +50,13 @@
       };
     };
     desktopTheme = {
-      name = "caroline";
-      #name = "wizard";
-      wallpaper = ./wallpapers/caroline-flowers.png;
-      #wallpaper = ./wallpapers/flowers-wizard.jpg;
+      name = "darkmoss";
+      #wallpaper = ./wallpapers/caroline-flowers.png;
+      wallpaper = ./wallpapers/painting3.jpg;
       sddm = {
         scale = 1.3;
-        wallpaper = ./wallpapers/caroline-waves.png;
-        #wallpaper = ./wallpapers/sand-wizard.jpg;
+        #wallpaper = ./wallpapers/caroline-waves.png;
+        wallpaper = ./wallpapers/painting3.jpg;
       };
       firefoxCss.anotherOneline.enable = true;
     };

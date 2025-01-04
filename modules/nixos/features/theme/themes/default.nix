@@ -15,5 +15,6 @@
     ./atelier-savanna
     ./blood-rust
     ./spirit
+    ./darkmoss
   ];
 }
