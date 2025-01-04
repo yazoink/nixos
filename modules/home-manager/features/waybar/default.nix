@@ -38,7 +38,7 @@
               "cpu"
               "temperature"
           ] ++ (if config.bundles.desktopBase.swaync.enable 
-            then ["custom/notifications"]
+            then ["custom/notification"]
             else []);
           };
           "hyprland/workspaces" = {
