@@ -47,9 +47,9 @@
             icon-size = 50;
             sort-by-number = true;
           };
-          "niri/workspaces" = {
+          /*"niri/workspaces" = {
             format = "{index}";
-          };
+          };*/
           "sway/workspaces" = {
             format = "{index}";
           };
