@@ -37,7 +37,7 @@ in
       settings = {
         positionX = "right";
         positionY = "top";
-        layer = "overlay";
+        layer = "top";
         control-center-layer = "top";
         cssPriority = "application";
         control-center-margin-top = 5;
