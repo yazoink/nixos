@@ -1,0 +1,57 @@
+
+@define-color bg0 #{{base00}};
+@define-color bg1 rgba({{base05-rgb-r}}, {{base05-rgb-g}}, {{base05-rgb-b}}, 0.09);
+@define-color fg0 #{{base05}};
+@define-color accent #3E8FB0;
+@define-color shadow rgba(0, 0, 0, 0.6);
+* {
+  font-family: Rubik;
+  color: @fg0;
+  box-shadow: unset;
+}
+
+.notification {
+  background: @bg0;
+  border: transparent;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0px 0px 5px @shadow;
+}
+
+.notification-content {
+  background: @bg0;
+}
+
+.control-center {
+  background: @bg0;
+  border-radius: 10px;
+  border: transparent;
+  box-shadow: 0px 0px 5px @shadow;
+  padding: 15px;
+}
+
+.widget-mpris-player {
+  background: @bg1;
+}
+
+.close-button {
+  background: @bg1;
+}
+
+.image {
+  border-radius: 10px;
+}
+
+.widget-dnd > switch {
+  background: @bg1;
+  border: transparent;
+}
+
+.widget-dnd > switch:checked {
+  background: @accent;
+}
+
+.widget-dnd > switch slider,
+.widget-dnd > switch:checked slider {
+  background: @fg0;
+}
