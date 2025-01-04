@@ -70,7 +70,7 @@
           };
           "tray" = {
             icon-size = 16;
-            spacing = 16;
+            spacing = 18;
           };
           "mpd" = {
             format = " {title} - {artist}";
