@@ -11,7 +11,9 @@
             "group/bat"
             "idle_inhibitor"
             "tray"
-          ];
+          ] ++ (if config.bundles.desktopBase.swaync.enable 
+            then ["custom/notification"]
+            else []);
           "group/bat" = {
             orientation = "horizontal";
             modules = [

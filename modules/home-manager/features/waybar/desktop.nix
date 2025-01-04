@@ -9,7 +9,9 @@
             #"mpd"
             "idle_inhibitor"
             "tray"
-          ];
+          ] ++ (if config.bundles.desktopBase.swaync.enable 
+            then ["custom/notification"]
+            else []);
           "mpd".max-length = 50;
         };
       };
