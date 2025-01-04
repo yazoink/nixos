@@ -31,7 +31,7 @@ in
         grub.enable = false;
       };
       cursor = {
-        size = 24;
+        size = lib.mkDefault 24;
         name = lib.mkDefault "Bibata-Modern-Classic";
       };
       fonts = {

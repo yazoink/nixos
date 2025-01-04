@@ -14,6 +14,7 @@ in
     stylix = {
       cursor = {
         name = "BreezeX-RosePine-Linux";
+        size = 32;
       };
       base16Scheme = {
         base00 = "191724";
