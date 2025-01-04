@@ -150,7 +150,8 @@
         #temperature,
         #wireplumber,
         #battery,
-        #notification
+        #custom-notification,
+        #idle_inhibitor,
         #backlight,
         #tray {
           padding-left: 0.5em;
