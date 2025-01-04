@@ -14,7 +14,7 @@ in
     stylix.targets.swaync.enable = false;
     services.swaync = {
       enable = true;
-      style = ''
+      /*style = ''
         @define-color bg0 #${base00};
         @define-color bg1 #${base01};
         @define-color fg0 #${base05};
@@ -22,7 +22,7 @@ in
         @define-color shadow rgba(0, 0, 0, 0.7);
         * {
           all: unset;
-          font-family: ${config.stylix.fonts.sansSerif};
+          font-family: ${config.stylix.fonts.sansSerif.name};
           color: @fg0;
         }
         .notification {
@@ -33,7 +33,7 @@ in
           border-radius: 10px;
           border: transparent;
         }
-      '';
+      '';*/
       settings = {
         positionX = "right";
         positionY = "top";
