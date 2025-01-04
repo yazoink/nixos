@@ -65,7 +65,6 @@ in
             text = "Do Not Disturb";
           };
           mpris = {
-            image-size = 96;
             blur = false;
           };
         };
