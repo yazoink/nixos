@@ -1,4 +1,4 @@
-{config, lib, ...}:
+{config, lib, pkgs, ...}:
 {
   options = {
     bundles.desktopBase.swaync.enable = lib.mkOption {
@@ -7,6 +7,7 @@
     };
   };
   config = lib.mkIf config.bundles.desktopBase.swaync.enable {
+    home.packages = with pkgs; [libnotify];
     stylix.targets.swaync = false;
     services.swaync = {
       enable = true;
