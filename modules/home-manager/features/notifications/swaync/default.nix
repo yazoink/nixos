@@ -1,6 +1,5 @@
 {config, osConfig, lib, pkgs, ...}:
 let
-  inherit (config.stylix.base16Scheme) base00 base01 base05;
   themeFile = config.lib.stylix.colors {
     template = ./style.css.mustache;
     extension = ".css";
@@ -20,6 +19,10 @@ in
       enable = true;
       style = ''
         @define-color accent #${config.stylix.base16Scheme.${osConfig.desktopTheme.base16Accent}};
+
+        * {
+          font-family: ${config.stylix.fonts.sansSerif.name};
+        }
       '' + (builtins.readFile themeFile);
       settings = {
         positionX = "right";
