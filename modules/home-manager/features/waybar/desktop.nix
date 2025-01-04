@@ -8,10 +8,9 @@
           modules-right = [
             #"mpd"
             "idle_inhibitor"
-            "tray"
           ] ++ (if config.bundles.desktopBase.swaync.enable 
-            then ["custom/notification"]
-            else []);
+            then ["custom/notification" "tray"]
+            else ["tray"]);
           "mpd".max-length = 50;
         };
       };

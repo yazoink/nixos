@@ -10,10 +10,9 @@
             "wireplumber"
             "group/bat"
             "idle_inhibitor"
-            "tray"
           ] ++ (if config.bundles.desktopBase.swaync.enable 
-            then ["custom/notification"]
-            else []);
+            then ["custom/notification" "tray"]
+            else ["tray"]);
           "group/bat" = {
             orientation = "horizontal";
             modules = [
