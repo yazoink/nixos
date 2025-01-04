@@ -36,7 +36,7 @@ in
       '';*/
       settings = {
         positionX = "right";
-        positionY = "top";
+        positionY = "bottom";
         layer = "top";
         control-center-layer = "top";
         cssPriority = "application";
