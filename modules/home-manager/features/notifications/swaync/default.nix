@@ -40,9 +40,9 @@ in
         layer = "top";
         control-center-layer = "top";
         cssPriority = "application";
-        control-center-margin-top = 5;
-        control-center-margin-bottom = 5;
-        control-center-margin-right = 5;
+        control-center-margin-top = 15;
+        control-center-margin-bottom = 15;
+        control-center-margin-right = 15;
         notification-2fa-action = true;
         widgets = [
           "inhibitors"
