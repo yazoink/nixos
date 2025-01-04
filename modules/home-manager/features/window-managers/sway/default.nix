@@ -87,6 +87,8 @@
         for_window [instance="Browser" window_role="About"] floating enable
         for_window [title = "About Mozilla Firefox"] floating enable
         for_window [window_role = "About"] floating enable
+
+        seat * xcursor_theme ${config.stylix.cursor.name} ${builtins.toString config.stylix.cursor.size}
       '';
       config = rec {
         modifier = "Mod4";
