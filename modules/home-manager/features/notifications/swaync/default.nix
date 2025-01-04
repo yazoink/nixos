@@ -8,7 +8,7 @@
   };
   config = lib.mkIf config.bundles.desktopBase.swaync.enable {
     home.packages = with pkgs; [libnotify];
-    stylix.targets.swaync = false;
+    stylix.targets.swaync.enable = false;
     services.swaync = {
       enable = true;
       /*style = ''
