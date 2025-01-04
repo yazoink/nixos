@@ -1,4 +1,7 @@
-{config, lib, pkgs, ...}:
+{config, osConfig, lib, pkgs, ...}:
+let
+  inherit (config.stylix.base16Scheme) base00 base01 base05;
+in
 {
   options = {
     bundles.desktopBase.swaync.enable = lib.mkOption {
@@ -11,11 +14,26 @@
     stylix.targets.swaync.enable = false;
     services.swaync = {
       enable = true;
-      /*style = ''
+      style = ''
+        @define-color bg0 #${base00};
+        @define-color bg1 #${base01};
+        @define-color fg0 #${base05};
+        @define-color accent #${config.stylix.base16Scheme.${osConfig.desktopTheme.base16Accent}};
+        @define-color shadow rgba(0, 0, 0, 0.7);
         * {
           all: unset;
+          font-family: ${config.stylix.fonts.sansSerif};
+          color: @fg0;
         }
-      '';*/
+        .notification {
+          background: @bg0;
+        }
+        .control-center {
+          background: @bg0;
+          border-radius: 10px;
+          border: transparent;
+        }
+      '';
       settings = {
         positionX = "right";
         positionY = "top";
