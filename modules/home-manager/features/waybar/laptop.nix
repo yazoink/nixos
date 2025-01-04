@@ -7,9 +7,9 @@
         mainBar = {
           modules-right = [
             #"mpd"
+            "tray"
             "wireplumber"
             "group/bat"
-            "tray"
           ] ++ (if config.bundles.desktopBase.swaync.enable 
             then ["idle_inhibitor" "custom/notification"]
             else ["idle_inhibitor"]);
