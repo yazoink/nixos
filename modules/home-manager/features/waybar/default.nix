@@ -37,9 +37,7 @@
               "memory"
               "cpu"
               "temperature"
-          ] ++ (if config.bundles.desktopBase.swaync.enable 
-            then ["custom/notification"]
-            else []);
+          ];
           };
           "hyprland/workspaces" = {
             format = "{icon}";
@@ -152,6 +150,7 @@
         #temperature,
         #wireplumber,
         #battery,
+        #notification
         #backlight,
         #tray {
           padding-left: 0.5em;
