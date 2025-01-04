@@ -15,7 +15,9 @@ in
   };
   config = lib.mkIf config.bundles.desktopFull.vesktop.enable {
     xdg.configFile = {
-      "vesktop/themes/my.theme.css".source = themeFile;
+      "vesktop/themes/my.theme.css".source = if (osConfig.myOptions.desktopTheme.name == "rose-pine") 
+        then ./rose-pine-discord.theme.css 
+        else themeFile;
     };
     programs.nixcord = {
       enable = true;
