@@ -63,7 +63,7 @@ in
               {
                 label = "󰌾";
                 type = "normal";
-                command = "gtklock";
+                command = "${lib.getExe pkgs.gtklock}";
               }
               {
                 label = "󰍃";
