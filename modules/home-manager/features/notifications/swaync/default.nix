@@ -39,6 +39,7 @@ in
           "dnd"
           "mpris"
           "notifications"
+          "buttons-grid"
         ];
         widget-config = {
           inhibitors = {
@@ -56,6 +57,30 @@ in
           };
           mpris = {
             blur = false;
+          };
+          buttons-grid = {
+            actions = [
+              {
+                label = "󰌾";
+                type = "normal";
+                command = "gtklock";
+              }
+              {
+                label = "󰍃";
+                type = "normal";
+                command = "swaymsg exit";
+              }
+              {
+                label = "󰜉";
+                type = "normal";
+                command = "systemctl reboot";
+              }
+              {
+                label = "󰐥";
+                type = "normal";
+                command = "systemctl poweroff";
+              }
+            ];
           };
         };
       };

@@ -1,6 +1,7 @@
 
 @define-color bg0 #{{base00}};
 @define-color bg1 rgba({{base05-rgb-r}}, {{base05-rgb-g}}, {{base05-rgb-b}}, 0.09);
+@define-color bg2 rgba({{base05-rgb-r}}, {{base05-rgb-g}}, {{base05-rgb-b}}, 0.125);
 @define-color fg0 #{{base05}};
 @define-color shadow rgba(0, 0, 0, 0.6);
 * {
@@ -64,4 +65,14 @@
 .widget-dnd > switch slider,
 .widget-dnd > switch:checked slider {
   background: @fg0;
+}
+
+.widget-buttons-grid>flowbox>flowboxchild>button {
+  background-color: @bg1;
+  border: transparent;
+  border-radius: 10px;
+}
+
+.widget-buttons-grid>flowbox>flowboxchild>button:hover {
+  background-color: @bg2;
 }
