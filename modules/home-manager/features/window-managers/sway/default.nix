@@ -6,7 +6,6 @@
       swaync.enable = true;
       rofi.enable = true;
       screenshot.enable = true;
-      simpleLogout.enable = true;
       waybar.enable = true;
     };
 
@@ -50,7 +49,7 @@
         focus_follows_mouse yes
         title_align center
         titlebar_padding 10
-        corner_radius 10
+        corner_radius 15
         #smart_corner_radius on
         default_border normal 0
         blur disable
@@ -206,7 +205,7 @@
           "${modifier}+s" = "exec ${config.bundles.desktopBase.screenshot.package}/bin/screenshot -s";
           "${modifier}+c" = "exec ${../scripts/color.sh}";
           "${modifier}+Shift+b" = "exec ${../scripts/waybar.sh}";
-          "${modifier}+Shift+q" = "exec simple-logout";
+          "${modifier}+Shift+n" = "exec swaync-client -t -swb";
           "${modifier}+Control+l" = "exec ${lib.getExe pkgs.gtklock}";
           #"${modifier}+r" = "exec ${lib.getExe pkgs.kooha}";
           "XF86MonBrightnessDown" = "exec ${lib.getExe pkgs.light} -U 10";
