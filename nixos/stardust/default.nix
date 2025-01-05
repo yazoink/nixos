@@ -49,7 +49,7 @@
       };
     };
     desktopTheme = {
-      name = "gruvbox-dark-hard";
+      name = "biscuit";
       #wallpaper = ./wallpapers/caroline-flowers3.png;
       wallpaper = ./wallpapers/painting3.jpg;
       sddm = {
