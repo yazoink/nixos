@@ -12,12 +12,17 @@
   background: @bg0;
   border: transparent;
   border-radius: 10px;
-  padding: 10px;
+  padding: 5px;
   box-shadow: 0px 0px 5px @shadow;
 }
 
 .notification-content {
   background: @bg0;
+}
+
+.notification-default-action:hover,
+.notification-action:hover {
+  background: @bg1;
 }
 
 .control-center {
@@ -29,6 +34,14 @@
 
 .widget-mpris-player {
   background: @bg1;
+}
+
+.widget-mpris button:hover {
+  background: @bg1;
+}
+
+.widget-mpris-player button:hover {
+  color: @bg0;
 }
 
 .close-button {
