@@ -6,7 +6,7 @@ pkgs.stdenv.mkDerivation {
     owner = "Biscuit-Theme";
     repo = "gtk";
     rev = "main";
-    sha256 = "";
+    sha256 = "sha256-lEUqube0mvPLhN1prQ5IypspnJ244byu2IQSn6Vr8QE=";
   };
 
   dontUnpack = true;
