@@ -1,16 +1,19 @@
 {pkgs, config, lib, ...}:
+let
+  cursors = pkgs.callPackage ./BreezeX-Gruvbox-Dark-Hard {};
+in
 {
   config = lib.mkIf (config.myOptions.bundles.desktopBase.enable && config.myOptions.desktopTheme.name == "gruvbox-dark-hard") {
     environment.systemPackages = with pkgs; [
       gruvbox-plus-icons
-      capitaine-cursors-themed
+      cursors
     ];
 
     desktopTheme.base16Accent = "base0D";
 
     stylix = {
       cursor = {
-        name = "Capitaine Cursors (Gruvbox)";
+        name = "BreezeX-Gruvbox-Dark-Hard";
       };
       base16Scheme = {
         base00 = "1D2021";
