@@ -3,10 +3,10 @@ pkgs.stdenv.mkDerivation {
   name = "biscuit-icons";
 
   src = pkgs.fetchFromGitHub {
-    owner = "yazoink";
-    repo = "biscuit-icons";
+    owner = "Biscuit-Theme";
+    repo = "gtk";
     rev = "main";
-    sha256 = "sha256-RzhihJwyA0dq/RJtWizLTyaNenXzEaAeOlTD66gvDFI=";
+    sha256 = "";
   };
 
   dontUnpack = true;
