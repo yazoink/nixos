@@ -1,6 +1,6 @@
 {pkgs, config, lib, ...}:
 let
-  cursors = pkgs.callPackage ./BreezeX-Gruvbox-Dark-Hard {};
+  cursors = pkgs.callPackage ./gruvbox-dark-hard-cursors.nix {};
 in
 {
   config = lib.mkIf (config.myOptions.bundles.desktopBase.enable && config.myOptions.desktopTheme.name == "gruvbox-dark-hard") {
