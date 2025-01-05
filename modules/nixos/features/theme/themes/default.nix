@@ -16,5 +16,6 @@
     ./blood-rust
     ./spirit
     ./darkmoss
+    ./gruvbox-dark-hard
   ];
 }

@@ -7,5 +7,6 @@
     ./rose-pine
     ./tarot
     ./wizard
+    ./gruvbox-dark-hard
   ];
 }

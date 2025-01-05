@@ -49,13 +49,13 @@
       };
     };
     desktopTheme = {
-      name = "rose-pine";
+      name = "gruvbox-dark-hard";
       #wallpaper = ./wallpapers/caroline-flowers3.png;
-      wallpaper = ./wallpapers/bay.JPG;
+      wallpaper = ./wallpapers/painting3.jpg;
       sddm = {
         scale = 1.3;
         #wallpaper = ./wallpapers/caroline-flowers2.png;
-        wallpaper = ./wallpapers/bay.JPG;
+        wallpaper = ./wallpapers/painting3.jpg;
       };
       firefoxCss.anotherOneline.enable = true;
     };
