@@ -1,6 +1,6 @@
 {config, lib, ...}:
 {
-  config = lib.mkIf config.bundles.base.nixvim.enable {
+  config = lib.mkIf (config.bundles.base.nixvim.enable && config.stylix.enable) {
     stylix.targets.nixvim = {
       enable = true;
       plugin = "base16-nvim";
