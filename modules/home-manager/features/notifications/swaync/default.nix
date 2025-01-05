@@ -37,9 +37,9 @@ in
         widgets = [
           "inhibitors"
           "dnd"
+          "buttons-grid"
           "mpris"
           "notifications"
-          "buttons-grid"
         ];
         widget-config = {
           inhibitors = {
