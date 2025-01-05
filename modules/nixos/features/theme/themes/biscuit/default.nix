@@ -1,7 +1,7 @@
 {pkgs, config, lib, ...}:
 let
   cursors = pkgs.callPackage ./biscuit-cursors.nix {};
-  icons = pkgs.callPackage ./biscuit-icons.nix;
+  icons = pkgs.callPackage ./biscuit-icons.nix {};
 in
 {
   config = lib.mkIf (config.myOptions.bundles.desktopBase.enable && config.myOptions.desktopTheme.name == "biscuit") {
