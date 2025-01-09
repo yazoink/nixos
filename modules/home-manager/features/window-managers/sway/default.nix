@@ -1,6 +1,6 @@
 {config, lib, pkgs, osConfig, ...}:
 {
-  imports = [./swayidle.nix];
+  imports = [./hypridle.nix];
   config = lib.mkIf osConfig.bundles.desktopBase.sway.enable {
     bundles.desktopBase = {
       swaync.enable = true;
