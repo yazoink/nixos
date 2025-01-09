@@ -79,11 +79,6 @@
             color: #${base00};
         }
 
-        #match-title,
-        #match-desc {
-            color: #${base00};
-        }
-
         #entry {
             background: #${base00};
             border: 1px solid #${base00};
