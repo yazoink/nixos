@@ -130,15 +130,15 @@
         * {
           font-family: "${config.stylix.fonts.sansSerif.name}", "Font Awesome 6 Free";
           font-weight: bold;
-          font-size: 15px;
+          font-size: 5px;
           padding: 0px;
           margin: 0px;
         }
 
         #workspaces button {
           color: #${base05};
-          padding-left: 15px;
-          padding-right: 15px;
+          padding-left: 5px;
+          padding-right: 5px;
         }
 
         #workspaces button:hover {
@@ -154,8 +154,8 @@
         #idle_inhibitor,
         #backlight,
         #tray {
-          padding-left: 15px;
-          padding-right: 15px;
+          padding-left: 5px;
+          padding-right: 5px;
         }
 
         .modules-left #workspaces button.focused,
