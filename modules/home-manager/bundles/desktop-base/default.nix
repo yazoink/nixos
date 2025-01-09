@@ -4,6 +4,7 @@
     bundles.desktopBase = builtins.trace "enabled desktopBase" {
       direnv.enable = true;
       xdg.enable = true;
+      ghostty.enable = true;
     };
   };
 
