@@ -79,7 +79,8 @@
             color: #${base00};
         }
 
-        #match-title {
+        #match-title,
+        #match-desc {
             color: #${base00};
         }
 
