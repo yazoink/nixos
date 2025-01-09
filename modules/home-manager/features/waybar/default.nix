@@ -135,7 +135,7 @@
           margin: 0px;
         }
 
-        windoe#waybar > box {
+        window#waybar > box {
         box-shadow: 0px 0px 15px #000000;
         }
 
