@@ -137,8 +137,8 @@
 
         #workspaces button {
           color: #${base03};
-          padding-left: 8px;
-          padding-right: 8px;
+          padding-left: 7px;
+          padding-right: 7px;
         }
 
         #workspaces button:hover {
@@ -154,14 +154,14 @@
         #idle_inhibitor,
         #backlight,
         #tray {
-          padding-left: 8px;
-          padding-right: 8px;
+          padding-left: 7px;
+          padding-right: 7px;
         }
 
         .modules-left #workspaces button.focused,
         .modules-left #workspaces button.active {
           /*color: #${config.stylix.base16Scheme."${osConfig.desktopTheme.base16Accent}"};*/
-          color: ${base05};
+          color: #${base05};
         }
 
         tooltip {
