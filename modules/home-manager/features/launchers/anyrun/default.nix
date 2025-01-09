@@ -7,6 +7,6 @@
     };
   };
   config = lib.mkIf config.bundles.desktopBase.anyrun.enable {
-    home.packages = [inputs.packages."x86_64-linux".anyrun];
+    home.packages = [inputs.anyrun.packages."x86_64-linux".anyrun];
   };
 }
