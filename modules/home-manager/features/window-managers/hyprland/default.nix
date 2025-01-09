@@ -12,7 +12,6 @@ in
 
     bundles.desktopBase = {
       mako.enable = true;
-      anyrun.enable = true;
       #swaync.enable = true;
       rofi.enable = true;
       waybar.enable = true;

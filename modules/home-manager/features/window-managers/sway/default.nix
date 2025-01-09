@@ -4,7 +4,8 @@
   config = lib.mkIf osConfig.bundles.desktopBase.sway.enable {
     bundles.desktopBase = {
       swaync.enable = true;
-      rofi.enable = true;
+      #rofi.enable = true;
+      anyrun.enable = true;
       screenshot.enable = true;
       waybar.enable = true;
     };
@@ -94,7 +95,7 @@
         modifier = "Mod4";
         floating.modifier = modifier;
         terminal = osConfig.myOptions.defaultApps.terminal.command;
-        menu = "exec rofi -show drun";
+        menu = "exec pkill anyrun || anyrun";
         defaultWorkspace = "workspace number 1";
         startup = [
           {command = "exec ${lib.getExe pkgs.swaybg} -i ${osConfig.myOptions.desktopTheme.wallpaper} -m fill";}
