@@ -27,8 +27,9 @@
       "anyrun/style.css".text = with config.stylix.base16Scheme; ''
         * {
             all: unset;
-            font-size: ${builtins.toString config.stylix.fonts.sizes.popups}px;
+            font-size: 15px;
             font-family: ${config.stylix.fonts.sansSerif.name};
+            color: #${base05};
         }
 
         #window,
@@ -61,7 +62,7 @@
         #match:selected,
         #match:hover,
         #plugin:hover {
-            background: #2e3131;
+            background: #${config.stylix.base16Scheme.${osConfig.desktopTheme.base16Accent}};
         }
 
         #entry {
