@@ -20,10 +20,6 @@
     nixcord.url = "github:kaylorben/nixcord";
     sops-nix.url = "github:Mic92/sops-nix";
     zen-browser.url = "github:0xc000022070/zen-browser-flake";
-    anyrun = {
-      url = "github:anyrun-org/anyrun";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
   };
 
   outputs = {
@@ -33,7 +29,6 @@
     nixos-hardware,
     zen-browser,
     nixvim,
-    anyrun,
     ...
   } @ inputs: let
     system = "x86_64-linux";
