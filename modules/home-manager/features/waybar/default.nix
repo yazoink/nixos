@@ -17,7 +17,7 @@
     programs.waybar = {
       enable = true;
       settings = {
-        mainBar = {
+        waybar = {
           layer = "top";
           position = "top";
           height = 36;
