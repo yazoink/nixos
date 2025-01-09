@@ -37,6 +37,7 @@
       QT_QPA_PLATFORM = "wayland";
       QT_SCALE_FACTOR = 1;
       XCURSOR_SIZE = config.stylix.cursor.size;
+      _JAVA_AWT_WM_NONREPARENTING = 1;
     };
     
     stylix.targets.sway.enable = false;
@@ -50,6 +51,7 @@
         focus_follows_mouse yes
         title_align center
         titlebar_padding 10
+        titlebar_border_thickness 0
         corner_radius 15
         #smart_corner_radius on
         default_border normal 0
