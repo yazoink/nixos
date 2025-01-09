@@ -37,7 +37,7 @@
               "memory"
               "cpu"
               "temperature"
-          ];
+            ];
           };
           "hyprland/workspaces" = {
             format = "{icon}";

@@ -11,7 +11,8 @@ in
     stylix.targets.hyprland.enable = false;
 
     bundles.desktopBase = {
-      mako.enable = true;
+      #mako.enable = true;
+      swaync.enable = true;
       rofi.enable = true;
       waybar.enable = true;
       screenshot.enable = true;
