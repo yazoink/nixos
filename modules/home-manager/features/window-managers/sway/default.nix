@@ -90,7 +90,9 @@
         for_window [window_role = "About"] floating enable
 
         seat * xcursor_theme "${config.stylix.cursor.name}" ${builtins.toString config.stylix.cursor.size}
-      '';
+      '' + (if (osConfig.myOptions.defaultApps.terminal.command == "footclient") 
+        then "exec ${pkgs.foot}/bin/foot --server" 
+        else "");
       config = rec {
         modifier = "Mod4";
         floating.modifier = modifier;
@@ -98,12 +100,12 @@
         menu = "exec pkill anyrun || anyrun";
         defaultWorkspace = "workspace number 1";
         startup = [
-          {command = "exec ${lib.getExe pkgs.swaybg} -i ${osConfig.myOptions.desktopTheme.wallpaper} -m fill";}
-          {command = "exec ${../scripts/waybar.sh}";}
-          {command = "exec mpDris2 --music-dir=~/mu &";}
-          {command = "exec ${lib.getExe pkgs.poweralertd}";}
-          {command = "exec nm-applet";}
-          {command = "exec autotiling";}
+          {command = "${lib.getExe pkgs.swaybg} -i ${osConfig.myOptions.desktopTheme.wallpaper} -m fill";}
+          {command = "${../scripts/waybar.sh}";}
+          {command = "mpDris2 --music-dir=~/mu &";}
+          {command = "${lib.getExe pkgs.poweralertd}";}
+          {command = "nm-applet";}
+          {command = "autotiling";}
         ];
         gaps = {
           inner = 10;

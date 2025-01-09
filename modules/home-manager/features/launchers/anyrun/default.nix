@@ -78,7 +78,7 @@
             background: #${config.stylix.base16Scheme.${osConfig.desktopTheme.base16Accent}};
         }
 
-        .match-title {
+        #match-title {
             color: #${base00};
         }
 
