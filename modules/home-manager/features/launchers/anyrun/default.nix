@@ -76,6 +76,9 @@
         #match:hover,
         #plugin:hover {
             background: #${config.stylix.base16Scheme.${osConfig.desktopTheme.base16Accent}};
+        }
+
+        .match-title {
             color: #${base00};
         }
 
