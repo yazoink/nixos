@@ -39,7 +39,7 @@
         desktopFile = "org.gnome.FileRoller.desktop";
       };
       terminal = {
-        command = "ghostty";
+        command = "footclient";
         desktopFile = "footclient.desktop";
       };
       webBrowser = {
