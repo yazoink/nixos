@@ -8,6 +8,8 @@ in
     ./hypridle.nix
   ];
 
+  stylix.targets.hyprland.enable = false;
+
   config = lib.mkIf osConfig.bundles.desktopBase.hyprland.enable {
     bundles.desktopBase = {
       mako.enable = true;
@@ -59,6 +61,7 @@ in
         ];
         exec-once = [
           "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
+          "swaybg -i ${osConfig.myOptions.desktopTheme.wallpaper} -m fill"
           "mpDris2 --music-dir=~/mu &"
           #"dbus-launch --exit-with-session waybar"
           "$bar"

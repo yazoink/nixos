@@ -32,6 +32,7 @@
       hyprpicker
       hyprcursor
       hypridle
+      swaybg
     ];
 
     services  = {
