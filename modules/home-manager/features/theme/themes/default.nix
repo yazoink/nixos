@@ -8,6 +8,7 @@
     ./tarot
     ./wizard
     ./gruvbox-dark-hard
+    ./gruvbox-material-dark-hard
     ./biscuit
   ];
 }
