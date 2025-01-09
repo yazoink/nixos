@@ -136,7 +136,7 @@
         }
 
         #workspaces button {
-          color: #${base05};
+          color: #${base03};
           padding-left: 8px;
           padding-right: 8px;
         }
@@ -160,7 +160,8 @@
 
         .modules-left #workspaces button.focused,
         .modules-left #workspaces button.active {
-          color: #${config.stylix.base16Scheme."${osConfig.desktopTheme.base16Accent}"};
+          /*color: #${config.stylix.base16Scheme."${osConfig.desktopTheme.base16Accent}"};*/
+          color: ${base05};
         }
 
         tooltip {
