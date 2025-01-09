@@ -130,7 +130,7 @@
         * {
           font-family: "${config.stylix.fonts.sansSerif.name}", "Font Awesome 6 Free";
           font-weight: bold;
-          font-size: 5px;
+          font-size: 15px;
           padding: 0px;
           margin: 0px;
         }
