@@ -116,7 +116,7 @@ in
         general = {
           gaps_in = 10;
           gaps_out = 15;
-          border_size = 0;
+          border_size = 1;
           layout = "dwindle";
           allow_tearing = false;
           "col.inactive_border" = "rgb(${config.stylix.base16Scheme.base01})";
