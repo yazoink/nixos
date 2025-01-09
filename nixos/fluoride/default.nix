@@ -52,10 +52,10 @@
     };
     desktopTheme = {
       name = "caroline";
-      wallpaper = ./wallpapers/caroline-flowers.png;
+      wallpaper = ./wallpapers/caroline-flowers2.png;
       sddm = {
         scale = 0.8;
-        wallpaper = ./wallpapers/caroline-waves.png;
+        wallpaper = ./wallpapers/caroline-flowers3.png;
       };
       firefoxCss.anotherOneline.enable = true;
     };
