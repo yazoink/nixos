@@ -20,7 +20,7 @@
           layer: Overlay,
           hide_plugin_info: true,
           close_on_click: true,
-          show_results_immediately: false,
+          show_results_immediately: true,
           max_entries: None,
         )
       '';
