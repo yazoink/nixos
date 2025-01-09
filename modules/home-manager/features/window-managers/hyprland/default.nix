@@ -69,7 +69,7 @@ in
           "poweralertd"
           "nm-applet"
           "wl-clip-persist --clipboard regular"
-        ] ++ (if (osConfig.myOptions.defaultApps.terminal.command == "footserver") 
+        ] ++ (if (osConfig.myOptions.defaultApps.terminal.command == "footclient") 
           then ["foot --server"] 
           else []);
         monitor = 
