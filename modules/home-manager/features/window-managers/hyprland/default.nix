@@ -69,7 +69,9 @@ in
           "poweralertd"
           "nm-applet"
           "wl-clip-persist --clipboard regular"
-        ];
+        ] ++ (if (osConfig.myOptions.defaultApps.terminal.command == "footserver") 
+          then ["foot --server"] 
+          else []);
         monitor = 
           if (osConfig.networking.hostName == "fluoride") 
           then ["DP-2,2560x1440@59.95100,0x0,1" ",preferred,auto,1"] 
