@@ -136,7 +136,7 @@
         }
 
         #waybar > box {
-          box-shadow: 0px 0px 15px #000000;
+          box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.6);
         }
 
         #workspaces button {
