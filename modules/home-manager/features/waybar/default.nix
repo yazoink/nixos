@@ -54,7 +54,7 @@
           "clock" = {
             format = "{:%I:%M %p %d %b %Y}";
             tooltip = false;
-            on-click = "gnome-clocks";
+            #on-click = "gnome-clocks";
           };
           "memory" = {
             interval = 30;
