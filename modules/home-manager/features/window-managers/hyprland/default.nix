@@ -126,7 +126,7 @@ in
           rounding = 15;
           blur.enabled = false;
           shadow = {
-            enabled = true;
+            enabled = false;
             range = 20;
             render_power = 4;
             color = "rgba(000000A0)";
