@@ -135,8 +135,8 @@
           margin: 0px;
         }
 
-        window#waybar > box {
-        box-shadow: 0px 0px 15px #000000;
+        #waybar > box {
+          box-shadow: 0px 0px 15px #000000;
         }
 
         #workspaces button {
