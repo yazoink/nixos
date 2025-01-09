@@ -35,10 +35,10 @@ in
         hyprlandPlugins.hyprbars
       ];
       settings = {
-        "$terminal" = "uwsm app -- ${osConfig.myOptions.defaultApps.terminal.command}";
-        "$browser" = "uwsm app -- ${osConfig.myOptions.defaultApps.webBrowser.command}";
-        "$fileManager" = " uwsm app -- ${osConfig.myOptions.defaultApps.fileManager.command}";
-        "$menu" = "uwsm app -- rofi -show drun";
+        "$terminal" = "${osConfig.myOptions.defaultApps.terminal.command}";
+        "$browser" = "${osConfig.myOptions.defaultApps.webBrowser.command}";
+        "$fileManager" = "${osConfig.myOptions.defaultApps.fileManager.command}";
+        "$menu" = "rofi -show drun";
         "$screenshot" = "${config.bundles.desktopBase.screenshot.package}/bin/screenshot -s";
         "$power" = "simple-logout";
         "$lock" = "gtklock";
