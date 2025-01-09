@@ -28,7 +28,7 @@
         * {
             all: unset;
             font-size: ${builtins.toString config.stylix.fonts.sizes.popups}px;
-            font-family: ${config.stylix.fonts.sansSerif};
+            font-family: ${config.stylix.fonts.sansSerif.name};
         }
 
         #window,

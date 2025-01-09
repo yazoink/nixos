@@ -27,6 +27,7 @@ in
 
     stylix = {
       enable = true;
+      polarity = lib.mkDefault "dark";
       targets = {
         grub.enable = false;
       };
