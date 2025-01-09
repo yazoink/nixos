@@ -32,13 +32,13 @@ in
         cssPriority = "application";
         control-center-margin-top = if (osConfig.myOptions.bundles.desktopBase.windowManager == "sway")
           then 15
-          else 10;
+          else 5;
         control-center-margin-bottom = if (osConfig.myOptions.bundles.desktopBase.windowManager == "sway")
           then 15
-          else 10;
+          else 5;
         control-center-margin-right = if (osConfig.myOptions.bundles.desktopBase.windowManager == "sway")
           then 15
-          else 10;
+          else 5;
         notification-2fa-action = false;
         widgets = [
           "inhibitors"
