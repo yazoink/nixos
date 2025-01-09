@@ -130,7 +130,7 @@ in
             enabled = true;
             range = 15;
             render_power = 3;
-            color = "rgba(000000A0)";
+            color = "rgba(00000090)";
           };
         };
         plugin = {
