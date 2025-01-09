@@ -17,6 +17,7 @@
     ./spirit
     ./darkmoss
     ./gruvbox-dark-hard
+    ./gruvbox-material-dark-hard
     ./biscuit
   ];
 }

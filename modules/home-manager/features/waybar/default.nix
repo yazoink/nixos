@@ -164,8 +164,8 @@
 
         .modules-left #workspaces button.focused,
         .modules-left #workspaces button.active {
-          color: #${config.stylix.base16Scheme."${osConfig.desktopTheme.base16Accent}"};
-          /*color: #${base05};*/
+          /*color: #${config.stylix.base16Scheme."${osConfig.desktopTheme.base16Accent}"};*/
+          color: #${base05};
         }
 
         tooltip {
