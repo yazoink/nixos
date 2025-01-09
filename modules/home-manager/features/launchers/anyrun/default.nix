@@ -1,4 +1,4 @@
-{config, inputs, lib, pkgs, ...}:
+{config, osConfig, lib, pkgs, ...}:
 {
   options = {
     bundles.desktopBase.anyrun.enable = lib.mkOption {
