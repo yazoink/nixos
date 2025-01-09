@@ -144,7 +144,7 @@ in
             bar_text_font = "${config.stylix.fonts.sansSerif.name} Bold";
             bar_text_size = config.stylix.fonts.sizes.applications;
             bar_text_align = "center";
-            bar_part_of_window = true;
+            #bar_part_of_window = true;
             bar_precedence_over_border = true;
             bar_padding = 15;
             bar_button_padding = 12;
