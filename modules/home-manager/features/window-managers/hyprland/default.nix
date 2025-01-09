@@ -35,10 +35,10 @@ in
         hyprlandPlugins.hyprbars
       ];
       settings = {
-        "$terminal" = "uwsm app -- ${osConfig.myOptions.defaultApps.terminal.command}";
-        "$browser" = "uwsm app -- ${osConfig.myOptions.defaultApps.webBrowser.command}";
-        "$fileManager" = " uwsm app -- ${osConfig.myOptions.defaultApps.fileManager.command}";
-        "$menu" = "uwsm app -- rofi -show drun";
+        "$terminal" = "${osConfig.myOptions.defaultApps.terminal.command}";
+        "$browser" = "${osConfig.myOptions.defaultApps.webBrowser.command}";
+        "$fileManager" = "${osConfig.myOptions.defaultApps.fileManager.command}";
+        "$menu" = "rofi -show drun";
         "$screenshot" = "${config.bundles.desktopBase.screenshot.package}/bin/screenshot -s";
         "$power" = "simple-logout";
         "$lock" = "gtklock";
@@ -69,7 +69,9 @@ in
           "poweralertd"
           "nm-applet"
           "wl-clip-persist --clipboard regular"
-        ];
+        ] ++ (if (osConfig.myOptions.defaultApps.terminal.command == "footclient") 
+          then ["foot --server"] 
+          else []);
         monitor = 
           if (osConfig.networking.hostName == "fluoride") 
           then ["DP-2,2560x1440@59.95100,0x0,1" ",preferred,auto,1"] 
