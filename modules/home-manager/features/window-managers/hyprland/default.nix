@@ -118,9 +118,9 @@ in
           border_size = 1;
           layout = "dwindle";
           allow_tearing = false;
-          "col.inactive_border" = lib.mkForce "rgb(${config.stylix.base16Scheme.base01})";
-          "col.active_border" = lib.mkForce "rgb(${config.stylix.base16Scheme.base03})";
-          #"col.active_border" = builtins.trace "set accent color in hyprland config" lib.mkForce "rgb(${config.stylix.base16Scheme.${osConfig.desktopTheme.base16Accent}})";
+          "col.inactive_border" = "rgb(${config.stylix.base16Scheme.base01})";
+          #"col.active_border" = lib.mkForce "rgb(${config.stylix.base16Scheme.base03})";
+          "col.active_border" = builtins.trace "set accent color in hyprland config" "rgb(${config.stylix.base16Scheme.${osConfig.desktopTheme.base16Accent}})";
         };
         decoration = {
           rounding = 15;
