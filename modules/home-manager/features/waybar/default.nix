@@ -137,8 +137,8 @@
 
         #workspaces button {
           color: #${base05};
-          padding-left: 5px;
-          padding-right: 5px;
+          padding-left: 8px;
+          padding-right: 8px;
         }
 
         #workspaces button:hover {
@@ -154,8 +154,8 @@
         #idle_inhibitor,
         #backlight,
         #tray {
-          padding-left: 5px;
-          padding-right: 5px;
+          padding-left: 8px;
+          padding-right: 8px;
         }
 
         .modules-left #workspaces button.focused,
