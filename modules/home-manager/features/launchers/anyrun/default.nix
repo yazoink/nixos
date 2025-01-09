@@ -20,8 +20,21 @@
           layer: Overlay,
           hide_plugin_info: true,
           close_on_click: true,
-          show_results_immediately: true,
+          show_results_immediately: false,
           max_entries: None,
+          desktop_actions: true,
+          terminal: Some(Terminal(
+            command: "${osConfig.myOptions.defaultApps.terminal.command}",
+            args: "-e {}",
+          )),
+          plugins: [
+            "${pkgs.anyrun}/lib/libapplications.so",
+            "${pkgs.anyrun}/lib/libsymbols.so",
+            "${pkgs.anyrun}/lib/libtranslate.so",
+          ],
+          applications: (
+            showAll: true,
+          ),
         )
       '';
       "anyrun/style.css".text = with config.stylix.base16Scheme; ''
