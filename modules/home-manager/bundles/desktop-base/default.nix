@@ -17,11 +17,11 @@
     ../../features/media-players
     ../../features/window-managers
     ../../features/notifications
+    ../../features/launchers
 
     ../../features/direnv
     ../../features/gtklock
     ../../features/hyprviewbinds
-    ../../features/rofi
     ../../features/screenshot
     ../../features/simple-logout
     ../../features/theme
