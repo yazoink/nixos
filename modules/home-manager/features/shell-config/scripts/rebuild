@@ -40,8 +40,8 @@ function main() {
   $cmd
 
   case $? in
-    0) notify-send "Rebuild complete!";;
-    *) notify-send "Rebuild failed!";;
+    0) notify-send "Rebuild" "System rebuilt successfully.";;
+    *) notify-send "Rebuild" "Rebuild failed!";;
   esac
 }
 
