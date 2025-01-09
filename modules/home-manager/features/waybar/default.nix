@@ -135,10 +135,6 @@
           margin: 0px;
         }
 
-        window#waybar {
-          box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.6);
-        }
-
         #workspaces button {
           color: #${base03};
           padding-left: 7px;
