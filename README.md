@@ -42,7 +42,10 @@ See [documentation.md](./documentation.md)
 ![20241224_02:10:57_screenshot](https://github.com/user-attachments/assets/c9458456-3ac2-4bfb-85e9-53187ee04422)
 (hyprland + manuscript theme)
 
-![20250103_01:45:35_screenshot](https://github.com/user-attachments/assets/e5d145b1-8281-40d7-8698-30ea58050555)
+![20250109_17:21:40_screenshot](https://github.com/user-attachments/assets/dd1f17c7-cfea-42bd-a2b2-f86a9377dc63)
+![20250109_17:20:00_screenshot](https://github.com/user-attachments/assets/b2d33b72-118f-48cc-8d66-3a4886540be4)
+(sway + gruvbox material theme)
+
 ![20250103_00:45:12_screenshot](https://github.com/user-attachments/assets/b9fdc966-2bf2-4fb5-98d8-8a1ed1da5a45)
 (sway + carob theme)
 
