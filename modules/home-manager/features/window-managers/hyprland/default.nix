@@ -143,6 +143,8 @@ in
             workspaceInactiveBorder = "rgb(${config.stylix.base16Scheme.base00})";
             workspaceActiveBorder = "rgb(${config.stylix.base16Scheme.base00})";
             centerAligned = true;
+            autoDrag = true;
+            autoScroll = true;
             #overrideGaps = false;
           };
           hyprbars = {
@@ -158,6 +160,7 @@ in
             disable_initialization_message = true;
             "col.text" = "rgb(${config.stylix.base16Scheme.base05})";
             bar_buttons_alignment = "left";
+            bar_part_of_window = true;
             hyprbars-button = [
               "rgb(${closeButtonColor}), 15, , hyprctl dispatch killactive"
               "rgb(${config.stylix.base16Scheme.base0A}), 15, , hyprctl dispatch movetoworkspacesilent special"
