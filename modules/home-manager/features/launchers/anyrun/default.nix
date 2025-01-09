@@ -31,7 +31,6 @@
             "${pkgs.anyrun}/lib/libapplications.so",
             "${pkgs.anyrun}/lib/libsymbols.so",
             "${pkgs.anyrun}/lib/libtranslate.so",
-            "${pkgs.anyrun}/lib/libstdin.so",
           ],
           applications: (
             showAll: true,
