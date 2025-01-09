@@ -116,7 +116,7 @@ in
           nsfwGateBypass.enable = true;
           onePingPerDM.enable = true;
           permissionsViewer.enable = lib.mkIf bloat true;
-          pictureInPicture.enable = true;
+          pictureInPicture.enable = lib.mkIf bloat true;
           pinDMs.enable = lib.mkIf bloat true;
           platformIndicators.enable = lib.mkIf bloat true;
           previewMessage.enable = true;
@@ -128,14 +128,14 @@ in
           };
           reverseImageSearch.enable = true;
           serverListIndicators = {
-            enable = true;
+            enable = lib.mkIf bloat true;
             mode = "both";
           };
           showConnections.enable = true;
           showHiddenChannels.enable = true;
           showHiddenThings.enable = true;
-          showMeYourName.enable = true;
-          showTimeoutDuration.enable = true;
+          #showMeYourName.enable = true;
+          showTimeoutDuration.enable = lib.mkIf bloat true;
           silentTyping.enable = true;
           spotifyCrack.enable = true;
           stickerPaste.enable = true;
