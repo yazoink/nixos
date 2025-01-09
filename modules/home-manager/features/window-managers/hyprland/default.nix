@@ -113,19 +113,21 @@ in
         general = {
           gaps_in = 5;
           gaps_out = 10;
-          border_size = 2;
+          border_size = 1;
           layout = "dwindle";
           allow_tearing = false;
           "col.inactive_border" = lib.mkForce "rgb(${config.stylix.base16Scheme.base01})";
-          "col.active_border" = builtins.trace "set accent color in hyprland config" lib.mkForce "rgb(${config.stylix.base16Scheme.${osConfig.desktopTheme.base16Accent}})";
+          "col.active_border" = lib.mkForce "rgb(${config.stylix.base16Scheme.base03})";
+          #"col.active_border" = builtins.trace "set accent color in hyprland config" lib.mkForce "rgb(${config.stylix.base16Scheme.${osConfig.desktopTheme.base16Accent}})";
         };
         decoration = {
-          rounding = 10;
+          rounding = 15;
           blur.enabled = false;
           shadow = {
-            enabled = false;
+            enabled = true;
             range = 20;
-            render_power = 5;
+            render_power = 4;
+            color = "rgba(000000A0)";
           };
         };
         plugin = {
