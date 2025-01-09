@@ -11,8 +11,8 @@ in
     stylix.targets.hyprland.enable = false;
 
     bundles.desktopBase = {
-      #mako.enable = true;
-      swaync.enable = true;
+      mako.enable = true;
+      #swaync.enable = true;
       rofi.enable = true;
       waybar.enable = true;
       screenshot.enable = true;
@@ -127,7 +127,7 @@ in
           rounding = 15;
           blur.enabled = false;
           shadow = {
-            enabled = true;
+            enabled = false;
             range = 15;
             render_power = 3;
             color = "rgba(00000090)";

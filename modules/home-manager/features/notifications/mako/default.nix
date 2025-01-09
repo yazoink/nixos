@@ -7,14 +7,11 @@
     };
   };
 
-  #imports = [./sway.nix ./hyprland.nix];
-
   config = lib.mkIf config.bundles.desktopBase.mako.enable {
     home.packages = with pkgs; [
       libnotify
     ];
     stylix.targets.mako.enable = false;
-    xdg.configFile."mako/sounds/default.wav".source = ./sounds/vine-boom.wav;
     services.mako = {
       layer = "overlay";
       enable = true;
@@ -26,7 +23,7 @@
       textColor = "#${config.stylix.base16Scheme.base05}";
       progressColor = "over #${config.stylix.base16Scheme.base05}";
       borderColor = "#${config.stylix.base16Scheme.base01}";
-      borderSize = 2;
+      borderSize = 1;
       font = "${config.stylix.fonts.sansSerif.name} ${toString config.stylix.fonts.sizes.popups}";
       padding = "10";
       margin = "5";

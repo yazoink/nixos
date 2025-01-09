@@ -90,7 +90,7 @@ in
           /* properties for all widgets */
           enabled:                     true;
           border-radius:               10px;
-          border:                      2px;
+          border:                      1px;
           border-color:                @active;
           cursor:                      "default";
           background-color:            @background;
