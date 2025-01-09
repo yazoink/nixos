@@ -159,7 +159,7 @@
         }
 
         #tray {
-          padding-right: 10px;
+          padding-right: 12px;
         }
 
         .modules-left #workspaces button.focused,
