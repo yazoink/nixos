@@ -1,7 +1,8 @@
 {config, osConfig, lib, pkgs, ...}:
 let
   themeFile = config.lib.stylix.colors {
-    template = ./${osConfig.myOptions.bundles.desktopBase.windowManager}.css.mustache;
+    #template = ./${osConfig.myOptions.bundles.desktopBase.windowManager}.css.mustache;
+    template = ./style.css.mustache;
     extension = ".css";
   };
 in
