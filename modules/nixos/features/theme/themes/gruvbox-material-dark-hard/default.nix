@@ -41,10 +41,10 @@ in
         base02 = "504945";
         base03 = "5A524C";
         base04 = "BDAE93";
-        base05 = "EBDBB2";
+        base05 = "DDC7A1";
         base06 = "EBDBB2";
         base07 = "FBF1C7";
-        base08 = "DDC7A1";
+        base08 = "EA6962";
         base09 = "E78A4E";
         base0A = "D8A657";
         base0B = "A9B665";
