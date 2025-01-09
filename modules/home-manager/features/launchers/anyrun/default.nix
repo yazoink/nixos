@@ -29,7 +29,6 @@
           )),
           plugins: [
             "${pkgs.anyrun}/lib/libapplications.so",
-            "${pkgs.anyrun}/lib/libsymbols.so",
             "${pkgs.anyrun}/lib/libtranslate.so",
           ],
           applications: (
