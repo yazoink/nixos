@@ -135,6 +135,10 @@
           margin: 0px;
         }
 
+        windoe#waybar > box {
+        box-shadow: 0px 0px 15px #000000;
+        }
+
         #workspaces button {
           color: #${base03};
           padding-left: 7px;
