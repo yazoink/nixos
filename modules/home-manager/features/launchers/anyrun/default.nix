@@ -75,7 +75,7 @@
         #match:selected,
         #match:hover,
         #plugin:hover {
-            #background: #${config.stylix.base16Scheme.${osConfig.desktopTheme.base16Accent}};
+            /*background: #${config.stylix.base16Scheme.${osConfig.desktopTheme.base16Accent}};*/
             background: #${base01};
             color: #${base00};
         }
