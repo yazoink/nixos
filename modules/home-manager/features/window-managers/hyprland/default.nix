@@ -7,9 +7,6 @@ in
   imports = [
     ./hypridle.nix
   ];
-
-  stylix.targets.hyprland.enable = false;
-
   config = lib.mkIf osConfig.bundles.desktopBase.hyprland.enable {
     bundles.desktopBase = {
       mako.enable = true;
