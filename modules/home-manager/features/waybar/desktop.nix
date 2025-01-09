@@ -4,7 +4,7 @@
   config = lib.mkIf (config.bundles.desktopBase.waybar.enable && osConfig.myOptions.hardwareFeatures.laptop.enable == false) {
     programs.waybar = {
       settings = {
-        mainBar = {
+        waybar = {
           modules-right = [
             #"mpd"
             "tray"
