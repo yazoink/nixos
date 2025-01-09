@@ -135,12 +135,6 @@
           margin: 0px;
         }
 
-        #workspaces button {
-          color: #${base03};
-          padding-left: 7px;
-          padding-right: 7px;
-        }
-
         #workspaces button:hover {
           background-color: #${base00};
         }
@@ -162,12 +156,6 @@
           padding-right: 12px;
         }
 
-        .modules-left #workspaces button.focused,
-        .modules-left #workspaces button.active {
-          /*color: #${config.stylix.base16Scheme."${osConfig.desktopTheme.base16Accent}"};*/
-          color: #${base05};
-        }
-
         tooltip {
           background: #${base00};
           border: 1px solid #${base03};
@@ -176,7 +164,30 @@
         tooltip label {
           color: #${base05};
         }
-      '';
+      '' + (if (osConfig.myOptions.bundles.desktopBase.windowManager == "hyprland")
+        then ''
+          .modules-left #workspaces button.focused,
+          .modules-left #workspaces button.active {
+            color: #${config.stylix.base16Scheme."${osConfig.desktopTheme.base16Accent}"};
+          }
+
+          #workspaces button {
+            color: #${base05};
+            padding-left: 7px;
+            padding-right: 7px;
+          }
+        '' else ''
+          .modules-left #workspaces button.focused,
+          .modules-left #workspaces button.active {
+            color: #${base05};
+          }
+
+          #workspaces button {
+            color: #${base03};
+            padding-left: 7px;
+            padding-right: 7px;
+          }
+          '');
     };
   };
 }
