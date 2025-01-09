@@ -11,7 +11,6 @@
     ../../features/gui-editors
     ../../features/document-readers
     ../../features/terminals
-    ../../features/archivers
     ../../features/browsers
     ../../features/image-viewers
     ../../features/media-players

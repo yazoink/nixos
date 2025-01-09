@@ -1,6 +1,7 @@
 {config, lib, ...}:
 {
   imports = [
+    ../../features/archivers
     ../../features/file-managers
     ../../features/window-managers
     ../../features/display-managers
