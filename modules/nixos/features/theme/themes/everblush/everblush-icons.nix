@@ -6,7 +6,7 @@ pkgs.stdenv.mkDerivation {
     owner = "yazoink";
     repo = "everblush-icons";
     rev = "main";
-    sha256 = "";
+    sha256 = "sha256-NYqAlTe4m2Kmpgc1NeQtR+J+LFk7ef8YjYe2Ivys9eI=";
   };
 
   dontUnpack = true;
