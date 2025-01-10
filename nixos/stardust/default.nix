@@ -49,7 +49,8 @@
       };
     };
     desktopTheme = {
-      name = "gruvbox-material-dark-hard";
+      name = "everblush";
+      #name = "gruvbox-material-dark-hard";
       #wallpaper = ./wallpapers/caroline-flowers3.png;
       wallpaper = ./wallpapers/painting3.jpg;
       sddm = {
