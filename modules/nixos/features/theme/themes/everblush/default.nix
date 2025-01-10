@@ -13,6 +13,7 @@ in
     stylix = {
       cursor = {
         name = "BreezeX-Everblush";
+        size = 32;
       };
       base16Scheme = {
         base00 = "141B1E";

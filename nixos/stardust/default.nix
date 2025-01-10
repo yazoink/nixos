@@ -52,11 +52,13 @@
       name = "everblush";
       #name = "gruvbox-material-dark-hard";
       #wallpaper = ./wallpapers/caroline-flowers3.png;
-      wallpaper = ./wallpapers/painting3.jpg;
+      #wallpaper = ./wallpapers/painting3.jpg;
+      wallpaper = ./wallpapers/flowers-downscaled.jpg;
       sddm = {
         scale = 1.3;
         #wallpaper = ./wallpapers/caroline-flowers2.png;
-        wallpaper = ./wallpapers/painting3.jpg;
+        #wallpaper = ./wallpapers/painting3.jpg;
+        wallpaper = ./wallpapers/flowers-downscaled.jpg;
       };
       firefoxCss.anotherOneline.enable = true;
     };
