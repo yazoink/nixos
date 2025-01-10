@@ -1,14 +1,16 @@
 {pkgs, config, lib, ...}:
 let
   cursors = pkgs.callPackage ./everblush-cursors.nix {};
+  icons = pkgs.callPackage ./everblush-icons.nix {};
 in
 {
   config = lib.mkIf (config.myOptions.bundles.desktopBase.enable && config.myOptions.desktopTheme.name == "everblush") {
     environment.systemPackages = [
       cursors
+      icons
     ];
 
-    desktopTheme.base16Accent = "base0C";
+    desktopTheme.base16Accent = "base0D";
 
     stylix = {
       cursor = {
