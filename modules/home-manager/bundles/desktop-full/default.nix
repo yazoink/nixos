@@ -75,5 +75,6 @@
     ../../features/soundboard
     ../../features/usdtoaud
     ../../features/yt-dlp
+    ../../features/mpdris2
   ];
 }
