@@ -8,7 +8,7 @@
   };
   config = lib.mkIf config.bundles.base.sshConfig.enable {
     home.file.".local/bin/deploy-ssh-config.sh".text = ''
-      cat ${osConfig.sops.secrets.ssh_config.path} > /home/${osConfig.myOptions.userAccount.username}/.ssh/config
+      ${pkgs.coreutils}/bin/cat ${osConfig.sops.secrets.ssh_config.path} > /home/${osConfig.myOptions.userAccount.username}/.ssh/config
     '';
     systemd.user.services.deploy-ssh-config = {
       Unit = {
