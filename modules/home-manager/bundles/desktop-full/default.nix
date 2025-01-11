@@ -74,7 +74,6 @@
     ../../features/newsboat
     ../../features/soundboard
     ../../features/usdtoaud
-    ../../features/vesktop
     ../../features/yt-dlp
   ];
 }
