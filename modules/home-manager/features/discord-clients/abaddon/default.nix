@@ -12,7 +12,7 @@ in
       };
       Service = {
         Type = "oneshot";
-        ExecStart = "${lib.getExe pkgs.bash} ${./script.sh} ${osConfig.sops.secrets.discord_token.path} ${osConfig.myOptions.userAccount.username} ${pkgs.coreutils}/bin/cat";
+        ExecStart = "${lib.getExe pkgs.bash} ${./script.sh} ${osConfig.sops.secrets.discord_token.path} ${./config.ini} ${osConfig.myOptions.userAccount.username} ${pkgs.coreutils}/bin/cat";
       };
       Install = {
         WantedBy = ["default.target"];
