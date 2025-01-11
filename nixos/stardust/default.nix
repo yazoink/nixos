@@ -20,7 +20,7 @@
         desktopFile = "thunar.desktop";
       };
       discordClient = {
-        name = "abaddon";
+        command = "abaddon";
         desktopFile = "abaddon.desktop";
       };
       guiTextEditor = {
