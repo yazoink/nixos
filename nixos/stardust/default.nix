@@ -19,6 +19,10 @@
         command = "thunar";
         desktopFile = "thunar.desktop";
       };
+      discordClient = {
+        name = "abaddon";
+        desktopFile = "abaddon.desktop";
+      };
       guiTextEditor = {
         command = "pluma";
         desktopFile = "pluma.desktop";
