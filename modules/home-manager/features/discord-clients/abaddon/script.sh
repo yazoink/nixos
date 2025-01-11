@@ -8,5 +8,5 @@ original_config="$($CAT_CMD "$CONFIG_TEMPLATE_PATH")"
 new_config="${original_config/TOKEN/$TOKEN}"
 new_config="${new_config/CSS_FILE_PATH/$CSS_FILE_PATH}"
 echo "$new_config" > "$CONFIG_OUT_PATH"
-chmod 600 "$CONFIG_OUT_PATH"
+chmod 444 "$CONFIG_OUT_PATH"
 
