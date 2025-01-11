@@ -4,6 +4,10 @@
   padding: 10px;
 }
 
+.message-text {
+  background: inherit;
+}
+
 .message-container-avatar,
 .mutual-friend-item-avatar,
 .profile-avatar {
