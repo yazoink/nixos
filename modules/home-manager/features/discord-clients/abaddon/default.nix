@@ -3,7 +3,7 @@ let
   abaddonCss = pkgs.callPackage ./abaddon-css.nix {};
 in
 {
-  config = lib.mkIf (osConfig.myOptions.defaultApps.discordClient == "abaddon" && osConfig.myOptions.bundles.desktopBase.enable) {
+  config = lib.mkIf (osConfig.myOptions.defaultApps.discordClient.command == "abaddon" && osConfig.myOptions.bundles.desktopBase.enable) {
     home.packages = [pkgs.abaddon abaddonCss];
 
     systemd.user.services.deploy-abaddon-config = {
