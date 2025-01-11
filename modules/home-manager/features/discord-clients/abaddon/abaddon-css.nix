@@ -1,5 +1,6 @@
 {pkgs, ...}:
 pkgs.stdenv.mkDerivation {
+  name = "abaddon-css";
   src = ./style.css;
   dontUnpack = true;
   installPhase = ''
