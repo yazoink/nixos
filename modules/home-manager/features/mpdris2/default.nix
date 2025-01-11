@@ -4,9 +4,11 @@
     services.mpdris2 = {
       enable = true;
       notifications = true;
-      host = osConfig.services.mpd.network.listenAddress;
-      port = osConfig.services.mpd.network.port;
-      musicDirectory = osConfig.services.mpd.musicDirectory;
+      mpd = {
+        host = osConfig.services.mpd.network.listenAddress;
+        port = osConfig.services.mpd.network.port;
+        musicDirectory = osConfig.services.mpd.musicDirectory;
+      };
     };
   };
 }
