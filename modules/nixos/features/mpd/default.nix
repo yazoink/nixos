@@ -9,8 +9,8 @@
   config = lib.mkIf config.bundles.desktopFull.mpd.enable {
     services.mpd = {
       enable = true;
-      musicDirectory = "/home/gene/mu";
-      user = "gene";
+      musicDirectory = "/home/${config.myOptions.userAccount.username}/mu";
+      user = "${config.myOptions.userAccount.username}";
       # Optional:
       network.listenAddress = "any"; # if you want to allow non-localhost connections
 
@@ -28,14 +28,13 @@
         }
       '';
     };
-    
+
     systemd.services.mpd.environment = {
-        # https://gitlab.freedesktop.org/pipewire/pipewire/-/issues/609
-        XDG_RUNTIME_DIR = "/run/user/1000"; # User-id must match above user. MPD will look inside this directory for the PipeWire socket.
-      };
+      # https://gitlab.freedesktop.org/pipewire/pipewire/-/issues/609
+      XDG_RUNTIME_DIR = "/run/user/1000"; # User-id must match above user. MPD will look inside this directory for the PipeWire socket.
+    };
 
     environment.systemPackages = with pkgs; [
-      mpdris2
       #cantata (abandoned/broken)
       ario
       mpc-cli

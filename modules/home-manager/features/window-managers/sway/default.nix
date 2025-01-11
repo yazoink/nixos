@@ -22,7 +22,6 @@
       grim
       slurp
       hyprpicker
-      autotiling
     ];
 
     home.sessionVariables = {
@@ -104,10 +103,8 @@
         startup = [
           {command = "${lib.getExe pkgs.swaybg} -i ${osConfig.myOptions.desktopTheme.wallpaper} -m fill";}
           {command = "${../scripts/waybar.sh}";}
-          {command = "mpDris2 --music-dir=~/mu &";}
           {command = "${lib.getExe pkgs.poweralertd}";}
           {command = "nm-applet";}
-          {command = "autotiling";}
         ];
         gaps = {
           inner = 10;
