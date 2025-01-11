@@ -1,6 +1,6 @@
 {pkgs, config, lib, ...}:
 {
-  config = lib.mkIf config.features.retroarch.enable {
+  config = lib.mkIf config.myOptions.features.retroarch.enable {
     environment.systemPackages = with pkgs; [
       (retroarch.withCores (libretro: with libretro; [
         snes9x
