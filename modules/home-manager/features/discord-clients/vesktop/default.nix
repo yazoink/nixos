@@ -7,13 +7,7 @@ let
   inherit (osConfig.myOptions.bundles.desktopFull.vesktop) bloat;
 in
 {
-  options = {
-    bundles.desktopFull.vesktop.enable = lib.mkOption {
-      type = lib.types.bool;
-      default = false;
-    };
-  };
-  config = lib.mkIf config.bundles.desktopFull.vesktop.enable {
+  config = lib.mkIf (osConfig.myOptions.defaultApps.discordClient == "vesktop" && osConfig.myOptions.bundles.desktopFull.enable) {
     xdg.configFile = {
       "vesktop/themes/my.theme.css".source = themeFile;
     };

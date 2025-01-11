@@ -1,0 +1,11 @@
+.messages,
+.message-container{
+  border: transparent;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.message-container-avatar {
+  border: transparent;
+  border-radius: 100px;
+}

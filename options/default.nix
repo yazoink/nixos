@@ -15,6 +15,17 @@
             default = "thunar.desktop";
           };
         };
+        discordClient = {
+          command = lib.mkOption {
+            type = lib.types.str;
+            default = "vesktop";
+            description = "options: vesktop, abaddon";
+          };
+          desktopFile = lib.mkOption {
+            type = lib.types.str;
+            default = "vesktop.desktop";
+          };
+        };
         guiTextEditor = {
           command = lib.mkOption {
             type = lib.types.str;

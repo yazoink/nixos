@@ -12,7 +12,6 @@
       newsboat.enable = true;
       soundboard.enable = true;
       usdtoaud.enable = true;
-      vesktop.enable = true;
       ytDlp.enable = true;
     };
 
@@ -63,6 +62,8 @@
         with pkgs; [system-config-printer] else []);
   };
   imports = [
+    ../../features/discord-clients
+
     ../../features/audtousd
     ../../features/color-scripts
     ../../features/gimp

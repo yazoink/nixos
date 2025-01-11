@@ -19,6 +19,7 @@
       secrets = builtins.trace "secrets set" {
         wifi_env = {};
         ssh_config = {owner="${config.myOptions.userAccount.username}";};
+        discord_token = {owner="${config.myOptions.userAccount.username}";};
       };
     };
   };
