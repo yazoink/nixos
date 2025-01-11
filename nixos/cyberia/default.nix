@@ -70,6 +70,7 @@
       virtualbox.enable = true;
       spaceCadetPinball.enable = true;
       prismlauncher.enable = true;
+      retroarch.enable = true;
     };
     hardwareFeatures = {
       diskBurner.enable = true;

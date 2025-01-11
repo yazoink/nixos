@@ -8,5 +8,6 @@
     ./features/steam
     ./features/virt-manager
     ./features/virtualbox
+    ./features/retroarch
   ];
 }

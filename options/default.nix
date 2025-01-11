@@ -200,11 +200,19 @@
           type = lib.types.bool;
           default = false;
         };
+        eduke32.enable = lib.mkOption {
+          type = lib.types.bool;
+          default = false;
+        };
         gamescope.enable = lib.mkOption {
           type = lib.types.bool;
           default = false;
         };
         prismlauncher.enable = lib.mkOption {
+          type = lib.types.bool;
+          default = false;
+        };
+        retroarch.enable = lib.mkOption {
           type = lib.types.bool;
           default = false;
         };

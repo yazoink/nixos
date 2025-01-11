@@ -56,7 +56,6 @@
       ### misc ###
       tty-solitaire
       cbonsai
-      eduke32
       wineWowPackages.waylandFull
     ] ++ (if osConfig.services.printing.enable then 
         with pkgs; [system-config-printer] else []);

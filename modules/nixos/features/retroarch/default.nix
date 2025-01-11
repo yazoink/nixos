@@ -1,12 +1,6 @@
 {pkgs, config, lib, ...}:
 {
-  options = {
-    bundles.desktopFull.retroarch.enable = lib.mkOption {
-      type = lib.types.bool;
-      default = false;
-    };
-  };
-  config = lib.mkIf config.bundles.desktopFull.retroarch.enable {
+  config = lib.mkIf config.features.retroarch.enable {
     environment.systemPackages = with pkgs; [
       (retroarch.withCores (libretro: with libretro; [
         snes9x

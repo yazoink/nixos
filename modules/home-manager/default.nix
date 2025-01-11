@@ -16,5 +16,6 @@
     ./features/virt-manager
     ./features/dither
     ./features/replacecolor
+    ./features/eduke32
   ];
 }

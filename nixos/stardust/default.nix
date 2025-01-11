@@ -76,6 +76,8 @@
       minetest.enable = true;
       pychess.enable = true;
       knavalbattle.enable = true;
+      gzdoom.enable = true;
+      eduke32.enable = true;
     };
     hardwareFeatures = {
       ssd.enable = true;
