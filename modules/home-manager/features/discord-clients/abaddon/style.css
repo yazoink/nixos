@@ -1,12 +1,11 @@
 .messages,
 .message-container{
-  border: transparent;
   border-radius: 10px;
   padding: 10px;
 }
 
 .message-container-avatar,
-.mutual-friend-item-avatar {
-  border: transparent;
+.mutual-friend-item-avatar,
+.profile-avatar {
   border-radius: 50%;
 }
