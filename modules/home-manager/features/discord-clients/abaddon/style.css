@@ -4,8 +4,13 @@
   padding: 10px;
 }
 
-.message-text {
-  background: inherit;
+.messages, .member-list .view, .channel-list .view:not(:selected) {
+    background: inherit;
+}
+
+/* and if you want to target the tabs at the top as well */
+.channel-tab-switcher revealer box, tab {
+    background: inherit;
 }
 
 .message-container-avatar,
