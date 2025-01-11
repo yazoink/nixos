@@ -7,6 +7,7 @@
     ./features/disk-burner
     ./features/pychess
     ./features/space-cadet-pinball
+    ./features/gzdoom
     ./features/minetest
     ./features/knavalbattle
     ./features/etterna

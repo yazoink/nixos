@@ -212,6 +212,10 @@
           type = lib.types.bool;
           default = false;
         };
+        gzdoom.enable = lib.mkOption {
+          type = lib.types.bool;
+          default = false;
+        };
         spaceCadetPinball.enable = lib.mkOption {
           type = lib.types.bool;
           default = false;
