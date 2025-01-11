@@ -20,8 +20,8 @@
         desktopFile = "thunar.desktop";
       };
       discordClient = {
-        command = "abaddon";
-        desktopFile = "abaddon.desktop";
+        command = "dissent";
+        desktopFile = "dissent.desktop";
       };
       guiTextEditor = {
         command = "pluma";

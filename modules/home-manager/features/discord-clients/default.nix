@@ -1,6 +1,7 @@
 {
   imports = [
     ./abaddon
+    ./dissent
     ./vesktop
   ];
 }
