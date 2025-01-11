@@ -5,7 +5,8 @@
   padding: 10px;
 }
 
-.message-container-avatar {
+.message-container-avatar,
+.mutual-friend-item-avatar {
   border: transparent;
-  border-radius: 100px;
+  border-radius: 50%;
 }
