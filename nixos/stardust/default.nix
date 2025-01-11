@@ -20,8 +20,8 @@
         desktopFile = "thunar.desktop";
       };
       discordClient = {
-        command = "dissent";
-        desktopFile = "dissent.desktop";
+        command = "vesktop";
+        desktopFile = "vesktop.desktop";
       };
       guiTextEditor = {
         command = "pluma";

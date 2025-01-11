@@ -19,7 +19,7 @@
           command = lib.mkOption {
             type = lib.types.str;
             default = "vesktop";
-            description = "options: vesktop, abaddon";
+            description = "options: vesktop, abaddon, dissent";
           };
           desktopFile = lib.mkOption {
             type = lib.types.str;
