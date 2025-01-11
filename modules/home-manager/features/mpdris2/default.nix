@@ -1,6 +1,6 @@
 {lib, osConfig, ...}:
 {
-  config = lib.mkIf osConfig.myOptions.bundles.desktopFull.mpd.enable {
+  config = lib.mkIf osConfig.bundles.desktopFull.mpd.enable {
     services.mpdris2 = {
       enable = true;
       notifications = true;

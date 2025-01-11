@@ -1,6 +1,6 @@
 {pkgs, osConfig, lib, ...}:
 {
-  config = lib.mkIf osConfig.bundles.desktopFull.mpd.enable {
+  config = lib.mkIf osConfig.myOptions.bundles.desktopFull.enable {
     bundles.desktopFull = {
       audtousd.enable = true;
       colorScripts.enable = true;
