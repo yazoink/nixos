@@ -8,13 +8,24 @@ main () {
   esac
 }
 
+get_full_path () {
+  path="$1"
+  if [[ "$path" != "/"* ]]; then
+    if [[ "$path" == "~/"* ]]; then
+      path="${path:2}"
+    fi
+    path="$HOME/$path"
+  fi
+  echo "$path"
+}
+
 help () {
   echo "wptest -- set a wallpaper temporarily"
   echo "usage: wptest <path/to/wallpaper>"
 }
 
 set_wallpaper () {
-  wallpaper="$1"
+  wallpaper="$(get_full_path "$1")"
   if [ -f "$wallpaper" ]; then
     pkill swaybg
     swaybg -i "$wallpaper" -m fill &
