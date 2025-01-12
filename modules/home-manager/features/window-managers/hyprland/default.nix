@@ -285,8 +285,8 @@ in
           "$mainMod SHIFT, S, togglespecialworkspace,"
           "$mainMod Ctrl, Up, movetoworkspacesilent, special"
           
-          "$mainMod, mouse_down, workspace, e+1"
-          "$mainMod, mouse_up, workspace, e-1"
+          "$mainMod, mouse_down, workspace, e-1"
+          "$mainMod, mouse_up, workspace, e+1"
 
           ", XF86AudioMute, exec, pamixer -t"
           ", XF86AudioMicMute, exec, pamixer --default-source -t"
