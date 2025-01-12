@@ -15,7 +15,7 @@
   myOptions = {
     userAccount.username = "gene";
     desktopTheme = {
-      name = "levuaska";
+      name = "everblush";
       #name = "gruvbox-material-dark-hard";
       #wallpaper = ./wallpapers/caroline-flowers3.png;
       #wallpaper = ./wallpapers/painting3.jpg;
