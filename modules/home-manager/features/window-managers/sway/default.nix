@@ -207,7 +207,7 @@
           "${modifier}+s" = "exec ${config.bundles.desktopBase.screenshot.package}/bin/screenshot -s";
           "${modifier}+c" = "exec ${../scripts/color.sh}";
           "${modifier}+Shift+b" = "exec ${../scripts/waybar.sh}";
-          "${modifier}+Shift+b" = "exec ";
+          "${modifier}+Shift+w" = "exec ${../scripts/swaybg.sh} ${osConfig.myOptions.desktopTheme.wallpaper}";
           "${modifier}+Shift+n" = "exec swaync-client -t -swb";
           "${modifier}+Control+l" = "exec ${lib.getExe pkgs.gtklock}";
           #"${modifier}+r" = "exec ${lib.getExe pkgs.kooha}";
