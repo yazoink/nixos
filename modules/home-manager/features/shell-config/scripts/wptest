@@ -12,9 +12,10 @@ get_full_path () {
   path="$1"
   if [[ "$path" != "/"* ]]; then
     if [[ "$path" == "~/"* ]]; then
-      path="${path:2}"
+      path="$HOME/${path:2}"
+    else
+      path="$(pwd)/$path"
     fi
-    path="$HOME/$path"
   fi
   echo "$path"
 }
