@@ -65,6 +65,11 @@
         #layer_effects "gtk-layer-shell" shadows enable;
         #layer_effects "notifications" shadows enable;
 
+        bindsym --whole-window {
+          $mod+button4 workspace prev
+          $mod+button5 workspace next
+        }
+
         for_window [class="Firefox"] inhibit_idle fullscreen
         for_window [app_id="firefox"] inhibit_idle fullscreen
 
