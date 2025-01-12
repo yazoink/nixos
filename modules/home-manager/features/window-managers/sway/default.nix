@@ -101,7 +101,7 @@
         menu = "exec pkill anyrun || anyrun";
         defaultWorkspace = "workspace number 1";
         startup = [
-          {command = "${lib.getExe pkgs.swaybg} -i ${osConfig.myOptions.desktopTheme.wallpaper} -m fill";}
+          {command = "${../scripts/swaybg.sh} ${osConfig.myOptions.desktopTheme.wallpaper}";}
           {command = "${../scripts/waybar.sh}";}
           {command = "${lib.getExe pkgs.poweralertd}";}
           {command = "nm-applet";}
@@ -207,6 +207,7 @@
           "${modifier}+s" = "exec ${config.bundles.desktopBase.screenshot.package}/bin/screenshot -s";
           "${modifier}+c" = "exec ${../scripts/color.sh}";
           "${modifier}+Shift+b" = "exec ${../scripts/waybar.sh}";
+          "${modifier}+Shift+b" = "exec ";
           "${modifier}+Shift+n" = "exec swaync-client -t -swb";
           "${modifier}+Control+l" = "exec ${lib.getExe pkgs.gtklock}";
           #"${modifier}+r" = "exec ${lib.getExe pkgs.kooha}";
