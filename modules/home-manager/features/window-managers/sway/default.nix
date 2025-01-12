@@ -101,7 +101,7 @@
         menu = "exec pkill anyrun || anyrun";
         defaultWorkspace = "workspace number 1";
         startup = [
-          {command = "${../scripts/swaybg.sh} ${osConfig.myOptions.desktopTheme.wallpaper}";}
+          {command = "${../scripts/swaybg.sh} ${osConfig.myOptions.desktopTheme.wallpaper} -q";}
           {command = "${../scripts/waybar.sh}";}
           {command = "${lib.getExe pkgs.poweralertd}";}
           {command = "nm-applet";}
