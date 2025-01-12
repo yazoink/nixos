@@ -31,7 +31,7 @@ set_wallpaper () {
     pkill swaybg
     swaybg -i "$wallpaper" -m fill &
     disown
-    notify-send "Wallpaper" "Reset wallpaper" -i "$wallpaper"
+    notify-send "Wallpaper" "Set temporary wallpaper $wallpaper" -i "$wallpaper"
   else
     echo "Error: file \"$wallpaper\" not found!"
     exit 1
