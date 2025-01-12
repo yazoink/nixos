@@ -163,7 +163,6 @@
           "${modifier}+Return" = "exec ${pkgs.foot}/bin/footclient";
           "${modifier}+q" = "kill";
           "${modifier}+p" = "${menu}";
-          "${modifier}+Shift+w" = "exec rofi -show window";
           "${modifier}+Shift+r" = "restart";
           "${modifier}+f" = "floating toggle";
           "${modifier}+m" = "fullscreen";
@@ -208,7 +207,7 @@
           "${modifier}+c" = "exec ${../scripts/color.sh}";
           "${modifier}+Shift+b" = "exec ${../scripts/waybar.sh}";
           "${modifier}+Shift+w" = "exec ${../scripts/swaybg.sh} ${osConfig.myOptions.desktopTheme.wallpaper}";
-          "${modifier}+Shift+n" = "exec swaync-client -t -swb";
+          "${modifier}+Shift+q" = "exec swaync-client -t -sw";
           "${modifier}+Control+l" = "exec ${lib.getExe pkgs.gtklock}";
           #"${modifier}+r" = "exec ${lib.getExe pkgs.kooha}";
           "XF86MonBrightnessDown" = "exec ${lib.getExe pkgs.light} -U 10";
