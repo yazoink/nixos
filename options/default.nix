@@ -204,6 +204,10 @@
           type = lib.types.bool;
           default = false;
         };
+        superTuxKart.enable = lib.mkOption {
+          type = lib.types.bool;
+          default = false;
+        };
         gamescope.enable = lib.mkOption {
           type = lib.types.bool;
           default = false;
