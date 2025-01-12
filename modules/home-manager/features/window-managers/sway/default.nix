@@ -205,6 +205,7 @@
           "${modifier}+e" = "exec ${osConfig.myOptions.defaultApps.fileManager.command}";
           "${modifier}+s" = "exec ${config.bundles.desktopBase.screenshot.package}/bin/screenshot -s";
           "${modifier}+c" = "exec ${../scripts/color.sh}";
+          "${modifier}+n" = "exec ${terminal} -e ${lib.getExe pkgs.ncmpcpp}";
           "${modifier}+Shift+b" = "exec ${../scripts/waybar.sh}";
           "${modifier}+Shift+f" = "exec ${../scripts/restart-foot-server.sh}";
           "${modifier}+Shift+w" = "exec ${../scripts/swaybg.sh} ${osConfig.myOptions.desktopTheme.wallpaper}";

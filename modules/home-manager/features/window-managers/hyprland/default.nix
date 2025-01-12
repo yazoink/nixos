@@ -196,6 +196,7 @@ in
           "$mainMod, W, exec, $browser"
           "$mainMod, E, exec, $fileManager"
           "$mainMod, P, exec, $menu"
+          "$mainMod, n, exec, $terminal -e ncmpcpp"
           "$mainMod SHIFT, O, exec, rofi -show window"
           "$mainMod, S, exec, $screenshot"
           "$mainMod SHIFT, Q, exec, $power"
