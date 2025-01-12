@@ -21,5 +21,6 @@
     ./biscuit
     ./everblush
     ./levuaska
+    ./mountain-peek
   ];
 }

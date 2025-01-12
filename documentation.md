@@ -47,6 +47,7 @@ Sets the theme to use.
 - biscuit
 - everblush
 - levuaska
+- mountain-peek
 
 ### myOptions.desktopTheme.wallpaper
 Path to the desktop wallpaper.
