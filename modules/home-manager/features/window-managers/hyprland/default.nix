@@ -46,6 +46,7 @@ in
         "$bar" = "${../scripts/waybar.sh}";
         "$screenRecorder" = "kooha";
         "$mainMod" = "SUPER";
+        "$wallpaper" = "${../scripts/swaybg.sh} ${osConfig.myOptions.desktopTheme.wallpaper}";
         env = [
           "NIXOS_OZONE_WL,1"
           "MOZ_ENABLE_WAYLAND,1"
@@ -62,8 +63,7 @@ in
         ];
         exec-once = [
           "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
-          "swaybg -i ${osConfig.myOptions.desktopTheme.wallpaper} -m fill"
-          "mpDris2 --music-dir=~/mu &"
+          "$wallpaper"
           #"dbus-launch --exit-with-session waybar"
           "$bar"
           "hypridle"
@@ -196,13 +196,15 @@ in
           "$mainMod, W, exec, $browser"
           "$mainMod, E, exec, $fileManager"
           "$mainMod, P, exec, $menu"
-          "$mainMod SHIFT, W, exec, rofi -show window"
+          "$mainMod SHIFT, O, exec, rofi -show window"
           "$mainMod, S, exec, $screenshot"
           "$mainMod SHIFT, Q, exec, $power"
           "$mainMod CTRL, L, exec, $lock"
           "$mainMod, C, exec, $colorPicker"
           "$mainMod, R, exec, $screenRecorder"
           "$mainMod SHIFT, B, exec, $bar"
+          "$mainMod SHIFT, W, exec, $wallpaper"
+          "$mainMod SHIFT, F, exec, ${../scripts/restart-foot-server.sh}"
           "$mainMod, Q, killactive,"
           "$mainMod SHIFT, E, exit,"
           "$mainMod, F, togglefloating,"
