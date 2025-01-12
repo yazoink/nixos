@@ -14,46 +14,8 @@
 
   myOptions = {
     userAccount.username = "gene";
-    defaultApps = {
-      fileManager = {
-        command = "thunar";
-        desktopFile = "thunar.desktop";
-      };
-      discordClient = {
-        command = "vesktop";
-        desktopFile = "vesktop.desktop";
-      };
-      guiTextEditor = {
-        command = "pluma";
-        desktopFile = "pluma.desktop";
-      };
-      documentReader = {
-        command = "atril";
-        desktopFile = "atril.desktop";
-      };
-      mediaPlayer = {
-        command = "vlc";
-        desktopFile = "vlc.desktop";
-      };
-      imageViewer = {
-        command = "ristretto";
-        desktopFile = "org.xfce.ristretto.desktop";
-      };
-      archiver = {
-        command = "file-roller";
-        desktopFile = "org.gnome.FileRoller.desktop";
-      };
-      terminal = {
-        command = "footclient";
-        desktopFile = "footclient.desktop";
-      };
-      webBrowser = {
-        command = "firefox";
-        desktopFile = "firefox.desktop";
-      };
-    };
     desktopTheme = {
-      name = "everblush";
+      name = "levuaska";
       #name = "gruvbox-material-dark-hard";
       #wallpaper = ./wallpapers/caroline-flowers3.png;
       #wallpaper = ./wallpapers/painting3.jpg;

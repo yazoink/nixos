@@ -1,3 +1,4 @@
+# https://color.firefox.com/?theme=XQAAAAKYAwAAAAAAAABBqYhm849SCicxcUUSqiuG_ebZUZXOFqmA0BaFyCSgTnzmrCnE_CoWdpIL68SrzIik_qw1EasGFw7CNUVpCOZpMV5Un_0sunysOZ1Jq5g_YhUffbZBKVtLPj65AnXibOFlpnpjDvB34qOt5_IM0dXD0Fs8Lem0A1uxA5Akj-v_gf4vey0DX74BJGDWBOm7AfXD28MTVoXIiZk-CMFjQFzclUHA0zLTeagrd2iVcRdU-frtGIWkFOw1aZDgmw1IR-wemU9J0QFvzrdL5TKqXleiZcVTjCyJb9F_PwjZx72CUoGyNziitFiHc3pcF8lQPoFqPg1s6wldFuOpMqUGfMqfgz3KhDyGVvd_egeXOR5McCmiKMXsLl_qjUP1Ovz15-R-D6LI9rby6ozT2sRcpaDuoVYhF-cnA4RsPlXMKlVTYfuecBRB5QpqsUXU3w-DanoZ2IrWbks4vEy9__aLkxQ
 {pkgs, config, lib, ...}:
 let
   cursors = pkgs.callPackage ./everblush-cursors.nix {};

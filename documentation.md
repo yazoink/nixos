@@ -30,7 +30,8 @@ Sets the theme to use.
 - carob
 - tarot
 - manuscript
-- rosepine
+- rose-pine
+- rose-pine-moon
 - wizard
 - atelier-savanna
 - blood-rust
@@ -40,6 +41,12 @@ Sets the theme to use.
 - swamp
 - terracotta
 - twilight
+- darkmoss
+- gruvbox-dark-hard
+- gruvbox-material-dark-hard
+- biscuit
+- everblush
+- levuaska
 
 ### myOptions.desktopTheme.wallpaper
 Path to the desktop wallpaper.

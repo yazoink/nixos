@@ -20,5 +20,6 @@
     ./gruvbox-material-dark-hard
     ./biscuit
     ./everblush
+    ./levuaska
   ];
 }
