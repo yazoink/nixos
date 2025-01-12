@@ -1,0 +1,29 @@
+#!/usr/bin/env bash
+# sets wallpaper temporarily
+
+main () {
+  case "$1" in
+    "-h" | "--help") help;;
+    *) set_wallpaper "$1";;
+  esac
+}
+
+help () {
+  echo "wptest -- set a wallpaper temporarily"
+  echo "usage: wptest <path/to/wallpaper>"
+}
+
+set_wallpaper () {
+  wallpaper="$1"
+  if [ -f "$wallpaper" ]; then
+    pkill swaybg
+    swaybg -i "$wallpaper" -m fill &
+    disown
+    notify-send "Wallpaper" "Reset wallpaper" -i "$wallpaper"
+  else
+    echo "Error: file \"$wallpaper\" not found!"
+    exit 1
+  fi
+}
+
+main "$@"
