@@ -4,7 +4,6 @@
     ./bundles/desktop-base
     ./bundles/desktop-full
 
-    ./features/disk-burner
     ./features/pychess
     ./features/space-cadet-pinball
     ./features/gzdoom

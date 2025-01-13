@@ -9,5 +9,6 @@
     ./features/virt-manager
     ./features/virtualbox
     ./features/retroarch
+    ./features/disk-burner
   ];
 }
