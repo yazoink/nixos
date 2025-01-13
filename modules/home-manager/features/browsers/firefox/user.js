@@ -247,8 +247,3 @@ user_pref("privacy.userContext.enabled", true);
 /****************************************************************************
  * END: BETTERFOX                                                           *
 ****************************************************************************/
-
-user_pref("apz.fling_friction", 0.03);
-user_pref("mousewheel.default.delta_multiplier_x", 50);
-user_pref("mousewheel.default.delta_multiplier_y", 50);
-user_pref("mousewheel.default.delta_multiplier_z", 50);
