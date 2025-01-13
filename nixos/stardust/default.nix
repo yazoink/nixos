@@ -40,6 +40,8 @@
       knavalbattle.enable = true;
       gzdoom.enable = true;
       eduke32.enable = true;
+      prismlauncher.enable = true;
+      superTuxKart.enable = true;
     };
     hardwareFeatures = {
       ssd.enable = true;

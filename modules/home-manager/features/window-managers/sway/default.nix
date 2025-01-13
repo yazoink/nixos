@@ -65,6 +65,11 @@
         #layer_effects "gtk-layer-shell" shadows enable;
         #layer_effects "notifications" shadows enable;
 
+        bindsym --whole-window {
+          ${config.wayland.windowManager.sway.config.modifier}+button4 workspace prev
+          ${config.wayland.windowManager.sway.config.modifier}+button5 workspace next
+        }
+
         for_window [class="Firefox"] inhibit_idle fullscreen
         for_window [app_id="firefox"] inhibit_idle fullscreen
 

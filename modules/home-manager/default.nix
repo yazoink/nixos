@@ -17,5 +17,6 @@
     ./features/dither
     ./features/replacecolor
     ./features/eduke32
+    ./features/super-tux-kart
   ];
 }
