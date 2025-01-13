@@ -2,7 +2,7 @@
 {
   config = lib.mkIf config.myOptions.hardwareFeatures.diskBurner.enable {
     environment.systemPackages = with pkgs; [
-      k3b
+      kdePackages.k3b
       cdrdao
       cdrtools
       dvdplusrwtools
