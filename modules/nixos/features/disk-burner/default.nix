@@ -13,6 +13,7 @@
       gst_all_1.gst-plugins-ugly
       gst_all_1.gst-libav
     ];
+    services.udisks2.enable = true;
     security.wrappers = {
       cdrao = {
         setuid = true;
@@ -28,7 +29,6 @@
         permissions = "u+wrx,g+x";
         source = "${pkgs.cdrtools}/bin/cdrecord";
       };
-      services.udisks2.enable = true;
     };
   };
 }
