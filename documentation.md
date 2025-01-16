@@ -59,12 +59,19 @@ Set the terminal font.
 - Bm437 NEC APC3 8x16
 - Iosevka Nerd Font
 - ZedMono Nerd Font
+- Cascadia Code
+- VictorMono Nerd Font
 
 ### myoptions.desktoptheme.fonts.desktop.name
 set the desktop font.
 #### options
 - Rubik
 - SF Pro Display
+- DM Sans
+- Gabarito
+- Lexend
+- Product Sans
+- Roboto
 
 ### myOptions.desktopTheme.fonts.\<desktop/terminal>.size
 Set the terminal/desktop font size.

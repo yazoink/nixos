@@ -125,7 +125,7 @@
             name = lib.mkOption {
               type = lib.types.str;
               default = "Bm437 NEC APC3 8x16";
-              description = "options: Bm437 NEC APC3 8x16, GeistMono Nerd Font, Iosevka Nerd Font, ZedMono Nerd Font";
+              description = "options: Bm437 NEC APC3 8x16, GeistMono Nerd Font, Iosevka Nerd Font, ZedMono Nerd Font, Cascadia Code, VictorMono Nerd Font";
             };
             size = lib.mkOption {
               type = lib.types.number;
@@ -136,7 +136,7 @@
             name = lib.mkOption {
               type = lib.types.str;
               default = "Rubik";
-              description = "options: Rubik, SF Pro Display";
+              description = "options: Rubik, SF Pro Display, DM Sans, Gabarito, Lexend, Product Sans, Roboto";
             };
             size = lib.mkOption {
               type = lib.types.number;
