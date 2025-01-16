@@ -10,6 +10,14 @@
     bundles.base.avahi.enable = true;
     services.printing = {
       enable = true;
+      browsing = true;
+      browsed.conf = ''
+        BrowseDNSSDSubTypes _cups,_print
+        BrowseLocalProtocols all
+        BrowseRemoteProtocols all
+        CreateIPPPrinterQueues All
+        BrowseProtocols all
+      '';
       drivers = with pkgs;[
         fxlinuxprint 
         foomatic-db-ppds-withNonfreeDb
