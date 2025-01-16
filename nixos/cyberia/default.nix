@@ -70,7 +70,7 @@
       virtualbox.enable = true;
       spaceCadetPinball.enable = true;
       prismlauncher.enable = true;
-      retroarch.enable = true;
+      retroarch.enable = false;
     };
     hardwareFeatures = {
       diskBurner.enable = true;
@@ -85,8 +85,8 @@
 
   home-manager = {
     extraSpecialArgs = {inherit inputs;};
-    #useGlobalPkgs = true;
-    #useUserPackages = true;
+    useGlobalPkgs = true;
+    useUserPackages = false;
     users."gene" = {
       imports = [
         ../../home-manager
