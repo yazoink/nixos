@@ -19,7 +19,7 @@
       wallpaper = ./wallpapers/flowers-downscaled.jpg;
       fonts = {
         terminal = {
-          name = "Iosevka Nerd Font";
+          name = "GeistMono Nerd Font";
           size = 11;
         };
       };
