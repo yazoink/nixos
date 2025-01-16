@@ -23,7 +23,7 @@
           size = 11;
         };
         terminal = {
-          name = "Cascadia Code";
+          name = "GeistMono Nerd Font";
           size = 12;
         };
       };
