@@ -10,7 +10,7 @@
     bundles.base.avahi.enable = true;
     services.printing = {
       enable = true;
-      drivers = with pkgs; [gutenprint gutenprintBin];
+      drivers = with pkgs; [gutenprint gutenprintBin fxlinuxprint];
     };
   };
 }
