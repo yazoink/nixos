@@ -51,10 +51,10 @@ in
           name = "Rubik";
         };
         monospace = lib.mkIf (customTerminalFont.enable == false) {
-          #package = pkgs.gohufont;
-          #name = "Gohufont";
-          package = pkgs.nerd-fonts.iosevka;
-          name = "Iosevka Nerd Font";
+          package = pkgs.nerd-fonts.geist-mono;
+          name = "GeistMono Nerd Font";
+          #package = pkgs.nerd-fonts.iosevka;
+          #name = "Iosevka Nerd Font";
         };
       };
       image = config.myOptions.desktopTheme.wallpaper;
