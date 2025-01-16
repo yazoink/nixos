@@ -15,7 +15,7 @@
         gutenprintBin 
         fxlinuxprint 
         foomatic-db-ppds-withNonfreeDb
-        #coreutils # some drivers do not show up without this?
+        coreutils # some drivers do not show up without this?
       ];
     };
   };
