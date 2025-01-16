@@ -19,8 +19,8 @@
       wallpaper = ./wallpapers/flowers-downscaled.jpg;
       fonts = {
         desktop = {
-          name = "Roboto";
-          size = 12;
+          name = "Lexend";
+          size = 11;
         };
         terminal = {
           name = "Iosevka Nerd Font";

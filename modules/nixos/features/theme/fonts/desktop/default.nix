@@ -6,5 +6,6 @@
     ./gabarito
     ./dm-sans
     ./roboto
+    ./lexend
   ];
 }
