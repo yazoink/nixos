@@ -11,7 +11,7 @@
     services.printing = {
       enable = true;
       browsing = true;
-      browsed.conf = ''
+      browsedConf = ''
         BrowseDNSSDSubTypes _cups,_print
         BrowseLocalProtocols all
         BrowseRemoteProtocols all
