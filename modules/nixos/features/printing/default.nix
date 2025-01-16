@@ -12,6 +12,7 @@
       enable = true;
       drivers = with pkgs;[
         fxlinuxprint 
+        foomatic-db-ppds-withNonfreeDb
       ];
     };
   };
