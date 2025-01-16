@@ -116,6 +116,30 @@
           default = "caroline";
           description = "options: caroline, carob, tarot, manuscript, rosepine, wizard, atelier-savanna, blood-rust, embers, mountain, spirit, swamp, terracotta, twilight";
         };
+        fonts = {
+          terminal = {
+            name = lib.mkOption {
+              type = lib.types.str;
+              default = "Bm437 NEC APC3 8x16";
+              description = "options: Bm437 NEC APC3 8x16, GeistMono Nerd Font";
+            };
+            size = lib.mkOption {
+              type = lib.types.number;
+              default = 12;
+            };
+          };
+          desktop = {
+            name = lib.mkOption {
+              type = lib.types.str;
+              default = "Rubik";
+              description = "options: Rubik, SF Pro Display";
+            };
+            size = lib.mkOption {
+              type = lib.types.number;
+              default = 12;
+            };
+          };
+        };
         wallpaper = lib.mkOption {
           type = lib.types.path;
           description = "path to wallpaper";

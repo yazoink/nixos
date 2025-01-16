@@ -1,7 +1,4 @@
 {pkgs, config, lib, ...}:
-let
-  inherit (config.desktopTheme) customTerminalFont customDesktopFont;
-in
 {
   options = {
     desktopTheme.base16Accent = lib.mkOption {
@@ -11,13 +8,9 @@ in
   };
   imports = [
     ./themes
-    ./terminal-fonts
-    ./desktop-fonts
+    ./fonts
   ];
   config = lib.mkIf config.myOptions.bundles.desktopBase.enable {
-    desktopTheme.customTerminalFont.enable = true;
-    desktopTheme.customDesktopFont.enable = false;
-
     environment.systemPackages = with pkgs; [
       libsForQt5.qtquickcontrols2
       libsForQt5.qtgraphicaleffects
@@ -37,24 +30,14 @@ in
       };
       fonts = {
         sizes = {
-          applications = 11;
-          desktop = 11;
-          popups = 11;
-          terminal = 12;
+          applications = config.myOptions.desktopTheme.fonts.desktop.size;
+          desktop = config.myOptions.desktopTheme.fonts.desktop.size;
+          popups = config.myOptions.desktopTheme.fonts.desktop.size;
+          terminal = config.myOptions.desktopTheme.fonts.terminal.size;
         };
         serif = {
           package = pkgs.gyre-fonts;
           name = "DejaVu Math TeX Gyre";
-        };
-        sansSerif = lib.mkIf (customDesktopFont.enable == false) {
-          package = pkgs.rubik;
-          name = "Rubik";
-        };
-        monospace = lib.mkIf (customTerminalFont.enable == false) {
-          package = pkgs.nerd-fonts.geist-mono;
-          name = "GeistMono Nerd Font";
-          #package = pkgs.nerd-fonts.iosevka;
-          #name = "Iosevka Nerd Font";
         };
       };
       image = config.myOptions.desktopTheme.wallpaper;
