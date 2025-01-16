@@ -19,11 +19,11 @@
       wallpaper = ./wallpapers/flowers-downscaled.jpg;
       fonts = {
         desktop = {
-          name = "Lexend";
+          name = "Rubik";
           size = 11;
         };
         terminal = {
-          name = "Iosevka Nerd Font";
+          name = "Cascadia Code";
           size = 12;
         };
       };
