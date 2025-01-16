@@ -46,6 +46,7 @@
     hardwareFeatures = {
       ssd.enable = true;
       h264ify.enable = true;
+      diskBurner.enable = false;
       laptop = {
         enable = true;
         touchpadScrollFactor = 0.5;
