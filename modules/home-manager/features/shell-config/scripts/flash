@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+input="$1"
+output="$2"
+
+sudo dd if="$input" of="$output" status=progress
