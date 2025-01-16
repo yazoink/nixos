@@ -15,7 +15,7 @@ in
     ./desktop-fonts
   ];
   config = lib.mkIf config.myOptions.bundles.desktopBase.enable {
-    desktopTheme.customTerminalFont.enable = true;
+    desktopTheme.customTerminalFont.enable = false;
     desktopTheme.customDesktopFont.enable = false;
 
     environment.systemPackages = with pkgs; [
@@ -53,8 +53,8 @@ in
         monospace = lib.mkIf (customTerminalFont.enable == false) {
           #package = pkgs.gohufont;
           #name = "Gohufont";
-          package = pkgs.terminus_font;
-          name = "Terminus";
+          package = pkgs.maple-mono-NF;
+          name = "Maple Mono";
         };
       };
       image = config.myOptions.desktopTheme.wallpaper;
