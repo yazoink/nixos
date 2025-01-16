@@ -50,6 +50,7 @@
       laptop = {
         enable = true;
         touchpadScrollFactor = 0.5;
+        batteryName = "BAT1";
       };
     };
   };

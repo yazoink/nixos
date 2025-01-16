@@ -33,7 +33,7 @@
             ];
           };
           "battery" = {
-            bat = "BAT0";
+            bat = osConfig.myOptions.hardwareFeatures.laptop.batteryName;
             interval = 60;
             format = "{icon} {capacity}%";
             format-icons = [
