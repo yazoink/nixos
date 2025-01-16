@@ -30,7 +30,7 @@
       firefoxCss.anotherOneline.enable = true;
     };
     bundles = {
-      base.starshipFormat = 2;
+      base.starshipFormat = 3;
       desktopBase.windowManager = "sway";
       desktopBase.displayManager = "sddm";
       desktopFull.enable = true;
