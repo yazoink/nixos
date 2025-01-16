@@ -19,7 +19,7 @@
       wallpaper = ./wallpapers/flowers-downscaled.jpg;
       fonts = {
         desktop = {
-          name = "Product Sans";
+          name = "Gabarito";
           size = 12;
         };
         terminal = {

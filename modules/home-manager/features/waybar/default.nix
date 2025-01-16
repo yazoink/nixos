@@ -1,7 +1,8 @@
 # depends on theme module for theming
 {config, lib, osConfig, ...}:
 let
-  fontSize = osConfig.myOptions.desktopTheme.fonts.desktop.size + 4;
+  #fontSize = osConfig.myOptions.desktopTheme.fonts.desktop.size + 5;
+  fontSize = 15;
 in
 {
   options = {

@@ -75,7 +75,7 @@ in
               {
                 label = "󰍃";
                 type = "normal";
-                command = "swaymsg exit";
+                command = "${pkgs.sway}/bin/swaymsg exit";
               }
               {
                 label = "󰜉";
