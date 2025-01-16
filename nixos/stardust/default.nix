@@ -20,7 +20,7 @@
       fonts = {
         desktop = {
           name = "SF Pro Display";
-          size = 12;
+          size = 11;
         };
         terminal = {
           name = "Iosevka Nerd Font";
