@@ -15,6 +15,7 @@
         gutenprintBin 
         fxlinuxprint 
         foomatic-db-ppds
+        coreutils # driver was complaining about no cat
       ];
     };
   };
