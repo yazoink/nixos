@@ -2,8 +2,8 @@
 {
   config = lib.mkIf config.myOptions.hardwareFeatures.diskBurner.enable {
     environment.systemPackages = with pkgs; [
-      #kdePackages.k3b
-      brasero
+      kdePackages.k3b
+      #brasero
       cdrdao
       cdrtools
       dvdplusrwtools
