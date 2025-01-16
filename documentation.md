@@ -57,6 +57,8 @@ Set the terminal font.
 #### Options
 - GeistMono Nerd Font
 - Bm437 NEC APC3 8x16
+- Iosevka Nerd Font
+- ZedMono Nerd Font
 
 ### myoptions.desktoptheme.fonts.desktop.name
 set the desktop font.
