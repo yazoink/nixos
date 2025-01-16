@@ -189,9 +189,16 @@
         };
       };
       bundles = {
-        base.enable = lib.mkOption {
-          type = lib.types.bool;
-          default = false;
+        base = {
+          enable = lib.mkOption {
+            type = lib.types.bool;
+            default = false;
+          };
+          starshipFormat = lib.mkOption {
+            type = lib.types.number;
+            default = 1;
+            description = "Theme/format for Starship (1-2).";
+          };
         };
         desktopBase = {
           enable = lib.mkOption {

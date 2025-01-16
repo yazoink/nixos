@@ -17,7 +17,7 @@ let
     "ip" = "ip -color=auto";
     "vim" = "nvim";
     "make" = "make -j$(nproc)";
-    "vpssh" = "tmux && ssh vps";
+    "vpssh" = "ssh vps";
     "ga" = "git add";
     "gaa" = "git add .";
     "gc" = "git commit";
@@ -42,6 +42,10 @@ in
       default = false;
     };
   };
+
+  imports = [
+    ./starship-formats
+  ];
 
   config = lib.mkIf config.bundles.base.shellConfig.enable {
     home.packages = [scripts];
@@ -90,8 +94,6 @@ in
         enableZshIntegration = true;
         settings = {
           add_newline = true;
-          format = ''[>](blue)[>](red)[>](yellow) '';
-          right_format = ''[$directory](green)'';
           directory = {
             read_only = " ";
             home_symbol = "~";
