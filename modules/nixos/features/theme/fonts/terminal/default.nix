@@ -4,5 +4,6 @@
     ./geist-mono
     ./iosevka
     ./zed-mono
+    ./victor-mono
   ];
 }
