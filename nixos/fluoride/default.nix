@@ -53,6 +53,7 @@
     desktopTheme = {
       name = "caroline";
       wallpaper = ./wallpapers/caroline-flowers2.png;
+      terminalPadding = 24;
       sddm = {
         scale = 0.8;
         wallpaper = ./wallpapers/caroline-flowers3.png;

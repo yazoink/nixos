@@ -69,6 +69,9 @@ set the desktop font.
 ### myOptions.desktopTheme.fonts.\<desktop/terminal>.size
 Set the terminal/desktop font size.
 
+### myOptions.desktopTheme.terminalPadding
+Set the terminal padding.
+
 ### myOptions.desktopTheme.sddm
 Configure the SDDM theme.
 

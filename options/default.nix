@@ -116,6 +116,10 @@
           default = "caroline";
           description = "options: caroline, carob, tarot, manuscript, rosepine, wizard, atelier-savanna, blood-rust, embers, mountain, spirit, swamp, terracotta, twilight";
         };
+        terminalPadding = lib.mkOption {
+          type = lib.types.number;
+          default = 20;
+        };
         fonts = {
           terminal = {
             name = lib.mkOption {
