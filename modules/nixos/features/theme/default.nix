@@ -54,7 +54,7 @@ in
           #package = pkgs.gohufont;
           #name = "Gohufont";
           package = pkgs.maple-mono-NF;
-          name = "MapleMono-NF";
+          name = "Maple Mono NF";
         };
       };
       image = config.myOptions.desktopTheme.wallpaper;
