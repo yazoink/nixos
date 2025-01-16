@@ -2,8 +2,6 @@
 {
   config = lib.mkIf config.myOptions.hardwareFeatures.diskBurner.enable {
     environment.systemPackages = with pkgs; [
-      #kdePackages.k3b
-      brasero
       cdrdao
       cdrtools
       dvdplusrwtools
@@ -14,7 +12,8 @@
       gst_all_1.gst-plugins-ugly
       gst_all_1.gst-libav
     ];
-    services.udisks2.enable = true;
+    programs.k3b.enable = true;
+    /*services.udisks2.enable = true;
     security.wrappers = {
       cdrao = {
         setuid = true;
@@ -30,6 +29,6 @@
         permissions = "u+wrx,g+x";
         source = "${pkgs.cdrtools}/bin/cdrecord";
       };
-    };
+    };*/
   };
 }
