@@ -14,7 +14,7 @@
         gutenprint 
         #gutenprintBin 
         fxlinuxprint 
-        #foomatic-db-ppds
+        foomatic-db-ppds
         #coreutils # some drivers do not show up without this?
       ];
     };
