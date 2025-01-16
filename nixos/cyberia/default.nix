@@ -73,7 +73,7 @@
       retroarch.enable = true;
     };
     hardwareFeatures = {
-      diskBurner.enable = true;
+      #diskBurner.enable = true;
       ssd.enable = true;
       h264ify.enable = true;
       laptop = {
