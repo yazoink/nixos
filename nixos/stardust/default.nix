@@ -45,6 +45,7 @@
     };
     hardwareFeatures = {
       ssd.enable = true;
+      diskBurner.enable = true;
       h264ify.enable = true;
       laptop = {
         enable = true;
@@ -55,8 +56,8 @@
 
   home-manager = {
     extraSpecialArgs = {inherit inputs;};
-    useGlobalPkgs = true;
-    useUserPackages = true;
+    #useGlobalPkgs = true;
+    #useUserPackages = true;
     users."${config.myOptions.userAccount.username}" = {
       imports = [
         ../../home-manager
