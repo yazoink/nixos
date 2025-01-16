@@ -12,9 +12,9 @@
       enable = true;
       drivers = with pkgs;[
         gutenprint 
-        #gutenprintBin 
+        gutenprintBin 
         fxlinuxprint 
-        foomatic-db-ppds
+        foomatic-db-ppds-withNonfreeDb
         #coreutils # some drivers do not show up without this?
       ];
     };
