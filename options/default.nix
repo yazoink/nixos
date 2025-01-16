@@ -118,7 +118,7 @@
         };
         terminalPadding = lib.mkOption {
           type = lib.types.number;
-          default = 20;
+          default = 24;
         };
         fonts = {
           terminal = {
