@@ -10,7 +10,13 @@
     bundles.base.avahi.enable = true;
     services.printing = {
       enable = true;
-      drivers = with pkgs; [gutenprint gutenprintBin fxlinuxprint foomatic-db-ppds];
+      drivers = with pkgs;[
+        gutenprint 
+        gutenprintBin 
+        fxlinuxprint 
+        foomatic-db-ppds
+        coreutils # driver was complaining about no cat command
+      ];
     };
   };
 }
