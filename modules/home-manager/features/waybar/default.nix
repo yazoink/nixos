@@ -1,5 +1,8 @@
 # depends on theme module for theming
 {config, lib, osConfig, ...}:
+let
+  fontSize = osConfig.myOptions.desktopTheme.fonts.desktop.size + 5;
+in
 {
   options = {
     bundles.desktopBase.waybar.enable = lib.mkOption {
@@ -130,7 +133,7 @@
         * {
           font-family: "${config.stylix.fonts.sansSerif.name}", "Font Awesome 6 Free";
           font-weight: bold;
-          font-size: 15px;
+          font-size: ${builtins.toString fontSize}px;
           padding: 0px;
           margin: 0px;
         }
