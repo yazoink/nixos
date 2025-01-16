@@ -20,7 +20,8 @@
       '';
       drivers = with pkgs;[
         fxlinuxprint 
-        foomatic-db-ppds-withNonfreeDb
+        #foomatic-db-ppds-withNonfreeDb
+        gutenprint
       ];
     };
   };
