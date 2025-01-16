@@ -197,7 +197,7 @@
           starshipFormat = lib.mkOption {
             type = lib.types.number;
             default = 1;
-            description = "Theme/format for Starship (1-2).";
+            description = "Theme/format for Starship (1-3).";
           };
         };
         desktopBase = {

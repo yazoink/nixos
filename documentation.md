@@ -93,6 +93,9 @@ Bundles of modules.
 ### myOptions.bundles.base.enable
 Enables the base features needed for a TTY-only setup.
 
+### myOptions.bundles.base.starshipFormat
+Set the Starship prompt theme/format (1-3).
+
 ### myOptions.bundles.desktopBase.enable
 Enables the base features needed for a desktop including a window manager, display manager, web browser and other basic utilities.
 This module automatically enables `myOptions.bundles.base`.
