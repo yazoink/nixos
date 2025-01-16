@@ -52,6 +52,21 @@ Sets the theme to use.
 ### myOptions.desktopTheme.wallpaper
 Path to the desktop wallpaper.
 
+### myOptions.desktopTheme.fonts.terminal.name
+Set the terminal font.
+#### Options
+- GeistMono Nerd Font
+- Bm437 NEC APC3 8x16
+
+### myoptions.desktoptheme.fonts.desktop.name
+set the desktop font.
+#### options
+- Rubik
+- SF Pro Display
+
+### myOptions.desktopTheme.fonts.\<desktop/terminal>.size
+Set the terminal/desktop font size.
+
 ### myOptions.desktopTheme.sddm
 Configure the SDDM theme.
 
@@ -132,11 +147,6 @@ This option is set for each individual theme in `modules/nixos/features/theme/th
 - base0D (default)
 - base0E
 - base0F
-
-### desktopTheme.custom\<Terminal/Desktop>Font.enable
-Enabled a font which is not in nixpkgs. This font is set in `modules/nixos/features/theme/<terminal/desktop>-fonts`
-and the option is enabled in `modules/nixos/features/theme/default.nix`.
-If it's disabled, it will fall back to a font from nixpkgs.
 
 ## Adding hosts
 1. Add to `flake.nix`:

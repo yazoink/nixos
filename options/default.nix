@@ -136,7 +136,7 @@
             };
             size = lib.mkOption {
               type = lib.types.number;
-              default = 12;
+              default = 11;
             };
           };
         };
