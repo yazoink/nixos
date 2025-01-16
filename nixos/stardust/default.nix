@@ -18,6 +18,7 @@
       name = "everblush";
       wallpaper = ./wallpapers/flowers-downscaled.jpg;
       fonts = {
+        desktop.font = "Product Sans";
         terminal = {
           name = "Iosevka Nerd Font";
           size = 12;
