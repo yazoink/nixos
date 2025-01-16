@@ -5,5 +5,6 @@
     ./iosevka
     ./zed-mono
     ./victor-mono
+    ./cascadia-code
   ];
 }

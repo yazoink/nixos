@@ -19,11 +19,11 @@
       wallpaper = ./wallpapers/flowers-downscaled.jpg;
       fonts = {
         desktop = {
-          name = "Rubik";
-          size = 11;
+          name = "Roboto";
+          size = 12;
         };
         terminal = {
-          name = "VictorMono Nerd Font";
+          name = "Iosevka Nerd Font";
           size = 12;
         };
       };

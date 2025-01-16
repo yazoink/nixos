@@ -5,5 +5,6 @@
     ./product-sans
     ./gabarito
     ./dm-sans
+    ./roboto
   ];
 }
