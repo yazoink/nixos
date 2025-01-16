@@ -11,11 +11,7 @@
     services.printing = {
       enable = true;
       drivers = with pkgs;[
-        gutenprint 
-        gutenprintBin 
         fxlinuxprint 
-        foomatic-db-ppds-withNonfreeDb
-        coreutils # some drivers do not show up without this?
       ];
     };
   };
