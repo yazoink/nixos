@@ -26,7 +26,7 @@ let
     "gpl" = "git pull";
     "php-dev" = "nix shell github:loophp/nix-shell#php82 --impure";
     "music" = "ncmpcpp";
-    "mu-dl" = "yt-dlp -x -f best --audio-format flac";
+    "mu-dl" = "yt-dlp -x --audio-format flac";
     "search" = "nix --extra-experimental-features \"nix-command flakes\" search nixpkgs";
     "diskspace" = "sudo df -h | grep -E \"sd|lv|Size\" | sort";
     "weather" = "curl wttr.in/Melbourne";
