@@ -26,5 +26,6 @@
     ./oxocarbon
     ./henna
     ./peachy
+    ./mulberry
   ];
 }
