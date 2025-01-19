@@ -22,5 +22,6 @@
     ./everblush
     ./levuaska
     ./mountain-peek
+    ./black-metal-khold
   ];
 }
