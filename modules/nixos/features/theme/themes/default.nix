@@ -25,5 +25,6 @@
     ./black-metal-khold
     ./oxocarbon
     ./henna
+    ./peachy
   ];
 }

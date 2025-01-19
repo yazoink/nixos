@@ -15,7 +15,7 @@
   myOptions = {
     userAccount.username = "gene";
     desktopTheme = {
-      name = "henna";
+      name = "peachy";
       wallpaper = ./wallpapers/flowers-downscaled.jpg;
       fonts = {
         desktop = {

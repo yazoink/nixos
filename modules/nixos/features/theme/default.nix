@@ -15,7 +15,6 @@
       libsForQt5.qtquickcontrols2
       libsForQt5.qtgraphicaleffects
       gtk-engine-murrine
-      bibata-cursors
     ];
 
     stylix = {
@@ -26,7 +25,8 @@
       };
       cursor = {
         size = lib.mkDefault 24;
-        name = lib.mkDefault "Bibata-Modern-Classic";
+        name = lib.mkDefault "macOS";
+        package = pkgs.apple-cursor;
       };
       fonts = {
         sizes = {
