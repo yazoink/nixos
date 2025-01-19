@@ -23,8 +23,8 @@
           size = 11;
         };
         terminal = {
-          name = "GeistMono Nerd Font";
-          size = 11;
+          #name = "GeistMono Nerd Font";
+          #size = 11;
         };
       };
       sddm = {
