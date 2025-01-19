@@ -24,5 +24,6 @@
     ./mountain-peek
     ./black-metal-khold
     ./oxocarbon
+    ./henna
   ];
 }
