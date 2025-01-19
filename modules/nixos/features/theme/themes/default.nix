@@ -23,5 +23,6 @@
     ./levuaska
     ./mountain-peek
     ./black-metal-khold
+    ./oxocarbon
   ];
 }
