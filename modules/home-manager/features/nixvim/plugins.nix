@@ -268,15 +268,16 @@
               markdown = ["prettierd" "prettier"];
               python = ["black"];
               lua = [ "stylua" ];
-              nix = [ "nixfmt" ];
+              nix = [ "alejandra" ];
               bash = [ "shfmt" "beautysh"];
-              sh = [ "shfmt" "beautysh"];
+              sh = [ "shellcheck" "beautysh"];
               yaml = ["yamllint" "yamlfmt"];
               c = ["clang-format"];
               json = ["fixjson"];
               php = ["phpcbf" "php_cs_fixer"];
               rust = ["rustfmt"];
               zig = ["zigfmt"];
+              latex = ["llf"];
             };
           };
         };
