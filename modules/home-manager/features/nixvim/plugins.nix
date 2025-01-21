@@ -72,6 +72,7 @@
             };
             basics = {};
             hipatterns = {};
+            clue = {};
           };
         };
 
@@ -251,44 +252,76 @@
 
         indent-blankline.enable = true;
 
-        none-ls = {
+        conform = {
           enable = true;
-          sources = {
-            code_actions = {
-              statix.enable = true;
-              gitsigns.enable = true;
+          settings = {
+            format_on_save = {
+              lspFallback = true;
+              timeoutMs = 500;
             };
-            diagnostics = {
-              statix.enable = true;
-              deadnix.enable = true;
-              #pylint.enable = true; this thing is just annoying
-              checkstyle.enable = true;
-            };
-            formatting = {
-              alejandra.enable = true;
-              stylua.enable = true;
-              shfmt.enable = true;
-              nixpkgs_fmt.enable = true;
-              google_java_format.enable = false;
-              prettier = {
-                enable = true;
-                disableTsServerFormatter = true;
-              };
-              black = {
-                enable = true;
-                settings = ''
-                  {
-                    extra_args = { "--fast" },
-                  }
-                '';
-              };
-            };
-            completion = {
-              luasnip.enable = true;
-              spell.enable = true;
+            notify_on_error = true;
+            formatters_by_ft = {
+              html = ["prettierd" "prettier"];
+              css = ["prettierd" "prettier"];
+              javascript = ["prettierd" "prettier"];
+              typescript = ["prettierd" "prettier"];
+              markdown = ["prettierd" "prettier"];
+              python = ["black"];
+              lua = [ "stylua" ];
+              nix = [ "nixfmt" ];
+              bash = [ "shfmt" "beautysh"];
+              sh = [ "shfmt" "beautysh"];
+              yaml = ["yamllint" "yamlfmt"];
+              c = ["clang-format"];
+              json = ["fixjson"];
+              php = ["phpcbf" "php_cs_fixer"];
+              rust = ["rustfmt"];
+              zig = ["zigfmt"];
             };
           };
         };
+
+        # none-ls = {
+        #   enable = true;
+        #   enableLspFormat = true;
+        #   sources = {
+        #     code_actions = {
+        #       statix.enable = true;
+        #       gitsigns.enable = true;
+        #     };
+        #     diagnostics = {
+        #       statix.enable = true;
+        #       deadnix.enable = true;
+        #       #pylint.enable = true; this thing is just annoying
+        #       checkstyle.enable = true;
+        #       yamllint.enable = true;
+        #     };
+        #     formatting = {
+        #       alejandra.enable = true;
+        #       stylua.enable = true;
+        #       shfmt.enable = true;
+        #       nixpkgs_fmt.enable = true;
+        #       google_java_format.enable = false;
+        #       yamlfmt.enable = true;
+        #       prettier = {
+        #         enable = true;
+        #         disableTsServerFormatter = true;
+        #       };
+        #       black = {
+        #         enable = true;
+        #         settings = ''
+        #           {
+        #             extra_args = { "--fast" },
+        #           }
+        #         '';
+        #       };
+        #     };
+        #     completion = {
+        #       luasnip.enable = true;
+        #       spell.enable = true;
+        #     };
+        #   };
+        # };
 
         luasnip.enable = true;
 
@@ -328,15 +361,17 @@
             };
 
             mapping = {
-              "<C-Down>" = "cmp.mapping(cmp.mapping.select_next_item(), {'i', 's'})";
-              "<Down>" = "cmp.mapping.select_next_item()";
-              "<Up>" = "cmp.mapping.select_prev_item()";
+              "<C-Tab>" = "cmp.mapping(cmp.mapping.select_next_item(), {'i', 's'})";
+              "<C-j>" = "cmp.mapping.select_next_item()";
+              "<C-k>" = "cmp.mapping.select_prev_item()";
+              "<C-Down>" = "cmp.mapping.select_next_item()";
+              "<C-Up>" = "cmp.mapping.select_prev_item()";
               "<C-e>" = "cmp.mapping.abort()";
               #"<C-b>" = "cmp.mapping.scroll_docs(-4)";
               #"<C-f>" = "cmp.mapping.scroll_docs(4)";
-              "<C-Space>" = "cmp.mapping.complete()";
-              "<Right>" = "cmp.mapping.confirm({ select = true })";
-              "<Tab>" = "cmp.mapping.confirm({ behavior = cmp.ConfirmBehavior.Replace, select = true })";
+              "<Tab>" = "cmp.mapping.complete()";
+              # "<Right>" = "cmp.mapping.confirm({ select = true })";
+              # "<Tab>" = "cmp.mapping.confirm({ behavior = cmp.ConfirmBehavior.Replace, select = true })";
             };
           };
         };
@@ -481,7 +516,8 @@
             phpactor.enable = true; # PHP
             pyright.enable = true; # Python
             marksman.enable = true; # Markdown
-            nil_ls.enable = true; # Nix
+            # nil_ls.enable = true; # Nix
+            nixd.enable = true;
             dockerls.enable = true; # Docker
             bashls.enable = true; # Bash
             clangd.enable = true; # C/C++
@@ -517,26 +553,6 @@
           };
         };
       };
-      extraPlugins = with pkgs.vimPlugins; [
-        #headlines-nvim # Should load this in at the opening of filetypes that require this, namely Markdown.
-        #nvim-web-devicons # Should load this in at Telescope/Neotree actions.
-        friendly-snippets # Should load this in at LuaSnip's initialisation, no clue how tho yet...
-        ultisnips
-        #clipboard-image-nvim
-        #vim-terminator
-      ];
-        #++ [
-        #  (pkgs.vimUtils.buildVimPlugin {
-        #    pname = "markview.nvim";
-        #    version = "0.0.1";
-        #    src = pkgs.fetchFromGitHub {
-        #      owner = "OXY2DEV";
-        #      repo = "markview.nvim";
-        #      rev = "a959d77ca7e9f05175e3ee4e582db40b338c9164";
-        #      hash = "sha256-w6yn8aNcJMLRbzaRuj3gj4x2J/20wUROLM6j39wpZek=";
-        #    };
-        #  })
-        #];
     };
   };
 }
