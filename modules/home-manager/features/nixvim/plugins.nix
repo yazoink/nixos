@@ -3,7 +3,7 @@
   config = lib.mkIf config.bundles.base.nixvim.enable {
     programs.nixvim = {
       plugins = {
-        /*lualine = {
+        lualine = {
           enable = true;
           settings = {
             alwaysDivideMiddle = true;
@@ -16,7 +16,7 @@
               theme = "auto";
             };
           };
-        };*/
+        };
 
         floaterm = {
           enable = true;
@@ -63,9 +63,15 @@
             tabline = {
               show_icons = false;
             };
-            statusline = {
-              use_icons = false;
+            comment = {
+              mappings = {
+                comment = "gc";
+                comment_line = "gcc";
+                comment_visual = "gc";
+              };
             };
+            basics = {};
+            hipatterns = {};
           };
         };
 
@@ -148,26 +154,26 @@
           };
         };
 
-        undotree = {
+        /*undotree = {
           enable = true;
           settings = {
             autoOpenDiff = true;
             focusOnToggle = true;
           };
-        };
+        };*/
 
         zig.enable = true;
 
         neoscroll.enable = true;
 
-        telescope = {
+        /*telescope = {
           enable = true;
           extensions = {
             fzf-native = {
               enable = true;
             };
           };
-        };
+        };*/
 
         illuminate = {
           enable = true;
@@ -286,10 +292,6 @@
 
         luasnip.enable = true;
 
-        cmp-emoji = {
-          enable = true;
-        };
-
         cmp = {
           enable = true;
           settings = {
@@ -333,8 +335,8 @@
               #"<C-b>" = "cmp.mapping.scroll_docs(-4)";
               #"<C-f>" = "cmp.mapping.scroll_docs(4)";
               "<C-Space>" = "cmp.mapping.complete()";
-              "<Tab>" = "cmp.mapping.confirm({ select = true })";
-              "<S-Down>" = "cmp.mapping.confirm({ behavior = cmp.ConfirmBehavior.Replace, select = true })";
+              "<Right>" = "cmp.mapping.confirm({ select = true })";
+              "<Tab>" = "cmp.mapping.confirm({ behavior = cmp.ConfirmBehavior.Replace, select = true })";
             };
           };
         };
@@ -351,9 +353,6 @@
         cmp_luasnip = {
           enable = true; # snippets
         };
-        cmp-cmdline = {
-          enable = true; # autocomplete for cmdline
-        }; 
 
         lspkind = {
           enable = true;
