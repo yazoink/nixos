@@ -1,18 +1,42 @@
-{pkgs, config, lib, ...}:
 {
+  pkgs,
+  config,
+  lib,
+  ...
+}: {
   config = lib.mkIf config.bundles.base.nixvim.enable {
+    home.packages = with pkgs; [
+      prettierd
+      black
+      stylua
+      alejandra
+      shfmt
+      beautysh
+      yamllint
+      yamlfmt
+      uncrustify
+      fixjson
+      php-cs-fixer
+      rustfmt
+    ];
     programs.nixvim = {
       plugins = {
         lualine = {
           enable = true;
           settings = {
             alwaysDivideMiddle = true;
-            ignoreFocus = [ "neo-tree" ];
+            ignoreFocus = ["neo-tree"];
             globalstatus = true;
             options = {
               icons_enabled = false;
-              section_separators = { left = ""; right = ""; };
-              component_separators = { left = ""; right = ""; };
+              section_separators = {
+                left = "";
+                right = "";
+              };
+              component_separators = {
+                left = "";
+                right = "";
+              };
               theme = "auto";
             };
           };
@@ -35,7 +59,7 @@
         gitsigns = {
           enable = true;
           settings = {
-          current_line_blame = true;
+            current_line_blame = true;
             signs = {
               add = {text = "+";};
               change = {text = "~";};
@@ -76,7 +100,8 @@
           };
         };
 
-        /*barbar.enable = true;
+        /*
+          barbar.enable = true;
         dressing = {
           enable = true;
           settings = {
@@ -113,7 +138,8 @@
               enabled = true;
             };
           };
-        };*/
+        };
+        */
 
         alpha = {
           enable = true;
@@ -155,26 +181,30 @@
           };
         };
 
-        /*undotree = {
+        /*
+          undotree = {
           enable = true;
           settings = {
             autoOpenDiff = true;
             focusOnToggle = true;
           };
-        };*/
+        };
+        */
 
         zig.enable = true;
 
         neoscroll.enable = true;
 
-        /*telescope = {
+        /*
+          telescope = {
           enable = true;
           extensions = {
             fzf-native = {
               enable = true;
             };
           };
-        };*/
+        };
+        */
 
         illuminate = {
           enable = true;
@@ -188,42 +218,46 @@
           ];
         };
 
-        /*noice = {
-          enable = true;
-          settings = {
-            notify = {
-              enabled = true;
+        /*
+        noice = {
+        enable = true;
+        settings = {
+          notify = {
+            enabled = true;
+          };
+          messages = {
+            enabled = true; # Adds a padding-bottom to neovim statusline when set to false for some reason
+          };
+          lsp = {
+            message = {
+              enabled = false;
             };
-            messages = {
-              enabled = true; # Adds a padding-bottom to neovim statusline when set to false for some reason
+            progress = {
+              enabled = false;
+              view = "mini";
             };
-            lsp = {
-              message = {
-                enabled = false;
-              };
-              progress = {
-                enabled = false;
-                view = "mini";
-              };
+          };
+          popupmenu = {
+            enabled = true;
+            backend = "nui";
+          };
+          format = {
+            filter = {
+              pattern = [":%s*%%s*s:%s*" ":%s*%%s*s!%s*" ":%s*%%s*s/%s*" "%s*s:%s*" ":%s*s!%s*" ":%s*s/%s*"];
+              icon = "";
+              lang = "regex";
             };
-            popupmenu = {
-              enabled = true;
-              backend = "nui";
-            };
-            format = {
-              filter = {
-                pattern = [":%s*%%s*s:%s*" ":%s*%%s*s!%s*" ":%s*%%s*s/%s*" "%s*s:%s*" ":%s*s!%s*" ":%s*s/%s*"];
-                icon = "";
-                lang = "regex";
-              };
-              replace = {*/
-                #pattern = [":%s*%%s*s:%w*:%s*" ":%s*%%s*s!%w*!%s*" ":%s*%%s*s/%w*/%s*" "%s*s:%w*:%s*" ":%s*s!%w*!%s*" ":%s*s/%w*/%s*"];
-                /*icon = "󱞪";
+            replace = {
+        */
+        #pattern = [":%s*%%s*s:%w*:%s*" ":%s*%%s*s!%w*!%s*" ":%s*%%s*s/%w*/%s*" "%s*s:%w*:%s*" ":%s*s!%w*!%s*" ":%s*s/%w*/%s*"];
+        /*
+                  icon = "󱞪";
                 lang = "regex";
               };
             };
           };
-        };*/
+        };
+        */
 
         #web-devicons.enable = true;
         #barbecue.enable = true;
@@ -267,17 +301,17 @@
               typescript = ["prettierd" "prettier"];
               markdown = ["prettierd" "prettier"];
               python = ["black"];
-              lua = [ "stylua" ];
-              nix = [ "alejandra" ];
-              bash = [ "shfmt" "beautysh"];
-              sh = [ "shellcheck" "beautysh"];
+              lua = ["stylua"];
+              nix = ["alejandra"];
+              bash = ["shfmt" "beautysh"];
+              sh = ["shellcheck" "beautysh"];
               yaml = ["yamllint" "yamlfmt"];
-              c = ["clang-format"];
+              c = ["uncrustify"];
               json = ["fixjson"];
-              php = ["phpcbf" "php_cs_fixer"];
+              php = ["php_cs_fixer"];
               rust = ["rustfmt"];
-              zig = ["zigfmt"];
-              latex = ["llf"];
+              # zig = ["zigfmt"];
+              # latex = ["llf"];
             };
           };
         };
@@ -330,16 +364,16 @@
           enable = true;
           settings = {
             autoEnableSources = true;
-            experimental = { ghost_text = true; };
+            experimental = {ghost_text = true;};
             performance = {
               debounce = 60;
               fetchingTimeout = 200;
               maxViewEntries = 30;
             };
-            snippet = { expand = "luasnip"; };
-            formatting = { fields = [ "kind" "abbr" "menu" ]; };
+            snippet = {expand = "luasnip";};
+            formatting = {fields = ["kind" "abbr" "menu"];};
             sources = [
-              { name = "nvim_lsp"; }
+              {name = "nvim_lsp";}
               #{ name = "emoji"; }
               {
                 name = "buffer"; # text within current buffer
@@ -357,8 +391,8 @@
             ];
 
             window = {
-              completion = { border = "solid"; };
-              documentation = { border = "solid"; };
+              completion = {border = "solid";};
+              documentation = {border = "solid";};
             };
 
             mapping = {
@@ -401,14 +435,17 @@
           };
         };
 
-        /*nvim-autopairs = {
+        /*
+          nvim-autopairs = {
           enable = true;
           settings = {
             check_ts = true;
           };
-        };*/
+        };
+        */
 
-        /*fidget = {
+        /*
+          fidget = {
           enable = true;
           logger = {
             level = "warn"; # “off”, “error”, “warn”, “info”, “debug”, “trace”
@@ -504,7 +541,8 @@
                 "Comment";
             };
           };
-        }; */
+        };
+        */
 
         lsp = {
           enable = true;
@@ -530,17 +568,19 @@
             ltex = {
               enable = true;
               settings = {
-                enabled = [ "html" "latex" "markdown" "text" "tex" "gitcommit" ];
+                enabled = ["html" "latex" "markdown" "text" "tex" "gitcommit"];
                 completionEnabled = true;
                 language = "en-US";
               };
             };
-            gopls = { # Golang
+            gopls = {
+              # Golang
               enable = true;
               autostart = true;
             };
 
-            lua_ls = { # Lua
+            lua_ls = {
+              # Lua
               enable = true;
               settings.telemetry.enable = false;
             };
