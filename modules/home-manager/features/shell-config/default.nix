@@ -112,7 +112,7 @@ in
         enable = true;
         enableZshIntegration = true;
         enableBashIntegration = false;
-        icons = "auto";
+        icons = "never";
         git = true;
       };
     };

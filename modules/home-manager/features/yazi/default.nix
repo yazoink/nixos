@@ -18,6 +18,9 @@
           linemode = "size";
           show_symlink = true;
         };
+        icon = {
+          rules = [];
+        };
       };
     };
   };

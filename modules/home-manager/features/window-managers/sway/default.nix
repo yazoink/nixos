@@ -84,19 +84,64 @@
         bindgesture swipe:right workspace next
         bindgesture swipe:left workspace prev
 
-        for_window [title="^File Upload.*"] floating enable
-        for_window [title="^Open File.*"] floating enable
-        for_window [title="^Open Folder.*"] floating enable
-        for_window [title="^Save As.*"] floating enable
-        for_window [title="^Select a File.*"] floating enable
-        for_window [title="^Picture-in-Picture$"] floating enable, sticky enable
-        for_window [title="^galculator$"] floating enable
-        for_window [title="^Empty Trash$"] floating enable
-        for_window [title="^File Manager Preferences$"] floating enable
-        for_window [class="^org.kde.kruler$"] floating enable
-        for_window [instance="Browser" window_role="About"] floating enable
-        for_window [title = "About Mozilla Firefox"] floating enable
-        for_window [window_role = "About"] floating enable
+        for_window {
+          [title="^File Upload.*"] floating enable
+          [title="^Open File.*"] floating enable
+          [title="^Open Folder.*"] floating enable
+          [title="^Save As.*"] floating enable
+          [title="^Select a File.*"] floating enable
+          [title="^Picture-in-Picture$"] floating enable, sticky enable
+          [app_id="firefox" title="Picture-in-Picture"] floating enable, sticky enable
+          [title="^galculator$"] floating enable
+          [app_id="galculator"] floating enable
+          [title="^Empty Trash$"] floating enable
+          [title="^File Manager Preferences$"] floating enable
+          [class="^org.kde.kruler$"] floating enable
+          [instance="Browser" window_role="About"] floating enable
+          [title = "About Mozilla Firefox"] floating enable
+          [window_role = "About"] floating enable
+          [window_role="pop-up"] floating enable
+          [window_role="bubble"] floating enable
+          [window_role="dialog"] floating enable
+          [window_type="dialog"] floating enable
+          [app_id="floating"] floating enable
+          [title=".* is sharing your screen."] floating enable
+          [app_id="firefox" title="Firefox — Sharing Indicator"] floating enable
+          [app_id="zenity"] floating enable
+          [app_id="^chrome-.*__.*$"] shortcuts_inhibitor disable
+        }
+
+        set $handle_dialog floating enable, move container to workspace current
+        for_window {
+            [app_id="soffice" title="Document Recovery$"] $handle_dialog
+            [app_id="chromium" title="Open File"] $handle_dialog
+            [app_id="firefox" title="^Enter name of file to save to…$"] $handle_dialog
+            [app_id="firefox" title="^Open File$"] $handle_dialog
+            [app_id="firefox" title="^Save As$"] $handle_dialog
+            [app_id="firefox" title="^Save Image$"] $handle_dialog
+            [app_id="firefox" title="File Upload"] $handle_dialog
+            [app_id="firefox" title="^Firefox - Choose User Profile$"] $handle_dialog
+            [app_id="firefox" title="^Developer Tools — "] $handle_dialog
+            [app_id="firefox" title="^Opening "] $handle_dialog
+            [app_id="firefox" title="^Extension: \(MetaMask\) - MetaMask Notification — Mozilla Firefox$"] $handle_dialog
+            [app_id="Chromium" title="^DevTools - "] $handle_dialog
+            [app_id="chromium-bin-browser" title="^Save File$"] $handle_dialog
+            [app_id="telegram-desktop" title="^Choose Files$"] $handle_dialog
+            [app_id="firefox" title="^Choose Application$"] $handle_dialog
+            [title="(?:Open|Save) (?:File|Folder|As)"] $handle_dialog
+            [app_id="pop-up,task_dialog,About"] $handle_dialog;
+            [app_id="zenity"] $handle_dialog
+            [window_role="pop-up,task_dialog,About"] $handle_dialog;
+            [window_type="dialog"] $handle_dialog;
+            [window_type="utility"] $handle_dialog;
+            [window_type="toolbar"] $handle_dialog;
+            [window_type="splash"] $handle_dialog;
+            [window_type="menu"] $handle_dialog;
+            [window_type="dropdown_menu"] $handle_dialog;
+            [window_type="popup_menu"] $handle_dialog;
+            [window_type="tooltip"] $handle_dialog;
+            [window_type="notification"] $handle_dialog;
+        }
 
         seat * xcursor_theme "${config.stylix.cursor.name}" ${builtins.toString config.stylix.cursor.size}
       '' + (if (osConfig.myOptions.defaultApps.terminal.command == "footclient") 
