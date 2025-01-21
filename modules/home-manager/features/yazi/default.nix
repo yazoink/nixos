@@ -12,7 +12,7 @@
       enableZshIntegration = true;
       shellWrapperName = "y";
       plugins = {
-        full-border = ./full-border.lua;
+        fullBorder = ./full-border;
       };
       settings = {
         manager = {
