@@ -12,8 +12,11 @@
       enableZshIntegration = true;
       shellWrapperName = "y";
       plugins = {
-        fullBorder = ./full-border;
+        full-border = ./full-border;
       };
+      initLua = ''
+        require("full-border"):setup()
+      '';
       settings = {
         manager = {
           ratio = [1 2 2];
