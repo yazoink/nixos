@@ -94,7 +94,7 @@
                 comment_visual = "gc";
               };
             };
-            basics = {};
+            # basics = {};
             hipatterns = {};
             clue = {};
           };
@@ -404,8 +404,8 @@
               "<C-e>" = "cmp.mapping.abort()";
               #"<C-b>" = "cmp.mapping.scroll_docs(-4)";
               #"<C-f>" = "cmp.mapping.scroll_docs(4)";
-              "<C-Space>" = "cmp.mapping.complete()";
-              # "<Right>" = "cmp.mapping.confirm({ select = true })";
+              # "<C-Space>" = "cmp.mapping.complete()";
+              "<C-Space>" = "cmp.mapping.confirm({ select = true })";
               # "<Tab>" = "cmp.mapping.confirm({ behavior = cmp.ConfirmBehavior.Replace, select = true })";
             };
           };

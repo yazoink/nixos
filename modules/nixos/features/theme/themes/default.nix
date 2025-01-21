@@ -27,5 +27,9 @@
     ./henna
     ./peachy
     ./mulberry
+    ./paradise
+    ./jellybeans
+    ./far
+    ./decay
   ];
 }
