@@ -195,8 +195,8 @@
           };
         };
 
-        web-devicons.enable = true;
-        barbecue.enable = true;
+        #web-devicons.enable = true;
+        #barbecue.enable = true;
         scrollview.enable = true;
 
         treesitter = {
@@ -303,15 +303,15 @@
             };
 
             mapping = {
-              "<Tab>" = "cmp.mapping(cmp.mapping.select_next_item(), {'i', 's'})";
-              "<C-j>" = "cmp.mapping.select_next_item()";
-              "<C-k>" = "cmp.mapping.select_prev_item()";
-              "<C-e>" = "cmp.mapping.abort()";
+              "<C-Down>" = "cmp.mapping(cmp.mapping.select_next_item(), {'i', 's'})";
+              "<Down>" = "cmp.mapping.select_next_item()";
+              "<Up>" = "cmp.mapping.select_prev_item()";
+              "<esc>" = "cmp.mapping.abort()";
               "<C-b>" = "cmp.mapping.scroll_docs(-4)";
               "<C-f>" = "cmp.mapping.scroll_docs(4)";
               "<C-Space>" = "cmp.mapping.complete()";
-              "<CR>" = "cmp.mapping.confirm({ select = true })";
-              "<S-CR>" = "cmp.mapping.confirm({ behavior = cmp.ConfirmBehavior.Replace, select = true })";
+              "<Tab>" = "cmp.mapping.confirm({ select = true })";
+              "<S-Down>" = "cmp.mapping.confirm({ behavior = cmp.ConfirmBehavior.Replace, select = true })";
             };
           };
         };
@@ -497,7 +497,7 @@
       };
       extraPlugins = with pkgs.vimPlugins; [
         #headlines-nvim # Should load this in at the opening of filetypes that require this, namely Markdown.
-        nvim-web-devicons # Should load this in at Telescope/Neotree actions.
+        #nvim-web-devicons # Should load this in at Telescope/Neotree actions.
         friendly-snippets # Should load this in at LuaSnip's initialisation, no clue how tho yet...
         ultisnips
         #clipboard-image-nvim
