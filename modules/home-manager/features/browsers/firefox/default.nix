@@ -15,14 +15,14 @@
       };
       packages = with pkgs; [pywalfox-native];
       file = {
-        ".cache/wal/colors.json".text = with config.stylix.base16Scheme;  builtins.trace "remember to run pywalfox install" ''
+        ".cache/wal/colors.json".text = with config.stylix.base16Scheme;  builtins.trace "remember to run pywalfox install and set background light to 1 and background extra to 2" ''
           {
             "wallpaper": "${config.stylix.image}",
             "alpha": "100",
             "colors": {
               "color0": "#${base00}",
-              "color1": "",
-              "color2": "",
+              "color1": "#${base01}",
+              "color2": "#${base02}",
               "color3": "",
               "color4": "",
               "color5": "",
@@ -35,9 +35,7 @@
               "color12": "",
               "color13": "#${base05}",
               "color14": "",
-              "color15": "#${base05}",
-              "color16": "#${base01}",
-              "color18": "#${base01}"
+              "color15": "#${base05}"
             }
           }
         '';
