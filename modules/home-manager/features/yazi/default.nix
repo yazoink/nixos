@@ -31,6 +31,7 @@
           sort_by = "natural";
           linemode = "size";
           show_symlink = true;
+          show_icons = false;
         };
         icon = {
           rules = [];
