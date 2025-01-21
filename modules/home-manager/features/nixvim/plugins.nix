@@ -3,7 +3,7 @@
   config = lib.mkIf config.bundles.base.nixvim.enable {
     programs.nixvim = {
       plugins = {
-        lualine = {
+        /*lualine = {
           enable = true;
           settings = {
             alwaysDivideMiddle = true;
@@ -16,7 +16,7 @@
               theme = "auto";
             };
           };
-        };
+        };*/
 
         floaterm = {
           enable = true;
@@ -51,7 +51,7 @@
           mockDevIcons = true;
           modules = {
             icons = {
-              style = "ascii";
+              style = "glyph";
             };
             pairs = {
               modes = {
@@ -62,6 +62,9 @@
             };
             tabline = {
               show_icons = false;
+            };
+            statusline = {
+              use_icons = false;
             };
           };
         };
