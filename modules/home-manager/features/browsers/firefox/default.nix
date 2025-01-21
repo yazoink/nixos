@@ -23,7 +23,7 @@
               "color0": "#${base00}",
               "color1": "#${base01}",
               "color2": "#${base02}",
-              "color3": "${config.stylix.base16Scheme.${osConfig.desktopTheme.base16Accent}}",
+              "color3": "#${config.stylix.base16Scheme.${osConfig.desktopTheme.base16Accent}}",
               "color4": "",
               "color5": "",
               "color6": "",
