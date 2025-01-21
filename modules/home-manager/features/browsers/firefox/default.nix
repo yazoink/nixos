@@ -15,7 +15,7 @@
       };
       packages = with pkgs; [pywalfox-native];
       file = {
-        ".cache/wal/colors.json".text = with config.stylix.base16Scheme;  builtins.trace "remember to run pywalfox install and set background light to 1 and background extra to 2" ''
+        ".cache/wal/colors.json".text = with config.stylix.base16Scheme;  builtins.trace "remember to run pywalfox install and set background light to 1, background extra to 2 and accent secondary to 3" ''
           {
             "wallpaper": "${config.stylix.image}",
             "alpha": "100",
@@ -23,7 +23,7 @@
               "color0": "#${base00}",
               "color1": "#${base01}",
               "color2": "#${base02}",
-              "color3": "",
+              "color3": "${config.stylix.base16Scheme.${osConfig.desktopTheme.base16Accent}}",
               "color4": "",
               "color5": "",
               "color6": "",
