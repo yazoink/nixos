@@ -1,31 +1,36 @@
-{config, lib, ...}:
 {
+  config,
+  lib,
+  ...
+}: {
   config = lib.mkIf config.bundles.base.nixvim.enable {
     programs.nixvim = {
       globals.mapleader = ",";
 
       keymaps = [
-        {
-          mode = "n";
-          key = "<leader>u";
-          action = "<cmd>UndotreeToggle<CR>";
-          options = {
-            desc = "Undotree";
-          };
-        }
-
+        # {
+        #   mode = "n";
+        #   key = "<leader>u";
+        #   action = "<cmd>UndotreeToggle<CR>";
+        #   options = {
+        #     desc = "Undotree";
+        #   };
+        # }
+        #
         {
           action = "<Cmd>Neotree toggle<CR>";
           key = "<leader>e";
         }
-        /*{
+        /*
+          {
           key = "<Tab>";
           action = "<Cmd>BufferNext<CR>";
         }
         {
           key = "<S-Tab>";
           action = "<cmd>BufferLast<CR>";
-        }*/
+        }
+        */
         {
           key = "<Tab>";
           action = "<Cmd>tabNext<CR>";
@@ -39,30 +44,30 @@
           key = "<esc>";
           action = "<Cmd>noh<CR>";
         }
-        {
-          action = "<cmd>Telescope live_grep<CR>";
-          key = "<leader>fw";
-        }
-        {
-          action = "<cmd>Telescope find_files<CR>";
-          key = "<leader>ff";
-        }
-        {
-          action = "<cmd>Telescope git_commits<CR>";
-          key = "<leader>fg";
-        }
-        {
-          action = "<cmd>Telescope oldfiles<CR>";
-          key = "<leader>fh";
-        }
-        {
-          action = "<cmd>Telescope colorscheme<CR>";
-          key = "<leader>ch";
-        }
-        {
-          action = "<cmd>Telescope man_pages<CR>";
-          key = "<leader>fm";
-        }
+        # {
+        #   action = "<cmd>Telescope live_grep<CR>";
+        #   key = "<leader>fw";
+        # }
+        # {
+        #   action = "<cmd>Telescope find_files<CR>";
+        #   key = "<leader>ff";
+        # }
+        # {
+        #   action = "<cmd>Telescope git_commits<CR>";
+        #   key = "<leader>fg";
+        # }
+        # {
+        #   action = "<cmd>Telescope oldfiles<CR>";
+        #   key = "<leader>fh";
+        # }
+        # {
+        #   action = "<cmd>Telescope colorscheme<CR>";
+        #   key = "<leader>ch";
+        # }
+        # {
+        #   action = "<cmd>Telescope man_pages<CR>";
+        #   key = "<leader>fm";
+        # }
         {
           mode = "n";
           key = "<C-h>";
