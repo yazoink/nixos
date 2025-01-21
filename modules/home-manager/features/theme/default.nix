@@ -7,6 +7,25 @@ let
   };
   kvantumGenerator = ./kvantum-generator/generate_kvantum.py;
   oneUiIcons = pkgs.callPackage ./oneui4-icons.nix {};
+  gtkCss = with config.stylix.base16Scheme; ''
+    @define-color accent_color #${config.stylix.base16Scheme.${osConfig.desktopTheme.base16Accent}};
+    @define-color accent_fg_color #${config.stylix.base16Scheme.${osConfig.desktopTheme.base16Accent}};
+    @define-color accent_bg_color #${config.stylix.base16Scheme.${osConfig.desktopTheme.base16Accent}};
+    @define-color window_bg_color #${base00};
+    @define-color window_fg_color #${base05};
+    @define-color headerbar_bg_color #${base00};
+    @define-color headerbar_fg_color #${base05};
+    @define-color popover_bg_color #${base00};
+    @define-color popover_fg_color #${base05};
+    @define-color view_bg_color #${base01};
+    @define-color view_fg_color #${base05};
+    @define-color card_bg_color #${base01};
+    @define-color card_fg_color #${base05}
+    @define-color sidebar_bg_color @window_bg_color;
+    @define-color sidebar_fg_color @window_fg_color;
+    @define-color sidebar_border_color @window_bg_color;
+    @define-color sidebar_backdrop_color @window_bg_color;
+  '';
 in
 {
   imports = [./themes];
@@ -30,7 +49,8 @@ in
       };*/
       targets = {
         waybar.enable = false;
-        gtk.extraCss = with config.stylix.base16Scheme; ''
+        gtk.enable = false;
+        /*gtk.extraCss = with config.stylix.base16Scheme; ''
           @define-color headerbar_bg_color #${base00};
           @define-color dialog_bg_color #${base00};
           @define-color popover_bg_color #${base00};
@@ -38,9 +58,7 @@ in
           @define-color accent_color #${config.stylix.base16Scheme.${osConfig.desktopTheme.base16Accent}};
           @define-color accent_bg_color #${config.stylix.base16Scheme.${osConfig.desktopTheme.base16Accent}};
 
-           /* No (default) title bar on wayland */
           headerbar.default-decoration {
-            /* You may need to tweak these values depending on your GTK theme */
             border-radius: 0;
             border: 0;
             box-shadow: none;
@@ -57,13 +75,12 @@ in
             border-radius: 0;
           }
 
-          /* rm -rf window shadows */
-          window.csd,             /* gtk4? */
-          window.csd decoration { /* gtk3 */
+          window.csd,
+          window.csd decoration {
             border-radius: 0;
             box-shadow: none;
           }
-        '';
+        '';*/
       };
     };
 
@@ -133,11 +150,17 @@ in
 
     gtk = {
       enable = true;
+      theme = {
+        name = "adw-gtk3";
+        package = pkgs.adw-gtk3;
+      };
       #iconTheme.name = lib.mkDefault "OneUI-dark";
       iconTheme = {
         name = lib.mkDefault "Numix";
         package = pkgs.numix-icon-theme;
       };
+      gtk3.extraCss = gtkCss;
+      gtk4.extraCss = gtkCss;
       gtk2 = {
         extraConfig = builtins.readFile gtkrcFile;
       };
