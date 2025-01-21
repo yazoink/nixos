@@ -15,7 +15,7 @@
       };
       Service = {
         Type = "oneshot";
-        ExecStart = "${pkgs.pywalfox-native}/bin/pywalfox install; ${pkgs.pywalfox-native}/bin/pywalfox update";
+        ExecStart = "${pkgs.pywalfox-native}/bin/pywalfox --browser firefox install; ${pkgs.pywalfox-native}/bin/pywalfox --browser firefox update";
       };
       Install = {
         WantedBy = ["default.target"];
