@@ -3,7 +3,7 @@ let
   mpdris2-rs = pkgs.callPackage ./mpdris2-rs.nix {};
 in
 {
-  config = lib.mkIf (osConfig.myOptions.bundles.desktopFull.enable && osConfig.bundles.desktopFull.mpd.enable) {
+  config = lib.mkIf osConfig.bundles.desktopFull.mpd.enable {
     home.packages = [mpdris2-rs];
     systemd.user.services.mpdris-rs = {
       Unit = {
