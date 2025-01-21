@@ -9,25 +9,13 @@
   ];
 
   config = lib.mkIf (osConfig.myOptions.bundles.desktopBase.enable && osConfig.myOptions.defaultApps.webBrowser.command == "firefox") {
-    systemd.user.services.pywalfox-install = {
-      Unit = {
-        Description = "Install Pywalfox theme";
-      };
-      Service = {
-        Type = "oneshot";
-        ExecStart = "${pkgs.pywalfox-native}/bin/pywalfox --browser firefox install; ${pkgs.pywalfox-native}/bin/pywalfox --browser firefox update";
-      };
-      Install = {
-        WantedBy = ["default.target"];
-      };
-    };
     home = {
       sessionVariables = {
         MOZ_USE_XINPUT2 = 1;
       };
       packages = with pkgs; [pywalfox-native];
       file = {
-        ".cache/wal/colors.json".text = with config.stylix.base16Scheme; ''
+        ".cache/wal/colors.json".text = with config.stylix.base16Scheme;  builtins.trace "remember to run pywalfox install" ''
           {
             "wallpaper": "${config.stylix.image}",
             "alpha": "100",
@@ -47,7 +35,9 @@
               "color12": "",
               "color13": "#${base05}",
               "color14": "",
-              "color15": "#${base05}"
+              "color15": "#${base05}",
+              "color16": "#${base01}",
+              "color18": "#${base01}"
             }
           }
         '';
