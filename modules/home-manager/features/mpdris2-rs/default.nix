@@ -4,8 +4,8 @@ let
 in
 {
   config = lib.mkIf osConfig.bundles.desktopFull.mpd.enable {
-    home.packages = [mpdris2-rs];
-    systemd.user.services.mpdris-rs = {
+    home.packages = builtins.trace "remember to check for mpdris2-rs updates" [mpdris2-rs];
+    systemd.user.services.mpdris2-rs = {
       Unit = {
         Description = "Music Player Daemon D-Bus Bridge";
         Wants = ["mpd.service"];
