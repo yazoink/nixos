@@ -16,8 +16,8 @@
       yamlfmt
       uncrustify
       fixjson
-      php-cs-fixer
       rustfmt
+      php84Packages.php-cs-fixer
     ];
     programs.nixvim = {
       plugins = {
