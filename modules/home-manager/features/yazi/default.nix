@@ -16,11 +16,13 @@
         yaziline = ./yaziline;
       };
       initLua = ''
-        require("full-border"):setup()
+        require("full-border"):setup {
+          type = ui.Border.PLAIN
+        }
 
         require("yaziline"):setup {
           separator_style = "liney",
-          color = "#${config.stylix.base16Scheme.${osConfig.desktopTheme.base16Accent}}"
+          color = "#${config.stylix.base16Scheme.base0D}"
         }
       '';
       settings = {
