@@ -1,8 +1,8 @@
 # depends on theme module for theming
 {config, lib, osConfig, ...}:
 let
-  fontSize = osConfig.myOptions.desktopTheme.fonts.desktop.size + 4;
-  #fontSize = 15;
+  #fontSize = osConfig.myOptions.desktopTheme.fonts.desktop.size + 4;
+  fontSize = osConfig.myOptions.desktopTheme.fonts.desktop.size;
 in
 {
   options = {
@@ -134,7 +134,7 @@ in
         * {
           font-family: "${config.stylix.fonts.sansSerif.name}", "Font Awesome 6 Free";
           font-weight: bold;
-          font-size: ${builtins.toString fontSize}px;
+          font-size: ${builtins.toString fontSize}pt;
           padding: 0px;
           margin: 0px;
         }

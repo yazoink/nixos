@@ -65,6 +65,8 @@
         #layer_effects "gtk-layer-shell" shadows enable;
         #layer_effects "notifications" shadows enable;
 
+        output * scale 1
+
         bindsym --whole-window {
           ${config.wayland.windowManager.sway.config.modifier}+button4 workspace prev
           ${config.wayland.windowManager.sway.config.modifier}+button5 workspace next
