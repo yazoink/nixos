@@ -10,6 +10,7 @@
             ignoreFocus = [ "neo-tree" ];
             globalstatus = true;
             options = {
+              icons_enabled = false;
               section_separators = { left = ""; right = ""; };
               component_separators = { left = ""; right = ""; };
               theme = "auto";
