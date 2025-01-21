@@ -1,4 +1,4 @@
-{config, lib, ...}:
+{config, lib, osConfig, ...}:
 {
   options = {
     bundles.base.yazi.enable = lib.mkOption {
@@ -13,9 +13,15 @@
       shellWrapperName = "y";
       plugins = {
         full-border = ./full-border;
+        yaziline = ./yaziline;
       };
       initLua = ''
         require("full-border"):setup()
+
+        require("yaziline"):setup {
+          separator_style = "liney",
+          color = "#${config.stylix.base16Scheme.${osConfig.desktopTheme.base16Accent}}"
+        }
       '';
       settings = {
         manager = {
