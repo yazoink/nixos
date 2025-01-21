@@ -48,7 +48,7 @@
 
         mini = {
           enable = true;
-          mockDevIcons.enable = true;
+          mockDevIcons = true;
           modules = {
             icons = {
               style = "ascii";
