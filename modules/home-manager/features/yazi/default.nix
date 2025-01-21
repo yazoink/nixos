@@ -11,6 +11,9 @@
       enable = true;
       enableZshIntegration = true;
       shellWrapperName = "y";
+      plugins = {
+        full-border = ./full-border.lua;
+      };
       settings = {
         manager = {
           ratio = [1 2 2];
