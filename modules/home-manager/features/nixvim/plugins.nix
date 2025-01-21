@@ -53,6 +53,16 @@
             icons = {
               style = "ascii";
             };
+            pairs = {
+              modes = {
+                insert = true;
+                command = false;
+                terminal = false;
+              };
+            };
+            tabline = {
+              show_icons = false;
+            };
           };
         };
 
@@ -168,7 +178,7 @@
           ];
         };
 
-        noice = {
+        /*noice = {
           enable = true;
           settings = {
             notify = {
@@ -196,14 +206,14 @@
                 icon = "";
                 lang = "regex";
               };
-              replace = {
-                pattern = [":%s*%%s*s:%w*:%s*" ":%s*%%s*s!%w*!%s*" ":%s*%%s*s/%w*/%s*" "%s*s:%w*:%s*" ":%s*s!%w*!%s*" ":%s*s/%w*/%s*"];
-                icon = "󱞪";
+              replace = {*/
+                #pattern = [":%s*%%s*s:%w*:%s*" ":%s*%%s*s!%w*!%s*" ":%s*%%s*s/%w*/%s*" "%s*s:%w*:%s*" ":%s*s!%w*!%s*" ":%s*s/%w*/%s*"];
+                /*icon = "󱞪";
                 lang = "regex";
               };
             };
           };
-        };
+        };*/
 
         #web-devicons.enable = true;
         #barbecue.enable = true;
@@ -316,9 +326,9 @@
               "<C-Down>" = "cmp.mapping(cmp.mapping.select_next_item(), {'i', 's'})";
               "<Down>" = "cmp.mapping.select_next_item()";
               "<Up>" = "cmp.mapping.select_prev_item()";
-              "<esc>" = "cmp.mapping.abort()";
-              "<C-b>" = "cmp.mapping.scroll_docs(-4)";
-              "<C-f>" = "cmp.mapping.scroll_docs(4)";
+              "<C-e>" = "cmp.mapping.abort()";
+              #"<C-b>" = "cmp.mapping.scroll_docs(-4)";
+              #"<C-f>" = "cmp.mapping.scroll_docs(4)";
               "<C-Space>" = "cmp.mapping.complete()";
               "<Tab>" = "cmp.mapping.confirm({ select = true })";
               "<S-Down>" = "cmp.mapping.confirm({ behavior = cmp.ConfirmBehavior.Replace, select = true })";
@@ -353,12 +363,12 @@
           };
         };
 
-        nvim-autopairs = {
+        /*nvim-autopairs = {
           enable = true;
           settings = {
             check_ts = true;
           };
-        };
+        };*/
 
         /*fidget = {
           enable = true;
