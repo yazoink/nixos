@@ -59,6 +59,7 @@ in
           "QT_WAYLAND_DISABLE_WINDOWDECORATION,1"
           "QT_QPA_PLATFORM,wayland;xcb"
           "QT_SCALE_FACTOR,1"
+          "QT_ENABLE_HIGHDPI_SCALING,0"
           "_JAVA_AWT_WM_NONREPARENTING,1"
         ];
         exec-once = [

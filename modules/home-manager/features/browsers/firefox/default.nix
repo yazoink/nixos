@@ -15,7 +15,7 @@
       };
       packages = with pkgs; [pywalfox-native];
       file = {
-        ".cache/wal/colors.json".text = with config.stylix.base16Scheme;  builtins.trace "remember to run pywalfox install and set background light to 1, background extra to 2 and accent secondary to 3" ''
+        ".cache/wal/colors.json".text = with config.stylix.base16Scheme;  builtins.trace "remember to run pywalfox install and set background light to 1, background extra to 2 and accent secondary to 3. Under palette template, set toolbar field highlight and popup highlight to accent secondary" ''
           {
             "wallpaper": "${config.stylix.image}",
             "alpha": "100",

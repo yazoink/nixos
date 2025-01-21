@@ -35,6 +35,7 @@
       QT_WAYLAND_DISABLE_WINDOWDECORATION = 1;
       QT_QPA_PLATFORM = "wayland";
       QT_SCALE_FACTOR = 1;
+      QT_ENABLE_HIGHDPI_SCALING = 0;
       XCURSOR_SIZE = config.stylix.cursor.size;
       _JAVA_AWT_WM_NONREPARENTING = 1;
     };
