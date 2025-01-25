@@ -35,10 +35,27 @@
           font-size: ${builtins.toString config.stylix.fonts.sizes.popups}pt;
         }
 
+        window {
+          background: transparent;
+        }
+
         #outer-box {
           border: 2px solid #${base01};
           border-radius: 15px;
           padding: 15px;
+        }
+
+        #input {
+          margin-bottom: 10px;
+          border-radius: 10px;
+        }
+
+        #inner-box {
+          border-radius: 15px;
+        }
+
+        .entry {
+          border-radius: 10px;
         }
       '';
     };
