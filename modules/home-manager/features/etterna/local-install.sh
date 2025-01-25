@@ -26,27 +26,33 @@ else
     /run/current-system/sw/bin/cp -r "$1/Etterna/BGAnimations" "$installDir"
     /run/current-system/sw/bin/cp -r "$1/Etterna/Data" "$installDir"
     /run/current-system/sw/bin/cp -r "$1/Etterna/Scripts" "$installDir"
-
-    # if .etterna doesnt exist
-    [[ ! -d "$homeDir/.etterna" ]] && {
-        # make .etterna dir
-        mkdir -p "$homeDir/.etterna"
-        mkdir -p "$homeDir/.etterna/Save"
-        /run/current-system/sw/bin/cp "$1/Etterna/Announcers" "$homeDir/.etterna"
-        /run/current-system/sw/bin/cp "$1/Etterna/Assets" "$homeDir/.etterna"
-        /run/current-system/sw/bin/cp "$1/Etterna/NoteSkins" "$homeDir/.etterna"
-        /run/current-system/sw/bin/cp "$1/Etterna/Songs" "$homeDir/.etterna"
-        /run/current-system/sw/bin/cp "$1/Etterna/Themes" "$homeDir/.etterna"
-    }
-
-    # symlink .etterna dirs to Etterna dir
-    /run/current-system/sw/bin/ln -sf "$homeDir/.etterna/Announcers" "$installDir"
-    /run/current-system/sw/bin/ln -sf "$homeDir/.etterna/Assets" "$installDir"
-    /run/current-system/sw/bin/ln -sf "$homeDir/.etterna/NoteSkins" "$installDir"
-    /run/current-system/sw/bin/ln -sf "$homeDir/.etterna/Save" "$installDir"
-    /run/current-system/sw/bin/ln -sf "$homeDir/.etterna/Songs" "$installDir"
-    /run/current-system/sw/bin/ln -sf "$homeDir/.etterna/Themes" "$installDir"
 fi
+
+# if .etterna doesnt exist
+[[ ! -d "$homeDir/.etterna" ]] && {
+    # make .etterna dir
+    mkdir -p "$homeDir/.etterna"
+    mkdir -p "$homeDir/.etterna/Save"
+    /run/current-system/sw/bin/cp "$1/Etterna/Announcers" "$homeDir/.etterna"
+    /run/current-system/sw/bin/cp "$1/Etterna/Assets" "$homeDir/.etterna"
+    /run/current-system/sw/bin/cp "$1/Etterna/NoteSkins" "$homeDir/.etterna"
+    /run/current-system/sw/bin/cp "$1/Etterna/Songs" "$homeDir/.etterna"
+    /run/current-system/sw/bin/cp "$1/Etterna/Themes" "$homeDir/.etterna"
+}
+
+# symlink .etterna dirs to Etterna dir
+rm -rf "$installDir/Announcers"
+rm -rf "$installDir/Assets"
+rm -rf "$installDir/NoteSkins"
+rm -rf "$installDir/Save"
+rm -rf "$installDir/Songs"
+rm -rf "$installDir/Themes"
+/run/current-system/sw/bin/ln -sf "$homeDir/.etterna/Announcers" "$installDir"
+/run/current-system/sw/bin/ln -sf "$homeDir/.etterna/Assets" "$installDir"
+/run/current-system/sw/bin/ln -sf "$homeDir/.etterna/NoteSkins" "$installDir"
+/run/current-system/sw/bin/ln -sf "$homeDir/.etterna/Save" "$installDir"
+/run/current-system/sw/bin/ln -sf "$homeDir/.etterna/Songs" "$installDir"
+/run/current-system/sw/bin/ln -sf "$homeDir/.etterna/Themes" "$installDir"
 
 
 # Copy .desktop file
