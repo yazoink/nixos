@@ -16,18 +16,21 @@
       enableZshIntegration = true;
       shellWrapperName = "y";
       plugins = {
-        full-border = ./full-border;
-        yaziline = ./yaziline;
+        #full-border = ./full-border;
+        #yaziline = ./yaziline;
+        simple-status = ./simple-status;
       };
       initLua = ''
-        require("full-border"):setup {
-          type = ui.Border.PLAIN
+        --[[ require("full-border"):setup {
+          type = ui.Border.PLAIN --]]
         }
 
-        require("yaziline"):setup {
+        --[[require("yaziline"):setup {
           separator_style = "liney",
           color = "#${config.stylix.base16Scheme.base0D}"
-        }
+        }--]]
+
+        require("simple-status"):setup()
       '';
       settings = {
         manager = {
