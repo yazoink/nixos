@@ -42,7 +42,7 @@
         #   };
         # };
 
-        plugins.lualine = {
+        lualine = {
           enable = true;
           lazyLoad.settings.event = "BufEnter";
           settings = {
