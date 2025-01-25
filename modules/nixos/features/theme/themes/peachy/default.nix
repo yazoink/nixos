@@ -1,10 +1,21 @@
-{pkgs, config, lib, ...}:
-# I made this one
 {
+  pkgs,
+  config,
+  lib,
+  ...
+}:
+# I made this one
+let
+  cursors = pkgs.callPackage ./peachy-cursors.nix {};
+in {
   config = lib.mkIf (config.myOptions.bundles.desktopBase.enable && config.myOptions.desktopTheme.name == "peachy") {
     desktopTheme.base16Accent = "base0F";
-
+    environment.systemPackages = [cursors];
     stylix = {
+      cursor = {
+        name = "BreezeX-Peachy";
+        size = 32;
+      };
       base16Scheme = {
         base00 = "101617";
         base01 = "1F2321";

@@ -8,6 +8,10 @@
     desktopTheme.base16Accent = "base0D";
 
     stylix = {
+      cursor = {
+        name = "BreezeX-Paradise";
+        size = 32;
+      };
       base16Scheme = {
         base00 = "151515";
         base01 = "1F1F1F";
