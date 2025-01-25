@@ -51,10 +51,10 @@
     };
     desktopTheme = {
       name = "paradise";
-      fonts.terminal = {
-        name = "JetBrains Mono";
-        size = 12;
-      };
+      # fonts.terminal = {
+      #   name = "JetBrains Mono";
+      #   size = 12;
+      # };
       wallpaper = ./wallpapers/painting3.jpg;
       sddm = {
         scale = 1.3;
@@ -63,7 +63,7 @@
       firefoxCss.anotherOneline.enable = true;
     };
     bundles = {
-      base.starshipFormat = 2;
+      # base.starshipFormat = 2;
       desktopBase.displayManager = "sddm";
       desktopFull.enable = true;
     };
