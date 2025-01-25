@@ -19,7 +19,8 @@ in {
     bundles.desktopBase = {
       mako.enable = true;
       #swaync.enable = true;
-      rofi.enable = true;
+      #rofi.enable = true;
+      wofi.enable = true;
       waybar.enable = true;
       screenshot.enable = true;
       simpleLogout.enable = true;
@@ -44,7 +45,7 @@ in {
         "$terminal" = "${osConfig.myOptions.defaultApps.terminal.command}";
         "$browser" = "${osConfig.myOptions.defaultApps.webBrowser.command}";
         "$fileManager" = "${osConfig.myOptions.defaultApps.fileManager.command}";
-        "$menu" = "rofi -show drun";
+        "$menu" = "wofi --show drun";
         "$screenshot" = "${config.bundles.desktopBase.screenshot.package}/bin/screenshot -s";
         "$power" = "simple-logout";
         "$lock" = "gtklock";

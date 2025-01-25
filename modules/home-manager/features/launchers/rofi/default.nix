@@ -93,7 +93,6 @@ in {
             alternate-urgent-foreground: var(background);
             alternate-active-background: var(active);
             alternate-active-foreground: var(foreground);
-            border-color:                @border-colour;
         }
 
         /*****----- Main Window -----*****/
