@@ -260,16 +260,16 @@
           };
         };
 
-        floaterm = {
-          enable = true;
-          settings = {
-            width = 0.8;
-            height = 0.8;
-            title = "bababooey";
-            keymap_toggle = "<leader>tt";
-            titleposition = "center";
-          };
-        };
+        # floaterm = {
+        #   enable = true;
+        #   settings = {
+        #     width = 0.8;
+        #     height = 0.8;
+        #     title = "bababooey";
+        #     keymap_toggle = "<leader>tt";
+        #     titleposition = "center";
+        #   };
+        # };
 
         ts-autotag.enable = true;
         persistence.enable = true;
@@ -480,7 +480,7 @@
 
         #web-devicons.enable = true;
         #barbecue.enable = true;
-        scrollview.enable = true;
+        # scrollview.enable = true;
 
         treesitter = {
           enable = true;
