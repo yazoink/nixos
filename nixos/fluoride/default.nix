@@ -51,7 +51,7 @@
       username = "gene";
     };
     desktopTheme = {
-      name = "rose-pine-moon";
+      name = "rose-pine";
       wallpaper = ./wallpapers/bay.JPG;
       terminalPadding = 24;
       sddm = {
