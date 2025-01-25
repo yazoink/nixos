@@ -52,11 +52,11 @@
     desktopTheme = {
       name = "fyry";
       #name = "wizard";
-      wallpaper = ./wallpapers/sunset.jpg;
+      wallpaper = ./wallpapers/flowers2.jpg;
       #wallpaper = ./wallpapers/flowers-wizard.jpg;
       sddm = {
         scale = 1.3;
-        wallpaper = ./wallpapers/sunset.jpg;
+        wallpaper = ./wallpapers/flowers2.jpg;
         #wallpaper = ./wallpapers/sand-wizard.jpg;
       };
       firefoxCss.anotherOneline.enable = true;
