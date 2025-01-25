@@ -45,7 +45,7 @@ in {
         "$terminal" = "${osConfig.myOptions.defaultApps.terminal.command}";
         "$browser" = "${osConfig.myOptions.defaultApps.webBrowser.command}";
         "$fileManager" = "${osConfig.myOptions.defaultApps.fileManager.command}";
-        "$menu" = "wofi --show drun";
+        "$menu" = "pkill wofi || wofi --show drun";
         "$screenshot" = "${config.bundles.desktopBase.screenshot.package}/bin/screenshot -s";
         "$power" = "simple-logout";
         "$lock" = "gtklock";
