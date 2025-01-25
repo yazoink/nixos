@@ -22,8 +22,8 @@
       };
       initLua = ''
         --[[ require("full-border"):setup {
-          type = ui.Border.PLAIN --]]
-        }
+          type = ui.Border.PLAIN
+        } --]]
 
         --[[require("yaziline"):setup {
           separator_style = "liney",
