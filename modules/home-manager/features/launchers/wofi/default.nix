@@ -55,7 +55,8 @@
           border-radius: 15px;
         }
 
-        #entry, #selected {
+        #entry, #selected, #unselected {
+          padding: 5px;
           border-radius: 10px;
           border: transparent;
         }
