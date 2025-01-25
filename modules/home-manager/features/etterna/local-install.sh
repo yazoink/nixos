@@ -2,7 +2,7 @@ homeDir="/home/$3"
 installDir="$homeDir/.local/share/Etterna"
 applicationsDir="$homeDir/.local/share/applications"
 
-/run/current-system/sw/bin/chown "$3" "$installDir"
+/run/current-system/sw/bin/chown "$(whoami)" "$installDir"
 /run/current-system/sw/bin/chmod 755 "$installDir"
 
 if [[ -d "$installDir" ]]; then
