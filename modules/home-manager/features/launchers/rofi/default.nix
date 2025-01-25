@@ -111,7 +111,7 @@ in {
             enabled:                     true;
             margin:                      0px;
             padding:                     0px;
-            border:                      2px solid;
+            border:                      0px solid;
             border-radius:               15px;
             border-color:                @border-colour;
             cursor:                      "default";
