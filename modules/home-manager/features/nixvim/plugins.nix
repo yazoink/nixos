@@ -173,7 +173,7 @@
             options = {
               separator_style = "thin"; # “slant”, “padded_slant”, “slope”, “padded_slope”, “thick”, “thin”
             };
-            highlights = lib.mkIf config.colorschemes.base16.enable {
+            highlights = {
               fill = {
                 fg = "none";
                 bg = "none";
