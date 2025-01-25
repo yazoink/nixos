@@ -167,6 +167,7 @@ in {
           }
 
           tooltip {
+            font-weight: normal;
             background: #${base00};
             border: 1px solid #${base03};
           }

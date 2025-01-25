@@ -7,7 +7,7 @@
 # I made this one
 {
   config = lib.mkIf (config.myOptions.bundles.desktopBase.enable && config.myOptions.desktopTheme.name == "peachy") {
-    desktopTheme.base16Accent = "base0D";
+    desktopTheme.base16Accent = "base0F";
 
     stylix = {
       base16Scheme = {
