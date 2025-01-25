@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 
-/etc/profiles/per-user/gene/bin/magick -size 1x16 xc:#"$1" xc:#"$2" xc:#"$3" xc:#"$4" xc:#"$5" xc:#"$6" xc:#"$7" xc:#"$8" xc:#"$9" xc:#"${10}" xc:#"${11}" xc:#"${12}" xc:#"${13}" xc:#"${14}" xc:#"${15}" xc:#"${16}" +append /tmp/palette.png
-/etc/profiles/per-user/gene/bin/magick ${17} -dither FloydSteinberg -remap /tmp/palette.png "${18}"
+/home/gene/.nix-profile/bin/magick -size 1x16 xc:#"$1" xc:#"$2" xc:#"$3" xc:#"$4" xc:#"$5" xc:#"$6" xc:#"$7" xc:#"$8" xc:#"$9" xc:#"${10}" xc:#"${11}" xc:#"${12}" xc:#"${13}" xc:#"${14}" xc:#"${15}" xc:#"${16}" +append /tmp/palette.png
+/home/gene/.nix-profile/bin/magick ${17} -dither FloydSteinberg -remap /tmp/palette.png "${18}"
 /run/current-system/sw/bin/rm /tmp/palette.png

@@ -1,5 +1,9 @@
-{config, lib, osConfig, ...}:
 {
+  config,
+  lib,
+  osConfig,
+  ...
+}: {
   options = {
     bundles.base.yazi.enable = lib.mkOption {
       type = lib.types.bool;

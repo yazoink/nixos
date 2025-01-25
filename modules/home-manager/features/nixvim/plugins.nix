@@ -84,9 +84,9 @@
                 terminal = false;
               };
             };
-            tabline = {
-              show_icons = false;
-            };
+            # tabline = {
+            #   show_icons = false;
+            # };
             comment = {
               mappings = {
                 comment = "gc";
