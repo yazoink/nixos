@@ -14,7 +14,7 @@ else
     echo "\$1: $1"
     echo "\$2: $2"
     echo "\$3: $3"
-    /run/current-system/sw/bin/install -o "$1/Etterna" "$installDir"
+    /run/current-system/sw/bin/install -o "$3" "$1/Etterna" "$installDir"
     [[ ! -d "$homeDir/.etterna" ]] && {
         mkdir "$homeDir/.etterna"
         mkdir "$homeDir/.etterna/Save"
