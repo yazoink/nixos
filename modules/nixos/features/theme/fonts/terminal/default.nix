@@ -6,5 +6,6 @@
     ./zed-mono
     ./victor-mono
     ./cascadia-code
+    ./jetbrains-mono
   ];
 }

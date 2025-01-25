@@ -51,6 +51,10 @@
     };
     desktopTheme = {
       name = "paradise";
+      fonts.terminal = {
+        name = "JetBrains Mono";
+        size = 11;
+      };
       wallpaper = ./wallpapers/painting3.jpg;
       sddm = {
         scale = 1.3;
