@@ -31,5 +31,6 @@
     ./jellybeans
     ./far
     ./decay
+    ./haze
   ];
 }
