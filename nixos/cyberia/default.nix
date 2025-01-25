@@ -50,15 +50,15 @@
       };
     };
     desktopTheme = {
-      name = "paradise";
+      name = "rose-pine";
       # fonts.terminal = {
       #   name = "JetBrains Mono";
       #   size = 12;
       # };
-      wallpaper = ./wallpapers/painting3.jpg;
+      wallpaper = ./wallpapers/bay.JPG;
       sddm = {
         scale = 1.3;
-        wallpaper = ./wallpapers/painting3.jpg;
+        wallpaper = ./wallpapers/bay.JPG;
       };
       firefoxCss.anotherOneline.enable = true;
     };
