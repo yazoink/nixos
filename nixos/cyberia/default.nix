@@ -50,7 +50,7 @@
       };
     };
     desktopTheme = {
-      name = "rosepine";
+      name = "levuaska";
       # fonts.terminal = {
       #   name = "JetBrains Mono";
       #   size = 12;
