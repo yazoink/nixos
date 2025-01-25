@@ -44,7 +44,7 @@
 
         lualine = {
           enable = true;
-          lazyLoad.settings.event = "BufEnter";
+          #lazyLoad.settings.event = "BufEnter";
           settings = {
             options = {
               theme = {
@@ -88,7 +88,7 @@
                   __unkeyed = "mode";
                   fmt = "string.lower";
                   color = {
-                    fg = config.stylix.base16Scheme.base04;
+                    fg = "#${config.stylix.base16Scheme.base04}";
                     bg = "nil";
                   };
                   separator.left = "";
@@ -100,7 +100,7 @@
                   __unkeyed = "branch";
                   icon.__unkeyed = "";
                   color = {
-                    fg = config.stylix.base16Scheme.base04;
+                    fg = "#${config.stylix.base16Scheme.base04}";
                     bg = "nil";
                   };
                   separator.left = "";
@@ -122,7 +122,7 @@
                     hint = "󰝶 ";
                   };
                   color = {
-                    fg = config.stylix.base16Scheme.base08;
+                    fg = "#${config.stylix.base16Scheme.base08}";
                     bg = "nil";
                   };
                   separator.left = "";
@@ -145,7 +145,7 @@
                     unnamed = "";
                   };
                   color = {
-                    fg = config.stylix.base16Scheme.base05;
+                    fg = "#${config.stylix.base16Scheme.base05}";
                     bg = "nil";
                   };
                   separator.left = "";
@@ -156,7 +156,7 @@
                 {
                   __unkeyed = "location";
                   color = {
-                    fg = config.stylix.base16Scheme.base0B;
+                    fg = "#${config.stylix.base16Scheme.base0B}";
                     bg = "nil";
                   };
                   separator.left = "";
