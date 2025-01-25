@@ -50,7 +50,7 @@
       };
     };
     desktopTheme = {
-      name = "caroline";
+      name = "peachy";
       #name = "wizard";
       wallpaper = ./wallpapers/caroline-flowers2.png;
       #wallpaper = ./wallpapers/flowers-wizard.jpg;
