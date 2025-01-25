@@ -2,7 +2,7 @@ homeDir="/home/$3"
 installDir="$homeDir/.local/share/Etterna"
 applicationsDir="$homeDir/.local/share/applications"
 
-if [[ -d "$installDir/Etterna" ]]; then
+if [[ -d "$installDir" ]]; then
     rm -rf "$installDir"
     /run/current-system/sw/bin/cp -r "$1/Etterna" "$installDir"
     rm -rf "$installDir/Announcers"
