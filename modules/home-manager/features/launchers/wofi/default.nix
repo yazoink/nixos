@@ -56,6 +56,7 @@
         }
 
         #entry, #selected, #unselected {
+          padding: 3px;
           border-radius: 10px;
           border: transparent;
         }
