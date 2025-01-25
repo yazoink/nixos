@@ -259,7 +259,6 @@
             };
           };
         };
-      };
 
         floaterm = {
           enable = true;
