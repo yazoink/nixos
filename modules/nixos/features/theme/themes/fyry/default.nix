@@ -5,11 +5,17 @@
   ...
 }:
 # http://dotshare.it/dots/1156
-{
+let
+  cursors = pkgs.callPackage ./fyry-cursors.nix {};
+in {
   config = lib.mkIf (config.myOptions.bundles.desktopBase.enable && config.myOptions.desktopTheme.name == "fyry") {
     desktopTheme.base16Accent = "base0D";
-
+    environment.systemPackages = [cursors];
     stylix = {
+      cursor = {
+        name = "BreezeX-Fyry";
+        size = 32;
+      };
       base16Scheme = {
         base00 = "03070b";
         base01 = "111519";
