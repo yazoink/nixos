@@ -53,7 +53,7 @@ in {
             background:     #${base00};
             background-alt: #${base01};
             foreground:     #${base05};
-            selected:       #${base02};
+            selected:       #${config.stylix.base16Scheme.${osConfig.desktopTheme.base16Accent}};
             active:         #${config.stylix.base16Scheme.${osConfig.desktopTheme.base16Accent}};
             urgent:         #${base08};
         }
@@ -71,9 +71,6 @@ in {
         }
 
         /*****----- Global Properties -----*****/
-        @import                          "shared/colors.rasi"
-        @import                          "shared/fonts.rasi"
-
         * {
             border-colour:               var(selected);
             handle-colour:               var(selected);
