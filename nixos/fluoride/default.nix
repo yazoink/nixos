@@ -51,12 +51,12 @@
       username = "gene";
     };
     desktopTheme = {
-      name = "caroline";
-      wallpaper = ./wallpapers/caroline-flowers2.png;
+      name = "paradise";
+      wallpaper = ./wallpapers/painting1.jpg;
       terminalPadding = 24;
       sddm = {
         scale = 0.8;
-        wallpaper = ./wallpapers/caroline-flowers3.png;
+        wallpaper = ./wallpapers/painting1.jpg;
       };
       firefoxCss.anotherOneline.enable = true;
     };
