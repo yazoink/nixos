@@ -12,6 +12,7 @@
     };
   };
   config = lib.mkIf config.bundles.desktopBase.wofi.enable {
+    stylix.targets.wofi.enable = false;
     programs.wofi = {
       enable = true;
       settings = {
