@@ -111,9 +111,9 @@ in {
             enabled:                     true;
             margin:                      0px;
             padding:                     0px;
-            border:                      0px solid;
+            border:                      2px solid;
             border-radius:               15px;
-            border-color:                @border-colour;
+            border-color:                @background-alt;
             cursor:                      "default";
             /* Backgroud Colors */
             background-color:            @background-colour;
