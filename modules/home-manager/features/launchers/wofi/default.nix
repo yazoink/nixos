@@ -55,8 +55,9 @@
           border-radius: 15px;
         }
 
-        #entry {
+        #entry, #selected {
           border-radius: 10px;
+          border: transparent;
         }
       '';
     };
