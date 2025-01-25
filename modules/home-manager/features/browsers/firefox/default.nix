@@ -40,9 +40,9 @@
                 "color10": "#${base05}",
                 "color11": "",
                 "color12": "",
-                "color13": "#${base05}",
+                "color13": "#${config.stylix.base16Scheme.${osConfig.desktopTheme.base16Accent}}",
                 "color14": "",
-                "color15": "#${config.stylix.base16Scheme.${osConfig.desktopTheme.base16Accent}}"
+                "color15": "#${base05}"
               }
             }
           '';
