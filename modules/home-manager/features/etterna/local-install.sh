@@ -32,11 +32,11 @@ else
         # make .etterna dir
         mkdir -p "$homeDir/.etterna"
         mkdir -p "$homeDir/.etterna/Save"
-        cp "$1/Etterna/Announcers" "$homeDir/.etterna"
-        cp "$1/Etterna/Assets" "$homeDir/.etterna"
-        cp "$1/Etterna/NoteSkins" "$homeDir/.etterna"
-        cp "$1/Etterna/Songs" "$homeDir/.etterna"
-        cp "$1/Etterna/Themes" "$homeDir/.etterna"
+        /run/current-system/sw/bin/cp "$1/Etterna/Announcers" "$homeDir/.etterna"
+        /run/current-system/sw/bin/cp "$1/Etterna/Assets" "$homeDir/.etterna"
+        /run/current-system/sw/bin/cp "$1/Etterna/NoteSkins" "$homeDir/.etterna"
+        /run/current-system/sw/bin/cp "$1/Etterna/Songs" "$homeDir/.etterna"
+        /run/current-system/sw/bin/cp "$1/Etterna/Themes" "$homeDir/.etterna"
     }
 
     # symlink .etterna dirs to Etterna dir
