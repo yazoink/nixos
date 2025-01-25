@@ -55,7 +55,7 @@
           border-radius: 15px;
         }
 
-        .entry {
+        #entry {
           border-radius: 10px;
         }
       '';
