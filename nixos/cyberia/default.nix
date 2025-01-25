@@ -50,15 +50,15 @@
       };
     };
     desktopTheme = {
-      name = "levuaska";
+      name = "rosepine";
       # fonts.terminal = {
       #   name = "JetBrains Mono";
       #   size = 12;
       # };
-      wallpaper = ./wallpapers/clouds2.jpg;
+      wallpaper = ./wallpapers/bay.JPG;
       sddm = {
         scale = 1.3;
-        wallpaper = ./wallpapers/clouds2.jpg;
+        wallpaper = ./wallpapers/bay.JPG;
       };
       firefoxCss.anotherOneline.enable = true;
     };
