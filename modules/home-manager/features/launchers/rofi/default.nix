@@ -53,7 +53,7 @@ in {
             background:     #${base00};
             background-alt: #${base01};
             foreground:     #${base05};
-            selected:       #${config.stylix.base16Scheme.${osConfig.desktopTheme.base16Accent}};
+            selected:       #${base02};
             active:         #${config.stylix.base16Scheme.${osConfig.desktopTheme.base16Accent}};
             urgent:         #${base08};
         }
@@ -82,11 +82,11 @@ in {
             urgent-background:           var(urgent);
             urgent-foreground:           var(background);
             active-background:           var(active);
-            active-foreground:           var(background);
+            active-foreground:           var(foreground);
             selected-normal-background:  var(selected);
-            selected-normal-foreground:  var(background);
+            selected-normal-foreground:  var(foreground);
             selected-urgent-background:  var(active);
-            selected-urgent-foreground:  var(background);
+            selected-urgent-foreground:  var(foreground);
             selected-active-background:  var(urgent);
             selected-active-foreground:  var(background);
             alternate-normal-background: var(background);
@@ -94,7 +94,7 @@ in {
             alternate-urgent-background: var(urgent);
             alternate-urgent-foreground: var(background);
             alternate-active-background: var(active);
-            alternate-active-foreground: var(background);
+            alternate-active-foreground: var(foreground);
         }
 
         /*****----- Main Window -----*****/
