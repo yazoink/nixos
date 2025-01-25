@@ -36,25 +36,16 @@ in {
 
     xdg.configFile."rofi/my-theme.rasi".text = with config.stylix.base16Scheme;
       lib.mkForce ''
-        /**
-         *
-         * Author : Aditya Shakya (adi1090x)
-         * Github : @adi1090x
-         *
-         * Rofi Theme File
-         * Rofi Version: 1.7.3
-         **/
-
         /*****----- Configuration -----*****/
         configuration {
-        	modi:                       "drun,run,filebrowser,window";
+          modi:                       "drun,run,filebrowser,window";
             show-icons:                 false;
             display-drun:               "Apps";
             display-run:                "Run";
             display-filebrowser:        "Files";
             display-window:             "Windows";
-        	drun-display-format:        "{name} [<span weight='light' size='small'><i>({generic})</i></span>]";
-        	window-format:              "{w} · {c} · {t}";
+          drun-display-format:        "{name} [<span weight='light' size='small'><i>({generic})</i></span>]";
+          window-format:              "{w} · {c} · {t}";
         }
 
         * {
@@ -67,10 +58,25 @@ in {
             urgent:         #${base08};
         }
 
+        /*****----- Configuration -----*****/
+        configuration {
+        	modi:                       "drun,run,filebrowser,window";
+            show-icons:                 true;
+            display-drun:               "Apps";
+            display-run:                "Run";
+            display-filebrowser:        "Files";
+            display-window:             "Windows";
+        	drun-display-format:        "{name}";
+        	window-format:              "{w} · {c} · {t}";
+        }
+
         /*****----- Global Properties -----*****/
+        @import                          "shared/colors.rasi"
+        @import                          "shared/fonts.rasi"
+
         * {
             border-colour:               var(selected);
-            handle-colour:               var(foreground);
+            handle-colour:               var(selected);
             background-colour:           var(background);
             foreground-colour:           var(foreground);
             alternate-background:        var(background-alt);
@@ -81,7 +87,7 @@ in {
             active-background:           var(active);
             active-foreground:           var(background);
             selected-normal-background:  var(selected);
-            selected-normal-foreground:  var(foreground);
+            selected-normal-foreground:  var(background);
             selected-urgent-background:  var(active);
             selected-urgent-foreground:  var(background);
             selected-active-background:  var(urgent);
@@ -101,7 +107,7 @@ in {
             location:                    center;
             anchor:                      center;
             fullscreen:                  false;
-            width:                       400px;
+            width:                       600px;
             x-offset:                    0px;
             y-offset:                    0px;
 
@@ -130,12 +136,12 @@ in {
             enabled:                     true;
             spacing:                     10px;
             margin:                      0px;
-            padding:                     40px;
+            padding:                     30px;
             border:                      0px solid;
             border-radius:               0px 0px 0px 0px;
             border-color:                @border-colour;
             background-color:            transparent;
-            children:                    [ "inputbar", "message", "listview", "mode-switcher" ];
+            children:                    [ "inputbar", "message", "listview" ];
         }
 
         /*****----- Inputbar -----*****/
@@ -149,7 +155,7 @@ in {
             border-color:                @border-colour;
             background-color:            transparent;
             text-color:                  @foreground-colour;
-            children:                    [ "prompt", "entry" ];
+            children:                    [ "textbox-prompt-colon", "entry", "mode-switcher" ];
         }
 
         prompt {
@@ -159,17 +165,19 @@ in {
         }
         textbox-prompt-colon {
             enabled:                     true;
+            padding:                     5px 0px;
             expand:                      false;
-            str:                         "::";
+            str:                         "";
             background-color:            inherit;
             text-color:                  inherit;
         }
         entry {
             enabled:                     true;
+            padding:                     5px 0px;
             background-color:            inherit;
             text-color:                  inherit;
             cursor:                      text;
-            placeholder:                 "search...";
+            placeholder:                 "Search...";
             placeholder-color:           inherit;
         }
         num-filtered-rows {
@@ -201,7 +209,7 @@ in {
         listview {
             enabled:                     true;
             columns:                     1;
-            lines:                       12;
+            lines:                       8;
             cycle:                       true;
             dynamic:                     true;
             scrollbar:                   true;
@@ -223,18 +231,18 @@ in {
         scrollbar {
             handle-width:                5px ;
             handle-color:                @handle-colour;
-            border-radius:               8px;
+            border-radius:               10px;
             background-color:            @alternate-background;
         }
 
         /*****----- Elements -----*****/
         element {
             enabled:                     true;
-            spacing:                     8px;
+            spacing:                     10px;
             margin:                      0px;
-            padding:                     8px;
+            padding:                     5px 10px;
             border:                      0px solid;
-            border-radius:               4px;
+            border-radius:               10px;
             border-color:                @border-colour;
             background-color:            transparent;
             text-color:                  @foreground-colour;
@@ -253,8 +261,8 @@ in {
             text-color:                  var(active-foreground);
         }
         element selected.normal {
-            background-color:            var(normal-foreground);
-            text-color:                  var(normal-background);
+            background-color:            var(selected-normal-background);
+            text-color:                  var(selected-normal-foreground);
         }
         element selected.urgent {
             background-color:            var(selected-urgent-background);
@@ -304,9 +312,9 @@ in {
             text-color:                  @foreground-colour;
         }
         button {
-            padding:                     8px;
+            padding:                     5px 10px;
             border:                      0px solid;
-            border-radius:               4px;
+            border-radius:               10px;
             border-color:                @border-colour;
             background-color:            @alternate-background;
             text-color:                  inherit;
@@ -329,9 +337,9 @@ in {
             text-color:                  @foreground-colour;
         }
         textbox {
-            padding:                     8px;
+            padding:                     8px 10px;
             border:                      0px solid;
-            border-radius:               4px;
+            border-radius:               10px;
             border-color:                @border-colour;
             background-color:            @alternate-background;
             text-color:                  @foreground-colour;
@@ -344,8 +352,8 @@ in {
         }
         error-message {
             padding:                     10px;
-            border:                      0px solid;
-            border-radius:               4px;
+            border:                      2px solid;
+            border-radius:               10px;
             border-color:                @border-colour;
             background-color:            @background-colour;
             text-color:                  @foreground-colour;
