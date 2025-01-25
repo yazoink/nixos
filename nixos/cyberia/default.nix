@@ -53,7 +53,7 @@
       name = "paradise";
       fonts.terminal = {
         name = "JetBrains Mono";
-        size = 11;
+        size = 12;
       };
       wallpaper = ./wallpapers/painting3.jpg;
       sddm = {
@@ -63,6 +63,7 @@
       firefoxCss.anotherOneline.enable = true;
     };
     bundles = {
+      base.starshipFormat = 2;
       desktopBase.displayManager = "sddm";
       desktopFull.enable = true;
     };
