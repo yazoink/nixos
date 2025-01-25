@@ -15,7 +15,6 @@ in {
   };
   config = lib.mkIf config.bundles.desktopBase.rofi.enable {
     stylix.targets.rofi.enable = false;
-    utils.dither.enable = true;
     programs.rofi = builtins.trace "rofi module enabled" {
       enable = true;
       package = pkgs.rofi-wayland;
@@ -23,7 +22,6 @@ in {
       terminal = "${pkgs.foot}/bin/foot";
     };
 
-    #home.file.".config/rofi/image.png".source =  ./images/image-${osConfig.myOptions.desktopTheme.name}.png;
     xdg.configFile."rofi/config.rasi".text = lib.mkForce ''
       configuration {
         location: 0;
@@ -72,7 +70,7 @@ in {
 
         /*****----- Global Properties -----*****/
         * {
-            border-colour:               var(selected);
+            border-colour:               var(background-alt);
             handle-colour:               var(selected);
             background-colour:           var(background);
             foreground-colour:           var(foreground);
@@ -164,7 +162,7 @@ in {
             enabled:                     true;
             padding:                     5px 0px;
             expand:                      false;
-            str:                         "";
+            str:                         "";
             background-color:            inherit;
             text-color:                  inherit;
         }
