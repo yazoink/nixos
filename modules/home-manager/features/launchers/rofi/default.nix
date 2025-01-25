@@ -93,7 +93,7 @@ in {
             alternate-urgent-foreground: var(background);
             alternate-active-background: var(active);
             alternate-active-foreground: var(foreground);
-            border: none;
+            border-color:                @border-colour;
         }
 
         /*****----- Main Window -----*****/
@@ -113,7 +113,7 @@ in {
             padding:                     0px;
             border:                      2px solid;
             border-radius:               15px;
-            border-color:                @background-alt;
+            border-color:                @border-colour;
             cursor:                      "default";
             /* Backgroud Colors */
             background-color:            @background-colour;
