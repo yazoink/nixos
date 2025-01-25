@@ -19,13 +19,13 @@
         base05 = "d7d7d7";
         base06 = "d7d7d7";
         base07 = "d7d7d7";
-        base08 = "8c5760";
+        base08 = "b23450";
         base09 = "9f725b";
         base0A = "b28c55";
         base0B = "7b8c58";
         base0C = "737373";
         base0D = "58698c";
-        base0E = "b23450";
+        base0E = "8c5760";
         base0F = "a95356";
       };
     };
