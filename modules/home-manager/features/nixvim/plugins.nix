@@ -480,7 +480,7 @@
 
         #web-devicons.enable = true;
         #barbecue.enable = true;
-        # scrollview.enable = true;
+        scrollview.enable = true;
 
         treesitter = {
           enable = true;
