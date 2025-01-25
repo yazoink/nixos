@@ -35,7 +35,7 @@
               "color12": "",
               "color13": "#${base05}",
               "color14": "",
-              "color15": "#${base05}"
+              "color15": "#${config.stylix.base16Scheme.${osConfig.desktopTheme.base16Accent}"
             }
           }
         '';
