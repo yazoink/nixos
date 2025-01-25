@@ -51,7 +51,7 @@
       username = "gene";
     };
     desktopTheme = {
-      name = "oxocarbon";
+      name = "rose-pine";
       wallpaper = ./wallpapers/painting5.jpg;
       terminalPadding = 24;
       sddm = {
