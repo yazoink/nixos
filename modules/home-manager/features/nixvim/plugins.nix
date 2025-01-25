@@ -187,12 +187,12 @@
                 bg = "none";
               };
               buffer_selected = {
-                fg = config.stylix.base16Scheme.base05;
-                bg = config.stylix.base16Scheme.base01;
+                fg = "#${config.stylix.base16Scheme.base05}";
+                bg = "#${config.stylix.base16Scheme.base01}";
                 italic = false;
               };
               buffer_visible = {
-                fg = config.stylix.base16Scheme.base05;
+                fg = "#${config.stylix.base16Scheme.base05}";
                 bg = "none";
               };
               close_button = {
@@ -200,48 +200,48 @@
                 bg = "none";
               };
               close_button_visible = {
-                fg = config.stylix.base16Scheme.base03;
+                fg = "#${config.stylix.base16Scheme.base03}";
                 bg = "none";
               };
               close_button_selected = {
-                fg = config.stylix.base16Scheme.base08;
-                bg = config.stylix.base16Scheme.base01;
+                fg = "#${config.stylix.base16Scheme.base08}";
+                bg = "#${config.stylix.base16Scheme.base01}";
               };
               indicator_selected = {
-                fg = config.stylix.base16Scheme.base0E;
-                bg = config.stylix.base16Scheme.base01;
+                fg = "#${config.stylix.base16Scheme.base0E}";
+                bg = "#${config.stylix.base16Scheme.base01}";
               };
               indicator_visible = {
-                fg = config.stylix.base16Scheme.base0E;
+                fg = "#${config.stylix.base16Scheme.base0E}";
                 bg = "none";
               };
               separator = {
-                fg = config.stylix.base16Scheme.base00;
-                bg = config.stylix.base16Scheme.base00;
+                fg = "#${config.stylix.base16Scheme.base00}";
+                bg = "#${config.stylix.base16Scheme.base00}";
               };
               separator_selected = {
-                fg = config.stylix.base16Scheme.base00;
-                bg = config.stylix.base16Scheme.base00;
+                fg = "#${config.stylix.base16Scheme.base00}";
+                bg = "#${config.stylix.base16Scheme.base00}";
               };
               separator_visible = {
-                fg = config.stylix.base16Scheme.base00;
-                bg = config.stylix.base16Scheme.base00;
+                fg = "#${config.stylix.base16Scheme.base00}";
+                bg = "#${config.stylix.base16Scheme.base00}";
               };
               modified = {
-                fg = config.stylix.base16Scheme.base03;
-                bg = config.stylix.base16Scheme.base00;
+                fg = "#${config.stylix.base16Scheme.base03}";
+                bg = "#${config.stylix.base16Scheme.base00}";
               };
               modified_visible = {
-                fg = config.stylix.base16Scheme.base00;
-                bg = config.stylix.base16Scheme.base00;
+                fg = "#${config.stylix.base16Scheme.base00}";
+                bg = "#${config.stylix.base16Scheme.base00}";
               };
               modified_selected = {
-                fg = config.stylix.base16Scheme.base0B;
-                bg = config.stylix.base16Scheme.base01;
+                fg = "#${config.stylix.base16Scheme.base0B}";
+                bg = "#${config.stylix.base16Scheme.base01}";
               };
               tab_close = {
-                fg = config.stylix.base16Scheme.base00;
-                bg = config.stylix.base16Scheme.base00;
+                fg = "#${config.stylix.base16Scheme.base00}";
+                bg = "#${config.stylix.base16Scheme.base00}";
               };
               duplicate = {
                 bg = "none";
@@ -253,7 +253,7 @@
               };
               duplicate_selected = {
                 fg = "none";
-                bg = config.stylix.base16Scheme.base01;
+                bg = "#${config.stylix.base16Scheme.base01}";
                 italic = false;
               };
             };
@@ -315,6 +315,7 @@
             # basics = {};
             hipatterns = {};
             clue = {};
+            indentscope = {};
           };
         };
 
@@ -502,7 +503,7 @@
           enable = true;
         };
 
-        indent-blankline.enable = true;
+        # indent-blankline.enable = true;
 
         conform-nvim = {
           enable = true;
