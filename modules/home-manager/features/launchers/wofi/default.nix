@@ -40,6 +40,7 @@
         }
 
         #outer-box {
+          background: #${base00};
           border: 2px solid #${base01};
           border-radius: 15px;
           padding: 15px;
