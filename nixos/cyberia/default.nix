@@ -55,10 +55,10 @@
       #   name = "JetBrains Mono";
       #   size = 12;
       # };
-      wallpaper = ./wallpapers/bay.JPG;
+      wallpaper = ./wallpapers/sky2.jpg;
       sddm = {
         scale = 1.3;
-        wallpaper = ./wallpapers/bay.JPG;
+        wallpaper = ./wallpapers/sky2.jpg;
       };
       firefoxCss.anotherOneline.enable = true;
     };
