@@ -60,6 +60,10 @@
           border-radius: 10px;
           border: transparent;
         }
+
+        #img {
+          padding-right: 10px;
+        }
       '';
     };
   };
