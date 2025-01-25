@@ -1,9 +1,15 @@
-{pkgs, lib, config, osConfig, ...}:
-let
-  closeButtonColor = if (osConfig.myOptions.desktopTheme.name == "caroline") 
-    then config.stylix.base16Scheme.base0E else config.stylix.base16Scheme.base08;
-in
 {
+  pkgs,
+  lib,
+  config,
+  osConfig,
+  ...
+}: let
+  closeButtonColor =
+    if (osConfig.myOptions.desktopTheme.name == "caroline")
+    then config.stylix.base16Scheme.base0E
+    else config.stylix.base16Scheme.base08;
+in {
   imports = [
     ./hypridle.nix
   ];
@@ -29,7 +35,7 @@ in
       xwayland.enable = true;
       systemd.enable = false;
       plugins = with pkgs; [
-        hyprlandPlugins.hyprspace 
+        hyprlandPlugins.hyprspace
         #hyprlandPlugins.hypr-dynamic-cursors
         #hyprscroller
         hyprlandPlugins.hyprbars
@@ -62,21 +68,25 @@ in
           "QT_ENABLE_HIGHDPI_SCALING,0"
           "_JAVA_AWT_WM_NONREPARENTING,1"
         ];
-        exec-once = [
-          "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
-          "$wallpaper -q"
-          #"dbus-launch --exit-with-session waybar"
-          "$bar"
-          "hypridle"
-          "poweralertd"
-          "nm-applet"
-          "wl-clip-persist --clipboard regular"
-        ] ++ (if (osConfig.myOptions.defaultApps.terminal.command == "footclient") 
-          then ["foot --server"] 
-          else []);
-        monitor = 
-          if (osConfig.networking.hostName == "fluoride") 
-          then ["DP-2,2560x1440@59.95100,0x0,1" ",preferred,auto,1"] 
+        exec-once =
+          [
+            "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
+            "$wallpaper -q"
+            #"dbus-launch --exit-with-session waybar"
+            "$bar"
+            "hypridle"
+            "poweralertd"
+            "nm-applet"
+            "wl-clip-persist --clipboard regular"
+          ]
+          ++ (
+            if (osConfig.myOptions.defaultApps.terminal.command == "footclient")
+            then ["foot --server"]
+            else []
+          );
+        monitor =
+          if (osConfig.networking.hostName == "fluoride")
+          then ["DP-2,2560x1440@59.95100,0x0,1" ",preferred,auto,1"]
           else [",preferred,auto,1"];
         input = {
           kb_layout = "us";
@@ -94,11 +104,13 @@ in
             accel_profile = "flat";
             sensitivity = 0.5;
           }
-          /*{
+          /*
+            {
             name = "etps/2-elantech-touchpad";
             sensitivity = 0.3;
             accel_profile = "flat";
-          }*/
+          }
+          */
         ];
         misc = {
           disable_hyprland_logo = true;
@@ -160,7 +172,7 @@ in
             bar_padding = 15;
             bar_button_padding = 12;
             disable_initialization_message = true;
-            "col.text" = "rgb(${config.stylix.base16Scheme.base05})";
+            "col.text" = "rgb(${config.stylix.base16Scheme.base03})";
             bar_buttons_alignment = "left";
             bar_part_of_window = true;
             hyprbars-button = [
@@ -169,7 +181,8 @@ in
               "rgb(${config.stylix.base16Scheme.base0B}), 15, , hyprctl dispatch fullscreen 1"
             ];
           };
-          /*dynamic-cursors = {
+          /*
+            dynamic-cursors = {
             enabled = true;
             mode = "stretch";
             threshold = 2;
@@ -177,21 +190,26 @@ in
               limit = 1500;
               function = "quadratic";
             };
-          };*/
-          /*borders-plus-plus = {
+          };
+          */
+          /*
+            borders-plus-plus = {
             add_borders = 1;
             "col.border_1" = "rgb(242120)";
             border_size_1 = 10;
             natural_rounding = "yes";
-          };*/
+          };
+          */
         };
         dwindle = {
           pseudotile = true;
           preserve_split = true;
         };
-        /*master = {
-          new_status = "slave";
-          };*/
+        /*
+        master = {
+        new_status = "slave";
+        };
+        */
         bind = [
           "$mainMod, Return, exec, $terminal"
           "$mainMod, W, exec, $browser"
@@ -240,7 +258,7 @@ in
           "$mainMod SHIFT, right, movewindow, r"
           "$mainMod SHIFT, down, movewindow, d"
           "$mainMod SHIFT, up, movewindow, u"
-          
+
           "$mainMod CTRL, left, resizeactive, -l0 0"
           "$mainMod CTRL, right, resizeactive, 10 0"
           "$mainMod CTRL, down, resizeactive, 0 10"
@@ -285,7 +303,7 @@ in
           #"$mainMod Ctrl, Left, workspace, -1"
           "$mainMod SHIFT, S, togglespecialworkspace,"
           "$mainMod Ctrl, Up, movetoworkspacesilent, special"
-          
+
           "$mainMod, mouse_down, workspace, e-1"
           "$mainMod, mouse_up, workspace, e+1"
 
@@ -310,6 +328,9 @@ in
         bindm = [
           "$mainMod, mouse:272, movewindow"
           "$mainMod, mouse:273, resizewindow"
+        ];
+        windowrule = [
+          "plugin:hyprbars:title_color rgb(${config.stylix.base16Scheme.base05}), focus:1"
         ];
         windowrulev2 = [
           "suppressevent maximize, class:.*"
