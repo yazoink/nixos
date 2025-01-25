@@ -2,9 +2,12 @@ homeDir="/home/$3"
 installDir="$homeDir/.local/share/Etterna"
 applicationsDir="$homeDir/.local/share/applications"
 
+/run/current-system/sw/bin/chown -R "$(whoami)" "$installDir"
+/run/current-system/sw/bin/chmod -R 755 "$installDir"
+
 if [[ -d "$installDir" ]]; then
     rm -rf "$installDir"
-    /run/current-system/sw/bin/install -o "$3" "$1/Etterna" "$installDir"
+    /run/current-system/sw/bin/cp -r "$1/Etterna" "$installDir"
     rm -rf "$installDir/Announcers"
     rm -rf "$installDir/Assets"
     rm -rf "$installDir/NoteSkins"
@@ -14,7 +17,7 @@ else
     echo "\$1: $1"
     echo "\$2: $2"
     echo "\$3: $3"
-    /run/current-system/sw/bin/install -o "$3" "$1/Etterna" "$installDir"
+    /run/current-system/sw/bin/cp -r "$1/Etterna" "$installDir"
     [[ ! -d "$homeDir/.etterna" ]] && {
         mkdir "$homeDir/.etterna"
         mkdir "$homeDir/.etterna/Save"
