@@ -1,10 +1,13 @@
 # depends on theme module for theming
-{config, lib, osConfig, ...}:
-let
+{
+  config,
+  lib,
+  osConfig,
+  ...
+}: let
   #fontSize = osConfig.myOptions.desktopTheme.fonts.desktop.size + 4;
   fontSize = osConfig.myOptions.desktopTheme.fonts.desktop.size;
-in
-{
+in {
   options = {
     bundles.desktopBase.waybar.enable = lib.mkOption {
       type = lib.types.bool;
@@ -49,9 +52,11 @@ in
             icon-size = 50;
             sort-by-number = true;
           };
-          /*"niri/workspaces" = {
+          /*
+            "niri/workspaces" = {
             format = "{index}";
-          };*/
+          };
+          */
           "sway/workspaces" = {
             format = "{index}";
           };
@@ -100,7 +105,7 @@ in
             status-icons = {
               paused = "⏸ ";
             };
-          #ignored-players = ["firefox"];
+            #ignored-players = ["firefox"];
           };
           idle_inhibitor = {
             format = "{icon}";
@@ -130,57 +135,46 @@ in
           };
         };
       };
-      style = with config.stylix.base16Scheme; builtins.trace "set accent color in waybar" ''
-        * {
-          font-family: "${config.stylix.fonts.sansSerif.name}", "Font Awesome 6 Free";
-          font-weight: bold;
-          font-size: ${builtins.toString fontSize}pt;
-          padding: 0px;
-          margin: 0px;
-        }
-
-        #workspaces button:hover {
-          background-color: #${base00};
-        }
-
-        #memory,
-        #cpu,
-        #temperature,
-        #wireplumber,
-        #battery,
-        #custom-notification,
-        #idle_inhibitor,
-        #backlight,
-        #tray {
-          padding-left: 7px;
-          padding-right: 7px;
-        }
-
-        #tray {
-          padding-right: 12px;
-        }
-
-        tooltip {
-          background: #${base00};
-          border: 1px solid #${base03};
-        }
-
-        tooltip label {
-          color: #${base05};
-        }
-      '' + (if (osConfig.myOptions.bundles.desktopBase.windowManager == "hyprland")
-        then ''
-          .modules-left #workspaces button.focused,
-          .modules-left #workspaces button.active {
-            color: #${config.stylix.base16Scheme."${osConfig.desktopTheme.base16Accent}"};
+      style = with config.stylix.base16Scheme;
+        builtins.trace "set accent color in waybar" ''
+          * {
+            font-family: "${config.stylix.fonts.sansSerif.name}", "Font Awesome 6 Free";
+            font-weight: bold;
+            font-size: ${builtins.toString fontSize}pt;
+            padding: 0px;
+            margin: 0px;
           }
 
-          #workspaces button {
-            color: #${base05};
+          #workspaces button:hover {
+            background-color: #${base00};
+          }
+
+          #memory,
+          #cpu,
+          #temperature,
+          #wireplumber,
+          #battery,
+          #custom-notification,
+          #idle_inhibitor,
+          #backlight,
+          #tray {
             padding-left: 7px;
             padding-right: 7px;
           }
-        '' else ''
+
+          #tray {
+            padding-right: 12px;
+          }
+
+          tooltip {
+            background: #${base00};
+            border: 1px solid #${base03};
+          }
+
+          tooltip label {
+            color: #${base05};
+          }
+
           .modules-left #workspaces button.focused,
           .modules-left #workspaces button.active {
             color: #${base05};
@@ -191,7 +185,7 @@ in
             padding-left: 7px;
             padding-right: 7px;
           }
-          '');
+        '';
     };
   };
 }
