@@ -32,5 +32,6 @@
     ./far
     ./decay
     ./haze
+    ./fyry
   ];
 }
