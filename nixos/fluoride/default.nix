@@ -52,11 +52,11 @@
     };
     desktopTheme = {
       name = "paradise";
-      wallpaper = ./wallpapers/flowers-paradise.jpg;
+      wallpaper = ./wallpapers/painting5.jpg;
       terminalPadding = 24;
       sddm = {
         scale = 0.8;
-        wallpaper = ./wallpapers/flowers-paradise.jpg;
+        wallpaper = ./wallpapers/painting5.jpg;
       };
       firefoxCss.anotherOneline.enable = true;
     };

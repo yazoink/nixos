@@ -49,20 +49,20 @@ in {
         configuration {
         	modi:                       "drun,run,filebrowser,window";
             show-icons:                 false;
-            display-drun:               "";
-            display-run:                "";
-            display-filebrowser:        "";
-            display-window:             "";
+            display-drun:               "Apps";
+            display-run:                "Run";
+            display-filebrowser:        "Files";
+            display-window:             "Windows";
         	drun-display-format:        "{name} [<span weight='light' size='small'><i>({generic})</i></span>]";
         	window-format:              "{w} · {c} · {t}";
         }
 
         * {
             font: "${config.stylix.fonts.sansSerif.name} ${toString config.stylix.fonts.sizes.popups}";
-            background:     #${base00}FF;
-            background-alt: #${base01}FF;
+            background:     #${base00};
+            background-alt: #${base01};
             foreground:     #${base05};
-            selected:       #${base02}FF;
+            selected:       #${base02};
             active:         #${config.stylix.base16Scheme.${osConfig.desktopTheme.base16Accent}};
             urgent:         #${base08};
         }
@@ -81,7 +81,7 @@ in {
             active-background:           var(active);
             active-foreground:           var(background);
             selected-normal-background:  var(selected);
-            selected-normal-foreground:  var(background);
+            selected-normal-foreground:  var(foreground);
             selected-urgent-background:  var(active);
             selected-urgent-foreground:  var(background);
             selected-active-background:  var(urgent);
@@ -110,7 +110,7 @@ in {
             margin:                      0px;
             padding:                     0px;
             border:                      2px solid;
-            border-radius:               8px;
+            border-radius:               15px;
             border-color:                @border-colour;
             cursor:                      "default";
             /* Backgroud Colors */
