@@ -16,13 +16,13 @@
       enableZshIntegration = true;
       shellWrapperName = "y";
       plugins = {
-        #full-border = ./full-border;
+        full-border = ./full-border;
         yaziline = ./yaziline;
       };
       initLua = ''
-        --[[ require("full-border"):setup {
+        require("full-border"):setup {
           type = ui.Border.PLAIN
-        } --]]
+        }
 
         require("yaziline"):setup {
           separator_style = "liney",
