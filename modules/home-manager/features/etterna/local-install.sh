@@ -2,6 +2,9 @@ homeDir="/home/$3"
 installDir="$homeDir/.local/share/Etterna"
 applicationsDir="$homeDir/.local/share/applications"
 
+/run/current-system/sw/bin/chown "$3" "$installDir"
+/run/current-system/sw/bin/chmod 755 "$installDir"
+
 if [[ -d "$installDir" ]]; then
     rm -rf "$installDir"
     /run/current-system/sw/bin/cp -r "$1/Etterna" "$installDir"
@@ -25,6 +28,9 @@ else
         mv "$installDir/Themes" "$homeDir/.etterna"
     }
 fi
+
+/run/current-system/sw/bin/chown "$3" "$installDir"
+/run/current-system/sw/bin/chmod 755 "$installDir"
 
 /run/current-system/sw/bin/ln -sf "$homeDir/.etterna/Announcers" "$installDir"
 /run/current-system/sw/bin/ln -sf "$homeDir/.etterna/Assets" "$installDir"
