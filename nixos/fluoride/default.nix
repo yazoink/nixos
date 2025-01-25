@@ -51,7 +51,7 @@
       username = "gene";
     };
     desktopTheme = {
-      name = "paradise";
+      name = "atelier-savanna";
       wallpaper = ./wallpapers/painting5.jpg;
       terminalPadding = 24;
       sddm = {
