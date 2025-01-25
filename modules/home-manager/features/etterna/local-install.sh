@@ -21,6 +21,13 @@ else
     # copy Etterna dir
     /run/current-system/sw/bin/cp -r "$1/Etterna" "$installDir"
 
+    # rm dirs to be symlinked
+    rm -rf "$installDir/Announcers"
+    rm -rf "$installDir/Assets"
+    rm -rf "$installDir/NoteSkins"
+    rm -rf "$installDir/Songs"
+    rm -rf "$installDir/Themes"
+
     # if .etterna doesnt exist
     [[ ! -d "$homeDir/.etterna" ]] && {
         # make .etterna dir
