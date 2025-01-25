@@ -1,8 +1,11 @@
-{pkgs, config, lib, ...}:
-let
-  rosepineIcons = pkgs.callPackage ./rosepine-icons.nix {};
-in
 {
+  pkgs,
+  config,
+  lib,
+  ...
+}: let
+  rosepineIcons = pkgs.callPackage ./rosepine-icons.nix {};
+in {
   config = lib.mkIf (config.myOptions.bundles.desktopBase.enable && config.myOptions.desktopTheme.name == "rose-pine") {
     environment.systemPackages = [
       rosepineIcons
@@ -18,10 +21,10 @@ in
       };
       base16Scheme = {
         base00 = "191724";
-        base01 = "1F1D2E";
-        base02 = "26233A";
-        base03 = "6E6A86";
-        base04 = "908CAA";
+        base01 = "262432";
+        base02 = "343240";
+        base03 = "413F4E";
+        base04 = "838193";
         base05 = "E0DEF4";
         base06 = "E0DEF4";
         base07 = "56526E";
