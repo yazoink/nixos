@@ -1,8 +1,13 @@
-{pkgs, config, lib, ...}:
+{
+  pkgs,
+  config,
+  lib,
+  ...
+}:
 # I made this one
 {
   config = lib.mkIf (config.myOptions.bundles.desktopBase.enable && config.myOptions.desktopTheme.name == "peachy") {
-    desktopTheme.base16Accent = "base0F";
+    desktopTheme.base16Accent = "base0D";
 
     stylix = {
       base16Scheme = {
