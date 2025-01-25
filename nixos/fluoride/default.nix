@@ -52,11 +52,11 @@
     };
     desktopTheme = {
       name = "rose-pine";
-      wallpaper = ./wallpapers/painting5.jpg;
+      wallpaper = ./wallpapers/bay.JPG;
       terminalPadding = 24;
       sddm = {
         scale = 0.8;
-        wallpaper = ./wallpapers/painting5.jpg;
+        wallpaper = ./wallpapers/bay.JPG;
       };
       firefoxCss.anotherOneline.enable = true;
     };
