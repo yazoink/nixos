@@ -330,7 +330,7 @@ in {
           "$mainMod, mouse:273, resizewindow"
         ];
         windowrule = [
-          "plugin:hyprbars:title_color rgb(${config.stylix.base16Scheme.base05}), focus:1"
+          "plugin:hyprbars:title_color:rgb(${config.stylix.base16Scheme.base05}), focus:1"
         ];
         windowrulev2 = [
           "suppressevent maximize, class:.*"
