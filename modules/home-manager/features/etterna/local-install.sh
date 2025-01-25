@@ -2,23 +2,28 @@ homeDir="/home/$3"
 installDir="$homeDir/.local/share/Etterna"
 applicationsDir="$homeDir/.local/share/applications"
 
-/run/current-system/sw/bin/chown -R "$(whoami)" "$installDir"
-/run/current-system/sw/bin/chmod -R 755 "$installDir"
-
+# if Etterna dir exists
 if [[ -d "$installDir" ]]; then
-    rm -rf "$installDir"
-    /run/current-system/sw/bin/cp -r "$1/Etterna" "$installDir"
-    rm -rf "$installDir/Announcers"
-    rm -rf "$installDir/Assets"
-    rm -rf "$installDir/NoteSkins"
-    rm -rf "$installDir/Songs"
-    rm -rf "$installDir/Themes"
+    echo "$installDir exists"
+    # Replace dirs not in .etterna
+    rm -rf "$installDir/BackgroundEffects"
+    rm -rf "$installDir/BackgroundTransitions"
+    rm -rf "$installDir/BGAnimations"
+    rm -rf "$installDir/Data"
+    rm -rf "$installDir/Scripts"
+    /run/current-system/sw/bin/cp -r "$1/Etterna/BackgroundEffects" "$installDir"
+    /run/current-system/sw/bin/cp -r "$1/Etterna/BackgroundTransitions" "$installDir"
+    /run/current-system/sw/bin/cp -r "$1/Etterna/BGAnimations" "$installDir"
+    /run/current-system/sw/bin/cp -r "$1/Etterna/Data" "$installDir"
+    /run/current-system/sw/bin/cp -r "$1/Etterna/Scripts" "$installDir"
 else
-    echo "\$1: $1"
-    echo "\$2: $2"
-    echo "\$3: $3"
+    echo "$installDir doesn't exist"
+    # copy Etterna dir
     /run/current-system/sw/bin/cp -r "$1/Etterna" "$installDir"
+
+    # if .etterna doesnt exist
     [[ ! -d "$homeDir/.etterna" ]] && {
+        # make .etterna dir
         mkdir "$homeDir/.etterna"
         mkdir "$homeDir/.etterna/Save"
         mv "$installDir/Announcers" "$homeDir/.etterna"
@@ -27,18 +32,18 @@ else
         mv "$installDir/Songs" "$homeDir/.etterna"
         mv "$installDir/Themes" "$homeDir/.etterna"
     }
+
+    # symlink .etterna dirs to Etterna dir
+    /run/current-system/sw/bin/ln -sf "$homeDir/.etterna/Announcers" "$installDir"
+    /run/current-system/sw/bin/ln -sf "$homeDir/.etterna/Assets" "$installDir"
+    /run/current-system/sw/bin/ln -sf "$homeDir/.etterna/NoteSkins" "$installDir"
+    /run/current-system/sw/bin/ln -sf "$homeDir/.etterna/Save" "$installDir"
+    /run/current-system/sw/bin/ln -sf "$homeDir/.etterna/Songs" "$installDir"
+    /run/current-system/sw/bin/ln -sf "$homeDir/.etterna/Themes" "$installDir"
 fi
 
-/run/current-system/sw/bin/chown -R "$3" "$installDir"
-/run/current-system/sw/bin/chmod -R 755 "$installDir"
 
-/run/current-system/sw/bin/ln -sf "$homeDir/.etterna/Announcers" "$installDir"
-/run/current-system/sw/bin/ln -sf "$homeDir/.etterna/Assets" "$installDir"
-/run/current-system/sw/bin/ln -sf "$homeDir/.etterna/NoteSkins" "$installDir"
-/run/current-system/sw/bin/ln -sf "$homeDir/.etterna/Save" "$installDir"
-/run/current-system/sw/bin/ln -sf "$homeDir/.etterna/Songs" "$installDir"
-/run/current-system/sw/bin/ln -sf "$homeDir/.etterna/Themes" "$installDir"
-
+# Copy .desktop file
 [[ -f "$applicationsDir/etterna.desktop" ]] && \
     rm "$applicationsDir/etterna.desktop"
 
@@ -48,9 +53,11 @@ fi
 echo "Icon=$homeDir/.local/share/icons/etterna.png" >> "$applicationsDir/etterna.desktop"
 echo "Exec=$installDir/Etterna" >> "$applicationsDir/etterna.desktop"
 
+# chown/chmod .etterna
 /run/current-system/sw/bin/chown -R "$3:users" "$homeDir/.etterna"
 /run/current-system/sw/bin/chmod -R 755 "$homeDir/.etterna"
 
+# chown/chmod Etterna
 /run/current-system/sw/bin/chown -R "$3:users" "$installDir"
 /run/current-system/sw/bin/chmod -R 755 "$installDir"
 /run/current-system/sw/bin/chmod +x "$installDir/Etterna"
