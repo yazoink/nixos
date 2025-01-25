@@ -21,26 +21,245 @@
     ];
     programs.nixvim = {
       plugins = {
-        lualine = {
+        # lualine = {
+        #   enable = true;
+        #   settings = {
+        #     alwaysDivideMiddle = true;
+        #     ignoreFocus = ["neo-tree"];
+        #     globalstatus = true;
+        #     options = {
+        #       icons_enabled = false;
+        #       section_separators = {
+        #         left = "";
+        #         right = "";
+        #       };
+        #       component_separators = {
+        #         left = "";
+        #         right = "";
+        #       };
+        #       theme = "auto";
+        #     };
+        #   };
+        # };
+
+        plugins.lualine = {
           enable = true;
+          lazyLoad.settings.event = "BufEnter";
           settings = {
-            alwaysDivideMiddle = true;
-            ignoreFocus = ["neo-tree"];
-            globalstatus = true;
             options = {
-              icons_enabled = false;
-              section_separators = {
-                left = "";
-                right = "";
+              theme = {
+                normal = {
+                  a = {
+                    bg = "#nil";
+                  };
+                  b = {
+                    bg = "nil";
+                  };
+                  c = {
+                    bg = "nil";
+                  };
+                  z = {
+                    bg = "nil";
+                  };
+                  y = {
+                    bg = "nil";
+                  };
+                };
               };
-              component_separators = {
-                left = "";
-                right = "";
+              globalstatus = true;
+              disabled_filetypes = {
+                statusline = [
+                  "dashboard"
+                  "alpha"
+                  "starter"
+                  "snacks_dashboard"
+                ];
               };
-              theme = "auto";
+            };
+            inactive_sections = {
+              lualine_x = [
+                "filename"
+                "filetype"
+              ];
+            };
+            sections = {
+              lualine_a = [
+                {
+                  __unkeyed = "mode";
+                  fmt = "string.lower";
+                  color = {
+                    fg = config.stylix.base16Scheme.base04;
+                    bg = "nil";
+                  };
+                  separator.left = "";
+                  separator.right = "";
+                }
+              ];
+              lualine_b = [
+                {
+                  __unkeyed = "branch";
+                  icon.__unkeyed = "";
+                  color = {
+                    fg = config.stylix.base16Scheme.base04;
+                    bg = "nil";
+                  };
+                  separator.left = "";
+                  separator.right = "";
+                }
+                {
+                  __unkeyed = "diff";
+                  separator.left = "";
+                  separator.right = "";
+                }
+              ];
+              lualine_c = [
+                {
+                  __unkeyed = "diagnostic";
+                  symbols = {
+                    error = " ";
+                    warn = " ";
+                    info = " ";
+                    hint = "󰝶 ";
+                  };
+                  color = {
+                    fg = config.stylix.base16Scheme.base08;
+                    bg = "nil";
+                  };
+                  separator.left = "";
+                  separator.right = "";
+                }
+              ];
+              lualine_x = [""];
+              lualine_y = [
+                {
+                  __unkeyed = "filetype";
+                  icon_only = true;
+                  separator.left = "";
+                  separator.right = "";
+                }
+                {
+                  __unkeyed = "filename";
+                  symbols = {
+                    modified = "";
+                    readonly = "👁️";
+                    unnamed = "";
+                  };
+                  color = {
+                    fg = config.stylix.base16Scheme.base05;
+                    bg = "nil";
+                  };
+                  separator.left = "";
+                  separator.right = "";
+                }
+              ];
+              lualine_z = [
+                {
+                  __unkeyed = "location";
+                  color = {
+                    fg = config.stylix.base16Scheme.base0B;
+                    bg = "nil";
+                  };
+                  separator.left = "";
+                  separator.right = "";
+                }
+              ];
             };
           };
         };
+
+        bufferline = {
+          enable = true;
+          settings = {
+            options = {
+              separator_style = "thin"; # “slant”, “padded_slant”, “slope”, “padded_slope”, “thick”, “thin”
+            };
+            highlights = lib.mkIf config.colorschemes.base16.enable {
+              fill = {
+                fg = "none";
+                bg = "none";
+              };
+              background = {
+                fg = "none";
+                bg = "none";
+              };
+              buffer = {
+                fg = "none";
+                bg = "none";
+              };
+              buffer_selected = {
+                fg = config.stylix.base16Scheme.base05;
+                bg = config.stylix.base16Scheme.base01;
+                italic = false;
+              };
+              buffer_visible = {
+                fg = config.stylix.base16Scheme.base05;
+                bg = "none";
+              };
+              close_button = {
+                fg = "none";
+                bg = "none";
+              };
+              close_button_visible = {
+                fg = config.stylix.base16Scheme.base03;
+                bg = "none";
+              };
+              close_button_selected = {
+                fg = config.stylix.base16Scheme.base08;
+                bg = config.stylix.base16Scheme.base01;
+              };
+              indicator_selected = {
+                fg = config.stylix.base16Scheme.base0E;
+                bg = config.stylix.base16Scheme.base01;
+              };
+              indicator_visible = {
+                fg = config.stylix.base16Scheme.base0E;
+                bg = "none";
+              };
+              separator = {
+                fg = config.stylix.base16Scheme.base00;
+                bg = config.stylix.base16Scheme.base00;
+              };
+              separator_selected = {
+                fg = config.stylix.base16Scheme.base00;
+                bg = config.stylix.base16Scheme.base00;
+              };
+              separator_visible = {
+                fg = config.stylix.base16Scheme.base00;
+                bg = config.stylix.base16Scheme.base00;
+              };
+              modified = {
+                fg = config.stylix.base16Scheme.base03;
+                bg = config.stylix.base16Scheme.base00;
+              };
+              modified_visible = {
+                fg = config.stylix.base16Scheme.base00;
+                bg = config.stylix.base16Scheme.base00;
+              };
+              modified_selected = {
+                fg = config.stylix.base16Scheme.base0B;
+                bg = config.stylix.base16Scheme.base01;
+              };
+              tab_close = {
+                fg = config.stylix.base16Scheme.base00;
+                bg = config.stylix.base16Scheme.base00;
+              };
+              duplicate = {
+                bg = "none";
+                italic = false;
+              };
+              duplicate_visible = {
+                bg = "none";
+                italic = false;
+              };
+              duplicate_selected = {
+                fg = "none";
+                bg = config.stylix.base16Scheme.base01;
+                italic = false;
+              };
+            };
+          };
+        };
+      };
 
         floaterm = {
           enable = true;
