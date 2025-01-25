@@ -21,31 +21,30 @@
       };
       packages = with pkgs; [pywalfox-native];
       file = {
-        ".cache/wal/colors.json".text = with config.stylix.base16Scheme;
-          builtins.trace "remember to run pywalfox install and set background light to 1, background extra to 2 and accent secondary to 3. Under palette template, set toolbar field highlight and popup highlight to accent secondary" ''
-            {
-              "wallpaper": "${config.stylix.image}",
-              "alpha": "100",
-              "colors": {
-                "color0": "#${base00}",
-                "color1": "#${base01}",
-                "color2": "#${base02}",
-                "color3": "#${config.stylix.base16Scheme.${osConfig.desktopTheme.base16Accent}}",
-                "color4": "",
-                "color5": "",
-                "color6": "",
-                "color7": "#${base05}",
-                "color8": "",
-                "color9": "",
-                "color10": "#${base05}",
-                "color11": "",
-                "color12": "",
-                "color13": "#${config.stylix.base16Scheme.${osConfig.desktopTheme.base16Accent}}",
-                "color14": "",
-                "color15": "#${base05}"
-              }
+        ".cache/wal/colors.json".text = with config.stylix.base16Scheme; ''
+          {
+            "wallpaper": "${config.stylix.image}",
+            "alpha": "100",
+            "colors": {
+              "color0": "#${base00}",
+              "color1": "#${base01}",
+              "color2": "#${base02}",
+              "color3": "#${config.stylix.base16Scheme.${osConfig.desktopTheme.base16Accent}}",
+              "color4": "",
+              "color5": "",
+              "color6": "",
+              "color7": "#${base05}",
+              "color8": "",
+              "color9": "",
+              "color10": "#${base05}",
+              "color11": "",
+              "color12": "",
+              "color13": "#${config.stylix.base16Scheme.${osConfig.desktopTheme.base16Accent}}",
+              "color14": "",
+              "color15": "#${base05}"
             }
-          '';
+          }
+        '';
       };
     };
 

@@ -1,5 +1,9 @@
-{config, lib, osConfig, ...}:
 {
+  config,
+  lib,
+  osConfig,
+  ...
+}: {
   options = {
     bundles.base.yazi.enable = lib.mkOption {
       type = lib.types.bool;
@@ -12,13 +16,13 @@
       enableZshIntegration = true;
       shellWrapperName = "y";
       plugins = {
-        full-border = ./full-border;
+        #full-border = ./full-border;
         yaziline = ./yaziline;
       };
       initLua = ''
-        require("full-border"):setup {
+        --[[ require("full-border"):setup {
           type = ui.Border.PLAIN
-        }
+        } --]]
 
         require("yaziline"):setup {
           separator_style = "liney",
