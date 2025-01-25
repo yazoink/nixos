@@ -19,25 +19,24 @@ if [[ -d "$installDir" ]]; then
 else
     echo "$installDir doesn't exist"
     # copy Etterna dir
-    /run/current-system/sw/bin/cp -r "$1/Etterna" "$installDir"
-
-    # rm dirs to be symlinked
-    rm -rf "$installDir/Announcers"
-    rm -rf "$installDir/Assets"
-    rm -rf "$installDir/NoteSkins"
-    rm -rf "$installDir/Songs"
-    rm -rf "$installDir/Themes"
+    mkdir -p "$installDir"
+    /run/current-system/sw/bin/cp -r "$1/Etterna/Etterna" "$installDir"
+    /run/current-system/sw/bin/cp -r "$1/Etterna/BackgroundEffects" "$installDir"
+    /run/current-system/sw/bin/cp -r "$1/Etterna/BackgroundTransitions" "$installDir"
+    /run/current-system/sw/bin/cp -r "$1/Etterna/BGAnimations" "$installDir"
+    /run/current-system/sw/bin/cp -r "$1/Etterna/Data" "$installDir"
+    /run/current-system/sw/bin/cp -r "$1/Etterna/Scripts" "$installDir"
 
     # if .etterna doesnt exist
     [[ ! -d "$homeDir/.etterna" ]] && {
         # make .etterna dir
-        mkdir "$homeDir/.etterna"
-        mkdir "$homeDir/.etterna/Save"
-        mv "$installDir/Announcers" "$homeDir/.etterna"
-        mv "$installDir/Assets" "$homeDir/.etterna"
-        mv "$installDir/NoteSkins" "$homeDir/.etterna"
-        mv "$installDir/Songs" "$homeDir/.etterna"
-        mv "$installDir/Themes" "$homeDir/.etterna"
+        mkdir -p "$homeDir/.etterna"
+        mkdir -p "$homeDir/.etterna/Save"
+        cp "$1/Etterna/Announcers" "$homeDir/.etterna"
+        cp "$1/Etterna/Assets" "$homeDir/.etterna"
+        cp "$1/Etterna/NoteSkins" "$homeDir/.etterna"
+        cp "$1/Etterna/Songs" "$homeDir/.etterna"
+        cp "$1/Etterna/Themes" "$homeDir/.etterna"
     }
 
     # symlink .etterna dirs to Etterna dir
