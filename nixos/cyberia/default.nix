@@ -46,16 +46,18 @@
       };
     };
     desktopTheme = {
-      name = "levuaska";
+      name = "paradise";
       smallBars = true;
       # fonts.terminal = {
       #   name = "JetBrains Mono";
       #   size = 12;
       # };
-      wallpaper = ./wallpapers/levuaska/clouds5.jpg;
+      #wallpaper = ./wallpapers/levuaska/clouds5.jpg;
+      wallpaper = ./wallpapers/painting3.jpg;
       sddm = {
         scale = 1.3;
-        wallpaper = ./wallpapers/levuaska/flowers.jpg;
+        #wallpaper = ./wallpapers/levuaska/flowers.jpg;
+        wallpaper = ./wallpapers/painting3.jpg;
       };
       firefoxCss.anotherOneline.enable = true;
     };
