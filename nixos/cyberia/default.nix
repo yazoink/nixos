@@ -57,11 +57,11 @@
         size = 11;
       };
       #wallpaper = ./wallpapers/levuaska/clouds5.jpg;
-      wallpaper = ./wallpapers/painting2.jpg;
+      wallpaper = ./wallpapers/paradise/clouds_paradise.jpg;
       sddm = {
         scale = 1.3;
         #wallpaper = ./wallpapers/levuaska/flowers.jpg;
-        wallpaper = ./wallpapers/painting2.jpg;
+        wallpaper = ./wallpapers/paradise/clouds_paradise.jpg;
       };
       firefoxCss.stylix.enable = true;
     };
