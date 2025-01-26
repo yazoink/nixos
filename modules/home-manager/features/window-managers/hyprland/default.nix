@@ -142,7 +142,7 @@ in {
           #"col.active_border" = builtins.trace "set accent color in hyprland config" "rgb(${config.stylix.base16Scheme.${osConfig.desktopTheme.base16Accent}})";
         };
         decoration = {
-          rounding = 13;
+          rounding = 12;
           blur.enabled = false;
           shadow = {
             enabled = true;
