@@ -66,6 +66,7 @@
 
         .entry #selected {
           background: #${base01};
+          border-color: #${bas01};
         }
 
         #img {
