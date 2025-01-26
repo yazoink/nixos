@@ -51,7 +51,7 @@
         #input {
           margin-bottom: 10px;
           border-radius: 10px;
-          background: #${base01};
+          background: #${base00};
         }
 
         #inner-box {
@@ -64,7 +64,7 @@
           border: transparent;
         }
 
-        .entry > #selected {
+        .entry #selected {
           background: #${base01};
         }
 
