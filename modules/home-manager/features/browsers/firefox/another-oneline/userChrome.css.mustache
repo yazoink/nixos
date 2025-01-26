@@ -70,11 +70,6 @@
   transition: .15s !important;
 }
 
-/*  Removes the background from the urlbar while not in use  */
-#urlbar:not(:hover):not([breakout][breakout-extend]) > #urlbar-background {
-  box-shadow: none !important;
-  background: #0000 !important;
-}
 
 /*  Removes annoying border  */
 #navigator-toolbox {
@@ -170,4 +165,16 @@
   height: 55px !important; 
   margin-bottom: -12px !important;
   margin-top: -12px !important;
+}
+
+#urlbar > #urlbar-background {
+  box-shadow: none !important;
+  background: #{{base01}} !important;
+  border: transparent;
+  border-radius: 10px;
+}
+
+#urlbar:not(:hover):not([breakout][breakout-extend]) > #urlbar-background {
+  box-shadow: none !important;
+  background: #{{base01}} !important;
 }
