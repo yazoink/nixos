@@ -51,6 +51,7 @@
         #input {
           margin-bottom: 10px;
           border-radius: 10px;
+          background: #${base01};
         }
 
         #inner-box {
@@ -61,6 +62,10 @@
           padding: 3px;
           border-radius: 10px;
           border: transparent;
+        }
+
+        #selected {
+          background: #${base01};
         }
 
         #img {
