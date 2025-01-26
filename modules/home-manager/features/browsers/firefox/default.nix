@@ -19,37 +19,37 @@
       sessionVariables = {
         MOZ_USE_XINPUT2 = 1;
       };
-      packages = with pkgs; [pywalfox-native];
-      file = {
-        ".cache/wal/colors.json".text = with config.stylix.base16Scheme; ''
-          {
-            "wallpaper": "${config.stylix.image}",
-            "alpha": "100",
-            "colors": {
-              "color0": "#${base00}",
-              "color1": "#${base01}",
-              "color2": "#${base02}",
-              "color3": "#${config.stylix.base16Scheme.${osConfig.desktopTheme.base16Accent}}",
-              "color4": "#${base05}",
-              "color5": "#${base05}",
-              "color6": "#${base05}",
-              "color7": "#${base05}",
-              "color8": "#${base05}",
-              "color9": "#${base05}",
-              "color10": "#${base05}",
-              "color11": "#${base05}",
-              "color12": "#${base05}",
-              "color13": "#${config.stylix.base16Scheme.${osConfig.desktopTheme.base16Accent}}",
-              "color14": "#${base05}",
-              "color15": "#${base05}",
-              "color16": "#${base05}",
-              "color17": "#${base05}",
-              "color18": "#${base05}",
-              "color19": "#${base05}"
-            }
-          }
-        '';
-      };
+      # packages = with pkgs; [pywalfox-native];
+      # file = {
+      #   ".cache/wal/colors.json".text = with config.stylix.base16Scheme; ''
+      #     {
+      #       "wallpaper": "${config.stylix.image}",
+      #       "alpha": "100",
+      #       "colors": {
+      #         "color0": "#${base00}",
+      #         "color1": "#${base01}",
+      #         "color2": "#${base02}",
+      #         "color3": "#${config.stylix.base16Scheme.${osConfig.desktopTheme.base16Accent}}",
+      #         "color4": "#${base05}",
+      #         "color5": "#${base05}",
+      #         "color6": "#${base05}",
+      #         "color7": "#${base05}",
+      #         "color8": "#${base05}",
+      #         "color9": "#${base05}",
+      #         "color10": "#${base05}",
+      #         "color11": "#${base05}",
+      #         "color12": "#${base05}",
+      #         "color13": "#${config.stylix.base16Scheme.${osConfig.desktopTheme.base16Accent}}",
+      #         "color14": "#${base05}",
+      #         "color15": "#${base05}",
+      #         "color16": "#${base05}",
+      #         "color17": "#${base05}",
+      #         "color18": "#${base05}",
+      #         "color19": "#${base05}"
+      #       }
+      #     }
+      #   '';
+      # };
     };
 
     programs.firefox = {
@@ -114,8 +114,8 @@
             #foxytab
             libredirect
             floccus
-            #firefox-color
-            pywalfox
+            firefox-color
+            # pywalfox
             control-panel-for-twitter
           ]
           ++ (
