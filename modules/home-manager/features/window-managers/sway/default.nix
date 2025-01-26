@@ -8,7 +8,7 @@
   barPadding =
     if osConfig.myOptions.desktopTheme.smallBars
     then 10
-    else 14;
+    else 15;
 in {
   imports = [./hypridle.nix];
   config = lib.mkIf osConfig.bundles.desktopBase.sway.enable {
