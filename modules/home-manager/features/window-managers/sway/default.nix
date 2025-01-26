@@ -7,7 +7,7 @@
 }: let
   barPadding =
     if osConfig.myOptions.desktopTheme.smallBars
-    then 12
+    then 11
     else 14;
 in {
   imports = [./hypridle.nix];
