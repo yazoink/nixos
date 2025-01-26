@@ -37,9 +37,9 @@ in {
         layer = "top";
         control-center-layer = "top";
         cssPriority = "application";
-        control-center-margin-top = 10;
-        control-center-margin-bottom = 10;
-        control-center-margin-right = 10;
+        control-center-margin-top = 5;
+        control-center-margin-bottom = 5;
+        control-center-margin-right = 5;
         notification-2fa-action = false;
         widgets = [
           "inhibitors"
