@@ -137,23 +137,19 @@
   box-shadow: none !important;
 }
 
-.tabbrowser-tab {
-  margin: 5px;
-}
-
 .tabbrowser-tab[selected] .tab-content {
   background-color: #{{base01}} !important;
   color: #{{base05}} !important;
-  border-radius: 10px;
+  border-radius: 10px !important;
 }
 
 .tabbrowser-tab:hover:not([selected]) .tab-content {
   background-color: #{{base01}} !important;
-  border-radius: 10px;
+  border-radius: 10px !important;
 }
 
 .tabbrowser-tab:not([selected]) .tab-content {
-  border-radius: 10px;
+  border-radius: 10px !important;
 }
 
 .toolbarbutton-icon:hover, 
@@ -163,9 +159,9 @@
 }
 
 #urlbar-background:hover, #urlbar:hover {
-  background: #{{base00}};
-  border: transparent;
-  box-shadow: none;
+  background: #{{base00}} !important;
+  border: transparent !important;
+  box-shadow: none !important;
 }
 
 #nav-bar {
@@ -173,5 +169,5 @@
 }
 
 #tabbrowser-tabs {
-  border-bottom: 5px solid #{{base00}};
+  border-bottom: 5px solid #{{base00}} !important;
 }

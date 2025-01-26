@@ -31,7 +31,7 @@
         };
       };
       sddm = {
-        scale = 1.3;
+        scale = 1.4;
         # wallpaper = ./wallpapers/flowers-downscaled.jpg;
         wallpaper = ./wallpapers/clouds-levuaska.jpg;
       };
