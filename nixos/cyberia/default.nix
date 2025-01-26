@@ -47,7 +47,7 @@
     };
     desktopTheme = {
       # name = "paradise";
-      name = "biscuit";
+      name = "gruvbox-material-dark-hard";
       smallBars = true;
       fonts.terminal = {
         name = "Cascadia Code";
@@ -57,11 +57,11 @@
         name = "Rubik";
         size = 11;
       };
-      wallpaper = ./wallpapers/clouds5.jpg;
+      wallpaper = ./wallpapers/painting3.jpg;
       # wallpaper = ./wallpapers/paradise/clouds_paradise.jpg;
       sddm = {
         scale = 1.3;
-        wallpaper = ./wallpapers/clouds5.jpg;
+        wallpaper = ./wallpapers/painting3.jpg;
         # wallpaper = ./wallpapers/paradise/clouds_paradise.jpg;
       };
       firefoxCss.stylix.enable = true;
