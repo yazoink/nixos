@@ -47,6 +47,7 @@
     };
     desktopTheme = {
       name = "levuaska";
+      smallBars = true;
       # fonts.terminal = {
       #   name = "JetBrains Mono";
       #   size = 12;
