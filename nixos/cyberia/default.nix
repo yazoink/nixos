@@ -47,7 +47,7 @@
     };
     desktopTheme = {
       # name = "paradise";
-      name = "levuaska";
+      name = "biscuit";
       smallBars = true;
       fonts.terminal = {
         name = "Cascadia Code";
@@ -57,11 +57,11 @@
         name = "Rubik";
         size = 11;
       };
-      wallpaper = ./wallpapers/levuaska/clouds5.jpg;
+      wallpaper = ./wallpapers/clouds5.jpg;
       # wallpaper = ./wallpapers/paradise/clouds_paradise.jpg;
       sddm = {
         scale = 1.3;
-        wallpaper = ./wallpapers/levuaska/flowers.jpg;
+        wallpaper = ./wallpapers/clouds5.jpg;
         # wallpaper = ./wallpapers/paradise/clouds_paradise.jpg;
       };
       firefoxCss.stylix.enable = true;
