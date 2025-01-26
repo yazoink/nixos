@@ -76,6 +76,10 @@
   transition: .15s !important;
 }
 
+#urlbar-background:hover {
+  background-color: none;
+}
+
 /*  Removes the background from the urlbar while not in use  */
 #urlbar:not(:hover):not([breakout][breakout-extend]) > #urlbar-background {
   box-shadow: none !important;
@@ -161,11 +165,6 @@
 #star-button-box:hover {
   background-color: #{{base01}} !important;
 }
-
-#tabbrowser-tabs {border: none;}
-#tabbrowser-tabs .tab-icon-stack  {padding-bottom: 5px !important}
-#tabbrowser-tabs .tabbrowser-tab .tab-label-container {padding-bottom: 5px !important; height: var(--tab-min-height) !important;}
-#tabbrowser-tabs .tabbrowser-tab .tab-close-button {padding-block: 0px 3px !important;}
 
 #nav-bar {
   border: none !important;
