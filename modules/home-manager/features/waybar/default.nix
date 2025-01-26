@@ -27,7 +27,7 @@ in {
         waybar = {
           layer = "top";
           position = "top";
-          height = 36;
+          height = 42;
           spacing = 5;
           modules-left = [
             #"niri/workspaces"

@@ -168,7 +168,6 @@ in {
             bar_text_font = "${config.stylix.fonts.sansSerif.name} Bold";
             bar_text_size = config.stylix.fonts.sizes.applications;
             bar_text_align = "center";
-            #bar_part_of_window = true;
             bar_precedence_over_border = true;
             bar_padding = 15;
             bar_button_padding = 12;
@@ -342,7 +341,7 @@ in {
           "float, title:^(Open Folder)(.*)$"
           "float, title:^(Save As)(.*)$"
           "fullscreen, title:^((E|e)tterna)(.*)$"
-          "size 640 360, title:(Picture-in-Picture)"
+          # "size 640 360, title:(Picture-in-Picture)"
           "pin, title:^(Picture-in-Picture)$"
           "float, title:^(Picture-in-Picture)$"
           "float, title:^(Authentication Required)$"
@@ -352,6 +351,7 @@ in {
           "plugin:hyprbars:nobar, title:^(File Upload)$"
           "plugin:hyprbars:nobar, title:^(Empty Trash)$"
           "plugin:hyprbars:nobar, title:^(File Manager Preferences)$"
+          "plugin:hyprbars:nobar, title:^(Choose a color)$"
         ];
         animations = {
           enabled = true;
