@@ -146,9 +146,11 @@ in {
           blur.enabled = false;
           shadow = {
             enabled = true;
+            ignore_window = true;
             range = 20;
-            render_power = 2;
-            color = "rgba(00000070)";
+            offset = [0 2];
+            render_power = 4;
+            color = "rgba(0000002A)";
           };
         };
         plugin = {
