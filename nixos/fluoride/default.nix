@@ -54,7 +54,7 @@
         scale = 0.8;
         wallpaper = ./wallpapers/bay.JPG;
       };
-      firefoxCss.anotherOneline.enable = true;
+      firefoxCss.stylix.enable = true;
     };
     bundles = {
       desktopBase.windowManager = "hyprland";

@@ -151,7 +151,7 @@
               type = lib.types.path;
             };
           };
-          firefoxUiFix = {
+          stylix = {
             enable = lib.mkOption {
               type = lib.types.bool;
               default = false;

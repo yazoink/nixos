@@ -63,7 +63,7 @@
         #wallpaper = ./wallpapers/levuaska/flowers.jpg;
         wallpaper = ./wallpapers/painting3.jpg;
       };
-      firefoxCss.anotherOneline.enable = true;
+      firefoxCss.stylix.enable = true;
     };
     bundles = {
       base.starshipFormat = 2;

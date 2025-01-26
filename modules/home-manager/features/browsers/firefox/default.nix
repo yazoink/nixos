@@ -10,7 +10,7 @@
   imports = [
     ./shyfox
     ./firefox-ui-fix
-    ./another-oneline
+    ./stylix
   ];
 
   config = lib.mkIf (osConfig.myOptions.bundles.desktopBase.enable && osConfig.myOptions.defaultApps.webBrowser.command == "firefox") {
