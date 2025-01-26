@@ -145,18 +145,15 @@
   background-color: #{{base01}} !important;
   color: #{{base05}} !important;
   border-radius: 10px;
-  border: 2px solid #{{base00}};
 }
 
 .tabbrowser-tab:hover:not([selected]) .tab-content {
   background-color: #{{base01}} !important;
   border-radius: 10px;
-  border: 2px solid #{{base00}};
 }
 
 .tabbrowser-tab:not([selected]) .tab-content {
   border-radius: 10px;
-  border: 2px solid #{{base00}};
 }
 
 .toolbarbutton-icon:hover, 
@@ -164,6 +161,11 @@
 #star-button-box:hover {
   background-color: #{{base01}} !important;
 }
+
+#tabbrowser-tabs {border: none;}
+#tabbrowser-tabs .tab-icon-stack  {padding-bottom: 5px !important}
+#tabbrowser-tabs .tabbrowser-tab .tab-label-container {padding-bottom: 5px !important; height: var(--tab-min-height) !important;}
+#tabbrowser-tabs .tabbrowser-tab .tab-close-button {padding-block: 0px 3px !important;}
 
 #nav-bar {
   border: none !important;
