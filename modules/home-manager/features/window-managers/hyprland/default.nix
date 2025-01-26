@@ -132,8 +132,8 @@ in {
           workspace_swipe_direction_lock = false;
         };
         general = {
-          gaps_in = 10;
-          gaps_out = 15;
+          gaps_in = 15;
+          gaps_out = 10;
           border_size = 2;
           layout = "dwindle";
           allow_tearing = false;
