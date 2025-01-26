@@ -17,6 +17,7 @@
     desktopTheme = {
       name = "everblush";
       wallpaper = ./wallpapers/flowers-downscaled.jpg;
+      smallBars = true;
       fonts = {
         desktop = {
           name = "Rubik";
@@ -48,6 +49,7 @@
       eduke32.enable = true;
       prismlauncher.enable = true;
       superTuxKart.enable = true;
+      virtManager.enable = true;
     };
     hardwareFeatures = {
       ssd.enable = true;
