@@ -51,10 +51,10 @@
       #   name = "JetBrains Mono";
       #   size = 12;
       # };
-      wallpaper = ./wallpapers/beach.jpeg;
+      wallpaper = ./wallpapers/levuaska/clouds5.jpg;
       sddm = {
         scale = 1.3;
-        wallpaper = ./wallpapers/beach.jpeg;
+        wallpaper = ./wallpapers/levuaska/flowers.jpg;
       };
       firefoxCss.anotherOneline.enable = true;
     };
