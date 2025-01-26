@@ -48,10 +48,14 @@
     desktopTheme = {
       name = "paradise";
       smallBars = true;
-      # fonts.terminal = {
-      #   name = "JetBrains Mono";
-      #   size = 12;
-      # };
+      fonts.terminal = {
+        name = "JetBrains Mono";
+        size = 12;
+      };
+      fonts.desktop = {
+        name = "Rubik";
+        size = 12;
+      };
       #wallpaper = ./wallpapers/levuaska/clouds5.jpg;
       wallpaper = ./wallpapers/painting3.jpg;
       sddm = {
