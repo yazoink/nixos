@@ -59,7 +59,7 @@
 --TabsBorder: 8; /*  Doesnt do anything on small layout  *//*  Default: 8  */
 --NavbarHeightSmall: calc(var(--TabsHeight) + var(--TabsBorder))  /*  Only on small layout  *//*  Default: calc(var(--TabsHeight) + var(--TabsBorder))  *//*  Default as a number: 44  */}
 
-@media screen and (max-width:1325px)    /*  The window is not enough wide for a one line layout  */
+@media screen and (max-width:5000px)    /*  The window is not enough wide for a one line layout  */
 {:root #nav-bar{padding: 0 5px 0 5px!important; height: calc(var(--NavbarHeightSmall) * 1px) !important} toolbarspring{display: none !important;} #TabsToolbar, #nav-bar{transition: margin-top .25s !important}}
 #nav-bar, #PersonalToolbar{background-color: #0000 !important;background-image: none !important; box-shadow: none !important} #nav-bar{margin-left: 3px;} .tab-background, .tab-stack { min-height: calc(var(--TabsHeight) * 1px) !important}
 
@@ -167,7 +167,7 @@
 }
 
 #urlbar-wrapper {
-  height: 36px !important; 
+  height: 45px !important; 
   margin-bottom: -12px !important;
   margin-top: -12px !important;
 }
