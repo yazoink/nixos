@@ -30,17 +30,17 @@
           size = 12;
         };
       };
-      # sddm = {
-      #   scale = 1.3;
-      #   # wallpaper = ./wallpapers/flowers-downscaled.jpg;
-      #   wallpaper = ./wallpapers/clouds-levuaska.jpg;
-      # };
+      sddm = {
+        scale = 1.3;
+        # wallpaper = ./wallpapers/flowers-downscaled.jpg;
+        wallpaper = ./wallpapers/clouds-levuaska.jpg;
+      };
       firefoxCss.anotherOneline.enable = true;
     };
     bundles = {
       #base.starshipFormat = 2;
       desktopBase.windowManager = "sway";
-      desktopBase.displayManager = "regreet";
+      desktopBase.displayManager = "sddm";
       desktopFull.enable = true;
       desktopFull.vesktop.bloat = false;
     };
