@@ -46,8 +46,8 @@
       };
     };
     desktopTheme = {
-      # name = "paradise";
-      name = "everblush";
+      name = "paradise";
+      # name = "everblush";
       smallBars = true;
       fonts.terminal = {
         name = "Cascadia Code";
@@ -57,12 +57,12 @@
         name = "Rubik";
         size = 11;
       };
-      wallpaper = ./wallpapers/beach.jpeg;
-      # wallpaper = ./wallpapers/paradise/clouds_paradise.jpg;
+      # wallpaper = ./wallpapers/clouds6.jpg;
+      wallpaper = ./wallpapers/paradise/clouds_paradise.jpg;
       sddm = {
         scale = 1.3;
-        wallpaper = ./wallpapers/beach.jpeg;
-        # wallpaper = ./wallpapers/paradise/clouds_paradise.jpg;
+        # wallpaper = ./wallpapers/clouds6.jpg;
+        wallpaper = ./wallpapers/paradise/clouds_paradise.jpg;
       };
       firefoxCss.stylix.enable = true;
     };
