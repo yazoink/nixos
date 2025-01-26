@@ -64,7 +64,7 @@
           border: transparent;
         }
 
-        #selected {
+        .entry > #selected {
           background: #${base01};
         }
 
