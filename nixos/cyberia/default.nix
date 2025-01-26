@@ -73,6 +73,7 @@
       spaceCadetPinball.enable = true;
       prismlauncher.enable = true;
       retroarch.enable = true;
+      lutgen.enable = true;
     };
     hardwareFeatures = {
       diskBurner.enable = true;

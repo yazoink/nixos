@@ -235,6 +235,10 @@
           type = lib.types.bool;
           default = false;
         };
+        lutgen.enable = lib.mkOption {
+          type = lib.types.bool;
+          default = false;
+        };
         eduke32.enable = lib.mkOption {
           type = lib.types.bool;
           default = false;
