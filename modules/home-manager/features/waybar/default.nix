@@ -166,15 +166,11 @@ in {
             padding-right: 12px;
           }
 
-          tooltip, .statusbar-tooltip {
+          tooltip, #tray menu {
             font-weight: normal;
             background: #${base00};
             border: 1px solid #${base03};
             margin: 5px;
-            padding: 5px;
-          }
-
-          .statusbar-tooltip label {
             padding: 5px;
           }
 
