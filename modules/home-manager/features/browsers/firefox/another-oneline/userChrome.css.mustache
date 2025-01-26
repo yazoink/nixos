@@ -158,6 +158,10 @@
   background-color: #{{base01}} !important;
 }
 
+#urlbar {
+  padding = 10px;
+}
+
 #urlbar-background:hover, #urlbar:hover {
   background: #{{base00}} !important;
   border: transparent !important;
@@ -171,12 +175,3 @@
 #tabbrowser-tabs {
   border-bottom: 5px solid #{{base00}} !important;
 }
-
-:root {
- --tab-toolbar-navbar-overlap: 0px !important; /* fix for full screen mode */
- --tab-min-height: 41px !important;
-}
-:root #tabbrowser-tabs {
- --tab-min-height: 41px !important;
-}
-#TabsToolbar {height: var(--tab-min-height) !important;}
