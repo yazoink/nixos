@@ -44,6 +44,7 @@
           border: 1px solid #${base01};
           border-radius: 10px;
           padding: 15px;
+          box-shadow: 0 10px 20px #00000040;
         }
 
         #input {
