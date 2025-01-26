@@ -113,7 +113,7 @@
             #foxytab
             libredirect
             floccus
-            firefox-color
+            # firefox-color
             # pywalfox
             control-panel-for-twitter
           ]
