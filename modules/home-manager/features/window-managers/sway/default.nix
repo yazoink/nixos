@@ -61,6 +61,7 @@
           corner_radius 15
           #smart_corner_radius on
           default_border normal 0
+          default_floating_border normal 0
           blur disable
           shadows enable
           shadow_blur_radius 10
