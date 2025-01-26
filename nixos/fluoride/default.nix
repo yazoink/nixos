@@ -34,10 +34,6 @@
         command = "ristretto";
         desktopFile = "org.xfce.ristretto.desktop";
       };
-      archiver = {
-        command = "file-roller";
-        desktopFile = "org.gnome.FileRoller.desktop";
-      };
       terminal = {
         command = "footclient";
         desktopFile = "footclient.desktop";

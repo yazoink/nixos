@@ -1,14 +1,16 @@
-{config, lib, osConfig, ...}:
-let
+{
+  config,
+  lib,
+  osConfig,
+  ...
+}: let
   fileManager = osConfig.myOptions.defaultApps.fileManager.desktopFile;
   textEditor = osConfig.myOptions.defaultApps.guiTextEditor.desktopFile;
   documentReader = osConfig.myOptions.defaultApps.documentReader.desktopFile;
   mediaPlayer = osConfig.myOptions.defaultApps.mediaPlayer.desktopFile;
   browser = osConfig.myOptions.defaultApps.webBrowser.desktopFile;
   imageViewer = osConfig.myOptions.defaultApps.imageViewer.desktopFile;
-  archiver = osConfig.myOptions.defaultApps.archiver.desktopFile;
-in
-{
+in {
   options = {
     bundles.desktopBase.xdg.enable = lib.mkOption {
       type = lib.types.bool;
@@ -49,7 +51,6 @@ in
           "inode/x-empty" = ["${textEditor}"]; # Any text files
           "application/pdf" = ["${documentReader}"]; # .pdf
           "image/vnd.djvu" = ["${documentReader}"]; # .pdf
-          "application/zip" = ["${archiver}"];
           "video/ogg" = ["${mediaPlayer}"];
           "video/x-msvideo" = ["${mediaPlayer}"];
           "video/mpeg" = ["${mediaPlayer}"];

@@ -1,7 +1,9 @@
-{config, lib, ...}:
 {
+  config,
+  lib,
+  ...
+}: {
   imports = [
-    ../../features/archivers
     ../../features/file-managers
     ../../features/window-managers
     ../../features/display-managers
@@ -30,7 +32,7 @@
       gnomeKeyring.enable = true;
       greetd.enable = lib.mkIf (config.myOptions.bundles.desktopBase.displayManager == "regreet") true;
       gtklock.enable = true;
-      hyprland.enable =  lib.mkIf (config.myOptions.bundles.desktopBase.windowManager == "hyprland")true;
+      hyprland.enable = lib.mkIf (config.myOptions.bundles.desktopBase.windowManager == "hyprland") true;
       plymouth.enable = true;
       polkit.enable = true;
       sddm.enable = lib.mkIf (config.myOptions.bundles.desktopBase.displayManager == "sddm") true;

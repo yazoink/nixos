@@ -81,17 +81,6 @@
             default = "org.xfce.ristretto.desktop";
           };
         };
-        archiver = {
-          command = lib.mkOption {
-            type = lib.types.str;
-            default = "file-roller";
-            description = "options: file-roller";
-          };
-          desktopFile = lib.mkOption {
-            type = lib.types.str;
-            default = "org.gnome.FileRoller.desktop";
-          };
-        };
         terminal = {
           command = lib.mkOption {
             type = lib.types.str;
