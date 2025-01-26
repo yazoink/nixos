@@ -170,7 +170,7 @@
         ];
         gaps = {
           inner = 10;
-          outer = 0;
+          outer = 5;
           smartBorders = "off";
           smartGaps = false;
         };
