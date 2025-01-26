@@ -47,14 +47,14 @@
     };
     desktopTheme = {
       name = "paradise";
-      #smallBars = true;
+      smallBars = true;
       fonts.terminal = {
         name = "Cascadia Code";
-        size = 12;
+        size = 11;
       };
       fonts.desktop = {
         name = "Rubik";
-        size = 12;
+        size = 11;
       };
       #wallpaper = ./wallpapers/levuaska/clouds5.jpg;
       wallpaper = ./wallpapers/painting3.jpg;
