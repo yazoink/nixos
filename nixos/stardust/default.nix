@@ -24,8 +24,8 @@
           size = 11;
         };
         terminal = {
-          #name = "GeistMono Nerd Font";
-          #size = 11;
+          name = "Bm437 NEC APC3 8x16";
+          size = 12;
         };
       };
       sddm = {
