@@ -38,7 +38,7 @@
       };
       archiver = {
         command = "nemo-fileroller";
-        desktopFile = "org.gnome.FileRoller.desktop";
+        desktopFile = "nemo-fileroller.desktop";
       };
       terminal = {
         command = "footclient";
