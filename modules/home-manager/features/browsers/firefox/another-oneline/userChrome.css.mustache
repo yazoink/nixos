@@ -76,12 +76,6 @@
   transition: .15s !important;
 }
 
-#urlbar-background:hover {
-  background: #{{base00}};
-  border: transparent;
-  box-shadow: none;
-}
-
 /*  Removes the background from the urlbar while not in use  */
 #urlbar:not(:hover):not([breakout][breakout-extend]) > #urlbar-background {
   box-shadow: none !important;
@@ -166,6 +160,12 @@
 .tabs-newtab-button:hover,
 #star-button-box:hover {
   background-color: #{{base01}} !important;
+}
+
+#urlbar-background:hover, #urlbar:hover {
+  background: #{{base00}};
+  border: transparent;
+  box-shadow: none;
 }
 
 #nav-bar {
