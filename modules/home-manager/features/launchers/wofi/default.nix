@@ -53,6 +53,7 @@
           border-radius: 10px;
           background: #${base00};
           border: transparent;
+          outline: transparent;
         }
 
         #inner-box {
@@ -63,6 +64,7 @@
           padding: 3px;
           border-radius: 10px;
           border: transparent;
+          outline: transparent;
         }
 
         #entry:selected {
