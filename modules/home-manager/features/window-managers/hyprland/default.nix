@@ -148,7 +148,7 @@ in {
             enabled = true;
             ignore_window = true;
             range = 20;
-            offset = [0 2];
+            offset = "0 2";
             render_power = 4;
             color = "rgba(0000002A)";
           };
