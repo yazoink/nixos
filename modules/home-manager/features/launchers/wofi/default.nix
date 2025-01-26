@@ -64,7 +64,7 @@
           border: transparent;
         }
 
-        .entry #selected {
+        #selected {
           background: #${base01};
           border-color: #${base01};
         }
