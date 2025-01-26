@@ -111,7 +111,7 @@ in {
             margin:                      0px;
             padding:                     0px;
             border:                      2px solid;
-            border-radius:               15px;
+            border-radius:               14px;
             border-color:                @border-colour;
             cursor:                      "default";
             /* Backgroud Colors */

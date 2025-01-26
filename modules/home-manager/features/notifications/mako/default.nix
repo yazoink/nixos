@@ -22,7 +22,7 @@
       actions = true;
       icons = true;
       anchor = "top-right";
-      borderRadius = 15;
+      borderRadius = 14;
       backgroundColor = "#${config.stylix.base16Scheme.base00}";
       textColor = "#${config.stylix.base16Scheme.base05}";
       progressColor = "over #${config.stylix.base16Scheme.base05}";
