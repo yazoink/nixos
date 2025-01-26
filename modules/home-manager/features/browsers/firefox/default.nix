@@ -11,7 +11,6 @@
     ./shyfox
     ./firefox-ui-fix
     ./another-oneline
-    ./one-line-firefox
   ];
 
   config = lib.mkIf (osConfig.myOptions.bundles.desktopBase.enable && osConfig.myOptions.defaultApps.webBrowser.command == "firefox") {
