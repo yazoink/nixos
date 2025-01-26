@@ -49,7 +49,7 @@
       name = "paradise";
       smallBars = true;
       fonts.terminal = {
-        name = "JetBrains Mono";
+        name = "Cascadia Code";
         size = 12;
       };
       fonts.desktop = {
@@ -66,7 +66,7 @@
       firefoxCss.anotherOneline.enable = true;
     };
     bundles = {
-      # base.starshipFormat = 2;
+      base.starshipFormat = 2;
       desktopBase.displayManager = "sddm";
       desktopFull.enable = true;
     };
