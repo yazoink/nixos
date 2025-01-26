@@ -4,7 +4,12 @@
   pkgs,
   osConfig,
   ...
-}: {
+}: let
+  barPadding =
+    if osConfig.myOptions.desktopTheme.smallBars
+    then 10
+    else 14;
+in {
   imports = [./hypridle.nix];
   config = lib.mkIf osConfig.bundles.desktopBase.sway.enable {
     bundles.desktopBase = {
@@ -56,7 +61,7 @@
         ''
           focus_follows_mouse yes
           title_align center
-          titlebar_padding 14
+          titlebar_padding ${builtins.toString barPadding}
           titlebar_border_thickness 0
           corner_radius 15
           #smart_corner_radius on

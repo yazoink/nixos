@@ -17,6 +17,7 @@
     desktopTheme = {
       name = "everblush";
       wallpaper = ./wallpapers/flowers-downscaled.jpg;
+      smallBars = true;
       fonts = {
         desktop = {
           name = "Rubik";

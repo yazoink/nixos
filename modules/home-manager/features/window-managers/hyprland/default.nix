@@ -5,6 +5,7 @@
   osConfig,
   ...
 }: let
+  inherit (osConfig.myOptions.desktopTheme) smallBars;
   closeButtonColor =
     if (osConfig.myOptions.desktopTheme.name == "caroline")
     then config.stylix.base16Scheme.base0E
@@ -164,7 +165,10 @@ in {
           };
           hyprbars = {
             bar_color = "rgb(${config.stylix.base16Scheme.base00})";
-            bar_height = 42;
+            bar_height =
+              if smallBars
+              then 34
+              else 42;
             bar_text_font = "${config.stylix.fonts.sansSerif.name} Bold";
             bar_text_size = config.stylix.fonts.sizes.applications;
             bar_text_align = "center";

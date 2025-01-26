@@ -7,6 +7,7 @@
 }: let
   #fontSize = osConfig.myOptions.desktopTheme.fonts.desktop.size + 4;
   fontSize = osConfig.myOptions.desktopTheme.fonts.desktop.size;
+  inherit (osConfig.myOptions.desktopTheme) smallBars;
 in {
   options = {
     bundles.desktopBase.waybar.enable = lib.mkOption {
@@ -27,7 +28,10 @@ in {
         waybar = {
           layer = "top";
           position = "top";
-          height = 42;
+          height =
+            if smallBars
+            then 34
+            else 42;
           spacing = 5;
           modules-left = [
             #"niri/workspaces"

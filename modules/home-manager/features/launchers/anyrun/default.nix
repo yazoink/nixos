@@ -1,5 +1,10 @@
-{config, osConfig, lib, pkgs, ...}:
 {
+  config,
+  osConfig,
+  lib,
+  pkgs,
+  ...
+}: {
   options = {
     bundles.desktopBase.anyrun.enable = lib.mkOption {
       type = lib.types.bool;
@@ -12,7 +17,7 @@
       "anyrun/config.ron".text = ''
         Config(
           x: Fraction(0.500000),
-          y: Absolute(15),
+          y: Absolute(5),
           width: Fraction(0.300000),
           height: Absolute(0),
           hide_icons: false,
