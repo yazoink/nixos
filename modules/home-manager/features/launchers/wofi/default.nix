@@ -42,7 +42,7 @@
 
         #outer-box {
           background: #${base00};
-          border: 1px solid #${base01};
+          border: 1px solid #${base02};
           border-radius: 10px;
           padding: 15px;
           /*box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);*/
