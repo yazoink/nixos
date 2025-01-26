@@ -41,7 +41,7 @@
 
         #outer-box {
           background: #${base00};
-          border: 2px solid #${base01};
+          border: 1px solid #${base01};
           border-radius: 10px;
           padding: 15px;
         }

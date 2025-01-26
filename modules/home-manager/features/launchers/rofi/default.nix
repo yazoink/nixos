@@ -110,7 +110,7 @@ in {
             enabled:                     true;
             margin:                      0px;
             padding:                     0px;
-            border:                      2px solid;
+            border:                      1px solid;
             border-radius:               10px;
             border-color:                @border-colour;
             cursor:                      "default";

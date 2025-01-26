@@ -27,7 +27,7 @@
       textColor = "#${config.stylix.base16Scheme.base05}";
       progressColor = "over #${config.stylix.base16Scheme.base05}";
       borderColor = "#${config.stylix.base16Scheme.base01}";
-      borderSize = 2;
+      borderSize = 1;
       font = "${config.stylix.fonts.sansSerif.name} ${toString config.stylix.fonts.sizes.popups}";
       padding = "15";
       margin = "5";
