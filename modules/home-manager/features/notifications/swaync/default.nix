@@ -1,12 +1,16 @@
-{config, osConfig, lib, pkgs, ...}:
-let
+{
+  config,
+  osConfig,
+  lib,
+  pkgs,
+  ...
+}: let
   themeFile = config.lib.stylix.colors {
     #template = ./${osConfig.myOptions.bundles.desktopBase.windowManager}.css.mustache;
     template = ./style.css.mustache;
     extension = ".css";
   };
-in
-{
+in {
   options = {
     bundles.desktopBase.swaync.enable = lib.mkOption {
       type = lib.types.bool;
@@ -18,28 +22,24 @@ in
     stylix.targets.swaync.enable = false;
     services.swaync = {
       enable = true;
-      style = ''
-        @define-color accent #${config.stylix.base16Scheme.${osConfig.desktopTheme.base16Accent}};
+      style =
+        ''
+          @define-color accent #${config.stylix.base16Scheme.${osConfig.desktopTheme.base16Accent}};
 
-        * {
-          font-family: ${config.stylix.fonts.sansSerif.name};
-        }
-      '' + (builtins.readFile themeFile);
+          * {
+            font-family: ${config.stylix.fonts.sansSerif.name};
+          }
+        ''
+        + (builtins.readFile themeFile);
       settings = {
         positionX = "right";
         positionY = "bottom";
         layer = "top";
         control-center-layer = "top";
         cssPriority = "application";
-        control-center-margin-top = if (osConfig.myOptions.bundles.desktopBase.windowManager == "sway")
-          then 15
-          else 5;
-        control-center-margin-bottom = if (osConfig.myOptions.bundles.desktopBase.windowManager == "sway")
-          then 15
-          else 5;
-        control-center-margin-right = if (osConfig.myOptions.bundles.desktopBase.windowManager == "sway")
-          then 15
-          else 5;
+        control-center-margin-top = 10;
+        control-center-margin-bottom = 10;
+        control-center-margin-right = 10;
         notification-2fa-action = false;
         widgets = [
           "inhibitors"

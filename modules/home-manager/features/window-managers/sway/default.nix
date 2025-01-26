@@ -63,7 +63,7 @@
           default_border normal 0
           blur disable
           shadows enable
-          shadow_blur_radius 15
+          shadow_blur_radius 10
           shadow_color #000000AA
           #default_dim_inactive 0.15
           titlebar_separator disable
@@ -170,7 +170,7 @@
         ];
         gaps = {
           inner = 10;
-          outer = 10;
+          outer = 0;
           smartBorders = "off";
           smartGaps = false;
         };
