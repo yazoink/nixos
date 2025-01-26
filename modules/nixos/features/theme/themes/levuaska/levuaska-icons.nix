@@ -6,7 +6,7 @@ pkgs.stdenv.mkDerivation {
     owner = "yazoink";
     repo = "levuaska-icons";
     rev = "main";
-    sha256 = "sha256-NYqAlTe4m2Kmpgc1NeQtR+J+LFk7ef8YjYe2Ivys9eI=";
+    sha256 = "sha256-4j7HFqtSjNy406jTH+/L924Y0coyjs8/ALzNQss0LzY=";
   };
 
   dontUnpack = true;
