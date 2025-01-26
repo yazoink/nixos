@@ -48,6 +48,7 @@
       eduke32.enable = true;
       prismlauncher.enable = true;
       superTuxKart.enable = true;
+      virtManager.enable = true;
     };
     hardwareFeatures = {
       ssd.enable = true;
