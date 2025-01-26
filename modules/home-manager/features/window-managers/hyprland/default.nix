@@ -164,7 +164,7 @@ in {
           };
           hyprbars = {
             bar_color = "rgb(${config.stylix.base16Scheme.base00})";
-            bar_height = 36;
+            bar_height = 42;
             bar_text_font = "${config.stylix.fonts.sansSerif.name} Bold";
             bar_text_size = config.stylix.fonts.sizes.applications;
             bar_text_align = "center";
