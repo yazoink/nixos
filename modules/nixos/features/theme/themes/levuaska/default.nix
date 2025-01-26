@@ -5,10 +5,11 @@
   ...
 }: let
   cursors = pkgs.callPackage ./levuaska-cursors.nix {};
+  icons = pkgs.callPackage ./levuaska-icons.nix {};
 in {
   config = lib.mkIf (config.myOptions.bundles.desktopBase.enable && config.myOptions.desktopTheme.name == "levuaska") {
     desktopTheme.base16Accent = "base0D";
-    environment.systemPackages = [cursors];
+    environment.systemPackages = [cursors icons];
     stylix = {
       cursor = {
         name = "BreezeX-Levuaska";
