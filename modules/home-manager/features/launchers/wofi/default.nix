@@ -54,6 +54,7 @@
           background: #${base00};
           border: transparent;
           outline: transparent;
+          box-shadow: none;
         }
 
         #inner-box {
