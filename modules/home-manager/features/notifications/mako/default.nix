@@ -1,5 +1,9 @@
-{pkgs, config, lib, ...}:
 {
+  pkgs,
+  config,
+  lib,
+  ...
+}: {
   options = {
     bundles.desktopBase.mako.enable = lib.mkOption {
       type = lib.types.bool;
@@ -18,7 +22,7 @@
       actions = true;
       icons = true;
       anchor = "top-right";
-      borderRadius = 5;
+      borderRadius = 15;
       backgroundColor = "#${config.stylix.base16Scheme.base00}";
       textColor = "#${config.stylix.base16Scheme.base05}";
       progressColor = "over #${config.stylix.base16Scheme.base05}";
@@ -29,9 +33,11 @@
       margin = "5";
       defaultTimeout = 5000;
       iconPath = "/run/current-system/sw/share/icons/${config.gtk.iconTheme.name}";
-      /*extraConfig = ''
+      /*
+        extraConfig = ''
         on-notify=exec aplay $HOME/.config/mako/sounds/default.wav
-      '';*/
+      '';
+      */
       extraConfig = ''
         [urgency=low]
         border-color=#${config.stylix.base16Scheme.base01}
