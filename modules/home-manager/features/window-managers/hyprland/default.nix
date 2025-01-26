@@ -148,7 +148,7 @@ in {
             enabled = true;
             range = 15;
             render_power = 2;
-            color = "rgba(00000080)";
+            color = "rgba(00000070)";
           };
         };
         plugin = {
