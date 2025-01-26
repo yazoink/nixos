@@ -30,7 +30,7 @@ in {
           position = "top";
           height =
             if smallBars
-            then 36
+            then 38
             else 42;
           spacing = 5;
           modules-left = [

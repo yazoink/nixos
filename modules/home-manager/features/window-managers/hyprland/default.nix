@@ -169,7 +169,7 @@ in {
             bar_color = "rgb(${config.stylix.base16Scheme.base00})";
             bar_height =
               if smallBars
-              then 36
+              then 38
               else 42;
             bar_text_font = "${config.stylix.fonts.sansSerif.name} Bold";
             bar_text_size = config.stylix.fonts.sizes.applications;
