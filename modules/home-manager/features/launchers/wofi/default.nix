@@ -48,17 +48,18 @@
           /*box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);*/
         }
 
-        #input {
+        #input, #input:focus {
           margin-bottom: 10px;
           border-radius: 10px;
           background: #${base00};
+          border: transparent;
         }
 
         #inner-box {
           border-radius: 15px;
         }
 
-        #entry, #selected, #unselected {
+        #entry, #selected, #unselected, #entry:focus {
           padding: 3px;
           border-radius: 10px;
           border: transparent;
