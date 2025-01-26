@@ -26,7 +26,8 @@
         allow_images = true;
         sort_order = "alphabetical";
         key_expand = "Tab";
-        location = "center";
+        location = "top";
+        yoffset = 5;
         display_generic = true;
       };
       style = with config.stylix.base16Scheme; ''
