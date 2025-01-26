@@ -15,8 +15,10 @@
   myOptions = {
     userAccount.username = "gene";
     desktopTheme = {
-      name = "everblush";
-      wallpaper = ./wallpapers/flowers-downscaled.jpg;
+      # name = "everblush";
+      name = "levuaska";
+      # wallpaper = ./wallpapers/flowers-downscaled.jpg;
+      wallpaper = ./wallpapers/clouds-levuaska.jpg;
       smallBars = true;
       fonts = {
         desktop = {
@@ -28,16 +30,17 @@
           size = 12;
         };
       };
-      sddm = {
-        scale = 1.3;
-        wallpaper = ./wallpapers/flowers-downscaled.jpg;
-      };
+      # sddm = {
+      #   scale = 1.3;
+      #   # wallpaper = ./wallpapers/flowers-downscaled.jpg;
+      #   wallpaper = ./wallpapers/clouds-levuaska.jpg;
+      # };
       firefoxCss.anotherOneline.enable = true;
     };
     bundles = {
       #base.starshipFormat = 2;
       desktopBase.windowManager = "sway";
-      desktopBase.displayManager = "sddm";
+      desktopBase.displayManager = "regreet";
       desktopFull.enable = true;
       desktopFull.vesktop.bloat = false;
     };
