@@ -145,7 +145,7 @@ in {
           rounding = 10;
           blur.enabled = false;
           shadow = {
-            enabled = true;
+            enabled = false;
             ignore_window = true;
             range = 20;
             offset = "0 2";
