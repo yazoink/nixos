@@ -29,7 +29,7 @@
       borderColor = "#${config.stylix.base16Scheme.base01}";
       borderSize = 2;
       font = "${config.stylix.fonts.sansSerif.name} ${toString config.stylix.fonts.sizes.popups}";
-      padding = "10";
+      padding = "15";
       margin = "5";
       defaultTimeout = 5000;
       iconPath = "/run/current-system/sw/share/icons/${config.gtk.iconTheme.name}";
