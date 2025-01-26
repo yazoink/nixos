@@ -47,7 +47,7 @@
     };
     desktopTheme = {
       name = "paradise";
-      smallBars = true;
+      #smallBars = true;
       fonts.terminal = {
         name = "Cascadia Code";
         size = 12;
