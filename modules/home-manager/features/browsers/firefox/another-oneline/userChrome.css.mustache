@@ -157,12 +157,8 @@
   border: none !important;
 }
 
-/*#tabbrowser-tabs {
+#tabbrowser-tabs {
   border-bottom: 5px solid #{{base00}} !important;
-}*/
-
-#urlbar-wrapper {
-  height: 55px !important; 
 }
 
 #urlbar > #urlbar-background {
@@ -177,4 +173,11 @@
   box-shadow: none !important;
   background: #{{base01}} !important;
   padding: 10px;
+}
+
+#tabbrowser-tabs,
+#tabbrowser-tabs > #tabbrowser-arrowscrollbox,
+.tabbrowser-tabs .tabbrowser-tab {
+  min-height: var(36px) !important;
+  max-height: var(36px) !important;
 }
