@@ -37,8 +37,8 @@
         desktopFile = "org.xfce.ristretto.desktop";
       };
       archiver = {
-        command = "nemo-fileroller";
-        desktopFile = "nemo-fileroller.desktop";
+        command = "fileroller";
+        desktopFile = "org.gnome.FileRoller.desktop";
       };
       terminal = {
         command = "footclient";
