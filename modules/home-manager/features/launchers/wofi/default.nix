@@ -64,9 +64,8 @@
           border: transparent;
         }
 
-        #selected {
+        #entry:selected {
           background: #${base01};
-          border-color: #${base01};
         }
 
         #img {
