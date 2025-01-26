@@ -30,18 +30,22 @@
               "color1": "#${base01}",
               "color2": "#${base02}",
               "color3": "#${config.stylix.base16Scheme.${osConfig.desktopTheme.base16Accent}}",
-              "color4": "",
-              "color5": "",
-              "color6": "",
+              "color4": "#${base05}",
+              "color5": "#${base05}",
+              "color6": "#${base05}",
               "color7": "#${base05}",
-              "color8": "",
-              "color9": "",
+              "color8": "#${base05}",
+              "color9": "#${base05}",
               "color10": "#${base05}",
-              "color11": "",
-              "color12": "",
+              "color11": "#${base05}",
+              "color12": "#${base05}",
               "color13": "#${config.stylix.base16Scheme.${osConfig.desktopTheme.base16Accent}}",
-              "color14": "",
-              "color15": "#${base05}"
+              "color14": "#${base05}",
+              "color15": "#${base05}",
+              "color16": "#${base05}",
+              "color17": "#${base05}",
+              "color18": "#${base05}",
+              "color19": "#${base05}"
             }
           }
         '';
