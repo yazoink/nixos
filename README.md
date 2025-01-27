@@ -9,12 +9,12 @@ My NixOS desktop configs with home-manager and Hyprland.
 ## Software
 - WM: Hyprland/SwayFX
 - Bar: Waybar
-- Launcher: Rofi
+- Launcher: Rofi/Wofi/Anyrun
 - Terminal: Foot
 - Editor: Neovim
 - Browser: Firefox/Zen
 - File manager: Thunar/Yazi
-- Notifications: Mako
+- Notifications: Mako/SwayNC
 - Display manager: SDDM/ReGreet
 - Shell: Zsh
 - Prompt: Starship
