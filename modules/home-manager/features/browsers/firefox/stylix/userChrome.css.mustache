@@ -119,13 +119,14 @@
   box-shadow: none !important;
   min-height: var(36px) !important;
   max-height: var(36px) !important;
+  border: transparent;
 }
 
-.tab-background:selected {
+.tabbrowser-tab[selected="true"] .tab-background {
+  background-image: none !important;
   background-color: rgba({{base05-rgb-r}}, {{base05-rgb-g}}, {{base05-rgb-b}}, 0.09) !important;
   color: #{{base05}} !important;
   border-radius: 10px !important;
-  background-image: none !important;
 }
 
 .tab-background:hover:not([selected]) {
