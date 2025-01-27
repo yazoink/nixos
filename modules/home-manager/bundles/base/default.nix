@@ -1,5 +1,9 @@
-{pkgs, osConfig, lib, ...}:
 {
+  pkgs,
+  osConfig,
+  lib,
+  ...
+}: {
   imports = [
     ../../features/btop
     ../../features/garfetch
@@ -11,6 +15,7 @@
     ../../features/ssh-config
     ../../features/tmux
     ../../features/yazi
+    ../../features/fastfetch
   ];
 
   config = lib.mkIf osConfig.myOptions.bundles.base.enable {
@@ -25,6 +30,7 @@
       sshConfig.enable = true;
       tmux.enable = true;
       yazi.enable = true;
+      fastfetch.enable = true;
     };
 
     home.packages = with pkgs; [
@@ -38,9 +44,6 @@
       tree
       s-tui
       stress
-
-      ### terminal eyecandy ###
-      fastfetch
     ];
   };
 }
