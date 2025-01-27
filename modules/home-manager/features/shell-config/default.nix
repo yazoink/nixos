@@ -1,5 +1,9 @@
-{config, lib, pkgs, ...}:
-let
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}: let
   myAliases = {
     "rebuild-test" = "${scripts}/bin/rebuild -t";
     "update" = "cd ~/nixos && sudo nix flake update";
@@ -34,8 +38,7 @@ let
     "solitaire" = "ttysolitaire --no-background-color --passes 420";
   };
   scripts = pkgs.callPackage ./scripts.nix {};
-in
-{
+in {
   options = {
     bundles.base.shellConfig.enable = lib.mkOption {
       type = lib.types.bool;
@@ -74,7 +77,8 @@ in
         #eval "$(starship init zsh)"
       '';
 
-      /*oh-my-zsh = {
+      /*
+        oh-my-zsh = {
         enable = true;
         #theme = "robbyrussell";
         plugins = [
@@ -83,7 +87,8 @@ in
           "colorize"
           "colored-man-pages"
         ];
-      };*/
+      };
+      */
 
       shellAliases = myAliases;
     };
@@ -94,6 +99,7 @@ in
         enableZshIntegration = true;
         settings = {
           add_newline = true;
+          command_timeout = "2500";
           directory = {
             read_only = " ";
             home_symbol = "~";
