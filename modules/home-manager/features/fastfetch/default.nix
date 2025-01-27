@@ -19,6 +19,12 @@
         };
         modules = [
           {
+            type = "break";
+          }
+          {
+            type = "break";
+          }
+          {
             type = "title";
           }
           {
@@ -29,6 +35,9 @@
           }
           {
             type = "kernel";
+          }
+          {
+            type = "uptime";
           }
           {
             type = "shell";
@@ -47,6 +56,9 @@
           }
           {
             type = "memory";
+          }
+          {
+            type = "swap";
           }
           {
             type = "break";
