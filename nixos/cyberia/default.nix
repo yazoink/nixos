@@ -32,7 +32,7 @@
         image = ./wallpapers/paradise/twig_paradise.jpg;
         solidColor = {
           enable = true;
-          hex = config.stylix.base16Scheme.base02;
+          hex = config.stylix.base16Scheme.base03;
         };
       };
       sddm = {
