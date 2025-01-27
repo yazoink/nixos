@@ -25,7 +25,7 @@
       };
       fonts.desktop = {
         name = "SF Pro Display";
-        size = 12;
+        size = 11;
       };
       # wallpaper = ./wallpapers/clouds6.jpg;
       wallpaper = ./wallpapers/paradise/clouds_paradise.jpg;
