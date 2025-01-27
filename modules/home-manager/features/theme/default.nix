@@ -1,14 +1,18 @@
 # depends on system theme module
-{osConfig, pkgs, lib, config, ...}:
-let
+{
+  osConfig,
+  pkgs,
+  lib,
+  config,
+  ...
+}: let
   gtkrcFile = config.lib.stylix.colors {
     template = ./gtkrc.mustache;
     extension = ".css";
   };
   kvantumGenerator = ./kvantum-generator/generate_kvantum.py;
   oneUiIcons = pkgs.callPackage ./oneui4-icons.nix {};
-in
-{
+in {
   imports = [./themes];
   config = lib.mkIf osConfig.myOptions.bundles.desktopBase.enable {
     systemd.user.services.generate-kvantum = {
@@ -22,48 +26,50 @@ in
       };
     };
     stylix = {
-      /*iconTheme = {
+      /*
+        iconTheme = {
         enable = true;
         dark = "Papirus-Dark";
         light = "Papirus";
         package = pkgs.papirus-icon-theme;
-      };*/
+      };
+      */
       targets = {
         waybar.enable = false;
-        gtk.extraCss = with config.stylix.base16Scheme; ''
-          @define-color headerbar_bg_color #${base00};
-          @define-color dialog_bg_color #${base00};
-          @define-color popover_bg_color #${base00};
-          @define-color sidebar_bg_color #${base00};
-          @define-color accent_color #${config.stylix.base16Scheme.${osConfig.desktopTheme.base16Accent}};
-          @define-color accent_bg_color #${config.stylix.base16Scheme.${osConfig.desktopTheme.base16Accent}};
-
-           /* No (default) title bar on wayland */
-          headerbar.default-decoration {
-            /* You may need to tweak these values depending on your GTK theme */
-            border-radius: 0;
-            border: 0;
-            box-shadow: none;
-            font-size: 0;
-            margin-bottom: 50px;
-            margin-top: -100px;
-            min-height: 0;
-            padding: 0;
-          }
-
-          .titlebar,
-          .titlebar .background
-          {
-            border-radius: 0;
-          }
-
-          /* rm -rf window shadows */
-          window.csd,             /* gtk4? */
-          window.csd decoration { /* gtk3 */
-            border-radius: 0;
-            box-shadow: none;
-          }
-        '';
+        # gtk.extraCss = with config.stylix.base16Scheme; ''
+        #   @define-color headerbar_bg_color #${base00};
+        #   @define-color dialog_bg_color #${base00};
+        #   @define-color popover_bg_color #${base00};
+        #   @define-color sidebar_bg_color #${base00};
+        #   @define-color accent_color #${config.stylix.base16Scheme.${osConfig.desktopTheme.base16Accent}};
+        #   @define-color accent_bg_color #${config.stylix.base16Scheme.${osConfig.desktopTheme.base16Accent}};
+        #
+        #    /* No (default) title bar on wayland */
+        #   headerbar.default-decoration {
+        #     /* You may need to tweak these values depending on your GTK theme */
+        #     border-radius: 0;
+        #     border: 0;
+        #     box-shadow: none;
+        #     font-size: 0;
+        #     margin-bottom: 50px;
+        #     margin-top: -100px;
+        #     min-height: 0;
+        #     padding: 0;
+        #   }
+        #
+        #   .titlebar,
+        #   .titlebar .background
+        #   {
+        #     border-radius: 0;
+        #   }
+        #
+        #   /* rm -rf window shadows */
+        #   window.csd,             /* gtk4? */
+        #   window.csd decoration { /* gtk3 */
+        #     border-radius: 0;
+        #     box-shadow: none;
+        #   }
+        # '';
       };
     };
 
@@ -124,12 +130,14 @@ in
       ];
     };
 
-    /*fonts = {
+    /*
+      fonts = {
       fontconfig = {
         enable = true;
         defaultFonts.monospace = [config.stylix.fonts.monospace.name "Terminus (TTF)"];
       };
-    };*/
+    };
+    */
 
     gtk = {
       enable = true;
