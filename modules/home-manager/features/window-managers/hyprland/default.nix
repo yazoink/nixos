@@ -151,10 +151,10 @@ in {
           shadow = {
             enabled = true;
             ignore_window = true;
-            range = 20;
+            range = 10;
             offset = "0 2";
-            render_power = 4;
-            color = "rgba(00000030)";
+            render_power = 2;
+            color = "rgba(000000AA)";
           };
         };
         plugin = {
