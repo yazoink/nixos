@@ -122,13 +122,13 @@
 }
 
 .tabbrowser-tab[selected] .tab-content {
-  background-color: #{{base01}} !important;
+  background-color: rgba({{base05-rgb-r}}, {{base05-rgb-g}}, {{base05-rgb-b}}, 0.09) !important;
   color: #{{base05}} !important;
   border-radius: 10px !important;
 }
 
 .tabbrowser-tab:hover:not([selected]) .tab-content {
-  background-color: #{{base01}} !important;
+  background-color: rgba({{base05-rgb-r}}, {{base05-rgb-g}}, {{base05-rgb-b}}, 0.09) !important;
   border-radius: 10px !important;
 }
 
@@ -139,7 +139,7 @@
 .toolbarbutton-icon:hover, 
 .tabs-newtab-button:hover,
 #star-button-box:hover {
-  background-color: #{{base01}} !important;
+  background-color: rgba({{base05-rgb-r}}, {{base05-rgb-g}}, {{base05-rgb-b}}, 0.09) !important;
 }
 
 #urlbar-background:hover, #urlbar:hover {
@@ -163,8 +163,8 @@
 #urlbar > #urlbar-background {
   box-shadow: none !important;
   background: #{{base00}} !important;
-  border: 5px solid #{{base01}};
   border-radius: 10px !important;
+  border: transparent !important;
 }
 
 #urlbar:not(:hover):not([breakout][breakout-extend]) > #urlbar-background {
