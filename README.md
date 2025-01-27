@@ -33,24 +33,14 @@ My NixOS desktop configs with home-manager and Hyprland.
 See [documentation.md](./documentation.md)
   
 ## Screenshots
-![20241225_00:29:02_screenshot](https://github.com/user-attachments/assets/23fc2784-b8c4-467d-a732-7113c6eb6fd4)
-![20241225_00:27:23_screenshot](https://github.com/user-attachments/assets/c86039fd-67b6-4fb1-b4dd-74d98c1fca3e)
-![20241225_00:31:12_screenshot](https://github.com/user-attachments/assets/2f0645cd-12b1-48be-ab03-1aa914c58a25)
-(hyprland + caroline theme)
+![1737986796055](https://github.com/user-attachments/assets/8d3fd41f-a801-41aa-95b2-cd4fef6a208b)
+(hyprland + paradise theme)
 
-![20241223_23:30:16_screenshot](https://github.com/user-attachments/assets/b66e6148-0f1e-4a5e-aab0-f33099460c2f)
-![20241224_02:10:57_screenshot](https://github.com/user-attachments/assets/c9458456-3ac2-4bfb-85e9-53187ee04422)
-(hyprland + manuscript theme)
+![20250126_21:54:32_screenshot](https://github.com/user-attachments/assets/1322e8f8-dc31-4a55-a02b-df2f07b3cfcc)
+(sway + levuaska theme)
 
-![20250109_17:21:40_screenshot](https://github.com/user-attachments/assets/dd1f17c7-cfea-42bd-a2b2-f86a9377dc63)
-![20250109_17:20:00_screenshot](https://github.com/user-attachments/assets/b2d33b72-118f-48cc-8d66-3a4886540be4)
-(sway + gruvbox material theme)
-
-![20250103_00:45:12_screenshot](https://github.com/user-attachments/assets/b9fdc966-2bf2-4fb5-98d8-8a1ed1da5a45)
-(sway + carob theme)
-
-![embers](https://github.com/user-attachments/assets/7b061e7e-c64a-4054-bab5-e0b46f6521a7)
-(sway + embers theme)
+![20250117_06:57:55_screenshot](https://github.com/user-attachments/assets/89b10c55-0942-463e-a67b-fcdb4ace8438)
+(sway + everblush theme)
 
 ![twilight](https://github.com/user-attachments/assets/44132aba-23ee-40c8-86ae-d908f5bc523e)
 (sway + twilight theme)
