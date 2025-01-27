@@ -21,11 +21,11 @@
       smallBars = true;
       fonts.terminal = {
         name = "Consolas";
-        size = 11;
+        size = 12;
       };
       fonts.desktop = {
         name = "SF Pro Display";
-        size = 11;
+        size = 12;
       };
       # wallpaper = ./wallpapers/clouds6.jpg;
       wallpaper = ./wallpapers/paradise/clouds_paradise.jpg;
