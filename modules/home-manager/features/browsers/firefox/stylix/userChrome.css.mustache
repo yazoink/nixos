@@ -121,18 +121,20 @@
   max-height: var(36px) !important;
 }
 
-.tabbrowser-tab[selected] .tab-content {
+.tab-background[selected="true"] {
   background-color: rgba({{base05-rgb-r}}, {{base05-rgb-g}}, {{base05-rgb-b}}, 0.09) !important;
   color: #{{base05}} !important;
   border-radius: 10px !important;
+  background-image: none !important;
 }
 
-.tabbrowser-tab:hover:not([selected]) .tab-content {
+.tab-background:hover:not([selected]) {
   background-color: rgba({{base05-rgb-r}}, {{base05-rgb-g}}, {{base05-rgb-b}}, 0.09) !important;
   border-radius: 10px !important;
+  background-image: none !important;
 }
 
-.tabbrowser-tab:not([selected]) .tab-content {
+.tab-background:not([selected]) {
   border-radius: 10px !important;
 }
 
