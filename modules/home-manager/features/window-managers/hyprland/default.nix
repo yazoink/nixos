@@ -362,6 +362,7 @@ in {
           "plugin:hyprbars:nobar, title:^(Empty Trash)$"
           "plugin:hyprbars:nobar, title:^(File Manager Preferences)$"
           "plugin:hyprbars:nobar, title:^(Choose a color)$"
+          "plugin:hyprbars:nobar, title:^(Open File)$"
         ];
         animations = {
           enabled = true;
