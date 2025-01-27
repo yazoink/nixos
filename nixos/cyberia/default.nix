@@ -28,11 +28,11 @@
         size = 11;
       };
       # wallpaper = ./wallpapers/clouds6.jpg;
-      wallpaper = ./wallpapers/painting4.jpg;
+      wallpaper = ./wallpapers/paradise/grey.png;
       sddm = {
         scale = 1.3;
         # wallpaper = ./wallpapers/clouds6.jpg;
-        wallpaper = ./wallpapers/painting4.jpg;
+        wallpaper = ./wallpapers/paradise/grey.png;
       };
       firefoxCss.stylix.enable = true;
     };
