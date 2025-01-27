@@ -7,10 +7,11 @@
 # https://color.firefox.com/?theme=XQAAAALSAQAAAAAAAABBKYhm849SCicxcT-BCXcGHf3p79EhVPVD1H7xcfZ9PTtZXOCodCzcptiRYecKT8IAeEvOAieTrR8rb6tjInrOvZ5_6AiDksz6OlXheQQHZtX4DVgfQO-xmkMH-w_jtX2JdDIRwia4GNaVQY0RM1580FR6u18AKYpRXzZZDdKihXdSHtCwMBdsQ5yu9RRot9UTMDN6d8wg9X0Orz6DBCTGmrr3Ccz0Bc58g6jTjCHHk6M0VX3hG59wCe8WMUJqosq2PBi_MGk5OCzl2K62nnuf__VH6mg
 let
   cursors = pkgs.callPackage ./paradise-cursors.nix {};
+  icons = pkgs.callPackage ./paradise-icons.nix {};
 in {
   config = lib.mkIf (config.myOptions.bundles.desktopBase.enable && config.myOptions.desktopTheme.name == "paradise") {
     desktopTheme.base16Accent = "base0D";
-    environment.systemPackages = [cursors];
+    environment.systemPackages = [cursors icons];
     stylix = {
       cursor = {
         name = "BreezeX-Paradise";

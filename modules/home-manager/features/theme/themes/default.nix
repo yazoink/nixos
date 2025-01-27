@@ -12,5 +12,6 @@
     ./biscuit
     ./everblush
     ./levuaska
+    ./paradise
   ];
 }
