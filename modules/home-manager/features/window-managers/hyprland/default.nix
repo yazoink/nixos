@@ -137,8 +137,8 @@ in {
           border_size = 1;
           layout = "dwindle";
           allow_tearing = false;
-          "col.inactive_border" = "rgb(${config.stylix.base16Scheme.base02})";
-          "col.active_border" = "rgb(${config.stylix.base16Scheme.base02})";
+          "col.inactive_border" = "rgb(${config.stylix.base16Scheme.base01})";
+          "col.active_border" = "rgb(${config.stylix.base16Scheme.base01})";
           #"col.active_border" = builtins.trace "set accent color in hyprland config" "rgb(${config.stylix.base16Scheme.${osConfig.desktopTheme.base16Accent}})";
         };
         decoration = {

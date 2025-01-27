@@ -70,7 +70,7 @@ in {
 
         /*****----- Global Properties -----*****/
         * {
-            border-colour:               var(selected);
+            border-colour:               var(background-alt);
             handle-colour:               var(selected);
             background-colour:           var(background);
             foreground-colour:           var(foreground);
