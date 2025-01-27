@@ -150,7 +150,7 @@ in {
             range = 20;
             offset = "0 2";
             render_power = 4;
-            color = "rgba(00000040)";
+            color = "rgba(00000030)";
           };
         };
         plugin = {
