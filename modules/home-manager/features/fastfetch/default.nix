@@ -13,47 +13,49 @@
   config = lib.mkIf config.bundles.base.fastfetch.enable {
     programs.fastfetch = {
       enable = true;
-      logo = {
-        source = "apple";
+      settings = {
+        logo = {
+          source = "apple";
+        };
+        modules = [
+          {
+            type = "title";
+          }
+          {
+            type = "break";
+          }
+          {
+            type = "os";
+          }
+          {
+            type = "kernel";
+          }
+          {
+            type = "shell";
+          }
+          {
+            type = "wm";
+          }
+          {
+            type = "terminal";
+          }
+          {
+            type = "cpu";
+          }
+          {
+            type = "gpu";
+          }
+          {
+            type = "memory";
+          }
+          {
+            type = "break";
+          }
+          {
+            type = "colors";
+          }
+        ];
       };
-      modules = [
-        {
-          type = "title";
-        }
-        {
-          type = "break";
-        }
-        {
-          type = "os";
-        }
-        {
-          type = "kernel";
-        }
-        {
-          type = "shell";
-        }
-        {
-          type = "wm";
-        }
-        {
-          type = "terminal";
-        }
-        {
-          type = "cpu";
-        }
-        {
-          type = "gpu";
-        }
-        {
-          type = "memory";
-        }
-        {
-          type = "break";
-        }
-        {
-          type = "colors";
-        }
-      ];
     };
   };
 }
