@@ -99,7 +99,7 @@ in {
         enableZshIntegration = true;
         settings = {
           add_newline = true;
-          command_timeout = "2500";
+          command_timeout = 2500;
           directory = {
             read_only = " ";
             home_symbol = "~";
