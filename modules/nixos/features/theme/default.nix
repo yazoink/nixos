@@ -1,5 +1,9 @@
-{pkgs, config, lib, ...}:
 {
+  pkgs,
+  config,
+  lib,
+  ...
+}: {
   options = {
     desktopTheme.base16Accent = lib.mkOption {
       type = lib.types.str;
@@ -40,7 +44,7 @@
           name = "DejaVu Math TeX Gyre";
         };
       };
-      image = config.myOptions.desktopTheme.wallpaper;
+      image = config.myOptions.desktopTheme.wallpaper.image;
     };
   };
 }
