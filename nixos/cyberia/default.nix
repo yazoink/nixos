@@ -20,8 +20,8 @@
       # name = "everblush";
       smallBars = true;
       fonts.terminal = {
-        # name = "Consolas";
-        size = 11;
+        name = "Consolas";
+        size = 12;
       };
       fonts.desktop = {
         name = "SF Pro Display";
