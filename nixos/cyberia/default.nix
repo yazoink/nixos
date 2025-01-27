@@ -28,11 +28,11 @@
         size = 11;
       };
       # wallpaper = ./wallpapers/clouds6.jpg;
-      wallpaper = ./wallpapers/paradise/clouds_paradise.jpg;
+      wallpaper = ./wallpapers/paradise/twig_paradise.jpg;
       sddm = {
         scale = 1.3;
         # wallpaper = ./wallpapers/clouds6.jpg;
-        wallpaper = ./wallpapers/paradise/clouds_paradise.jpg;
+        wallpaper = ./wallpapers/paradise/twig_paradise.jpg;
       };
       firefoxCss.stylix.enable = true;
     };
