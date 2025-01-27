@@ -39,7 +39,7 @@ See [documentation.md](./documentation.md)
 ![20250126_21:54:32_screenshot](https://github.com/user-attachments/assets/1322e8f8-dc31-4a55-a02b-df2f07b3cfcc)
 (sway + levuaska theme)
 
-![20250117_06:57:55_screenshot](https://github.com/user-attachments/assets/89b10c55-0942-463e-a67b-fcdb4ace8438)
+![20250116_22:42:43_screenshot](https://github.com/user-attachments/assets/c6a84933-5248-4655-8b98-a80a47888e35)
 (sway + everblush theme)
 
 ![twilight](https://github.com/user-attachments/assets/44132aba-23ee-40c8-86ae-d908f5bc523e)
