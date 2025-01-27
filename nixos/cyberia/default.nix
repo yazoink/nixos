@@ -18,7 +18,7 @@
     desktopTheme = {
       name = "paradise";
       # name = "everblush";
-      smallBars = true;
+      # smallBars = true;
       fonts.terminal = {
         name = "Consolas";
         size = 12;
