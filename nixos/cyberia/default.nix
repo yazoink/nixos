@@ -29,7 +29,7 @@
       };
       # wallpaper = ./wallpapers/clouds6.jpg;
       wallpaper = {
-        image = ./wallpapers/paradise/twig_paradise.jpg;
+        image = ./wallpapers/paradise/clouds_paradise.jpg;
         solidColor = {
           enable = true;
           hex = config.stylix.base16Scheme.base03;
@@ -38,7 +38,7 @@
       sddm = {
         scale = 1.3;
         # wallpaper = ./wallpapers/clouds6.jpg;
-        wallpaper = ./wallpapers/paradise/grey.png;
+        wallpaper = ./wallpapers/paradise/clouds_paradise.jpg;
       };
       firefoxCss.stylix.enable = true;
     };
