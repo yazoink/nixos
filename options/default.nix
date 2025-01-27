@@ -145,6 +145,7 @@
           solidColor = {
             enable = lib.mkOption {
               type = lib.types.bool;
+              default = false;
             };
             hex = lib.mkOption {
               type = lib.types.str;
