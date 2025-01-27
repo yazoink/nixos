@@ -4,7 +4,12 @@
   lib,
   pkgs,
   ...
-}: {
+}: let
+  style = config.lib.stylix.colors {
+    template = ./style.css.mustache;
+    extension = ".css";
+  };
+in {
   options = {
     bundles.desktopBase.wofi.enable = lib.mkOption {
       type = lib.types.bool;
@@ -30,52 +35,14 @@
         yoffset = 5;
         display_generic = true;
       };
-      style = with config.stylix.base16Scheme; ''
-        * {
-          font-family: "${config.stylix.fonts.sansSerif.name}";
-          font-size: ${builtins.toString config.stylix.fonts.sizes.popups}pt;
-        }
-
-        window {
-          background: transparent;
-        }
-
-        #outer-box {
-          background: #${base00};
-          border: 1px solid #${base02};
-          border-radius: 10px;
-          padding: 15px;
-          /*box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);*/
-        }
-
-        #input, #input:focus {
-          margin-bottom: 10px;
-          border-radius: 10px;
-          background: #${base00};
-          border: transparent;
-          outline: transparent;
-          box-shadow: none;
-        }
-
-        #inner-box {
-          border-radius: 15px;
-        }
-
-        #entry, #selected, #unselected, #entry:focus {
-          padding: 3px;
-          border-radius: 10px;
-          border: transparent;
-          outline: transparent;
-        }
-
-        #entry:selected {
-          background: #${base01};
-        }
-
-        #img {
-          padding-right: 10px;
-        }
-      '';
+      style =
+        ''
+          * {
+            font-family: "${config.stylix.fonts.sansSerif.name}";
+            font-size: ${builtins.toString config.stylix.fonts.sizes.popups}pt;
+          }
+        ''
+        + builtins.readFile style;
     };
   };
 }
