@@ -24,7 +24,7 @@
         size = 11;
       };
       fonts.desktop = {
-        name = "Rubik";
+        name = "SF Pro Display";
         size = 11;
       };
       # wallpaper = ./wallpapers/clouds6.jpg;
