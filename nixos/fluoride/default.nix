@@ -48,7 +48,7 @@
     };
     desktopTheme = {
       name = "rose-pine";
-      wallpaper = ./wallpapers/bay.JPG;
+      wallpaper.image = ./wallpapers/bay.JPG;
       terminalPadding = 24;
       sddm = {
         scale = 0.8;

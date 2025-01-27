@@ -1,15 +1,28 @@
 #!/usr/bin/env bash
 
-WALLPAPER="$1"
+WALLPAPER="$2"
 NOTIFY=true
 
-if [ $# == 2 ] && [ "$2" == "-q" ]; then
-  NOTIFY=false
+if [ $# == 3 ] && [ "$3" == "-q" ]; then
+    NOTIFY=false
 fi
 
-pkill swaybg
+case "$1" in
+    "-i" | "--image")
+        pkill swaybg
+        swaybg -i "$WALLPAPER" -m fill &
+        disown ;;
+    "-c" | "--color")
+        pkill swaybg
+        swaybg -c "$WALLPAPER" &
+        disown ;;
+    *)
+        echo "Error: invalid argument"
+        exit 1 ;;
+esac
+
 swaybg -i "$WALLPAPER" -m fill &
 disown
 
 [ $NOTIFY == true ] \
-  && notify-send "Wallpaper" "Reset wallpaper" -i "$WALLPAPER"
+    && notify-send "Wallpaper" "Reset wallpaper" -i "$WALLPAPER"

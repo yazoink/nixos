@@ -10,6 +10,10 @@
     if (osConfig.myOptions.desktopTheme.name == "caroline")
     then config.stylix.base16Scheme.base0E
     else config.stylix.base16Scheme.base08;
+  wallpaperCommand =
+    if osConfig.myOptions.desktopTheme.wallpaper.solidColor.enable
+    then "${../scripts/swaybg.sh} -c ${osConfig.myOptions.desktopTheme.wallpaper.solidColor.hex}"
+    else "${../scripts/swaybg.sh} -i ${osConfig.myOptions.desktopTheme.wallpaper.image}";
 in {
   imports = [
     ./hypridle.nix
@@ -54,7 +58,7 @@ in {
         "$bar" = "${../scripts/waybar.sh}";
         "$screenRecorder" = "kooha";
         "$mainMod" = "SUPER";
-        "$wallpaper" = "${../scripts/swaybg.sh} ${osConfig.myOptions.desktopTheme.wallpaper}";
+        "$wallpaper" = wallpaperCommand;
         env = [
           "NIXOS_OZONE_WL,1"
           "MOZ_ENABLE_WAYLAND,1"

@@ -137,9 +137,20 @@
             };
           };
         };
-        wallpaper = lib.mkOption {
-          type = lib.types.path;
-          description = "path to wallpaper";
+        wallpaper = {
+          image = lib.mkOption {
+            type = lib.types.path;
+            description = "path to wallpaper. Required for stylix, even if solid bg is set.";
+          };
+          solidColor = {
+            enable = lib.mkOption {
+              type = lib.types.bool;
+            };
+            hex = lib.mkOption {
+              type = lib.types.str;
+              default = "000000";
+            };
+          };
         };
         firefoxCss = {
           shyfox = {

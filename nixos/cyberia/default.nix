@@ -28,7 +28,13 @@
         size = 11;
       };
       # wallpaper = ./wallpapers/clouds6.jpg;
-      wallpaper = ./wallpapers/paradise/grey.png;
+      wallpaper = {
+        image = ./wallpapers/paradise/twig_paradise.jpg;
+        solidColor = {
+          enable = true;
+          hex = config.stylix.base16Scheme.base02;
+        };
+      };
       sddm = {
         scale = 1.3;
         # wallpaper = ./wallpapers/clouds6.jpg;

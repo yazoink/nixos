@@ -18,7 +18,7 @@
       # name = "everblush";
       name = "levuaska";
       # wallpaper = ./wallpapers/flowers-downscaled.jpg;
-      wallpaper = ./wallpapers/clouds-levuaska.jpg;
+      wallpaper.image = ./wallpapers/clouds-levuaska.jpg;
       smallBars = true;
       fonts = {
         desktop = {

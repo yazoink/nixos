@@ -9,6 +9,10 @@
     if osConfig.myOptions.desktopTheme.smallBars
     then 11
     else 14;
+  wallpaperCommand =
+    if osConfig.myOptions.desktopTheme.wallpaper.solidColor.enable
+    then "${../scripts/swaybg.sh} -c ${osConfig.myOptions.desktopTheme.wallpaper.solidColor.hex}"
+    else "${../scripts/swaybg.sh} -i ${osConfig.myOptions.desktopTheme.wallpaper.image}";
 in {
   imports = [./hypridle.nix];
   config = lib.mkIf osConfig.bundles.desktopBase.sway.enable {
@@ -169,7 +173,7 @@ in {
         menu = "exec pkill anyrun || anyrun";
         defaultWorkspace = "workspace number 1";
         startup = [
-          {command = "${../scripts/swaybg.sh} ${osConfig.myOptions.desktopTheme.wallpaper} -q";}
+          {command = "${wallpaperCommand} -q";}
           {command = "${../scripts/waybar.sh}";}
           {command = "${lib.getExe pkgs.poweralertd}";}
           {command = "nm-applet";}
@@ -276,7 +280,7 @@ in {
           "${modifier}+n" = "exec ${terminal} -e ${lib.getExe pkgs.ncmpcpp}";
           "${modifier}+Shift+b" = "exec ${../scripts/waybar.sh}";
           "${modifier}+Shift+f" = "exec ${../scripts/restart-foot-server.sh}";
-          "${modifier}+Shift+w" = "exec ${../scripts/swaybg.sh} ${osConfig.myOptions.desktopTheme.wallpaper}";
+          "${modifier}+Shift+w" = "exec ${wallpaperCommand}";
           "${modifier}+Shift+q" = "exec swaync-client -t -sw";
           "${modifier}+Control+l" = "exec ${lib.getExe pkgs.gtklock}";
           #"${modifier}+r" = "exec ${lib.getExe pkgs.kooha}";
