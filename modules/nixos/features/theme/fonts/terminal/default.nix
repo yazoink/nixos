@@ -7,5 +7,6 @@
     ./victor-mono
     ./cascadia-code
     ./jetbrains-mono
+    ./consolas
   ];
 }

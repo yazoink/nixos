@@ -15,36 +15,6 @@
 
   myOptions = {
     userAccount.username = "gene";
-    defaultApps = {
-      fileManager = {
-        command = "thunar";
-        desktopFile = "thunar.desktop";
-      };
-      guiTextEditor = {
-        command = "pluma";
-        desktopFile = "pluma.desktop";
-      };
-      documentReader = {
-        command = "atril";
-        desktopFile = "atril.desktop";
-      };
-      mediaPlayer = {
-        command = "vlc";
-        desktopFile = "vlc.desktop";
-      };
-      imageViewer = {
-        command = "ristretto";
-        desktopFile = "org.xfce.ristretto.desktop";
-      };
-      terminal = {
-        command = "footclient";
-        desktopFile = "footclient.desktop";
-      };
-      webBrowser = {
-        command = "firefox";
-        desktopFile = "firefox.desktop";
-      };
-    };
     desktopTheme = {
       name = "paradise";
       # name = "everblush";
