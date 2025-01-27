@@ -31,7 +31,7 @@
       wallpaper = {
         image = ./wallpapers/paradise/clouds_paradise.jpg;
         solidColor = {
-          enable = true;
+          enable = false;
           hex = config.stylix.base16Scheme.base03;
         };
       };
