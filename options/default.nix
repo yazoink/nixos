@@ -7,12 +7,12 @@
         fileManager = {
           command = lib.mkOption {
             type = lib.types.str;
-            default = "pcmanfm";
-            description = "options: thunar, pcmanfm";
+            default = "nemo";
+            description = "options: thunar, pcmanfm, nemo";
           };
           desktopFile = lib.mkOption {
             type = lib.types.str;
-            default = "pcmanfm.desktop";
+            default = "nemo.desktop";
           };
         };
         discordClient = {
