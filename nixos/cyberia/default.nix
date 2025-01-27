@@ -20,7 +20,7 @@
       # name = "everblush";
       smallBars = true;
       fonts.terminal = {
-        name = "Cascadia Code";
+        name = "Consolas";
         size = 11;
       };
       fonts.desktop = {
