@@ -8,5 +8,6 @@
     ./cascadia-code
     ./jetbrains-mono
     ./consolas
+    ./terminus
   ];
 }

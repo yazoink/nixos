@@ -83,7 +83,7 @@ in {
           };
           "tray" = {
             icon-size = 16;
-            spacing = 25;
+            spacing = 18;
           };
           "mpd" = {
             format = " {title} - {artist}";
@@ -122,14 +122,14 @@ in {
             tooltip = false;
             format = "{icon} ";
             format-icons = {
-              notification = "    ";
-              none = "    ";
-              dnd-notification = "    ";
-              dnd-none = "    ";
-              inhibited-notification = "    ";
-              inhibited-none = "    ";
-              dnd-inhibited-notification = "    ";
-              dnd-inhibited-none = "    ";
+              notification = "   ";
+              none = "   ";
+              dnd-notification = "   ";
+              dnd-none = "   ";
+              inhibited-notification = "   ";
+              inhibited-none = "   ";
+              dnd-inhibited-notification = "   ";
+              dnd-inhibited-none = "   ";
             };
             return-type = "json";
             exec-if = "which swaync-client";
