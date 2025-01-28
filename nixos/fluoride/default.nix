@@ -47,13 +47,13 @@
       username = "gene";
     };
     desktopTheme = {
-      name = "rose-pine";
+      name = "paradise";
       smallBars = true;
-      wallpaper.image = ./wallpapers/bay.JPG;
+      wallpaper.image = ./wallpapers/wall1.png;
       terminalPadding = 24;
       sddm = {
         scale = 0.8;
-        wallpaper = ./wallpapers/bay.JPG;
+        wallpaper = ./wallpapers/wall1.png;
       };
       firefoxCss.stylix.enable = true;
     };
