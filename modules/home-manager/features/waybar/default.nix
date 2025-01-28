@@ -166,6 +166,10 @@ in {
             padding-right: 7px;
           }
 
+          #idle_inhibitor {
+            padding-right: 5px;
+          }
+
           tooltip, #tray menu {
             font-weight: normal;
             background: #${base00};
