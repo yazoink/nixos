@@ -9,5 +9,6 @@
     ./jetbrains-mono
     ./consolas
     ./terminus
+    ./sf-mono
   ];
 }
