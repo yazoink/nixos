@@ -48,6 +48,7 @@
     };
     desktopTheme = {
       name = "rose-pine";
+      smallBars = true;
       wallpaper.image = ./wallpapers/bay.JPG;
       terminalPadding = 24;
       sddm = {
@@ -57,6 +58,7 @@
       firefoxCss.stylix.enable = true;
     };
     bundles = {
+      base.starshipFormat = 2;
       desktopBase.windowManager = "hyprland";
       desktopFull.enable = true;
     };

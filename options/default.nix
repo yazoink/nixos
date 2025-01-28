@@ -122,7 +122,7 @@
             };
             size = lib.mkOption {
               type = lib.types.number;
-              default = 12;
+              default = 11;
             };
           };
           desktop = {
@@ -133,7 +133,7 @@
             };
             size = lib.mkOption {
               type = lib.types.number;
-              default = 12;
+              default = 11;
             };
           };
         };
