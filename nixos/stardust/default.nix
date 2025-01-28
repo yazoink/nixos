@@ -22,8 +22,8 @@
       smallBars = true;
       fonts = {
         desktop = {
-          name = "Rubik";
-          size = 11;
+          name = "SF Pro Display";
+          size = 12;
         };
         terminal = {
           name = "Bm437 NEC APC3 8x16";
