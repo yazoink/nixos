@@ -187,11 +187,15 @@ in {
             padding-right: 7px;
           }
         ''
-        + lib.mkIf config.bundles.desktopBase.swaync.enable ''
-          #idle_inhibitor {
-            padding-right: 4px;
-          }
-        '';
+        + (
+          if config.bundles.desktopBase.swaync.enable
+          then ''
+            #idle_inhibitor {
+              padding-right: 4px;
+            }
+          ''
+          else ""
+        );
     };
   };
 }
