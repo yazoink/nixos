@@ -6,7 +6,7 @@ pkgs.stdenv.mkDerivation {
     owner = "yazoink";
     repo = "paradise-icons";
     rev = "main";
-    sha256 = "";
+    sha256 = "sha256-O1X3tJnvq/FTJZzBw5Kh2hEiA3yKYe5+OStLzLI2KtQ=";
   };
 
   dontUnpack = true;
