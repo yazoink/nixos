@@ -166,10 +166,6 @@ in {
             padding-right: 7px;
           }
 
-          #tray {
-            padding-right: 12px;
-          }
-
           tooltip, #tray menu {
             font-weight: normal;
             background: #${base00};
