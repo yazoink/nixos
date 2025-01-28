@@ -167,15 +167,13 @@ in {
           }
 
           #idle_inhibitor {
-            padding-right: 5px;
+            padding-right: 4px;
           }
 
           tooltip, #tray menu {
             font-weight: normal;
             background: #${base00};
             border: 1px solid #${base03};
-            margin: 5px;
-            padding: 5px;
           }
 
           tooltip label {

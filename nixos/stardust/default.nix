@@ -23,7 +23,7 @@
       fonts = {
         desktop = {
           name = "SF Pro Display";
-          size = 12;
+          size = 11;
         };
         terminal = {
           name = "Bm437 NEC APC3 8x16";
