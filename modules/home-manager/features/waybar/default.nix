@@ -166,10 +166,6 @@ in {
             padding-right: 7px;
           }
 
-          #idle_inhibitor {
-            padding-right: 4px;
-          }
-
           tooltip, #tray menu {
             font-weight: normal;
             background: #${base00};
@@ -189,6 +185,11 @@ in {
             color: #${base03};
             padding-left: 7px;
             padding-right: 7px;
+          }
+        ''
+        + lib.mkIf config.bundles.desktopBase.swaync.enable ''
+          #idle_inhibitor {
+            padding-right: 4px;
           }
         '';
     };
