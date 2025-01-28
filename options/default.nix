@@ -117,23 +117,23 @@
           terminal = {
             name = lib.mkOption {
               type = lib.types.str;
-              default = "Cascadia Code";
+              default = "SFMono";
               description = "options: Bm437 NEC APC3 8x16, JetBrainsMono Nerd Font, GeistMono Nerd Font, Iosevka Nerd Font, ZedMono Nerd Font, Cascadia Code, VictorMono Nerd Font";
             };
             size = lib.mkOption {
               type = lib.types.number;
-              default = 12;
+              default = 11;
             };
           };
           desktop = {
             name = lib.mkOption {
               type = lib.types.str;
-              default = "Rubik";
+              default = "SF Pro Display";
               description = "options: Rubik, SF Pro Display, DM Sans, Gabarito, Lexend, Product Sans, Roboto";
             };
             size = lib.mkOption {
               type = lib.types.number;
-              default = 12;
+              default = 11;
             };
           };
         };

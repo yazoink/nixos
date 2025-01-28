@@ -15,6 +15,12 @@
 
   myOptions = {
     userAccount.username = "gene";
+    defaultApps = {
+      fileManager = {
+        command = "thunar";
+        desktopFile = "thunar.desktop";
+      };
+    };
     desktopTheme = {
       name = "paradise";
       # name = "everblush";
