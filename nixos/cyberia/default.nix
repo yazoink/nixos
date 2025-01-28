@@ -21,7 +21,7 @@
       smallBars = true;
       fonts.terminal = {
         name = "SFMono";
-        size = 12;
+        size = 11;
       };
       fonts.desktop = {
         name = "SF Pro Display";
