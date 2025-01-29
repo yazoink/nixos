@@ -47,13 +47,13 @@
       username = "gene";
     };
     desktopTheme = {
-      name = "vase";
+      name = "swamp";
       smallBars = true;
-      wallpaper.image = ./wallpapers/wall1.png;
+      wallpaper.image = ./wallpapers/painting1.jpg;
       terminalPadding = 24;
       sddm = {
         scale = 0.8;
-        wallpaper = ./wallpapers/wall1.png;
+        wallpaper = ./wallpapers/painting1;
       };
       firefoxCss.stylix.enable = true;
     };
