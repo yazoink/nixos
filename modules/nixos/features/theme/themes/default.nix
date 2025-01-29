@@ -35,5 +35,6 @@
     ./fyry
     ./terracotta-light
     ./rose-pine-dawn
+    ./vase
   ];
 }
