@@ -47,7 +47,7 @@
       username = "gene";
     };
     desktopTheme = {
-      name = "swamp";
+      name = "darkmoss";
       smallBars = true;
       wallpaper.image = ./wallpapers/wall1.png;
       terminalPadding = 24;
