@@ -47,7 +47,7 @@
       username = "gene";
     };
     desktopTheme = {
-      name = "terracotta-light";
+      name = "rose-pine-dawn";
       smallBars = true;
       wallpaper.image = ./wallpapers/wall1.png;
       terminalPadding = 24;
