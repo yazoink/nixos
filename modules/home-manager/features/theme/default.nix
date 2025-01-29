@@ -144,7 +144,7 @@ in {
       #iconTheme.name = lib.mkDefault "OneUI-dark";
       iconTheme = {
         name = lib.mkDefault "Numix";
-        package = pkgs.numix-icon-theme;
+        package = lib.mkDefault pkgs.numix-icon-theme;
       };
       gtk2 = {
         extraConfig = builtins.readFile gtkrcFile;
