@@ -47,7 +47,7 @@
       username = "gene";
     };
     desktopTheme = {
-      name = "rose-pine-dawn";
+      name = "swamp";
       smallBars = true;
       wallpaper.image = ./wallpapers/wall1.png;
       terminalPadding = 24;
