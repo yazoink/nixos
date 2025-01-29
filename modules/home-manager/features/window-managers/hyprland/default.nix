@@ -138,7 +138,7 @@ in {
         general = {
           gaps_in = 5;
           gaps_out = 15;
-          border_size = 1;
+          border_size = 4;
           layout = "dwindle";
           allow_tearing = false;
           "col.inactive_border" = "rgb(${config.stylix.base16Scheme.base01})";
@@ -341,6 +341,7 @@ in {
         ];
         windowrulev2 = [
           "plugin:hyprbars:title_color rgb(${config.stylix.base16Scheme.base05}), focus:1"
+          "plugin:hyprbars:bar_color rgb(${config.stylix.base16Scheme.base01}), focus:1"
           "suppressevent maximize, class:.*"
           "nomaxsize, title:^(Wine configuration)$"
           "float, class:^(org.kde.kruler)$"
