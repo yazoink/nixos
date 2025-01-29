@@ -78,7 +78,7 @@ in {
         ".config/qt5ct/qt5ct.conf".text = ''
           [Appearance]
           custom_palette=false
-          style=kvantum-dark
+          style=kvantum
           icon_theme=${config.gtk.iconTheme.name}
           standard_dialogs=default
 

@@ -33,5 +33,7 @@
     ./decay
     ./haze
     ./fyry
+    ./terracotta-light
+    ./rose-pine-dawn
   ];
 }
