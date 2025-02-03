@@ -47,16 +47,18 @@
       username = "gene";
     };
     desktopTheme = {
-      name = "rose-pine";
-      wallpaper.image = ./wallpapers/bay.JPG;
+      name = "paradise";
+      smallBars = true;
+      wallpaper.image = ./wallpapers/wall1.png;
       terminalPadding = 24;
       sddm = {
         scale = 0.8;
-        wallpaper = ./wallpapers/bay.JPG;
+        wallpaper = ./wallpapers/wall1.png;
       };
       firefoxCss.stylix.enable = true;
     };
     bundles = {
+      base.starshipFormat = 2;
       desktopBase.windowManager = "hyprland";
       desktopFull.enable = true;
     };
@@ -68,6 +70,7 @@
       steam.enable = true;
       gamescope.enable = true;
       virtManager.enable = true;
+      lutgen.enable = true;
     };
     hardwareFeatures = {
       ssd.enable = true;

@@ -13,5 +13,6 @@
     ./everblush
     ./levuaska
     ./paradise
+    ./rose-pine-dawn
   ];
 }
