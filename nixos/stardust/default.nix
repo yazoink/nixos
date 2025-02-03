@@ -16,13 +16,13 @@
     userAccount.username = "gene";
     desktopTheme = {
       # name = "everblush";
-      name = "levuaska";
+      name = "biscuit";
       # wallpaper = ./wallpapers/flowers-downscaled.jpg;
       wallpaper.image = ./wallpapers/clouds-levuaska.jpg;
       smallBars = true;
       fonts = {
         desktop = {
-          name = "SF Pro Display";
+          name = "Rubik";
           size = 11;
         };
         terminal = {
