@@ -70,6 +70,7 @@
       steam.enable = true;
       gamescope.enable = true;
       virtManager.enable = true;
+      lutgen.enable = true;
     };
     hardwareFeatures = {
       ssd.enable = true;

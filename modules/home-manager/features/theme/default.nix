@@ -78,7 +78,7 @@ in {
         ".config/qt5ct/qt5ct.conf".text = ''
           [Appearance]
           custom_palette=false
-          style=kvantum-dark
+          style=kvantum
           icon_theme=${config.gtk.iconTheme.name}
           standard_dialogs=default
 
@@ -144,7 +144,7 @@ in {
       #iconTheme.name = lib.mkDefault "OneUI-dark";
       iconTheme = {
         name = lib.mkDefault "Numix";
-        package = pkgs.numix-icon-theme;
+        package = lib.mkDefault pkgs.numix-icon-theme;
       };
       gtk2 = {
         extraConfig = builtins.readFile gtkrcFile;
