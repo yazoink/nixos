@@ -26,6 +26,7 @@
       polarity = lib.mkDefault "dark";
       targets = {
         grub.enable = false;
+        qt.enable = false;
       };
       cursor = {
         size = lib.mkDefault 24;
