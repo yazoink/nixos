@@ -27,6 +27,7 @@
       targets = {
         grub.enable = false;
         qt.enable = false;
+        qt.platform = "qtct";
       };
       cursor = {
         size = lib.mkDefault 24;
