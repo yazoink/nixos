@@ -26,6 +26,7 @@ in {
       };
     };
     stylix = {
+      targets.qt.enable = false;
       iconTheme = {
         enable = true;
         dark = lib.mkDefault "Numix";
