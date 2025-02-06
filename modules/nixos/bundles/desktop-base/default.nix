@@ -33,6 +33,7 @@
       greetd.enable = lib.mkIf (config.myOptions.bundles.desktopBase.displayManager == "regreet") true;
       gtklock.enable = true;
       hyprland.enable = lib.mkIf (config.myOptions.bundles.desktopBase.windowManager == "hyprland") true;
+      awesome.enable = lib.mkIf (config.myOptions.bundles.desktopBase.windowManager == "awesome") true;
       plymouth.enable = true;
       polkit.enable = true;
       sddm.enable = lib.mkIf (config.myOptions.bundles.desktopBase.displayManager == "sddm") true;
