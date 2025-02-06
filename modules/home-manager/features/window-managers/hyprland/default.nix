@@ -41,7 +41,7 @@ in {
       xwayland.enable = true;
       systemd.enable = false;
       plugins = with pkgs; [
-        hyprlandPlugins.hyprspace
+        # hyprlandPlugins.hyprspace
         #hyprlandPlugins.hypr-dynamic-cursors
         #hyprscroller
         hyprlandPlugins.hyprbars
@@ -158,17 +158,17 @@ in {
           };
         };
         plugin = {
-          overview = {
-            panelColor = "rgb(${config.stylix.base16Scheme.base00})";
-            workspaceInactiveBackground = "rgb(${config.stylix.base16Scheme.base01})";
-            workspaceActiveBackground = "rgb(${config.stylix.base16Scheme.base07})";
-            workspaceInactiveBorder = "rgb(${config.stylix.base16Scheme.base00})";
-            workspaceActiveBorder = "rgb(${config.stylix.base16Scheme.base00})";
-            centerAligned = true;
-            autoDrag = true;
-            autoScroll = true;
-            #overrideGaps = false;
-          };
+          # overview = {
+          #   panelColor = "rgb(${config.stylix.base16Scheme.base00})";
+          #   workspaceInactiveBackground = "rgb(${config.stylix.base16Scheme.base01})";
+          #   workspaceActiveBackground = "rgb(${config.stylix.base16Scheme.base07})";
+          #   workspaceInactiveBorder = "rgb(${config.stylix.base16Scheme.base00})";
+          #   workspaceActiveBorder = "rgb(${config.stylix.base16Scheme.base00})";
+          #   centerAligned = true;
+          #   autoDrag = true;
+          #   autoScroll = true;
+          #   #overrideGaps = false;
+          # };
           hyprbars = {
             bar_color = "rgb(${config.stylix.base16Scheme.base00})";
             bar_height =
@@ -239,7 +239,7 @@ in {
           "$mainMod SHIFT, E, exit,"
           "$mainMod, F, togglefloating,"
 
-          "$mainMod, Tab, overview:toggle,"
+          # "$mainMod, Tab, overview:toggle,"
           "$mainMod SHIFT, P, pseudo,"
 
           #"$mainMod, left, scroller:movefocus, l"
