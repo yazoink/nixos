@@ -51,7 +51,7 @@
     bundles = {
       base.starshipFormat = 2;
       desktopBase.displayManager = "sddm";
-      desktopBase.windowManager = "awesome";
+      desktopBase.windowManager = "hyprland";
       desktopFull.enable = true;
     };
     features = {
