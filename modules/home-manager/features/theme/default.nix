@@ -74,7 +74,7 @@ in {
     };
 
     home = {
-      file = {
+      /*file = {
         ".config/qt5ct/qt5ct.conf".text = ''
           [Appearance]
           custom_palette=false
@@ -111,7 +111,7 @@ in {
         ".config/Kvantum/kvantum.kvconfig".text = ''
           [General]
           theme=KvLibadwaitaRecolor
-        '';
+        '';*/
       };
 
       sessionVariables = {

@@ -26,8 +26,7 @@
       polarity = lib.mkDefault "dark";
       targets = {
         grub.enable = false;
-        qt.enable = false;
-        qt.platform = "qtct";
+        qt.platform = "gnome";
       };
       cursor = {
         size = lib.mkDefault 24;
