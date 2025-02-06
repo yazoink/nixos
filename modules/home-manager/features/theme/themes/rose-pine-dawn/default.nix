@@ -6,9 +6,9 @@
   ...
 }: {
   config = lib.mkIf (osConfig.myOptions.bundles.desktopBase.enable && osConfig.myOptions.desktopTheme.name == "rose-pine-dawn") {
-    gtk = {
+    stylix = {
       iconTheme = {
-        name = "rose-pine-dawn-icons";
+        light = "rose-pine-dawn-icons";
         package = pkgs.rose-pine-icon-theme;
       };
     };
