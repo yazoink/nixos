@@ -6,9 +6,9 @@ pkgs.rustPlatform.buildRustPackage rec {
     owner = "yazoink";
     repo = "pswdrs";
     rev = "main";
-    sha256 = "sha256-Wu/jR69eFvVOogin5/5nF8TeHIzQFAU2SxflPBpNN/k=";
+    sha256 = "sha256-tkJL3365pKOXPt7o6Z7JqdUFqHPKaSinfRpXh0X06DM=";
   };
-  cargoHash = "sha256-3cdwL9ocrSybseg15Bsg4GdE96tvMbilDnpQHRJ+z0c=";
+  cargoHash = "sha256-Wu/jR69eFvVOogin5/5nF8TeHIzQFAU2SxflPBpNN/k=";
   buildInputs = [];
   nativeBuildInputs = [];
   /*
