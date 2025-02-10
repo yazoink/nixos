@@ -11,7 +11,6 @@
     extension = ".css";
   };
   kvantumGenerator = ./kvantum-generator/generate_kvantum.py;
-  oneUiIcons = pkgs.callPackage ./oneui4-icons.nix {};
 in {
   imports = [./themes];
   config = lib.mkIf osConfig.myOptions.bundles.desktopBase.enable {
@@ -133,7 +132,6 @@ in {
         #libsForQt5.qtstyleplugins
         #kdePackages.qt6ct
         adw-gtk3
-        oneUiIcons
       ];
     };
 
