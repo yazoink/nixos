@@ -1,4 +1,4 @@
-{ pkgs ? import <nixpkgs> { } }:
+{pkgs ? import <nixpkgs> {}}:
 pkgs.rustPlatform.buildRustPackage rec {
   pname = "pswdrs";
   version = "1.0";
@@ -6,13 +6,15 @@ pkgs.rustPlatform.buildRustPackage rec {
     owner = "yazoink";
     repo = "pswdrs";
     rev = "main";
-    sha256 = "sha256-tkJL3365pKOXPt7o6Z7JqdUFqHPKaSinfRpXh0X06DM=";
+    sha256 = "sha256-Wu/jR69eFvVOogin5/5nF8TeHIzQFAU2SxflPBpNN/k=";
   };
   cargoHash = "sha256-3cdwL9ocrSybseg15Bsg4GdE96tvMbilDnpQHRJ+z0c=";
   buildInputs = [];
   nativeBuildInputs = [];
-  /*postInstall = ''
+  /*
+    postInstall = ''
     mkdir -p $out/share/pswdrs
     cp -r $src/data/* $out/share/pswdrs
-  '';*/
+  '';
+  */
 }
