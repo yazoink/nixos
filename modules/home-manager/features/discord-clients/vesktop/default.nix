@@ -1,12 +1,16 @@
-{pkgs, config, lib, osConfig, ...}:
-let
+{
+  pkgs,
+  config,
+  lib,
+  osConfig,
+  ...
+}: let
   themeFile = config.lib.stylix.colors {
     template = builtins.trace "set vesktop theme template" ./${osConfig.desktopTheme.base16Accent}.theme.css.mustache;
     extension = ".css";
   };
   inherit (osConfig.myOptions.bundles.desktopFull.vesktop) bloat;
-in
-{
+in {
   config = lib.mkIf (osConfig.myOptions.defaultApps.discordClient.command == "vesktop" && osConfig.myOptions.bundles.desktopFull.enable) {
     xdg.configFile = {
       "vesktop/themes/my.theme.css".source = themeFile;
@@ -24,7 +28,7 @@ in
       '';
       config = {
         useQuickCss = true;
-        enabledThemes = ["my.theme.css"];
+        #enabledThemes = ["my.theme.css"];
         transparent = false;
         enableReactDevtools = true;
         disableMinSize = true;
