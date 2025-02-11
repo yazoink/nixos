@@ -18,5 +18,6 @@
     ./features/eduke32
     ./features/super-tux-kart
     ./features/lutgen
+    ./features/wine
   ];
 }
