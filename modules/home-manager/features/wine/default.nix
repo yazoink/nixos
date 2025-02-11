@@ -9,8 +9,8 @@
       [winetricks]
       ++ (
         if osConfig.myOptions.bundles.desktopBase.windowManager == "awesome"
-        then "wineWowPackages.full"
-        else "wineWowPackages.waylandFull"
+        then [pkgs.wineWowPackages.full]
+        else [pkgs.wineWowPackages.waylandFull]
       );
   };
 }
