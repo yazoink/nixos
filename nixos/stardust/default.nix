@@ -53,7 +53,6 @@
       prismlauncher.enable = true;
       superTuxKart.enable = true;
       virtManager.enable = true;
-      wine.enable = true;
     };
     hardwareFeatures = {
       ssd.enable = true;
