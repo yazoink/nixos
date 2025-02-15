@@ -1,0 +1,111 @@
+/**
+ * @name My Stylix Theme
+ * @description Custom stylix theme.
+ * @author refact0r/yazoink
+ * @version 2.0.0
+ * @invite nz87hXyvcy
+ * @website https://github.com/refact0r/midnight-discord
+ * @source https://github.com/refact0r/midnight-discord/blob/master/midnight.theme.css
+ * @authorId 508863359777505290
+ * @authorLink https://www.refact0r.dev
+*/
+
+/* import theme modules */
+@import url("https://refact0r.github.io/midnight-discord/src/main.css"); /* main theme css. */
+@import url("https://refact0r.github.io/midnight-discord/src/colors.css"); /* adds custom colors. remove this line to get default colors. */
+@import url("https://refact0r.github.io/midnight-discord/src/animations.css"); /* adds animations. remove to disable animations. */
+
+:root {
+  /* font, change to '' for default discord font */
+  --font: "Rubik";
+
+  /* spacing between panels */
+  --gap: 5px;
+
+  /* thickness of unread messages divider and highlighted message borders */
+  --divider-thickness: 3px;
+
+  /* transitions */
+  --list-item-transition: 0.2s ease;
+
+  /* text colors */
+  --text-0: var(--bg-4); /* text on colored elements */
+  --text-1: #{{base05}}; /* other normally white text */
+  --text-2: #{{base05}}; /* headings and important text */
+  --text-3: #{{base05}}; /* normal text */
+  --text-4: #{{base05}}; /* icon buttons and channels */
+  --text-5: #{{base03}}; /* muted channels/chats and timestamps */
+
+  /* background and dark colors */
+  --bg-1: #{{base02}}; /* dark buttons when clicked */
+  --bg-2: #{{base01}}; /* dark buttons */
+  --bg-3: #{{base00}}; /* spacing, secondary elements */
+  --bg-4: #{{base00}}; /* main background color */
+  --hover: #{{base01}}; /* channels and buttons when hovered */
+  --active: #{{base02}}; /* channels and buttons when clicked or selected */
+  --active-2: #{{base02}}; /* extra state for transparent buttons */
+  --message-hover: #{{base01}}; /* messages when hovered */
+
+  /* accent colors */
+  --accent-1: var(--blue-1); /* links and other accent text */
+  --accent-2: var(--blue-2); /* small accent elements */
+  --accent-3: var(--blue-3); /* accent buttons */
+  --accent-4: var(--blue-4); /* accent buttons when hovered */
+  --accent-5: var(--blue-5); /* accent buttons when clicked */
+  --mention: linear-gradient(
+    to right,
+    color-mix(in hsl, var(--accent-2), transparent 90%) 60%,
+    transparent
+  ); /* background of messages that mention you */
+  --mention-hover: linear-gradient(
+    to right,
+    color-mix(in hsl, var(--accent-2), transparent 95%) 60%,
+    transparent
+  ); /* background of messages that mention you when hovered */
+  --accent-new: var(
+    --accent-2
+  ); /* stuff that's normally red like mute/deafen buttons */
+
+  /* status indicator colors */
+  --online: var(--green-2); /* change to #44a25b for default */
+  --dnd: var(--red-2); /* change to #d83a42 for default */
+  --idle: var(--yellow-2); /* change to #c99656 for default */
+  --streaming: var(--purple-2); /* change to #593695 for default */
+  --offline: var(--text-4); /* change to #83838b for default offline color */
+
+  /* border colors */
+  --border-light: transparent; /* light border color */
+  --border: transparent; /* normal border color */
+  --button-border: transparent; /* neutral border color of buttons */
+
+  /* base colors */
+  --red-1: #{{base08}};
+  --red-2: #{{base08}};
+  --red-3: #{{base08}};
+  --red-4: #{{base08}};
+  --red-5: #{{base08}};
+
+  --green-1: #{{base0B}};
+  --green-2: #{{base0B}};
+  --green-3: #{{base0B}};
+  --green-4: #{{base0B}};
+  --green-5: #{{base0B}};
+
+  --blue-1: #{{base0D}};
+  --blue-2: #{{base0D}};
+  --blue-3: #{{base0D}};
+  --blue-4: #{{base0D}};
+  --blue-5: #{{base0D}};
+
+  --yellow-1: #{{base0A}};
+  --yellow-2: #{{base0A}};
+  --yellow-3: #{{base0A}};
+  --yellow-4: #{{base0A}};
+  --yellow-5: #{{base0A}};
+
+  --purple-1: #{{base0E}};
+  --purple-2: #{{base0E}};
+  --purple-3: #{{base0E}};
+  --purple-4: #{{base0E}};
+  --purple-5: #{{base0E}};
+}

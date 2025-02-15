@@ -6,7 +6,7 @@
   ...
 }: let
   themeFile = config.lib.stylix.colors {
-    template = builtins.trace "set vesktop theme template" ./${osConfig.desktopTheme.base16Accent}.theme.css.mustache;
+    template = builtins.trace "set vesktop theme template" ./my.theme.css.mustache;
     extension = ".css";
   };
   inherit (osConfig.myOptions.bundles.desktopFull.vesktop) bloat;
@@ -28,7 +28,7 @@ in {
       '';
       config = {
         useQuickCss = true;
-        #enabledThemes = ["my.theme.css"];
+        enabledThemes = ["my.theme.css"];
         transparent = false;
         enableReactDevtools = true;
         disableMinSize = true;
