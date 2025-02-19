@@ -32,8 +32,8 @@ in {
         ''
         + (builtins.readFile themeFile);
       settings = {
-        positionX = "center";
-        positionY = "top";
+        positionX = "right";
+        positionY = "bottom";
         layer = "top";
         control-center-layer = "top";
         cssPriority = "application";
