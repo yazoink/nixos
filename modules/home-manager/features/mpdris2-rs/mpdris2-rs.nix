@@ -9,5 +9,5 @@ pkgs.rustPlatform.buildRustPackage rec {
     sha256 = "sha256-c9CI5KaC9wyfnYUvAIdq/4fznb7ehe5qbUiQ9ooPG+M=";
   };
   useFetchCargoVendor = true;
-  cargoHash = "";
+  cargoHash = "sha256-Lbs94OSyLd4hGMUeDGbjaLstd7ACfE7Tbrbz3uAyKoY=";
 }
