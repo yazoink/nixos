@@ -63,6 +63,8 @@ in {
       checkConfig = false;
       extraConfig =
         ''
+          default_orientation vertical
+          for_window [class=".*"] split toggle
           focus_follows_mouse yes
           title_align center
           titlebar_padding ${builtins.toString barPadding}
@@ -233,12 +235,13 @@ in {
         };
         keybindings = {
           "${modifier}+Return" = "exec ${pkgs.foot}/bin/footclient";
-          "${modifier}+q" = "kill";
+          "${modifier}+q" = "split toggle kill";
           "${modifier}+p" = "${menu}";
           "${modifier}+Shift+r" = "restart";
           "${modifier}+f" = "floating toggle";
           "${modifier}+m" = "fullscreen";
           "${modifier}+x" = "sticky toggle";
+          "${modifier}+l" = "layout toggle split";
           "${modifier}+r" = "mode \"resize\"";
           "${modifier}+space" = "focus mode_toggle";
           "${modifier}+Shift+Left" = "move left";
