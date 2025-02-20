@@ -235,7 +235,7 @@ in {
         };
         keybindings = {
           "${modifier}+Return" = "exec ${pkgs.foot}/bin/footclient";
-          "${modifier}+q" = "split toggle kill";
+          "${modifier}+q" = "split toggle, kill";
           "${modifier}+p" = "${menu}";
           "${modifier}+Shift+r" = "restart";
           "${modifier}+f" = "floating toggle";
