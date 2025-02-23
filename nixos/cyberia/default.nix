@@ -22,7 +22,7 @@
       };
     };
     desktopTheme = {
-      name = "atelier-savanna";
+      name = "paradise";
       # name = "everblush";
       smallBars = true;
       fonts.terminal = {
