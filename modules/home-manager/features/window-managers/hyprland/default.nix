@@ -186,9 +186,9 @@ in {
             bar_buttons_alignment = "left";
             bar_part_of_window = true;
             hyprbars-button = [
-              "rgb(${closeButtonColor}), 15, , hyprctl dispatch killactive"
-              "rgb(${config.stylix.base16Scheme.base0A}), 15, , hyprctl dispatch movetoworkspacesilent special"
-              "rgb(${config.stylix.base16Scheme.base0B}), 15, , hyprctl dispatch fullscreen 1"
+              "rgb(${closeButtonColor}), 15, , hyprctl dispatch killactive, rgb(${closeButtonColor})"
+              "rgb(${config.stylix.base16Scheme.base0A}), 15, , hyprctl dispatch movetoworkspacesilent special, rgb(${config.stylix.base16Scheme.base0A})"
+              "rgb(${config.stylix.base16Scheme.base0B}), 15, , hyprctl dispatch fullscreen 1, rgb(${config.stylix.base16Scheme.base0B})"
             ];
           };
           /*
