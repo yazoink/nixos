@@ -1,5 +1,9 @@
-{pkgs, lib, osConfig, ...}:
 {
+  pkgs,
+  lib,
+  osConfig,
+  ...
+}: {
   config = lib.mkIf (osConfig.myOptions.bundles.desktopBase.enable && osConfig.myOptions.defaultApps.guiTextEditor == "codium") {
     programs.vscode = {
       enable = true;
@@ -11,7 +15,7 @@
         #"editor.fontFamily" = lib.mkForce "Terminus \(TTF\)";
         #"editor.fontFamily" = lib.mkForce "0xProto Nerd Font";
       };
-      extensions = with pkgs.vscode-extensions; [
+      profiles.default.extensions = with pkgs.vscode-extensions; [
         hars.cppsnippets
         ms-vscode.cpptools
         jnoortheen.nix-ide
