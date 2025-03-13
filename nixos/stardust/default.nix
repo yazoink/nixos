@@ -16,8 +16,8 @@
     userAccount.username = "gene";
     defaultApps = {
       webBrowser = {
-        command = "brave";
-        desktopFile = "brave.desktop";
+        command = "librewolf";
+        desktopFile = "librewolf.desktop";
       };
     };
     desktopTheme = {

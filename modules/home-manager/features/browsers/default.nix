@@ -3,5 +3,6 @@
     ./firefox
     ./zen
     ./brave
+    ./librewolf
   ];
 }
