@@ -14,12 +14,6 @@
 
   myOptions = {
     userAccount.username = "gene";
-    defaultApps = {
-      webBrowser = {
-        command = "librewolf";
-        desktopFile = "librewolf.desktop";
-      };
-    };
     desktopTheme = {
       name = "everblush";
       #name = "levuaska";
