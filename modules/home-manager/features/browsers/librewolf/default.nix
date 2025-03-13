@@ -123,7 +123,7 @@
             then [enhanced-h264ify]
             else []
           );
-        # extraConfig = builtins.readFile ./user.js;
+        extraConfig = builtins.readFile ./user.js;
         /*
           extraConfig = builtins.readFile (builtins.fetchurl {
           url = "https://raw.githubusercontent.com/yokoffing/Betterfox/main/user.js";
