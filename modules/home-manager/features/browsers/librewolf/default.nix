@@ -7,10 +7,6 @@
   pkgs,
   ...
 }: {
-  imports = [
-    ./stylix
-  ];
-
   config = lib.mkIf (osConfig.myOptions.bundles.desktopBase.enable && osConfig.myOptions.defaultApps.webBrowser.command == "librewolf") {
     home = {
       sessionVariables = {
