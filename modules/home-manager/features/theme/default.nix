@@ -115,7 +115,7 @@ in {
     home = {
       file = {
         ".config/qt5ct/qt5ct.conf".text = qtctConf;
-        ".config/qt5ct/qt6ct.conf".text = qtctConf;
+        ".config/qt6ct/qt6ct.conf".text = qtctConf;
         ".config/Kvantum/kvantum.kvconfig".text = ''
           [General]
           theme=KvLibadwaitaRecolor
