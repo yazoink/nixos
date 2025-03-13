@@ -14,6 +14,12 @@
 
   myOptions = {
     userAccount.username = "gene";
+    defaultApps = {
+      webBrowser = {
+        command = "brave";
+        desktopFile = "brave.desktop";
+      };
+    };
     desktopTheme = {
       name = "everblush";
       #name = "levuaska";

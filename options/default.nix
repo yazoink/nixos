@@ -63,7 +63,7 @@
           command = lib.mkOption {
             type = lib.types.str;
             default = "firefox";
-            description = "options: firefox";
+            description = "options: firefox zen brave";
           };
           desktopFile = lib.mkOption {
             type = lib.types.str;
