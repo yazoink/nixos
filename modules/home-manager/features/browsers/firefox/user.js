@@ -88,7 +88,7 @@ user_pref("browser.privatebrowsing.forceMediaMemoryCache", true);
 user_pref("browser.sessionstore.interval", 60000);
 
 /** SHUTDOWN & SANITIZING ***/
-user_pref("privacy.history.custom", false);
+// user_pref("privacy.history.custom", true);
 
 /** SEARCH / URL BAR ***/
 user_pref("browser.urlbar.trimHttps", true);
@@ -248,7 +248,7 @@ user_pref("browser.download.always_ask_before_handling_new_types", true);
 user_pref("extensions.postDownloadThirdPartyPrompt", false);
 user_pref("privacy.sanitize.sanitizeOnShutdown", true);
 user_pref("privacy.clearOnShutdown_v2.cache", true); // DEFAULT
-user_pref("privacy.clearOnShutdown_v2.cookiesAndStorage", true); // DEFAULT
+user_pref("privacy.clearOnShutdown_v2.cookiesAndStorage", false); // DEFAULT
 user_pref("privacy.clearOnShutdown_v2.historyFormDataAndDownloads", true); // DEFAULT
 user_pref("permissions.default.geo", 0);
 user_pref("privacy.userContext.enabled", true);
