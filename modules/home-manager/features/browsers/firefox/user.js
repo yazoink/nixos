@@ -246,7 +246,7 @@ user_pref("extensions.formautofill.creditCards.enabled", false);
 user_pref("browser.download.useDownloadDir", false);
 user_pref("browser.download.always_ask_before_handling_new_types", true);
 user_pref("extensions.postDownloadThirdPartyPrompt", false);
-user_pref("privacy.sanitize.sanitizeOnShutdown", true);
+user_pref("privacy.sanitize.sanitizeOnShutdown", false);
 user_pref("privacy.clearOnShutdown_v2.cache", true); // DEFAULT
 user_pref("privacy.clearOnShutdown_v2.cookiesAndStorage", false); // DEFAULT
 user_pref("privacy.clearOnShutdown_v2.historyFormDataAndDownloads", true); // DEFAULT
