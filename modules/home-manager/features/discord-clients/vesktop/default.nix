@@ -31,6 +31,12 @@ in {
         * {
           font-family: ${config.stylix.fonts.sansSerif.name};
         }
+
+        body {
+          --font: ${config.stylix.fonts.sansSerif.name};
+          --font-primary: ${config.stylix.fonts.sansSerif.name};
+          --font-display: ${config.stylix.fonts.sansSerif.name};
+        }
       '';
       config = {
         useQuickCss = true;
