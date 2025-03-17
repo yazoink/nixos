@@ -22,6 +22,12 @@ in {
       };
       vesktop.enable = true;
       quickCss = ''
+        :root {
+          --font: ${config.stylix.fonts.sansSerif.name};
+          --font-primary: ${config.stylix.fonts.sansSerif.name};
+          --font-display: ${config.stylix.fonts.sansSerif.name};
+        }
+
         * {
           font-family: ${config.stylix.fonts.sansSerif.name};
         }
