@@ -53,6 +53,7 @@
       prismlauncher.enable = true;
       superTuxKart.enable = true;
       virtManager.enable = true;
+      virtualbox.enable = true;
     };
     hardwareFeatures = {
       ssd.enable = true;
