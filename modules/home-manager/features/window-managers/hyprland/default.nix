@@ -3,6 +3,7 @@
   lib,
   config,
   osConfig,
+  inputs,
   ...
 }: let
   inherit (osConfig.myOptions.desktopTheme) smallBars;
@@ -38,13 +39,15 @@ in {
 
     wayland.windowManager.hyprland = builtins.trace "hyprland config module enabled" {
       enable = true;
+      package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
       xwayland.enable = true;
       systemd.enable = false;
-      plugins = with pkgs; [
+      plugins = [
+        inputs.hyprland-plugins.packages.${pkgs.stdenv.hostPlatform.system}.hyprbars
         # hyprlandPlugins.hyprspace
         #hyprlandPlugins.hypr-dynamic-cursors
         #hyprscroller
-        hyprlandPlugins.hyprbars
+        # hyprlandPlugins.hyprbars
       ];
       settings = {
         "$terminal" = "${osConfig.myOptions.defaultApps.terminal.command}";

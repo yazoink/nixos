@@ -1,6 +1,11 @@
 # relies on hyprland home-manager module
-{pkgs, config, lib, ...}:
 {
+  pkgs,
+  config,
+  lib,
+  inputs,
+  ...
+}: {
   options = {
     bundles.desktopBase.hyprland.enable = lib.mkOption {
       type = lib.types.bool;
@@ -35,7 +40,7 @@
       swaybg
     ];
 
-    services  = {
+    services = {
       upower.enable = true; # for poweralertd
       dbus.enable = true;
       libinput.enable = true;
@@ -43,8 +48,10 @@
 
     programs.hyprland = {
       enable = true;
-      package = pkgs.hyprland;
-      portalPackage = pkgs.xdg-desktop-portal-hyprland;
+      # package = pkgs.hyprland;
+      package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
+      # portalPackage = pkgs.xdg-desktop-portal-hyprland;
+      portalPackage = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
       withUWSM = false;
     };
 
