@@ -53,7 +53,7 @@
       terminalPadding = 24;
       sddm = {
         scale = 0.8;
-        wallpaper = ./wallpapers/wall1.png;
+        wallpaper = ./wallpapers/clouds_paradise.jpg;
       };
       firefoxCss.stylix.enable = true;
     };
