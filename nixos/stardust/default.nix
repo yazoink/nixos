@@ -39,7 +39,7 @@
     };
     bundles = {
       #base.starshipFormat = 2;
-      desktopBase.windowManager = "sway";
+      desktopBase.windowManager = "hyprland";
       desktopBase.displayManager = "sddm";
       desktopFull.enable = true;
       desktopFull.vesktop.bloat = false;
