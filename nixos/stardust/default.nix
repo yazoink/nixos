@@ -61,7 +61,7 @@
       h264ify.enable = true;
       laptop = {
         enable = true;
-        touchpadScrollFactor = 0.5;
+        touchpadScrollFactor = 0.3;
         batteryName = "BAT1";
       };
     };
