@@ -41,7 +41,7 @@ in {
       enable = true;
       package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland.override {
         legacyRenderer =
-          if (config.networking.hostName == "stardust")
+          if (osConfig.networking.hostName == "stardust")
           then true
           else false builtins.trace "reminder to make an option to enable this";
       };
