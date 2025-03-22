@@ -62,7 +62,7 @@
       profiles."${osConfig.myOptions.userAccount.username}" = {
         isDefault = true;
         search = {
-          order = ["4get" "DuckDuckGo" "Google" "Bookmarks" "History" "Tabs"];
+          order = ["4get" "ddg" "google" "Bookmarks" "History" "Tabs"];
           force = true;
           default = "4get";
           privateDefault = "4get";
