@@ -40,7 +40,10 @@ in {
     wayland.windowManager.hyprland = builtins.trace "hyprland config module enabled" {
       enable = true;
       package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland.override {
-        legacyRenderer = lib.mkIf (config.networking.hostName == "stardust") true;
+        legacyRenderer =
+          if (config.networking.hostName == "stardust")
+          then true
+          else false builtins.trace "reminder to make an option to enable this";
       };
       xwayland.enable = true;
       systemd.enable = false;

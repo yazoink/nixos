@@ -50,7 +50,10 @@
       enable = true;
       # package = pkgs.hyprland;
       package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland.override {
-        legacyRenderer = lib.mkIf (config.networking.hostName == "stardust") true;
+        legacyRenderer =
+          if (config.networking.hostName == "stardust")
+          then true
+          else false;
       };
       # portalPackage = pkgs.xdg-desktop-portal-hyprland;
       portalPackage = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
