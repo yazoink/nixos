@@ -39,7 +39,9 @@ in {
 
     wayland.windowManager.hyprland = builtins.trace "hyprland config module enabled" {
       enable = true;
-      package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
+      package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland.override {
+        legacyRenderer = lib.mkIf (config.networking.hostName == "stardust") true;
+      };
       xwayland.enable = true;
       systemd.enable = false;
       plugins = [
