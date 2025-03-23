@@ -41,7 +41,7 @@ in {
       enable = true;
       package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland.override {
         legacyRenderer =
-          if (osConfig.myOptions.hardwareFeatures.hyprlandLegacyRenderer)
+          if (osConfig.myOptions.hardwareFeatures.hyprlandLegacyRenderer == true)
           then true
           else false;
       };
