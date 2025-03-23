@@ -61,7 +61,7 @@
       lutgen.enable = true;
     };
     hardwareFeatures = {
-      hyprlandLegacyRenderer = true;
+      hyprlandLegacyRenderer.enable = true;
       diskBurner.enable = true;
       ssd.enable = true;
       h264ify.enable = true;

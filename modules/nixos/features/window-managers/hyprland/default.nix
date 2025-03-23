@@ -51,7 +51,7 @@
       # package = pkgs.hyprland;
       package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland.override {
         legacyRenderer =
-          if (config.networking.hostName == "stardust")
+          if (config.myOptions.hardwareFeatures.hyprlandLegacyRenderer.enable == true)
           then true
           else false;
       };
