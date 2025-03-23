@@ -50,7 +50,7 @@
       firefoxCss.stylix.enable = true;
     };
     bundles = {
-      base.starshipFormat = 2;
+      # base.starshipFormat = 2;
       desktopBase.displayManager = "sddm";
       desktopBase.windowManager = "hyprland";
       desktopFull.enable = true;
