@@ -305,7 +305,7 @@
           default = false;
         };
       };
-      hardwareFeatures = {
+      hardwareFeatures = lib.mkOption {
         hyprlandLegacyRenderer = {
           type = lib.types.bool;
           default = false;
