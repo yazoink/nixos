@@ -25,12 +25,14 @@
       name = "paradise";
       # name = "everblush";
       fonts.terminal = {
-        name = "SFMono";
+        # name = "SFMono";
+        name = "Bm437 NEC APC3 8x16";
         size = 11;
       };
       fonts.desktop = {
-        name = "SF Pro Display";
-        size = 11;
+        # name = "SF Pro Display";
+        name = "Rubik";
+        size = 12;
       };
       # wallpaper = ./wallpapers/clouds6.jpg;
       wallpaper = {
