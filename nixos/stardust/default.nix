@@ -55,12 +55,13 @@
       virtualbox.enable = true;
     };
     hardwareFeatures = {
+      hyprlandLegacyRenderer = true;
       ssd.enable = true;
       diskBurner.enable = true;
       h264ify.enable = true;
       laptop = {
         enable = true;
-        touchpadScrollFactor = 0.3;
+        hyprlandTouchpadScrollFactor = 0.3;
         batteryName = "BAT1";
       };
     };

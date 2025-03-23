@@ -306,6 +306,10 @@
         };
       };
       hardwareFeatures = {
+        hyprlandLegacyRenderer = {
+          type = lib.types.bool;
+          default = false;
+        };
         h264ify.enable = lib.mkOption {
           type = lib.types.bool;
           default = false;
@@ -323,7 +327,7 @@
             type = lib.types.bool;
             default = false;
           };
-          touchpadScrollFactor = lib.mkOption {
+          hyprlandTouchpadScrollFactor = lib.mkOption {
             type = lib.types.number;
             default = 1;
           };
