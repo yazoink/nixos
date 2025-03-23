@@ -11,6 +11,10 @@
     };
   };
   config = lib.mkIf config.bundles.desktopFull.printing.enable {
+    networking.firewall = {
+      allowedTCPPorts = [631];
+      allowedUDPPorts = [631];
+    };
     bundles.base.avahi.enable = true;
     services.printing = {
       enable = true;
@@ -22,8 +26,12 @@
         CreateIPPPrinterQueues All
         BrowseProtocols all
       '';
+      listenAddresses = ["*:631"];
+      allowFrom = ["all"];
+      defaultShared = true;
+      openFirewall = true;
       drivers = with pkgs; [
-        fxlinuxprint
+        # fxlinuxprint
         # foomatic-db-ppds-withNonfreeDb
         gutenprint
         cups-filters
