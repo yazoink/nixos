@@ -40,10 +40,7 @@ in {
     wayland.windowManager.hyprland = builtins.trace "hyprland config module enabled" {
       enable = true;
       package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland.override {
-        legacyRenderer =
-          if osConfig.myOptions.hardwareFeatures.hyprlandLegacyRenderer
-          then true
-          else false;
+        legacyRenderer = lib.mkIf osConfig.myOptions.hardwareFeatures.hyprlandLegacyRenderer true;
       };
       xwayland.enable = true;
       systemd.enable = false;
