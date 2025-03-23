@@ -109,7 +109,7 @@ in {
           kb_model = lib.mkIf (osConfig.networking.hostName == "cyberia") "thinkpad";
           touchpad = {
             disable_while_typing = false;
-            scroll_factor = osConfig.myOptions.hardwareFeatures.laptop.touchpadScrollFactor;
+            scroll_factor = osConfig.myOptions.hardwareFeatures.laptop.hyprlandTouchpadScrollFactor;
           };
         };
         device = [
