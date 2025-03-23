@@ -117,7 +117,6 @@ in {
             name = "tpps/2-ibm-trackpoint";
             accel_profile = "flat";
             sensitivity = 0.5;
-            scroll_factor = osConfig.myOptions.hardwareFeatures.laptop.hyprlandTouchpadScrollFactor;
           }
           /*
             {
