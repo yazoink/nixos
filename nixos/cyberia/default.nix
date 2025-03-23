@@ -25,9 +25,9 @@
       name = "paradise";
       # name = "everblush";
       fonts.terminal = {
-        # name = "SFMono";
-        name = "Bm437 NEC APC3 8x16";
-        size = 12;
+        name = "SFMono";
+        # name = "Bm437 NEC APC3 8x16";
+        size = 11;
       };
       fonts.desktop = {
         # name = "SF Pro Display";
@@ -50,7 +50,7 @@
       firefoxCss.stylix.enable = true;
     };
     bundles = {
-      # base.starshipFormat = 2;
+      base.starshipFormat = 2;
       desktopBase.displayManager = "sddm";
       desktopBase.windowManager = "hyprland";
       desktopFull.enable = true;
