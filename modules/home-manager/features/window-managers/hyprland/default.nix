@@ -43,7 +43,7 @@ in {
         legacyRenderer =
           if (osConfig.networking.hostName == "stardust")
           then true
-          else false builtins.trace "reminder to make an option to enable this";
+          else false;
       };
       xwayland.enable = true;
       systemd.enable = false;
