@@ -1,5 +1,9 @@
-{config, lib, pkgs, ...}:
 {
+  config,
+  lib,
+  pkgs,
+  ...
+}: {
   options = {
     bundles.desktopFull.printing.enable = lib.mkOption {
       type = lib.types.bool;
@@ -18,10 +22,11 @@
         CreateIPPPrinterQueues All
         BrowseProtocols all
       '';
-      drivers = with pkgs;[
-        fxlinuxprint 
-        #foomatic-db-ppds-withNonfreeDb
+      drivers = with pkgs; [
+        fxlinuxprint
+        # foomatic-db-ppds-withNonfreeDb
         gutenprint
+        cups-filters
       ];
     };
   };
