@@ -48,7 +48,6 @@
     };
     desktopTheme = {
       name = "paradise";
-      smallBars = true;
       wallpaper.image = ./wallpapers/wall1.png;
       terminalPadding = 24;
       sddm = {

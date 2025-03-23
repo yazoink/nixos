@@ -19,7 +19,6 @@
       #name = "levuaska";
       wallpaper.image = ./wallpapers/flowers-downscaled.jpg;
       #wallpaper.image = ./wallpapers/clouds-levuaska.jpg;
-      smallBars = true;
       fonts = {
         desktop = {
           name = "Rubik";

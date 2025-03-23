@@ -24,7 +24,6 @@
     desktopTheme = {
       name = "paradise";
       # name = "everblush";
-      smallBars = true;
       fonts.terminal = {
         name = "SFMono";
         size = 11;

@@ -109,10 +109,6 @@
           type = lib.types.number;
           default = 24;
         };
-        smallBars = lib.mkOption {
-          type = lib.types.bool;
-          default = false;
-        };
         fonts = {
           terminal = {
             name = lib.mkOption {

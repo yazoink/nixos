@@ -5,10 +5,7 @@
   osConfig,
   ...
 }: let
-  barPadding =
-    if osConfig.myOptions.desktopTheme.smallBars
-    then 11
-    else 14;
+  barPadding = 11;
   wallpaperCommand =
     if osConfig.myOptions.desktopTheme.wallpaper.solidColor.enable
     then "${../scripts/swaybg.sh} -c ${osConfig.myOptions.desktopTheme.wallpaper.solidColor.hex}"
