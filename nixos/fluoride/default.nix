@@ -47,7 +47,7 @@
       username = "gene";
     };
     desktopTheme = {
-      name = "paradise";
+      name = "vesper";
       wallpaper.image = ./wallpapers/wall1.png;
       terminalPadding = 24;
       sddm = {
