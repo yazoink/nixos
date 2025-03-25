@@ -36,5 +36,6 @@
     ./terracotta-light
     ./rose-pine-dawn
     ./vase
+    ./vesper
   ];
 }
