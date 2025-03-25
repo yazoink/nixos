@@ -43,8 +43,8 @@
           url = "https://nixos.org/blog/announcements-rss.xml";
         }
         {
-          tags = ["youtube"];
-          url = "https://www.youtube.com/sleepdeprived";
+          tags = ["youtube"]; # schlatt
+          url = "https://www.youtube.com/feeds/videos.xml?channel_id=UC5qqBFOKTNAzIyE4g3SvuwQ";
         }
       ];
     };
