@@ -1,5 +1,8 @@
-{config, lib, ...}:
 {
+  config,
+  lib,
+  ...
+}: {
   options = {
     bundles.desktopFull.newsboat.enable = lib.mkOption {
       type = lib.types.bool;
@@ -38,6 +41,10 @@
         {
           tags = ["technology" "nix"];
           url = "https://nixos.org/blog/announcements-rss.xml";
+        }
+        {
+          tags = ["youtube"];
+          url = "https://www.youtube.com/sleepdeprived";
         }
       ];
     };
