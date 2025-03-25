@@ -42,9 +42,15 @@
           tags = ["technology" "nix"];
           url = "https://nixos.org/blog/announcements-rss.xml";
         }
+        # enter in console on yt channel page:
+        # window["ytInitialData"].metadata.channelMetadataRenderer.rssUrl
+        {
+          tags = ["youtube"]; # sleep deprived
+          url = "https://www.youtube.com/feeds/videos.xml?channel_id=UC5qqBFOKTNAzIyE4g3SvuwQ";
+        }
         {
           tags = ["youtube"]; # schlatt
-          url = "https://www.youtube.com/feeds/videos.xml?channel_id=UC5qqBFOKTNAzIyE4g3SvuwQ";
+          url = "https://www.youtube.com/feeds/videos.xml?channel_id=UC2mP7il3YV7TxM_3m6U0bwA";
         }
       ];
     };
