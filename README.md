@@ -12,7 +12,7 @@ My NixOS desktop configs with home-manager.
 - Launcher: Rofi/Wofi/Anyrun
 - Terminal: Foot
 - Editor: Neovim
-- Browser: Firefox/Zen
+- Browser: Firefox/Zen/Brave
 - File manager: Thunar/Yazi
 - Notifications: Mako/SwayNC
 - Display manager: SDDM/ReGreet
