@@ -1,5 +1,5 @@
 # NixOS
-My NixOS desktop configs with home-manager and Hyprland.
+My NixOS desktop configs with home-manager.
 
 ## Hosts
 - Cyberia: Coreboot ThinkPad T430
