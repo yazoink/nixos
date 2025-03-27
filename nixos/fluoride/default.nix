@@ -52,7 +52,7 @@
       terminalPadding = 24;
       fonts.desktop = {
         # name = "SF Pro Display";
-        name = "DM Sans";
+        name = "Lexend";
         size = 12;
       };
       sddm = {
