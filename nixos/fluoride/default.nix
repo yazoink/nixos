@@ -50,6 +50,11 @@
       name = "paradise";
       wallpaper.image = ./wallpapers/wall1.png;
       terminalPadding = 24;
+      fonts.desktop = {
+        # name = "SF Pro Display";
+        name = "Gabarito";
+        size = 11;
+      };
       sddm = {
         scale = 0.8;
         wallpaper = ./wallpapers/clouds_paradise.jpg;
