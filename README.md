@@ -1,5 +1,5 @@
 # NixOS
-My NixOS desktop configs with home-manager and Hyprland.
+My NixOS desktop configs with home-manager.
 
 ## Hosts
 - Cyberia: Coreboot ThinkPad T430
@@ -12,7 +12,7 @@ My NixOS desktop configs with home-manager and Hyprland.
 - Launcher: Rofi/Wofi/Anyrun
 - Terminal: Foot
 - Editor: Neovim
-- Browser: Firefox/Zen
+- Browser: Firefox/Zen/Brave
 - File manager: Thunar/Yazi
 - Notifications: Mako/SwayNC
 - Display manager: SDDM/ReGreet
@@ -33,17 +33,14 @@ My NixOS desktop configs with home-manager and Hyprland.
 See [documentation.md](./documentation.md)
   
 ## Screenshots
+![1742555549627](https://github.com/user-attachments/assets/f6b142ba-3873-48ff-9216-00879df519f4)
+(hyprland + everblush theme)
+
 ![1737986796055](https://github.com/user-attachments/assets/8d3fd41f-a801-41aa-95b2-cd4fef6a208b)
 (hyprland + paradise theme)
 
 ![20250126_21:54:32_screenshot](https://github.com/user-attachments/assets/1322e8f8-dc31-4a55-a02b-df2f07b3cfcc)
 (sway + levuaska theme)
-
-![20250116_22:42:43_screenshot](https://github.com/user-attachments/assets/c6a84933-5248-4655-8b98-a80a47888e35)
-(sway + everblush theme)
-
-![twilight](https://github.com/user-attachments/assets/44132aba-23ee-40c8-86ae-d908f5bc523e)
-(sway + twilight theme)
 
 ![20250103_14:44:29_screenshot](https://github.com/user-attachments/assets/f510d75f-528b-4f19-8a3a-bf155aa5cc5e)
 (sddm + caroline theme)
