@@ -52,7 +52,7 @@
       terminalPadding = 24;
       fonts.desktop = {
         # name = "SF Pro Display";
-        name = "Gabarito";
+        name = "DM Sans";
         size = 12;
       };
       sddm = {
