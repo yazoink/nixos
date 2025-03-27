@@ -55,6 +55,11 @@
         name = "Lexend";
         size = 12;
       };
+      fonts.terminal = {
+        name = "SFMono";
+        # name = "Bm437 NEC APC3 8x16";
+        size = 12;
+      };
       sddm = {
         scale = 0.8;
         wallpaper = ./wallpapers/clouds_paradise.jpg;
