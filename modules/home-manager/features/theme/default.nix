@@ -152,6 +152,16 @@ in {
       gtk2 = {
         extraConfig = builtins.readFile gtkrcFile;
       };
+      gtk3 = {
+        extraConfig = {
+          gtk-decoration-layout = "menu";
+        };
+      };
+      gtk4 = {
+        extraConfig = {
+          gtk-decoration-layout = "menu";
+        };
+      };
     };
 
     qt = {
