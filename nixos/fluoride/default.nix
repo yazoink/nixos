@@ -52,13 +52,13 @@
       terminalPadding = 24;
       fonts.desktop = {
         # name = "SF Pro Display";
-        name = "Lexend";
-        size = 12;
+        name = "Rubik";
+        size = 11;
       };
       fonts.terminal = {
         name = "SFMono";
         # name = "Bm437 NEC APC3 8x16";
-        size = 12;
+        size = 11;
       };
       sddm = {
         scale = 0.8;
