@@ -53,7 +53,7 @@
       fonts.desktop = {
         # name = "SF Pro Display";
         name = "Gabarito";
-        size = 11;
+        size = 12;
       };
       sddm = {
         scale = 0.8;
