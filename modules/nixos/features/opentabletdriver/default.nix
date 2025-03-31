@@ -1,6 +1,7 @@
 {
   config,
   lib,
+  pkgs,
   ...
 }: {
   options = {
@@ -14,5 +15,6 @@
       enable = true;
       daemon.enable = true;
     };
+    environment.systemPackages = with pkgs; [opentabletdriver];
   };
 }
