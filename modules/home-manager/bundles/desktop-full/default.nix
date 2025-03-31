@@ -31,6 +31,7 @@
         audacity
         libreoffice-qt
         inkscape
+        krita
         #shotcut
 
         ### gui utilities ###
