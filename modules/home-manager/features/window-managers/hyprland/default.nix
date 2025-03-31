@@ -46,7 +46,7 @@ in {
           else false;
       };
       xwayland.enable = true;
-      systemd.enable = false;
+      systemd.enable = true;
       plugins = [
         inputs.hyprland-plugins.packages.${pkgs.stdenv.hostPlatform.system}.hyprbars
         # hyprlandPlugins.hyprspace

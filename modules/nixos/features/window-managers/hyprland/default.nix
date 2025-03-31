@@ -48,6 +48,7 @@
 
     programs.hyprland = {
       enable = true;
+      xwayland.enable = true;
       # package = pkgs.hyprland;
       package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland.override {
         legacyRenderer =
