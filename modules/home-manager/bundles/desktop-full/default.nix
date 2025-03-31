@@ -1,5 +1,9 @@
-{pkgs, osConfig, lib, ...}:
 {
+  pkgs,
+  osConfig,
+  lib,
+  ...
+}: {
   config = lib.mkIf osConfig.myOptions.bundles.desktopFull.enable {
     bundles.desktopFull = {
       audtousd.enable = true;
@@ -15,51 +19,57 @@
       ytDlp.enable = true;
     };
 
-    home.packages = with pkgs; [
-      ### communication ###
-      signal-desktop
+    home.packages = with pkgs;
+      [
+        ### communication ###
+        signal-desktop
 
-      ### gui file viewers ###
-      sublime-music
+        ### gui file viewers ###
+        sublime-music
 
-      ### gui file editors ###
-      audacity
-      libreoffice-qt
-      inkscape
-      #shotcut
+        ### gui file editors ###
+        audacity
+        libreoffice-qt
+        inkscape
+        #shotcut
 
-      ### gui utilities ###
-      keepassxc
-      easyeffects
-      transmission_4-gtk
-      bleachbit
-      #qbittorrent-enhanced
-      nicotine-plus
-      kdePackages.kruler
-      #gnome-maps
-      #gnome-clocks
-      #gnome-disk-utility
-      gnome-font-viewer
-      galculator
-      d-spy
+        ### gui utilities ###
+        keepassxc
+        easyeffects
+        transmission_4-gtk
+        bleachbit
+        #qbittorrent-enhanced
+        nicotine-plus
+        kdePackages.kruler
+        #gnome-maps
+        #gnome-clocks
+        #gnome-disk-utility
+        gnome-font-viewer
+        galculator
+        d-spy
 
-      ### programming ####
-      texliveFull
-      zig
-      php
-      cmake
-      gcc
-      gnumake
-      clang-tools
-      python3
+        ### programming ####
+        texliveFull
+        zig
+        php
+        cmake
+        gcc
+        gnumake
+        clang-tools
+        python3
 
-      ### misc ###
-      tty-solitaire
-      cbonsai
-      nitch
-      wineWowPackages.waylandFull
-    ] ++ (if osConfig.services.printing.enable then 
-        with pkgs; [system-config-printer] else []);
+        ### misc ###
+        tty-solitaire
+        cbonsai
+        nitch
+        wineWowPackages.waylandFull
+        opentabletdriver
+      ]
+      ++ (
+        if osConfig.services.printing.enable
+        then with pkgs; [system-config-printer]
+        else []
+      );
   };
   imports = [
     ../../features/discord-clients
