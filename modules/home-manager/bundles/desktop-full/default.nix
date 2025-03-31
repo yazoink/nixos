@@ -63,7 +63,6 @@
         cbonsai
         nitch
         wineWowPackages.waylandFull
-        opentabletdriver
       ]
       ++ (
         if osConfig.services.printing.enable

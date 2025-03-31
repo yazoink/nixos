@@ -1,5 +1,8 @@
-{config, lib, ...}:
 {
+  config,
+  lib,
+  ...
+}: {
   imports = [
     ../../features/adb
     ../../features/gamemode
@@ -7,6 +10,7 @@
     ../../features/mpd
     ../../features/mullvad
     ../../features/printing
+    ../../features/opentabletdriver
   ];
 
   config = lib.mkIf config.myOptions.bundles.desktopFull.enable {
@@ -18,6 +22,7 @@
       mpd.enable = true;
       mullvad.enable = true;
       printing.enable = true;
+      opentabletdriver.enable = true;
     };
   };
 }
