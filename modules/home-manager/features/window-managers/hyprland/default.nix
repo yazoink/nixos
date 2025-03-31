@@ -92,6 +92,7 @@ in {
             "poweralertd"
             "nm-applet"
             "wl-clip-persist --clipboard regular"
+            "otd-daemon"
           ]
           ++ (
             if (osConfig.myOptions.defaultApps.terminal.command == "footclient")

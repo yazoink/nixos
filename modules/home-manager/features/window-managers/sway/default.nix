@@ -174,6 +174,7 @@ in {
           {command = "${../scripts/waybar.sh}";}
           {command = "${lib.getExe pkgs.poweralertd}";}
           {command = "nm-applet";}
+          {command = "otd-daemon";}
         ];
         gaps = {
           inner = 10;
