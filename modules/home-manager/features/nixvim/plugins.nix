@@ -17,7 +17,7 @@
       uncrustify
       fixjson
       rustfmt
-      php84Packages.php-cs-fixer
+      # php84Packages.php-cs-fixer broken :(
     ];
     programs.nixvim = {
       plugins = {
