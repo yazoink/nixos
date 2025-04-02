@@ -1,18 +1,38 @@
-{ stdenv, lib, fetchFromGitHub, cmake, nasm
-, gtk2, glib, ffmpeg_4, alsa-lib, libmad, libogg, libvorbis
-, glew, libpulseaudio, udev, openssl, doxygen, pkg-config
-, libX11, libGLU, libGL, libXpm, libXext, libXxf86vm
+{
+  stdenv,
+  lib,
+  fetchFromGitHub,
+  cmake,
+  nasm,
+  gtk2,
+  glib,
+  ffmpeg_4,
+  alsa-lib,
+  libmad,
+  libogg,
+  libvorbis,
+  glew,
+  libpulseaudio,
+  udev,
+  openssl,
+  doxygen,
+  pkg-config,
+  libX11,
+  libGLU,
+  libGL,
+  libXpm,
+  libXext,
+  libXxf86vm,
 }:
-
 stdenv.mkDerivation {
   pname = "etterna";
   version = "0.73-dev";
 
   src = fetchFromGitHub {
     owner = "etternagame";
-    repo  = "etterna";
-    rev   = "develop";
-    sha256 = "sha256-wz4F3nssPElbbnWuwUYDXp5w6jphS+TQ1xJEsd6UMxI=";
+    repo = "etterna";
+    rev = "develop";
+    sha256 = "sha256-ZCQt99Qcov/7jGfrSmX9WftaP2U2B1d1APK1mxrUDBs=";
   };
 
   # patches = [
@@ -23,12 +43,27 @@ stdenv.mkDerivation {
   #   sed '1i#include <ctime>' -i src/arch/ArchHooks/ArchHooks.h # gcc12
   # '';
 
-  nativeBuildInputs = [ cmake nasm pkg-config ];
+  nativeBuildInputs = [cmake nasm pkg-config];
 
   buildInputs = [
-    gtk2 glib ffmpeg_4 alsa-lib libmad libogg libvorbis
-    glew libpulseaudio udev openssl doxygen
-     libX11 libGLU libGL libXpm libXext libXxf86vm
+    gtk2
+    glib
+    ffmpeg_4
+    alsa-lib
+    libmad
+    libogg
+    libvorbis
+    glew
+    libpulseaudio
+    udev
+    openssl
+    doxygen
+    libX11
+    libGLU
+    libGL
+    libXpm
+    libXext
+    libXxf86vm
   ];
 
   cmakeFlags = [
@@ -44,7 +79,7 @@ stdenv.mkDerivation {
     description = "Free dance and rhythm game for Windows, Mac, and Linux";
     platforms = platforms.linux;
     license = licenses.mit; # expat version
-    maintainers = [ ];
+    maintainers = [];
     # never built on aarch64-linux since first introduction in nixpkgs
     broken = stdenv.isLinux && stdenv.isAarch64;
   };

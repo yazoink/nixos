@@ -37,5 +37,8 @@
     ./rose-pine-dawn
     ./vase
     ./vesper
+    ./petrichor-dew
+    ./crayon
+    ./substrata
   ];
 }
