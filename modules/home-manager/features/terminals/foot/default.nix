@@ -15,7 +15,7 @@ in {
           #pad = if osConfig.networking.hostName == "cyberia" then "16x16" else (if osConfig.networking.hostName == "fluoride" then "24x24" else "20x20");
           pad = "${builtins.toString terminalPadding}x${builtins.toString terminalPadding}";
           font = lib.mkForce "${config.stylix.fonts.monospace.name}:size=${toString config.stylix.fonts.sizes.terminal}, Terminus:size=12";
-          title = "⋆˙⟡⋆˙⟡";
+          title = "snail man is real";
         };
         cursor = {
           style = "beam";

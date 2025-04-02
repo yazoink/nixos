@@ -15,13 +15,16 @@ in {
             x = terminalPadding;
             y = terminalPadding;
           };
-          title = "<3";
+          title = "snail man is real";
         };
         cursor = {
           style = {
             shape = "Beam";
             blinking = "On";
           };
+        };
+        scrolling = {
+          history = 1000;
         };
       };
     };
