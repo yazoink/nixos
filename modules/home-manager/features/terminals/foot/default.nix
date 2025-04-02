@@ -1,8 +1,11 @@
-{config, lib, osConfig, ...}:
-let
-  inherit (osConfig.myOptions.desktopTheme) terminalPadding;
-in
 {
+  config,
+  lib,
+  osConfig,
+  ...
+}: let
+  inherit (osConfig.myOptions.desktopTheme) terminalPadding;
+in {
   config = lib.mkIf (osConfig.myOptions.bundles.desktopBase.enable && (osConfig.myOptions.defaultApps.terminal.command == "foot" || osConfig.myOptions.defaultApps.terminal.command == "footclient")) {
     programs.foot = {
       enable = true;
@@ -16,9 +19,6 @@ in
         cursor = {
           style = "beam";
           blink = "yes";
-        };
-        url = {
-          protocols = "http, https, ftp, ftps, file, gemini, gopher";
         };
         bell = {
           notify = "no";
