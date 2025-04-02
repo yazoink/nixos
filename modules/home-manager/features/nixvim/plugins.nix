@@ -50,19 +50,19 @@
               theme = {
                 normal = {
                   a = {
-                    bg = "#nil";
+                    bg = "#${config.stylix.base16Scheme.base00}";
                   };
                   b = {
-                    bg = "nil";
+                    bg = "#${config.stylix.base16Scheme.base00}";
                   };
                   c = {
-                    bg = "nil";
+                    bg = "#${config.stylix.base16Scheme.base00}";
                   };
                   z = {
-                    bg = "nil";
+                    bg = "#${config.stylix.base16Scheme.base00}";
                   };
                   y = {
-                    bg = "nil";
+                    bg = "#${config.stylix.base16Scheme.base00}";
                   };
                 };
               };
@@ -89,7 +89,7 @@
                   fmt = "string.lower";
                   color = {
                     fg = "#${config.stylix.base16Scheme.base04}";
-                    bg = "nil";
+                    bg = "#${config.stylix.base16Scheme.base00}";
                   };
                   separator.left = "";
                   separator.right = "";
@@ -101,7 +101,7 @@
                   icon.__unkeyed = "";
                   color = {
                     fg = "#${config.stylix.base16Scheme.base04}";
-                    bg = "nil";
+                    bg = "#${config.stylix.base16Scheme.base00}";
                   };
                   separator.left = "";
                   separator.right = "";
@@ -123,7 +123,7 @@
                   };
                   color = {
                     fg = "#${config.stylix.base16Scheme.base08}";
-                    bg = "nil";
+                    bg = "#${config.stylix.base16Scheme.base00}";
                   };
                   separator.left = "";
                   separator.right = "";
@@ -146,7 +146,7 @@
                   };
                   color = {
                     fg = "#${config.stylix.base16Scheme.base05}";
-                    bg = "nil";
+                    bg = "#${config.stylix.base16Scheme.base00}";
                   };
                   separator.left = "";
                   separator.right = "";
@@ -157,7 +157,7 @@
                   __unkeyed = "location";
                   color = {
                     fg = "#${config.stylix.base16Scheme.base0B}";
-                    bg = "nil";
+                    bg = "#${config.stylix.base16Scheme.base00}";
                   };
                   separator.left = "";
                   separator.right = "";
