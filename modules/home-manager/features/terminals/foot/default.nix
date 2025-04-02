@@ -26,6 +26,9 @@ in {
         scrollback = {
           lines = 500;
         };
+        colors = {
+          background = lib.mkForce config.stylix.base16Scheme.base00;
+        };
       };
     };
   };
