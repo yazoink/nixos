@@ -35,8 +35,8 @@
         desktopFile = "org.xfce.ristretto.desktop";
       };
       terminal = {
-        command = "footclient";
-        desktopFile = "footclient.desktop";
+        command = "alacritty";
+        desktopFile = "alacritty.desktop";
       };
       webBrowser = {
         command = "firefox";
