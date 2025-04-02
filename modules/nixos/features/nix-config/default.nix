@@ -1,5 +1,8 @@
-{config, lib, ...}:
 {
+  config,
+  lib,
+  ...
+}: {
   options = {
     bundles.base.nixConfig.enable = lib.mkOption {
       type = lib.types.bool;
@@ -25,4 +28,6 @@
       };
     };
   };
+
+  hardware.enableAllFirmware = true;
 }
