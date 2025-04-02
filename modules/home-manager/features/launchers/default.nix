@@ -1,7 +1,6 @@
 {
   imports = [
     ./anyrun
-    ./rofi
     ./wofi
   ];
 }
