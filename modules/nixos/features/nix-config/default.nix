@@ -27,7 +27,7 @@
         dates = "04:15";
       };
     };
-  };
 
-  hardware.enableAllFirmware = true;
+    hardware.enableAllFirmware = true;
+  };
 }
