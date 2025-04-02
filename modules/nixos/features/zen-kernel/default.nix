@@ -1,5 +1,10 @@
-{pkgs, config, lib, ...}:
 {
+  pkgs,
+  config,
+  lib,
+  inputs,
+  ...
+}: {
   options = {
     bundles.base.zenKernel.enable = lib.mkOption {
       type = lib.types.bool;
@@ -7,6 +12,6 @@
     };
   };
   config = lib.mkIf config.bundles.base.zenKernel.enable {
-    boot.kernelPackages = pkgs.linuxPackages_zen;
+    boot.kernelPackages = inputs.nixpkgs-master.legacyPackages.${pkgs.system}.linuxPackages_zen;
   };
 }
