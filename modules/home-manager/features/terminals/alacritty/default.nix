@@ -19,7 +19,7 @@ in {
         };
         cursor = {
           style = {
-            shape = "Block";
+            shape = "Beam";
             blinking = "On";
           };
         };
