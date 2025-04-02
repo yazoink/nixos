@@ -15,7 +15,7 @@ in {
             x = terminalPadding;
             y = terminalPadding;
           };
-          title = "⋆˙⟡⋆˙⟡";
+          title = "<3";
         };
         cursor = {
           style = {
