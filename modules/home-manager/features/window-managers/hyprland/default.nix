@@ -239,6 +239,7 @@ in {
           "$mainMod, C, exec, $colorPicker"
           "$mainMod, R, exec, $screenRecorder"
           "$mainMod SHIFT, B, exec, $bar"
+          "$mainMod SHIFT, R, exec, hyprctl reload"
           "$mainMod SHIFT, W, exec, $wallpaper"
           "$mainMod SHIFT, F, exec, ${../scripts/restart-foot-server.sh}"
           "$mainMod, Q, killactive,"
