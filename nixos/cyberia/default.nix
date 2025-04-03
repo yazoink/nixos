@@ -21,6 +21,12 @@
         desktopFile = "thunar.desktop";
       };
     };
+    defaultApps = {
+      terminal = {
+        command = "alacritty";
+        desktopFile = "alacritty.desktop";
+      };
+    };
     desktopTheme = {
       name = "paradise";
       # name = "everblush";
