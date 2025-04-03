@@ -50,12 +50,13 @@
       enable = true;
       xwayland.enable = true;
       # package = pkgs.hyprland;
-      package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland; # package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland.override {
-      #   legacyRenderer =
-      #     if (config.myOptions.hardwareFeatures.hyprlandLegacyRenderer.enable == true)
-      #     then true
-      #     else false;
-      # };
+      # package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
+      package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland.override {
+        legacyRenderer =
+          if (config.myOptions.hardwareFeatures.hyprlandLegacyRenderer.enable == true)
+          then true
+          else false;
+      };
       portalPackage = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
       # portalPackage = pkgs.xdg-desktop-portal-hyprland;
       withUWSM = false;
