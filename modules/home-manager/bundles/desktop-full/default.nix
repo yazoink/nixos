@@ -10,13 +10,15 @@
       colorScripts.enable = true;
       gimp.enable = true;
       kjtocal.enable = true;
-      kooha.enable = true;
+      # kooha.enable = true;
+      obs.enable = true;
       lyricli.enable = true;
       ncmpcpp.enable = true;
       newsboat.enable = true;
       soundboard.enable = true;
       usdtoaud.enable = true;
       ytDlp.enable = true;
+      cava.enable = true;
     };
 
     home.packages = with pkgs;
@@ -79,6 +81,7 @@
     ../../features/gimp
     ../../features/kjtocal
     ../../features/kooha
+    ../../features/obs
     ../../features/lyricli
     ../../features/ncmpcpp
     ../../features/newsboat
@@ -86,5 +89,7 @@
     ../../features/usdtoaud
     ../../features/yt-dlp
     ../../features/mpdris2-rs
+    ../../features/mpdris2
+    ../../features/cava
   ];
 }
