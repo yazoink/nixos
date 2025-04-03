@@ -6,7 +6,7 @@
 }: let
   inherit (osConfig.myOptions.desktopTheme) terminalPadding;
 in {
-  config = lib.mkIf (osConfig.myOptions.bundles.desktopBase.enable && (osConfig.myOptions.defaultApps.terminal.command == "alacritty" || osConfig.myOptions.defaultApps.terminal.command == "footclient")) {
+  config = lib.mkIf (osConfig.myOptions.bundles.desktopBase.enable && (osConfig.myOptions.defaultApps.terminal.command == "alacritty" || osConfig.myOptions.defaultApps.terminal.command == "alacritty")) {
     programs.alacritty = {
       enable = true;
       settings = {
@@ -22,6 +22,7 @@ in {
             shape = "Beam";
             blinking = "On";
           };
+          thickness = 0.3;
         };
         scrolling = {
           history = 1000;

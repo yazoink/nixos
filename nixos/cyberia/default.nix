@@ -20,8 +20,6 @@
         command = "thunar";
         desktopFile = "thunar.desktop";
       };
-    };
-    defaultApps = {
       terminal = {
         command = "alacritty";
         desktopFile = "alacritty.desktop";

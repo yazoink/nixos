@@ -13,6 +13,12 @@
   ];
 
   myOptions = {
+    defaultApps = {
+      terminal = {
+        command = "alacritty";
+        desktopFile = "alacritty.desktop";
+      };
+    };
     userAccount.username = "gene";
     desktopTheme = {
       name = "everblush";
