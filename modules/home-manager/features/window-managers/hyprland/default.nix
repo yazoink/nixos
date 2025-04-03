@@ -20,10 +20,6 @@ in {
     ./hypridle.nix
   ];
   config = lib.mkIf osConfig.bundles.desktopBase.hyprland.enable {
-    nix.settings = {
-      substituters = ["https://hyprland.cachix.org"];
-      trusted-public-keys = ["hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="];
-    };
     stylix.targets.hyprland.enable = false;
 
     bundles.desktopBase = {
@@ -39,34 +35,16 @@ in {
 
     home = {
       file.".config/hypr/scripts".source = ../scripts;
-      packages = with pkgs; [
-        libinput
-        dbus
-        xwayland
-        wl-clipboard
-        wl-clip-persist
-        upower # for poweralertd
-        kdePackages.qtwayland
-        networkmanagerapplet
-        wdisplays
-        poweralertd
-        grim
-        slurp
-        hyprpicker
-        hyprcursor
-        hypridle
-        swaybg
-      ];
     };
 
     wayland.windowManager.hyprland = builtins.trace "hyprland config module enabled" {
       enable = true;
-      package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland.override {
-        legacyRenderer =
-          if (osConfig.myOptions.hardwareFeatures.hyprlandLegacyRenderer.enable == true)
-          then true
-          else false;
-      };
+      package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland; # package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland.override {
+      #   legacyRenderer =
+      #     if (osConfig.myOptions.hardwareFeatures.hyprlandLegacyRenderer.enable == true)
+      #     then true
+      #     else false;
+      # };
       xwayland.enable = true;
       systemd.enable = true;
       plugins = [
