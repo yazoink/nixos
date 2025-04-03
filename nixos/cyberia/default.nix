@@ -28,7 +28,7 @@
       };
     };
     desktopTheme = {
-      name = "petrichor-dew";
+      name = "substrata";
       # name = "everblush";
       fonts.terminal = {
         name = "SFMono";
