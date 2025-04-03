@@ -28,7 +28,7 @@
       };
     };
     desktopTheme = {
-      name = "crayon";
+      name = "paradise";
       # name = "everblush";
       fonts.terminal = {
         name = "SFMono";
