@@ -40,7 +40,7 @@
       };
       # wallpaper = ./wallpapers/clouds6.jpg;
       wallpaper = {
-        image = ./wallpapers/paradise/clouds_paradise.jpg;
+        image = ./wallpapers/wall1.png;
         solidColor = {
           enable = false;
           hex = config.stylix.base16Scheme.base03;
