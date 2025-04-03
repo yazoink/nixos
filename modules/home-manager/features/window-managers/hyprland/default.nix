@@ -39,6 +39,24 @@ in {
 
     home = {
       file.".config/hypr/scripts".source = ../scripts;
+      packages = with pkgs; [
+        libinput
+        dbus
+        xwayland
+        wl-clipboard
+        wl-clip-persist
+        upower # for poweralertd
+        kdePackages.qtwayland
+        networkmanagerapplet
+        wdisplays
+        poweralertd
+        grim
+        slurp
+        hyprpicker
+        hyprcursor
+        hypridle
+        swaybg
+      ];
     };
 
     wayland.windowManager.hyprland = builtins.trace "hyprland config module enabled" {
