@@ -22,6 +22,7 @@ in {
             shape = "Beam";
             blinking = "On";
           };
+          thickness = 0.3;
         };
         scrolling = {
           history = 1000;
