@@ -2,11 +2,13 @@
   config,
   lib,
   osConfig,
+  pkgs,
   ...
 }: let
   inherit (osConfig.myOptions.desktopTheme) terminalPadding;
 in {
   config = lib.mkIf (osConfig.myOptions.bundles.desktopBase.enable && (osConfig.myOptions.defaultApps.terminal.command == "alacritty" || osConfig.myOptions.defaultApps.terminal.command == "alacritty")) {
+    home.packages = with pkgs; [ueberzugpp];
     programs.alacritty = {
       enable = true;
       settings = {
