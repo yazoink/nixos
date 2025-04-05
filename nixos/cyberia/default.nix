@@ -29,9 +29,9 @@
       # name = "paradise";
       name = "everblush";
       fonts.terminal = {
-        # name = "SFMono";
+        name = "SFMono";
         # name = "Bm437 NEC APC3 8x16";
-        name = "terminus";
+        # name = "Terminus";
         size = 12;
       };
       fonts.desktop = {
