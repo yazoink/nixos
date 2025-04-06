@@ -15,6 +15,7 @@ in {
     xdg.configFile = {
       "vesktop/themes/my.theme.css".source = themeFile;
     };
+    stylix.targets.nixcord.enable = false;
     programs.nixcord = {
       enable = true;
       discord = {
