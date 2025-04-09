@@ -34,7 +34,8 @@
         libreoffice-qt
         inkscape
         krita
-        olive-editor #shotcut
+        # olive-editor
+        shotcut
 
         ### gui utilities ###
         keepassxc
