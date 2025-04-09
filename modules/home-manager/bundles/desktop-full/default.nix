@@ -34,8 +34,7 @@
         libreoffice-qt
         inkscape
         krita
-        olive-editor-unstable
-        #shotcut
+        olive-editor #shotcut
 
         ### gui utilities ###
         keepassxc
