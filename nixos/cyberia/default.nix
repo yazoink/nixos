@@ -30,8 +30,8 @@
       name = "everblush";
       fonts.terminal = {
         # name = "SFMono";
-        name = "Bm437 NEC APC3 8x16";
-        # name = "Terminus";
+        # name = "Bm437 NEC APC3 8x16";
+        name = "Terminus";
         size = 11;
       };
       fonts.desktop = {
