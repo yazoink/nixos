@@ -27,7 +27,7 @@
     };
     desktopTheme = {
       # name = "paradise";
-      name = "everblush";
+      name = "bluevelvet";
       fonts.terminal = {
         name = "SFMono";
         # name = "Bm437 NEC APC3 8x16";
