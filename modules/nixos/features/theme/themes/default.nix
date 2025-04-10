@@ -40,5 +40,7 @@
     ./petrichor-dew
     ./crayon
     ./substrata
+    ./unnamed-1
+    ./blue-velvet
   ];
 }
