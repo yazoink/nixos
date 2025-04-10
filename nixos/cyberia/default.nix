@@ -27,10 +27,10 @@
     };
     desktopTheme = {
       # name = "paradise";
-      name = "bluevelvet";
+      name = "everblush";
       fonts.terminal = {
-        name = "SFMono";
-        # name = "Bm437 NEC APC3 8x16";
+        # name = "SFMono";
+        name = "Bm437 NEC APC3 8x16";
         # name = "Terminus";
         size = 11;
       };
@@ -42,7 +42,7 @@
       # wallpaper = ./wallpapers/clouds6.jpg;
       wallpaper = {
         # image = ./wallpapers/wall1.png;
-        image = ./wallpapers/flowers2.jpg;
+        image = ./wallpapers/flowers-1.jpg;
         solidColor = {
           enable = false;
           hex = config.stylix.base16Scheme.base03;
@@ -51,7 +51,7 @@
       sddm = {
         scale = 1.3;
         # wallpaper = ./wallpapers/clouds6.jpg;
-        wallpaper = ./wallpapers/flowers2.jpg;
+        wallpaper = ./wallpapers/flowers-1.jpg;
       };
       firefoxCss.stylix.enable = true;
     };
