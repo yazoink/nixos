@@ -31,7 +31,8 @@
           size = 11;
         };
         terminal = {
-          name = "Bm437 NEC APC3 8x16";
+          # name = "Bm437 NEC APC3 8x16";
+          name = "Terminus";
           size = 12;
         };
       };

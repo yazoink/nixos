@@ -1,5 +1,8 @@
-{config, lib, ...}:
 {
+  config,
+  lib,
+  ...
+}: {
   config = lib.mkIf config.myOptions.hardwareFeatures.laptop.enable {
     services.tlp = {
       enable = true;
@@ -12,8 +15,8 @@
         #CPU_MAX_PERF_ON_AC = 100;
         #CPU_MIN_PERF_ON_BAT = 0;
         #CPU_MAX_PERF_ON_BAT = 20;
-        #START_CHARGE_THRESH_BAT0 = 40; # 40 and bellow it starts to charge
-        #STOP_CHARGE_THRESH_BAT0 = 90; # 80 and above it stops charging
+        START_CHARGE_THRESH_BAT0 = 40; # 40 and bellow it starts to charge
+        STOP_CHARGE_THRESH_BAT0 = 95; # 80 and above it stops charging
       };
     };
   };
