@@ -10,5 +10,6 @@
     ./consolas
     ./terminus
     ./sf-mono
+    ./cozette
   ];
 }

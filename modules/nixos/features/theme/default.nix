@@ -30,9 +30,9 @@
         qt.platform = "gnome";
       };
       cursor = {
-        size = lib.mkDefault 24;
-        name = lib.mkDefault "macOS";
-        package = pkgs.apple-cursor;
+        size = lib.mkDefault 32;
+        name = lib.mkDefault "Capitaine Cursors";
+        package = pkgs.capitaine-cursors;
       };
       fonts = {
         sizes = {
