@@ -33,7 +33,7 @@
         # name = "SFMono";
         # name = "Bm437 NEC APC3 8x16";
         # name = "Terminus";
-        size = 12;
+        size = 11;
       };
       fonts.desktop = {
         # name = "SF Pro Display";
