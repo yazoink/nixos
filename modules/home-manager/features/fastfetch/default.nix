@@ -52,7 +52,10 @@
             type = "cpu";
           }
           {
-            type = "gpu";
+            type =
+              if (config.networking.hostName == "fluoride")
+              then "gpu"
+              else "display";
           }
           {
             type = "memory";
