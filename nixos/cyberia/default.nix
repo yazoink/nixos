@@ -29,9 +29,10 @@
       # name = "paradise";
       name = "moonfly";
       fonts.terminal = {
+        name = "JetBrainsMono Nerd Font";
         # name = "SFMono";
         # name = "Bm437 NEC APC3 8x16";
-        name = "Terminus";
+        # name = "Terminus";
         size = 12;
       };
       fonts.desktop = {
@@ -56,7 +57,7 @@
       firefoxCss.stylix.enable = true;
     };
     bundles = {
-      # base.starshipFormat = 2;
+      base.starshipFormat = 2;
       desktopBase.displayManager = "sddm";
       desktopBase.windowManager = "hyprland";
       desktopFull.enable = true;
