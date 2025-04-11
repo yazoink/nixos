@@ -44,5 +44,6 @@
     ./blue-velvet
     ./moonfly
     ./da-one-black
+    ./jardo-brighter
   ];
 }
