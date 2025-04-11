@@ -42,5 +42,6 @@
     ./substrata
     ./unnamed-1
     ./blue-velvet
+    ./moonfly
   ];
 }
