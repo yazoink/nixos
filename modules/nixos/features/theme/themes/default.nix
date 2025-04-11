@@ -43,5 +43,6 @@
     ./unnamed-1
     ./blue-velvet
     ./moonfly
+    ./da-one-black
   ];
 }
