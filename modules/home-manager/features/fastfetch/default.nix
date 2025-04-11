@@ -1,6 +1,7 @@
 {
   pkgs,
   config,
+  osConfig,
   lib,
   ...
 }: {
@@ -53,7 +54,7 @@
           }
           {
             type =
-              if (config.networking.hostName == "fluoride")
+              if (osConfig.networking.hostName == "fluoride")
               then "gpu"
               else "display";
           }
