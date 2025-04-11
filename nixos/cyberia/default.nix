@@ -31,7 +31,7 @@
       fonts.terminal = {
         # name = "SFMono";
         # name = "Bm437 NEC APC3 8x16";
-        name = "Cozette";
+        name = "Terminus";
         size = 12;
       };
       fonts.desktop = {
@@ -42,7 +42,7 @@
       # wallpaper = ./wallpapers/clouds6.jpg;
       wallpaper = {
         # image = ./wallpapers/wall1.png;
-        image = ./wallpapers/flowers-1.jpg;
+        image = ./wallpapers/abstract1.jpg;
         solidColor = {
           enable = false;
           hex = config.stylix.base16Scheme.base03;
@@ -51,7 +51,7 @@
       sddm = {
         scale = 1.3;
         # wallpaper = ./wallpapers/clouds6.jpg;
-        wallpaper = ./wallpapers/flowers-1.jpg;
+        wallpaper = ./wallpapers/abstract1.jpg;
       };
       firefoxCss.stylix.enable = true;
     };
