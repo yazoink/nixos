@@ -3,7 +3,7 @@
   lib,
   ...
 }: {
-  config = lib.mkIf config.myOptions.hardwareFeatures.laptop.enable {
+  config = lib.mkIf (config.myOptions.hardwareFeatures.laptop.enable && config.networking.hostName != "cyberia") {
     services.cpupower-gui.enable = true;
     # services.tlp = {
     #   enable = true;
