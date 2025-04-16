@@ -67,6 +67,7 @@
         cbonsai
         nitch
         wineWowPackages.waylandFull
+        winetricks
       ]
       ++ (
         if osConfig.services.printing.enable
