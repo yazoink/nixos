@@ -24,7 +24,7 @@
     home.packages = with pkgs;
       [
         ### communication ###
-        signal-desktop
+        signal-desktop-bin
 
         ### gui file viewers ###
         sublime-music
