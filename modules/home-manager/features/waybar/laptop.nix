@@ -34,6 +34,8 @@
             max-volume = 100;
             scroll-step = 1;
             on-click = "pavucontrol";
+            on-click-middle = "amixer -D pipewire set Master toggle";
+            on-click-right = "amixer -D pipewire set Master toggle";
             format-icons = [
               ""
               ""
