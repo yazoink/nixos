@@ -137,7 +137,10 @@ in {
           };
           "custom/launcher" = {
             format = " ";
-            "on-click" = "pkill wofi || wofi --show drun";
+            "on-click" =
+              if (osConfig.myOptions.bundles.desktopBase.windowManager == "sway")
+              then "pkill anyrun || anyrun"
+              else "pkill wofi || wofi --show drun";
           };
         };
       };
@@ -163,7 +166,7 @@ in {
           #custom-notification,
           #idle_inhibitor,
           #backlight,
-          #tray
+          #tray,
           #custom-launcher {
             padding-left: 7px;
             padding-right: 7px;
