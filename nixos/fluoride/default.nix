@@ -63,7 +63,7 @@
       };
       sddm = {
         scale = 0.8;
-        wallpaper = ./wallpapers/clouds_paradise.jpg;
+        wallpaper = ../../wallpapers/paradise/clouds_paradise_1.jpg;
       };
       firefoxCss.stylix.enable = true;
     };

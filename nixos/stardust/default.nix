@@ -38,7 +38,7 @@
       };
       sddm = {
         scale = 1.4;
-        wallpaper = ./wallpapers/flowers-downscaled.jpg;
+        wallpaper = ../../wallpapers/flowers-1.jpg;
         #wallpaper = ./wallpapers/clouds-levuaska.jpg;
       };
       firefoxCss.stylix.enable = true;
