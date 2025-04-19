@@ -36,6 +36,7 @@
         krita
         # olive-editor
         shotcut
+        kid3-qt
 
         ### gui utilities ###
         keepassxc
