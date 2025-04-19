@@ -151,6 +151,11 @@ in {
             on-click = "bash ${./scripts/mako.sh}";
             restart-interval = 1;
           };
+          "custom/logout" = {
+            tooltip = "Log out";
+            on-click = "simple-logout";
+            format = " ";
+          };
         };
       };
       style = with config.stylix.base16Scheme;
@@ -181,6 +186,7 @@ in {
           #idle_inhibitor,
           #backlight,
           #custom-mako,
+          #custom-logout,
           #tray {
             padding-left: 7px;
             padding-right: 7px;

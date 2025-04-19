@@ -1,3 +1,10 @@
 #!/usr/bin/env bash
 
-pkill wofi || wofi --show drun
+pidof wofi
+ret=$?
+
+if [[ $ret == 0 ]]; then
+    pkill wofi
+else
+    wofi --show drun
+fi
