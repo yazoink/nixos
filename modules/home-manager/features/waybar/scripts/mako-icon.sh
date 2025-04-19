@@ -4,7 +4,7 @@ out="$(makoctl mode | grep do-not-disturb)"
 ret=$?
 
 if [[ $ret == 0 ]]; then
-    echo " "
-else
     echo " "
+else
+    echo " "
 fi
