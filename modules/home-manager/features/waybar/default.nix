@@ -153,7 +153,7 @@ in {
           };
           "custom/logout" = {
             tooltip-format = "Log out";
-            on-click = "simple-logout";
+            on-click = "pkill simple-logout || simple-logout";
             format = " ";
           };
         };
