@@ -182,8 +182,8 @@ in {
             border-radius: 100px;
             padding-top: 3px;
             padding-bottom: 3px;
-            padding-left: 9px;
-            padding-right: 9px;
+            padding-left: 8px;
+            padding-right: 8px;
             margin-top: 5px;
             margin-bottom: 5px;
           }
