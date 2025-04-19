@@ -137,8 +137,6 @@ in {
           };
           "custom/launcher" = {
             format = " ";
-            "exec-if" = "which wofi";
-            "exec" = "pkill wofi || wofi --show drun";
             "on-click" = "pkill wofi || wofi --show drun";
           };
         };
