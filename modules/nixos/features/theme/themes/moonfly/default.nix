@@ -28,13 +28,13 @@ in {
         base06 = "BDBDBD";
         base07 = "BDBDBD";
         base08 = "FF5D5D";
-        base09 = "F19274";
+        base09 = "F09479";
         base0A = "E3C78A";
         base0B = "8CC85F";
         base0C = "79DAC8";
         base0D = "80A0FF";
         base0E = "CF87E8";
-        base0F = "F87869";
+        base0F = "E65E72";
       };
     };
   };
