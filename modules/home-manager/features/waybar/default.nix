@@ -172,7 +172,7 @@ in {
           }
 
           #custom-launcher {
-            padding-left: 13px;
+            padding-left: 10px;
             padding-right: 0px;
           }
 
