@@ -163,7 +163,8 @@ in {
           #custom-notification,
           #idle_inhibitor,
           #backlight,
-          #tray {
+          #tray
+          #launcher {
             padding-left: 7px;
             padding-right: 7px;
           }
