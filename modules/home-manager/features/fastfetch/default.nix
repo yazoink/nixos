@@ -38,7 +38,7 @@
             type = "kernel";
           }
           {
-            type = "uptime";
+            type = "host";
           }
           {
             type = "shell";
