@@ -241,6 +241,7 @@ in {
           "$mainMod, C, exec, $colorPicker"
           "$mainMod, R, exec, $screenRecorder"
           "$mainMod SHIFT, B, exec, $bar"
+          "$mainMod U, exec, mpc update && notify-send 'MPD' 'Library updated'"
           "$mainMod SHIFT, T, exec, pkill otd-daemon; otd-daemon; notify-send \"OpenTabletDriver\" \"Daemon reloaded.\""
           "$mainMod SHIFT, R, exec, hyprctl reload && notify-send \"Hyprland\" \"Config reloaded.\""
           "$mainMod SHIFT, W, exec, $wallpaper"
