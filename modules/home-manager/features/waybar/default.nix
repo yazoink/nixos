@@ -191,7 +191,7 @@ in {
             color: #${base08};
           }
 
-          #custom-mako, custom-logout {
+          #custom-mako, #custom-logout {
             padding-left: 3px;
           }
 
