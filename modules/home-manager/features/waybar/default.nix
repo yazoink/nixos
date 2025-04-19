@@ -166,10 +166,21 @@ in {
           #custom-notification,
           #idle_inhibitor,
           #backlight,
-          #tray,
-          #custom-launcher {
+          #tray {
             padding-left: 7px;
             padding-right: 7px;
+          }
+
+          #custom-launcher {
+            padding-left: 10px;
+            padding-right: 5px;
+          }
+
+          #tray {
+            background-color: rgba(255, 255, 255, 0.05);
+            border-radius: 100px;
+            padding-top: 3px;
+            padding-bottom: 3px;
           }
 
           tooltip, #tray menu {
