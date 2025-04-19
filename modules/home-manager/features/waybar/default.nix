@@ -162,6 +162,11 @@ in {
             margin: 0px;
           }
 
+          window#waybar {
+            padding-left: 15px;
+            padding-right: 15px;
+          }
+
           #workspaces button:hover {
             background-color: #${base00};
           }
@@ -174,9 +179,14 @@ in {
           #custom-notification,
           #idle_inhibitor,
           #backlight,
+          #custom-mako,
           #tray {
             padding-left: 7px;
             padding-right: 7px;
+          }
+
+          #custom-mako {
+            padding-left: 3px;
           }
 
           #custom-launcher {
