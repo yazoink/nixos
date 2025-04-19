@@ -174,11 +174,11 @@ in {
 
           #custom-launcher {
             padding-left: 10px;
-            padding-right: 2px;
+            padding-right: 1px;
           }
 
           #tray {
-            background-color: rgba(255, 255, 255, 0.075);
+            background-color: rgba(255, 255, 255, 0.065);
             border-radius: 100px;
             padding-top: 3px;
             padding-bottom: 3px;
