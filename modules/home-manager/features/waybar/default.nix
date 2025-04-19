@@ -147,7 +147,7 @@ in {
             exec-if = "command -v makoctl";
             exec = "bash ${./scripts/mako-icon.sh}";
             exec-on-event = true;
-            tooltip = "Enable do-not-disturb";
+            tooltip-format = "Enable do-not-disturb";
             on-click = "bash ${./scripts/mako.sh}";
             restart-interval = 1;
           };
