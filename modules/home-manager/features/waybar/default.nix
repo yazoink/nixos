@@ -192,7 +192,11 @@ in {
             padding-right: 7px;
           }
 
-          #custom-mako {
+          #custom-logout {
+            color: ${base08};
+          }
+
+          #custom-mako, custom-logout {
             padding-left: 3px;
           }
 
