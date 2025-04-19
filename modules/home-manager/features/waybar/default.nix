@@ -184,8 +184,8 @@ in {
             padding-bottom: 3px;
             padding-left: 7px;
             padding-right: 7px;
-            margin-top: 6px;
-            margin-bottom: 6px;
+            margin-top: 5px;
+            margin-bottom: 5px;
           }
 
           tooltip, #tray menu {
