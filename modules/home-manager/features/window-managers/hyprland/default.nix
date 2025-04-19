@@ -135,7 +135,7 @@ in {
           vfr = true;
           vrr = true;
           enable_swallow = true;
-          swallow_regex = "(foot|kitty|allacritty|Alacritty)";
+          swallow_regex = "(foot|kitty|alacritty|Alacritty)";
           force_default_wallpaper = 0;
           font_family = config.stylix.fonts.sansSerif.name;
         };

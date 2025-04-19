@@ -202,7 +202,7 @@ in {
 
           #tray {
             background-color: rgba(255, 255, 255, 0.06);
-            border-radius: 100px;
+            border-radius: 5px;
             padding-top: 3px;
             padding-bottom: 3px;
             padding-left: 7px;
