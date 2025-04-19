@@ -168,11 +168,6 @@ in {
             margin: 0px;
           }
 
-          window#waybar {
-            padding-left: 20px;
-            padding-right: 20px;
-          }
-
           #workspaces button:hover {
             background-color: #${base00};
           }
@@ -193,7 +188,7 @@ in {
           }
 
           #custom-logout {
-            color: ${base08};
+            color: #${base08};
           }
 
           #custom-mako, custom-logout {
