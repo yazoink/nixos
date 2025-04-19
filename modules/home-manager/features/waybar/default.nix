@@ -146,6 +146,7 @@ in {
           "custom/mako" = {
             exec-if = "command -v makoctl";
             exec = "bash ${./scripts/mako-icon.sh}";
+            exec-on-event = true;
             tooltip = "Enable do-not-disturb";
             on-click = "bash ${./scripts/mako.sh}";
             restart-interval = 1;
@@ -163,8 +164,8 @@ in {
           }
 
           window#waybar {
-            padding-left: 15px;
-            padding-right: 15px;
+            padding-left: 20px;
+            padding-right: 20px;
           }
 
           #workspaces button:hover {
