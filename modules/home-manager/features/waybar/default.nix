@@ -141,7 +141,14 @@ in {
             on-click =
               if (osConfig.myOptions.bundles.desktopBase.windowManager == "sway")
               then "pkill anyrun || anyrun"
-              else "pkill wofi || wofi --show drun";
+              else "bash ${./scripts/wofi.sh}";
+          };
+          "custom/mako" = {
+            exec-if = "command -v makoctl";
+            exec = "bash ${./scripts/mako-icon.sh}";
+            tooltip = "Enable do-not-disturb";
+            on-click = "bash ${./scripts/mako.sh}";
+            restart-interval = 1;
           };
         };
       };
