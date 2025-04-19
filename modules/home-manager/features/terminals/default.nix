@@ -2,5 +2,6 @@
   imports = [
     ./foot
     ./alacritty
+    ./kitty
   ];
 }

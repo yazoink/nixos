@@ -21,8 +21,8 @@
         desktopFile = "thunar.desktop";
       };
       terminal = {
-        command = "alacritty";
-        desktopFile = "alacritty.desktop";
+        command = "kitty";
+        desktopFile = "kitty.desktop";
       };
     };
     desktopTheme = {
