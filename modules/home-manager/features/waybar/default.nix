@@ -137,7 +137,8 @@ in {
           };
           "custom/launcher" = {
             format = "";
-            "on-click" =
+            tooltip = "Open application launcher";
+            on-click =
               if (osConfig.myOptions.bundles.desktopBase.windowManager == "sway")
               then "pkill anyrun || anyrun"
               else "pkill wofi || wofi --show drun";
@@ -179,7 +180,10 @@ in {
           #tray {
             background-color: rgba(255, 255, 255, 0.05);
             border-radius: 100px;
-            padding: 3px;
+            padding-top: 3px;
+            padding-bottom: 3px;
+            padding-left: 9px;
+            padding-right: 9px;
             margin-top: 5px;
             margin-bottom: 5px;
           }
