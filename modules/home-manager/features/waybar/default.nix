@@ -81,7 +81,7 @@ in {
           };
           "tray" = {
             icon-size = 16;
-            spacing = 18;
+            spacing = 14;
           };
           "mpd" = {
             format = " {title} - {artist}";
@@ -173,7 +173,7 @@ in {
 
           #custom-launcher {
             padding-left: 10px;
-            padding-right: 0px;
+            padding-right: 2px;
           }
 
           #tray {
@@ -181,8 +181,8 @@ in {
             border-radius: 100px;
             padding-top: 2px;
             padding-bottom: 2px;
-            margin-top: 2px;
-            margin-bottom: 2px;
+            margin-top: 4px;
+            margin-bottom: 4px;
           }
 
           tooltip, #tray menu {
