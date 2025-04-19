@@ -110,6 +110,7 @@ in {
             #ignored-players = ["firefox"];
           };
           idle_inhibitor = {
+            tooltip-format = "Idle inhibitor";
             format = "{icon}";
             format-icons = {
               activated = " ";
