@@ -137,7 +137,7 @@ in {
           };
           "custom/launcher" = {
             format = "";
-            tooltip = "Open application launcher";
+            tooltip-format = "Open application launcher";
             on-click =
               if (osConfig.myOptions.bundles.desktopBase.windowManager == "sway")
               then "pkill anyrun || anyrun"
@@ -152,7 +152,7 @@ in {
             restart-interval = 1;
           };
           "custom/logout" = {
-            tooltip = "Log out";
+            tooltip-format = "Log out";
             on-click = "simple-logout";
             format = " ";
           };
