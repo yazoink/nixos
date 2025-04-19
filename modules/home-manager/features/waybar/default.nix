@@ -32,6 +32,7 @@ in {
           spacing = 5;
           modules-left = [
             #"niri/workspaces"
+            "custom/launcher"
             "sway/workspaces"
             "hyprland/workspaces"
             "group/usage"
@@ -133,6 +134,12 @@ in {
             exec = "swaync-client -swb";
             on-click = "sleep 0.1 && swaync-client -t -swb";
             escape = true;
+          };
+          "custom/launcher" = {
+            format = " ";
+            "exec-if" = "which wofi";
+            "exec" = "pkill wofi || wofi --show drun";
+            "on-click" = "pkill wofi || wofi --show drun";
           };
         };
       };
