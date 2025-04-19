@@ -172,8 +172,8 @@ in {
           }
 
           #custom-launcher {
-            padding-left: 10px;
-            padding-right: 5px;
+            padding-left: 13px;
+            padding-right: 0px;
           }
 
           #tray {
