@@ -179,10 +179,9 @@ in {
           #tray {
             background-color: rgba(255, 255, 255, 0.05);
             border-radius: 100px;
-            padding-top: 2px;
-            padding-bottom: 2px;
-            margin-top: 4px;
-            margin-bottom: 4px;
+            padding: 3px;
+            margin-top: 5px;
+            margin-bottom: 5px;
           }
 
           tooltip, #tray menu {
