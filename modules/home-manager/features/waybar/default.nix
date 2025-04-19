@@ -164,7 +164,7 @@ in {
           #idle_inhibitor,
           #backlight,
           #tray
-          #launcher {
+          #custom-launcher {
             padding-left: 7px;
             padding-right: 7px;
           }
