@@ -23,7 +23,7 @@
     desktopTheme = {
       name = "everblush";
       #name = "levuaska";
-      wallpaper.image = ./wallpapers/flowers-downscaled.jpg;
+      wallpaper.image = ../../wallpapers/flowers-1.jpg;
       #wallpaper.image = ./wallpapers/clouds-levuaska.jpg;
       fonts = {
         desktop = {
