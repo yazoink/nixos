@@ -11,6 +11,7 @@
     ../../features/mullvad
     ../../features/printing
     ../../features/opentabletdriver
+    ../../features/syncthing
   ];
 
   config = lib.mkIf config.myOptions.bundles.desktopFull.enable {
@@ -23,6 +24,7 @@
       mullvad.enable = true;
       printing.enable = true;
       opentabletdriver.enable = true;
+      syncthing.enable = true;
     };
   };
 }
