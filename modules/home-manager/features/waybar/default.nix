@@ -136,7 +136,7 @@ in {
             escape = true;
           };
           "custom/launcher" = {
-            format = " ";
+            format = "";
             "on-click" =
               if (osConfig.myOptions.bundles.desktopBase.windowManager == "sway")
               then "pkill anyrun || anyrun"
