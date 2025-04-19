@@ -178,7 +178,7 @@ in {
           }
 
           #tray {
-            background-color: rgba(255, 255, 255, 0.05);
+            background-color: rgba(255, 255, 255, 0.075);
             border-radius: 100px;
             padding-top: 3px;
             padding-bottom: 3px;
