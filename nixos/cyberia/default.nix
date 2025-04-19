@@ -27,7 +27,7 @@
     };
     desktopTheme = {
       # name = "paradise";
-      name = "crayon";
+      name = "decay";
       fonts.terminal = {
         name = "Iosevka Nerd Font";
         # name = "SFMono";
