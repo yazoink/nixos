@@ -16,10 +16,10 @@
   myOptions = {
     userAccount.username = "gene";
     defaultApps = {
-      fileManager = {
-        command = "thunar";
-        desktopFile = "thunar.desktop";
-      };
+      # fileManager = {
+      #   command = "thunar";
+      #   desktopFile = "thunar.desktop";
+      # };
       terminal = {
         command = "kitty";
         desktopFile = "kitty.desktop";
