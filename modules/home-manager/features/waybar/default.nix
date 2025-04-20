@@ -219,8 +219,8 @@ in {
             padding-right: 7px;
           }
 
-          .modules-left #workspaces button.focused,
-          .modules-left #workspaces button.active {
+          #workspaces button.focused,
+          #workspaces button.active {
             color: #${base05};
           }
         ''
