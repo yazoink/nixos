@@ -7,7 +7,7 @@
 }: {
   config = lib.mkIf (osConfig.myOptions.bundles.desktopBase.enable && osConfig.myOptions.desktopTheme.name == "catppuccin-mocha") {
     stylix = {
-      iconTheme.dark = "Papirus-dark";
+      iconTheme.dark = "Papirus";
       iconTheme.package = pkgs.catppuccin-papirus-folders;
     };
   };
