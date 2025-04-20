@@ -31,14 +31,11 @@ in {
           height = 36;
           spacing = 5;
           modules-left = [
-            #"niri/workspaces"
-            "custom/launcher"
-            "sway/workspaces"
-            "hyprland/workspaces"
-            "group/usage"
+            "clock"
           ];
           modules-center = [
-            "clock"
+            "hyprland/workspaces"
+            "sway/workspaces"
           ];
           "group/usage" = {
             orientation = "horizontal";
@@ -81,7 +78,7 @@ in {
           };
           "tray" = {
             icon-size = 16;
-            spacing = 14;
+            spacing = 18;
           };
           "mpd" = {
             format = " {title} - {artist}";
@@ -199,19 +196,6 @@ in {
           #custom-launcher {
             padding-left: 10px;
             padding-right: 1px;
-          }
-
-          #tray {
-            background-color: rgba(255, 255, 255, 0.06);
-            border-radius: 10px;
-            padding-top: 3px;
-            padding-bottom: 3px;
-            padding-left: 7px;
-            padding-right: 7px;
-            margin-top: 5px;
-            margin-bottom: 5px;
-            margin-left: 5px;
-            margin-right: 5px;
           }
 
           tooltip, #tray menu {
