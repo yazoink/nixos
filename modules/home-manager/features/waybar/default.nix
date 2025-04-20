@@ -31,11 +31,12 @@ in {
           height = 36;
           spacing = 5;
           modules-left = [
-            "clock"
-          ];
-          modules-center = [
             "hyprland/workspaces"
             "sway/workspaces"
+            "group/usage"
+          ];
+          modules-center = [
+            "clock"
           ];
           "group/usage" = {
             orientation = "horizontal";
@@ -187,11 +188,7 @@ in {
           }
 
           #battery {
-            padding-right: 10px;
-          }
-
-          #clock {
-            padding-left: 10px;
+            padding-right: 11px;
           }
 
           #custom-logout {
