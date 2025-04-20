@@ -6,6 +6,16 @@
   config = lib.mkIf (config.bundles.base.nixvim.enable && config.stylix.enable) {
     stylix.targets.nixvim = {
       enable = true;
+      colorschemes = {
+        catppuccin = lib.mkIf (osConfig.myOptions.desktopTheme.name == "catppuccin-mocha") {
+          enable = true;
+          settings.flavour = "mocha";
+        }
+        rose-pine = lib.mkIf (osConfig.myOptions.desktopTheme.name == "rose-pine-dawn") {
+          enable = true;
+          settings.variant = "dawn";
+        }
+      };
       plugin =
         if (config.stylix.polarity == "dark")
         then "base16-nvim"
