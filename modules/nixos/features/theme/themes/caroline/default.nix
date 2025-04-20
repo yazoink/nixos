@@ -1,9 +1,12 @@
-{pkgs, config, lib, ...}:
-let
+{
+  pkgs,
+  config,
+  lib,
+  ...
+}: let
   carolineCursors = pkgs.callPackage ./caroline-cursors.nix {};
   carolineIcons = pkgs.callPackage ./caroline-icons.nix {};
-in
-{
+in {
   config = lib.mkIf (config.myOptions.bundles.desktopBase.enable && config.myOptions.desktopTheme.name == "caroline") {
     environment.systemPackages = [
       carolineCursors
@@ -15,8 +18,10 @@ in
     stylix = {
       cursor = {
         name = "caroline-bibata-modern";
+        package = carolineCursors;
       };
-      /* http://dotshare.it/dots/1416/
+      /*
+         http://dotshare.it/dots/1416/
       base16Scheme = {
         base00 = "0E181A";
         base01 = "192225";
@@ -34,8 +39,10 @@ in
         base0D = "6D826F";
         base0E = "CA8D67";
         base0F = "B04F41";
-      };*/
-      /* wizard
+      };
+      */
+      /*
+         wizard
       base16Scheme = {
         base00 = "1B0823";
         base01 = "371F2E";
@@ -53,8 +60,10 @@ in
         base0D = "727085";
         base0E = "9A1120";
         base0F = "8A3338";
-      };*/
-      /* zephyr
+      };
+      */
+      /*
+         zephyr
       base16Scheme = {
         base00 = "2E242D";
         base01 = "47393C";
@@ -72,7 +81,8 @@ in
         base0D = "835669";
         base0E = "AB6379";
         base0F = "6C545E";
-      };*/
+      };
+      */
       base16Scheme = {
         base00 = "1c1213";
         base01 = "3a2425";

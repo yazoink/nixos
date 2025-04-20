@@ -1,9 +1,12 @@
-{pkgs, config, lib, ...}:
-let
+{
+  pkgs,
+  config,
+  lib,
+  ...
+}: let
   cursors = pkgs.callPackage ./biscuit-cursors.nix {};
   icons = pkgs.callPackage ./biscuit-icons.nix {};
-in
-{
+in {
   config = lib.mkIf (config.myOptions.bundles.desktopBase.enable && config.myOptions.desktopTheme.name == "biscuit") {
     environment.systemPackages = [
       cursors
@@ -16,6 +19,7 @@ in
       cursor = {
         name = "BreezeX-Biscuit";
         size = 32;
+        package = cursors;
       };
       base16Scheme = {
         base00 = "181515";

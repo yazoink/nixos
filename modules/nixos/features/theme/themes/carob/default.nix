@@ -1,8 +1,11 @@
-{pkgs, config, lib, ...}:
-let
-  carobTheme = pkgs.callPackage ./carob-theme.nix {};
-in
 {
+  pkgs,
+  config,
+  lib,
+  ...
+}: let
+  carobTheme = pkgs.callPackage ./carob-theme.nix {};
+in {
   config = lib.mkIf (config.myOptions.bundles.desktopBase.enable && config.myOptions.desktopTheme.name == "carob") {
     environment.systemPackages = [
       carobTheme
@@ -13,6 +16,7 @@ in
     stylix = {
       cursor = {
         name = "Bibata-Carob";
+        package = carobTheme;
       };
       base16Scheme = {
         base00 = "242120";
