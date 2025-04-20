@@ -27,7 +27,7 @@
     };
     desktopTheme = {
       # name = "paradise";
-      name = "moonfly";
+      name = "rose-pine-dawn";
       fonts.terminal = {
         name = "Iosevka Nerd Font";
         # name = "SFMono";
