@@ -2,6 +2,7 @@
   pkgs,
   config,
   lib,
+  osConfig,
   ...
 }: {
   options = {
@@ -26,7 +27,10 @@
       backgroundColor = "#${config.stylix.base16Scheme.base00}";
       textColor = "#${config.stylix.base16Scheme.base05}";
       progressColor = "over #${config.stylix.base16Scheme.base05}";
-      borderColor = "#${config.stylix.base16Scheme.base01}";
+      borderColor =
+        if (osConfig.myOptions.desktopTheme.name == "catppuccin-mocha")
+        then "#${config.stylix.base16Scheme.base02}"
+        else "#${config.stylix.base16Scheme.base01}";
       borderSize = 1;
       font = "${config.stylix.fonts.sansSerif.name} ${toString config.stylix.fonts.sizes.popups}";
       padding = "15";

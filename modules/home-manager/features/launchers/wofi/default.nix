@@ -6,7 +6,10 @@
   ...
 }: let
   style = config.lib.stylix.colors {
-    template = ./style.css.mustache;
+    template =
+      if (osConfig.myOptions.desktopTheme.name == "catppuccin-mocha")
+      then ./style-catppuccin.css.mustache
+      else ./style.css.mustache;
     extension = ".css";
   };
 in {
