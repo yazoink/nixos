@@ -187,7 +187,7 @@ in {
           }
 
           #clock {
-            padding-right: 10px;
+            padding-left: 10px;
           }
 
           #custom-logout {
@@ -213,15 +213,15 @@ in {
             color: #${base05};
           }
 
-          .modules-left #workspaces button.focused,
-          .modules-left #workspaces button.active {
-            color: #${base05};
-          }
-
           #workspaces button {
             color: #${base03};
             padding-left: 7px;
             padding-right: 7px;
+          }
+
+          .modules-left #workspaces button.focused,
+          .modules-left #workspaces button.active {
+            color: #${base05};
           }
         ''
         + (
