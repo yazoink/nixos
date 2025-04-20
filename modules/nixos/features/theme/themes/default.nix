@@ -45,6 +45,5 @@
     ./moonfly
     ./da-one-black
     ./jardo-brighter
-    ./primer-dark
   ];
 }
