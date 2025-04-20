@@ -7,7 +7,7 @@
 }: {
   config = lib.mkIf (osConfig.myOptions.bundles.desktopBase.enable && osConfig.myOptions.desktopTheme.name == "catppuccin-mocha") {
     stylix = {
-      targets.nixvim = false;
+      targets.nixvim.enable = false;
       iconTheme.dark = "Papirus";
       iconTheme.package = pkgs.catppuccin-papirus-folders;
     };
