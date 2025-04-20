@@ -186,6 +186,10 @@ in {
             padding-right: 7px;
           }
 
+          #clock {
+            padding-right: 10px;
+          }
+
           #custom-logout {
             color: #${base08};
           }
