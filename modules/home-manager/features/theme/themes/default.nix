@@ -14,5 +14,6 @@
     ./levuaska
     ./paradise
     ./rose-pine-dawn
+    ./catppuccin-mocha
   ];
 }
