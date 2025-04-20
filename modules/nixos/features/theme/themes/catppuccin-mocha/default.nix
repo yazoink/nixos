@@ -9,7 +9,7 @@
 
     stylix = {
       cursor = {
-        name = "Catppuccin-Mocha-Dark";
+        name = "catppuccin-mocha-dark-cursors";
         package = pkgs.catppuccin-cursors.mochaDark;
         size = 32;
       };
