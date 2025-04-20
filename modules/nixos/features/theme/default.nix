@@ -32,7 +32,7 @@
       cursor = {
         size = lib.mkDefault 32;
         name = lib.mkDefault "phinger-cursors-dark";
-        package = pkgs.phinger-cursors;
+        package = lib.mkDefault pkgs.phinger-cursors;
       };
       fonts = {
         sizes = {
