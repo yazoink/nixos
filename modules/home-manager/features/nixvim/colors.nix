@@ -1,6 +1,7 @@
 {
   config,
   lib,
+  osConfig,
   ...
 }: {
   config = lib.mkIf (config.bundles.base.nixvim.enable && config.stylix.enable) {
