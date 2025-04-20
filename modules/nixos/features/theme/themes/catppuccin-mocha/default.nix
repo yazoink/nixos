@@ -9,8 +9,8 @@
 
     stylix = {
       cursor = {
-        name = "Catppuccin Frappé Blue";
-        package = pkgs.catppuccin-cursors;
+        name = "Catppuccin-Mocha-Dark";
+        package = pkgs.catppuccin-cursors.mochaDark;
         size = 32;
       };
       base16Scheme = {
