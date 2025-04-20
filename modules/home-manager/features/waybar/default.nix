@@ -180,6 +180,7 @@ in {
           #backlight,
           #custom-mako,
           #custom-logout,
+          #clock,
           #tray {
             padding-left: 7px;
             padding-right: 7px;
