@@ -1,10 +1,13 @@
-{pkgs, config, lib, ...}:
-let
-  cursors = pkgs.callPackage ./biscuit-cursors.nix {};
-  icons = pkgs.callPackage ./biscuit-icons.nix {};
-in
 {
-  config = lib.mkIf (config.myOptions.bundles.desktopBase.enable && config.myOptions.desktopTheme.name == "biscuit") {
+  pkgs,
+  config,
+  lib,
+  ...
+}: let
+  cursors = pkgs.callPackage ./cursors.nix {};
+  icons = pkgs.callPackage ./icons.nix {};
+in {
+  config = lib.mkIf (config.myOptions.bundles.desktopBase.enable && config.myOptions.desktopTheme.name == "catppucin-mocha") {
     environment.systemPackages = [
       cursors
       icons
@@ -18,22 +21,22 @@ in
         size = 32;
       };
       base16Scheme = {
-        base00 = "181515";
-        base01 = "221E1E";
-        base02 = "221E1E";
-        base03 = "6D5F5F";
-        base04 = "978787";
-        base05 = "B6A8A5";
-        base06 = "F4E6D2";
-        base07 = "CA3F3F";
-        base08 = "E46A3A";
-        base09 = "E39C45";
-        base0A = "989F56";
-        base0B = "629386";
-        base0C = "517894";
-        base0D = "4A5A8D";
-        base0E = "9F569A";
-        base0F = "C45497";
+        base00 = "1E1E2E";
+        base01 = "181825";
+        base02 = "313244";
+        base03 = "45475A";
+        base04 = "585B70";
+        base05 = "CDD6F4";
+        base06 = "F5E0DC";
+        base07 = "B4BEFE";
+        base08 = "F38BA8";
+        base09 = "FAB387";
+        base0A = "F9E2AF";
+        base0B = "A6E3A1";
+        base0C = "94E2D5";
+        base0D = "89B4FA";
+        base0E = "CBA6F7";
+        base0F = "F2CDCD";
       };
     };
   };
