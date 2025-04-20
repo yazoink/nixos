@@ -45,5 +45,6 @@
     ./moonfly
     ./da-one-black
     ./jardo-brighter
+    ./catppuccin-mocha
   ];
 }

@@ -31,8 +31,8 @@
       };
       cursor = {
         size = lib.mkDefault 32;
-        name = lib.mkDefault "Capitaine Cursors";
-        package = pkgs.capitaine-cursors;
+        name = lib.mkDefault "phinger-cursors-dark";
+        package = pkgs.phinger-cursors;
       };
       fonts = {
         sizes = {
