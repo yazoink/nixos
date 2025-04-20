@@ -18,10 +18,10 @@
         size = 32;
       };
       base16Scheme = {
-        base00 = "#FAF4ED";
-        base02 = "#FFFAF3";
-        base01 = "#F2E9DE";
-        base03 = "#9893A5";
+        base00 = "FAF4ED";
+        base02 = "FFFAF3";
+        base01 = "F2E9DE";
+        base03 = "9893A5";
         base04 = "797593";
         base05 = "575279";
         base06 = "575279";
