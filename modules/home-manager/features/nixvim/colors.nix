@@ -1,12 +1,19 @@
-{config, lib, ...}:
 {
+  config,
+  lib,
+  ...
+}: {
   config = lib.mkIf (config.bundles.base.nixvim.enable && config.stylix.enable) {
     stylix.targets.nixvim = {
       enable = true;
-      plugin = "base16-nvim";
+      plugin =
+        if (config.stylix.polarity == "dark")
+        then "base16-nvim"
+        else "base16-mini";
     };
 
-    /*programs.nixvim = {
+    /*
+      programs.nixvim = {
       colorschemes.base16 = {
         enable = true;
         colorscheme = {
@@ -28,6 +35,7 @@
           base0F = "#${config.stylix.base16Scheme.base0F}";
         };
       };
-    };*/
+    };
+    */
   };
 }
