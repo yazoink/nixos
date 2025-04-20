@@ -186,8 +186,8 @@ in {
             padding-right: 7px;
           }
 
-          #pipewire {
-            padding-right: 5px;
+          #battery {
+            padding-right: 10px;
           }
 
           #clock {
