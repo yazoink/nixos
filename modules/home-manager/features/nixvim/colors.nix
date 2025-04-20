@@ -6,7 +6,14 @@
 }: {
   config = lib.mkIf (config.bundles.base.nixvim.enable && config.stylix.enable) {
     stylix.targets.nixvim = {
-      enable = true;
+      enable = lib.mkDefault true;
+      plugin =
+        if (config.stylix.polarity == "dark")
+        then "base16-nvim"
+        else "mini.base16";
+    };
+
+    programs.nixvim = {
       colorschemes = {
         catppuccin = lib.mkIf (osConfig.myOptions.desktopTheme.name == "catppuccin-mocha") {
           enable = true;
@@ -17,10 +24,6 @@
           settings.variant = "dawn";
         };
       };
-      plugin =
-        if (config.stylix.polarity == "dark")
-        then "base16-nvim"
-        else "mini.base16";
     };
 
     /*

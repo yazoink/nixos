@@ -20,7 +20,10 @@ in {
         initial_window_height = 400;
         window_padding_width = terminalPadding;
         single_window_padding_width = terminalPadding;
-        text_composition_strategy = "legacy";
+        text_composition_strategy =
+          if (config.stylix.polarity == "light")
+          then "legacy"
+          else "platform";
       };
     };
   };
