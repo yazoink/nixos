@@ -186,6 +186,10 @@ in {
             padding-right: 7px;
           }
 
+          #pipewire {
+            padding-right: 5px;
+          }
+
           #clock {
             padding-left: 10px;
           }
