@@ -27,7 +27,7 @@
     };
     desktopTheme = {
       # name = "paradise";
-      name = "carob";
+      name = "moonfly";
       fonts.terminal = {
         name = "Iosevka Nerd Font";
         # name = "SFMono";
@@ -43,7 +43,7 @@
       # wallpaper = ./wallpapers/clouds6.jpg;
       wallpaper = {
         # image = ./wallpapers/wall1.png;
-        image = ../../wallpapers/flower.jpg;
+        image = ../../wallpapers/abstract1.jpg;
         solidColor = {
           enable = false;
           hex = config.stylix.base16Scheme.base03;
