@@ -20,6 +20,7 @@ in {
         initial_window_height = 400;
         window_padding_width = terminalPadding;
         single_window_padding_width = terminalPadding;
+        text_composition_strategy = "platform";
       };
     };
   };

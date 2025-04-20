@@ -9,7 +9,7 @@
       plugin =
         if (config.stylix.polarity == "dark")
         then "base16-nvim"
-        else "base16-mini";
+        else "mini.base16";
     };
 
     /*
