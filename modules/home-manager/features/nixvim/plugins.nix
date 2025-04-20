@@ -517,7 +517,7 @@
               html = ["prettierd" "prettier"];
               css = ["prettierd" "prettier"];
               javascript = ["prettierd" "prettier"];
-              typescript = ["prettierd" "prettier"];
+              # typescript = ["prettierd" "prettier"];
               markdown = ["prettierd" "prettier"];
               python = ["black"];
               lua = ["stylua"];
