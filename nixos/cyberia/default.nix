@@ -26,7 +26,7 @@
       };
     };
     desktopTheme = {
-      # name = "paradise";
+      # name = "catppuccin-mocha";
       name = "everblush";
       fonts.terminal = {
         name = "Iosevka Nerd Font";
@@ -40,9 +40,8 @@
         name = "Rubik";
         size = 11;
       };
-      # wallpaper = ./wallpapers/clouds6.jpg;
       wallpaper = {
-        # image = ./wallpapers/wall1.png;
+        # image = ../../wallpapers/catppuccin/galaxy-waves.jpg;
         image = ../../wallpapers/flowers-1.jpg;
         solidColor = {
           enable = false;
@@ -51,7 +50,7 @@
       };
       sddm = {
         scale = 1.3;
-        # wallpaper = ./wallpapers/clouds6.jpg;
+        # wallpaper = ../../wallpapers/catppuccin/galaxy-waves.jpg;
         wallpaper = ../../wallpapers/flowers-1.jpg;
       };
       firefoxCss.stylix.enable = true;
