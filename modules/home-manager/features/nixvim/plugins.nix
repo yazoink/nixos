@@ -193,15 +193,15 @@
               };
               buffer_visible = {
                 fg = "#${config.stylix.base16Scheme.base05}";
-                bg = "none";
+                bg = "#${config.stylix.base16Scheme.base00}";
               };
               close_button = {
                 fg = "none";
-                bg = "none";
+                bg = "#${config.stylix.base16Scheme.base00}";
               };
               close_button_visible = {
                 fg = "#${config.stylix.base16Scheme.base03}";
-                bg = "none";
+                bg = "#${config.stylix.base16Scheme.base00}";
               };
               close_button_selected = {
                 fg = "#${config.stylix.base16Scheme.base08}";
@@ -213,7 +213,7 @@
               };
               indicator_visible = {
                 fg = "#${config.stylix.base16Scheme.base0E}";
-                bg = "none";
+                bg = "#${config.stylix.base16Scheme.base00}";
               };
               separator = {
                 fg = "#${config.stylix.base16Scheme.base00}";
