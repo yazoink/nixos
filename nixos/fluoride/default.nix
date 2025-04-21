@@ -35,8 +35,8 @@
         desktopFile = "org.xfce.ristretto.desktop";
       };
       terminal = {
-        command = "alacritty";
-        desktopFile = "alacritty.desktop";
+        command = "kitty";
+        desktopFile = "kitty.desktop";
       };
       webBrowser = {
         command = "firefox";
