@@ -66,10 +66,13 @@
         inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland
         xdg-desktop-portal-gtk
       ];
-      config.common.default = [
-        "hyprland"
-        "gtk"
-      ];
+      config.common = {
+        default = [
+          "hyprland"
+          "gtk"
+        ];
+        "org.freedesktop.impl.portal.FileChooser" = ["hyprland" "gtk"];
+      };
     };
   };
 }
