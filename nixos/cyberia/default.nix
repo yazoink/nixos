@@ -52,7 +52,7 @@
       sddm = {
         scale = 1.3;
         # wallpaper = ./wallpapers/clouds6.jpg;
-        wallpaper = ../../wallpapers/flowers-1;
+        wallpaper = ../../wallpapers/flowers-1.jpg;
       };
       firefoxCss.stylix.enable = true;
     };
