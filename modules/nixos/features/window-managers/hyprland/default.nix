@@ -46,19 +46,6 @@
       libinput.enable = true;
     };
 
-    programs.hyprland = {
-      enable = true;
-      xwayland.enable = true;
-      # package = pkgs.hyprland;
-      # package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
-      package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland.override {
-        legacyRenderer = config.myOptions.hardwareFeatures.hyprlandLegacyRenderer.enable;
-      };
-      # portalPackage = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
-      # portalPackage = pkgs.xdg-desktop-portal-hyprland;
-      withUWSM = false;
-    };
-
     xdg.portal = {
       enable = true;
       xdgOpenUsePortal = true;
