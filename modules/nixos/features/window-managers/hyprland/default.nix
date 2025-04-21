@@ -57,18 +57,22 @@
           then true
           else false;
       };
-      portalPackage = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
+      # portalPackage = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
       # portalPackage = pkgs.xdg-desktop-portal-hyprland;
       withUWSM = false;
     };
 
     xdg.portal = {
       enable = true;
+      xdgOpenUsePortal = true;
       extraPortals = with pkgs; [
+        inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland
         xdg-desktop-portal-gtk
-        xdg-desktop-portal-wlr
       ];
-      config.common.default = "*";
+      config.common.default = [
+        "hyprland"
+        "gtk"
+      ];
     };
   };
 }
