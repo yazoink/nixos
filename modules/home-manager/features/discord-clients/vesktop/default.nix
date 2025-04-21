@@ -14,7 +14,6 @@ in {
   config = lib.mkIf (osConfig.myOptions.defaultApps.discordClient.command == "vesktop" && osConfig.myOptions.bundles.desktopFull.enable) {
     xdg.configFile = {
       "vesktop/themes/my.theme.css".source = themeFile;
-      "vesktop/themes/mocha.theme.css".source = ./mocha.theme.css;
     };
     stylix.targets.nixcord.enable = false;
     programs.nixcord = {
@@ -42,10 +41,7 @@ in {
       '';
       config = {
         useQuickCss = true;
-        enabledThemes =
-          if (osConfig.myOptions.desktopTheme.name == "catppuccin-mocha")
-          then ["mocha.theme.css"]
-          else ["my.theme.css"];
+        enabledThemes = ["my.theme.css"];
         transparent = false;
         enableReactDevtools = true;
         disableMinSize = true;
