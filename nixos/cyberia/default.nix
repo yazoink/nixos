@@ -43,7 +43,7 @@
       # wallpaper = ./wallpapers/clouds6.jpg;
       wallpaper = {
         # image = ./wallpapers/wall1.png;
-        image = ../../wallpapers/abstract1.jpg;
+        image = ../../wallpapers/catppuccin/galaxy-waves.jpg;
         solidColor = {
           enable = false;
           hex = config.stylix.base16Scheme.base03;
@@ -52,7 +52,7 @@
       sddm = {
         scale = 1.3;
         # wallpaper = ./wallpapers/clouds6.jpg;
-        wallpaper = ../../wallpapers/flower.jpg;
+        wallpaper = ../../wallpapers/catppuccin/galaxy-waves.jpg;
       };
       firefoxCss.stylix.enable = true;
     };

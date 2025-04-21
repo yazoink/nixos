@@ -6,7 +6,10 @@
   ...
 }: let
   themeFile = config.lib.stylix.colors {
-    template = builtins.trace "set vesktop theme template" ./my.theme.css.mustache;
+    template =
+      if (osConfig.myOptions.desktopTheme.name == "catppuccin-mocha")
+      then ./catppuccin.theme.css.mustache
+      else ./my.theme.css.mustache;
     extension = ".css";
   };
   inherit (osConfig.myOptions.bundles.desktopFull.vesktop) bloat;

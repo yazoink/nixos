@@ -188,7 +188,7 @@
               };
               buffer_selected = {
                 fg = "#${config.stylix.base16Scheme.base05}";
-                bg = "#${config.stylix.base16Scheme.base01}";
+                bg = "#${config.stylix.base16Scheme.base00}";
                 italic = false;
               };
               buffer_visible = {
@@ -205,11 +205,11 @@
               };
               close_button_selected = {
                 fg = "#${config.stylix.base16Scheme.base08}";
-                bg = "#${config.stylix.base16Scheme.base01}";
+                bg = "#${config.stylix.base16Scheme.base00}";
               };
               indicator_selected = {
                 fg = "#${config.stylix.base16Scheme.base0E}";
-                bg = "#${config.stylix.base16Scheme.base01}";
+                bg = "#${config.stylix.base16Scheme.base00}";
               };
               indicator_visible = {
                 fg = "#${config.stylix.base16Scheme.base0E}";
@@ -237,7 +237,7 @@
               };
               modified_selected = {
                 fg = "#${config.stylix.base16Scheme.base0B}";
-                bg = "#${config.stylix.base16Scheme.base01}";
+                bg = "#${config.stylix.base16Scheme.base00}";
               };
               tab_close = {
                 fg = "#${config.stylix.base16Scheme.base00}";
@@ -253,7 +253,7 @@
               };
               duplicate_selected = {
                 fg = "none";
-                bg = "#${config.stylix.base16Scheme.base01}";
+                bg = "#${config.stylix.base16Scheme.base00}";
                 italic = false;
               };
             };
