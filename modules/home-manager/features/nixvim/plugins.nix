@@ -176,15 +176,15 @@
             highlights = {
               fill = {
                 fg = "none";
-                bg = "none";
+                bg = "#${config.stylix.base16Scheme.base00}";
               };
               background = {
                 fg = "none";
-                bg = "none";
+                bg = "#${config.stylix.base16Scheme.base00}";
               };
               buffer = {
                 fg = "none";
-                bg = "none";
+                bg = "#${config.stylix.base16Scheme.base00}";
               };
               buffer_selected = {
                 fg = "#${config.stylix.base16Scheme.base05}";

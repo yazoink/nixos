@@ -94,11 +94,11 @@ in {
           gifPaste.enable = true;
           iLoveSpam.enable = true;
           imageLink.enable = true;
-          imageZoom = {
-            enable = true;
-            zoom = 2.5;
-            size = 250.0;
-          };
+          # imageZoom = {
+          #   enable = true;
+          #   zoom = 2.5;
+          #   size = 250.0;
+          # };
           implicitRelationships.enable = true;
           keepCurrentChannel.enable = lib.mkIf bloat true;
           loadingQuotes = {
