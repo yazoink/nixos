@@ -37,7 +37,7 @@ See [documentation.md](./documentation.md)
 ![1742555549627](https://github.com/user-attachments/assets/f6b142ba-3873-48ff-9216-00879df519f4)
 (hyprland + everblush theme)
 
-![20250422_17:42:14_screenshot](https://github.com/user-attachments/assets/6e816156-e544-4db9-b978-0538d95ca424)
+![hyprlock](https://github.com/user-attachments/assets/22db2890-6042-41ef-9415-53587d89efda)
 (hyprland + moonfly theme)
 
 ![20250126_21:54:32_screenshot](https://github.com/user-attachments/assets/1322e8f8-dc31-4a55-a02b-df2f07b3cfcc)
