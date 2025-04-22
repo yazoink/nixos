@@ -9,7 +9,7 @@
     stylix = {
       targets.nixvim.enable = false;
       iconTheme = {
-        light = "rose-pine-dawn-icons";
+        light = "rose-pine-dawn";
         package = pkgs.rose-pine-icon-theme;
       };
     };

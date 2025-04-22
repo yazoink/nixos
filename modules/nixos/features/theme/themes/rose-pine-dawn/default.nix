@@ -14,7 +14,7 @@
     stylix = {
       polarity = "light";
       cursor = {
-        name = "BreezeX-RosePine-Linux";
+        name = "BreezeX-RosePineDawn-Linux";
         size = 32;
       };
       base16Scheme = {
