@@ -14,6 +14,7 @@
     ../../features/fonts
     ../../features/gnome-keyring
     ../../features/gtklock
+    ../../features/hyprlock
     ../../features/plymouth
     ../../features/polkit
     ../../features/silent-boot
@@ -31,7 +32,8 @@
       fonts.enable = true;
       gnomeKeyring.enable = true;
       greetd.enable = lib.mkIf (config.myOptions.bundles.desktopBase.displayManager == "regreet") true;
-      gtklock.enable = true;
+      gtklock.enable = lib.mkIf (config.myOptions.bundles.desktopBase.windowManager == "sway") true;
+      hyprlock.enable = lib.mkIf (config.myOptions.bundles.desktopBase.windowManager == "hyprland") true;
       hyprland.enable = lib.mkIf (config.myOptions.bundles.desktopBase.windowManager == "hyprland") true;
       awesome.enable = lib.mkIf (config.myOptions.bundles.desktopBase.windowManager == "awesome") true;
       plymouth.enable = true;

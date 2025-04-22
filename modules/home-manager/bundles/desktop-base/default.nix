@@ -1,5 +1,8 @@
-{osConfig, lib, ...}:
 {
+  osConfig,
+  lib,
+  ...
+}: {
   config = lib.mkIf osConfig.myOptions.bundles.desktopBase.enable {
     bundles.desktopBase = builtins.trace "enabled desktopBase" {
       direnv.enable = true;
@@ -20,6 +23,7 @@
 
     ../../features/direnv
     ../../features/gtklock
+    ../../features/hyprlock
     ../../features/hyprviewbinds
     ../../features/screenshot
     ../../features/simple-logout
