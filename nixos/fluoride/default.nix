@@ -14,6 +14,10 @@
 
   myOptions = builtins.trace "options set" {
     defaultApps = {
+      discordClient = {
+        command = "legcord";
+        desktopFile = "legcord.desktop";
+      };
       fileManager = {
         command = "thunar";
         desktopFile = "thunar.desktop";

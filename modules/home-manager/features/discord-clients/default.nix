@@ -3,5 +3,6 @@
     ./abaddon
     ./dissent
     ./vesktop
+    ./legcord
   ];
 }
