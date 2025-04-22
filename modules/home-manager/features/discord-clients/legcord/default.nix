@@ -16,8 +16,8 @@ in {
   config = lib.mkIf (osConfig.myOptions.defaultApps.discordClient.command == "legcord" && osConfig.myOptions.bundles.desktopFull.enable) {
     xdg.configFile = {
       "legcord/quickCss.css".text =
-        builtins.readFile
-        + themeFile ''
+        builtins.readFile themeFile
+        + ''
           :root {
             --font: ${config.stylix.fonts.sansSerif.name};
             --font-primary: ${config.stylix.fonts.sansSerif.name};
