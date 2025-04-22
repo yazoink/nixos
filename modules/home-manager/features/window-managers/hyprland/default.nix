@@ -61,6 +61,7 @@ in {
         "$fileManager" = "${osConfig.myOptions.defaultApps.fileManager.command}";
         "$menu" = "pkill wofi || wofi --show drun";
         "$screenshot" = "${config.bundles.desktopBase.screenshot.package}/bin/screenshot -s";
+        "$screenshotFullscreen" = "${config.bundles.desktopBase.screenshot.package}/bin/screenshot";
         "$power" = "simple-logout";
         "$lock" = "hyprlock";
         "$colorPicker" = "${../scripts/color.sh}";
@@ -243,6 +244,7 @@ in {
           "$mainMod, n, exec, $terminal -e ncmpcpp"
           "$mainMod SHIFT, O, exec, rofi -show window"
           "$mainMod, S, exec, $screenshot"
+          "$mainMod CTRL, S, exec, $screenshotFullscreen"
           "$mainMod SHIFT, Q, exec, $power"
           "$mainMod CTRL, L, exec, $lock"
           "$mainMod, C, exec, $colorPicker"
