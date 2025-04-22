@@ -125,6 +125,7 @@ in {
         # ----- Profile Image ----- #
 
         image {
+          monitor =
           path = ${./profile_image.jpg}
           size = 135
           rounding = -1
