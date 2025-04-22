@@ -1,5 +1,8 @@
-{osConfig, lib, ...}:
 {
+  osConfig,
+  lib,
+  ...
+}: {
   config = lib.mkIf osConfig.bundles.desktopBase.hyprland.enable {
     services.hypridle = builtins.trace "hypridle enabled" {
       enable = true;
@@ -7,12 +10,12 @@
         general = {
           after_sleep_cmd = "hyprctl dispatch dpms on";
           ignore_dbus_inhibit = false;
-          lock_cmd = "gtklock";
+          lock_cmd = "hyprlock";
         };
         listener = [
           {
             timeout = 900;
-            on-timeout = "gtklock";
+            on-timeout = "hyprlock";
           }
           {
             timeout = 1200;
