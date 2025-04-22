@@ -271,7 +271,7 @@ in {
           "$mainMod, F, togglefloating,"
 
           # "$mainMod, Tab, overview:toggle,"
-          "$mainMod, Tab, hyprexpo:expo, toggle"
+          "$mainMod, Tab, grave, hyprexpo:expo, toggle"
           "$mainMod SHIFT, P, pseudo,"
 
           #"$mainMod, left, scroller:movefocus, l"
