@@ -15,8 +15,8 @@
   myOptions = {
     defaultApps = {
       terminal = {
-        command = "alacritty";
-        desktopFile = "alacritty.desktop";
+        command = "foot";
+        desktopFile = "foot.desktop";
       };
     };
     userAccount.username = "gene";
