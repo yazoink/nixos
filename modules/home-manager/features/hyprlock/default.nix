@@ -102,7 +102,7 @@ in {
 
         label {
           monitor =
-          text = $TIME12
+          text = <b>$TIME12</b>
           color = $fg
           font_family = $font
           halign = center
