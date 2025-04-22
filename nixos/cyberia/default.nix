@@ -27,7 +27,7 @@
     };
     desktopTheme = {
       # name = "catppuccin-mocha";
-      name = "everblush";
+      name = "moonfly";
       fonts.terminal = {
         name = "Iosevka Nerd Font";
         # name = "SFMono";
@@ -42,7 +42,7 @@
       };
       wallpaper = {
         # image = ../../wallpapers/catppuccin/galaxy-waves.jpg;
-        image = ../../wallpapers/flowers-1.jpg;
+        image = ../../wallpapers/abstract1.jpg;
         solidColor = {
           enable = false;
           hex = config.stylix.base16Scheme.base03;
@@ -51,7 +51,7 @@
       sddm = {
         scale = 1.3;
         # wallpaper = ../../wallpapers/catppuccin/galaxy-waves.jpg;
-        wallpaper = ../../wallpapers/flowers-1.jpg;
+        wallpaper = ../../wallpapers/flower.jpg;
       };
       firefoxCss.stylix.enable = true;
     };
