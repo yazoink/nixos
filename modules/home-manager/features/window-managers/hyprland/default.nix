@@ -50,6 +50,7 @@ in {
       systemd.enable = true;
       plugins = [
         inputs.hyprland-plugins.packages.${pkgs.stdenv.hostPlatform.system}.hyprbars
+        inputs.hyprland-plugins.packages.${pkgs.stdenv.hostPlatform.system}.hyprexpo
         # hyprlandPlugins.hyprspace
         #hyprlandPlugins.hypr-dynamic-cursors
         #hyprscroller
@@ -206,6 +207,14 @@ in {
               "rgb(${config.stylix.base16Scheme.base0B}), 15, , hyprctl dispatch fullscreen 1, rgb(${config.stylix.base16Scheme.base0B})"
             ];
           };
+          hyprexpo = {
+            columns = 3;
+            gap_size = 15;
+            bg_col = "rgb(${config.stylix.base16Scheme.base00})";
+            workspace_method = "first 1";
+            enable_gesture = true;
+            gesture_fingers = 3;
+          };
           /*
             dynamic-cursors = {
             enabled = true;
@@ -262,6 +271,7 @@ in {
           "$mainMod, F, togglefloating,"
 
           # "$mainMod, Tab, overview:toggle,"
+          "$mainMod, Tab, hyprexpo:expo, toggle"
           "$mainMod SHIFT, P, pseudo,"
 
           #"$mainMod, left, scroller:movefocus, l"
