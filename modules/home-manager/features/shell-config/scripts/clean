@@ -1,17 +1,16 @@
 #!/usr/bin/env bash
 
 function main() {
-  run_clean_command "sudo nix-store --gc"
-  run_clean_command "nix-store --gc"
-  run_clean_command "sudo nix-collect-garbage -d"
-  run_clean_command "nix-collect-garbage -d"
+    run_clean_command "sudo nix-store --gc"
+    run_clean_command "nix-store --gc"
+    run_clean_command "sudo nix-collect-garbage -d"
+    run_clean_command "nix-collect-garbage -d"
 }
 
-function run_clean_command() { 
-  output="$($1)"
-  freed="$(echo "$output" | awk -F' ' '{print $5, $6}')"
-  notify-send "$1" "$freed freed"
-  aplay "$HOME/.config/mako/sounds/default.wav"
+function run_clean_command() {
+    output="$($1)"
+    freed="$(echo "$output" | awk -F' ' '{print $5, $6}')"
+    notify-send "$1" "$freed freed"
 }
 
 main
