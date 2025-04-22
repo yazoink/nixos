@@ -12,6 +12,7 @@
     ./cyberia
     ./fluoride
     ./stardust
+    ./tallulah
     ../modules/home-manager
   ];
 

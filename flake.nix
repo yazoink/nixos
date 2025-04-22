@@ -67,6 +67,15 @@
           ./nixos/stardust
         ];
       };
+
+      ##### Shitty Ahh Free Netbook #####
+      tallulah = nixpkgs.lib.nixosSystem {
+        specialArgs = {inherit inputs system;};
+        modules = [
+          ./options
+          ./nixos/tallulah
+        ];
+      };
     };
   };
 }
