@@ -53,7 +53,7 @@
     desktopTheme = {
       # name = "paradise";
       name = "paradise";
-      wallpaper.image = ../../wallpapers/wall1.png;
+      wallpaper.image = ../../wallpapers/wall1.jpg;
       terminalPadding = 24;
       fonts.desktop = {
         # name = "SF Pro Display";

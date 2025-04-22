@@ -25,7 +25,7 @@
     };
     userAccount.username = "gene";
     desktopTheme = {
-      name = "rose-pine-dawn";
+      name = "everblush";
       #name = "levuaska";
       wallpaper.image = ../../wallpapers/flowers-1.jpg;
       #wallpaper.image = ./wallpapers/clouds-levuaska.jpg;
