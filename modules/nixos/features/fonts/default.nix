@@ -1,8 +1,9 @@
-{pkgs, config, lib, ...}:
-#let
-  #kirsch = pkgs.callPackage ./kirsch.nix {};
-#in
 {
+  pkgs,
+  config,
+  lib,
+  ...
+}: {
   options = {
     bundles.desktopBase.fonts.enable = lib.mkOption {
       type = lib.types.bool;
@@ -21,6 +22,7 @@
       terminus_font_ttf
       nerd-fonts.terminess-ttf
       _0xproto
+      font-awesome
     ];
 
     fonts = {
