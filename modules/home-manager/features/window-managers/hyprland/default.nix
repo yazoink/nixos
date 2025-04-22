@@ -209,7 +209,7 @@ in {
           };
           hyprexpo = {
             columns = 3;
-            gap_size = 15;
+            gap_size = 5;
             bg_col = "rgb(${config.stylix.base16Scheme.base00})";
             workspace_method = "first 1";
             enable_gesture = true;
