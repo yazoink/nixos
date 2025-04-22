@@ -24,6 +24,10 @@
         command = "kitty";
         desktopFile = "kitty.desktop";
       };
+      discordClient = {
+        command = "legcord";
+        desktopFile = "legcord.desktop";
+      };
     };
     desktopTheme = {
       # name = "catppuccin-mocha";
