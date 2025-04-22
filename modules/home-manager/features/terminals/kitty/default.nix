@@ -20,6 +20,7 @@ in {
         initial_window_height = 400;
         window_padding_width = terminalPadding;
         single_window_padding_width = terminalPadding;
+        confirm_os_window_close = false;
         text_composition_strategy =
           if (config.stylix.polarity == "light")
           then "legacy"
