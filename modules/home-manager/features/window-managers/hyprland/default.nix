@@ -62,7 +62,7 @@ in {
         "$menu" = "pkill wofi || wofi --show drun";
         "$screenshot" = "${config.bundles.desktopBase.screenshot.package}/bin/screenshot -s";
         "$power" = "simple-logout";
-        "$lock" = "gtklock";
+        "$lock" = "hyprlock";
         "$colorPicker" = "${../scripts/color.sh}";
         "$bar" = "${../scripts/waybar.sh}";
         "$screenRecorder" = "kooha";
