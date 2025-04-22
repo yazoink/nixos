@@ -29,11 +29,10 @@ function get_bat_percentage() {
 function get_bat_icon() {
     bat_percentage=$1
     icons=(
-        [16]=" "
-        [32]=" "
-        [48]=" "
-        [64]=" "
-        [80]=" "
+        [20]=" "
+        [40]=" "
+        [60]=" "
+        [80]=" "
     )
     for icon in "${!icons[@]}"; do
         [[ $bat_percentage < $icon ]] && {
@@ -41,6 +40,7 @@ function get_bat_icon() {
             return 0
         }
     done
+    echo " "
 }
 
 function get_song () {
