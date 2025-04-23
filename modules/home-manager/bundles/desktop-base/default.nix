@@ -14,7 +14,7 @@
     ../../features/gui-editors
     ../../features/document-readers
     ../../features/terminals
-    ../../features/browsers
+    ../../features/web-browsers
     ../../features/image-viewers
     ../../features/media-players
     ../../features/window-managers
