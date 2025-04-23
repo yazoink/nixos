@@ -14,7 +14,7 @@
         command = "zathura";
       };
       mediaPlayer = {
-        command = "vlc";
+        command = "mpv";
       };
       imageViewer = {
         command = "imv";

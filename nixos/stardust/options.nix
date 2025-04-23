@@ -7,6 +7,7 @@
       terminal = {
         command = "alacritty";
       };
+      mediaPlayer.command = "mpv";
       documentReader.command = "zathura";
     };
     userAccount.username = "gene";

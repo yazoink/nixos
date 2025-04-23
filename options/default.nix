@@ -110,7 +110,7 @@
           command = lib.mkOption {
             type = lib.types.str;
             default = "vlc";
-            description = "Options: vlc";
+            description = "Options: vlc, mpv, celluloid";
           };
         };
         webBrowser = {
