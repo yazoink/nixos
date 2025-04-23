@@ -7,6 +7,7 @@
       terminal = {
         command = "alacritty";
       };
+      documentReader.command = "zathura";
     };
     userAccount.username = "gene";
     desktopTheme = {

@@ -11,7 +11,7 @@
         command = "pluma";
       };
       documentReader = {
-        command = "zathura";
+        command = "atril";
       };
       mediaPlayer = {
         command = "vlc";
