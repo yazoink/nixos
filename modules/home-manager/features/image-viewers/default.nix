@@ -1,6 +1,7 @@
 {lib, ...}: {
   imports = [
     ./ristretto
+    ./imv
   ];
   options = {
     defaultApps.imageViewer.desktopFile = lib.mkOption {

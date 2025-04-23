@@ -17,7 +17,7 @@
         command = "vlc";
       };
       imageViewer = {
-        command = "ristretto";
+        command = "imv";
       };
       terminal = {
         command = "kitty";

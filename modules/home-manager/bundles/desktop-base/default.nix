@@ -11,7 +11,7 @@
   };
 
   imports = [
-    ../../features/gui-editors
+    ../../features/gui-text-editors
     ../../features/document-readers
     ../../features/terminals
     ../../features/web-browsers

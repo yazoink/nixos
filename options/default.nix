@@ -124,7 +124,7 @@
           command = lib.mkOption {
             type = lib.types.str;
             default = "ristretto";
-            description = "Options: ristretto";
+            description = "Options: ristretto, imv";
           };
         };
         terminal = {
