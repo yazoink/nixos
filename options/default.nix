@@ -1,6 +1,10 @@
 #### Options ####
 # To be enabled in ../nixos/hostname/default.nix
-{lib, ...}: {
+{
+  lib,
+  config,
+  ...
+}: {
   options = {
     myOptions = {
       defaultApps = {
@@ -19,7 +23,7 @@
           command = lib.mkOption {
             type = lib.types.str;
             default = "vesktop";
-            description = "options: vesktop, abaddon, dissent";
+            description = "options: vesktop, abaddon, dissent, legcord";
           };
           desktopFile = lib.mkOption {
             type = lib.types.str;
@@ -84,12 +88,12 @@
         terminal = {
           command = lib.mkOption {
             type = lib.types.str;
-            default = "footclient";
-            description = "options: foot, footclient";
+            default = "kitty";
+            description = "options: foot, footclient, alacritty, kitty";
           };
           desktopFile = lib.mkOption {
             type = lib.types.str;
-            default = "footclient.desktop";
+            default = "kitty.desktop";
           };
         };
       };
@@ -136,23 +140,25 @@
         wallpaper = {
           type = lib.mkOption {
             type = lib.types.str;
-            description = "image or color";
+            description = "options: image, color";
             default = "image";
           };
           image = {
             fillType = lib.mkOption {
               type = lib.types.str;
               description = "fill or tile";
+              default = "fill";
             };
             path = lib.mkOption {
               type = lib.types.path;
               description = "path to wallpaper. Required for stylix, even if color is set.";
+              default = ../wallpapers/flowers-1.jpg;
             };
           };
           color = {
             hex = lib.mkOption {
               type = lib.types.str;
-              default = "000000";
+              default = config.stylix.base16Scheme.base03;
             };
           };
         };

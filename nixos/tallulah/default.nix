@@ -52,7 +52,14 @@
     };
     desktopTheme = {
       name = "rose-pine-dawn";
-      wallpaper.image = ../../wallpapers/rose-pine/flowers-rose-pine3.png;
+      wallpaper = {
+        type = "color";
+        image = {
+          path = ../../wallpapers/rose-pine/flowers-rose-pine3.png;
+          fillType = "fill";
+        };
+        color.hex = config.stylix.base16Scheme.base03;
+      };
       fonts.desktop = {
         name = "Rubik";
         size = 11;

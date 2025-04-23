@@ -26,9 +26,13 @@
     userAccount.username = "gene";
     desktopTheme = {
       name = "everblush";
-      #name = "levuaska";
-      wallpaper.image = ../../wallpapers/flowers-1.jpg;
-      #wallpaper.image = ./wallpapers/clouds-levuaska.jpg;
+      wallpaper = {
+        type = "image";
+        image = {
+          fillType = "fill";
+          path = ../../wallpapers/flowers-1.jpg;
+        };
+      };
       fonts = {
         desktop = {
           name = "Rubik";
