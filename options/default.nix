@@ -182,8 +182,8 @@
           };
           starshipFormat = lib.mkOption {
             type = lib.types.number;
-            default = 1;
-            description = "Theme/format for Starship (1-3).";
+            default = 2;
+            description = "Theme/format for Starship (1-3). 1 is best for bitmap fonts.";
           };
         };
         desktopBase = {

@@ -80,6 +80,7 @@
       # desktopFull.enable = true;
     };
     features = {
+      lutgen.enable = true;
     };
     hardwareFeatures = {
       ssd.enable = true;
