@@ -17,6 +17,8 @@
       uncrustify
       fixjson
       rustfmt
+      gcc
+      clang-tools
       # php84Packages.php-cs-fixer broken :(
     ];
     programs.nixvim = {
