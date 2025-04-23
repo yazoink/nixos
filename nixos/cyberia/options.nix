@@ -4,15 +4,12 @@
     defaultApps = {
       # fileManager = {
       #   command = "thunar";
-      #   desktopFile = "thunar.desktop";
       # };
       terminal = {
         command = "kitty";
-        desktopFile = "kitty.desktop";
       };
       discordClient = {
         command = "legcord";
-        desktopFile = "legcord.desktop";
       };
     };
     desktopTheme = {

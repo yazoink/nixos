@@ -5,6 +5,7 @@
   ...
 }: {
   config = lib.mkIf (osConfig.myOptions.bundles.desktopBase.enable && osConfig.myOptions.defaultApps.webBrowser.command == "brave") {
+    defaultApps.webBrowser.desktopFile = "brave.desktop";
     programs.chromium = {
       enable = true;
       package = pkgs.brave;

@@ -8,6 +8,7 @@
   ...
 }: {
   config = lib.mkIf (osConfig.myOptions.bundles.desktopBase.enable && osConfig.myOptions.defaultApps.webBrowser.command == "librewolf") {
+    defaultApps.webBrowser.desktopFile = "librewolf.desktop";
     home = {
       sessionVariables = {
         MOZ_USE_XINPUT2 = 1;

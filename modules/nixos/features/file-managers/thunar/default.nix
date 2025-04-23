@@ -5,6 +5,7 @@
   ...
 }: {
   config = lib.mkIf (config.myOptions.bundles.desktopBase.enable && config.myOptions.defaultApps.fileManager.command == "thunar") {
+    defaultApps.fileManager.desktopFile = "thunar.desktop";
     programs = {
       file-roller.enable = true;
       thunar = {

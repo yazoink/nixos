@@ -6,7 +6,6 @@
   inputs,
   ...
 }: let
-  inherit (osConfig.myOptions.desktopTheme) smallBars;
   closeButtonColor =
     if (osConfig.myOptions.desktopTheme.name == "caroline")
     then config.stylix.base16Scheme.base0E
@@ -29,8 +28,6 @@ in {
 
     bundles.desktopBase = {
       mako.enable = true;
-      #swaync.enable = true;
-      #rofi.enable = true;
       wofi.enable = true;
       waybar.enable = true;
       screenshot.enable = true;
@@ -44,17 +41,12 @@ in {
 
     wayland.windowManager.hyprland = builtins.trace "hyprland config module enabled" {
       enable = true;
-      # package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
       package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
       xwayland.enable = true;
       systemd.enable = true;
       plugins = [
         inputs.hyprland-plugins.packages.${pkgs.stdenv.hostPlatform.system}.hyprbars
         # inputs.hyprland-plugins.packages.${pkgs.stdenv.hostPlatform.system}.hyprexpo
-        # hyprlandPlugins.hyprspace
-        #hyprlandPlugins.hypr-dynamic-cursors
-        #hyprscroller
-        # hyprlandPlugins.hyprbars
       ];
       settings = {
         "$terminal" = "${osConfig.myOptions.defaultApps.terminal.command}";

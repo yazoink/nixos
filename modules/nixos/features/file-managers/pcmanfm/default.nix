@@ -5,6 +5,7 @@
   ...
 }: {
   config = lib.mkIf (config.myOptions.bundles.desktopBase.enable && config.myOptions.defaultApps.fileManager.command == "pcmanfm") {
+    defaultApps.fileManager.desktopFile = "pcmanfm.desktop";
     programs = {
       file-roller.enable = true;
     };

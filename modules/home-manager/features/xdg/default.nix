@@ -4,12 +4,12 @@
   osConfig,
   ...
 }: let
-  fileManager = osConfig.myOptions.defaultApps.fileManager.desktopFile;
-  textEditor = osConfig.myOptions.defaultApps.guiTextEditor.desktopFile;
-  documentReader = osConfig.myOptions.defaultApps.documentReader.desktopFile;
-  mediaPlayer = osConfig.myOptions.defaultApps.mediaPlayer.desktopFile;
-  browser = osConfig.myOptions.defaultApps.webBrowser.desktopFile;
-  imageViewer = osConfig.myOptions.defaultApps.imageViewer.desktopFile;
+  fileManager = osConfig.defaultApps.fileManager.desktopFile;
+  textEditor = config.defaultApps.guiTextEditor.desktopFile;
+  documentReader = config.defaultApps.documentReader.desktopFile;
+  mediaPlayer = config.defaultApps.mediaPlayer.desktopFile;
+  browser = config.defaultApps.webBrowser.desktopFile;
+  imageViewer = config.defaultApps.imageViewer.desktopFile;
 in {
   options = {
     bundles.desktopBase.xdg.enable = lib.mkOption {

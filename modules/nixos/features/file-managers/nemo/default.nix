@@ -5,6 +5,8 @@
   ...
 }: {
   config = lib.mkIf (config.myOptions.bundles.desktopBase.enable && config.myOptions.defaultApps.fileManager.command == "nemo") {
+    defaultApps.fileManager.desktopFile = "nemo.desktop";
+
     environment.systemPackages = with pkgs; [nemo-with-extensions cifs-utils];
 
     services = {

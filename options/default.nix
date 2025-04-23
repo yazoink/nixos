@@ -87,20 +87,12 @@
             default = "nemo";
             description = "Options: thunar, pcmanfm, nemo";
           };
-          desktopFile = lib.mkOption {
-            type = lib.types.str;
-            default = "nemo.desktop";
-          };
         };
         discordClient = {
           command = lib.mkOption {
             type = lib.types.str;
             default = "vesktop";
             description = "Options: vesktop, abaddon, dissent, legcord";
-          };
-          desktopFile = lib.mkOption {
-            type = lib.types.str;
-            default = "vesktop.desktop";
           };
         };
         guiTextEditor = {
@@ -109,20 +101,12 @@
             default = "pluma";
             description = "Options: pluma, codium";
           };
-          desktopFile = lib.mkOption {
-            type = lib.types.str;
-            default = "pluma.desktop";
-          };
         };
         documentReader = {
           command = lib.mkOption {
             type = lib.types.str;
             default = "atril";
             description = "Options: atril";
-          };
-          desktopFile = lib.mkOption {
-            type = lib.types.str;
-            default = "atril.desktop";
           };
         };
         mediaPlayer = {
@@ -131,20 +115,12 @@
             default = "vlc";
             description = "Options: vlc";
           };
-          desktopFile = lib.mkOption {
-            type = lib.types.str;
-            default = "vlc.desktop";
-          };
         };
         webBrowser = {
           command = lib.mkOption {
             type = lib.types.str;
             default = "firefox";
             description = "Options: firefox, zen, brave, librewolf";
-          };
-          desktopFile = lib.mkOption {
-            type = lib.types.str;
-            default = "firefox.desktop";
           };
         };
         imageViewer = {
@@ -153,20 +129,12 @@
             default = "ristretto";
             description = "Options: ristretto";
           };
-          desktopFile = lib.mkOption {
-            type = lib.types.str;
-            default = "org.xfce.ristretto.desktop";
-          };
         };
         terminal = {
           command = lib.mkOption {
             type = lib.types.str;
             default = "kitty";
             description = "Options: foot, footclient, alacritty, kitty";
-          };
-          desktopFile = lib.mkOption {
-            type = lib.types.str;
-            default = "kitty.desktop";
           };
         };
       };
