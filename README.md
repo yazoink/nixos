@@ -28,7 +28,7 @@ My NixOS desktop configs with home-manager.
 - [Script](https://github.com/yazoink/nixos/blob/main/modules/home-manager/features/shell-config/scripts/rebuild/rebuild) for rebuilding the system that notifies you when it's done
 - [Script](https://github.com/yazoink/nixos/blob/main/modules/home-manager/features/shell-config/scripts/clean/clean) for cleaning the system that notifies you when it's done
 - Various other [useful scripts](https://github.com/yazoink/nixos/tree/main/modules/home-manager/features/shell-config/scripts)
-- Custom options for easy toggling of features (see [here](https://github.com/yazoink/nixos/tree/main/options)).
+- Custom options for easy toggling of features (see [here](https://github.com/yazoink/nixos/tree/main/options/default.nix)).
 
 ## Documentation
 See [documentation.md](./documentation.md)
