@@ -7,9 +7,14 @@
 }: let
   barPadding = 11;
   wallpaperCommand =
-    if osConfig.myOptions.desktopTheme.wallpaper.solidColor.enable
-    then "${../scripts/swaybg.sh} -c ${osConfig.myOptions.desktopTheme.wallpaper.solidColor.hex}"
-    else "${../scripts/swaybg.sh} -i ${osConfig.myOptions.desktopTheme.wallpaper.image}";
+    if (osConfig.myOptions.desktopTheme.wallpaper.type == "color")
+    then "${../scripts/swaybg.sh} -i ${osConfig.myOptions.desktopTheme.wallpaper.color.hex}"
+    else
+      (
+        if (osConfig.myOptions.desktopTheme.wallpaper.image.fillType == "fill")
+        then "${../scripts/swaybg.sh} -i ${osConfig.myOptions.desktopTheme.wallpaper.image.path}"
+        else "${../scripts/swaybg.sh} -t ${osConfig.myOptions.desktopTheme.wallpaper.image.path}"
+      );
 in {
   imports = [./hypridle.nix];
   config = lib.mkIf osConfig.bundles.desktopBase.sway.enable {

@@ -102,8 +102,8 @@
       desktopTheme = {
         name = lib.mkOption {
           type = lib.types.str;
-          default = "caroline";
-          description = "options: caroline, carob, tarot, manuscript, rosepine, wizard, atelier-savanna, blood-rust, embers, mountain, spirit, swamp, terracotta, twilight";
+          default = "everblush";
+          description = "see nixos/modules/nixos/features/theme/themes for options";
         };
         terminalPadding = lib.mkOption {
           type = lib.types.number;
@@ -113,19 +113,19 @@
           terminal = {
             name = lib.mkOption {
               type = lib.types.str;
-              default = "SFMono";
-              description = "options: Bm437 NEC APC3 8x16, JetBrainsMono Nerd Font, GeistMono Nerd Font, Iosevka Nerd Font, ZedMono Nerd Font, Cascadia Code, VictorMono Nerd Font";
+              default = "Iosevka Nerd Font";
+              description = "see nixos/modules/nixos/features/theme/fonts/terminal for options";
             };
             size = lib.mkOption {
               type = lib.types.number;
-              default = 11;
+              default = 12;
             };
           };
           desktop = {
             name = lib.mkOption {
               type = lib.types.str;
-              default = "SF Pro Display";
-              description = "options: Rubik, SF Pro Display, DM Sans, Gabarito, Lexend, Product Sans, Roboto";
+              default = "Rubik";
+              description = "see nixos/modules/nixos/features/theme/fonts/desktop for options";
             };
             size = lib.mkOption {
               type = lib.types.number;
@@ -134,15 +134,22 @@
           };
         };
         wallpaper = {
-          image = lib.mkOption {
-            type = lib.types.path;
-            description = "path to wallpaper. Required for stylix, even if solid bg is set.";
+          type = lib.mkOption {
+            type = lib.types.str;
+            description = "image or color";
+            default = "../wallpapers/flowers-1.jpg";
           };
-          solidColor = {
-            enable = lib.mkOption {
-              type = lib.types.bool;
-              default = false;
+          image = {
+            path = lib.mkOption {
+              type = lib.types.path;
+              description = "path to wallpaper. Required for stylix, even if solid bg is set.";
             };
+            fillType = lib.mkOption {
+              type = lib.types.str;
+              description = "fill or tile";
+            };
+          };
+          color = {
             hex = lib.mkOption {
               type = lib.types.str;
               default = "000000";

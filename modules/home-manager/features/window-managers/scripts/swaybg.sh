@@ -12,6 +12,10 @@ case "$1" in
         pkill swaybg
         swaybg -i "$WALLPAPER" -m fill &
         disown ;;
+    "-t" | "--tiling-image")
+        pkill swaybg
+        swaybg -i "$WALLPAPER" -m tile &
+        disown ;;
     "-c" | "--color")
         pkill swaybg
         swaybg -c "$WALLPAPER" &
@@ -20,9 +24,6 @@ case "$1" in
         echo "Error: invalid argument"
         exit 1 ;;
 esac
-
-swaybg -i "$WALLPAPER" -m fill &
-disown
 
 [ $NOTIFY == true ] \
     && notify-send "Wallpaper" "Reset wallpaper" -i "$WALLPAPER"
