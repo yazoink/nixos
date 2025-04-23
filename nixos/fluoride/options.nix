@@ -31,7 +31,7 @@
     };
     desktopTheme = {
       # name = "paradise";
-      name = "paradise";
+      name = "biscuit-de-mar-light";
       wallpaper = {
         type = "image";
         image = {
