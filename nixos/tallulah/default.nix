@@ -12,68 +12,80 @@
     inputs.stylix.nixosModules.stylix
   ];
 
-  myOptions = {
+  myOptions = builtins.trace "options set" {
     defaultApps = {
       discordClient = {
         command = "legcord";
         desktopFile = "legcord.desktop";
       };
+      fileManager = {
+        command = "thunar";
+        desktopFile = "thunar.desktop";
+      };
+      guiTextEditor = {
+        command = "pluma";
+        desktopFile = "pluma.desktop";
+      };
+      documentReader = {
+        command = "atril";
+        desktopFile = "atril.desktop";
+      };
+      mediaPlayer = {
+        command = "vlc";
+        desktopFile = "vlc.desktop";
+      };
+      imageViewer = {
+        command = "ristretto";
+        desktopFile = "org.xfce.ristretto.desktop";
+      };
       terminal = {
         command = "alacritty";
         desktopFile = "alacritty.desktop";
       };
+      webBrowser = {
+        command = "firefox";
+        desktopFile = "firefox.desktop";
+      };
     };
-    userAccount.username = "gene";
+    userAccount = {
+      username = "gene";
+    };
     desktopTheme = {
       name = "rose-pine-dawn";
-      #name = "levuaska";
       wallpaper.image = ../../wallpapers/rose-pine/flowers-rose-pine3.png;
-      #wallpaper.image = ./wallpapers/clouds-levuaska.jpg;
-      fonts = {
-        desktop = {
-          name = "Rubik";
-          size = 11;
-        };
-        terminal = {
-          # name = "Bm437 NEC APC3 8x16";
-          name = "Terminus";
-          size = 12;
-        };
+      fonts.desktop = {
+        name = "Rubik";
+        size = 11;
+      };
+      fonts.terminal = {
+        name = "Terminus";
+        # name = "Bm437 NEC APC3 8x16";
+        size = 12;
       };
       sddm = {
         scale = 1.4;
         wallpaper = ../../wallpapers/rose-pine/flowers-rose-pine3.png;
-        #wallpaper = ./wallpapers/clouds-levuaska.jpg;
       };
       firefoxCss.stylix.enable = true;
     };
     bundles = {
-      #base.starshipFormat = 2;
+      desktopBase.enable = true;
       desktopBase.windowManager = "hyprland";
-      desktopBase.displayManager = "sddm";
       # desktopFull.enable = true;
-      desktopFull.vesktop.bloat = false;
     };
     features = {
-      gzdoom.enable = true;
-      eduke32.enable = true;
     };
     hardwareFeatures = {
-      # hyprlandLegacyRenderer.enable = true;
       ssd.enable = true;
       h264ify.enable = true;
-      laptop = {
-        enable = true;
-        hyprlandTouchpadScrollFactor = 0.3;
-        # batteryName = "BAT1";
-      };
+      laptop.enable = true;
     };
   };
 
   home-manager = {
-    extraSpecialArgs = {inherit inputs;};
     #useGlobalPkgs = true;
     #useUserPackages = true;
+    extraSpecialArgs = {inherit inputs;};
     users."${config.myOptions.userAccount.username}" = {
       imports = [
         ../../home-manager
@@ -81,10 +93,25 @@
     };
   };
 
-  boot.loader = {
-    systemd-boot.enable = true;
-    efi.canTouchEfiVariables = true;
+  boot = {
+    loader = {
+      systemd-boot.enable = true;
+      efi.canTouchEfiVariables = true;
+    };
+    kernelParams = ["amd_iommu=on"];
   };
+
+  hardware = {
+    graphics = {
+      enable = true;
+      # enable32Bit = true;
+      extraPackages = with pkgs; [
+        mesa.opencl
+      ];
+    };
+  };
+
+  services.xserver.videoDrivers = ["radeon"];
 
   networking.hostName = "tallulah";
 
@@ -95,15 +122,6 @@
       #PasswordAuthentication = false;
     };
   };
-
-  hardware.graphics = {
-    enable = true;
-    extraPackages = with pkgs; [
-      mesa.opencl
-    ];
-  };
-
-  services.xserver.videoDrivers = ["radeon"];
 
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
   system.stateVersion = "24.05";

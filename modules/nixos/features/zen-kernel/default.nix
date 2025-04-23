@@ -2,7 +2,6 @@
   pkgs,
   config,
   lib,
-  inputs,
   ...
 }: {
   options = {
@@ -12,6 +11,6 @@
     };
   };
   config = lib.mkIf config.bundles.base.zenKernel.enable {
-    boot.kernelPackages = inputs.nixpkgs-master.legacyPackages.${pkgs.system}.linuxPackages_zen;
+    boot.kernelPackages = pkgs.linuxKernel.packages.linux_zen;
   };
 }
