@@ -14,7 +14,7 @@
     inputs.stylix.nixosModules.stylix
   ];
 
-  system.activationScripts = {
+  system.activationScripts.stylixDeps = {
     text = ''
       echo "base00: ${config.stylix.base16Scheme.base00}"
       echo "base01: ${config.stylix.base16Scheme.base01}"
