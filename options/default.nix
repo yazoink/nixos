@@ -1,5 +1,5 @@
 #### ----- Options ----- ####
-# To be enabled in ../nixos/hostname/default.nix
+# To be enabled in ../nixos/<hostname>/options.nix
 {
   lib,
   config,
