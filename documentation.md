@@ -1,141 +1,16 @@
 # Documentation
 
-Mainly so I remember how this thing works.
+Mainly so I remember how this thing works.     
+     
+Basically, there's two "levels" of this config. The higher level consists of the custom configuration options declared in `options/default.nix` and set in `nixos/<hostname>/default.nix` and the lower level is everything else. The higher level allows for easy toggling and changing of anything that might need toggling or changing across the system. Ideally, once a host is set up, these are the only options that need to be touched for its configuration.
 
-## Global Custom Options
+## Custom Configuration Options
 
-The custom options defined in `options/default.nix` for system configuration. These options should be defined in `nixos/<hostname>/default.nix`.
+Refer to `options/default.nix`. These must be set in `nixos/<hostname>/default.nix`.
 
-### myOptions.defaultApps
+## Lower Level Custom Options
 
-Default applications.
-See `options/default.nix` for the supported types of applications and their options.
-
-### myOptions.defaultApps.\<type>.command
-
-Command to launch the app.
-
-### myOptions.defaultApps.\<type>.desktopFile
-
-Name of the desktop entry file.
-
-### myOptions.userAccount
-
-Settings for the user account.
-
-### myOptions.userAccount.username
-
-Sets the username.
-
-### myOptions.desktopTheme
-
-Configure the desktop theme.
-
-### myOptions.desktopTheme.name
-
-Sets the theme to use. See `nixos/modules/nixos/features/theme/themes` for options. There are image previews for some of the themes in the folders.
-
-### myOptions.desktopTheme.wallpaper
-
-Path to the desktop wallpaper.
-
-### myOptions.desktopTheme.fonts.terminal.name
-
-Set the terminal font. See `nixos/modules/nixos/features/theme/fonts/terminal` for available options.
-
-### myoptions.desktoptheme.fonts.desktop.name
-
-Set the desktop font. See `nixos/modules/nixos/features/theme/fonts/desktop` for available options.
-
-### myOptions.desktopTheme.fonts.\<desktop/terminal>.size
-
-Set the terminal/desktop font size.
-
-### myOptions.desktopTheme.terminalPadding
-
-Set the terminal padding.
-
-### myOptions.desktopTheme.sddm
-
-Configure the SDDM theme.
-
-### myOptions.desktopTheme.sddm.scale
-
-Sets the scale for the SDDM theme.
-
-### myOptions.desktopTheme.sddm.wallpaper
-
-Path to the wallpaper to use for the SDDM theme.
-
-### myOptions.desktopTheme.firefoxCss.\<name>.enable
-
-Enables Firefox userChrome.css themes. Not recommended to enable more than one at once.
-
-### myOptions.desktopTheme.firefoxCss.shyfox.wallpaper
-
-Path to the new tab background image.
-
-### myOptions.bundles
-
-Bundles of modules.
-
-### myOptions.bundles.base.enable
-
-Enables the base features needed for a TTY-only setup.
-
-### myOptions.bundles.base.starshipFormat
-
-Set the Starship prompt theme/format (1-3).
-
-### myOptions.bundles.desktopBase.enable
-
-Enables the base features needed for a desktop including a window manager, display manager, web browser and other basic utilities.
-This module automatically enables `myOptions.bundles.base`.
-
-### myOptions.bundles.desktopBase.windowManager
-
-Choose which window manager to install.
-
-#### Options:
-
-- hyprland (default)
-- sway
-
-### myOptions.bundles.desktopBase.displayManager
-
-Choose which display manager to install.
-
-#### Options:
-
-- sddm (default)
-- regreet
-
-### myOptions.bundles.desktopFull.enable
-
-Enables all desktop features including music players, media editors, libreoffice, vesktop, etc.
-This module automatically enables `myOptions.bundles.desktopBase`.
-
-### myOptions.bundles.desktopFull.vesktop.bloat
-
-Disabling this installs less vesktop plugins.
-
-### myOptions.features.\<name>.enable
-
-Enable individual applications/services/etc which may not need to be included on every host, thus excluding them from bundles.
-See `options/default.nix` for the available features.
-
-### myOptions.hardwareFeatures.\<name>.enable
-
-Enable features related to specific hardware.
-See `options/default.nix`.
-
-### myOptions.hardwareFeatures.laptop.touchpadScrollFactor
-
-Scroll factor to set for laptop touchpad in Hyprland.
-
-## Custom Options (local to features)
-
-The options which are not intended for use outside `modules/`. The global custom options are essentially an abstraction for this part of the config.
+The options which are not intended for use outside `modules/`. The hiigher level custom options are essentially an abstraction for this part of the config.
 
 ### bundles.\<bundle>.\<name>.enable
 
@@ -213,13 +88,19 @@ This option is set for each individual theme in `modules/nixos/features/theme/th
     myOptions = {
         userAccount.username = "<username>";
         desktopTheme = {
-            # name = "caroline";
-            wallpaper = ./wallpapers/<image>;
-            sddm = {
-                #scale = 1;
-                wallpaper = ./wallpapers/<image>;
+            # name = "everblush";
+            wallpaper = {
+                type = "image"
+                image = {
+                    fillType = "fill";
+                    path = ../../wallpapers/<image>;
+                };
+                # color.hex = config.stylix.base16Scheme.base03;
             };
-            # firefoxCss.anotherOneline.enable = true;
+            sddm = {
+                # scale = 1;
+                wallpaper = ../../wallpapers/<image>;
+            };
         };
         bundles = {
             ## Enable at least one ##
@@ -235,8 +116,12 @@ This option is set for each individual theme in `modules/nixos/features/theme/th
         hardwareFeatures = {
             # h264ify.enable = true;
             # diskBurner.enable = true;
-            # laptop.enable = true;
             # ssd.enable = true;
+            # laptop = {
+            #     enable = true;
+            #     hyprlandTouchpadScrollFactor = 0.5;
+            #     batteryName = "BAT1";
+            # };
         };
     };
 
