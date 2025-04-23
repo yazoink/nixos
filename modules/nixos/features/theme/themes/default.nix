@@ -18,7 +18,7 @@
     ./darkmoss
     ./gruvbox-dark-hard
     ./gruvbox-material-dark-hard
-    ./biscuit
+    ./biscuit-de-sol-dark
     ./everblush
     ./levuaska
     ./mountain-peek

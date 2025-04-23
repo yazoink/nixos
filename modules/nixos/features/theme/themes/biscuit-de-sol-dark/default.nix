@@ -7,7 +7,7 @@
   cursors = pkgs.callPackage ./biscuit-cursors.nix {};
   icons = pkgs.callPackage ./biscuit-icons.nix {};
 in {
-  config = lib.mkIf (config.myOptions.bundles.desktopBase.enable && config.myOptions.desktopTheme.name == "biscuit") {
+  config = lib.mkIf (config.myOptions.bundles.desktopBase.enable && config.myOptions.desktopTheme.name == "biscuit-de-sol-dark") {
     environment.systemPackages = [
       cursors
       icons
