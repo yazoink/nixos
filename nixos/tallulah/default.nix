@@ -13,8 +13,8 @@
   ];
 
   home-manager = {
-    #useGlobalPkgs = true;
-    #useUserPackages = true;
+    useGlobalPkgs = true;
+    useUserPackages = true;
     extraSpecialArgs = {inherit inputs;};
     users."${config.myOptions.userAccount.username}" = {
       imports = [

@@ -16,6 +16,8 @@
   # ----- HOME MANAGER ----- #
   home-manager = {
     extraSpecialArgs = {inherit inputs;};
+    useGlobalPkgs = true;
+    useUserPackages = true;
     users."gene" = {
       imports = [
         ../../home-manager
