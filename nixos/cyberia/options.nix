@@ -38,8 +38,8 @@
       };
       sddm = {
         scale = 1.3;
-        # wallpaper = ../../wallpapers/catppuccin/galaxy-waves.jpg;
-        wallpaper = ../../wallpapers/flower.jpg;
+        # wallpaper = ../../wallpapers/flower.jpg;
+        wallpaper = config.myOptions.desktopTheme.wallpaper.image.path;
       };
     };
     bundles = {
