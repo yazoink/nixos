@@ -10,9 +10,9 @@ My NixOS desktop configs with home-manager.
 - WM: Hyprland/SwayFX
 - Bar: Waybar
 - Launcher: Rofi/Wofi/Anyrun
-- Terminal: Foot
+- Terminal: Foot/Alacritty/Kitty
 - Editor: Neovim
-- Browser: Firefox/Zen/Brave
+- Browser: Firefox/Zen/Brave/Librewolf
 - File manager: Thunar/Yazi
 - Notifications: Mako/SwayNC
 - Display manager: SDDM/ReGreet
@@ -24,10 +24,10 @@ My NixOS desktop configs with home-manager.
 - Consistent theming across GTK/Qt and pretty much everything else
 - Auto-generated theme based on the current stylix base16 colorscheme for everything except icons and cursors
 - Ability to easily toggle between desktop colorschemes in config
-- Customized Firefox with [Betterfox](https://github.com/yokoffing/BetterFox) and toggleable userChrome.css themes
-- Declarative Etterna package/installation
+- Declarative Etterna package/installation (works sometimes)
 - [Script](https://github.com/yazoink/nixos/blob/main/modules/home-manager/features/shell-config/scripts/rebuild/rebuild) for rebuilding the system that notifies you when it's done
 - [Script](https://github.com/yazoink/nixos/blob/main/modules/home-manager/features/shell-config/scripts/clean/clean) for cleaning the system that notifies you when it's done
+- Various other [useful scripts](https://github.com/yazoink/nixos/tree/main/modules/home-manager/features/shell-config/scripts)
 - Custom options for easy toggling of features (see [here](https://github.com/yazoink/nixos/tree/main/options)).
 
 ## Documentation
