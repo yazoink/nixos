@@ -4,7 +4,7 @@ Mainly so I remember how this thing works.
      
 Basically, there are two "levels" of this config. The higher level consists of the custom configuration options declared in `options/default.nix` and set in `nixos/<hostname>/options.nix` and the lower level is everything else. The higher level allows for easy toggling and changing of anything that might need toggling or changing across the system. Ideally, once a host is set up, these are the only options that need to be touched for its configuration.
 
-## Custom Configuration Options
+## Custom Options
 
 Refer to `options/default.nix`. These must be set in `nixos/<hostname>/options.nix`.
 
