@@ -18,9 +18,7 @@
     text = ''
       echo "base00: ${config.stylix.base16Scheme.base00}"
     '';
-    deps = [
-      config.stylix.base16Scheme.base00
-    ];
+    deps = ["config.stylix.base16Scheme.base00"];
   };
 
   home-manager = {
