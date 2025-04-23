@@ -3,57 +3,57 @@
 HOSTNAME=$(hostname)
 
 function main() {
-  if [ "$1" == "-h" ] || [ "$1" == "--help" ]; then
-    help && exit 0
-  fi
+    if [ "$1" == "-h" ] || [ "$1" == "--help" ]; then
+        help && exit 0
+    fi
 
-  switch_arg="switch"
-  extra_args=""
-  do_update=false
-  git_enabled=false
+    switch_arg="switch"
+    extra_args=""
+    do_update=false
+    git_enabled=false
 
-  [ -d "$HOME/nixos/.git" ] && git_enabled=true
+    [ -d "$HOME/nixos/.git" ] && git_enabled=true
 
-  for arg in "$@"; do
-    case "$arg" in
-      "-s" | "--switch") switch_arg="switch";;
-      "-t" | "--test") switch_arg="test";;
-      "-b" | "--boot") switch_arg="boot";;
-      "-d" | "--debug") extra_args="$extra_args --show-trace";;
-      "-u" | "--update") do_update=true;;
-      *) echo "Error: argument \"$arg\" invalid."; exit 1;;
-    esac
-  done
+    for arg in "$@"; do
+        case "$arg" in
+            "-s" | "--switch") switch_arg="switch" ;;
+            "-t" | "--test") switch_arg="test" ;;
+            "-b" | "--boot") switch_arg="boot" ;;
+            "-d" | "--debug") extra_args="$extra_args --show-trace" ;;
+            "-u" | "--update") do_update=true ;;
+            *) echo "Error: argument \"$arg\" invalid."; exit 1 ;;
+        esac
+    done
 
-  [ "$do_update" == true ] && {
-    echo "Updating flake inputs..." 
-    sudo nix flake update --flake "$HOME/nixos"
-    [ "$git_enabled" == true ] && {
-      echo "Committing flake update to git repo..."
-      git -C "$HOME/nixos" add "$HOME/nixos/flake.lock"
-      git -C "$HOME/nixos" commit -m "Update flake inputs"
+    [ "$do_update" == true ] && {
+        echo "Updating flake inputs..."
+        nix flake update --flake "$HOME/nixos"
+        [ "$git_enabled" == true ] && {
+            echo "Committing flake update to git repo..."
+            git -C "$HOME/nixos" add "$HOME/nixos/flake.lock"
+            git -C "$HOME/nixos" commit -m "Update flake inputs"
+        }
     }
-  }
 
-  echo "Rebuilding system..."
-  cmd="sudo nixos-rebuild $switch_arg --flake $HOME/nixos#$HOSTNAME $extra_args"
-  $cmd
+    echo "Rebuilding system..."
+    cmd="sudo nixos-rebuild $switch_arg --flake $HOME/nixos#$HOSTNAME $extra_args"
+    $cmd
 
-  case $? in
-    0) notify-send "Rebuild" "System rebuilt successfully.";;
-    *) notify-send "Rebuild" "Rebuild failed!";;
-  esac
+    case $? in
+        0) notify-send "Rebuild" "System rebuilt successfully." ;;
+        *) notify-send "Rebuild" "Rebuild failed!" ;;
+    esac
 }
 
 function help() {
-  echo "usage: rebuild [option(s)]"
-  echo "options:"
-  echo "    -s | --switch: rebuild switch"
-  echo "    -t | --test: rebuild test"
-  echo "    -b | --boot: rebuild boot"
-  echo "    -d | --debug: --show-trace"
-  echo "    -u | --update: update flake inputs before rebuilding"
-  echo "    -h | --help: show this menu"
+    echo "usage: rebuild [option(s)]"
+    echo "options:"
+    echo "    -s | --switch: rebuild switch"
+    echo "    -t | --test: rebuild test"
+    echo "    -b | --boot: rebuild boot"
+    echo "    -d | --debug: --show-trace"
+    echo "    -u | --update: update flake inputs before rebuilding"
+    echo "    -h | --help: show this menu"
 }
 
 main "$@"
