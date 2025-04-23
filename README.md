@@ -21,7 +21,7 @@ My NixOS desktop configs with home-manager.
 - Prompt: Starship
 
 ## Features
-- Consistent theming across GTK/Qt and pretty much everything else
+- Consistent theming across Gtk/Qt and pretty much everything else
 - Auto-generated theme based on the current stylix base16 colorscheme for everything except icons and cursors
 - Ability to easily toggle between desktop colorschemes in config
 - Declarative Etterna package/installation (works sometimes)
