@@ -35,7 +35,6 @@
               Theme/format for Starship prompt.
 
               Options:
-
                 1: Best for bitmap fonts
                 2: Best for regulat fonts
                 3 (or any other number): default
