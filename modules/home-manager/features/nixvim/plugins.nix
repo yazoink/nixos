@@ -42,7 +42,7 @@
         #   };
         # };
 
-        lualine = builtins.trace "base00 is ${config.stylix.base16Scheme.base00}" {
+        lualine = builtins.trace "base00 is ${config.stylix.base16Scheme.base00 or "000000"}" {
           enable = true;
           #lazyLoad.settings.event = "BufEnter";
           settings = {
