@@ -103,7 +103,7 @@
           command = lib.mkOption {
             type = lib.types.str;
             default = "atril";
-            description = "Options: atril";
+            description = "Options: atril, zathura";
           };
         };
         mediaPlayer = {
