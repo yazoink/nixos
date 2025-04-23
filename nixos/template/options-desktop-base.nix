@@ -21,27 +21,13 @@
 
     # ----- DEFAULT APPS -----#
     defaultApps = {
-      fileManager = {
-        command = "nemo";
-      };
-      guiTextEditor = {
-        command = "pluma";
-      };
-      documentReader = {
-        command = "atril";
-      };
-      mediaPlayer = {
-        command = "vlc";
-      };
-      webBrowser = {
-        command = "firefox";
-      };
-      imageViewer = {
-        command = "ristretto";
-      };
-      terminal = {
-        command = "kitty";
-      };
+      fileManager.command = "nemo";
+      guiTextEditor.command = "pluma";
+      documentReader.command = "atril";
+      mediaPlayer.command = "vlc";
+      webBrowser.command = "firefox";
+      imageViewer.command = "ristretto";
+      terminal.command = "kitty";
     };
     desktopTheme = {
       name = "everblush";

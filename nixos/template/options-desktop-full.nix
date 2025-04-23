@@ -25,30 +25,14 @@
 
     # ----- DEFAULT APPS -----#
     defaultApps = {
-      fileManager = {
-        command = "nemo";
-      };
-      guiTextEditor = {
-        command = "pluma";
-      };
-      documentReader = {
-        command = "atril";
-      };
-      mediaPlayer = {
-        command = "vlc";
-      };
-      webBrowser = {
-        command = "firefox";
-      };
-      imageViewer = {
-        command = "ristretto";
-      };
-      terminal = {
-        command = "kitty";
-      };
-      discordClient = {
-        command = "vesktop";
-      };
+      fileManager.command = "nemo";
+      guiTextEditor.command = "pluma";
+      documentReader.command = "atril";
+      mediaPlayer.command = "vlc";
+      webBrowser.command = "firefox";
+      imageViewer.command = "ristretto";
+      terminal.command = "kitty";
+      discordClient.command = "vesktop";
     };
     desktopTheme = {
       name = "everblush";

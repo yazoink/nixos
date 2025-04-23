@@ -10,7 +10,7 @@
     bundles = {
       base = {
         enable = true;
-        starshipFormat = "2";
+        starshipFormat = "1";
       };
     };
     # ----- FEATURES ----- #
