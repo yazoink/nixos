@@ -1,5 +1,5 @@
 #### ----- Options ----- ####
-# To be enabled in ../nixos/<hostname>/options.nix
+# To be set in ../nixos/<hostname>/options.nix
 {
   lib,
   config,
@@ -20,7 +20,7 @@
       # reader, image viewer, text editor, and web browser but no extra apps.
       #
       # Desktop Full: The modules and packages needed for a working console and
-      # fully-featured desktop
+      # fully-featured desktop.
 
       bundles = {
         base = {
