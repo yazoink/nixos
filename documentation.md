@@ -2,11 +2,11 @@
 
 Mainly so I remember how this thing works.     
      
-Basically, there are two "levels" of this config. The higher level consists of the custom configuration options declared in `options/default.nix` and set in `nixos/<hostname>/default.nix` and the lower level is everything else. The higher level allows for easy toggling and changing of anything that might need toggling or changing across the system. Ideally, once a host is set up, these are the only options that need to be touched for its configuration.
+Basically, there are two "levels" of this config. The higher level consists of the custom configuration options declared in `options/default.nix` and set in `nixos/<hostname>/options.nix` and the lower level is everything else. The higher level allows for easy toggling and changing of anything that might need toggling or changing across the system. Ideally, once a host is set up, these are the only options that need to be touched for its configuration.
 
 ## Custom Configuration Options
 
-Refer to `options/default.nix`. These must be set in `nixos/<hostname>/default.nix`.
+Refer to `options/default.nix`. These must be set in `nixos/<hostname>/options.nix`.
 
 ## Lower Level Custom Options
 
@@ -40,7 +40,7 @@ This option is set for each individual theme in `modules/nixos/features/theme/th
 - base0E
 - base0F
 
-## Adding hosts
+## How To Add a Host
 
 1. Add to `flake.nix`:
 
@@ -75,6 +75,7 @@ This option is set for each individual theme in `modules/nixos/features/theme/th
     ### Imports ###
     imports = [
         ./hardware-configuration.nix
+        ./options.nix
         ../../modules/nixos
         inputs.home-manager.nixosModules.home-manager
         inputs.stylix.nixosModules.stylix
@@ -82,48 +83,6 @@ This option is set for each individual theme in `modules/nixos/features/theme/th
         ## If supported, import nixos-hardware module ##
         # inputs.nixos-hardware.nixosModules.<nixos-hardware module>
     ];
-
-    ### Custom options (see top of page for more info/options) ###
-    ## This will set up a basic desktop ##
-    myOptions = {
-        userAccount.username = "<username>";
-        desktopTheme = {
-            # name = "everblush";
-            wallpaper = {
-                type = "image"
-                image = {
-                    fillType = "fill";
-                    path = ../../wallpapers/<image>;
-                };
-                # color.hex = config.stylix.base16Scheme.base03;
-            };
-            sddm = {
-                # scale = 1;
-                wallpaper = ../../wallpapers/<image>;
-            };
-        };
-        bundles = {
-            ## Enable at least one ##
-            # base.enable = true;
-            desktopBase = {
-                enable = true;
-                # windowManager = "hyprland";
-                # displayManager = "sddm";
-            };
-            # desktopFull.enable = true;
-        };
-        features = {};
-        hardwareFeatures = {
-            # h264ify.enable = true;
-            # diskBurner.enable = true;
-            # ssd.enable = true;
-            # laptop = {
-            #     enable = true;
-            #     hyprlandTouchpadScrollFactor = 0.5;
-            #     batteryName = "BAT1";
-            # };
-        };
-    };
 
     ### home-manager ###
     home-manager = {
@@ -204,9 +163,54 @@ This option is set for each individual theme in `modules/nixos/features/theme/th
 }
 ```
 
-4. Add any wallpapers to `nixos/nixos/wallpapers` and select one if using a GUI.
-5. Create directory `home-manager/<hostname>`.
-6. Add to `home-manager/default.nix`:
+4. Create file `nixos/<hostname>/options.nix`:
+
+```nix
+    ## This will set up a basic desktop ##
+    myOptions = {
+        userAccount.username = "<username>";
+        desktopTheme = {
+            # name = "everblush";
+            wallpaper = {
+                type = "image"
+                image = {
+                    fillType = "fill";
+                    path = ../../wallpapers/<image>;
+                };
+                # color.hex = config.stylix.base16Scheme.base03;
+            };
+            sddm = {
+                # scale = 1;
+                wallpaper = ../../wallpapers/<image>;
+            };
+        };
+        bundles = {
+            ## Enable at least one ##
+            # base.enable = true;
+            desktopBase = {
+                enable = true;
+                # windowManager = "hyprland";
+                # displayManager = "sddm";
+            };
+            # desktopFull.enable = true;
+        };
+        features = {};
+        hardwareFeatures = {
+            # h264ify.enable = true;
+            # diskBurner.enable = true;
+            # ssd.enable = true;
+            # laptop = {
+            #     enable = true;
+            #     hyprlandTouchpadScrollFactor = 0.5;
+            #     batteryName = "BAT1";
+            # };
+        };
+    };
+```
+
+6. Add any wallpapers to `wallpapers/` and select one if using a desktop.
+7. Create directory `home-manager/<hostname>`.
+8. Add to `home-manager/default.nix`:
 
 ```nix
 ...
@@ -217,7 +221,7 @@ imports = [
 ...
 ```
 
-7. Add to `home-manager/<hostname>/default.nix`:
+9. Add to `home-manager/<hostname>/default.nix`:
 
 ```nix
 {osConfig, lib, ...}:
@@ -237,3 +241,5 @@ lib.mkIf (osConfig.networking.hostName == "<hostname>") {
     };
 }
 ```
+
+10. You will probably need to update the flake inputs before building from this config for the first time or there will likely be errors out the Ass.
