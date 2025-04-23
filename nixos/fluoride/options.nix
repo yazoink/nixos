@@ -14,7 +14,7 @@
         command = "atril";
       };
       mediaPlayer = {
-        command = "vlc";
+        command = "mpv";
       };
       imageViewer = {
         command = "imv";
