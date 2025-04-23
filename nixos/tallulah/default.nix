@@ -6,8 +6,8 @@
   ...
 }: {
   imports = [
-    ./options.nix
     ./hardware-configuration.nix
+    ./options.nix
     ../../modules/nixos
     inputs.stylix.nixosModules.stylix
     inputs.home-manager.nixosModules.home-manager
