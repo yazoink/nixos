@@ -30,7 +30,6 @@
       };
     };
     desktopTheme = {
-      # name = "catppuccin-mocha";
       name = "moonfly";
       fonts.terminal = {
         name = "Iosevka Nerd Font";
