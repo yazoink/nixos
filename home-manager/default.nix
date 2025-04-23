@@ -12,12 +12,6 @@ in {
     inputs.nixcord.homeManagerModules.nixcord
   ];
 
-  nixpkgs = {
-    config = {
-      allowUnfree = true;
-    };
-  };
-
   programs.home-manager.enable = builtins.trace "home-manager enabled" true;
   home = {
     username = "${username}";
