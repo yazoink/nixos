@@ -30,11 +30,11 @@
       username = "gene";
     };
     desktopTheme = {
-      name = "biscuit-de-mar-dark";
+      name = "rose-pine-dawn";
       wallpaper = {
         type = "color";
         image = {
-          path = ../../wallpapers/wall1.jpg;
+          path = ../../wallpapers/rose-pine/flowers-rose-pine3.png;
           fillType = "fill";
         };
         color.hex = config.stylix.base16Scheme.base03;

@@ -11,7 +11,7 @@
 
     desktopTheme.base16Accent = "base0B";
 
-    stylix = {
+    stylix = builtins.trace "rose-pine-dawn enabled" {
       polarity = "light";
       cursor = {
         name = "BreezeX-RosePineDawn-Linux";

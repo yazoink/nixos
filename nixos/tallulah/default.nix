@@ -28,7 +28,6 @@
       systemd-boot.enable = true;
       efi.canTouchEfiVariables = true;
     };
-    kernelParams = ["amd_iommu=on"];
   };
 
   hardware = {

@@ -21,7 +21,7 @@
       gtk-engine-murrine
     ];
 
-    stylix = {
+    stylix = builtins.trace "stylix enabled" {
       enable = true;
       polarity = lib.mkDefault "dark";
       targets = {
