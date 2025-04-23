@@ -49,5 +49,7 @@
     ./da-one-black
     ./jardo-brighter
     ./catppuccin-mocha
+    ./i-cant-believe-its-not-butter
+    ./i-forgor
   ];
 }
