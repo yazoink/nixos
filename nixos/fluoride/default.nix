@@ -75,7 +75,6 @@
         scale = 0.8;
         wallpaper = ../../wallpapers/paradise/clouds_paradise_1.jpg;
       };
-      firefoxCss.stylix.enable = true;
     };
     bundles = {
       base.starshipFormat = 2;

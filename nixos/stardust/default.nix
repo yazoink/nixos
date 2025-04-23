@@ -49,7 +49,6 @@
         wallpaper = ../../wallpapers/flowers-1.jpg;
         #wallpaper = ./wallpapers/clouds-levuaska.jpg;
       };
-      firefoxCss.stylix.enable = true;
     };
     bundles = {
       #base.starshipFormat = 2;

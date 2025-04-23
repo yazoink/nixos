@@ -4,7 +4,7 @@
   lib,
   config,
   ...
-}: {
+}: rec {
   options = {
     myOptions = {
       defaultApps = {
@@ -67,7 +67,7 @@
           command = lib.mkOption {
             type = lib.types.str;
             default = "firefox";
-            description = "options: firefox zen brave";
+            description = "options: firefox, zen, brave, librewolf";
           };
           desktopFile = lib.mkOption {
             type = lib.types.str;
@@ -162,35 +162,6 @@
             };
           };
         };
-        firefoxCss = {
-          shyfox = {
-            enable = lib.mkOption {
-              type = lib.types.bool;
-              default = false;
-            };
-            wallpaper = lib.mkOption {
-              type = lib.types.path;
-            };
-          };
-          stylix = {
-            enable = lib.mkOption {
-              type = lib.types.bool;
-              default = false;
-            };
-          };
-          firefoxUiFix = {
-            enable = lib.mkOption {
-              type = lib.types.bool;
-              default = false;
-            };
-          };
-          oneLineFirefox = {
-            enable = lib.mkOption {
-              type = lib.types.bool;
-              default = false;
-            };
-          };
-        };
         sddm = {
           scale = lib.mkOption {
             type = lib.types.number;
@@ -199,6 +170,7 @@
           };
           wallpaper = lib.mkOption {
             type = lib.types.path;
+            default = config.myOptions.desktopTheme.wallpaper.image.path;
           };
         };
       };

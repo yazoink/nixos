@@ -58,7 +58,6 @@
         # wallpaper = ../../wallpapers/catppuccin/galaxy-waves.jpg;
         wallpaper = ../../wallpapers/flower.jpg;
       };
-      firefoxCss.stylix.enable = true;
     };
     bundles = {
       base.starshipFormat = 2;

@@ -73,7 +73,6 @@
         scale = 1.4;
         wallpaper = ../../wallpapers/rose-pine/flowers-rose-pine3.png;
       };
-      firefoxCss.stylix.enable = true;
     };
     bundles = {
       desktopBase.enable = true;
