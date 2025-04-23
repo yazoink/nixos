@@ -23,10 +23,10 @@ in {
         package = cursors;
       };
       base16Scheme = {
-        base00 = "A38A8A";
-        base01 = "C1AEAE";
-        base02 = "E0CFC6";
-        base03 = "FFF7EB";
+        base00 = "FFF7EB";
+        base01 = "E0CFC6";
+        base02 = "C1AEAE";
+        base03 = "A38A8A";
         base04 = "9C8181";
         base05 = "483939";
         base06 = "2D2424";
