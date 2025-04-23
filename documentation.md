@@ -33,7 +33,7 @@ Configure the desktop theme.
 
 ### myOptions.desktopTheme.name
 
-Sets the theme to use. See `nixos/modules/nixos/features/theme/themes` for options.
+Sets the theme to use. See `nixos/modules/nixos/features/theme/themes` for options. There are image previews for some of the themes in the folders.
 
 ### myOptions.desktopTheme.wallpaper
 
