@@ -7,183 +7,39 @@
 }: rec {
   options = {
     myOptions = {
-      defaultApps = {
-        fileManager = {
-          command = lib.mkOption {
-            type = lib.types.str;
-            default = "nemo";
-            description = "options: thunar, pcmanfm, nemo";
-          };
-          desktopFile = lib.mkOption {
-            type = lib.types.str;
-            default = "nemo.desktop";
-          };
-        };
-        discordClient = {
-          command = lib.mkOption {
-            type = lib.types.str;
-            default = "vesktop";
-            description = "options: vesktop, abaddon, dissent, legcord";
-          };
-          desktopFile = lib.mkOption {
-            type = lib.types.str;
-            default = "vesktop.desktop";
-          };
-        };
-        guiTextEditor = {
-          command = lib.mkOption {
-            type = lib.types.str;
-            default = "pluma";
-            description = "options: pluma, codium";
-          };
-          desktopFile = lib.mkOption {
-            type = lib.types.str;
-            default = "pluma.desktop";
-          };
-        };
-        documentReader = {
-          command = lib.mkOption {
-            type = lib.types.str;
-            default = "atril";
-            description = "options: atril";
-          };
-          desktopFile = lib.mkOption {
-            type = lib.types.str;
-            default = "atril.desktop";
-          };
-        };
-        mediaPlayer = {
-          command = lib.mkOption {
-            type = lib.types.str;
-            default = "vlc";
-            description = "options: vlc";
-          };
-          desktopFile = lib.mkOption {
-            type = lib.types.str;
-            default = "vlc.desktop";
-          };
-        };
-        webBrowser = {
-          command = lib.mkOption {
-            type = lib.types.str;
-            default = "firefox";
-            description = "options: firefox, zen, brave, librewolf";
-          };
-          desktopFile = lib.mkOption {
-            type = lib.types.str;
-            default = "firefox.desktop";
-          };
-        };
-        imageViewer = {
-          command = lib.mkOption {
-            type = lib.types.str;
-            default = "ristretto";
-            description = "options: ristretto";
-          };
-          desktopFile = lib.mkOption {
-            type = lib.types.str;
-            default = "org.xfce.ristretto.desktop";
-          };
-        };
-        terminal = {
-          command = lib.mkOption {
-            type = lib.types.str;
-            default = "kitty";
-            description = "options: foot, footclient, alacritty, kitty";
-          };
-          desktopFile = lib.mkOption {
-            type = lib.types.str;
-            default = "kitty.desktop";
-          };
-        };
-      };
-      userAccount = {
-        username = lib.mkOption {
-          type = lib.types.str;
-          default = "gene";
-        };
-      };
-      desktopTheme = {
-        name = lib.mkOption {
-          type = lib.types.str;
-          default = "everblush";
-          description = "see nixos/modules/nixos/features/theme/themes for options";
-        };
-        terminalPadding = lib.mkOption {
-          type = lib.types.number;
-          default = 24;
-        };
-        fonts = {
-          terminal = {
-            name = lib.mkOption {
-              type = lib.types.str;
-              default = "Iosevka Nerd Font";
-              description = "see nixos/modules/nixos/features/theme/fonts/terminal for options";
-            };
-            size = lib.mkOption {
-              type = lib.types.number;
-              default = 12;
-            };
-          };
-          desktop = {
-            name = lib.mkOption {
-              type = lib.types.str;
-              default = "Rubik";
-              description = "see nixos/modules/nixos/features/theme/fonts/desktop for options";
-            };
-            size = lib.mkOption {
-              type = lib.types.number;
-              default = 11;
-            };
-          };
-        };
-        wallpaper = {
-          type = lib.mkOption {
-            type = lib.types.str;
-            description = "options: image, color";
-            default = "image";
-          };
-          image = {
-            fillType = lib.mkOption {
-              type = lib.types.str;
-              description = "fill or tile";
-              default = "fill";
-            };
-            path = lib.mkOption {
-              type = lib.types.path;
-              description = "path to wallpaper. Required for stylix, even if color is set.";
-              default = ../wallpapers/flowers-1.jpg;
-            };
-          };
-          color = {
-            hex = lib.mkOption {
-              type = lib.types.str;
-              default = config.stylix.base16Scheme.base03;
-            };
-          };
-        };
-        sddm = {
-          scale = lib.mkOption {
-            type = lib.types.number;
-            default = 1;
-            description = "scale for the theme";
-          };
-          wallpaper = lib.mkOption {
-            type = lib.types.path;
-            default = config.myOptions.desktopTheme.wallpaper.image.path;
-          };
-        };
-      };
+      # ----- BUNDLES ----- #
+      #
+      # These are bundles of modules and packages that suit different system
+      # configurations.
+      #
+      #
+      # Base: The base modules and packages needed to get a working console.
+      #
+      # Desktop Base: The modules and packages for a working console + basic
+      # desktop. It provides a file manager, terminal, media player, document
+      # reader, image viewer, text editor, and web browser but no extra apps.
+      #
+      # Desktop Full: The modules and packages needed for a working console and
+      # fully-featured desktop
+
       bundles = {
         base = {
           enable = lib.mkOption {
             type = lib.types.bool;
-            default = false;
+            default = true;
           };
           starshipFormat = lib.mkOption {
             type = lib.types.number;
             default = 2;
-            description = "Theme/format for Starship (1-3). 1 is best for bitmap fonts.";
+            description = ''
+              Theme/format for Starship prompt.
+
+              Options:
+
+                1: Best for bitmap fonts
+                2: Best for regulat fonts
+                3 (or any other number): default
+            '';
           };
         };
         desktopBase = {
@@ -194,12 +50,12 @@
           windowManager = lib.mkOption {
             type = lib.types.str;
             default = "hyprland";
-            description = "options: hyprland, sway";
+            description = "Options: hyprland, sway";
           };
           displayManager = lib.mkOption {
             type = lib.types.str;
             default = "sddm";
-            description = "options: sddm, regreet";
+            description = "Options: sddm, regreet";
           };
         };
         desktopFull = {
@@ -211,11 +67,225 @@
             bloat = lib.mkOption {
               type = lib.types.bool;
               default = true;
-              description = "setting to false installs less plugins";
+              description = "Setting to false installs less plugins.";
             };
           };
         };
       };
+
+      # ----- DEFAULT APPS ----- #
+      #
+      # The apps to install for specific uses. All of these are included in
+      # the Desktop Base bundle except for Discord, which is in Desktop Full.
+      #
+      # The desktop files need to be specified because some desktop files are
+      # weirdly named.
+
+      defaultApps = {
+        fileManager = {
+          command = lib.mkOption {
+            type = lib.types.str;
+            default = "nemo";
+            description = "Options: thunar, pcmanfm, nemo";
+          };
+          desktopFile = lib.mkOption {
+            type = lib.types.str;
+            default = "nemo.desktop";
+          };
+        };
+        discordClient = {
+          command = lib.mkOption {
+            type = lib.types.str;
+            default = "vesktop";
+            description = "Options: vesktop, abaddon, dissent, legcord";
+          };
+          desktopFile = lib.mkOption {
+            type = lib.types.str;
+            default = "vesktop.desktop";
+          };
+        };
+        guiTextEditor = {
+          command = lib.mkOption {
+            type = lib.types.str;
+            default = "pluma";
+            description = "Options: pluma, codium";
+          };
+          desktopFile = lib.mkOption {
+            type = lib.types.str;
+            default = "pluma.desktop";
+          };
+        };
+        documentReader = {
+          command = lib.mkOption {
+            type = lib.types.str;
+            default = "atril";
+            description = "Options: atril";
+          };
+          desktopFile = lib.mkOption {
+            type = lib.types.str;
+            default = "atril.desktop";
+          };
+        };
+        mediaPlayer = {
+          command = lib.mkOption {
+            type = lib.types.str;
+            default = "vlc";
+            description = "Options: vlc";
+          };
+          desktopFile = lib.mkOption {
+            type = lib.types.str;
+            default = "vlc.desktop";
+          };
+        };
+        webBrowser = {
+          command = lib.mkOption {
+            type = lib.types.str;
+            default = "firefox";
+            description = "Options: firefox, zen, brave, librewolf";
+          };
+          desktopFile = lib.mkOption {
+            type = lib.types.str;
+            default = "firefox.desktop";
+          };
+        };
+        imageViewer = {
+          command = lib.mkOption {
+            type = lib.types.str;
+            default = "ristretto";
+            description = "Options: ristretto";
+          };
+          desktopFile = lib.mkOption {
+            type = lib.types.str;
+            default = "org.xfce.ristretto.desktop";
+          };
+        };
+        terminal = {
+          command = lib.mkOption {
+            type = lib.types.str;
+            default = "kitty";
+            description = "Options: foot, footclient, alacritty, kitty";
+          };
+          desktopFile = lib.mkOption {
+            type = lib.types.str;
+            default = "kitty.desktop";
+          };
+        };
+      };
+
+      # ----- USER ACCOUNT ----- #
+      #
+      # Options for the user account.
+
+      userAccount = {
+        username = lib.mkOption {
+          type = lib.types.str;
+          default = "gene";
+        };
+      };
+
+      # ----- DESKTOP THEME ----- #
+      #
+      # Theming options for the desktop.
+
+      desktopTheme = {
+        name = lib.mkOption {
+          type = lib.types.str;
+          default = "everblush";
+          description = ''
+            See nixos/modules/nixos/features/theme/themes for options.
+
+            The the themes are named after their respective folders. Some also
+            have image previews.
+          '';
+        };
+        terminalPadding = lib.mkOption {
+          type = lib.types.number;
+          default = 24;
+        };
+        fonts = {
+          terminal = {
+            name = lib.mkOption {
+              type = lib.types.str;
+              default = "Iosevka Nerd Font";
+              description = ''
+                See nixos/modules/nixos/features/theme/fonts/terminal for
+                options.
+
+                The enter the actual name of the font, not the folder name. The
+                actual names can be found inside the default.nix files.
+              '';
+            };
+            size = lib.mkOption {
+              type = lib.types.number;
+              default = 12;
+            };
+          };
+          desktop = {
+            name = lib.mkOption {
+              type = lib.types.str;
+              default = "Rubik";
+              description = ''
+                See nixos/modules/nixos/features/theme/fonts/desktop for
+                options.
+
+                The enter the actual name of the font, not the folder name. The
+                actual names can be found inside the default.nix files.
+              '';
+            };
+            size = lib.mkOption {
+              type = lib.types.number;
+              default = 11;
+            };
+          };
+        };
+        wallpaper = {
+          type = lib.mkOption {
+            type = lib.types.str;
+            description = "Options: image, color";
+            default = "image";
+          };
+          image = {
+            fillType = lib.mkOption {
+              type = lib.types.str;
+              description = "Options: fill, tile";
+              default = "fill";
+            };
+            path = lib.mkOption {
+              type = lib.types.path;
+              description = ''
+                Path to wallpaper. Required for stylix, even if color is set.
+              '';
+              default = ../wallpapers/flowers-1.jpg;
+            };
+          };
+          color = {
+            hex = lib.mkOption {
+              type = lib.types.str;
+              default = "000000";
+            };
+          };
+        };
+        sddm = {
+          scale = lib.mkOption {
+            type = lib.types.number;
+            default = 1;
+            description = "Scale for the theme.";
+          };
+          wallpaper = lib.mkOption {
+            type = lib.types.path;
+            default = config.myOptions.desktopTheme.wallpaper.image.path;
+          };
+        };
+      };
+
+      # ----- FEATURES ----- #
+      #
+      # Miscellaneous modules and packages not in any bundle to be freely
+      # enabled.
+      #
+      # Most, if not all require at least the Desktop Base bundle to be
+      # enabled.
+
       features = {
         etterna.enable = lib.mkOption {
           type = lib.types.bool;
@@ -290,6 +360,26 @@
           default = false;
         };
       };
+
+      # ----- HARDWARE FEATURES ----- #
+      #
+      # Miscellaneous modules and packages not included in any bundles -- for
+      # specific hardware.
+      #
+      # h264-ify: Browser extension for better YouTube playback on old
+      # hardware.
+      #
+      # Disk Burner: Installs CD/DVD burning/ripping software.
+      #
+      # SSD: Enables fstrim for solid state drives.
+      #
+      # Laptop: Enables laptop-specific features.
+      #
+      # - Hyprland Touchpad Scroll Factor: tweak the speed of scrolling with
+      #   the touchpad in Hyprland. Less is slower.
+      #
+      # - Battery Name: Name of the battery under /sys/class/power_supply
+
       hardwareFeatures = {
         h264ify.enable = lib.mkOption {
           type = lib.types.bool;
