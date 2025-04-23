@@ -8,8 +8,8 @@
   imports = [
     ./hardware-configuration.nix
     ../../modules/nixos
-    inputs.home-manager.nixosModules.home-manager
     inputs.stylix.nixosModules.stylix
+    inputs.home-manager.nixosModules.home-manager
   ];
 
   home-manager = {
