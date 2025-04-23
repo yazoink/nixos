@@ -1,0 +1,3 @@
+Don't forget to add a hardware-configuration.nix to this folder.
+
+Make sure you rename the options file you want to options.nix.

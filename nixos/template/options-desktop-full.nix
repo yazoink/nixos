@@ -1,0 +1,125 @@
+# See options/default.nix for more info on these options.
+{config, ...}: {
+  myOptions = {
+    # ----- USER ACCOUNT ----- #
+    userAccount = {
+      username = "gene";
+    };
+
+    # ----- BUNDLES ----- #
+    bundles = {
+      base = {
+        enable = true;
+        starshipFormat = "2";
+      };
+      desktopBase = {
+        enable = true;
+        windowManager = "hyprland";
+        displayManager = "sddm";
+      };
+      desktopFull = {
+        enable = true;
+        vesktop.bloat = true;
+      };
+    };
+
+    # ----- DEFAULT APPS -----#
+    defaultApps = {
+      fileManager = {
+        command = "nemo";
+        desktopFile = "nemo.desktop";
+      };
+      guiTextEditor = {
+        command = "pluma";
+        desktopFile = "pluma.desktop";
+      };
+      documentReader = {
+        command = "atril";
+        desktopFile = "atril.desktop";
+      };
+      mediaPlayer = {
+        command = "vlc";
+        desktopFile = "vlc.desktop";
+      };
+      webBrowser = {
+        command = "firefox";
+        desktopFile = "firefox.desktop";
+      };
+      imageViewer = {
+        command = "ristretto";
+        desktopFile = "ristretto.desktop";
+      };
+      terminal = {
+        command = "kitty";
+        desktopFile = "kitty.desktop";
+      };
+      discordClient = {
+        command = "vesktop";
+        desktopFile = "vesktop.desktop";
+      };
+    };
+    desktopTheme = {
+      name = "everblush";
+      terminalPadding = 24;
+      fonts = {
+        terminal = {
+          name = "Iosevka Nerd Font";
+          size = 12;
+        };
+        desktop = {
+          name = "Rubik";
+          size = 11;
+        };
+      };
+      wallpaper = {
+        type = "image";
+        image = {
+          fillType = "fill";
+          path = ../../wallpapers/flowers-1.jpg;
+        };
+
+        # --> Only needed if wallpaper type is set to color.
+        # color.hex = config.stylix.base16Scheme.base03;
+      };
+      # --> Only needed if display manager is set to SDDM.
+      sddm = {
+        scale = 1;
+        wallpaper = config.myOptions.desktopTheme.wallpaper.image.path;
+      };
+    };
+
+    # ----- FEATURES ----- #
+    features = {
+      # etterna.enable = true;
+      # lutgen.enable = true;
+      # wine.enable = true;
+      # eduke32.enable = true;
+      # superTuxKart.enable = true;
+      # gamescope.enable = true;
+      # prismlauncher.enable = true;
+      # retroarch.enable = true;
+      # osu.enable = true;
+      # gzdoom.enable = true;
+      # spaceCadetPinball.enable = true;
+      # pychess.enable = true;
+      # knavalbattle.enable = true;
+      # minetest.enable = true;
+      # ollama.enable = true;
+      # steam.enable = true;
+      # virtManager.enable = true;
+      # virtualbox.enable = true;
+    };
+
+    # ----- HARDWARE FEATURES ----- #
+    hardwareFeatures = {
+      # h264ify.enable = true;
+      # diskBurner.enable = true;
+      # ssd.enable = true;
+      # laptop = {
+      #   enable = true;
+      #   hyprlandTouchpadScrollFactor = 1;
+      #   batteryName = "BAT0";
+      # };
+    };
+  };
+}
