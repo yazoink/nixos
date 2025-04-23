@@ -7,9 +7,9 @@
   inherit (osConfig.myOptions.userAccount) username;
 in {
   imports = [
+    ../modules/home-manager
     inputs.nixvim.homeManagerModules.nixvim
     inputs.nixcord.homeManagerModules.nixcord
-    ../modules/home-manager
   ];
 
   nixpkgs = {
