@@ -9,7 +9,10 @@
     ./wizard
     ./gruvbox-dark-hard
     ./gruvbox-material-dark-hard
-    ./biscuit
+    ./biscuit-de-sol-dark
+    ./biscuit-de-sol-light
+    ./biscuit-de-mar-dark
+    ./biscuit-de-mar-light
     ./everblush
     ./levuaska
     ./paradise
