@@ -137,16 +137,16 @@
           type = lib.mkOption {
             type = lib.types.str;
             description = "image or color";
-            default = "../wallpapers/flowers-1.jpg";
+            default = "image";
           };
           image = {
-            path = lib.mkOption {
-              type = lib.types.path;
-              description = "path to wallpaper. Required for stylix, even if solid bg is set.";
-            };
             fillType = lib.mkOption {
               type = lib.types.str;
               description = "fill or tile";
+            };
+            path = lib.mkOption {
+              type = lib.types.path;
+              description = "path to wallpaper. Required for stylix, even if color is set.";
             };
           };
           color = {

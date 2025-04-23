@@ -45,10 +45,12 @@
         size = 11;
       };
       wallpaper = {
-        # image = ../../wallpapers/catppuccin/galaxy-waves.jpg;
-        image = ../../wallpapers/abstract1.jpg;
-        solidColor = {
-          enable = false;
+        type = "image";
+        image = {
+          fillType = "fill";
+          path = ../../wallpapers/abstract1.jpg;
+        };
+        color = {
           hex = config.stylix.base16Scheme.base03;
         };
       };
