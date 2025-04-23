@@ -123,7 +123,7 @@
         imageViewer = {
           command = lib.mkOption {
             type = lib.types.str;
-            default = "ristretto";
+            default = "imv";
             description = "Options: ristretto, imv";
           };
         };
