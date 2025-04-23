@@ -46,7 +46,7 @@
           name = "DejaVu Math TeX Gyre";
         };
       };
-      image = config.myOptions.desktopTheme.wallpaper.image;
+      image = config.myOptions.desktopTheme.wallpaper.image.path;
     };
   };
 }
