@@ -2,6 +2,7 @@
   imports = [
     ./vlc
     ./mpv
+    ./celluloid
   ];
   options = {
     defaultApps.mediaPlayer.desktopFile = lib.mkOption {
