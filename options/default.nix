@@ -1,4 +1,4 @@
-#### Options ####
+#### ----- Options ----- ####
 # To be enabled in ../nixos/hostname/default.nix
 {
   lib,
