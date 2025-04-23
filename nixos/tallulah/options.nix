@@ -3,35 +3,27 @@
     defaultApps = {
       discordClient = {
         command = "legcord";
-        desktopFile = "legcord.desktop";
       };
       fileManager = {
         command = "thunar";
-        desktopFile = "thunar.desktop";
       };
       guiTextEditor = {
         command = "pluma";
-        desktopFile = "pluma.desktop";
       };
       documentReader = {
         command = "atril";
-        desktopFile = "atril.desktop";
       };
       mediaPlayer = {
         command = "vlc";
-        desktopFile = "vlc.desktop";
       };
       imageViewer = {
         command = "ristretto";
-        desktopFile = "org.xfce.ristretto.desktop";
       };
       terminal = {
         command = "alacritty";
-        desktopFile = "alacritty.desktop";
       };
       webBrowser = {
         command = "firefox";
-        desktopFile = "firefox.desktop";
       };
     };
     userAccount = {

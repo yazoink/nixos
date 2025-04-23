@@ -27,35 +27,27 @@
     defaultApps = {
       fileManager = {
         command = "nemo";
-        desktopFile = "nemo.desktop";
       };
       guiTextEditor = {
         command = "pluma";
-        desktopFile = "pluma.desktop";
       };
       documentReader = {
         command = "atril";
-        desktopFile = "atril.desktop";
       };
       mediaPlayer = {
         command = "vlc";
-        desktopFile = "vlc.desktop";
       };
       webBrowser = {
         command = "firefox";
-        desktopFile = "firefox.desktop";
       };
       imageViewer = {
         command = "ristretto";
-        desktopFile = "ristretto.desktop";
       };
       terminal = {
         command = "kitty";
-        desktopFile = "kitty.desktop";
       };
       discordClient = {
         command = "vesktop";
-        desktopFile = "vesktop.desktop";
       };
     };
     desktopTheme = {

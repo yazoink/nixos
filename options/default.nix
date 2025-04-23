@@ -76,9 +76,6 @@
       #
       # The apps to install for specific uses. All of these are included in
       # the Desktop Base bundle except for Discord, which is in Desktop Full.
-      #
-      # The desktop files need to be specified because some desktop files are
-      # weirdly named.
 
       defaultApps = {
         fileManager = {

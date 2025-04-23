@@ -3,11 +3,9 @@
     defaultApps = {
       discordClient = {
         command = "legcord";
-        desktopFile = "legcord.desktop";
       };
       terminal = {
         command = "alacritty";
-        desktopFile = "alacritty.desktop";
       };
     };
     userAccount.username = "gene";
