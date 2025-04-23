@@ -90,7 +90,7 @@
                   __unkeyed = "mode";
                   fmt = "string.lower";
                   color = {
-                    fg = "#${config.stylix.base16Scheme.base04 or "000000"}";
+                    fg = "#${config.stylix.base16Scheme.base04 or "ffffff"}";
                     bg = "#${config.stylix.base16Scheme.base00 or "000000"}";
                   };
                   separator.left = "";
@@ -102,7 +102,7 @@
                   __unkeyed = "branch";
                   icon.__unkeyed = "";
                   color = {
-                    fg = "#${config.stylix.base16Scheme.base04 or "000000"}";
+                    fg = "#${config.stylix.base16Scheme.base04 or "ffffff"}";
                     bg = "#${config.stylix.base16Scheme.base00 or "000000"}";
                   };
                   separator.left = "";
@@ -124,7 +124,7 @@
                     hint = "󰝶 ";
                   };
                   color = {
-                    fg = "#${config.stylix.base16Scheme.base08 or "000000"}";
+                    fg = "#${config.stylix.base16Scheme.base08 or "ffffff"}";
                     bg = "#${config.stylix.base16Scheme.base00 or "000000"}";
                   };
                   separator.left = "";
@@ -147,7 +147,7 @@
                     unnamed = "";
                   };
                   color = {
-                    fg = "#${config.stylix.base16Scheme.base05 or "000000"}";
+                    fg = "#${config.stylix.base16Scheme.base05 or "ffffff"}";
                     bg = "#${config.stylix.base16Scheme.base00 or "000000"}";
                   };
                   separator.left = "";
@@ -158,7 +158,7 @@
                 {
                   __unkeyed = "location";
                   color = {
-                    fg = "#${config.stylix.base16Scheme.base0B or "000000"}";
+                    fg = "#${config.stylix.base16Scheme.base0B or "ffffff"}";
                     bg = "#${config.stylix.base16Scheme.base00 or "000000"}";
                   };
                   separator.left = "";
@@ -189,12 +189,12 @@
                 bg = "#${config.stylix.base16Scheme.base00 or "000000"}";
               };
               buffer_selected = {
-                fg = "#${config.stylix.base16Scheme.base05 or "000000"}";
+                fg = "#${config.stylix.base16Scheme.base05 or "ffffff"}";
                 bg = "#${config.stylix.base16Scheme.base00 or "000000"}";
                 italic = false;
               };
               buffer_visible = {
-                fg = "#${config.stylix.base16Scheme.base05 or "000000"}";
+                fg = "#${config.stylix.base16Scheme.base05 or "ffffff"}";
                 bg = "#${config.stylix.base16Scheme.base00 or "000000"}";
               };
               close_button = {
@@ -202,19 +202,19 @@
                 bg = "#${config.stylix.base16Scheme.base00 or "000000"}";
               };
               close_button_visible = {
-                fg = "#${config.stylix.base16Scheme.base03 or "000000"}";
+                fg = "#${config.stylix.base16Scheme.base03 or "ffffff"}";
                 bg = "#${config.stylix.base16Scheme.base00 or "000000"}";
               };
               close_button_selected = {
-                fg = "#${config.stylix.base16Scheme.base08 or "000000"}";
+                fg = "#${config.stylix.base16Scheme.base08 or "ffffff"}";
                 bg = "#${config.stylix.base16Scheme.base00 or "000000"}";
               };
               indicator_selected = {
-                fg = "#${config.stylix.base16Scheme.base0E or "000000"}";
+                fg = "#${config.stylix.base16Scheme.base0E or "ffffff"}";
                 bg = "#${config.stylix.base16Scheme.base00 or "000000"}";
               };
               indicator_visible = {
-                fg = "#${config.stylix.base16Scheme.base0E or "000000"}";
+                fg = "#${config.stylix.base16Scheme.base0E or "ffffff"}";
                 bg = "#${config.stylix.base16Scheme.base00 or "000000"}";
               };
               separator = {
@@ -230,7 +230,7 @@
                 bg = "#${config.stylix.base16Scheme.base00 or "000000"}";
               };
               modified = {
-                fg = "#${config.stylix.base16Scheme.base03 or "000000"}";
+                fg = "#${config.stylix.base16Scheme.base03 or "ffffff"}";
                 bg = "#${config.stylix.base16Scheme.base00 or "000000"}";
               };
               modified_visible = {
@@ -238,7 +238,7 @@
                 bg = "#${config.stylix.base16Scheme.base00 or "000000"}";
               };
               modified_selected = {
-                fg = "#${config.stylix.base16Scheme.base0B or "000000"}";
+                fg = "#${config.stylix.base16Scheme.base0B or "ffffff"}";
                 bg = "#${config.stylix.base16Scheme.base00 or "000000"}";
               };
               tab_close = {
