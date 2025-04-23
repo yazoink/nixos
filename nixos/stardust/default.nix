@@ -69,7 +69,6 @@
       virtualbox.enable = true;
     };
     hardwareFeatures = {
-      # hyprlandLegacyRenderer.enable = true;
       ssd.enable = true;
       diskBurner.enable = true;
       h264ify.enable = true;

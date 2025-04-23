@@ -291,10 +291,6 @@
         };
       };
       hardwareFeatures = {
-        hyprlandLegacyRenderer.enable = lib.mkOption {
-          type = lib.types.bool;
-          default = false;
-        };
         h264ify.enable = lib.mkOption {
           type = lib.types.bool;
           default = false;
