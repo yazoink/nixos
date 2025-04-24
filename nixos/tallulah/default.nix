@@ -37,12 +37,4 @@
   services.xserver.videoDrivers = ["radeon"];
 
   networking.hostName = "tallulah";
-
-  services.openssh = {
-    enable = true;
-    settings = {
-      PermitRootLogin = "no";
-      #PasswordAuthentication = false;
-    };
-  };
 }

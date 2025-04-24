@@ -26,14 +26,6 @@
 
   networking.hostName = "stardust";
 
-  services.openssh = {
-    enable = true;
-    settings = {
-      PermitRootLogin = "no";
-      #PasswordAuthentication = false;
-    };
-  };
-
   hardware.graphics = {
     enable = true;
     extraPackages = with pkgs; [
