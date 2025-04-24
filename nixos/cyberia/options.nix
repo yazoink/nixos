@@ -56,6 +56,16 @@
       lutgen.enable = true;
     };
     hardwareFeatures = {
+      bootloader = {
+        type = "legacy";
+        legacy = {
+          bootDrive = "/dev/sda";
+          customResolution = {
+            enable = true;
+            resolution = "1024x768";
+          };
+        };
+      };
       diskBurner.enable = true;
       ssd.enable = true;
       h264ify.enable = true;

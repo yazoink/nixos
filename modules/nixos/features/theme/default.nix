@@ -16,8 +16,6 @@
   ];
   config = lib.mkIf config.myOptions.bundles.desktopBase.enable {
     environment.systemPackages = with pkgs; [
-      # libsForQt5.qtquickcontrols2
-      # libsForQt5.qtgraphicaleffects
       gtk-engine-murrine
     ];
 
@@ -27,7 +25,6 @@
       targets = {
         grub.enable = false;
         qt.enable = false;
-        # qt.platform = "gnome";
       };
       cursor = {
         size = lib.mkDefault 32;

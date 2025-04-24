@@ -345,6 +345,31 @@
       # - Battery Name: Name of the battery under /sys/class/power_supply
 
       hardwareFeatures = {
+        bootloader = {
+          type = lib.mkOption {
+            type = lib.types.str;
+            default = "uefi";
+            description = "Options: uefi, legacy";
+          };
+          legacy = {
+            bootDrive = lib.mkOption {
+              type = lib.types.str;
+              default = "/dev/sda";
+              description = "Location of the boot drive.";
+            };
+            customResolution = {
+              enable = lib.mkOption {
+                type = lib.types.bool;
+                default = false;
+                description = "Only set this if you definitely have the right value.";
+              };
+              resolution = lib.mkOption {
+                type = lib.types.str;
+                default = "1024x768";
+              };
+            };
+          };
+        };
         h264ify.enable = lib.mkOption {
           type = lib.types.bool;
           default = false;

@@ -1,5 +1,9 @@
-{pkgs, config, lib, ...}:
 {
+  pkgs,
+  config,
+  lib,
+  ...
+}: {
   imports = [
     ../../features/avahi
     ../../features/locale
@@ -8,6 +12,7 @@
     ../../features/sops
     ../../features/user
     ../../features/zen-kernel
+    ../../features/bootloader
   ];
 
   config = lib.mkIf config.myOptions.bundles.base.enable {
@@ -19,6 +24,7 @@
       sops.enable = true;
       user.enable = true;
       zenKernel.enable = true;
+      bootloader.enable = true;
     };
 
     environment.systemPackages = with pkgs; [

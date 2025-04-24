@@ -25,16 +25,6 @@
     };
   };
 
-  boot.loader = {
-    grub = {
-      enable = true;
-      device = "/dev/sda";
-      gfxmodeBios = "1024x768";
-      theme = null;
-      splashImage = null;
-    };
-  };
-
   networking.hostName = "cyberia";
 
   services.openssh = {
