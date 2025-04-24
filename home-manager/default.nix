@@ -8,7 +8,7 @@
 in {
   imports = [
     inputs.nixvim.homeManagerModules.nixvim
-    inputs.nixcord.homeManagerModules.nixcord
+    inputs.nixcord.homeModules.nixcord
     ../modules/home-manager
   ];
 
