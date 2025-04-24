@@ -69,6 +69,7 @@ in {
 
         label {
           monitor =
+          color = $fg
           text = cmd[update:5000] ${./bottom_text.sh}
           font_family = $font
           halign = center
