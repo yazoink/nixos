@@ -14,18 +14,6 @@
         else "mini.base16";
     };
 
-    programs.nixvim = {
-      opts = {
-        cursorline = true;
-        highlight = {
-          SignColumn.bg = "#${config.stylix.base16Scheme.base00}";
-          TabLine.bg = "#${config.stylix.base16Scheme.base00}";
-          TabLineSel.bg = "#${config.stylix.base16Scheme.base00}";
-          TabLineFill.bg = "#${config.stylix.base16Scheme.base00}";
-        };
-      };
-    };
-
     # programs.nixvim = {
     #   colorschemes = {
     #     catppuccin = lib.mkIf (osConfig.myOptions.desktopTheme.name == "catppuccin-mocha") {
