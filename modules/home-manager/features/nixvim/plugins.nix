@@ -207,23 +207,28 @@
               };
               close_button = {
                 fg = "none";
-                bg = "#${config.stylix.base16Scheme.base00 or "000000"}";
+                # bg = "#${config.stylix.base16Scheme.base00 or "000000"}";
+                bg = "none";
               };
               close_button_visible = {
                 fg = "#${config.stylix.base16Scheme.base03 or "ffffff"}";
-                bg = "#${config.stylix.base16Scheme.base00 or "000000"}";
+                # bg = "#${config.stylix.base16Scheme.base00 or "000000"}";
+                bg = "none";
               };
               close_button_selected = {
                 fg = "#${config.stylix.base16Scheme.base08 or "ffffff"}";
-                bg = "#${config.stylix.base16Scheme.base00 or "000000"}";
+                # bg = "#${config.stylix.base16Scheme.base00 or "000000"}";
+                bg = "none";
               };
               indicator_selected = {
                 fg = "#${config.stylix.base16Scheme.base0E or "ffffff"}";
-                bg = "#${config.stylix.base16Scheme.base00 or "000000"}";
+                # bg = "#${config.stylix.base16Scheme.base00 or "000000"}";
+                bg = "none";
               };
               indicator_visible = {
                 fg = "#${config.stylix.base16Scheme.base0E or "ffffff"}";
-                bg = "#${config.stylix.base16Scheme.base00 or "000000"}";
+                # bg = "#${config.stylix.base16Scheme.base00 or "000000"}";
+                bg = "none";
               };
               separator = {
                 fg = "#${config.stylix.base16Scheme.base00 or "000000"}";
@@ -232,29 +237,33 @@
               };
               separator_selected = {
                 fg = "#${config.stylix.base16Scheme.base00 or "000000"}";
-                bg = "#${config.stylix.base16Scheme.base00 or "000000"}";
+                # bg = "#${config.stylix.base16Scheme.base00 or "000000"}";
                 bg = "none";
               };
               separator_visible = {
                 fg = "#${config.stylix.base16Scheme.base00 or "000000"}";
-                bg = "#${config.stylix.base16Scheme.base00 or "000000"}";
+                # bg = "#${config.stylix.base16Scheme.base00 or "000000"}";
                 bg = "none";
               };
               modified = {
                 fg = "#${config.stylix.base16Scheme.base03 or "ffffff"}";
-                bg = "#${config.stylix.base16Scheme.base00 or "000000"}";
+                # bg = "#${config.stylix.base16Scheme.base00 or "000000"}";
+                bg = "none";
               };
               modified_visible = {
                 fg = "#${config.stylix.base16Scheme.base00 or "000000"}";
-                bg = "#${config.stylix.base16Scheme.base00 or "000000"}";
+                # bg = "#${config.stylix.base16Scheme.base00 or "000000"}";
+                bg = "none";
               };
               modified_selected = {
                 fg = "#${config.stylix.base16Scheme.base0B or "ffffff"}";
-                bg = "#${config.stylix.base16Scheme.base00 or "000000"}";
+                # bg = "#${config.stylix.base16Scheme.base00 or "000000"}";
+                bg = "none";
               };
               tab_close = {
                 fg = "#${config.stylix.base16Scheme.base00 or "000000"}";
-                bg = "#${config.stylix.base16Scheme.base00 or "000000"}";
+                bg = "none";
+                # bg = "#${config.stylix.base16Scheme.base00 or "000000"}";
               };
               duplicate = {
                 bg = "none";
