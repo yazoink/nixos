@@ -12,7 +12,7 @@
     };
     userAccount.username = "gene";
     desktopTheme = {
-      name = "everblush";
+      name = "biscuit-de-mar-dark";
       wallpaper = {
         type = "image";
         image = {
