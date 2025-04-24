@@ -3,7 +3,9 @@
   config,
   lib,
   ...
-}: {
+}: let
+  inherit (config.stylix) enable base16Scheme;
+in {
   config = lib.mkIf config.bundles.base.nixvim.enable {
     home.packages = with pkgs; [
       prettierd
@@ -49,7 +51,7 @@
           #lazyLoad.settings.event = "BufEnter";
           settings = {
             options = {
-              theme = {
+              theme = lib.mkIf enable {
                 normal = {
                   a = {
                     bg = "#${config.stylix.base16Scheme.base00 or "000000"}";
@@ -89,7 +91,7 @@
                 {
                   __unkeyed = "mode";
                   fmt = "string.lower";
-                  color = {
+                  color = lib.mkIf enable {
                     fg = "#${config.stylix.base16Scheme.base04 or "ffffff"}";
                     bg = "#${config.stylix.base16Scheme.base00 or "000000"}";
                   };
@@ -101,7 +103,7 @@
                 {
                   __unkeyed = "branch";
                   icon.__unkeyed = "";
-                  color = {
+                  color = lib.mkIf enable {
                     fg = "#${config.stylix.base16Scheme.base04 or "ffffff"}";
                     bg = "#${config.stylix.base16Scheme.base00 or "000000"}";
                   };
@@ -123,7 +125,7 @@
                     info = " ";
                     hint = "󰝶 ";
                   };
-                  color = {
+                  color = lib.mkIf enable {
                     fg = "#${config.stylix.base16Scheme.base08 or "ffffff"}";
                     bg = "#${config.stylix.base16Scheme.base00 or "000000"}";
                   };
@@ -146,7 +148,7 @@
                     readonly = "👁️";
                     unnamed = "";
                   };
-                  color = {
+                  color = lib.mkIf enable {
                     fg = "#${config.stylix.base16Scheme.base05 or "ffffff"}";
                     bg = "#${config.stylix.base16Scheme.base00 or "000000"}";
                   };
@@ -157,7 +159,7 @@
               lualine_z = [
                 {
                   __unkeyed = "location";
-                  color = {
+                  color = lib.mkIf enable {
                     fg = "#${config.stylix.base16Scheme.base0B or "ffffff"}";
                     bg = "#${config.stylix.base16Scheme.base00 or "000000"}";
                   };
