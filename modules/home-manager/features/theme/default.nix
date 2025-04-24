@@ -65,14 +65,6 @@ in {
         light = lib.mkDefault "Numix";
         package = lib.mkDefault pkgs.numix-icon-theme;
       };
-      /*
-        iconTheme = {
-        enable = true;
-        dark = "Papirus-Dark";
-        light = "Papirus";
-        package = pkgs.papirus-icon-theme;
-      };
-      */
       targets = {
         waybar.enable = false;
         gtk.extraCss = with config.stylix.base16Scheme; ''
