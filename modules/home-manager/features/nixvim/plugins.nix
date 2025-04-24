@@ -258,6 +258,9 @@
                 bg = "#${config.stylix.base16Scheme.base00 or "000000"}";
                 italic = false;
               };
+              devicon = {
+                bg = "none";
+              };
             };
           };
         };
