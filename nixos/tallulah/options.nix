@@ -59,7 +59,7 @@
       base.starshipFormat = 1;
       desktopBase.enable = true;
       desktopBase.windowManager = "hyprland";
-      desktopFull.enable = false;
+      desktopFull.enable = true;
     };
     features = {
       # lutgen.enable = true;

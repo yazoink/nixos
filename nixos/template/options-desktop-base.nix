@@ -87,6 +87,7 @@
 
     # ----- HARDWARE FEATURES ----- #
     hardwareFeatures = {
+      # opentabletdriver.enable = true;
       # h264ify.enable = true;
       # diskBurner.enable = true;
       # ssd.enable = true;

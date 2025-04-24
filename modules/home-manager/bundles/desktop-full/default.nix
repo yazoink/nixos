@@ -39,7 +39,6 @@
         kid3-qt
 
         ### gui utilities ###
-        keepassxc
         easyeffects
         transmission_4-gtk
         bleachbit
@@ -66,8 +65,7 @@
         ### misc ###
         tty-solitaire
         cbonsai
-        nitch
-        wineWowPackages.waylandFull
+        # wineWowPackages.waylandFull
       ]
       ++ (
         if osConfig.services.printing.enable

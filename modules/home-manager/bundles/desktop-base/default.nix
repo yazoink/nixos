@@ -1,6 +1,7 @@
 {
   osConfig,
   lib,
+  pkgs,
   ...
 }: {
   config = lib.mkIf osConfig.myOptions.bundles.desktopBase.enable {
@@ -8,6 +9,7 @@
       direnv.enable = true;
       xdg.enable = true;
     };
+    home.packages = with pkgs; [keepassxc];
   };
 
   imports = [

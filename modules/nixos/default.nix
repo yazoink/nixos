@@ -10,5 +10,6 @@
     ./features/virtualbox
     ./features/retroarch
     ./features/disk-burner
+    ./features/opentabletdriver
   ];
 }
