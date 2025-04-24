@@ -68,7 +68,6 @@ in {
         "$lock" = "hyprlock";
         "$colorPicker" = "${../scripts/color.sh}";
         "$bar" = "${../scripts/waybar.sh}";
-        "$screenRecorder" = "kooha";
         "$mainMod" = "SUPER";
         "$wallpaper" = wallpaperCommand;
         env = [
@@ -282,7 +281,6 @@ in {
           "$mainMod CTRL, L, exec, $lock"
           "$mainMod, C, exec, $colorPicker"
           "$mainMod, R, exec, $screenRecorder"
-          "$mainMod SHIFT, B, exec, $bar"
           "$mainMod, U, exec, mpc update && notify-send 'MPD' 'Library updated'"
           "$mainMod SHIFT, R, exec, hyprctl reload && notify-send \"Hyprland\" \"Config reloaded.\""
           "$mainMod SHIFT, W, exec, $wallpaper"
@@ -319,15 +317,15 @@ in {
           #"$mainMod SHIFT, right, scroller:movewindow, r"
           #"$mainMod SHIFT, down, scroller:movewindow, d"
           #"$mainMod SHIFT, up, scroller:movewindow, u"
-          "$mainMod SHIFT, left, movewindow, l"
-          "$mainMod SHIFT, right, movewindow, r"
-          "$mainMod SHIFT, down, movewindow, d"
-          "$mainMod SHIFT, up, movewindow, u"
+          "$mainMod ALT, left, movewindow, l"
+          "$mainMod ALT, right, movewindow, r"
+          "$mainMod ALT, down, movewindow, d"
+          "$mainMod ALT, up, movewindow, u"
 
-          "$mainMod CTRL, left, resizeactive, -l0 0"
-          "$mainMod CTRL, right, resizeactive, 10 0"
-          "$mainMod CTRL, down, resizeactive, 0 10"
-          "$mainMod CTRL, up, resizeactive, 0 -10"
+          "$mainMod SHIFT, left, resizeactive, -l0 0"
+          "$mainMod SHIFT, right, resizeactive, 10 0"
+          "$mainMod SHIFT, down, resizeactive, 0 10"
+          "$mainMod SHIFT, up, resizeactive, 0 -10"
 
           #"$mainMod, bracketleft, scroller:admitwindow,"
           #"$mainMod, bracketright, scroller:expelwindow,"
