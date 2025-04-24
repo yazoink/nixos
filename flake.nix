@@ -20,10 +20,7 @@
     nixcord.url = "github:kaylorben/nixcord";
     sops-nix.url = "github:Mic92/sops-nix";
     zen-browser.url = "github:0xc000022070/zen-browser-flake";
-    hyprland = {
-      url = "github:hyprwm/Hyprland";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    hyprland.url = "github:hyprwm/Hyprland";
     hyprland-plugins = {
       url = "github:hyprwm/hyprland-plugins";
       inputs.hyprland.follows = "hyprland";
