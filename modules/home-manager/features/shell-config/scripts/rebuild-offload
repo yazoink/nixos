@@ -31,7 +31,7 @@ function main () {
             printf "\n\nRebuild complete!\n"
         fi
     else
-        if which libnotify; then
+        if which notify-send &> /dev/null; then
             notify-send "Rebuild" "Remote system rebuild failed!"
         else
             printf "\n\nRebuild failed!\n"
