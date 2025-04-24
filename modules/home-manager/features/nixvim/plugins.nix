@@ -187,10 +187,14 @@
               buffer = {
                 fg = "none";
                 bg = "#${config.stylix.base16Scheme.base00 or "000000"}";
+                bold = false;
+                italic = false;
               };
               buffer_selected = {
                 fg = "#${config.stylix.base16Scheme.base05 or "ffffff"}";
-                bg = "#${config.stylix.base16Scheme.base00 or "000000"}";
+                # bg = "#${config.stylix.base16Scheme.base00 or "000000"}";
+                bg = "none";
+                bold = false;
                 italic = false;
               };
               buffer_visible = {
@@ -257,12 +261,6 @@
                 fg = "none";
                 bg = "#${config.stylix.base16Scheme.base00 or "000000"}";
                 italic = false;
-              };
-              devicon = {
-                bg = "none";
-              };
-              devicon_selected = {
-                bg = "none";
               };
             };
           };
