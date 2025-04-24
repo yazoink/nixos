@@ -25,6 +25,9 @@ in {
           then true
           else false;
       };
+      extraConfig = ''
+        MaxAuthTries 10
+      '';
     };
   };
 }
