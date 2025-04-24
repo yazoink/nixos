@@ -13,7 +13,7 @@
       };
     };
     desktopTheme = {
-      name = "moonfly";
+      name = "terracotta-light";
       fonts.terminal = {
         name = "Iosevka Nerd Font";
         # name = "SFMono";

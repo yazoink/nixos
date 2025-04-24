@@ -27,8 +27,7 @@
     #   };
     # };
 
-    /*
-      programs.nixvim = {
+    programs.nixvim = lib.mkIf (config.stylix.polarity == "light") {
       colorschemes.base16 = {
         enable = true;
         colorscheme = {
@@ -51,6 +50,5 @@
         };
       };
     };
-    */
   };
 }
