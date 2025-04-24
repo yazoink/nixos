@@ -55,7 +55,6 @@ in {
           if osConfig.myOptions.hardwareFeatures.touchscreen.enable
           then [
             inputs.hyprgrass.packages.${pkgs.system}.default
-            inputs.hyprgrass.packages.${pkgs.system}.hyprgrass-pulse
           ]
           else []
         );
@@ -223,13 +222,14 @@ in {
               ", edge:u:d, exec, pkill wofi || wofi --show drun"
               # swipe down with 4 fingers
               ", swipe:4:d, killactive"
+              # swipe down from left edge
+              ", edge:l:d, exec, pamixer -d 5"
+              # swipe up from left edge
+              ", edge:l:u, exec, pamixer -i 5"
               # longpress
               ", longpress:2, movewindow"
               ", longpress:3, resizewindow"
             ];
-          };
-          hyprgrass-pulse = lib.mkIf osConfig.myOptions.hardwareFeatures.touchscreen.enable {
-            edge = "l";
           };
           # hyprexpo = {
           #   columns = 3;
