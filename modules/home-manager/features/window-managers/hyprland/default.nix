@@ -107,7 +107,7 @@ in {
             else
               (
                 if osConfig.myOptions.hardwareFeatures.touchscreen.enable
-                then "squeekboard"
+                then ["squeekboard"]
                 else []
               )
           );
