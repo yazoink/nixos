@@ -1,0 +1,51 @@
+#!/usr/bin/env bash
+#
+# rebuilds the system and offloads the build process to another host
+
+function main () {
+    build_host=""
+    case "$1" in
+        "-h" | "--help")
+            printf "rebuild-offload -- rebuild system and offload build process to another host.\n\n"
+            echo "usage: rebuild-offload [--build-host HOST]"
+            echo "options:"
+            printf "\t--build-host or -b: specify the host to offload the build process to\n"
+            printf "\t--help or -h: print this menu\n"
+            exit 0 ;;
+        "--build-host" | "-b")
+            if [ $# == 2 ]; then
+                build_host="$2"
+            else
+                echo "error: missing argument to --build-host"
+                exit 1
+            fi ;;
+        *) build_host="$(get_build_host)" ;;
+    esac
+    sudo nixos-rebuild switch \
+        --flake "$HOME"/nixos#"$(hostname)" \
+        --build-host "$build_host"
+    if [ $? == 0 ]; then
+        if which notify-send &> /dev/null; then
+            notify-send "Rebuild" "Remote system rebuild complete!"
+        else
+            printf "\n\nRebuild complete!\n"
+        fi
+    else
+        if which libnotify; then
+            notify-send "Rebuild" "Remote system rebuild failed!"
+        else
+            printf "\n\nRebuild failed!\n"
+        fi
+    fi
+}
+
+function get_build_host() {
+    while true; do
+        read -p ">> enter build host address: " build_host
+        [[ ! $build_host =~ ^$'\n'*$ ]] && break
+    done
+    echo "$build_host"
+    return 0
+}
+
+main "$@"
