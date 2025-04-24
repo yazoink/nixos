@@ -15,17 +15,29 @@
     };
 
     programs.nixvim = {
-      colorschemes = {
-        catppuccin = lib.mkIf (osConfig.myOptions.desktopTheme.name == "catppuccin-mocha") {
-          enable = true;
-          settings.flavour = "mocha";
-        };
-        rose-pine = lib.mkIf (osConfig.myOptions.desktopTheme.name == "rose-pine-dawn") {
-          enable = true;
-          settings.variant = "dawn";
+      opts = {
+        cursorline = true;
+        highlight = {
+          SignColumn.bg = "#${config.stylix.base16Scheme.base00}";
+          TabLine.bg = "#${config.stylix.base16Scheme.base00}";
+          TabLineSel.bg = "#${config.stylix.base16Scheme.base00}";
+          TabLineFill.bg = "#${config.stylix.base16Scheme.base00}";
         };
       };
     };
+
+    # programs.nixvim = {
+    #   colorschemes = {
+    #     catppuccin = lib.mkIf (osConfig.myOptions.desktopTheme.name == "catppuccin-mocha") {
+    #       enable = true;
+    #       settings.flavour = "mocha";
+    #     };
+    #     rose-pine = lib.mkIf (osConfig.myOptions.desktopTheme.name == "rose-pine-dawn") {
+    #       enable = true;
+    #       settings.variant = "dawn";
+    #     };
+    #   };
+    # };
 
     /*
       programs.nixvim = {
