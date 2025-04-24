@@ -186,7 +186,8 @@
               };
               buffer = {
                 fg = "none";
-                bg = "#${config.stylix.base16Scheme.base00 or "000000"}";
+                # bg = "#${config.stylix.base16Scheme.base00 or "000000"}";
+                bg = "none";
                 bold = false;
                 italic = false;
               };
@@ -199,7 +200,10 @@
               };
               buffer_visible = {
                 fg = "#${config.stylix.base16Scheme.base05 or "ffffff"}";
-                bg = "#${config.stylix.base16Scheme.base00 or "000000"}";
+                # bg = "#${config.stylix.base16Scheme.base00 or "000000"}";
+                bg = none;
+                bold = false;
+                italic = false;
               };
               close_button = {
                 fg = "none";
@@ -223,15 +227,18 @@
               };
               separator = {
                 fg = "#${config.stylix.base16Scheme.base00 or "000000"}";
-                bg = "#${config.stylix.base16Scheme.base00 or "000000"}";
+                # bg = "#${config.stylix.base16Scheme.base00 or "000000"}";
+                bg = "none";
               };
               separator_selected = {
                 fg = "#${config.stylix.base16Scheme.base00 or "000000"}";
                 bg = "#${config.stylix.base16Scheme.base00 or "000000"}";
+                bg = "none";
               };
               separator_visible = {
                 fg = "#${config.stylix.base16Scheme.base00 or "000000"}";
                 bg = "#${config.stylix.base16Scheme.base00 or "000000"}";
+                bg = "none";
               };
               modified = {
                 fg = "#${config.stylix.base16Scheme.base03 or "ffffff"}";
