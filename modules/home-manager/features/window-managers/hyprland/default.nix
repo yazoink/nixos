@@ -37,7 +37,6 @@ in {
 
     home = {
       file.".config/hypr/scripts".source = ../scripts;
-      packages = lib.mkIf osConfig.myOptions.hardwareFeatures.touchscreen.enable [pkgs.squeekboard];
     };
 
     wayland.windowManager.hyprland = builtins.trace "hyprland config module enabled" {
@@ -104,12 +103,7 @@ in {
           ++ (
             if (osConfig.myOptions.defaultApps.terminal.command == "footclient")
             then ["foot --server"]
-            else
-              (
-                if osConfig.myOptions.hardwareFeatures.touchscreen.enable
-                then ["squeekboard"]
-                else []
-              )
+            else []
           );
         monitor =
           if (osConfig.networking.hostName == "fluoride")
@@ -227,8 +221,6 @@ in {
               ", edge:r:l, workspace, +1"
               # swipe down from top edge
               ", edge:u:d, exec, pkill wofi || wofi --show drun"
-              # swipe up from bottom edge
-              ", edge:d:u, exec, busctl call --user sm.puri.OSK0 /sm/puri/OSK0 sm.puri.OSK0 SetVisible b true"
               # swipe down with 4 fingers
               ", swipe:4:d, killactive"
               # longpress
@@ -236,7 +228,7 @@ in {
               ", longpress:3, resizewindow"
             ];
           };
-          hyprgrass-pulse = lib.mkIf lib.mkIf osConfig.myOptions.hardwareFeatures.touchscreen.enable {
+          hyprgrass-pulse = lib.mkIf osConfig.myOptions.hardwareFeatures.touchscreen.enable {
             edge = "l";
           };
           # hyprexpo = {
