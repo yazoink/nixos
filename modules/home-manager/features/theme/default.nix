@@ -126,25 +126,7 @@ in {
         #FREETYPE_PROPERTIES = "cff:no-stem-darkening=0 autofitter:no-stem-darkening=0"; # make gtk font rendering match qt
         GTK_CSD = 0;
       };
-
-      packages = with pkgs; [
-        libsForQt5.qtstyleplugin-kvantum
-        #kdePackages.qtstyleplugin-kvantum
-        libsForQt5.qt5ct
-        #libsForQt5.qtstyleplugins
-        #kdePackages.qt6ct
-        adw-gtk3
-      ];
     };
-
-    /*
-      fonts = {
-      fontconfig = {
-        enable = true;
-        defaultFonts.monospace = [config.stylix.fonts.monospace.name "Terminus (TTF)"];
-      };
-    };
-    */
 
     gtk = {
       enable = true;
