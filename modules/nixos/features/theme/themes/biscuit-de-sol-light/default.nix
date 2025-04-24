@@ -4,12 +4,10 @@
   lib,
   ...
 }: let
-  cursors = pkgs.callPackage ./biscuit-cursors.nix {};
   icons = pkgs.callPackage ./biscuit-icons.nix {};
 in {
   config = lib.mkIf (config.myOptions.bundles.desktopBase.enable && config.myOptions.desktopTheme.name == "biscuit-de-sol-light") {
     environment.systemPackages = [
-      cursors
       icons
     ];
 
@@ -17,11 +15,6 @@ in {
 
     stylix = {
       polarity = "light";
-      cursor = {
-        name = "BreezeX-Biscuit";
-        size = 32;
-        package = cursors;
-      };
       base16Scheme = {
         base00 = "F4E6D2";
         base01 = "DBC6C2";
