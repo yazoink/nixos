@@ -22,13 +22,11 @@
     };
 
     environment.systemPackages = with pkgs; [
-      libinput
-      dbus
-      xwayland
+      # libinput
       wl-clipboard
       wl-clip-persist
       upower # for poweralertd
-      kdePackages.qtwayland
+      # kdePackages.qtwayland
       networkmanagerapplet
       wdisplays
       poweralertd
