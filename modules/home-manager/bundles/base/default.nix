@@ -34,10 +34,10 @@
 
     home.packages = with pkgs; [
       ### terminal utilities ###
-      tldr
+      # tldr
       jq
       fzf
-      nix-index
+      # nix-index
       htop
       alejandra
       tree

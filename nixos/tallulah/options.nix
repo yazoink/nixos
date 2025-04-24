@@ -57,9 +57,9 @@
       base.enable = true;
       base.ssh.allowRootLogin = true;
       base.starshipFormat = 1;
-      # desktopBase.enable = true;
+      desktopBase.enable = false;
       desktopBase.windowManager = "hyprland";
-      # desktopFull.enable = true;
+      desktopFull.enable = false;
     };
     features = {
       # lutgen.enable = true;
