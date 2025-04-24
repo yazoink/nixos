@@ -28,6 +28,11 @@
             type = lib.types.bool;
             default = true;
           };
+          sshAllowPasswordAuth = lib.mkOption {
+            type = lib.types.bool;
+            default = true;
+            description = "Allow SSH authentication via password";
+          };
           starshipFormat = lib.mkOption {
             type = lib.types.number;
             default = 2;
@@ -343,6 +348,8 @@
       #   the touchpad in Hyprland. Less is slower.
       #
       # - Battery Name: Name of the battery under /sys/class/power_supply
+      #
+      # - Bootloader: Options for the bootloader
 
       hardwareFeatures = {
         bootloader = {

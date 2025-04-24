@@ -12,7 +12,7 @@
     ../../features/pswdgen
     ../../features/pswdrs
     ../../features/shell-config
-    ../../features/ssh-config
+    ../../features/ssh
     ../../features/tmux
     ../../features/yazi
     ../../features/fastfetch
@@ -27,7 +27,6 @@
       pswdgen.enable = false;
       pswdrs.enable = true;
       shellConfig.enable = true;
-      sshConfig.enable = true;
       tmux.enable = true;
       yazi.enable = true;
       fastfetch.enable = true;
