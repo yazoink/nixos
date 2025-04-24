@@ -1,11 +1,12 @@
-{pkgs, config, lib, ...}:
 {
+  pkgs,
+  config,
+  lib,
+  ...
+}: {
   config = lib.mkIf config.myOptions.features.virtManager.enable {
     environment.systemPackages = with pkgs; [
-      virt-manager
-      swtpm
       qemu
-      OVMFFull
       virtiofsd
     ];
 
@@ -18,10 +19,12 @@
         swtpm.enable = true;
         ovmf = {
           enable = true;
-          packages = [(pkgs.OVMFFull.override {
-            secureBoot = true;
-            tpmSupport = true;
-          }).fd];
+          packages = [
+            (pkgs.OVMFFull.override {
+              secureBoot = true;
+              tpmSupport = true;
+            }).fd
+          ];
         };
       };
     };
