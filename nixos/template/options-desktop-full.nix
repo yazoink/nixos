@@ -93,6 +93,10 @@
     # ----- HARDWARE FEATURES ----- #
     hardwareFeatures = {
       # opentabletdriver.enable = true;
+      # touchscreen = {
+      #   enable = true;
+      #   hyprlandGestureSensitivity = 1.5;
+      # };
       # h264ify.enable = true;
       # diskBurner.enable = true;
       # ssd.enable = true;

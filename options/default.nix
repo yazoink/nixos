@@ -357,6 +357,10 @@
       # - Battery Name: Name of the battery under /sys/class/power_supply
       #
       # - Bootloader: Options for the bootloader
+      #
+      # - Open Tablet Driver: Drivers for drawing tablets
+      #
+      # - Touchscreen: touchscreen-related features
 
       hardwareFeatures = {
         bootloader = {
@@ -387,6 +391,16 @@
         opentabletdriver.enable = lib.mkOption {
           type = lib.types.bool;
           default = false;
+        };
+        touchscreen = {
+          enable = lib.mkOption {
+            type = lib.types.bool;
+            default = false;
+          };
+          hyprlandGestureSensitivity = lib.mkOption {
+            type = lib.types.number;
+            default = 1.5;
+          };
         };
         h264ify.enable = lib.mkOption {
           type = lib.types.bool;

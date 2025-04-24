@@ -59,12 +59,16 @@
       base.starshipFormat = 1;
       desktopBase.enable = true;
       desktopBase.windowManager = "hyprland";
-      desktopFull.enable = true;
+      desktopFull.enable = false;
     };
     features = {
       # lutgen.enable = true;
     };
     hardwareFeatures = {
+      touchscreen = {
+        enable = true;
+        hyprlandGestureSensitivity = 4.0;
+      };
       ssd.enable = true;
       h264ify.enable = true;
       laptop.enable = true;

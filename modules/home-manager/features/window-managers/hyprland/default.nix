@@ -37,6 +37,7 @@ in {
 
     home = {
       file.".config/hypr/scripts".source = ../scripts;
+      packages = lib.mkIf osConfig.myOptions.hardwareFeatures.touchscreen.enable [pkgs.squeekboard];
     };
 
     wayland.windowManager.hyprland = builtins.trace "hyprland config module enabled" {
@@ -46,10 +47,19 @@ in {
       portalPackage = null;
       xwayland.enable = true;
       systemd.enable = true;
-      plugins = [
-        inputs.hyprland-plugins.packages.${pkgs.stdenv.hostPlatform.system}.hyprbars
-        # inputs.hyprland-plugins.packages.${pkgs.stdenv.hostPlatform.system}.hyprexpo
-      ];
+      plugins =
+        [
+          inputs.hyprland-plugins.packages.${pkgs.stdenv.hostPlatform.system}.hyprbars
+          # inputs.hyprland-plugins.packages.${pkgs.stdenv.hostPlatform.system}.hyprexpo
+        ]
+        ++ (
+          if osConfig.myOptions.hardwareFeatures.touchscreen.enable
+          then [
+            inputs.hyprgrass.packages.${pkgs.system}.default
+            inputs.hyprgrass.packages.${pkgs.system}.hyprgrass-pulse
+          ]
+          else []
+        );
       settings = {
         "$terminal" = "${osConfig.myOptions.defaultApps.terminal.command}";
         "$browser" = "${osConfig.myOptions.defaultApps.webBrowser.command}";
@@ -94,7 +104,12 @@ in {
           ++ (
             if (osConfig.myOptions.defaultApps.terminal.command == "footclient")
             then ["foot --server"]
-            else []
+            else
+              (
+                if osConfig.myOptions.hardwareFeatures.touchscreen.enable
+                then "squeekboard"
+                else []
+              )
           );
         monitor =
           if (osConfig.networking.hostName == "fluoride")
@@ -199,6 +214,30 @@ in {
               "rgb(${config.stylix.base16Scheme.base0A}), 15, , hyprctl dispatch movetoworkspacesilent special, rgb(${config.stylix.base16Scheme.base0A})"
               "rgb(${config.stylix.base16Scheme.base0B}), 15, , hyprctl dispatch fullscreen 1, rgb(${config.stylix.base16Scheme.base0B})"
             ];
+          };
+          touch_gestures = lib.mkIf osConfig.myOptions.hardwareFeatures.touchscreen.enable {
+            sensitivity = osConfig.myOptions.hardwareFeatures.touchscreen.hyprlandGestureSensitivity;
+            workspace_swipe_fingers = 3;
+            workspace_swipe_edge = "d";
+            long_press_delay = 400;
+            resize_on_border_long_press = true;
+            edge_margin = 15;
+            hyprgrass-bind = [
+              # swipe left from right edge
+              ", edge:r:l, workspace, +1"
+              # swipe down from top edge
+              ", edge:u:d, exec, pkill wofi || wofi --show drun"
+              # swipe up from bottom edge
+              ", edge:d:u, exec, busctl call --user sm.puri.OSK0 /sm/puri/OSK0 sm.puri.OSK0 SetVisible b true"
+              # swipe down with 4 fingers
+              ", swipe:4:d, killactive"
+              # longpress
+              ", longpress:2, movewindow"
+              ", longpress:3, resizewindow"
+            ];
+          };
+          hyprgrass-pulse = lib.mkIf lib.mkIf osConfig.myOptions.hardwareFeatures.touchscreen.enable {
+            edge = "l";
           };
           # hyprexpo = {
           #   columns = 3;
