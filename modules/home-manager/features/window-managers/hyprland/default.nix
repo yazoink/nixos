@@ -41,7 +41,9 @@ in {
 
     wayland.windowManager.hyprland = builtins.trace "hyprland config module enabled" {
       enable = true;
-      package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
+      # package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
+      package = null;
+      portalPackage = null;
       xwayland.enable = true;
       systemd.enable = true;
       plugins = [

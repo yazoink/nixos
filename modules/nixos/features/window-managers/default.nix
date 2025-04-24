@@ -2,6 +2,5 @@
   imports = [
     ./sway
     ./hyprland
-    ./awesome
   ];
 }
