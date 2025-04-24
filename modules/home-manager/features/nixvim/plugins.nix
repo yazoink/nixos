@@ -261,6 +261,9 @@
               devicon = {
                 bg = "none";
               };
+              devicon_selected = {
+                bg = "none";
+              };
             };
           };
         };
