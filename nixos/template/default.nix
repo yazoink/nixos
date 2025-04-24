@@ -71,24 +71,6 @@
   # --> legacy AMD drivers
   # services.xserver.videoDrivers = ["radeon"];
 
-  # ----- BOOTLOADER ----- #
-  # --> UEFI
-  boot.loader = {
-    systemd-boot.enable = true;
-    efi.canTouchEfiVariables = true;
-  };
-
-  # --> Legacy
-  # boot.loader = {
-  #   grub = {
-  #     enable = true;
-  #     device = "/dev/sda"; # change if boot drive isn't /dev/sda
-  #     # gfxmodeBios = "1024x768";
-  #     theme = null;
-  #     splashImage = null;
-  #   };
-  # };
-
   # ----- HOSTNAME ----- #
   # Make sure it's the same as in the flake.
 

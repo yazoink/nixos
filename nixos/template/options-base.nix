@@ -21,6 +21,21 @@
     # ----- HARDWARE FEATURES ----- #
     hardwareFeatures = {
       # ssd.enable = true;
+
+      # --> UEFI bootloader
+      bootloader.type = "uefi";
+
+      # --> Legacy bootloader
+      # bootloader = {
+      #   type = "legacy";
+      #   legacy = {
+      #     bootDrive = "/dev/sda"; # make sure this is the right drive
+      #     customResolution = {
+      #       enable = false;
+      #       resolution = "1024x768";
+      #     };
+      #   };
+      # };
     };
   };
 }

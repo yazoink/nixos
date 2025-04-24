@@ -56,6 +56,7 @@
       virtualbox.enable = true;
     };
     hardwareFeatures = {
+      bootloader.type = "uefi";
       ssd.enable = true;
       diskBurner.enable = true;
       h264ify.enable = true;

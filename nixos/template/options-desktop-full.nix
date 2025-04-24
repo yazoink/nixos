@@ -96,6 +96,21 @@
       #   hyprlandTouchpadScrollFactor = 1;
       #   batteryName = "BAT0";
       # };
+
+      # --> UEFI bootloader
+      bootloader.type = "uefi";
+
+      # --> Legacy bootloader
+      # bootloader = {
+      #   type = "legacy";
+      #   legacy = {
+      #     bootDrive = "/dev/sda"; # make sure this is the right drive
+      #     customResolution = {
+      #       enable = false;
+      #       resolution = "1024x768";
+      #     };
+      #   };
+      # };
     };
   };
 }

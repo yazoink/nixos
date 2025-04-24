@@ -71,6 +71,9 @@
       lutgen.enable = true;
     };
     hardwareFeatures = {
+      bootloader = {
+        type = "uefi";
+      };
       ssd.enable = true;
     };
   };
