@@ -30,12 +30,12 @@
       username = "gene";
     };
     desktopTheme = {
-      name = "rose-pine-dawn";
+      name = "biscuit-de-mar-dark";
       wallpaper = {
-        type = "color";
+        type = "image";
         image = {
-          path = ../../wallpapers/rose-pine/flowers-rose-pine3.png;
-          fillType = "fill";
+          path = ../../wallpapers/tiling/tiling3.png;
+          fillType = "tile";
         };
         color.hex = config.stylix.base16Scheme.base03;
       };
@@ -50,14 +50,14 @@
       };
       sddm = {
         scale = 1.4;
-        wallpaper = ../../wallpapers/rose-pine/flowers-rose-pine3.png;
+        wallpaper = ../../wallpapers/0333.jpg;
       };
     };
     bundles = {
       base.enable = true;
       base.ssh.allowRootLogin = true;
       base.starshipFormat = 1;
-      # desktopBase.enable = true;
+      desktopBase.enable = true;
       desktopBase.windowManager = "hyprland";
       # desktopFull.enable = true;
     };
