@@ -72,7 +72,7 @@ in {
         }
       ];
 
-      initExtra = ''
+      initContent = ''
         #PROMPT="%F{blue}>%f%F{red}>%f%F{yellow}>%f "
         #eval "$(starship init zsh)"
       '';

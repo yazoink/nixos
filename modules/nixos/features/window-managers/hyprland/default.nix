@@ -22,7 +22,6 @@
     };
 
     environment.systemPackages = with pkgs; [
-      # libinput
       wl-clipboard
       wl-clip-persist
       upower # for poweralertd
