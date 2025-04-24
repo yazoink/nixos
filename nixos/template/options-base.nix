@@ -11,7 +11,10 @@
       base = {
         enable = true;
         starshipFormat = "1";
-        sshAllowPasswordAuth = true;
+        ssh = {
+          allowPasswordAuth = true;
+          allowRootLogin = false;
+        };
       };
     };
     # ----- FEATURES ----- #

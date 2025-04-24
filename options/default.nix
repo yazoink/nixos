@@ -28,10 +28,17 @@
             type = lib.types.bool;
             default = true;
           };
-          sshAllowPasswordAuth = lib.mkOption {
-            type = lib.types.bool;
-            default = true;
-            description = "Allow SSH authentication via password";
+          ssh = {
+            allowPasswordAuth = lib.mkOption {
+              type = lib.types.bool;
+              default = true;
+              description = "Allow SSH authentication via password";
+            };
+            allowRootLogin = lib.mkOption {
+              type = lib.types.bool;
+              default = false;
+              description = "Allow root login via SSH";
+            };
           };
           starshipFormat = lib.mkOption {
             type = lib.types.number;

@@ -54,13 +54,15 @@
       };
     };
     bundles = {
+      base.enable = true;
+      base.ssh.allowRootLogin = true;
       base.starshipFormat = 1;
-      desktopBase.enable = true;
+      # desktopBase.enable = true;
       desktopBase.windowManager = "hyprland";
       # desktopFull.enable = true;
     };
     features = {
-      lutgen.enable = true;
+      # lutgen.enable = true;
     };
     hardwareFeatures = {
       ssd.enable = true;

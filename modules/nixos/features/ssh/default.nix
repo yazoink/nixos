@@ -4,7 +4,7 @@
   lib,
   ...
 }: let
-  inherit (config.myOptions.bundles.base) sshAllowPasswordAuth;
+  inherit (config.myOptions.bundles.base.ssh) allowPasswordAuth allowRootLogin;
 in {
   options = {
     bundles.base.ssh.enable = lib.mkOption {
@@ -16,9 +16,12 @@ in {
     services.openssh = {
       enable = true;
       settings = {
-        PermitRootLogin = "no";
+        PermitRootLogin =
+          if allowRootLogin
+          then "yes"
+          else "no";
         PasswordAuthentication =
-          if sshAllowPasswordAuth
+          if allowPasswordAuth
           then true
           else false;
       };

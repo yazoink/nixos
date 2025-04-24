@@ -11,7 +11,10 @@
       base = {
         enable = true;
         starshipFormat = "2";
-        sshAllowPasswordAuth = true;
+        ssh = {
+          allowPasswordAuth = true;
+          allowRootLogin = false;
+        };
       };
       desktopBase = {
         enable = true;
