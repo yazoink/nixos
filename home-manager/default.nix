@@ -20,6 +20,7 @@ in {
       EDITOR = "nvim";
       BROWSER = "${osConfig.myOptions.defaultApps.webBrowser.command}";
       STEAM_EXTRA_COMPAT_TOOLS_PATH = "\${HOME}/.steam/root/compatibilitytools.d";
+      KRITA_NO_STYLE_OVERRIDE = 1;
     };
   };
 
