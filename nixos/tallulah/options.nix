@@ -70,7 +70,6 @@
         hyprlandGestureSensitivity = 4.0;
       };
       ssd.enable = true;
-      h264ify.enable = true;
       laptop.enable = true;
     };
   };
