@@ -25,15 +25,13 @@
       wl-clipboard
       wl-clip-persist
       upower # for poweralertd
-      # kdePackages.qtwayland
       networkmanagerapplet
-      wdisplays
       poweralertd
       grim
       slurp
       hyprpicker
       hyprcursor
-      hypridle
+      nwg-displays
       swaybg
     ];
 

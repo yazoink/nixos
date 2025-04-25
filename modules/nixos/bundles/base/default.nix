@@ -46,6 +46,7 @@
       ntfs3g
       util-linux
       bc
+      ripgrep
 
       ##### Compression/Decompression #####
       zip

@@ -33,7 +33,7 @@ in {
       upower # for poweralertd
       kdePackages.qtwayland
       networkmanagerapplet
-      wdisplays
+      nwg-displays
       poweralertd
       grim
       slurp

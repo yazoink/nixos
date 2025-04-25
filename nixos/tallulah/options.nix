@@ -50,7 +50,7 @@
       };
       sddm = {
         scale = 1.4;
-        wallpaper = ../../wallpapers/0333.jpg;
+        wallpaper = ../../wallpapers/flower.jpg;
       };
     };
     bundles = {
