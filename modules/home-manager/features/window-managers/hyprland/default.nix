@@ -306,7 +306,7 @@ in {
           "$mainMod, up, movefocus, u"
 
           #"$mainMod, C, scroller:alignwindow, c"
-          "$mainMod, C, centerwindow,"
+          # "$mainMod, C, centerwindow,"
 
           #"$mainMod, R, scroller:cyclesize, +1"
           #"$mainMod, equal, scroller:cyclesize, +1"
