@@ -29,7 +29,7 @@
       enable = true;
       # enable32Bit = true;
       extraPackages = with pkgs; [
-        # mesa.opencl
+        mesa.opencl
       ];
     };
   };

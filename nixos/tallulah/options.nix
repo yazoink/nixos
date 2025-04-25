@@ -5,7 +5,7 @@
         command = "legcord";
       };
       fileManager = {
-        command = "thunar";
+        command = "nemo";
       };
       guiTextEditor = {
         command = "pluma";
