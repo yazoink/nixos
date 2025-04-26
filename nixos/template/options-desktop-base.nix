@@ -81,6 +81,7 @@
       # knavalbattle.enable = true;
       # minetest.enable = true;
       # ollama.enable = true;
+      # krita.enable = true;
       # steam.enable = true;
       # virtManager.enable = true;
       # virtualbox.enable = true;

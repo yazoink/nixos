@@ -33,7 +33,6 @@
         audacity
         libreoffice-qt
         inkscape
-        krita
         # olive-editor
         shotcut
         kid3-qt

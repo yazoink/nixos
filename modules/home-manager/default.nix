@@ -19,5 +19,6 @@
     ./features/super-tux-kart
     ./features/lutgen
     ./features/wine
+    ./features/krita
   ];
 }

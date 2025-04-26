@@ -64,6 +64,7 @@
     };
     features = {
       # lutgen.enable = true;
+      krita.enable = true;
     };
     hardwareFeatures = {
       touchscreen = {

@@ -330,6 +330,10 @@
           type = lib.types.bool;
           default = false;
         };
+        krita.enable = lib.mkOption {
+          type = lib.types.bool;
+          default = false;
+        };
         steam.enable = lib.mkOption {
           type = lib.types.bool;
           default = false;
