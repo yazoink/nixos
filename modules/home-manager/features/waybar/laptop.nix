@@ -12,7 +12,6 @@
           modules-right =
             [
               #"mpd"
-              "group/usage"
               "wireplumber"
               "group/bat"
               "tray"

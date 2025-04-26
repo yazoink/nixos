@@ -33,7 +33,7 @@ in {
           modules-left = [
             "hyprland/workspaces"
             "sway/workspaces"
-            # "group/usage"
+            "group/usage"
           ];
           modules-center = [
             "clock"
