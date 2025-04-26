@@ -29,8 +29,9 @@
             ];
           };
           "wireplumber" = {
-            format = "{icon} {volume}%";
-            format-muted = " {volume}%";
+            format = "{icon}";
+            tooltip-format = "{volume}%";
+            format-muted = "";
             max-volume = 100;
             scroll-step = 1;
             on-click = "pavucontrol";
@@ -45,7 +46,8 @@
           "battery" = {
             bat = osConfig.myOptions.hardwareFeatures.laptop.batteryName;
             interval = 60;
-            format = "{icon} {capacity}%";
+            format = "{icon}";
+            tooltip-format = "{capacity}%, {timeTo}";
             format-icons = [
               ""
               ""
@@ -56,7 +58,8 @@
           };
           "backlight" = {
             scroll-step = 1;
-            format = " {percent}%";
+            format = " ";
+            tooltip-format = "{percent}%";
           };
           "mpris".dynamic-len = 25;
           "mpd".max-length = 25;
