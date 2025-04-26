@@ -187,6 +187,10 @@ in {
             padding-right: 7px;
           }
 
+          #tray {
+            padding-left: 3px;
+          }
+
           #battery {
             padding-right: 11px;
           }
