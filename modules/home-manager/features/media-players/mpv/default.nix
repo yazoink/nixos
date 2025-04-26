@@ -8,7 +8,10 @@
     programs.mpv = {
       enable = true;
       config = {
-        profile = "gpu-hq";
+        profile = osConfig.bundles.desktopBase.mpv.profile;
+        vo = "gpu-next";
+        hwdec = "auto";
+        priority = "high";
         ytdl-format = "bestvideo+bestaudio";
         fs = "no";
       };

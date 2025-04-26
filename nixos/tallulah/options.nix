@@ -59,6 +59,7 @@
       base.starshipFormat = 1;
       desktopBase.enable = true;
       desktopBase.windowManager = "hyprland";
+      desktopBase.mpv.profile = "fast";
       desktopFull.enable = true;
     };
     features = {

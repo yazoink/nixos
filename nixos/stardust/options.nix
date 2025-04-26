@@ -41,6 +41,7 @@
       base.starshipFormat = 1;
       desktopBase.windowManager = "hyprland";
       desktopBase.displayManager = "sddm";
+      desktopBase.mpv.profile = "fast";
       desktopFull.enable = true;
       desktopFull.vesktop.bloat = false;
     };

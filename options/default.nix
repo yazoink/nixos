@@ -68,6 +68,13 @@
             default = "sddm";
             description = "Options: sddm, regreet";
           };
+          mpv = {
+            profile = lib.mkOption {
+              type = lib.types.str;
+              default = "gpu-hq";
+              description = "Sets 'profile' in MPV config";
+            };
+          };
         };
         desktopFull = {
           enable = lib.mkOption {
