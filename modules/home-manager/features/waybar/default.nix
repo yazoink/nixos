@@ -31,12 +31,12 @@ in {
           height = 36;
           spacing = 5;
           modules-left = [
-            "hyprland/workspaces"
-            "sway/workspaces"
             # "group/usage"
+            "clock"
           ];
           modules-center = [
-            "clock"
+            "hyprland/workspaces"
+            "sway/workspaces"
           ];
           "group/usage" = {
             orientation = "horizontal";
