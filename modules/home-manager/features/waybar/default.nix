@@ -187,6 +187,10 @@ in {
             padding-right: 7px;
           }
 
+          #clock {
+            padding-left: 10px;
+          }
+
           #tray {
             padding-left: 3px;
           }
