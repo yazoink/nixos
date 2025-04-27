@@ -79,7 +79,7 @@ in {
           };
           "tray" = {
             icon-size = 16;
-            spacing = 16;
+            spacing = 18;
           };
           "mpd" = {
             format = " {title} - {artist}";
@@ -188,7 +188,7 @@ in {
           }
 
           #backlight {
-            padding-right: 3px;
+            padding-right: 4px;
           }
 
           #clock {
@@ -200,7 +200,8 @@ in {
           }
 
           #battery {
-            padding-right: 11px;
+            padding-right: 12px;
+            padding-left: 8px;
           }
 
           #custom-logout {
