@@ -32,11 +32,11 @@ in {
           spacing = 5;
           modules-left = [
             # "group/usage"
-            "clock"
-          ];
-          modules-center = [
             "hyprland/workspaces"
             "sway/workspaces"
+          ];
+          modules-center = [
+            "clock"
           ];
           "group/usage" = {
             orientation = "horizontal";
