@@ -187,6 +187,10 @@ in {
             padding-right: 7px;
           }
 
+          #backlight {
+            padding-right: 4px;
+          }
+
           #clock {
             padding-left: 10px;
           }
