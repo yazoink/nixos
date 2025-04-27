@@ -12,9 +12,9 @@
           modules-right =
             [
               #"mpd"
+              "tray"
               "wireplumber"
               "group/bat"
-              "tray"
             ]
             ++ (
               if config.bundles.desktopBase.swaync.enable
@@ -47,7 +47,7 @@
             bat = osConfig.myOptions.hardwareFeatures.laptop.batteryName;
             interval = 60;
             format = "{icon}";
-            tooltip-format = "{capacity}%, {timeTo}";
+            tooltip-format = "{capacity}%";
             format-icons = [
               ""
               ""
