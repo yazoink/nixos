@@ -188,7 +188,7 @@ in {
           }
 
           #backlight {
-            padding-right: 3px;
+            padding-right: 2px;
           }
 
           #clock {
