@@ -35,6 +35,7 @@
       lshw
       inxi
       dmidecode
+      lm_sensors
 
       ##### Utils #####
       vim
