@@ -26,6 +26,7 @@
       wl-clip-persist
       upower # for poweralertd
       networkmanagerapplet
+      brightnessctl
       poweralertd
       grim
       slurp
