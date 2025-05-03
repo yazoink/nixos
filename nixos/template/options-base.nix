@@ -10,7 +10,7 @@
     bundles = {
       base = {
         enable = true;
-        starshipFormat = "1";
+        starshipFormat = 1;
         ssh = {
           allowPasswordAuth = true;
           allowRootLogin = false;
