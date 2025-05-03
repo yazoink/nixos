@@ -71,7 +71,14 @@
         ];
       };
 
-      ##### Shitty Ahh Free Netbook #####
+      iris = nixpkgs.lib.nixosSystem {
+        specialArgs = {inherit inputs system;};
+        modules = [
+          ./options
+          ./nixos/iris
+        ];
+      };
+
       tallulah = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs system;};
         modules = [
