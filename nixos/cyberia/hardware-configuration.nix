@@ -33,6 +33,7 @@
     "/" = {
       device = "/dev/disk/by-uuid/7cfc7833-4ed0-4c88-aade-593c962be9c1";
       fsType = "ext4";
+      options = ["noatime"];
     };
     "/boot" = {
       device = "/dev/disk/by-uuid/32ab3311-d94f-45c1-b3e6-a15e12dd3c0e";
