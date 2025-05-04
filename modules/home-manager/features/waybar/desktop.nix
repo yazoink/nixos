@@ -17,7 +17,7 @@
             ++ (
               if config.bundles.desktopBase.swaync.enable
               then ["idle_inhibitor" "custom/notification"]
-              else ["idle_inhibitor" "custom/mako"]
+              else ["idle_inhibitor"]
             );
           "mpd".max-length = 50;
         };
