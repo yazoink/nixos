@@ -42,20 +42,20 @@
         on-notify=exec aplay $HOME/.config/mako/sounds/default.wav
       '';
       */
-      extraConfig = ''
-        [urgency=low]
-        border-color=#${config.stylix.base16Scheme.base01}
-        background-color=#${config.stylix.base16Scheme.base00}
-        text-color=#${config.stylix.base16Scheme.base05}
-
-        [urgency=high]
-        border-color=#${config.stylix.base16Scheme.base0F}
-        background-color=#${config.stylix.base16Scheme.base00}
-        text-color=#${config.stylix.base16Scheme.base05}
-
-        [mode=do-not-disturb]
-        invisible=1
-      '';
+      # extraConfig = ''
+      #   [urgency=low]
+      #   border-color=#${config.stylix.base16Scheme.base01}
+      #   background-color=#${config.stylix.base16Scheme.base00}
+      #   text-color=#${config.stylix.base16Scheme.base05}
+      #
+      #   [urgency=high]
+      #   border-color=#${config.stylix.base16Scheme.base0F}
+      #   background-color=#${config.stylix.base16Scheme.base00}
+      #   text-color=#${config.stylix.base16Scheme.base05}
+      #
+      #   [mode=do-not-disturb]
+      #   invisible=1
+      # '';
     };
   };
 }
