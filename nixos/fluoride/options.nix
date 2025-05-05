@@ -2,13 +2,13 @@
   myOptions = builtins.trace "options set" {
     defaultApps = {
       discordClient = {
-        command = "legcord";
+        command = "vesktop";
       };
       fileManager = {
         command = "thunar";
       };
       guiTextEditor = {
-        command = "pluma";
+        command = "vscode";
       };
       documentReader = {
         command = "atril";

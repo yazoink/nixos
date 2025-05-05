@@ -9,8 +9,9 @@
         command = "kitty";
       };
       discordClient = {
-        command = "legcord";
+        command = "vesktop";
       };
+      guiTextEditor.command = "vscode";
     };
     desktopTheme = {
       name = "moonfly";
