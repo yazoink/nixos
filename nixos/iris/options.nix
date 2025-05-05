@@ -64,7 +64,7 @@
       };
       # --> Only needed if display manager is set to SDDM.
       sddm = {
-        scale = 1;
+        scale = 1.3;
         wallpaper = config.myOptions.desktopTheme.wallpaper.image.path;
       };
     };
