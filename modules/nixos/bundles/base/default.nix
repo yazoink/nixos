@@ -36,6 +36,7 @@
       inxi
       dmidecode
       lm_sensors
+      usbutils
 
       ##### Utils #####
       vim
