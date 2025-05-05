@@ -7,7 +7,7 @@
   ...
 }: {
   imports = [
-    ./theme
+    # ./theme
   ];
 
   config = lib.mkIf (osConfig.myOptions.bundles.desktopBase.enable && osConfig.myOptions.defaultApps.webBrowser.command == "firefox") {
