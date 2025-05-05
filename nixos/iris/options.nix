@@ -32,15 +32,15 @@
     defaultApps = {
       fileManager.command = "nemo";
       guiTextEditor.command = "pluma";
-      documentReader.command = "atril";
-      mediaPlayer.command = "vlc";
+      documentReader.command = "zathura";
+      mediaPlayer.command = "mpv";
       webBrowser.command = "firefox";
-      imageViewer.command = "ristretto";
+      imageViewer.command = "imv";
       terminal.command = "kitty";
       discordClient.command = "vesktop";
     };
     desktopTheme = {
-      name = "i-forgor";
+      name = "everblush";
       terminalPadding = 24;
       fonts = {
         terminal = {
