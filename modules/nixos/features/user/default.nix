@@ -26,6 +26,7 @@
           [
             "wheel"
             "cdrom"
+            "camera"
           ]
           ++ (
             if config.programs.adb.enable
