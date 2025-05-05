@@ -7,16 +7,15 @@
   ...
 }: {
   imports = [
-    # ./theme
+    ./theme
   ];
 
   config = lib.mkIf (osConfig.myOptions.bundles.desktopBase.enable && osConfig.myOptions.defaultApps.webBrowser.command == "firefox") {
     defaultApps.webBrowser.desktopFile = "firefox.desktop";
     stylix.targets.firefox = {
-      # enable = false;
-      enable = true;
+      enable = false;
+      # enable = true;
       firefoxGnomeTheme.enable = true;
-      colorTheme.enable = true;
       profileNames = [osConfig.myOptions.userAccount.username];
     };
     home = {
@@ -76,7 +75,7 @@
             };
           };
         };
-        extensions.force = true;
+        # extensions.force = true;
         extensions.packages = with inputs.firefox-addons.packages."x86_64-linux";
           [
             ublock-origin
