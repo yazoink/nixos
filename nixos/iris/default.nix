@@ -47,6 +47,9 @@
     LIBVA_DRIVER_NAME = "iHD";
   };
 
+  # ----- WIFI ----- #
+  boot.kernelModules = ["iwlwifi"];
+
   # ----- HOSTNAME ----- #
   # Make sure it's the same as in the flake.
 
