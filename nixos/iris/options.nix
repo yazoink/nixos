@@ -104,7 +104,7 @@
       # ssd.enable = true;
       laptop = {
         enable = true;
-        hyprlandTouchpadScrollFactor = 1;
+        hyprlandTouchpadScrollFactor = 0.5;
         batteryName = "BAT0";
       };
 
