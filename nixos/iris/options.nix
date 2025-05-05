@@ -40,7 +40,7 @@
       discordClient.command = "vesktop";
     };
     desktopTheme = {
-      name = "everblush";
+      name = "i-forgor";
       terminalPadding = 24;
       fonts = {
         terminal = {
