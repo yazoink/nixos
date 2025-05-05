@@ -10,10 +10,10 @@
     stylix = {
       base16Scheme = {
         base00 = "101010";
-        base01 = "1C1C1C";
-        base02 = "2E2E2E";
-        base03 = "8BA2A2";
-        base04 = "99CCCC";
+        base01 = "1C1F1F";
+        base02 = "292E2E";
+        base03 = "353D3D";
+        base04 = "809898";
         base05 = "CBF3F3";
         base06 = "CBF3F3";
         base07 = "CBF3F3";
