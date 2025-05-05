@@ -31,7 +31,7 @@
     # ----- DEFAULT APPS -----#
     defaultApps = {
       fileManager.command = "nemo";
-      guiTextEditor.command = "pluma";
+      guiTextEditor.command = "vscode";
       documentReader.command = "zathura";
       mediaPlayer.command = "mpv";
       webBrowser.command = "firefox";
