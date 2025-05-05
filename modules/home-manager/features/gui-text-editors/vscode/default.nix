@@ -13,7 +13,7 @@
         "[nix]"."editor.tabSize" = 2;
         "files.autoSave" = "on";
         # "window.zoomLevel" = 1;
-        "editor.fontSize" = 12;
+        "editor.fontSize" = lib.mkForce 12;
         #"editor.fontFamily" = lib.mkForce "Terminus \(TTF\)";
         #"editor.fontFamily" = lib.mkForce "0xProto Nerd Font";
       };
