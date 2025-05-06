@@ -37,6 +37,7 @@ in {
         location = "top";
         yoffset = 5;
         display_generic = true;
+        prompt = " Run";
       };
       style =
         ''
