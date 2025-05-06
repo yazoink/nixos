@@ -31,6 +31,19 @@ in {
             "height": 36,
             "start": [
               {
+                "type": "custom",
+                "class": "search",
+                "bar": [
+                  {
+                    "type": "button",
+                    "class": "search-icon",
+                    "label": "",
+                    "on_click": "!wofi --show drun --location=1 --xoffset=5 --yoffset=5 --width 400 --height 425 --prompt 'Start searching or press Esc to exit'",
+                    "tooltip": "Open application launcher"
+                  }
+                ]
+              },
+              {
                 "type": "workspaces",
                 "all_monitors": false,
                 "tooltip": "Workspaces",
@@ -143,6 +156,64 @@ in {
                     "icon_size": 16
                   }
                 ]
+              },
+              {
+                "type": "custom",
+                "class": "power",
+                "bar": [
+                  {
+                    "type": "button",
+                    "class": "power-icon",
+                    "label": "",
+                    "on_click": "popup:toggle",
+                    "tooltip": "Open power menu"
+                  }
+                ],
+                "popup": [
+                  {
+                    "orientation": "vertical",
+                    "type": "box",
+                    "class": "power-popup",
+                    "name": "power-popup",
+                    "widgets": [
+                      {
+                        "label": "<span font-weight='bold' font-size='16pt'>Have a nice day!</span>",
+                        "name": "header",
+                        "type": "label"
+                      },
+                      {
+                        "type": "box",
+                        "class": "power-button-box",
+                        "widgets": [
+                          {
+                            "class": "power-button",
+                            "label": "",
+                            "on_click": "!shutdown now",
+                            "type": "button"
+                          },
+                          {
+                            "class": "power-button",
+                            "label": "",
+                            "on_click": "!reboot",
+                            "type": "button"
+                          },
+                          {
+                            "class": "power-button",
+                            "label": "",
+                            "on_click": "!hyprlock",
+                            "type": "button"
+                          }
+                        ]
+                      },
+                      {
+                        "name": "uptime",
+                        "class": "uptime",
+                        "label": "Uptime: {{30000:${pkgs.procps}/bin/uptime -p | cut -d ' ' -f2-}}",
+                        "type": "label"
+                      }
+                    ]
+                  }
+                ]
               }
             ]
           }
@@ -154,6 +225,19 @@ in {
             "icon_theme": "${iconTheme}",
             "height": 36,
             "start": [
+              {
+                "type": "custom",
+                "class": "search",
+                "bar": [
+                  {
+                    "type": "button",
+                    "class": "search-icon",
+                    "label": "",
+                    "on_click": "!wofi --show drun --location=1 --xoffset=5 --yoffset=5 --width 400 --height 425 --prompt 'Start searching or press Esc to exit'",
+                    "tooltip": "Open application launcher"
+                  }
+                ]
+              },
               {
                 "type": "workspaces",
                 "all_monitors": false,
@@ -217,6 +301,64 @@ in {
                     "icon_size": 16
                   }
                 ]
+              },
+              {
+                "type": "custom",
+                "class": "power",
+                "bar": [
+                  {
+                    "type": "button",
+                    "class": "power-icon",
+                    "label": "",
+                    "on_click": "popup:toggle",
+                    "tooltip": "Open power menu"
+                  }
+                ],
+                "popup": [
+                  {
+                    "orientation": "vertical",
+                    "type": "box",
+                    "class": "power-popup",
+                    "name": "power-popup",
+                    "widgets": [
+                      {
+                        "label": "<span font-weight='bold' font-size='16pt'>Have a nice day!</span>",
+                        "name": "header",
+                        "type": "label"
+                      },
+                      {
+                        "type": "box",
+                        "class": "power-button-box",
+                        "widgets": [
+                          {
+                            "class": "power-button",
+                            "label": "",
+                            "on_click": "!shutdown now",
+                            "type": "button"
+                          },
+                          {
+                            "class": "power-button",
+                            "label": "",
+                            "on_click": "!reboot",
+                            "type": "button"
+                          },
+                          {
+                            "class": "power-button",
+                            "label": "",
+                            "on_click": "!hyprlock",
+                            "type": "button"
+                          }
+                        ]
+                      },
+                      {
+                        "type": "label",
+                        "class": "uptime",
+                        "label": "Uptime: {{30000:${pkgs.procps}/bin/uptime -p | cut -d ' ' -f2-}}",
+                        "name": "uptime"
+                      }
+                    ]
+                  }
+                ]
               }
             ]
           }
@@ -245,6 +387,13 @@ in {
           border-radius: 10px;
         }
 
+        .power-popup {
+          padding-top: 15px;
+          padding-bottom: 15px;
+          padding-left: 10px;
+          padding-right: 10px;
+        }
+
         tooltip.background,
         menu {
           background-color: #${base16Scheme.base00};
@@ -268,15 +417,21 @@ in {
         .script,
         .battery-icon,
         .volume-icon,
+        .search-icon,
         .brightness-icon,
         .brightness-percent,
         .battery-percent,
         .volume-percent,
-        .systray-revealer-icon {
+        .systray-revealer-icon,
+        .power-icon {
           margin: 0;
           background: none;
           padding-left: 10px;
           padding-right: 10px;
+        }
+
+        .power-icon {
+          color: #${base16Scheme.base08};
         }
 
         .battery,
@@ -289,7 +444,8 @@ in {
         .battery-icon,
         .volume-icon,
         .brightness-icon,
-        .systray-revealer-icon {
+        .systray-revealer-icon,
+        .search-icon {
           font-size: 16px;
         }
 
@@ -310,6 +466,18 @@ in {
 
         .workspaces .item.focused {
           color: #${base16Scheme.base05};
+        }
+
+        .power-button {
+          font-size: 42pt;
+          padding-right: 35px;
+          padding-left: 20px;
+          margin: 5px;
+        }
+
+        .power-button-box {
+          margin-top: 10px;
+          margin-bottom: 10px;
         }
       '';
     };
