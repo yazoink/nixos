@@ -171,6 +171,7 @@ in {
                   {
                     "orientation": "vertical",
                     "type": "box",
+                    "class": "power-popup",
                     "widgets": [
                       {
                         "label": "<span font-weight='bold' font-size='16pt'>Goodbye ${username}</span>",
@@ -310,6 +311,7 @@ in {
                   {
                     "orientation": "vertical",
                     "type": "box",
+                    "class": "power-popup",
                     "widgets": [
                       {
                         "label": "<span font-weight='bold' font-size='16pt'>Goodbye ${username}</span>",
@@ -373,6 +375,10 @@ in {
           padding: 5px;
           border: 1px solid #${base16Scheme.base01};
           border-radius: 10px;
+        }
+
+        .power-popup {
+          padding: 15px;
         }
 
         tooltip.background,
