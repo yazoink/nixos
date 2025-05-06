@@ -34,7 +34,7 @@ in {
         allow_images = true;
         sort_order = "alphabetical";
         key_expand = "Tab";
-        location = "top";
+        location = "top_left";
         yoffset = 5;
         display_generic = true;
       };
