@@ -187,7 +187,7 @@ in {
                     "class": "volume-icon",
                     "cmd": "${./scripts/volume_icon.sh}",
                     "mode": "poll",
-                    "interval": 1000
+                    "interval": 700
                   },
                   {
                     "type": "script",
