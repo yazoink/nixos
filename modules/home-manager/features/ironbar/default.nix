@@ -451,7 +451,8 @@ in {
 
         .battery-percent,
         .volume-percent,
-        .brightness-percent {
+        .brightness-percent,
+        .tray {
           margin: 0;
           padding-right: 10px;
           padding-left: 0px;
