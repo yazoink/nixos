@@ -32,7 +32,7 @@ in {
       # waybar.enable = true;
       ironbar.enable = true;
       screenshot.enable = true;
-      # simpleLogout.enable = true;
+      simpleLogout.enable = true;
       hyprViewBinds.enable = true;
       swayosd.enable = true;
     };
@@ -66,7 +66,7 @@ in {
         "$menu" = "pkill wofi || wofi --show drun";
         "$screenshot" = "${config.bundles.desktopBase.screenshot.package}/bin/screenshot -s";
         "$screenshotFullscreen" = "${config.bundles.desktopBase.screenshot.package}/bin/screenshot";
-        # "$power" = "simple-logout";
+        "$power" = "simple-logout";
         "$lock" = "hyprlock";
         "$colorPicker" = "${../scripts/color.sh}";
         "$bar" = "${../scripts/ironbar.sh}";
@@ -281,7 +281,7 @@ in {
           "$mainMod SHIFT, O, exec, rofi -show window"
           "$mainMod, S, exec, $screenshot"
           "$mainMod CTRL, S, exec, $screenshotFullscreen"
-          # "$mainMod SHIFT, Q, exec, $power"
+          "$mainMod SHIFT, Q, exec, $power"
           "$mainMod CTRL, L, exec, $lock"
           "$mainMod, C, exec, $colorPicker"
           "$mainMod, R, exec, $screenRecorder"
