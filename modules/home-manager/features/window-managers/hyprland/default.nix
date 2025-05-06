@@ -29,7 +29,8 @@ in {
     bundles.desktopBase = {
       mako.enable = true;
       wofi.enable = true;
-      waybar.enable = true;
+      # waybar.enable = true;
+      ironbar.enable = true;
       screenshot.enable = true;
       simpleLogout.enable = true;
       hyprViewBinds.enable = true;
@@ -67,7 +68,7 @@ in {
         "$power" = "simple-logout";
         "$lock" = "hyprlock";
         "$colorPicker" = "${../scripts/color.sh}";
-        "$bar" = "${../scripts/waybar.sh}";
+        "$bar" = "${../scripts/ironbar.sh}";
         "$mainMod" = "SUPER";
         "$wallpaper" = wallpaperCommand;
         env = [

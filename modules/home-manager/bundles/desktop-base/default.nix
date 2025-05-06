@@ -31,6 +31,7 @@
     ../../features/simple-logout
     ../../features/theme
     ../../features/waybar
+    ../../features/ironbar
     ../../features/xdg
     ../../features/dconf
   ];
