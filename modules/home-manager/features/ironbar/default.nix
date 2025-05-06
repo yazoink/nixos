@@ -7,7 +7,6 @@
   ...
 }: let
   inherit (config.stylix) base16Scheme fonts;
-  inherit (osConfig.myOptions.userAccount) username;
   iconTheme =
     if (config.stylix.polarity == "dark")
     then config.stylix.iconTheme.dark
@@ -178,7 +177,7 @@ in {
                     "name": "power-popup",
                     "widgets": [
                       {
-                        "label": "<span font-weight='bold' font-size='16pt'>Goodbye ${username}...</span>",
+                        "label": "<span font-weight='bold' font-size='16pt'>Goodbye...</span>",
                         "name": "header",
                         "type": "label"
                       },
@@ -323,7 +322,7 @@ in {
                     "name": "power-popup",
                     "widgets": [
                       {
-                        "label": "<span font-weight='bold' font-size='16pt'>Goodbye ${username}...</span>",
+                        "label": "<span font-weight='bold' font-size='16pt'>Goodbye...</span>",
                         "name": "header",
                         "type": "label"
                       },
