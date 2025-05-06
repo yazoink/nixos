@@ -60,6 +60,8 @@
             scroll-step = 1;
             format = " ";
             tooltip-format = "{percent}%";
+            on-scroll-down = "brightnessctl -s set 1%-";
+            on-scroll-up = "brightnessctl -s set +1%";
           };
           "mpris".dynamic-len = 25;
           "mpd".max-length = 25;
