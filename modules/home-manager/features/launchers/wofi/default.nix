@@ -36,6 +36,7 @@ in {
         key_expand = "Tab";
         location = "top_left";
         yoffset = 5;
+        xoffset = 5;
         display_generic = true;
       };
       style =
