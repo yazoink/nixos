@@ -60,7 +60,7 @@
           };
           "backlight" = {
             scroll-step = 1;
-            format-icons = ["" " "];
+            format-icons = [" " " "];
             format = "{icon}";
             tooltip-format = "{percent}%";
             on-scroll-down = "brightnessctl -s set 1%-";
