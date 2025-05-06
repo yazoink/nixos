@@ -53,8 +53,9 @@ in {
             ],
             "center": [
               {
-                "type": "clock",
-                "format": "%I:%M %p %d %b %Y"
+                "type": "label",
+                "class": "clock";
+                "format": "{{10000:date '+%I:%M %p %d %b %Y'}}"
               }
             ],
             "end": [
@@ -475,6 +476,7 @@ in {
 
         .popup-clock .calendar {
           padding: 5px;
+          margin: 15px;
         }
       '';
     };
