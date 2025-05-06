@@ -56,7 +56,7 @@ in {
               {
                 "type": "label",
                 "class": "clock",
-                "format": "{{10000:date '+%I:%M %p %d %b %Y'}}"
+                "label": "{{10000:date '+%I:%M %p %d %b %Y'}}"
               }
             ],
             "end": [
@@ -205,8 +205,8 @@ in {
                         ]
                       },
                       {
-                        "label": "Uptime: {{30000:${pkgs.procps}/bin/uptime -p | cut -d ' ' -f2-}}",
                         "name": "uptime",
+                        "label": "Uptime: {{30000:${pkgs.procps}/bin/uptime -p | cut -d ' ' -f2-}}",
                         "type": "label"
                       }
                     ]
@@ -249,7 +249,7 @@ in {
               {
                 "type": "label",
                 "class": "clock",
-                "format": "{{10000:date '+%I:%M %p %d %b %Y'}}"
+                "label": "{{10000:date '+%I:%M %p %d %b %Y'}}"
               }
             ],
             "end": [
@@ -348,9 +348,9 @@ in {
                         ]
                       },
                       {
+                        "type": "label"
                         "label": "Uptime: {{30000:${pkgs.procps}/bin/uptime -p | cut -d ' ' -f2-}}",
                         "name": "uptime",
-                        "type": "label"
                       }
                     ]
                   }
