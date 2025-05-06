@@ -66,7 +66,7 @@ in {
                 "class": "volume",
                 "on_mouse_enter": "ironbar var set show_volume_percent true",
                 "on_mouse_exit": "ironbar var set show_volume_percent false",
-                "on_click_left": "amixer set Master toggle",
+                "on_click_left": "swayosd-client --output-volume mute-toggle",
                 "on_click_right": "pavucontrol",
                 "on_scroll_up": "swayosd-client --output-volume +1",
                 "on_scroll_down": "swayosd-client --output-volume -1",
