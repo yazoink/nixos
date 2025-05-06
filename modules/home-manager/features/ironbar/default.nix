@@ -304,7 +304,7 @@ in {
 
         .workspaces .item {
           color: #${base16Scheme.base03};
-          padding-left: 0px;
+          padding-left: 5px;
           padding-right: 10px;
         }
 
