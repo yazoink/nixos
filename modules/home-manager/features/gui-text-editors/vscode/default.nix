@@ -9,7 +9,7 @@
     programs.vscode = {
       enable = true;
       package = pkgs.vscodium;
-      userSettings = {
+      profiles.default.userSettings = {
         "[nix]"."editor.tabSize" = 2;
         "files.autoSave" = "on";
         "window.zoomLevel" = 1;
