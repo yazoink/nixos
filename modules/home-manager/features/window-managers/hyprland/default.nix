@@ -34,6 +34,7 @@ in {
       screenshot.enable = true;
       # simpleLogout.enable = true;
       hyprViewBinds.enable = true;
+      swayosd.enable = true;
     };
 
     home = {
