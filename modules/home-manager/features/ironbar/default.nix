@@ -46,6 +46,7 @@ in {
               {
                 "type": "workspaces",
                 "all_monitors": false,
+                "tooltip": "Workspaces",
                 "hidden": [
                   "special:special"
                 ]
@@ -54,7 +55,7 @@ in {
             "center": [
               {
                 "type": "label",
-                "class": "clock";
+                "class": "clock",
                 "format": "{{10000:date '+%I:%M %p %d %b %Y'}}"
               }
             ],
@@ -238,6 +239,7 @@ in {
               {
                 "type": "workspaces",
                 "all_monitors": false,
+                "tooltip": "Workspaces",
                 "hidden": [
                   "special:special"
                 ]
@@ -246,7 +248,7 @@ in {
             "center": [
               {
                 "type": "label",
-                "class": "clock";
+                "class": "clock",
                 "format": "{{10000:date '+%I:%M %p %d %b %Y'}}"
               }
             ],
