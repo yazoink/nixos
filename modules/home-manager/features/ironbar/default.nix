@@ -467,19 +467,8 @@ in {
           margin: 5px;
         }
 
-        .popup-clock .calendar-clock {
-          font-weight: bold;
+        .power-popup label {
           padding: 5px;
-        }
-
-        .popup-clock .calendar .header {
-          padding: 5px;
-          border: none;
-        }
-
-        .popup-clock .calendar {
-          padding: 5px;
-          margin: 15px;
         }
       '';
     };
