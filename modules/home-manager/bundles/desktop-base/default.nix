@@ -34,5 +34,6 @@
     ../../features/ironbar
     ../../features/xdg
     ../../features/dconf
+    ../../features/swayosd
   ];
 }

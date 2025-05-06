@@ -373,25 +373,31 @@ in {
           "$mainMod, mouse_down, workspace, e-1"
           "$mainMod, mouse_up, workspace, e+1"
 
-          ", XF86AudioMute, exec, pamixer -t"
-          ", XF86AudioMicMute, exec, pamixer --default-source -t"
+          # ", XF86AudioMute, exec, pamixer -t"
+          ", XF86AudioMute, exec, swayosd-client --output-volume mute-toggle"
+          # ", XF86AudioMicMute, exec, pamixer --default-source -t"
+          ", XF86AudioMicMute, exec, swayosd-client --input-volume mute-toggle"
           ", XF86AudioPlay, exec, playerctl play-pause"
           ", XF86AudioPause, exec, playerctl play-pause"
           ", XF86AudioNext, exec, playerctl next"
           ", XF86AudioPrev, exec, playerctl previous"
-          ", XF86MonBrightnessDown, exec, brightnessctl set 5%-"
-          ", XF86MonBrightnessUp, exec, brightnessctl set 5%+"
+          # ", XF86MonBrightnessDown, exec, brightnessctl set 5%-"
+          ", XF86MonBrightnessDown, exec, swayosd-client --brightness lower"
+          # ", XF86MonBrightnessUp, exec, brightnessctl set 5%+"
+          ", XF86MonBrightnessUp, exec, swayosd-client --brightness raise"
 
           ", XF86Lock, exec, $lock"
           ", code:107, exec, $screenshot"
         ];
         binde = [
-          ", XF86AudioRaiseVolume, exec, pamixer -i 5"
+          # ", XF86AudioRaiseVolume, exec, pamixer -i 5"
+          ", XF86AudioRaiseVolume, exec, swayosd-client --output-volume raise"
           "$mainMod, Minus, splitratio, -0.1"
           "$mainMod, Equal, splitratio, 0.1"
         ];
         bindl = [
-          ", XF86AudioLowerVolume, exec, pamixer -d 5"
+          # ", XF86AudioLowerVolume, exec, pamixer -d 5"
+          ", XF86AudioLowerVolume, exec, swayosd-client --output-volume lower"
         ];
         bindm = [
           "$mainMod, mouse:272, movewindow"
