@@ -68,8 +68,8 @@ in {
                 "on_mouse_exit": "ironbar var set show_volume_percent false",
                 "on_click_left": "amixer set Master toggle",
                 "on_click_right": "pavucontrol",
-                "on_scroll_up": "amixer set Master 1%+",
-                "on_scroll_down": "amixer set Master 1%-",
+                "on_scroll_up": "swayosd-client --output-volume +1",
+                "on_scroll_down": "swayosd-client --output-volume -1",
                 "tooltip": "Volume\n- Scroll to change\n- Left click to mute\n- Right click to open settings",
                 "bar": [
                   {
@@ -94,8 +94,8 @@ in {
                 "class": "brightness",
                 "on_mouse_enter": "ironbar var set show_brightness_percent true",
                 "on_mouse_exit": "ironbar var set show_brightness_percent false",
-                "on_scroll_up": "brightnessctl -s set +1%",
-                "on_scroll_down": "brightnessctl -s set 1%-",
+                "on_scroll_up": "swayosd-client --brightness +1",
+                "on_scroll_down": "swayosd-client --brightness -1",
                 "tooltip": "Brightness\n- Scroll to change",
                 "bar": [
                   {
@@ -263,8 +263,8 @@ in {
                 "on_mouse_exit": "ironbar var set show_volume_percent false",
                 "on_click_left": "amixer set Master toggle",
                 "on_click_right": "pavucontrol",
-                "on_scroll_up": "amixer set Master 1%+",
-                "on_scroll_down": "amixer set Master 1%-",
+                "on_scroll_up": "swayosd-client --output-volume +1",
+                "on_scroll_down": "swayosd-client --output-volume -1",
                 "tooltip": "Volume\n- Scroll to change\n- Left click to mute\n- Right click to open settings",
                 "bar": [
                   {
