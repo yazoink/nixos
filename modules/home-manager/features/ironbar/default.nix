@@ -208,6 +208,7 @@ in {
                       },
                       {
                         "name": "uptime",
+                        "class": "uptime",
                         "label": "Uptime: {{30000:${pkgs.procps}/bin/uptime -p | cut -d ' ' -f2-}}",
                         "type": "label"
                       }
@@ -351,7 +352,8 @@ in {
                         ]
                       },
                       {
-                        "type": "label"
+                        "type": "label",
+                        "class": "uptime",
                         "label": "Uptime: {{30000:${pkgs.procps}/bin/uptime -p | cut -d ' ' -f2-}}",
                         "name": "uptime",
                       }
