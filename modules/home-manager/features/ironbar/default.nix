@@ -304,8 +304,8 @@ in {
 
         .workspaces .item {
           color: #${base16Scheme.base03};
-          padding-right: 15px;
           padding-left: 0px;
+          padding-right: 10px;
         }
 
         .workspaces .item.focused {
