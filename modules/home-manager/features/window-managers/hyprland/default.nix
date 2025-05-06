@@ -96,6 +96,7 @@ in {
             "poweralertd"
             "nm-applet"
             "wl-clip-persist --clipboard regular"
+            "wayland-pipewire-idle-inhibit"
           ]
           ++ (
             if (osConfig.myOptions.defaultApps.terminal.command == "footclient")

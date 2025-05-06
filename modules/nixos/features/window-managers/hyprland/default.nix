@@ -23,6 +23,7 @@
 
     environment.systemPackages = with pkgs; [
       wl-clipboard
+      wayland-pipewire-idle-inhibit
       wl-clip-persist
       upower # for poweralertd
       networkmanagerapplet
