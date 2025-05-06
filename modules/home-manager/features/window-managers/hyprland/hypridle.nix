@@ -1,9 +1,11 @@
 {
   osConfig,
   lib,
+  pkgs,
   ...
 }: {
   config = lib.mkIf osConfig.bundles.desktopBase.hyprland.enable {
+    home.packages = with pkgs; [brightnessctl];
     services.hypridle = builtins.trace "hypridle enabled" {
       enable = true;
       settings = {

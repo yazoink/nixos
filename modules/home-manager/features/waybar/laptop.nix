@@ -3,9 +3,11 @@
   osConfig,
   lib,
   config,
+  pkgs,
   ...
 }: {
   config = lib.mkIf (config.bundles.desktopBase.waybar.enable && osConfig.myOptions.hardwareFeatures.laptop.enable) {
+    home.packages = with pkgs; [brightnessctl];
     programs.waybar = {
       settings = {
         waybar = {
@@ -58,7 +60,7 @@
           };
           "backlight" = {
             scroll-step = 1;
-            format-icons = [" " ""];
+            format-icons = ["" " "];
             format = "{icon}";
             tooltip-format = "{percent}%";
             on-scroll-down = "brightnessctl -s set 1%-";
