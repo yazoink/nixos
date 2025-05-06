@@ -355,7 +355,7 @@ in {
                         "type": "label",
                         "class": "uptime",
                         "label": "Uptime: {{30000:${pkgs.procps}/bin/uptime -p | cut -d ' ' -f2-}}",
-                        "name": "uptime",
+                        "name": "uptime"
                       }
                     ]
                   }
