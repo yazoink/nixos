@@ -33,7 +33,7 @@
       slurp
       hyprpicker
       hyprcursor
-      nwg-displays
+      wdisplays
       swaybg
     ];
 
