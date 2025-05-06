@@ -470,11 +470,6 @@ in {
           padding-right: 35px;
           padding-left: 20px;
         }
-
-        .power-button-box {
-          margin-top: 10px;
-          margin-bottom: 10px;
-        }
       '';
     };
   };
