@@ -177,7 +177,7 @@ in {
                     "name": "power-popup",
                     "widgets": [
                       {
-                        "label": "<span font-weight='bold' font-size='16pt'>Goodbye...</span>",
+                        "label": "<span font-weight='bold' font-size='16pt'>Have a nice day!</span>",
                         "name": "header",
                         "type": "label"
                       },
@@ -322,7 +322,7 @@ in {
                     "name": "power-popup",
                     "widgets": [
                       {
-                        "label": "<span font-weight='bold' font-size='16pt'>Goodbye...</span>",
+                        "label": "<span font-weight='bold' font-size='16pt'>Have a nice day!</span>",
                         "name": "header",
                         "type": "label"
                       },
