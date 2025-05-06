@@ -71,7 +71,7 @@ in {
                     "show_if": "#show_volume_percent",
                     "cmd": "amixer sget Master | awk -F\"[][]\" '/Left:/ { print $2 }'",
                     "mode": "poll",
-                    "interval": 1000
+                    "interval": 700
                   }
                 ]
               },
