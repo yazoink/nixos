@@ -419,6 +419,10 @@ in {
           padding-right: 7px;
         }
 
+        .power-icon {
+          color: #${base16Scheme.base08};
+        }
+
         .battery,
         .volume,
         .brightness {
