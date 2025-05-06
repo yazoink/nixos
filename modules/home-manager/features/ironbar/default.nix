@@ -454,14 +454,14 @@ in {
         .volume-percent,
         .brightness-percent {
           margin: 0;
-          padding-right: 7px;
+          padding-right: 10px;
           padding-left: 0px;
         }
 
         .workspaces .item {
           color: #${base16Scheme.base03};
-          padding-left: 3px;
-          padding-right: 3px;
+          padding-left: 6px;
+          padding-right: 6px;
         }
 
         .workspaces .item.focused {
