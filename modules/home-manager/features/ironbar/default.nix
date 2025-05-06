@@ -370,7 +370,7 @@ in {
           font-family: "${fonts.sansSerif.name}";
           background-color: #${base16Scheme.base00};
           color: #${base16Scheme.base05};
-          padding: 10px;
+          padding: 5px;
           border: 1px solid #${base16Scheme.base01};
           border-radius: 10px;
         }
