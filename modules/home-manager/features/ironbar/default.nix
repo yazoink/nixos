@@ -177,7 +177,7 @@ in {
                     "name": "power-popup",
                     "widgets": [
                       {
-                        "label": "<span font-weight='bold' font-size='16pt'>Goodbye ${username}</span>",
+                        "label": "<span font-weight='bold' font-size='16pt'>Goodbye ${username}...</span>",
                         "name": "header",
                         "type": "label"
                       },
@@ -320,7 +320,7 @@ in {
                     "name": "power-popup",
                     "widgets": [
                       {
-                        "label": "<span font-weight='bold' font-size='16pt'>Goodbye ${username}</span>",
+                        "label": "<span font-weight='bold' font-size='16pt'>Goodbye ${username}...</span>",
                         "name": "header",
                         "type": "label"
                       },
@@ -465,10 +465,6 @@ in {
           padding-right: 35px;
           padding-left: 20px;
           margin: 5px;
-        }
-
-        .power-popup label {
-          padding: 5px;
         }
       '';
     };
