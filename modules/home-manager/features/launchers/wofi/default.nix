@@ -25,8 +25,8 @@ in {
       enable = true;
       settings = {
         term = osConfig.myOptions.defaultApps.terminal.command;
-        width = 400;
-        height = 200;
+        width = 450;
+        height = 250;
         show_all = false;
         allow_markup = true;
         always_parse_args = true;
