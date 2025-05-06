@@ -7,19 +7,16 @@ status="$(cat /sys/class/power_supply/BAT0/status)"
     exit 0
 }
 
-icons=(
-    [20]=" "
-    [40]=" "
-    [60]=" "
-    [80]=" "
-)
 battery=$(cat /sys/class/power_supply/BAT0/capacity)
 
-for icon in "${!icons[@]}"; do
-    [[ $battery < $icon ]] && {
-        echo "${icons[$icon]}"
-        exit 0
-    }
-done
-echo " "
-
+if [[ $battery -lt 21 ]]; then
+    echo " "
+elif [[ $battery -lt 41 ]]; then
+    echo " "
+elif [[ $battery -lt 61 ]]; then
+    echo " "
+elif [[ $battery -lt 81 ]]; then
+    echo " "
+else
+    echo " "
+fi
