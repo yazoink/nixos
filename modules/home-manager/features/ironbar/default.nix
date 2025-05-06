@@ -184,6 +184,7 @@ in {
                       },
                       {
                         "type": "box",
+                        "class": "power-button-box",
                         "widgets": [
                           {
                             "class": "power-button",
@@ -327,6 +328,7 @@ in {
                       },
                       {
                         "type": "box",
+                        "class": "power-button-box",
                         "widgets": [
                           {
                             "class": "power-button",
@@ -465,6 +467,9 @@ in {
           font-size: 42pt;
           padding-right: 35px;
           padding-left: 20px;
+        }
+
+        .power-button-box {
           margin-top: 10px;
           margin-bottom: 10px;
         }
