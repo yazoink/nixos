@@ -172,6 +172,7 @@ in {
                     "orientation": "vertical",
                     "type": "box",
                     "class": "power-popup",
+                    "name": "power-popup",
                     "widgets": [
                       {
                         "label": "<span font-weight='bold' font-size='16pt'>Goodbye ${username}</span>",
@@ -312,6 +313,7 @@ in {
                     "orientation": "vertical",
                     "type": "box",
                     "class": "power-popup",
+                    "name": "power-popup",
                     "widgets": [
                       {
                         "label": "<span font-weight='bold' font-size='16pt'>Goodbye ${username}</span>",
