@@ -228,7 +228,7 @@ in {
                     "type": "button",
                     "class": "search-icon",
                     "label": "",
-                    "on_click": "!wofi --show drun --location=1 --xoffset=5 --yoffset=5",
+                    "on_click": "!wofi --show drun --location=1 --xoffset=5 --yoffset=5 --prompt 'Start searching or press Esc to exit'",
                     "tooltip": "Open application launcher"
                   }
                 ]
