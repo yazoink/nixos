@@ -17,7 +17,7 @@ in {
   config = lib.mkIf config.bundles.desktopBase.swayosd.enable {
     services.swayosd = {
       enable = true;
-      stylePath = style;
     };
+    xdg.configFile."swayosd/style.css".source = style;
   };
 }
