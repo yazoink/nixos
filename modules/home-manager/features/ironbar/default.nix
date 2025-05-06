@@ -389,7 +389,10 @@ in {
         }
 
         .power-popup {
-          padding: 15px;
+          padding-top: 15px;
+          padding-bottom: 15px;
+          padding-left: 10px;
+          padding-right: 10px;
         }
 
         tooltip.background,
