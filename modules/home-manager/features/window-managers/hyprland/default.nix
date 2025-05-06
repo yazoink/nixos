@@ -404,6 +404,9 @@ in {
           "$mainMod, mouse:272, movewindow"
           "$mainMod, mouse:273, resizewindow"
         ];
+        bindr = [
+          "CAPS, Caps_Lock, exec, swayosd-client --caps-lock"
+        ];
         windowrulev2 = [
           "plugin:hyprbars:title_color rgb(${config.stylix.base16Scheme.base05}), focus:1"
           "suppressevent maximize, class:.*"
