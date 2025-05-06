@@ -375,8 +375,8 @@ in {
           font-weight: bold;
           background-color: #${base16Scheme.base00};
           color: #${base16Scheme.base05};
-          padding-right: 7px;
-          padding-left: 7px;
+          padding-right: 10px;
+          padding-left: 10px;
         }
 
         .popup {
@@ -427,8 +427,8 @@ in {
         .power-icon {
           margin: 0;
           background: none;
-          padding-left: 7px;
-          padding-right: 7px;
+          padding-left: 10px;
+          padding-right: 10px;
         }
 
         .power-icon {
