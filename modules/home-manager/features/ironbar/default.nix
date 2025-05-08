@@ -176,7 +176,7 @@ in {
                   {
                     "type": "label",
                     "class": "brightness-icon",
-                    "label": " "
+                    "label": ""
                   },
                   {
                     "type": "script",
