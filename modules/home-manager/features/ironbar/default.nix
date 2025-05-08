@@ -82,6 +82,32 @@
       "icon_size": 16
     }
   '';
+  batteryModule = ''
+    {
+      "type": "custom",
+      "class": "battery",
+      "on_mouse_enter": "ironbar var set show_battery_percent true",
+      "on_mouse_exit": "ironbar var set show_battery_percent false",
+      "tooltip": "Battery",
+      "bar": [
+        {
+          "type": "script",
+          "class": "battery-icon",
+          "cmd": "${./scripts/battery_icon.sh} ${osConfig.myOptions.hardwareFeatures.laptop.batteryName}",
+          "mode": "poll",
+          "interval": 25000
+        },
+        {
+          "type": "script",
+          "class": "battery-percent",
+          "show_if": "#show_battery_percent",
+          "cmd": "echo \"$(cat /sys/class/power_supply/${osConfig.myOptions.hardwareFeatures.laptop.batteryName}/capacity)%\"",
+          "mode": "poll",
+          "interval": 25000
+        }
+      ]
+    }
+  '';
   powerModule = ''
     {
       "type": "custom",
@@ -192,30 +218,7 @@ in {
                   }
                 ]
               },
-              {
-                "type": "custom",
-                "class": "battery",
-                "on_mouse_enter": "ironbar var set show_battery_percent true",
-                "on_mouse_exit": "ironbar var set show_battery_percent false",
-                "tooltip": "Battery",
-                "bar": [
-                  {
-                    "type": "script",
-                    "class": "battery-icon",
-                    "cmd": "${./scripts/battery_icon.sh} ${osConfig.myOptions.hardwareFeatures.laptop.batteryName}",
-                    "mode": "poll",
-                    "interval": 25000
-                  },
-                  {
-                    "type": "script",
-                    "class": "battery-percent",
-                    "show_if": "#show_battery_percent",
-                    "cmd": "echo \"$(cat /sys/class/power_supply/${osConfig.myOptions.hardwareFeatures.laptop.batteryName}/capacity)%\"",
-                    "mode": "poll",
-                    "interval": 25000
-                  }
-                ]
-              },
+              ${batteryModule},
               ${systrayModule},
               ${powerModule}
             ]
@@ -312,10 +315,13 @@ in {
         }
 
         .battery-icon,
-        .volume-icon,
         .brightness-icon,
         .systray-revealer-icon {
           font-size: 16px;
+        }
+
+        .volume-icon {
+          font-size: 20px;
         }
 
         .battery-percent,
