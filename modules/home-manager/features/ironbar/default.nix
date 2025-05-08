@@ -87,7 +87,7 @@ in {
                     "class": "brightness-icon",
                     "cmd": "${./scripts/brightness_icon.sh}",
                     "mode": "poll",
-                    "interval": 1000
+                    "interval": 2000
                   },
                   {
                     "type": "script",
