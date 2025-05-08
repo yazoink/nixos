@@ -325,7 +325,7 @@ in {
         }
 
         .volume-icon {
-          font-size: 22px;
+          font-size: 21px;
         }
 
         .battery-percent,
