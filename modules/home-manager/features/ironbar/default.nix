@@ -52,16 +52,17 @@ in {
                 "class": "volume",
                 "on_mouse_enter": "ironbar var set show_volume_percent true",
                 "on_mouse_exit": "ironbar var set show_volume_percent false",
-                "on_click_left": "amixer set Master toggle",
                 "on_click_right": "pavucontrol",
                 "on_scroll_up": "amixer set Master 1%+",
                 "on_scroll_down": "amixer set Master 1%-",
-                "tooltip": "Volume\n- Scroll to change\n- Left click to mute\n- Right click to open settings",
+                "tooltip": "Volume\n- Scroll to change\n- Left click to open popup\n- Right click to open settings",
                 "bar": [
                   {
-                    "type": "volume",
+                    "type": "script",
                     "class": "volume-icon",
-                    "format": "{icon}"
+                    "cmd": "${./scripts/volume_icon.sh}",
+                    "mode": "poll",
+                    "interval": 1000
                   },
                   {
                     "type": "volume",
@@ -296,6 +297,10 @@ in {
           margin: 0;
           padding-right: 10px;
           padding-left: 0px;
+        }
+
+        .volume-percent {
+          margin-left: -3px;
         }
 
         .workspaces .item {
