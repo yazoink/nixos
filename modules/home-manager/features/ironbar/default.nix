@@ -31,7 +31,7 @@
   volumeModule = ''
     {
       "type": "custom",
-      "class": "volume",
+      "class": "custom-volume",
       "on_mouse_enter": "ironbar var set show_volume_percent true",
       "on_mouse_exit": "ironbar var set show_volume_percent false",
       "on_click_left": "amixer set Master toggle",
@@ -42,11 +42,9 @@
       "tooltip": "Volume\n- Scroll to change\n- Left click the icon to toggle mute\n- Left click the number to open popup\n- Middle click to toggle mute\n- Right click to open settings",
       "bar": [
         {
-          "type": "script",
+          "type": "volume",
           "class": "volume-icon",
-          "cmd": "${./scripts/volume_icon.sh}",
-          "mode": "poll",
-          "interval": 1500
+          "format": "{icon}"
         },
         {
           "type": "volume",
@@ -307,14 +305,14 @@ in {
         }
 
         .battery,
-        .volume,
+        .custom-volume,
         .brightness {
           margin: 0;
           padding: 0;
         }
 
         .battery-icon,
-        .volume-icon label,
+        .volume-icon,
         .brightness-icon,
         .systray-revealer-icon {
           font-size: 16px;
