@@ -248,7 +248,7 @@ in {
           background-color: #${base16Scheme.base00};
           color: #${base16Scheme.base05};
           padding-right: 5px;
-          padding-left: 5px;
+          padding-left: 10px;
         }
 
         .popup {
@@ -274,7 +274,7 @@ in {
 
         .workspaces {
           margin: 0;
-          padding: 0;
+          padding-left: 0;
         }
 
         .clock,
