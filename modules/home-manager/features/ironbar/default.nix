@@ -218,7 +218,6 @@ in {
                   }
                 ]
               },
-              ${networkModule},
               ${systrayModule},
               ${powerModule}
             ]
@@ -295,6 +294,7 @@ in {
         .brightness-percent,
         .battery-percent,
         .volume-percent,
+        .network_manager,
         .systray-revealer-icon {
           margin: 0;
           background: none;
