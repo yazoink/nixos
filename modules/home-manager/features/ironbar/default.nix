@@ -111,7 +111,7 @@ in {
                   {
                     "type": "script",
                     "class": "battery-icon",
-                    "cmd": "${./scripts/battery_icon.sh}",
+                    "cmd": "${./scripts/battery_icon.sh} ${osConfig.myOptions.hardwareFeatures.laptop.batteryName}",
                     "mode": "poll",
                     "interval": 10000
                   },

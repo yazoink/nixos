@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-status="$(cat /sys/class/power_supply/BAT0/status)"
+status="$(cat /sys/class/power_supply/"$1"/status)"
 
 [[ "$status" == "Charging" ]] && {
     echo " "
