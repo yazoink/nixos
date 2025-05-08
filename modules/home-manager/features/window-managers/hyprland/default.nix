@@ -69,7 +69,6 @@ in {
         # "$power" = "simple-logout";
         "$lock" = "hyprlock";
         "$colorPicker" = "${../scripts/color.sh}";
-        "$bar" = "${../scripts/ironbar.sh}";
         "$mainMod" = "SUPER";
         "$wallpaper" = wallpaperCommand;
         env = [
@@ -93,7 +92,7 @@ in {
             "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
             "$wallpaper -q"
             #"dbus-launch --exit-with-session waybar"
-            "$bar"
+            "ironbar"
             "hypridle"
             "poweralertd"
             "nm-applet"
@@ -276,7 +275,7 @@ in {
           "$mainMod, E, exec, $fileManager"
           "$mainMod, P, exec, $menu"
           "$mainMod, R, exec, $menu"
-          "$mainMod SHIFT, B, exec, $bar"
+          "$mainMod SHIFT, B, exec, bash ${../scripts/ironbar.sh}"
           "$mainMod, N, exec, $terminal -e ncmpcpp"
           "$mainMod SHIFT, O, exec, rofi -show window"
           "$mainMod, S, exec, $screenshot"
