@@ -110,7 +110,7 @@ in {
                     "class": "battery-icon",
                     "cmd": "${./scripts/battery_icon.sh} ${osConfig.myOptions.hardwareFeatures.laptop.batteryName}",
                     "mode": "poll",
-                    "interval": 10000
+                    "interval": 25000
                   },
                   {
                     "type": "script",
@@ -118,7 +118,7 @@ in {
                     "show_if": "#show_battery_percent",
                     "cmd": "echo \"$(cat /sys/class/power_supply/${osConfig.myOptions.hardwareFeatures.laptop.batteryName}/capacity)%\"",
                     "mode": "poll",
-                    "interval": 10000
+                    "interval": 25000
                   }
                 ]
               },
