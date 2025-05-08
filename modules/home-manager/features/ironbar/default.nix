@@ -318,10 +318,6 @@ in {
           font-size: 16px;
         }
 
-        .volume-icon {
-          font-size: 24px;
-        }
-
         .battery-percent,
         .volume-percent,
         .brightness-percent,
