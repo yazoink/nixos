@@ -11,6 +11,16 @@
     if (config.stylix.polarity == "dark")
     then config.stylix.iconTheme.dark
     else config.stylix.iconTheme.light;
+  workspacesModule = ''
+    {
+      "type": "workspaces",
+      "all_monitors": false,
+      "tooltip": "Workspaces",
+      "hidden": [
+        "special:special"
+      ]
+    }
+  '';
 in {
   options = {
     bundles.desktopBase.ironbar.enable = lib.mkOption {
@@ -30,14 +40,7 @@ in {
             "icon_theme": "${iconTheme}",
             "height": 36,
             "start": [
-              {
-                "type": "workspaces",
-                "all_monitors": false,
-                "tooltip": "Workspaces",
-                "hidden": [
-                  "special:special"
-                ]
-              }
+              ${workspacesModule}
             ],
             "center": [
               {
