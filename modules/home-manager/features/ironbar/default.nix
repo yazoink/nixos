@@ -1,4 +1,3 @@
-# I know this is awful but it works
 {
   pkgs,
   config,
@@ -11,6 +10,7 @@
     if (config.stylix.polarity == "dark")
     then config.stylix.iconTheme.dark
     else config.stylix.iconTheme.light;
+  barHeight = 36;
   workspacesModule = ''
     {
       "type": "workspaces",
@@ -155,7 +155,7 @@ in {
             "position": "top",
             "anchor_to_edges": true,
             "icon_theme": "${iconTheme}",
-            "height": 36,
+            "height": ${builtins.toString barHeight},
             "start": [
               ${workspacesModule}
             ],
@@ -224,7 +224,7 @@ in {
             "position": "top",
             "anchor_to_edges": true,
             "icon_theme": "${iconTheme}",
-            "height": 36,
+            "height": ${builtins.toString barHeight},
             "start": [
               ${workspacesModule}
             ],
