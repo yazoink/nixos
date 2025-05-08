@@ -5,8 +5,7 @@ if [[ $output == *"[off]"* ]]; then
     echo ""
     exit 0
 fi
-volume="${output#*[\[}"
-volume="${volume%%\%]*}"
+volume=$(echo "$output" | awk -F"[][]" '/Left:/ { print $2 }' | tr -d '%')
 if (( volume > 50 )); then
     echo ""
 elif (( volume > 25 )); then
