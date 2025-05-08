@@ -21,6 +21,42 @@
       ]
     }
   '';
+  clockModule = ''
+    {
+      "type": "label",
+      "class": "clock",
+      "label": "{{10000:date '+%I:%M %p %d %b %Y'}}"
+    }
+  '';
+  volumeModule = ''
+    {
+      "type": "custom",
+      "class": "volume",
+      "on_mouse_enter": "ironbar var set show_volume_percent true",
+      "on_mouse_exit": "ironbar var set show_volume_percent false",
+      "on_click_left": "amixer set Master toggle",
+      "on_click_middle": "amixer set Master toggle",
+      "on_click_right": "pavucontrol",
+      "on_scroll_up": "amixer set Master 1%+",
+      "on_scroll_down": "amixer set Master 1%-",
+      "tooltip": "Volume\n- Scroll to change\n- Left click to open popup\n- Middle click to mute\n- Right click to open settings",
+      "bar": [
+        {
+          "type": "script",
+          "class": "volume-icon",
+          "cmd": "${./scripts/volume_icon.sh}",
+          "mode": "poll",
+          "interval": 1000
+        },
+        {
+          "type": "volume",
+          "class": "volume-percent",
+          "show_if": "#show_volume_percent",
+          "format": "{percentage}%"
+        }
+      ]
+    }
+  '';
 in {
   options = {
     bundles.desktopBase.ironbar.enable = lib.mkOption {
@@ -43,39 +79,10 @@ in {
               ${workspacesModule}
             ],
             "center": [
-              {
-                "type": "label",
-                "class": "clock",
-                "label": "{{10000:date '+%I:%M %p %d %b %Y'}}"
-              }
+              ${clockModule}
             ],
             "end": [
-              {
-                "type": "custom",
-                "class": "volume",
-                "on_mouse_enter": "ironbar var set show_volume_percent true",
-                "on_mouse_exit": "ironbar var set show_volume_percent false",
-                "on_click_right": "pavucontrol",
-                "on_click_middle": "amixer set Master toggle",
-                "on_scroll_up": "amixer set Master 1%+",
-                "on_scroll_down": "amixer set Master 1%-",
-                "tooltip": "Volume\n- Scroll to change\n- Left click to open popup\n- Middle click to mute\n- Right click to open settings",
-                "bar": [
-                  {
-                    "type": "script",
-                    "class": "volume-icon",
-                    "cmd": "${./scripts/volume_icon.sh}",
-                    "mode": "poll",
-                    "interval": 1000
-                  },
-                  {
-                    "type": "volume",
-                    "class": "volume-percent",
-                    "show_if": "#show_volume_percent",
-                    "format": "{percentage}%"
-                  }
-                ]
-              },
+              ${volumeModule},
               {
                 "type": "custom",
                 "class": "brightness",
@@ -213,50 +220,13 @@ in {
             "icon_theme": "${iconTheme}",
             "height": 36,
             "start": [
-              {
-                "type": "workspaces",
-                "all_monitors": false,
-                "tooltip": "Workspaces",
-                "hidden": [
-                  "special:special"
-                ]
-              }
+              ${workspacesModule}
             ],
             "center": [
-              {
-                "type": "label",
-                "class": "clock",
-                "label": "{{10000:date '+%I:%M %p %d %b %Y'}}"
-              }
+              ${clockModule}
             ],
             "end": [
-              {
-                "type": "custom",
-                "class": "volume",
-                "on_mouse_enter": "ironbar var set show_volume_percent true",
-                "on_mouse_exit": "ironbar var set show_volume_percent false",
-                "on_click_left": "amixer set Master toggle",
-                "on_click_middle": "amixer set Master toggle",
-                "on_click_right": "pavucontrol",
-                "on_scroll_up": "amixer set Master 1%+",
-                "on_scroll_down": "amixer set Master 1%-",
-                "tooltip": "Volume\n- Scroll to change\n- Left click to open popup\n- Middle click to mute\n- Right click to open settings",
-                "bar": [
-                  {
-                    "type": "script",
-                    "class": "volume-icon",
-                    "cmd": "${./scripts/volume_icon.sh}",
-                    "mode": "poll",
-                    "interval": 1000
-                  },
-                  {
-                    "type": "volume",
-                    "class": "volume-percent",
-                    "show_if": "#show_volume_percent",
-                    "format": "{percentage}%"
-                  }
-                ]
-              },
+              ${volumeModule},
               {
                 "type": "custom",
                 "class": "systray",
