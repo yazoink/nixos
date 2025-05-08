@@ -140,6 +140,64 @@ in {
                     "icon_size": 16
                   }
                 ]
+              },
+              {
+                "type": "custom",
+                "class": "power",
+                "bar": [
+                  {
+                    "type": "button",
+                    "class": "power-icon",
+                    "label": "",
+                    "on_click": "popup:toggle",
+                    "tooltip": "Open power menu"
+                  }
+                ],
+                "popup": [
+                  {
+                    "orientation": "vertical",
+                    "type": "box",
+                    "class": "power-popup",
+                    "name": "power-popup",
+                    "widgets": [
+                      {
+                        "label": "<span font-weight='bold' font-size='16pt'>Have a nice day!</span>",
+                        "name": "header",
+                        "type": "label"
+                      },
+                      {
+                        "type": "box",
+                        "class": "power-button-box",
+                        "widgets": [
+                          {
+                            "class": "power-button",
+                            "label": "",
+                            "on_click": "!shutdown now",
+                            "type": "button"
+                          },
+                          {
+                            "class": "power-button",
+                            "label": "",
+                            "on_click": "!reboot",
+                            "type": "button"
+                          },
+                          {
+                            "class": "power-button",
+                            "label": "",
+                            "on_click": "!hyprlock",
+                            "type": "button"
+                          }
+                        ]
+                      },
+                      {
+                        "name": "uptime",
+                        "class": "uptime",
+                        "label": "Uptime: {{30000:${pkgs.procps}/bin/uptime -p | cut -d ' ' -f2-}}",
+                        "type": "label"
+                      }
+                    ]
+                  }
+                ]
               }
             ]
           }
@@ -212,6 +270,64 @@ in {
                     "icon_size": 16
                   }
                 ]
+              },
+              {
+                "type": "custom",
+                "class": "power",
+                "bar": [
+                  {
+                    "type": "button",
+                    "class": "power-icon",
+                    "label": "",
+                    "on_click": "popup:toggle",
+                    "tooltip": "Open power menu"
+                  }
+                ],
+                "popup": [
+                  {
+                    "orientation": "vertical",
+                    "type": "box",
+                    "class": "power-popup",
+                    "name": "power-popup",
+                    "widgets": [
+                      {
+                        "label": "<span font-weight='bold' font-size='16pt'>Have a nice day!</span>",
+                        "name": "header",
+                        "type": "label"
+                      },
+                      {
+                        "type": "box",
+                        "class": "power-button-box",
+                        "widgets": [
+                          {
+                            "class": "power-button",
+                            "label": "",
+                            "on_click": "!shutdown now",
+                            "type": "button"
+                          },
+                          {
+                            "class": "power-button",
+                            "label": "",
+                            "on_click": "!reboot",
+                            "type": "button"
+                          },
+                          {
+                            "class": "power-button",
+                            "label": "",
+                            "on_click": "!hyprlock",
+                            "type": "button"
+                          }
+                        ]
+                      },
+                      {
+                        "name": "uptime",
+                        "class": "uptime",
+                        "label": "Uptime: {{30000:${pkgs.procps}/bin/uptime -p | cut -d ' ' -f2-}}",
+                        "type": "label"
+                      }
+                    ]
+                  }
+                ]
               }
             ]
           }
@@ -262,6 +378,7 @@ in {
         .tray,
         .script,
         .battery-icon,
+        .power-icon,
         .volume-icon,
         .brightness-icon,
         .brightness-percent,
@@ -272,6 +389,10 @@ in {
           background: none;
           padding-left: 10px;
           padding-right: 10px;
+        }
+
+        .power-icon {
+          color: #${base16Scheme.base08};
         }
 
         .battery,
@@ -305,6 +426,18 @@ in {
 
         .workspaces .item.focused {
           color: #${base16Scheme.base05};
+        }
+
+        .power-button {
+          font-size: 42pt;
+          padding-right: 35px;
+          padding-left: 20px;
+          margin: 5px;
+        }
+
+        .power-button-box {
+          margin-top: 10px;
+          margin-bottom: 10px;
         }
       '';
     };
