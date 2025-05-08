@@ -119,7 +119,7 @@ in {
                     "type": "script",
                     "class": "battery-percent",
                     "show_if": "#show_battery_percent",
-                    "cmd": "${./scripts/battery_percent.sh}",
+                    "cmd": "echo \"$(cat /sys/class/power_supply/${osConfig.myOptions.hardwareFeatures.laptop.batteryName}/capacity)%\"",
                     "mode": "poll",
                     "interval": 10000
                   }
