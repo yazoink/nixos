@@ -42,11 +42,8 @@
       "tooltip": "Volume\n- Scroll to change\n- Left click the icon to toggle mute\n- Left click the number to open popup\n- Middle click to toggle mute\n- Right click to open settings",
       "bar": [
         {
-          "type": "script",
-          "class": "volume-icon",
-          "cmd": "${./scripts/volume_icon.sh}",
-          "mode": "poll",
-          "interval": 1000
+          "type": "volume",
+          "format": "{icon}"
         },
         {
           "type": "volume",
@@ -284,6 +281,7 @@ in {
         }
 
         .clock,
+        .volume,
         .workspaces .item,
         .tray,
         .script,
@@ -314,6 +312,7 @@ in {
         }
 
         .battery-icon,
+        .volume,
         .volume-icon label,
         .brightness-icon,
         .systray-revealer-icon {
