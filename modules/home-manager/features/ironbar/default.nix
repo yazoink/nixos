@@ -57,6 +57,87 @@
       ]
     }
   '';
+  systrayModule = ''
+    {
+      "type": "custom",
+      "class": "systray",
+      "on_mouse_enter": "ironbar var set show_systray true",
+      "on_mouse_exit": "ironbar var set show_systray false",
+      "tooltip": "Systray",
+      "bar": [
+        {
+          "type": "label",
+          "class": "systray-revealer-icon",
+          "label": ""
+        },
+        {
+          "type": "tray",
+          "show_if": "#show_systray",
+          "icon_size": 16
+        }
+      ]
+    }
+  '';
+  powerModule = ''
+    {
+      "type": "custom",
+      "class": "power",
+      "bar": [
+        {
+          "type": "button",
+          "class": "power-icon",
+          "label": "",
+          "on_click": "popup:toggle",
+          "tooltip": "Open power menu"
+        }
+      ],
+      "popup": [
+        {
+          "orientation": "vertical",
+          "type": "box",
+          "class": "power-popup",
+          "name": "power-popup",
+          "widgets": [
+            {
+              "label": "<span font-weight='bold' font-size='16pt'>Have a nice day!</span>",
+              "name": "header",
+              "type": "label"
+            },
+            {
+              "type": "box",
+              "class": "power-button-box",
+              "widgets": [
+                {
+                  "class": "power-button",
+                  "label": "",
+                  "on_click": "!shutdown now",
+                  "type": "button"
+                },
+                {
+                  "class": "power-button",
+                  "label": "",
+                  "on_click": "!reboot",
+                  "type": "button"
+                },
+                {
+                  "class": "power-button",
+                  "label": "",
+                  "on_click": "!hyprlock",
+                  "type": "button"
+                }
+              ]
+            },
+            {
+              "name": "uptime",
+              "class": "uptime",
+              "label": "Uptime: {{30000:${pkgs.procps}/bin/uptime -p | cut -d ' ' -f2-}}",
+              "type": "label"
+            }
+          ]
+        }
+      ]
+    }
+  '';
 in {
   options = {
     bundles.desktopBase.ironbar.enable = lib.mkOption {
@@ -133,83 +214,8 @@ in {
                   }
                 ]
               },
-              {
-                "type": "custom",
-                "class": "systray",
-                "on_mouse_enter": "ironbar var set show_systray true",
-                "on_mouse_exit": "ironbar var set show_systray false",
-                "tooltip": "Systray",
-                "bar": [
-                  {
-                    "type": "label",
-                    "class": "systray-revealer-icon",
-                    "label": ""
-                  },
-                  {
-                    "type": "tray",
-                    "show_if": "#show_systray",
-                    "icon_size": 16
-                  }
-                ]
-              },
-              {
-                "type": "custom",
-                "class": "power",
-                "bar": [
-                  {
-                    "type": "button",
-                    "class": "power-icon",
-                    "label": "",
-                    "on_click": "popup:toggle",
-                    "tooltip": "Open power menu"
-                  }
-                ],
-                "popup": [
-                  {
-                    "orientation": "vertical",
-                    "type": "box",
-                    "class": "power-popup",
-                    "name": "power-popup",
-                    "widgets": [
-                      {
-                        "label": "<span font-weight='bold' font-size='16pt'>Have a nice day!</span>",
-                        "name": "header",
-                        "type": "label"
-                      },
-                      {
-                        "type": "box",
-                        "class": "power-button-box",
-                        "widgets": [
-                          {
-                            "class": "power-button",
-                            "label": "",
-                            "on_click": "!shutdown now",
-                            "type": "button"
-                          },
-                          {
-                            "class": "power-button",
-                            "label": "",
-                            "on_click": "!reboot",
-                            "type": "button"
-                          },
-                          {
-                            "class": "power-button",
-                            "label": "",
-                            "on_click": "!hyprlock",
-                            "type": "button"
-                          }
-                        ]
-                      },
-                      {
-                        "name": "uptime",
-                        "class": "uptime",
-                        "label": "Uptime: {{30000:${pkgs.procps}/bin/uptime -p | cut -d ' ' -f2-}}",
-                        "type": "label"
-                      }
-                    ]
-                  }
-                ]
-              }
+              ${systrayModule},
+              ${powerModule}
             ]
           }
         ''
@@ -227,83 +233,8 @@ in {
             ],
             "end": [
               ${volumeModule},
-              {
-                "type": "custom",
-                "class": "systray",
-                "on_mouse_enter": "ironbar var set show_systray true",
-                "on_mouse_exit": "ironbar var set show_systray false",
-                "tooltip": "Systray",
-                "bar": [
-                  {
-                    "type": "label",
-                    "class": "systray-revealer-icon",
-                    "label": ""
-                  },
-                  {
-                    "type": "tray",
-                    "show_if": "#show_systray",
-                    "icon_size": 16
-                  }
-                ]
-              },
-              {
-                "type": "custom",
-                "class": "power",
-                "bar": [
-                  {
-                    "type": "button",
-                    "class": "power-icon",
-                    "label": "",
-                    "on_click": "popup:toggle",
-                    "tooltip": "Open power menu"
-                  }
-                ],
-                "popup": [
-                  {
-                    "orientation": "vertical",
-                    "type": "box",
-                    "class": "power-popup",
-                    "name": "power-popup",
-                    "widgets": [
-                      {
-                        "label": "<span font-weight='bold' font-size='16pt'>Have a nice day!</span>",
-                        "name": "header",
-                        "type": "label"
-                      },
-                      {
-                        "type": "box",
-                        "class": "power-button-box",
-                        "widgets": [
-                          {
-                            "class": "power-button",
-                            "label": "",
-                            "on_click": "!shutdown now",
-                            "type": "button"
-                          },
-                          {
-                            "class": "power-button",
-                            "label": "",
-                            "on_click": "!reboot",
-                            "type": "button"
-                          },
-                          {
-                            "class": "power-button",
-                            "label": "",
-                            "on_click": "!hyprlock",
-                            "type": "button"
-                          }
-                        ]
-                      },
-                      {
-                        "name": "uptime",
-                        "class": "uptime",
-                        "label": "Uptime: {{30000:${pkgs.procps}/bin/uptime -p | cut -d ' ' -f2-}}",
-                        "type": "label"
-                      }
-                    ]
-                  }
-                ]
-              }
+              ${systrayModule},
+              ${powerModule}
             ]
           }
         '';
