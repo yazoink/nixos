@@ -59,11 +59,9 @@ in {
                 "tooltip": "Volume\n- Scroll to change\n- Left click to mute\n- Right click to open settings",
                 "bar": [
                   {
-                    "type": "script",
+                    "type": "volume",
                     "class": "volume-icon",
-                    "cmd": "${./scripts/volume_icon.sh}",
-                    "mode": "poll",
-                    "interval": 1000
+                    "format": "{icon}"
                   },
                   {
                     "type": "volume",
@@ -285,7 +283,7 @@ in {
         }
 
         .battery-icon,
-        .volume-icon,
+        .volume-icon label,
         .brightness-icon,
         .systray-revealer-icon {
           font-size: 16px;
