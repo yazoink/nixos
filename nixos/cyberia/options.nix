@@ -39,8 +39,8 @@
       };
       sddm = {
         scale = 1.3;
-        # wallpaper = ../../wallpapers/flower.jpg;
-        wallpaper = config.myOptions.desktopTheme.wallpaper.image.path;
+        wallpaper = ../../wallpapers/flower.jpg;
+        # wallpaper = config.myOptions.desktopTheme.wallpaper.image.path;
       };
     };
     bundles = {
