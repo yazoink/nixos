@@ -368,8 +368,8 @@ in {
         }
 
         scale trough {
-            min-width: 1px;
-            min-height: 2px;
+            min-width: 5px;
+            min-height: 5px;
         }
 
         .popup-volume .device-box .btn-mute,
