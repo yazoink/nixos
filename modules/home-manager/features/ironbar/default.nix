@@ -367,7 +367,7 @@ in {
             border-radius: 100%;
         }
 
-        scale trough {
+        scale trough, scale slider {
             min-width: 5px;
             min-height: 5px;
         }
