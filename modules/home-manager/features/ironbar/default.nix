@@ -351,7 +351,7 @@ in {
           font-family: "${fonts.sansSerif.name}";
           background-color: #${base16Scheme.base00};
           color: #${base16Scheme.base05};
-          padding: 5px;
+          padding: 15px;
           border: 1px solid #${base16Scheme.base01};
           border-radius: 10px;
         }
@@ -438,6 +438,10 @@ in {
         .power-button-box {
           margin-top: 10px;
           margin-bottom: 10px;
+        }
+
+        .popup-volume {
+          padding: 15px;
         }
       '';
     };
