@@ -78,6 +78,12 @@
       ]
     }
   '';
+  networkModule = ''
+    {
+      "type": "network_manager",
+      "icon_size": 16
+    }
+  '';
   powerModule = ''
     {
       "type": "custom",
@@ -212,6 +218,7 @@ in {
                   }
                 ]
               },
+              ${networkModule},
               ${systrayModule},
               ${powerModule}
             ]
