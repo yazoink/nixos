@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
 
-read -r current max < <(brightnessctl g m)
+max=$(brightnessctl max)
+current=$(brightnessctl get)
 echo $(( 100 * current / max ))%
