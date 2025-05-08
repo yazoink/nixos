@@ -188,8 +188,8 @@ in {
                     "type": "script",
                     "class": "brightness-percent",
                     "show_if": "#show_brightness_percent",
-                    "cmd": "${./scripts/brightness.py}",
-                    "mode": "watch",
+                    "cmd": "${./scripts/brightness_percent.sh}",
+                    "mode": "poll",
                     "interval": 1000
                   }
                 ]
