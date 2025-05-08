@@ -11,6 +11,7 @@
     then config.stylix.iconTheme.dark
     else config.stylix.iconTheme.light;
   barHeight = 36;
+  barPosition = "top";
   workspacesModule = ''
     {
       "type": "workspaces",
@@ -108,6 +109,32 @@
       ]
     }
   '';
+  brightnessModule = ''
+    {
+      "type": "custom",
+      "class": "brightness",
+      "on_mouse_enter": "ironbar var set show_brightness_percent true",
+      "on_mouse_exit": "ironbar var set show_brightness_percent false",
+      "on_scroll_up": "brightnessctl -s set +1%",
+      "on_scroll_down": "brightnessctl -s set 1%-",
+      "tooltip": "Brightness\n- Scroll to change",
+      "bar": [
+        {
+          "type": "label",
+          "class": "brightness-icon",
+          "label": ""
+        },
+        {
+          "type": "script",
+          "class": "brightness-percent",
+          "show_if": "#show_brightness_percent",
+          "cmd": "${./scripts/brightness_percent.sh}",
+          "mode": "poll",
+          "interval": 1000
+        }
+      ]
+    }
+  '';
   powerModule = ''
     {
       "type": "custom",
@@ -182,7 +209,7 @@ in {
         if osConfig.myOptions.hardwareFeatures.laptop.enable
         then ''
           {
-            "position": "top",
+            "position": "${barPosition}",
             "anchor_to_edges": true,
             "icon_theme": "${iconTheme}",
             "height": ${builtins.toString barHeight},
@@ -194,30 +221,7 @@ in {
             ],
             "end": [
               ${volumeModule},
-              {
-                "type": "custom",
-                "class": "brightness",
-                "on_mouse_enter": "ironbar var set show_brightness_percent true",
-                "on_mouse_exit": "ironbar var set show_brightness_percent false",
-                "on_scroll_up": "brightnessctl -s set +1%",
-                "on_scroll_down": "brightnessctl -s set 1%-",
-                "tooltip": "Brightness\n- Scroll to change",
-                "bar": [
-                  {
-                    "type": "label",
-                    "class": "brightness-icon",
-                    "label": ""
-                  },
-                  {
-                    "type": "script",
-                    "class": "brightness-percent",
-                    "show_if": "#show_brightness_percent",
-                    "cmd": "${./scripts/brightness_percent.sh}",
-                    "mode": "poll",
-                    "interval": 1000
-                  }
-                ]
-              },
+              ${brightnessModule},
               ${batteryModule},
               ${systrayModule},
               ${powerModule}
@@ -226,7 +230,7 @@ in {
         ''
         else ''
           {
-            "position": "top",
+            "position": "${barPosition}",
             "anchor_to_edges": true,
             "icon_theme": "${iconTheme}",
             "height": ${builtins.toString barHeight},
@@ -321,7 +325,7 @@ in {
         }
 
         .volume-icon {
-          font-size: 20px;
+          font-size: 22px;
         }
 
         .battery-percent,
