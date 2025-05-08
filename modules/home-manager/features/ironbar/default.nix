@@ -451,10 +451,6 @@ in {
             font-size: 1.7em;
         }
 
-        .popup-music .controls *:disabled {
-            color: @color_border;
-        }
-
         .popup-music .volume .slider slider {
             border-radius: 100%;
         }
@@ -470,6 +466,11 @@ in {
         scale trough {
             min-width: 1px;
             min-height: 2px;
+        }
+
+        .popup-volume .device-box .btn-mute,
+        .popup-volume .apps-box .app-box .btn-mute {
+          font-size: 24px;
         }
       '';
     };
