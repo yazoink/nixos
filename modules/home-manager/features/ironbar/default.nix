@@ -174,11 +174,9 @@ in {
                 "tooltip": "Brightness\n- Scroll to change",
                 "bar": [
                   {
-                    "type": "script",
+                    "type": "label",
                     "class": "brightness-icon",
-                    "cmd": "${./scripts/brightness_icon.sh}",
-                    "mode": "poll",
-                    "interval": 2000
+                    "label": " "
                   },
                   {
                     "type": "script",
