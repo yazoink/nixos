@@ -1,6 +1,4 @@
 #!/usr/bin/env bash
 
-max=$(brightnessctl max)
-current=$(brightnessctl get)
-percentage=$(( 100 * current / max ))
-echo "$percentage%"
+read -r current max < <(brightnessctl g m)
+echo $(( 100 * current / max ))%
