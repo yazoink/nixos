@@ -439,9 +439,37 @@ in {
           margin-top: 10px;
           margin-bottom: 10px;
         }
+        .popup-music .album-art {
+            margin-right: 1em;
+        }
 
-        .popup-volume {
-          padding: 15px;
+        .popup-music .icon-box {
+            margin-right: 0.4em;
+        }
+
+        .popup-music .title .icon, .popup-music .title .label {
+            font-size: 1.7em;
+        }
+
+        .popup-music .controls *:disabled {
+            color: @color_border;
+        }
+
+        .popup-music .volume .slider slider {
+            border-radius: 100%;
+        }
+
+        .popup-music .volume .icon {
+            margin-left: 4px;
+        }
+
+        .popup-music .progress .slider slider {
+            border-radius: 100%;
+        }
+
+        scale trough {
+            min-width: 1px;
+            min-height: 2px;
         }
       '';
     };
