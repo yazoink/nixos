@@ -317,6 +317,7 @@ in {
         .brightness-icon,
         .systray-revealer-icon {
           font-size: 16px;
+          font-family: "Font Awesome 6 Free";
         }
 
         .battery-percent,
