@@ -59,17 +59,17 @@ in {
                 "tooltip": "Volume\n- Scroll to change\n- Left click to mute\n- Right click to open settings",
                 "bar": [
                   {
-                    "type": "volume",
+                    "type": "script",
                     "class": "volume-icon",
-                    "format": "{icon}"
+                    "cmd": "${./scripts/volume_icon.sh}",
+                    "mode": "poll",
+                    "interval": 1000
                   },
                   {
-                    "type": "script",
+                    "type": "volume",
                     "class": "volume-percent",
                     "show_if": "#show_volume_percent",
-                    "cmd": "amixer sget Master | awk -F\"[][]\" '/Left:/ { print $2 }'",
-                    "mode": "poll",
-                    "interval": 700
+                    "format": "{percentage}%"
                   }
                 ]
               },
