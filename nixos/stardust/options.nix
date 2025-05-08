@@ -2,7 +2,7 @@
   myOptions = {
     defaultApps = {
       discordClient = {
-        command = "legcord";
+        command = "vesktop";
       };
       terminal = {
         command = "alacritty";
