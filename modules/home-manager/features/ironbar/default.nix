@@ -39,7 +39,7 @@
       "on_click_right": "pavucontrol",
       "on_scroll_up": "amixer set Master 1%+",
       "on_scroll_down": "amixer set Master 1%-",
-      "tooltip": "Volume\n- Scroll to change\n- Left click the icon to toggle mute\n- Left click the number to open popup\n- Middle click to toggle mute\n- Right click to open settings",
+      "tooltip": "Volume\n- Scroll to change\n- Left click to open popup\n- Middle click to toggle mute\n- Right click to open settings",
       "bar": [
         {
           "type": "volume",
@@ -319,7 +319,7 @@ in {
         }
 
         .volume-icon {
-          font-size: 20px;
+          font-size: 24px;
         }
 
         .battery-percent,
