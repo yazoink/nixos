@@ -7,7 +7,7 @@ status="$(cat /sys/class/power_supply/"$1"/status)"
     exit 0
 }
 
-battery=$(cat /sys/class/power_supply/BAT0/capacity)
+battery=$(cat /sys/class/power_supply/"$1"/capacity)
 
 if [[ $battery -lt 21 ]]; then
     echo " "
