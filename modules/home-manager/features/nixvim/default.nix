@@ -19,6 +19,7 @@
         else "mini.base16";
     };
     home.packages = with pkgs; [
+      fzf
       prettierd
       black
       stylua
