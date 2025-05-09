@@ -1,7 +1,7 @@
 {
-  pkgs,
   config,
   lib,
+  pkgs,
   ...
 }: {
   options = {
@@ -12,6 +12,10 @@
   };
   imports = [./theme];
   config = lib.mkIf config.bundles.desktopBase.sddm.enable {
+    environment.systemPackages = with pkgs; [
+      libsForQt5.qt5.qtgraphicaleffects
+      libsForQt5.qt5.qtquickcontrols2
+    ];
     services.displayManager.sddm = {
       enable = true;
       wayland.enable = true;
