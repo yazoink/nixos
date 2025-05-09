@@ -1,4 +1,8 @@
-{config, ...}: let
+{
+  config,
+  osConfig,
+  ...
+}: let
   gtkrcFile = config.lib.stylix.colors {
     template = ./gtkrc.mustache;
     extension = ".css";

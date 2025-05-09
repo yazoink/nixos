@@ -15,8 +15,8 @@
           package = osConfig.desktopTheme.iconTheme.package or pkgs.numix-icon-theme;
         };
       }
-      (import ./gtk {inherit config;})
-      (import ./qt {inherit config pkgs;})
+      (import ./gtk {inherit config osConfig;})
+      (import ./qt {inherit config pkgs osConfig;})
     ]
   );
 }
