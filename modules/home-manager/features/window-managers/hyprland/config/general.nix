@@ -18,7 +18,7 @@
       then "rgb(${config.stylix.base16Scheme.base02})"
       else "rgb(${config.stylix.base16Scheme.base01})";
     resize_on_border = true;
-    extend_border_grab_area = 10;
+    extend_border_grab_area = 15;
     hover_icon_on_border = true;
   };
   decoration = {
