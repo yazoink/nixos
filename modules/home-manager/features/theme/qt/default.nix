@@ -4,16 +4,16 @@
   osConfig,
   ...
 }: let
-  qtctConf = ''
+  qtctConf = with config.stylix; ''
     [Appearance]
     custom_palette=false
     style=kvantum
-    icon_theme=${config.gtk.iconTheme.name}
+    icon_theme=${iconTheme.${polarity}}
     standard_dialogs=default
 
     [Fonts]
-    fixed="${config.stylix.fonts.monospace.name},${toString config.stylix.fonts.sizes.applications},-1,5,5,50,0,0,0,0,Regular"
-    general="${config.stylix.fonts.sansSerif.name},${toString config.stylix.fonts.sizes.applications},-1,5,50,0,0,0,0,0,Regular"
+    fixed="${fonts.monospace.name},${toString fonts.sizes.applications},-1,5,5,50,0,0,0,0,Regular"
+    general="${fonts.sansSerif.name},${toString fonts.sizes.applications},-1,5,50,0,0,0,0,0,Regular"
 
     [Interface]
     activate_item_on_single_click=1
