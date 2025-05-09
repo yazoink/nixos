@@ -18,6 +18,9 @@ lib.mkMerge [
       ", XF86AudioMicMute, exec, swayosd-client --input-volume mute-toggle"
       ", XF86MonBrightnessDown, exec, swayosd-client --brightness lower"
       ", XF86MonBrightnessUp, exec, swayosd-client --brightness raise"
+      "$mainMod, F11, exec, swayosd-client --output-volume lower"
+      "$mainMod, F12, exec, swayosd-client --output-volume raise"
+      "$mainMod, F10, exec, swayosd-client --output-volume mute-toggle"
     ];
     binde = [
       ", XF86AudioRaiseVolume, exec, swayosd-client --output-volume raise"
@@ -35,6 +38,9 @@ lib.mkMerge [
       ", XF86AudioMicMute, exec, pamixer --default-source -t"
       ", XF86MonBrightnessDown, exec, brightnessctl set 5%-"
       ", XF86MonBrightnessUp, exec, brightnessctl set 5%+"
+      "$mainMod, F11, exec, pamixer -d 5"
+      "$mainMod, F12, exec, pamixer -i 5"
+      "$mainMod, F10, exec, pamixer -t"
     ];
     binde = [
       ", XF86AudioRaiseVolume, exec, pamixer -i 5"
