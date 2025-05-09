@@ -16,6 +16,7 @@ in
         kb_layout = "us";
         follow_mouse = 1;
         scroll_points = "flat";
+        numlock_by_default = true;
         touchpad = {
           disable_while_typing = false;
           scroll_factor = hyprlandTouchpadScrollFactor;

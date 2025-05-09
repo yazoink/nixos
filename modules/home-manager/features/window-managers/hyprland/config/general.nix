@@ -17,6 +17,9 @@
       if (osConfig.myOptions.desktopTheme.name == "catppuccin-mocha")
       then "rgb(${config.stylix.base16Scheme.base02})"
       else "rgb(${config.stylix.base16Scheme.base01})";
+    resize_on_border = true;
+    extend_border_grab_area = 10;
+    hover_icon_on_border = true;
   };
   decoration = {
     rounding = 10;
@@ -40,6 +43,9 @@
     swallow_regex = "(foot|kitty|alacritty|Alacritty)";
     force_default_wallpaper = 0;
     font_family = config.stylix.fonts.sansSerif.name;
+  };
+  ecosystem = {
+    no_donation_nag = true;
   };
   dwindle = {
     pseudotile = true;
