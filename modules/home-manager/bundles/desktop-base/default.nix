@@ -23,10 +23,9 @@
     ../../features/notifications
     ../../features/launchers
     ../../features/bars
+    ../../features/lockscreens
 
     ../../features/direnv
-    ../../features/gtklock
-    ../../features/hyprlock
     ../../features/hyprviewbinds
     ../../features/screenshot
     ../../features/simple-logout

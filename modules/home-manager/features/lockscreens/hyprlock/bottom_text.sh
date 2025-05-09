@@ -35,7 +35,7 @@ function get_bat_icon() {
         [80]=" "
     )
     for icon in "${!icons[@]}"; do
-        [[ $bat_percentage < $icon ]] && {
+        (( bat_percentage < icon )) && {
             echo "${icons[$icon]}"
             return 0
         }

@@ -7,14 +7,13 @@
     ../../features/file-managers
     ../../features/window-managers
     ../../features/display-managers
+    ../../features/lockscreens
 
     ../../features/acpi
     ../../features/audio
     ../../features/dconf
     ../../features/fonts
     ../../features/gnome-keyring
-    ../../features/gtklock
-    ../../features/hyprlock
     ../../features/plymouth
     ../../features/polkit
     ../../features/silent-boot
