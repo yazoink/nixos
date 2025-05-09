@@ -11,6 +11,7 @@ in {
   config = lib.mkIf (bundles.desktopBase.enable && defaultApps.webBrowser.command == "firefox") (
     lib.mkMerge [
       {
+        defaultApps.webBrowser.desktopFile = "firefox.desktop";
         home = {
           sessionVariables = {
             MOZ_USE_XINPUT2 = 1;
