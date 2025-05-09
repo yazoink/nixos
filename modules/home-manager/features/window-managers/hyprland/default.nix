@@ -19,6 +19,7 @@
     };
     home.packages = with pkgs; [
       wl-clipboard
+      wf-recorder
       wayland-pipewire-idle-inhibit
       wl-clip-persist
       networkmanagerapplet
