@@ -7,12 +7,12 @@
   inherit (osConfig.myOptions) defaultApps desktopTheme;
   wallpaperCommand =
     if (desktopTheme.wallpaper.type == "color")
-    then "${../scripts/swaybg.sh} -i ${desktopTheme.wallpaper.color.hex}"
+    then "${../../scripts/swaybg.sh} -i ${desktopTheme.wallpaper.color.hex}"
     else
       (
         if (osConfig.myOptions.desktopTheme.wallpaper.image.fillType == "fill")
-        then "${../scripts/swaybg.sh} -i ${desktopTheme.wallpaper.image.path}"
-        else "${../scripts/swaybg.sh} -t ${desktopTheme.wallpaper.image.path}"
+        then "${../../scripts/swaybg.sh} -i ${desktopTheme.wallpaper.image.path}"
+        else "${../../scripts/swaybg.sh} -t ${desktopTheme.wallpaper.image.path}"
       );
 in {
   config = lib.mkIf osConfig.bundles.desktopBase.hyprland.enable {
