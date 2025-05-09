@@ -19,7 +19,7 @@
       package = null;
       portalPackage = null;
       settings = lib.mkMerge [
-        (import ./config/autostart.nix)
+        (import ./config/autostart.nix {inherit osConfig;})
         (import ./config/animations.nix)
       ];
     };
