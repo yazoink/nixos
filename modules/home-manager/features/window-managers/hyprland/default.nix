@@ -21,6 +21,10 @@
       enable = true;
       package = null;
       portalPackage = null;
+      settings = lib.mkMerge [
+        (import ./config/autostart.nix)
+        (import ./config/animations.nix)
+      ];
     };
   };
 }
