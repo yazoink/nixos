@@ -9,11 +9,6 @@
   icons = pkgs.callPackage ./everblush-icons.nix {};
 in {
   config = lib.mkIf (config.myOptions.bundles.desktopBase.enable && config.myOptions.desktopTheme.name == "everblush") {
-    environment.systemPackages = [
-      cursors
-      icons
-    ];
-
     desktopTheme.base16Accent = "base0D";
     desktopTheme.iconTheme = {
       name = "Everblush-Icons";

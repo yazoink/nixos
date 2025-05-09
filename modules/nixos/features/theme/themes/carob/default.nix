@@ -7,10 +7,6 @@
   carobTheme = pkgs.callPackage ./carob-theme.nix {};
 in {
   config = lib.mkIf (config.myOptions.bundles.desktopBase.enable && config.myOptions.desktopTheme.name == "carob") {
-    environment.systemPackages = [
-      carobTheme
-    ];
-
     desktopTheme.base16Accent = "base0D";
     desktopTheme.iconTheme = {
       name = "Carob";

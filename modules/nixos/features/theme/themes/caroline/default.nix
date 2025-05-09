@@ -8,11 +8,6 @@
   carolineIcons = pkgs.callPackage ./caroline-icons.nix {};
 in {
   config = lib.mkIf (config.myOptions.bundles.desktopBase.enable && config.myOptions.desktopTheme.name == "caroline") {
-    environment.systemPackages = [
-      carolineCursors
-      carolineIcons
-    ];
-
     desktopTheme.base16Accent = "base0F";
     desktopTheme.iconTheme = {
       name = "caroline-suru-aspromauros";
