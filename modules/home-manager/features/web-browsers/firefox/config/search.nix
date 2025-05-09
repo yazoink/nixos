@@ -14,5 +14,5 @@
         definedAliases = ["@4g"];
       };
     };
-  }
+  };
 }
