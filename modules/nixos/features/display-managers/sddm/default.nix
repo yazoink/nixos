@@ -1,5 +1,9 @@
-{pkgs, config, lib, ...}:
 {
+  pkgs,
+  config,
+  lib,
+  ...
+}: {
   options = {
     bundles.desktopBase.sddm.enable = lib.mkOption {
       type = lib.types.bool;
@@ -8,11 +12,6 @@
   };
   imports = [./theme];
   config = lib.mkIf config.bundles.desktopBase.sddm.enable {
-    environment.systemPackages = [
-      pkgs.libsForQt5.qt5.qtgraphicaleffects
-      pkgs.libsForQt5.qt5.qtquickcontrols2
-    ];
-
     services.displayManager.sddm = {
       enable = true;
       wayland.enable = true;
