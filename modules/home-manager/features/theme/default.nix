@@ -10,9 +10,9 @@
       {
         stylix.iconTheme = {
           enable = true;
-          dark = osConfig.desktopTheme.iconTheme.name or "Numix";
-          light = osConfig.desktopTheme.iconTheme.name or "Numix";
-          package = osConfig.desktopTheme.iconTheme.package or pkgs.numix-icon-theme;
+          dark = osConfig.desktopTheme.iconTheme.name;
+          light = osConfig.desktopTheme.iconTheme.name;
+          package = osConfig.desktopTheme.iconTheme.package;
         };
       }
       (import ./gtk {inherit config osConfig;})
