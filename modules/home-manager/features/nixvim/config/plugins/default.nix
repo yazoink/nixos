@@ -26,5 +26,7 @@
     (import ./conform.nix)
     (import ./cmp.nix)
     (import ./lsp.nix)
+    (import ./telescope.nix)
+    # (import ./undotree.nix)
   ];
 }
