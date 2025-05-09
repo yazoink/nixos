@@ -22,6 +22,7 @@
     ../../features/window-managers
     ../../features/notifications
     ../../features/launchers
+    ../../features/bars
 
     ../../features/direnv
     ../../features/gtklock
@@ -30,8 +31,6 @@
     ../../features/screenshot
     ../../features/simple-logout
     ../../features/theme
-    ../../features/waybar
-    ../../features/ironbar
     ../../features/xdg
     ../../features/dconf
     ../../features/swayosd

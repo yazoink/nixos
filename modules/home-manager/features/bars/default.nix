@@ -1,0 +1,6 @@
+{
+  imports = [
+    ./waybar
+    ./ironbar
+  ];
+}
