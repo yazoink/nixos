@@ -15,7 +15,7 @@
             ", XF86AudioPrev, exec, playerctl previous"
           ];
         }
-        (lib.mkIf config.desktopBase.swayosd.enable {
+        (lib.mkIf config.bundles.desktopBase.swayosd.enable {
           bind = [
             ", XF86AudioMute, exec, swayosd-client --output-volume mute-toggle"
             ", XF86AudioMicMute, exec, swayosd-client --input-volume mute-toggle"
@@ -32,7 +32,7 @@
             "CAPS, Caps_Lock, exec, swayosd-client --caps-lock"
           ];
         })
-        (lib.mkIf (config.desktopBase.swayosd.enable == false) {
+        (lib.mkIf (config.bundles.desktopBase.swayosd.enable == false) {
           bind = [
             ", XF86AudioMute, exec, pamixer -t"
             ", XF86AudioMicMute, exec, pamixer --default-source -t"
