@@ -3,7 +3,7 @@
   osConfig,
   ...
 }: {
-  general = rec {
+  general = {
     gaps_in = 5;
     gaps_out = 15;
     border_size = 1;
@@ -13,7 +13,10 @@
       if (osConfig.myOptions.desktopTheme.name == "catppuccin-mocha")
       then "rgb(${config.stylix.base16Scheme.base02})"
       else "rgb(${config.stylix.base16Scheme.base01})";
-    "col.active_border" = "col.inactive_border";
+    "col.active_border" =
+      if (osConfig.myOptions.desktopTheme.name == "catppuccin-mocha")
+      then "rgb(${config.stylix.base16Scheme.base02})"
+      else "rgb(${config.stylix.base16Scheme.base01})";
   };
   decoration = {
     rounding = 10;
