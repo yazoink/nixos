@@ -21,22 +21,6 @@
       trusted-public-keys = ["hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="];
     };
 
-    environment.systemPackages = with pkgs; [
-      wl-clipboard
-      wayland-pipewire-idle-inhibit
-      wl-clip-persist
-      upower # for poweralertd
-      networkmanagerapplet
-      brightnessctl
-      poweralertd
-      grim
-      slurp
-      hyprpicker
-      hyprcursor
-      wdisplays
-      swaybg
-    ];
-
     services = {
       upower.enable = true; # for poweralertd
       dbus.enable = true;

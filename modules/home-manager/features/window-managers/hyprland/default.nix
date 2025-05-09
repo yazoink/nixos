@@ -17,6 +17,20 @@
       hyprViewBinds.enable = true;
       swayosd.enable = true;
     };
+    home.packages = with pkgs; [
+      wl-clipboard
+      wayland-pipewire-idle-inhibit
+      wl-clip-persist
+      networkmanagerapplet
+      brightnessctl
+      poweralertd
+      grim
+      slurp
+      hyprpicker
+      hyprcursor
+      wdisplays
+      swaybg
+    ];
     wayland.windowManager.hyprland = lib.mkMerge [
       {
         enable = true;
