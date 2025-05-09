@@ -1,0 +1,5 @@
+{
+  icons = {
+    style = "glyph";
+  };
+}

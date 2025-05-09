@@ -1,45 +1,43 @@
-{config, lib, ...}:
 {
+  config,
+  lib,
+  pkgs,
+  ...
+}: {
   options = {
     bundles.base.nixvim.enable = lib.mkOption {
       type = lib.types.bool;
       default = false;
     };
   };
-
-  imports = [
-    ./colors.nix
-    ./keymaps.nix
-    ./plugins.nix
-  ];
-
   config = lib.mkIf config.bundles.base.nixvim.enable {
-    programs.nixvim = {
-      enable = true;
-      opts = {
-        number = true;
-        #relativenumber = true;
-        signcolumn = "yes";
-        tabstop = 2;
-        shiftwidth = 2;
-        softtabstop = 0;
-        expandtab = true;
-        smarttab = true;
-        cursorline = true;
-        ruler = true;
-        scrolloff = 7;
-        termguicolors = true;
-        mouse = "a";
-        fileencoding = "utf-8";
-        swapfile = false;
-        ignorecase = true;
-        smartcase = true;
-        wrap = false;
-      };
-      clipboard = {
-        register = "unnamedplus";
-        providers.wl-copy.enable = true;
-      };
+    stylix.targets.nixvim = {
+      enable = lib.mkDefault true;
+      # plugin = "base16-nvim";
+      plugin =
+        if (config.stylix.polarity == "dark")
+        then "base16-nvim"
+        else "mini.base16";
     };
+    home.packages = with pkgs; [
+      prettierd
+      black
+      stylua
+      alejandra
+      shfmt
+      beautysh
+      yamllint
+      yamlfmt
+      uncrustify
+      fixjson
+      rustfmt
+      gcc
+      clang-tools
+      # php84Packages.php-cs-fixer broken :(
+    ];
+    programs.nixvim = lib.mkMerge [
+      {enable = true;}
+      (import ./config {inherit lib config;})
+    ];
   };
 }
