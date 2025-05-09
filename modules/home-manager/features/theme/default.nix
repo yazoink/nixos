@@ -63,7 +63,7 @@ in {
         enable = true;
         dark = lib.mkDefault "Numix";
         light = lib.mkDefault "Numix";
-        package = lib.mkDefault pkgs.numix-icon-theme;
+        package = lib.If (config.stylix.iconTheme.dark == "Numix") pkgs.numix-icon-theme;
       };
       targets = {
         waybar.enable = false;
