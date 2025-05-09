@@ -32,8 +32,6 @@
       fonts.enable = true;
       gnomeKeyring.enable = true;
       greetd.enable = lib.mkIf (config.myOptions.bundles.desktopBase.displayManager == "regreet") true;
-      gtklock.enable = lib.mkIf (config.myOptions.bundles.desktopBase.windowManager == "sway") true;
-      hyprlock.enable = lib.mkIf (config.myOptions.bundles.desktopBase.windowManager == "hyprland") true;
       hyprland.enable = lib.mkIf (config.myOptions.bundles.desktopBase.windowManager == "hyprland") true;
       plymouth.enable = true;
       polkit.enable = true;

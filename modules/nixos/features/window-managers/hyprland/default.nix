@@ -14,7 +14,7 @@
   };
   config = lib.mkIf config.bundles.desktopBase.hyprland.enable {
     bundles.desktopBase = {
-      gtklock.enable = true;
+      hyprlock.enable = true;
     };
     nix.settings = {
       substituters = ["https://hyprland.cachix.org"];
