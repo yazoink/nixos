@@ -438,6 +438,10 @@
             type = lib.types.str;
             default = "BAT0";
           };
+          isThinkPad = lib.mkOption {
+            type = lib.types.bool;
+            default = false;
+          };
         };
       };
     };

@@ -73,6 +73,7 @@
       laptop = {
         enable = true;
         hyprlandTouchpadScrollFactor = 0.2;
+        isThinkPad = true;
       };
     };
   };

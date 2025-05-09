@@ -106,6 +106,7 @@
       #   enable = true;
       #   hyprlandTouchpadScrollFactor = 1;
       #   batteryName = "BAT0";
+      #   isThinkPad = true;
       # };
 
       # --> UEFI bootloader
