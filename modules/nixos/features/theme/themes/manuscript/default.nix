@@ -7,10 +7,6 @@
   manuscriptTheme = pkgs.callPackage ./manuscript-theme.nix {};
 in {
   config = lib.mkIf (config.myOptions.bundles.desktopBase.enable && config.myOptions.desktopTheme.name == "manuscript") {
-    environment.systemPackages = [
-      manuscriptTheme
-    ];
-
     desktopTheme.base16Accent = "base0A";
     desktopTheme.iconTheme = {
       name = "Manuscript-Icons";
@@ -20,6 +16,7 @@ in {
     stylix = {
       cursor = {
         name = "Bibata-Manuscript";
+        package = manuscriptTheme;
       };
       base16Scheme = {
         base00 = "292A2A";

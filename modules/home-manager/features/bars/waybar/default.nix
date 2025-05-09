@@ -22,6 +22,7 @@ in {
   ];
 
   config = lib.mkIf config.bundles.desktopBase.waybar.enable {
+    stylix.targets.waybar.enable = false;
     programs.waybar = {
       enable = true;
       settings = {

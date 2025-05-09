@@ -5,10 +5,6 @@
   ...
 }: {
   config = lib.mkIf (config.myOptions.bundles.desktopBase.enable && config.myOptions.desktopTheme.name == "rose-pine-dawn") {
-    environment.systemPackages = [
-      pkgs.rose-pine-cursor
-    ];
-
     desktopTheme.base16Accent = "base0B";
     desktopTheme.iconTheme = {
       name = "rose-pine-dawn";
@@ -19,6 +15,7 @@
       polarity = "light";
       cursor = {
         name = "BreezeX-RosePineDawn-Linux";
+        package = pkgs.rose-pine-cursor;
         size = 32;
       };
       base16Scheme = {

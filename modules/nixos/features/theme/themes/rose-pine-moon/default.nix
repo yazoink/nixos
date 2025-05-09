@@ -5,13 +5,8 @@
   ...
 }: let
   rosepineCursors = pkgs.callPackage ./rosepine-cursors.nix {};
-  rosepineIcons = pkgs.callPackage ./rosepine-icons.nix {};
 in {
   config = lib.mkIf (config.myOptions.bundles.desktopBase.enable && config.myOptions.desktopTheme.name == "rose-pine-moon") {
-    environment.systemPackages = [
-      rosepineCursors
-    ];
-
     desktopTheme.base16Accent = "base0B";
     desktopTheme.iconTheme = {
       name = "Rose-Pine-Moon";
@@ -21,6 +16,7 @@ in {
     stylix = {
       cursor = {
         name = "Bibata-Rose-Pine";
+        package = rosepineCursors;
       };
       base16Scheme = {
         base00 = "232136";

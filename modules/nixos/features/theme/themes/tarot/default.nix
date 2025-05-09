@@ -8,10 +8,6 @@
   tarotIcons = pkgs.callPackage ./tarot-icons.nix {};
 in {
   config = lib.mkIf (config.myOptions.bundles.desktopBase.enable && config.myOptions.desktopTheme.name == "tarot") {
-    environment.systemPackages = [
-      tarotCursors
-    ];
-
     desktopTheme.base16Accent = "base0A";
     desktopTheme.iconTheme = {
       name = "Tarot-Icons";
@@ -21,6 +17,7 @@ in {
     stylix = {
       cursor = {
         name = "Bibata-Tarot";
+        package = tarotCursors;
       };
       base16Scheme = {
         base00 = "0E091D";

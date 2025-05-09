@@ -13,11 +13,11 @@ in {
       name = "Papirus-Levuaska";
       package = icons;
     };
-    environment.systemPackages = [cursors icons];
     stylix = {
       cursor = {
         name = "BreezeX-Levuaska";
         size = 32;
+        package = cursors;
       };
       base16Scheme = {
         base00 = "0f0f17";

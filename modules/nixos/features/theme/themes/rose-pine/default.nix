@@ -3,14 +3,8 @@
   config,
   lib,
   ...
-}: let
-  rosepineIcons = pkgs.callPackage ./rosepine-icons.nix {};
-in {
+}: {
   config = lib.mkIf (config.myOptions.bundles.desktopBase.enable && config.myOptions.desktopTheme.name == "rose-pine") {
-    environment.systemPackages = [
-      pkgs.rose-pine-cursor
-    ];
-
     desktopTheme.base16Accent = "base0B";
     desktopTheme.iconTheme = {
       name = "Rose-Pine";
@@ -20,6 +14,7 @@ in {
     stylix = {
       cursor = {
         name = "BreezeX-RosePineDawn-Linux";
+        package = pkgs.rose-pine-cursor;
         size = 32;
       };
       base16Scheme = {
