@@ -13,7 +13,7 @@
     ./biscuit-de-sol-light
     ./biscuit-de-mar-dark
     ./biscuit-de-mar-light
-    ./everblush
+    # ./everblush
     ./levuaska
     ./paradise
     ./rose-pine-dawn

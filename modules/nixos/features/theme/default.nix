@@ -5,9 +5,19 @@
   ...
 }: {
   options = {
-    desktopTheme.base16Accent = lib.mkOption {
-      type = lib.types.str;
-      description = "options: base09, base0A, base0B, base0C, base0D, base0E, base0F";
+    desktopTheme = {
+      base16Accent = lib.mkOption {
+        type = lib.types.str;
+        description = "options: base09, base0A, base0B, base0C, base0D, base0E, base0F";
+      };
+      iconTheme = {
+        name = lib.mkOption {
+          type = lib.types.str;
+        };
+        package = lib.mkOption {
+          type = lib.types.package;
+        };
+      };
     };
   };
   imports = [

@@ -4,7 +4,7 @@
   lib,
   ...
 }: {
-  config = lib.mkIf (osConfig.myOptions.bundles.desktopBase.enable && osConfig.myOptions.desktopTheme.name == "biscuit-de-mar-light") {
+  config = lib.mkIf (osConfig.myOptions.bundles.desktopBase.enable && osConfig.myOptions.desktopTheme.name == "biscuit-de-mar-dark") {
     stylix = {
       iconTheme.dark = "papirus-biscuit-light";
     };

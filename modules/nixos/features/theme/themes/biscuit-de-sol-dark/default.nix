@@ -14,6 +14,10 @@ in {
     ];
 
     desktopTheme.base16Accent = "base0D";
+    desktopTheme.iconTheme = {
+      name = "papirus-biscuit-dark";
+      package = icons;
+    };
 
     stylix = {
       cursor = {

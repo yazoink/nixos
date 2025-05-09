@@ -61,9 +61,9 @@ in {
       targets.qt.enable = false;
       iconTheme = {
         enable = true;
-        dark = lib.mkDefault "Numix";
-        light = lib.mkDefault "Numix";
-        package = lib.mkIf (config.stylix.iconTheme.dark == "Numix") pkgs.numix-icon-theme;
+        dark = osConfig.desktopTheme.iconTheme.name or "Numix";
+        light = osConfig.desktopTheme.iconTheme.name or "Numix";
+        package = osConfig.desktopTheme.iconTheme.package or pkgs.numix-icon-theme;
       };
       targets = {
         waybar.enable = false;

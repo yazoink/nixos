@@ -12,6 +12,10 @@ in {
     ];
 
     desktopTheme.base16Accent = "base0D";
+    desktopTheme.iconTheme = {
+      name = "papirus-biscuit-light";
+      package = icons;
+    };
 
     stylix = {
       polarity = "light";

@@ -15,6 +15,10 @@ in {
     ];
 
     desktopTheme.base16Accent = "base0D";
+    desktopTheme.iconTheme = {
+      name = "Everblush-Icons";
+      package = icons;
+    };
 
     stylix = {
       cursor = {
