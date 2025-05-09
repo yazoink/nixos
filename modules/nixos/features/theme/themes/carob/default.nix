@@ -12,6 +12,10 @@ in {
     ];
 
     desktopTheme.base16Accent = "base0D";
+    desktopTheme.iconTheme = {
+      name = "Carob";
+      package = carobTheme;
+    };
 
     stylix = {
       cursor = {

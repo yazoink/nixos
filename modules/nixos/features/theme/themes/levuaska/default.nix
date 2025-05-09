@@ -9,6 +9,10 @@
 in {
   config = lib.mkIf (config.myOptions.bundles.desktopBase.enable && config.myOptions.desktopTheme.name == "levuaska") {
     desktopTheme.base16Accent = "base0D";
+    desktopTheme.iconTheme = {
+      name = "Papirus-Levuaska";
+      package = icons;
+    };
     environment.systemPackages = [cursors icons];
     stylix = {
       cursor = {

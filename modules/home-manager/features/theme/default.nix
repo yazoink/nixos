@@ -45,7 +45,6 @@
   '';
   kvantumGenerator = ./kvantum-generator/generate_kvantum.py;
 in {
-  imports = [./themes];
   config = lib.mkIf osConfig.myOptions.bundles.desktopBase.enable {
     systemd.user.services.generate-kvantum = {
       Unit.Description = "Generate the Kvantum theme";

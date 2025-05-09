@@ -9,11 +9,14 @@
 in {
   config = lib.mkIf (config.myOptions.bundles.desktopBase.enable && config.myOptions.desktopTheme.name == "gruvbox-dark-hard") {
     environment.systemPackages = with pkgs; [
-      gruvbox-plus-icons
       cursors
     ];
 
     desktopTheme.base16Accent = "base0D";
+    desktopTheme.iconTheme = {
+      name = "Gruvbox-Plus-Dark";
+      package = pkgs.gruvbox-plus-icons;
+    };
 
     stylix = {
       cursor = {

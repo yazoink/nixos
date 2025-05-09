@@ -11,6 +11,10 @@ let
 in {
   config = lib.mkIf (config.myOptions.bundles.desktopBase.enable && config.myOptions.desktopTheme.name == "paradise") {
     desktopTheme.base16Accent = "base0D";
+    desktopTheme.iconTheme = {
+      name = "Papirus-Paradise-Yellow";
+      package = icons;
+    };
     environment.systemPackages = [cursors icons];
     stylix = {
       cursor = {

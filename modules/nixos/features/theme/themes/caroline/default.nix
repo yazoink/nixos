@@ -14,6 +14,10 @@ in {
     ];
 
     desktopTheme.base16Accent = "base0F";
+    desktopTheme.iconTheme = {
+      name = "caroline-suru-aspromauros";
+      package = carolineIcons;
+    };
 
     stylix = {
       cursor = {

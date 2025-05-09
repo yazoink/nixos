@@ -1,16 +1,22 @@
-{pkgs, config, lib, ...}:
-let
+{
+  pkgs,
+  config,
+  lib,
+  ...
+}: let
   rosepineCursors = pkgs.callPackage ./rosepine-cursors.nix {};
   rosepineIcons = pkgs.callPackage ./rosepine-icons.nix {};
-in
-{
+in {
   config = lib.mkIf (config.myOptions.bundles.desktopBase.enable && config.myOptions.desktopTheme.name == "rose-pine-moon") {
     environment.systemPackages = [
       rosepineCursors
-      rosepineIcons
     ];
 
     desktopTheme.base16Accent = "base0B";
+    desktopTheme.iconTheme = {
+      name = "Rose-Pine-Moon";
+      package = pkgs.rosepineIcons;
+    };
 
     stylix = {
       cursor = {

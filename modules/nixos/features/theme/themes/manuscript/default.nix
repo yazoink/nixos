@@ -1,14 +1,21 @@
-{pkgs, config, lib, ...}:
-let
-  manuscriptTheme = pkgs.callPackage ./manuscript-theme.nix {};
-in
 {
+  pkgs,
+  config,
+  lib,
+  ...
+}: let
+  manuscriptTheme = pkgs.callPackage ./manuscript-theme.nix {};
+in {
   config = lib.mkIf (config.myOptions.bundles.desktopBase.enable && config.myOptions.desktopTheme.name == "manuscript") {
     environment.systemPackages = [
       manuscriptTheme
     ];
 
     desktopTheme.base16Accent = "base0A";
+    desktopTheme.iconTheme = {
+      name = "Manuscript-Icons";
+      package = manuscriptTheme;
+    };
 
     stylix = {
       cursor = {

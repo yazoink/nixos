@@ -10,10 +10,13 @@ in {
   config = lib.mkIf (config.myOptions.bundles.desktopBase.enable && config.myOptions.desktopTheme.name == "tarot") {
     environment.systemPackages = [
       tarotCursors
-      tarotIcons
     ];
 
     desktopTheme.base16Accent = "base0A";
+    desktopTheme.iconTheme = {
+      name = "Tarot-Icons";
+      package = tarotIcons;
+    };
 
     stylix = {
       cursor = {

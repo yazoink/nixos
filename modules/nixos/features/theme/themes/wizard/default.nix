@@ -1,14 +1,21 @@
-{pkgs, config, lib, ...}:
-let
-  wizardTheme = pkgs.callPackage ./wizard-theme.nix {};
-in
 {
+  pkgs,
+  config,
+  lib,
+  ...
+}: let
+  wizardTheme = pkgs.callPackage ./wizard-theme.nix {};
+in {
   config = lib.mkIf (config.myOptions.bundles.desktopBase.enable && config.myOptions.desktopTheme.name == "wizard") {
     environment.systemPackages = [
       wizardTheme
     ];
 
     desktopTheme.base16Accent = "base0B";
+    desktopTheme.iconTheme = {
+      name = "Wizard-Icons";
+      package = wizardTheme;
+    };
 
     stylix = {
       cursor = {

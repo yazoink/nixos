@@ -10,6 +10,10 @@
     ];
 
     desktopTheme.base16Accent = "base0B";
+    desktopTheme.iconTheme = {
+      name = "rose-pine-dawn";
+      package = pkgs.rose-pine-icon-theme;
+    };
 
     stylix = builtins.trace "rose-pine-dawn enabled" {
       polarity = "light";
