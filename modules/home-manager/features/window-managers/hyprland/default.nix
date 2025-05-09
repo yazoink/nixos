@@ -31,4 +31,5 @@
       }
       (import ./config/plugins)
     ];
+  };
 }
