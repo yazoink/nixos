@@ -13,7 +13,7 @@ lib.mkMerge [
         extraConfig = builtins.readFile ./user.js;
       }
       (import ./search.nix)
-      (import ./extensions.nix {inherit osConfig inputs;})
+      (import ./extensions.nix {inherit osConfig inputs lib;})
     ];
   }
 ]

@@ -1,6 +1,7 @@
 {
   inputs,
   osConfig,
+  lib,
   ...
 }: let
   inherit (osConfig.myOptions.hardwareFeatures) h264ify;
