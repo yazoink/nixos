@@ -14,14 +14,14 @@
       hyprViewBinds.enable = true;
       swayosd.enable = true;
     };
-    wayland.windowManager.hyprland = lib.mkMerge [
-      {
-        enable = true;
-        package = null;
-        portalPackage = null;
-      }
-      {settings = import ./config/autostart.nix;}
-      {settings = import ./config/animations.nix;}
-    ];
+    wayland.windowManager.hyprland = {
+      enable = true;
+      package = null;
+      portalPackage = null;
+      settings = lib.mkMerge [
+        (import ./config/autostart.nix)
+        (import ./config/animations.nix)
+      ];
+    };
   };
 }
