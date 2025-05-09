@@ -2,6 +2,8 @@
   lib,
   osConfig,
   config,
+  pkgs,
+  inputs,
   ...
 }: {
   imports = [./config ./hypridle.nix];
@@ -29,7 +31,9 @@
           (import ./config/vars.nix {inherit config osConfig;})
         ];
       }
-      (import ./config/plugins)
+      (import ./config/plugins {
+        inherit lib pkgs config osConfig inputs;
+      })
     ];
   };
 }
