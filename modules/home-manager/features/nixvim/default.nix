@@ -13,7 +13,6 @@
   config = lib.mkIf config.bundles.base.nixvim.enable {
     stylix.targets.nixvim = {
       enable = lib.mkDefault true;
-      # plugin = "base16-nvim";
       plugin =
         if (config.stylix.polarity == "dark")
         then "base16-nvim"
