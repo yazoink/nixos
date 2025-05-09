@@ -17,8 +17,6 @@
     (import ./lualine.nix {inherit config lib;})
     (import ./bufferline.nix {inherit config lib;})
     (import ./floaterm.nix)
-    (import ./ts-autotag.nix)
-    (import ./persistence.nix)
     (import ./gitsigns.nix)
     (import ./mini {inherit lib;})
     (import ./alpha.nix)
