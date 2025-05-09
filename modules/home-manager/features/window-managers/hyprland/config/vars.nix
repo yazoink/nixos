@@ -25,7 +25,7 @@ in {
         "$screenshot" = "${config.bundles.desktopBase.screenshot.package}/bin/screenshot -s";
         "$screenshotFullscreen" = "${config.bundles.desktopBase.screenshot.package}/bin/screenshot";
         "$lock" = "hyprlock";
-        "$colorPicker" = "${../scripts/color.sh}";
+        "$colorPicker" = "${../../scripts/color.sh}";
         "$mainMod" = "SUPER";
         "$wallpaper" = wallpaperCommand;
       };
