@@ -37,7 +37,8 @@
       dmidecode
       lm_sensors
       usbutils
-      procps
+      # procps
+      ncdu
 
       ##### Utils #####
       vim
