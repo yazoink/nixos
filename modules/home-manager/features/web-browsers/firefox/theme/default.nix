@@ -27,7 +27,7 @@ in {
       }
       #urlbar-input::selection {
         color: #${colors.base05} !important;
-        background-color: color-mix(in srgb, #${accentColor} 40%, black) !important;
+        background-color: color-mix(in srgb, #${accentColor} 45%, black) !important;
       }
       menupopup {
         border: 1px solid #${colors.base01};
