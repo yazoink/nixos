@@ -17,7 +17,7 @@ in {
   };
   programs.firefox.profiles.${username} = {
     userChrome = lib.mkForce ''
-      @import ${config.lib.stylix.inputs.firefox-gnome-theme}/userChrome.css
+      @import ${config.stylix.inputs.firefox-gnome-theme}/userChrome.css
       @import ${userChrome}
     '';
   };
