@@ -25,6 +25,9 @@
         icon = {
           rules = [];
         };
+        theme = {
+          cwd = lib.mkForce "#${config.stylix.base16Scheme.${osConfig.desktopTheme.base16Accent}}";
+        };
       };
     };
   };

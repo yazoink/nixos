@@ -7,10 +7,6 @@
 }: let
   themeFile = config.lib.stylix.colors {
     template = ./midnight.theme.css.mustache;
-    # template =
-    #   if (osConfig.myOptions.desktopTheme.name == "catppuccin-mocha")
-    #   then ./catppuccin.theme.css.mustache
-    #   else ./my.theme.css.mustache;
     extension = ".css";
   };
   accent = config.stylix.base16Scheme.${osConfig.desktopTheme.base16Accent};
