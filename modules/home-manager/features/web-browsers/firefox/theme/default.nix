@@ -31,7 +31,7 @@ in {
         color: #${colors.base05} !important;
         background-color: color-mix(in srgb, #${accentColor} 45%, black) !important;
       }
-      .urlbarView {
+      #urlbar-background {
         border: 1px solid #${colors.base01};
       }
       .menupopup-arrowscrollbox {
