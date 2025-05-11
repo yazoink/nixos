@@ -1,0 +1,207 @@
+/* Dialogs */
+
+@namespace xul "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul";
+
+window {
+	padding: 0 !important;
+	width: initial !important;
+}
+
+dialog {	
+	padding: var(--gnome-dialog-padding) !important;
+}
+
+/* Dialog box */
+.dialogBox {
+	border-radius: var(--gnome-dialog-radius) !important;
+	margin-top: 0 !important;
+}
+.dialogBox[resizable="true"] {
+	margin-top: var(--gnome-dialog-padding) !important;
+}
+
+.dialogOverlay[topmost="true"]:not(.dialogOverlay-window-modal-dialog-subdialog), #window-modal-dialog::backdrop {
+	background-color: rgba(0, 0, 0, .5) !important;
+}
+
+/* Modal dialogs */
+#window-modal-dialog {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
+
+window[role="dialog"] {
+	background: var(--gnome-menu-background) !important;
+	border: 0 !important;
+	box-shadow: var(--gnome-menu-shadow) !important;
+	padding: 0 !important;
+}
+
+dialog#handling {
+	display: flex;
+	flex-direction: column;
+}
+
+.tab-prompt-dialog .dialogOverlay {
+	justify-content: center;
+}
+
+/* Content */
+dialog {
+	&:not(.sizeDetermined) {
+		display: grid !important;
+		justify-content: stretch;
+		min-width: fit-content;
+	}
+
+	#titleContainer {
+		justify-content: center !important;
+	}
+
+	#titleCropper {
+		&[overflown] {
+			mask-image: none !important;
+			
+			#titleText {
+				display: inline-block !important;
+				max-width: 100% !important;
+				overflow: hidden !important;
+				text-overflow: ellipsis;
+			}
+		}
+
+		&:not([nomaskfade]) {
+			display: initial !important;
+		}
+	}
+
+	#titleText {
+		font-size: 20px !important;
+		font-weight: 800 !important;
+		text-align: center !important;
+		white-space: initial !important;
+	}
+
+	.titleIcon {
+		display: none;
+	}
+	
+	#description-box {
+		text-align: center;
+		#description {
+			font-size: 20px !important;
+			font-weight: 800 !important;
+		}
+	}
+	
+	#infoContainer {
+		text-align: center;
+	}
+
+	#checkboxContainer {
+		align-items: center !important;
+	}
+}
+
+/* Buttons */
+.dialog-button-box {
+	background: transparent !important;
+	display: flex !important;
+	gap: 12px;
+	margin-top: auto;
+	padding: 0 !important;
+	
+	/* if dialog has at least 3 buttons */
+	&:has(button:not([hidden])[dlgtype="extra1"]) {
+		min-width: 40rem;
+	}
+	
+	button {
+		min-height: 44px !important;
+		max-height: unset !important;
+		padding: 10px 14px !important;
+		margin: 0 !important;
+		border-radius: 12px !important;
+		flex: 1;
+		border-bottom: 0 !important;
+		
+		.button-box {
+			max-width: 100%;
+			.button-text {
+				max-width: 100%;		
+				&::before {					
+					max-width: 100% !important;
+					overflow: hidden !important;
+					text-overflow: ellipsis;
+				}
+			}
+		}
+	}
+	
+	.button-spacer {
+		display: none;
+	}
+}
+
+/* Browser dialogs */
+#dialogGrid {
+	padding-bottom: 8px !important;
+}
+
+/* Bookmark dialog */
+#editBookmarkPanelContent {
+	padding-bottom: var(--gnome-dialog-padding) !important;
+}
+
+/* Hadler dialog */
+#os-default-handler {
+	 image {
+		display: none !important;	
+	}
+	 .name {
+		font-weight: normal !important;
+	}
+}
+
+/* Fullscreen warning */
+#fullscreen-warning {
+	background: rgba(0, 0, 0, 0.7) !important;
+	border-radius: 150px !important;
+	border: none !important;
+	color: rgba(255, 255, 255, .9) !important;
+	padding: 6px 12px !important;
+	
+	&::before {
+		background-image: var(--gnome-icon-channel-secure-symbolic) !important;
+		height: 16px !important;
+		width: 16px !important;
+	}
+	
+	.pointerlockfswarning-domain-text {
+		font-size: 16px !important;
+		font-weight: normal !important;
+		margin: 0 12px 0 6px !important;
+	}
+}
+
+#fullscreen-exit-button {
+	appearance: none !important;
+	background-color: rgba(255, 255, 255, .09) !important;
+	border-radius: var(--gnome-button-radius) !important;
+	border: 0 !important;
+	padding: 2px 16px !important;
+	height: var(--gnome-button-size) !important;
+	min-height: var(--gnome-button-size) !important;
+	color: rgba(255, 255, 255, .9) !important;
+	font-weight: bold !important;
+	transition: background var(--gnome-animation-time);
+
+	&:hover {
+		background-color: rgba(255, 255, 255, .135) !important;
+	}
+	&:active {
+		background-color: rgba(255, 255, 255, .27) !important;
+	}
+}

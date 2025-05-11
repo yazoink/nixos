@@ -1,18 +1,24 @@
 {
   osConfig,
   config,
+  lib,
   ...
 }: let
   userChrome = config.lib.stylix.colors {
-    template = ./userChrome.css.mustache;
+    template = ./gnomeTheme.css.mustache.css.mustache;
     extension = ".css";
   };
+  inherit (osConfig.myOptions.userAccount) username;
 in {
   stylix.targets.firefox = {
     enable = false;
-    profileNames = [osConfig.myOptions.userAccount.username];
+    firefoxGnomeTheme.enable = true;
+    profileNames = [username];
   };
-  home.file = {
-    ".mozilla/firefox/${osConfig.myOptions.userAccount.username}/chrome/userChrome.css".source = userChrome;
+  programs.firefox.profiles.${username} = {
+    userChrome = lib.mkForce ''
+      @import ${./gnome-theme/gnome-theme.css}
+      @import ${userChrome}
+    '';
   };
 }
