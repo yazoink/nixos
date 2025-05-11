@@ -39,7 +39,7 @@
       };
       sddm = {
         scale = 1.3;
-        wallpaper = ../../wallpapers/flower.jpg;
+        wallpaper = ../../wallpapers/wall.png;
         # wallpaper = config.myOptions.desktopTheme.wallpaper.image.path;
       };
     };
