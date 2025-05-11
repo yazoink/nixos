@@ -20,5 +20,6 @@ in {
       @import ${./gnome-theme/gnome-theme.css}
       @import ${userChrome}
     '';
+    userContent = ./userContent.css;
   };
 }
