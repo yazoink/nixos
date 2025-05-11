@@ -19,6 +19,9 @@ in {
     userChrome = lib.mkForce ''
       @import "${config.stylix.inputs.firefox-gnome-theme}/userChrome.css";
       @import "${userChrome}";
+      :root {
+        --gnome-entry-focused-border-color: #${config.stylix.base16Scheme.${osConfig.desktopTheme.base16Accent}};
+      }
     '';
     settings = {
       "gnomeTheme.allTabsButton" = true;
