@@ -33,6 +33,9 @@ in {
       .urlbarView, .urlbarView-body-outer, .search-one-offs {
         border: 1px solid #${colors.base01};
       }
+      .urlbarView-body-outer, .search-one-offs {
+        border-radius: 12px 12px 0 0 !important;
+      }
       .menupopup-arrowscrollbox {
         border: 1px solid #${colors.base01};
       }
