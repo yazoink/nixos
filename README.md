@@ -39,6 +39,8 @@ https://github.com/user-attachments/assets/41fcada3-c4fb-411e-8e20-1d622d035aed
 
 ![20250511_18:47:47_screenshot](https://github.com/user-attachments/assets/3f351d0f-727d-484d-8db7-84e05ca302bb)
 
+![20250511_21:44:11_screenshot](https://github.com/user-attachments/assets/3f02f5a7-f79f-4269-8ce2-12d046388b25)
+
 ![hyprlock](https://github.com/user-attachments/assets/22db2890-6042-41ef-9415-53587d89efda)
 
 ![20250511_18:04:18_screenshot](https://github.com/user-attachments/assets/6f251a93-6b47-4331-92c8-72c28c9558de)
