@@ -36,7 +36,7 @@
         type = "image";
         image = {
           fillType = "fill";
-          path = ../../wallpapers/a_close_up_of_flowers.jpg;
+          path = ../../wallpapers/BouquetOnOliveGreen-darker.jpg;
         };
       };
       terminalPadding = 24;
