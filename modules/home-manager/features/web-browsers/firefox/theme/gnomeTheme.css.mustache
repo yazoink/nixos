@@ -87,6 +87,23 @@
   --gnome-private-in-content-page-background: #{{base00-hex}};
   --gnome-private-text-primary-color: #{base05-hex};
 
+  /* Private browsing colors */
+  &[privatebrowsingmode="temporary"] {
+    /* Headerbar */
+    --gnome-headerbar-background: var(--gnome-accent-bg) !important;
+    /* Tabs */	
+    --gnome-tabbar-tab-hover-background: color-mix(in srgb, #{{base00-hex}}, #{{base01-hex}} 75%); /* Hardcoded color */
+    --gnome-tabbar-tab-active-background: #{{base01-hex}}; /* Hardcoded color */
+    --gnome-tabbar-tab-active-background-contrast: #{{base01-hex}}; /* Hardcoded color */
+    --gnome-tabbar-tab-active-hover-background: color-mix(in srgb, #{{base01-hex}}, #{{base02-hex}} 25%); /* Hardcoded color */
+    
+    /* Private and backdrop colors */
+    &:-moz-window-inactive {
+      --gnome-tabbar-tab-hover-background: color-mix(in srgb, #{{base00-hex}}, #{{base01-hex}} 75%); /* Hardcoded color */
+      --gnome-tabbar-tab-active-background: #{{base01-hex}}; /* Hardcoded color */
+    }
+  }
+
   &:-moz-window-inactive {
     --gnome-tabbar-tab-hover-background: var(--gnome-tabbar-tab-hover-background);
     --gnome-tabbar-tab-active-background: var(--gnome-tabbar-tab-active-background);
