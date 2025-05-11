@@ -23,6 +23,7 @@ in {
       @import "${userChrome}";
       :root {
         --gnome-entry-focused-border-color: #${accentColor};
+        --gnome-entry-focused-border-color: color-mix(in srgb, #${accentColor} 55%, black) !important;
       }
       #urlbar-input::selection {
         color: #${colors.base05} !important;
