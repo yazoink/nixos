@@ -36,7 +36,7 @@
         type = "image";
         image = {
           fillType = "fill";
-          path = ../../wallpapers/wall1.jpg;
+          path = ../../wallpapers/a_close_up_of_flowers.jpg;
         };
       };
       terminalPadding = 24;
@@ -52,7 +52,7 @@
       };
       sddm = {
         scale = 0.8;
-        wallpaper = ../../wallpapers/paradise/clouds_paradise_1.jpg;
+        wallpaper = ../../wallpapers/a_close_up_of_flowers.jpg;
       };
     };
     bundles = {
