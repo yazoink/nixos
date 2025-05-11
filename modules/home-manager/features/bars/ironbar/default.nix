@@ -26,7 +26,7 @@
     {
       "type": "label",
       "class": "clock",
-      "label": "{{10000:date '+%I:%M %p %d %b %Y'}}"
+      "label": "{{10000:date '+%I:%M %p %b %d %Y'}}"
     }
   '';
   volumeModule = ''
