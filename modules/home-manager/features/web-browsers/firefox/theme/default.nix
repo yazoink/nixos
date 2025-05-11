@@ -23,7 +23,7 @@ in {
       @import "${userChrome}";
       :root {
         --gnome-entry-focused-border-color: #${accentColor};
-        --gnome-entry-focused-border-color: color-mix(in srgb, #${accentColor} 55%, black) !important;
+        /* --gnome-entry-focused-border-color: color-mix(in srgb, #${accentColor} 55%, black) !important; */
         --gnome-menu-border-color: #${colors.base01};
         --gnome-menu-padding: 5px;
       }
