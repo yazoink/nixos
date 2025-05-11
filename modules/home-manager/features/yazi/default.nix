@@ -11,6 +11,7 @@
     };
   };
   config = lib.mkIf config.bundles.base.yazi.enable {
+    stylix.targets.yazi.enable = false;
     programs.yazi = {
       enable = true;
       enableZshIntegration = true;
