@@ -11,7 +11,7 @@
   inherit (osConfig.myOptions.userAccount) username;
 in {
   stylix.targets.firefox = {
-    enable = false;
+    enable = true;
     firefoxGnomeTheme.enable = true;
     profileNames = [username];
   };
