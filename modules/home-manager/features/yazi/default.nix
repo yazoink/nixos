@@ -3,10 +3,7 @@
   lib,
   osConfig,
   ...
-}: let
-  inherit (config.stylix) base16Scheme;
-  accent = "#${base16Scheme.${osConfig.desktopTheme.base16Accent}}";
-in {
+}: {
   options = {
     bundles.base.yazi.enable = lib.mkOption {
       type = lib.types.bool;
@@ -57,18 +54,18 @@ in {
               marker_selected = mkSame yellow;
               marker_copied = mkSame green;
               marker_cut = mkSame red;
-              tab_active = mkBoth base00 blue;
+              tab_active = mkBoth base00 config.lib.stylix.colors.${osConfig.base16Accent};
               tab_inactive = mkBoth base05 base01;
               border_style = mkFg base04;
             };
 
             mode = {
               normal_main =
-                (mkBoth base00 blue)
+                (mkBoth base00 config.lib.stylix.colors.${osConfig.base16Accent})
                 // {
                   bold = true;
                 };
-              normal_alt = mkBoth blue base00;
+              normal_alt = mkBoth config.lib.stylix.colors.${osConfig.base16Accent} base00;
               select_main =
                 (mkBoth base00 green)
                 // {
@@ -95,26 +92,26 @@ in {
             };
 
             pick = {
-              border = mkFg blue;
+              border = mkFg config.lib.stylix.colors.${osConfig.base16Accent};
               active = mkFg magenta;
               inactive = mkFg base05;
             };
 
             input = {
-              border = mkFg blue;
+              border = mkFg config.lib.stylix.colors.${osConfig.base16Accent};
               title = mkFg base05;
               value = mkFg base05;
               selected = mkBg base03;
             };
 
             completion = {
-              border = mkFg blue;
+              border = mkFg config.lib.stylix.colors.${osConfig.base16Accent};
               active = mkBoth magenta base03;
               inactive = mkFg base05;
             };
 
             tasks = {
-              border = mkFg blue;
+              border = mkFg config.lib.stylix.colors.${osConfig.base16Accent};
               title = mkFg base05;
               hovered = mkBoth base05 base03;
             };
