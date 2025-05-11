@@ -35,6 +35,11 @@ in {
       .menupopup-arrowscrollbox {
         border: 1px solid #${colors.base01};
       }
+      menupopup > menu,
+      menupopup > menuitem {
+          padding-block: 5px !important;     /* Adjust vertical padding */
+          padding-inline: 5px !important;   /* Adjust horizontal padding */
+      }
     '';
     settings = {
       "gnomeTheme.allTabsButton" = true;
