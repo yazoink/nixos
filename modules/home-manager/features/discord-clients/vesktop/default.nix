@@ -6,17 +6,29 @@
   ...
 }: let
   themeFile = config.lib.stylix.colors {
-    template =
-      if (osConfig.myOptions.desktopTheme.name == "catppuccin-mocha")
-      then ./catppuccin.theme.css.mustache
-      else ./my.theme.css.mustache;
+    template = ./midnight.theme.css.mustache;
+    # template =
+    #   if (osConfig.myOptions.desktopTheme.name == "catppuccin-mocha")
+    #   then ./catppuccin.theme.css.mustache
+    #   else ./my.theme.css.mustache;
     extension = ".css";
   };
+  accent = config.stylix.base16Scheme.${osConfig.desktopTheme.base16Accent};
   inherit (osConfig.myOptions.bundles.desktopFull.vesktop) bloat;
 in {
   config = lib.mkIf (osConfig.myOptions.defaultApps.discordClient.command == "vesktop" && osConfig.myOptions.bundles.desktopFull.enable) {
     xdg.configFile = {
-      "vesktop/themes/my.theme.css".source = themeFile;
+      "vesktop/themes/my.theme.css".text = ''
+        ${builtins.readFile themeFile}
+        :root {
+          /* accent colors */
+          --accent-1: #${accent}; /* links and other accent text */
+          --accent-2: #${accent}; /* small accent elements */
+          --accent-3: #${accent}; /* accent buttons */
+          --accent-4: #${accent}; /* accent buttons when hovered */
+          --accent-5: #${accent}; /* accent buttons when clicked */
+        }
+      '';
     };
     stylix.targets.nixcord.enable = false;
     programs.nixcord = {
