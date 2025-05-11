@@ -135,10 +135,6 @@ body {
   --border-hover: #{{base01}}; /* border color of panels when hovered */
   --button-border: #{{base01}};
 
-  /* scrollbars */
-  --scrollbar-auto-thumb: #{{base01}};
-  --scrollbar-thin-thumb: #{{base01}};
-
   /* base colors */
   --red-1: #{{base08}};
   --red-2: #{{base08}};
@@ -169,4 +165,13 @@ body {
   --purple-3: #{{base0E}};
   --purple-4: #{{base0E}};
   --purple-5: #{{base0E}};
+
+::-webkit-scrollbar {
+  width: 8px;
+  background: #{{base02}};
+}
+::-webkit-scrollbar-thumb {
+  background: #{{base02}};
+  border-radius: 4px;
+}
 }
