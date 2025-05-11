@@ -22,6 +22,9 @@ in {
       :root {
         --gnome-entry-focused-border-color: #${config.stylix.base16Scheme.${osConfig.desktopTheme.base16Accent}};
       }
+      #urlbar-input::selection {
+        background-color: #${config.stylix.base16Scheme.${osConfig.desktopTheme.base16Accent}} !important;
+      }
     '';
     settings = {
       "gnomeTheme.allTabsButton" = true;
