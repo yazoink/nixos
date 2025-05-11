@@ -5,7 +5,7 @@
   ...
 }: let
   userChrome = config.lib.stylix.colors {
-    template = ./gnomeTheme.css.mustache.css.mustache;
+    template = ./gnomeTheme.css.mustache;
     extension = ".css";
   };
   inherit (osConfig.myOptions.userAccount) username;
