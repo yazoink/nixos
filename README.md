@@ -37,7 +37,7 @@ See [documentation.md](./documentation.md)
 
 https://github.com/user-attachments/assets/41fcada3-c4fb-411e-8e20-1d622d035aed
 
-![20250511_18:11:18_screenshot](https://github.com/user-attachments/assets/5126e2c9-b4ba-40a0-859a-badbfdea7535)
+![20250511_18:47:47_screenshot](https://github.com/user-attachments/assets/3f351d0f-727d-484d-8db7-84e05ca302bb)
 
 ![hyprlock](https://github.com/user-attachments/assets/22db2890-6042-41ef-9415-53587d89efda)
 
