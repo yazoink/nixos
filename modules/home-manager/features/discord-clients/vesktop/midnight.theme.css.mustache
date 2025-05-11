@@ -21,7 +21,7 @@ body {
   /* sizes */
   --gap: 10px; /* spacing between panels */
   --divider-thickness: 2px; /* thickness of unread messages divider and highlighted message borders */
-  --border-thickness: 0px; /* thickness of borders around main panels. DOES NOT AFFECT OTHER BORDERS */
+  --border-thickness: 1px; /* thickness of borders around main panels. DOES NOT AFFECT OTHER BORDERS */
 
   /* animation/transition options */
   --animations: on; /* off: disable animations/transitions, on: enable animations/transitions */
@@ -90,7 +90,7 @@ body {
   /* background and dark colors */
   --bg-1: rgba({{base05-rgb-r}}, {{base05-rgb-g}}, {{base05-rgb-b}}, 0.25); /* dark buttons when clicked */
   --bg-2: rgba({{base05-rgb-r}}, {{base05-rgb-g}}, {{base05-rgb-b}}, 0.09); /* dark buttons */
-  --bg-3: #{{base01}}; /* spacing, secondary elements */
+  --bg-3: #{{base00}}; /* spacing, secondary elements */
   --bg-4: #{{base00}}; /* main background color */
   --hover: rgba({{base05-rgb-r}}, {{base05-rgb-g}}, {{base05-rgb-b}}, 0.045); /* channels and buttons when hovered */
   --active: rgba({{base05-rgb-r}}, {{base05-rgb-g}}, {{base05-rgb-b}}, 0.09);
@@ -130,10 +130,14 @@ body {
   --offline: var(--text-4); /* change to #83838b for default offline color */
 
   /* border colors */
-  --border-light: #483939; /* general light border color */
-  --border: #2d2424; /* general normal border color */
-  --border-hover: #2d2424; /* border color of panels when hovered */
-  --button-border: #2d2424;
+  --border-light: #{{base01}}; /* general light border color */
+  --border: #{{base01}}; /* general normal border color */
+  --border-hover: #{{base01}}; /* border color of panels when hovered */
+  --button-border: #{{base01}};
+
+  /* scrollbars */
+  --scrollbar-auto-thumb: #{{base01}};
+  --scrollbar-thin-thumb: #{{base01}};
 
   /* base colors */
   --red-1: #{{base08}};
