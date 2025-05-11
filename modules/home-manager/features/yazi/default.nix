@@ -76,11 +76,12 @@
           progress_label = mkBoth base05 base00;
           progress_normal = mkBoth base05 base00;
           progress_error = mkBoth red base00;
-          perm_type = mkFg "#${config.lib.stylix.colors.${osConfig.desktopTheme.base16Accent}}";
+          perm_type = mkFg blue;
           perm_read = mkFg yellow;
           perm_write = mkFg red;
           perm_exec = mkFg green;
           perm_sep = mkFg cyan;
+          header = mkFg "#${config.lib.stylix.colors.${osConfig.desktopTheme.base16Accent}}";
         };
 
         pick = {
