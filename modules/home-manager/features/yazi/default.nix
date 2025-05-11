@@ -4,7 +4,8 @@
   osConfig,
   ...
 }: let
-  accent = "#${config.stylix.base16Scheme.${osConfig.desktopTheme.base16Accent}}";
+  inherit (config.stylix) base16Scheme;
+  accent = "#${base16Scheme.${osConfig.desktopTheme.base16Accent}}";
 in {
   options = {
     bundles.base.yazi.enable = lib.mkOption {
@@ -29,11 +30,74 @@ in {
         };
         theme = {
           filetype = {
-            rules = [
-              (lib.mkForce {
+            rules = lib.mkForce [
+              {
+                fg = "#${base16Scheme.base0C}";
+                mime = "image/*";
+              }
+              {
+                fg = "#${base16Scheme.base0A}";
+                mime = "video/*";
+              }
+              {
+                fg = "#${base16Scheme.base0A}";
+                mime = "audio/*";
+              }
+
+              {
+                fg = "#${base16Scheme.base0E}";
+                mime = "application/zip";
+              }
+              {
+                fg = "#${base16Scheme.base0E}";
+                mime = "application/gzip";
+              }
+              {
+                fg = "#${base16Scheme.base0E}";
+                mime = "application/tar";
+              }
+              {
+                fg = "#${base16Scheme.base0E}";
+                mime = "application/bzip";
+              }
+              {
+                fg = "#${base16Scheme.base0E}";
+                mime = "application/bzip2";
+              }
+              {
+                fg = "#${base16Scheme.base0E}";
+                mime = "application/7z-compressed";
+              }
+              {
+                fg = "#${base16Scheme.base0E}";
+                mime = "application/rar";
+              }
+              {
+                fg = "#${base16Scheme.base0E}";
+                mime = "application/xz";
+              }
+
+              {
+                fg = "#${base16Scheme.base0B}";
+                mime = "application/doc";
+              }
+              {
+                fg = "#${base16Scheme.base0B}";
+                mime = "application/pdf";
+              }
+              {
+                fg = "#${base16Scheme.base0B}";
+                mime = "application/rtf";
+              }
+              {
+                fg = "#${base16Scheme.base0B}";
+                mime = "application/vnd.*";
+              }
+
+              {
                 fg = accent;
                 mime = "inode/directory";
-              })
+              }
             ];
           };
         };
