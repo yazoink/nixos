@@ -8,7 +8,7 @@ My NixOS desktop configs with home-manager.
 
 ## Software
 - WM: Hyprland/SwayFX
-- Bar: Waybar
+- Bar: Ironbar/Waybar
 - Launcher: Rofi/Wofi/Anyrun
 - Terminal: Foot/Alacritty/Kitty
 - Editor: Neovim
