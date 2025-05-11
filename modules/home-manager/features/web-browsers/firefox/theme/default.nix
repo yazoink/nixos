@@ -20,5 +20,8 @@ in {
       @import "${config.stylix.inputs.firefox-gnome-theme}/userChrome.css";
       @import "${userChrome}";
     '';
+    settings = {
+      "gnomeTheme.allTabsButton" = true;
+    };
   };
 }
