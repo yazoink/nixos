@@ -20,10 +20,11 @@ in {
       @import "${config.stylix.inputs.firefox-gnome-theme}/userChrome.css";
       @import "${userChrome}";
       :root {
-        --gnome-entry-focused-border-color: #${config.stylix.base16Scheme.${osConfig.desktopTheme.base16Accent}};
+        --gnome-entry-focused-border-color: darken(#${config.lib.stylix.colors.${osConfig.desktopTheme.base16Accent}}, 30%);
       }
       #urlbar-input::selection {
-        background-color: #${config.stylix.base16Scheme.${osConfig.desktopTheme.base16Accent}} !important;
+        color: #${config.lib.stylix.colors.base00} !important;
+        background-color: darken(#${config.lib.stylix.colors.${osConfig.desktopTheme.base16Accent}}, 40%) !important;
       }
     '';
     settings = {
