@@ -22,7 +22,7 @@ in {
           (import ./config {inherit lib osConfig inputs;})
         ];
       }
-      (import ./theme {inherit config osConfig;})
+      (import ./theme {inherit config osConfig lib;})
     ]
   );
 }
