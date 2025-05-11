@@ -17,7 +17,7 @@
     "$mainMod SHIFT, R, exec, hyprctl reload && notify-send \"Hyprland\" \"Config reloaded.\""
     "$mainMod SHIFT, W, exec, $wallpaper"
     "$mainMod SHIFT, V, exec, ${../../../scripts/virsh-net-toggle.sh}"
-    "$mainMod SHIFT, D, exec, ${../../../scripts/dnd.sh}"
+    # "$mainMod SHIFT, D, exec, ${../../../scripts/dnd.sh}"
     "$mainMod SHIFT, F, exec, ${../../../scripts/restart-foot-server.sh}"
     ", XF86Lock, exec, $lock"
     ", code:107, exec, $screenshot"
