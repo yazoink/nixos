@@ -9,7 +9,8 @@
     extension = ".css";
   };
   inherit (osConfig.myOptions.userAccount) username;
-  inherit (config.lib.stylix.colors);
+  inherit (config.lib.stylix) colors;
+  accentColor = colors.${osConfig.desktopTheme.base16Accent};
 in {
   stylix.targets.firefox = {
     enable = true;
@@ -21,14 +22,14 @@ in {
       @import "${config.stylix.inputs.firefox-gnome-theme}/userChrome.css";
       @import "${userChrome}";
       :root {
-        --gnome-entry-focused-border-color: color-mix(in srgb, #${config.lib.stylix.colors.${osConfig.desktopTheme.base16Accent}} 30%, black);
+        --gnome-entry-focused-border-color: #${accentColor};
       }
       #urlbar-input::selection {
-        color: #${config.lib.stylix.colors.base05} !important;
-        background-color: color-mix(in srgb, #${config.lib.stylix.colors.${osConfig.desktopTheme.base16Accent}} 40%, black) !important;
+        color: #${colors.base05} !important;
+        background-color: color-mix(in srgb, #${accentColor} 40%, black) !important;
       }
       menupopup {
-        border: 1px solid #${config.lib.stylix.colors.base01};
+        border: 1px solid #${colors.base01};
       }
     '';
     settings = {
