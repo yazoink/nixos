@@ -3,7 +3,9 @@
   lib,
   osConfig,
   ...
-}: {
+}: let
+  accent = "#${config.stylix.base16Scheme.${osConfig.desktopTheme.base16Accent}}";
+in {
   options = {
     bundles.base.yazi.enable = lib.mkOption {
       type = lib.types.bool;
@@ -26,7 +28,14 @@
           rules = [];
         };
         theme = {
-          cwd = lib.mkForce "#${config.stylix.base16Scheme.${osConfig.desktopTheme.base16Accent}}";
+          filetype = {
+            rules = [
+              (lib.mkForce {
+                fg = accent;
+                mime = "inode/directory";
+              })
+            ];
+          };
         };
       };
     };
