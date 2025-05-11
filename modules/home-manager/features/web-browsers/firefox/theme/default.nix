@@ -34,13 +34,12 @@ in {
          border: 1px solid #${colors.base01};
        }
        .urlbarView-body-outer {
-          border-bottom: transparent;
-       }
-       .urlbarView-body-outer {
          border-radius: 12px 12px 0 0 !important;
+         border-bottom: transparent;
        }
        .search-one-offs {
          border-radius: 0 0 12px 12px !important;
+         border-top: transparent;
        }
        .menupopup-arrowscrollbox {
          border: 1px solid #${colors.base01};
