@@ -5,16 +5,16 @@
         command = "vesktop";
       };
       fileManager = {
-        command = "thunar";
+        command = "nemo";
       };
       guiTextEditor = {
-        command = "vscode";
+        command = "pluma";
       };
       documentReader = {
-        command = "atril";
+        command = "zathura";
       };
       mediaPlayer = {
-        command = "vlc";
+        command = "mpv";
       };
       imageViewer = {
         command = "imv";
