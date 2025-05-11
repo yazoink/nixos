@@ -34,6 +34,9 @@ in {
          border: 1px solid #${colors.base01};
        }
        .urlbarView-body-outer {
+          border-bottom: transparent;
+       }
+       .urlbarView-body-outer {
          border-radius: 12px 12px 0 0 !important;
        }
        .search-one-offs {
