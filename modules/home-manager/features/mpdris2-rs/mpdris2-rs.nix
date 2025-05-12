@@ -6,7 +6,7 @@ pkgs.rustPlatform.buildRustPackage rec {
     owner = "szclsya";
     repo = "mpdris2-rs";
     rev = "trunk";
-    sha256 = "sha256-l0uX4EDsLRvJWE9eY9tAbrVmM3Oqkyj0WYgc7CMTrLc=";
+    sha256 = "sha256-Wp5VkmHpwaKpb0019fgUT2nIrpogEXzvC0EIjUPi6Jw=";
   };
   useFetchCargoVendor = true;
   cargoHash = "sha256-vNMXcoSWTAWDGdRqQRbyGvO6rUf3BJpFmleqhCcX1nA=";
