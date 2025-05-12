@@ -3,7 +3,7 @@
   osConfig,
   ...
 }: let
-  themeName = osConfig.desktopTheme.name;
+  themeName = osConfig.myOptions.desktopTheme.name;
   inherit (config.stylix) base16Scheme;
   borderColor =
     if (themeName == "catppuccin-mocha")

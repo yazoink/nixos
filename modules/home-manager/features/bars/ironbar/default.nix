@@ -89,6 +89,7 @@
       "class": "battery",
       "on_mouse_enter": "ironbar var set show_battery_percent true",
       "on_mouse_exit": "ironbar var set show_battery_percent false",
+      "show_if": "ls /sys/class/power_supply/${osConfig.myOptions.hardwareFeatures.laptop.batteryName}",
       "tooltip": "Battery",
       "bar": [
         {
