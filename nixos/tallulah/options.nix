@@ -34,7 +34,7 @@
       wallpaper = {
         type = "image";
         image = {
-          path = ../../wallpapers/tiling/tiling3.png;
+          path = ../../wallpapers/BouquetOnOliveGreen-darker.jpg;
           fillType = "tile";
         };
         color.hex = config.stylix.base16Scheme.base03;
@@ -50,7 +50,7 @@
       };
       sddm = {
         scale = 1.4;
-        wallpaper = ../../wallpapers/tiling.png;
+        wallpaper = ../../wallpapers/a_close_up_of_flowers.jpg;
       };
     };
     bundles = {

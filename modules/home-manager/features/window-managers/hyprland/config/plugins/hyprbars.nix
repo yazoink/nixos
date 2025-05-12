@@ -6,10 +6,16 @@
   ...
 }: let
   inherit (config.stylix) base16Scheme fonts;
+  themeName = osConfig.myOptions.desktopTheme.name;
   closeButtonColor =
-    if (osConfig.myOptions.desktopTheme.name == "caroline")
-    then config.stylix.base16Scheme.base0E
-    else config.stylix.base16Scheme.base08;
+    if (themeName == "caroline")
+    then base16Scheme.base0E
+    else
+      (
+        if (themeName == "decay")
+        then base16Scheme.base0C
+        else base16Scheme.base08
+      );
 in {
   plugins = [
     inputs.hyprland-plugins.packages.${pkgs.stdenv.hostPlatform.system}.hyprbars

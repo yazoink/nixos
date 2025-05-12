@@ -39,4 +39,7 @@ in
         ",preferred,auto,1"
       ];
     })
+    (lib.mkIf (hostName != "fluoride") {
+      monitor = [",preferred,auto,1"];
+    })
   ]

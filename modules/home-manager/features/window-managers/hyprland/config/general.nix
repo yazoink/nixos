@@ -2,21 +2,22 @@
   config,
   osConfig,
   ...
-}: {
+}: let
+  themeName = osConfig.desktopTheme.name;
+  inherit (config.stylix) base16Scheme;
+  borderColor =
+    if (themeName == "catppuccin-mocha")
+    then "rgb(${base16Scheme.base02})"
+    else "rgb(${base16Scheme.base01})";
+in {
   general = {
     gaps_in = 5;
     gaps_out = 15;
     border_size = 1;
     layout = "dwindle";
     allow_tearing = false;
-    "col.inactive_border" =
-      if (osConfig.myOptions.desktopTheme.name == "catppuccin-mocha")
-      then "rgb(${config.stylix.base16Scheme.base02})"
-      else "rgb(${config.stylix.base16Scheme.base01})";
-    "col.active_border" =
-      if (osConfig.myOptions.desktopTheme.name == "catppuccin-mocha")
-      then "rgb(${config.stylix.base16Scheme.base02})"
-      else "rgb(${config.stylix.base16Scheme.base01})";
+    "col.inactive_border" = borderColor;
+    "col.active_border" = borderColor;
     resize_on_border = true;
     extend_border_grab_area = 15;
     hover_icon_on_border = true;
