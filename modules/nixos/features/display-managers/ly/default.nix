@@ -5,7 +5,7 @@
 }: let
   inherit (config.lib.stylix) colors;
 in {
-  config = lib.mkIf (config.myOptions.bundles.desktopBase.displayManager == "ly") {
+  config = lib.mkIf (config.myOptions.bundles.desktopBase.displayManager == "ly" && config.myOptions.bundles.desktopBase.enable) {
     services.displayManager.ly = {
       enable = true;
       settings = {
