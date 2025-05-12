@@ -30,11 +30,8 @@
       dconf.enable = true;
       fonts.enable = true;
       gnomeKeyring.enable = true;
-      greetd.enable = lib.mkIf (config.myOptions.bundles.desktopBase.displayManager == "regreet") true;
       hyprland.enable = lib.mkIf (config.myOptions.bundles.desktopBase.windowManager == "hyprland") true;
-      plymouth.enable = true;
       polkit.enable = true;
-      sddm.enable = lib.mkIf (config.myOptions.bundles.desktopBase.displayManager == "sddm") true;
       silentBoot.enable = true;
       sway.enable = lib.mkIf (config.myOptions.bundles.desktopBase.windowManager == "sway") true;
     };

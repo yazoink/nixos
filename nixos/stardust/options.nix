@@ -42,6 +42,7 @@
       desktopBase.windowManager = "hyprland";
       desktopBase.displayManager = "sddm";
       desktopBase.mpv.profile = "fast";
+      desktopBase.plymouth.enable = true;
       desktopFull.enable = true;
       desktopFull.vesktop.bloat = false;
     };

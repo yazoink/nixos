@@ -21,6 +21,7 @@
         windowManager = "hyprland";
         displayManager = "sddm";
         mpv.profile = "gpu-hq";
+        # plymouth.enable = true;
       };
     };
 

@@ -47,6 +47,7 @@
       base.starshipFormat = 2;
       desktopBase.displayManager = "sddm";
       desktopBase.windowManager = "hyprland";
+      desktopBase.plymouth.enable = true;
       desktopFull.enable = true;
     };
     features = {

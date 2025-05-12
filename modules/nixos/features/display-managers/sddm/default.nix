@@ -4,14 +4,8 @@
   pkgs,
   ...
 }: {
-  options = {
-    bundles.desktopBase.sddm.enable = lib.mkOption {
-      type = lib.types.bool;
-      default = false;
-    };
-  };
   imports = [./theme];
-  config = lib.mkIf config.bundles.desktopBase.sddm.enable {
+  config = lib.mkIf (config.myOptions.bundles.desktopBase.displayManager == "sddm") {
     environment.systemPackages = with pkgs; [
       libsForQt5.qt5.qtgraphicaleffects
       libsForQt5.qt5.qtquickcontrols2

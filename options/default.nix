@@ -66,7 +66,11 @@
           displayManager = lib.mkOption {
             type = lib.types.str;
             default = "sddm";
-            description = "Options: sddm, regreet";
+            description = "Options: sddm, regreet, ly";
+          };
+          plymouth.enable = lib.mkOption {
+            type = lib.types.bool;
+            default = false;
           };
           mpv = {
             profile = lib.mkOption {

@@ -1,6 +1,7 @@
 {
   imports = [
     ./sddm
-    ./greetd
+    ./regreet
+    ./ly
   ];
 }

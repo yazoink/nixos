@@ -58,7 +58,9 @@
       base.ssh.allowRootLogin = true;
       base.starshipFormat = 1;
       desktopBase.enable = true;
+      desktopBase.plymouth.enable = false;
       desktopBase.windowManager = "hyprland";
+      desktopBase.displayManager = "ly";
       desktopBase.mpv.profile = "fast";
       desktopFull.enable = true;
     };

@@ -58,6 +58,7 @@
     bundles = {
       base.starshipFormat = 2;
       desktopBase.windowManager = "hyprland";
+      desktopBase.plymouth.enable = true;
       desktopFull.enable = true;
     };
     features = {
