@@ -6,6 +6,7 @@
   ...
 }: let
   inherit (config.stylix) base16Scheme fonts;
+  inherit (osConfig.myOptions.hardwareFeatures.laptop) batteryName;
   iconTheme =
     if (config.stylix.polarity == "dark")
     then config.stylix.iconTheme.dark
@@ -89,13 +90,13 @@
       "class": "battery",
       "on_mouse_enter": "ironbar var set show_battery_percent true",
       "on_mouse_exit": "ironbar var set show_battery_percent false",
-      "show_if": "ls /sys/class/power_supply/${osConfig.myOptions.hardwareFeatures.laptop.batteryName}",
+      "show_if": "ls /sys/class/power_supply/${batteryName}",
       "tooltip": "Battery",
       "bar": [
         {
           "type": "script",
           "class": "battery-icon",
-          "cmd": "${./scripts/battery_icon.sh} ${osConfig.myOptions.hardwareFeatures.laptop.batteryName}",
+          "cmd": "${./scripts/battery_icon.sh} ${batteryName}",
           "mode": "poll",
           "interval": 25000
         },
@@ -103,7 +104,7 @@
           "type": "script",
           "class": "battery-percent",
           "show_if": "#show_battery_percent",
-          "cmd": "echo \"$(cat /sys/class/power_supply/${osConfig.myOptions.hardwareFeatures.laptop.batteryName}/capacity)%\"",
+          "cmd": "echo \"$(cat /sys/class/power_supply/${batteryName}/capacity)%\"",
           "mode": "poll",
           "interval": 25000
         }
