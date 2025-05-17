@@ -26,7 +26,7 @@
     options = ["fmask=0022" "dmask=0022"];
   };
   fileSystems."/mnt/games" = {
-    device = "/dev/sdb1";
+    device = "/dev/sda1";
     fsType = "ext4";
     depends = [
       "/"
