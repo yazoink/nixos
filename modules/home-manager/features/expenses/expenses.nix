@@ -1,6 +1,6 @@
 {pkgs, ...}:
 pkgs.python312Packages.buildPythonApplication rec {
-  pname = "soundboard";
+  pname = "expenses";
   version = "1.0";
 
   src = ./expenses;
