@@ -20,6 +20,7 @@
     # ----- FEATURES ----- #
     features = {
       # ollama.enable = true;
+      # expenses.enable = true;
     };
 
     # ----- HARDWARE FEATURES ----- #

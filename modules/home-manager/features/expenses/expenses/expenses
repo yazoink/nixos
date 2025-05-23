@@ -1,0 +1,250 @@
+#!/usr/bin/env python
+# it's really badly written but it works
+
+from os import path, environ, mkdir
+import json
+import sys
+
+
+def main():
+    home = environ["HOME"]
+    storage_dir = home + "/.local/share/expenses/"
+    json_file = storage_dir + "expenses.json"
+    income_file = storage_dir + "income.txt"
+
+    if not path.exists(storage_dir):
+        mkdir(storage_dir)
+
+    if not path.exists(income_file):
+        set_income(income_file)
+
+    while True:
+        answer = input(">> ")
+        print()
+        if answer == "help":
+            help()
+        elif answer == "add":
+            add(json_file)
+        elif answer.startswith("del"):
+            delete(answer.split(" "), json_file)
+        elif answer.startswith("show"):
+            show(answer.split(" "), json_file, income_file)
+        elif answer == "income":
+            set_income(income_file)
+        elif answer == "exit":
+            sys.exit(0)
+        else:
+            print("Command not recognised - type \"help\" for help.")
+            print()
+
+def set_income(income_file):
+    income = 0
+
+    while True:
+        print("Enter monthly income")
+        income = input(">> $")
+        print()
+
+        try:
+            income = float(income)
+            break
+        except ValueError:
+            print("Please enter a numerical value.")
+
+    with open(income_file, "w") as f:
+        f.write(str(income))
+    print("Monthly income set to $" + str(income) + ".")
+    print()
+
+
+def show(answer, json_file, income_file):
+    income = 0
+    with open(income_file, "r") as f:
+        income = float(f.read().strip())
+
+    length = len(answer)
+    classification = None
+    if length > 1:
+        classification = "".join(answer[1:])
+
+    data = get_json_arr(json_file)
+    classifications_list = get_expense_classifications_list(data)
+
+    if classification == None:
+        print(f"### Expenses Per Month ###\n")
+        sorted_data = {}
+
+        for classification in classifications_list:
+            sorted_data[classification] = []
+
+        for expense in data:
+            sorted_data[expense["classification"]].append(expense)
+
+        i = 1
+        total = 0
+        for classification in sorted_data:
+            print("## " + classification + " ##")
+            classification_total = 0
+            for expense in sorted_data[classification]:
+                total += expense["cost"]
+                classification_total += expense["cost"]
+                print(str(i) + ". " + expense["name"] + " - " + str(expense["cost"]))
+                i += 1
+            print()
+            print(classification + " Total: $" + str(classification_total))
+            print("Portion of income: " + str(round((classification_total / income) * 100, 2)) + "%")
+            print()
+
+        print("Total: $" + str(total))
+        print("Income: $" + str(income))
+        print("Remainder: $" + str(income - total))
+        print("Portion of income: " + str(round((total / income) * 100, 2)) + "%")
+        print()
+    else:
+        total = 0
+        sorted_data = get_expense_classification(data, classification)
+        print("### Expenses Per Month - " + classification + " ###")
+        print()
+        i = 1
+        for expense in sorted_data:
+            print(str(i) + ". " + expense["name"] + " - $" + str(expense["cost"]))
+            i += 1
+            total += expense["cost"]
+        print()
+        print("Total: $" + str(total))
+        print("Income: $" + str(income))
+        print("Remainder: $" + str(income - total))
+        print("Portion of income: " + str(round((total / income) * 100, 2)) + "%")
+        print()
+
+
+def get_expense_classifications_list(data):
+    result = []
+    for expense in data:
+        if expense["classification"] not in result:
+            result.append(expense["classification"])
+    return result
+
+
+def get_expense_classification(data, classification):
+    result = []
+    for expense in data:
+        if expense["classification"].lower() == classification.lower():
+            result.append(expense)
+    return result
+
+
+
+def delete(answer, json_file):
+    target = "".join(answer[1:])
+    data = get_json_arr(json_file)
+    length = len(data)
+    names = []
+
+    for expense in data:
+        names.append(expense["name"])
+
+    if len(answer) > 1:
+        try:
+            target = int(target)
+            if length + 1 < target:
+                print("No expense exists at index " + str(target))
+                sys.exit(1)
+        except ValueError:
+            if target not in names:
+                print('"' + target + '" does not exist.')
+                sys.exit(1)
+    else:
+        while True:
+            print("Enter name or index of target expense")
+            target = input(">> ")
+            print()
+
+            try:
+                target = int(target)
+                if length + 1 < target:
+                    print("No expense exists at index " + str(target))
+                    print()
+                else:
+                    break
+            except ValueError:
+                if target not in names:
+                    print('"' + target + '" does not exist.')
+                    print()
+                else:
+                    break
+
+    if isinstance(target, int):
+        data.pop(target - 1)
+    else:
+        i = 0
+        for expense in data:
+            if expense["name"].lower() == target.lower():
+                data.pop(i)
+                break
+            i += 1
+
+    with open(json_file, "w") as f:
+        json.dump(data, f)
+
+    print('"' + str(target) + '" deleted from expenses.')
+    print()
+
+
+def add(json_file):
+    classification = None
+    name = None
+    cost = 0
+
+    print("Enter expense name")
+    name = input(">> ")
+    print()
+    print("Enter classification")
+    classification = input(">> ")
+    print()
+    print("Enter cost per month")
+    while True:
+        cost = input(">> $")
+        print()
+        cost = cost.replace("$", "")
+        try:
+            cost = float(cost)
+            break
+        except ValueError:
+            print("Please enter a numerical value")
+            print()
+
+    data = get_json_arr(json_file)
+
+    expense = {"name": name, "classification": classification, "cost": cost}
+    data.append(expense)
+
+    with open(json_file, "w") as f:
+        json.dump(data, f)
+
+    print('"' + name + '" added to expenses.')
+    print()
+
+
+def get_json_arr(json_file):
+    with open(json_file) as f:
+        try:
+            data = json.load(f)
+            return data
+        except ValueError:
+            print("Error: ~/.local/share/expenses/expenses.json is invalid")
+            sys.exit(1)
+
+
+def help():
+    print("Available Commands:")
+    print("- help: Print this menu")
+    print("- show [classification]: Print info")
+    print("- add: Add expense")
+    print("- del [name/index]: Remove expense")
+    print("- income: Set income")
+    print("- exit: Exit program")
+    print()
+
+
+main()

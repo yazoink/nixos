@@ -350,6 +350,10 @@
           type = lib.types.bool;
           default = false;
         };
+        expenses.enable = lib.mkOption {
+          type = lib.types.bool;
+          default = false;
+        };
       };
 
       # ----- HARDWARE FEATURES ----- #

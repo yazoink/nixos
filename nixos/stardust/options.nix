@@ -56,6 +56,7 @@
       superTuxKart.enable = true;
       virtManager.enable = true;
       virtualbox.enable = true;
+      expenses.enable = true;
     };
     hardwareFeatures = {
       bootloader.type = "uefi";

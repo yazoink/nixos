@@ -86,6 +86,7 @@
       # steam.enable = true;
       # virtManager.enable = true;
       # virtualbox.enable = true;
+      # expenses.enable = true;
     };
 
     # ----- HARDWARE FEATURES ----- #
