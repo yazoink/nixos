@@ -91,13 +91,13 @@ def show(answer, json_file, income_file):
                 print(str(i) + ". " + expense["name"] + " - " + str(expense["cost"]))
                 i += 1
             print()
-            print(classification + " Total: $" + str(classification_total))
+            print(classification + " Total: $" + str(round(classification_total, 2)))
             print("Portion of income: " + str(round((classification_total / income) * 100, 2)) + "%")
             print()
 
-        print("Total: $" + str(total))
+        print("Total: $" + str(round(total, 2)))
         print("Income: $" + str(income))
-        print("Remainder: $" + str(income - total))
+        print("Remainder: $" + str(round(income - total, 2)))
         print("Portion of income: " + str(round((total / income) * 100, 2)) + "%")
         print()
     else:
@@ -111,9 +111,9 @@ def show(answer, json_file, income_file):
             i += 1
             total += expense["cost"]
         print()
-        print("Total: $" + str(total))
+        print("Total: $" + str(round(total, 2)))
         print("Income: $" + str(income))
-        print("Remainder: $" + str(income - total))
+        print("Remainder: $" + str(round(income - total, 2)))
         print("Portion of income: " + str(round((total / income) * 100, 2)) + "%")
         print()
 
