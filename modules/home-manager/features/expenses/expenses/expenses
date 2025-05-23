@@ -7,35 +7,38 @@ import sys
 
 
 def main():
-    home = environ["HOME"]
-    storage_dir = home + "/.local/share/expenses/"
-    json_file = storage_dir + "expenses.json"
-    income_file = storage_dir + "income.txt"
+    try:
+        home = environ["HOME"]
+        storage_dir = home + "/.local/share/expenses/"
+        json_file = storage_dir + "expenses.json"
+        income_file = storage_dir + "income.txt"
 
-    if not path.exists(storage_dir):
-        mkdir(storage_dir)
+        if not path.exists(storage_dir):
+            mkdir(storage_dir)
 
-    if not path.exists(income_file):
-        set_income(income_file)
-
-    while True:
-        answer = input(">> ")
-        print()
-        if answer == "help":
-            help()
-        elif answer == "add":
-            add(json_file)
-        elif answer.startswith("del"):
-            delete(answer.split(" "), json_file)
-        elif answer.startswith("show"):
-            show(answer.split(" "), json_file, income_file)
-        elif answer == "income":
+        if not path.exists(income_file):
             set_income(income_file)
-        elif answer == "exit":
-            sys.exit(0)
-        else:
-            print("Command not recognised - type \"help\" for help.")
+
+        while True:
+            answer = input(">> ")
             print()
+            if answer == "help":
+                help()
+            elif answer == "add":
+                add(json_file)
+            elif answer.startswith("del"):
+                delete(answer.split(" "), json_file)
+            elif answer.startswith("show"):
+                show(answer.split(" "), json_file, income_file)
+            elif answer == "income":
+                set_income(income_file)
+            elif answer == "exit":
+                sys.exit(0)
+            else:
+                print("Command not recognised - type \"help\" for help.")
+                print()
+    except KeyboardInterrupt:
+        print()
 
 def set_income(income_file):
     income = 0
@@ -129,7 +132,7 @@ def get_expense_classifications_list(data):
 def get_expense_classification(data, classification):
     result = []
     for expense in data:
-        if expense["classification"].lower() == classification.lower():
+        if expense["classification"] == classification:
             result.append(expense)
     return result
 
@@ -179,7 +182,7 @@ def delete(answer, json_file):
     else:
         i = 0
         for expense in data:
-            if expense["name"].lower() == target.lower():
+            if expense["name"] == target:
                 data.pop(i)
                 break
             i += 1
