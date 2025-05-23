@@ -20,5 +20,6 @@
     ./features/lutgen
     ./features/wine
     ./features/krita
+    ./features/expenses
   ];
 }
