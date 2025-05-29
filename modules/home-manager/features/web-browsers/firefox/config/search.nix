@@ -2,8 +2,8 @@
   search = {
     order = ["4get" "ddg" "google" "Bookmarks" "History" "Tabs"];
     force = true;
-    default = "4get";
-    privateDefault = "4get";
+    default = "brave";
+    privateDefault = "brave";
     engines = {
       "4get" = {
         urls = [
@@ -12,6 +12,14 @@
           }
         ];
         definedAliases = ["@4g"];
+      };
+      "brave" = {
+        urls = [
+          {
+            template = "https://search.brave.com/search?q={searchTerms}";
+          }
+        ];
+        definedAliases = ["@br"];
       };
     };
   };
