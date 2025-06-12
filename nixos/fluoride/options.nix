@@ -31,12 +31,12 @@
     };
     desktopTheme = {
       # name = "paradise";
-      name = "biscuit-de-mar-dark";
+      name = "everblush";
       wallpaper = {
         type = "image";
         image = {
           fillType = "fill";
-          path = ../../wallpapers/BouquetOnOliveGreen-darker.jpg;
+          path = ../../wallpapers/flowers-1.jpg;
         };
       };
       terminalPadding = 24;
