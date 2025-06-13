@@ -135,7 +135,6 @@ in {
           noProfileThemes.enable = true;
           noTypingAnimation.enable = true;
           noUnblockToJump.enable = true;
-          nsfwGateBypass.enable = true;
           onePingPerDM.enable = true;
           permissionsViewer.enable = lib.mkIf bloat true;
           pictureInPicture.enable = lib.mkIf bloat true;
