@@ -20,7 +20,6 @@
       networkmanager-openconnect
       networkmanager-vpnc
       networkmanager-l2tp
-      networkmanager_strongswan
       wpa_supplicant
     ];
 
