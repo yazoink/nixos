@@ -1,7 +1,9 @@
-{ pkgs, ... }:
+{pkgs, ...}:
 pkgs.python312Packages.buildPythonApplication rec {
   pname = "usdtoaud";
   version = "1.0";
+  pyproject = true;
+  build-system = with pkgs; [setup-tools];
 
   src = ./usdtoaud;
 
