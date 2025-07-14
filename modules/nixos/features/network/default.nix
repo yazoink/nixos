@@ -16,10 +16,6 @@
 
   config = lib.mkIf config.bundles.base.network.enable {
     environment.systemPackages = with pkgs; [
-      networkmanager-openvpn
-      networkmanager-openconnect
-      networkmanager-vpnc
-      networkmanager-l2tp
       wpa_supplicant
     ];
 
@@ -60,7 +56,13 @@
     networking.networkmanager = {
       enable = true;
       wifi.macAddress = "random";
-      plugins = [pkgs.networkmanager-strongswan];
+      plugins = with pkgs; [
+        networkmanager-strongswan
+        networkmanager-openvpn
+        networkmanager-openconnect
+        networkmanager-vpnc
+        networkmanager-l2tp
+      ];
 
       ensureProfiles = {
         environmentFiles = ["/run/secrets/wifi_env"];
