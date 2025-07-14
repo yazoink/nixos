@@ -1,7 +1,9 @@
-{ pkgs, ... }:
+{pkgs, ...}:
 pkgs.python312Packages.buildPythonApplication rec {
   pname = "hyprviewbinds";
   version = "1.0";
+  pyproject = true;
+  build-system = with pkgs; [setup-tools];
 
   src = pkgs.fetchFromGitHub {
     owner = "yazoink";
@@ -15,12 +17,14 @@ pkgs.python312Packages.buildPythonApplication rec {
     pkgs.wrapGAppsHook
   ];
 
-  propagatedBuildInputs = with pkgs.python312Packages; [
-    pygobject3
-    sh
-  ] ++ [
-    pkgs.gtk3
-  ];
+  propagatedBuildInputs = with pkgs.python312Packages;
+    [
+      pygobject3
+      sh
+    ]
+    ++ [
+      pkgs.gtk3
+    ];
 
   makeWrapperArgs = [
     "--prefix GI_TYPELIB_PATH : ${pkgs.gtk3}/lib/girepository-1.0"

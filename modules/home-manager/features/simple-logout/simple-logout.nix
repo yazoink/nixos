@@ -2,6 +2,8 @@
 pkgs.python312Packages.buildPythonApplication rec {
   pname = "simple-logout";
   version = "1.0";
+  pyproject = true;
+  build-system = with pkgs; [setup-tools];
 
   src = pkgs.fetchFromGitHub {
     owner = "yazoink";
@@ -15,14 +17,16 @@ pkgs.python312Packages.buildPythonApplication rec {
     pkgs.wrapGAppsHook
   ];
 
-  propagatedBuildInputs = with pkgs.python312Packages; [
-    pygobject3
-    sh
-  ] ++ [
-    pkgs.gtk-layer-shell
-    pkgs.gtk3
-    pkgs.python3
-  ];
+  propagatedBuildInputs = with pkgs.python312Packages;
+    [
+      pygobject3
+      sh
+    ]
+    ++ [
+      pkgs.gtk-layer-shell
+      pkgs.gtk3
+      pkgs.python3
+    ];
 
   makeWrapperArgs = [
     "--prefix GI_TYPELIB_PATH : ${pkgs.gtk3}/lib/girepository-1.0"
