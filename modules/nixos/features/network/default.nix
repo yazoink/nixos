@@ -1,8 +1,12 @@
-{pkgs, config, lib, ...}:
 {
+  pkgs,
+  config,
+  lib,
+  ...
+}: {
   # https://discourse.nixos.org/t/cannot-connect-to-wpa-enterprise-network/22912/9
   # https://github.com/janik-haag/nm2nix
-  
+
   options = {
     bundles.base.network.enable = lib.mkOption {
       type = lib.types.bool;
@@ -23,27 +27,28 @@
     nixpkgs.overlays = [
       (self: super: {
         wpa_supplicant = super.wpa_supplicant.overrideAttrs (oldAttrs: {
-          extraConfig = oldAttrs.extraConfig + ''
-            CONFIG_WEP=y
-            CONFIG_EAP=y
-            CONFIG_IEEE8021X=y
-          '';
+          extraConfig =
+            oldAttrs.extraConfig
+            + ''
+              CONFIG_WEP=y
+              CONFIG_EAP=y
+              CONFIG_IEEE8021X=y
+            '';
         });
       })
     ];
 
-    systemd.services.wpa_supplicant.environment.OPENSSL_CONF =
-      pkgs.writeText "openssl.cnf" ''
-        openssl_conf = openssl_init
-        [openssl_init]
-        ssl_conf = ssl_sect
-        [ssl_sect]
-        system_default = system_default_sect
-        [system_default_sect]
-        Options = UnsafeLegacyRenegotiation
-        [system_default_sect]
-        CipherString = Default:@SECLEVEL=0
-      '';
+    systemd.services.wpa_supplicant.environment.OPENSSL_CONF = pkgs.writeText "openssl.cnf" ''
+      openssl_conf = openssl_init
+      [openssl_init]
+      ssl_conf = ssl_sect
+      [ssl_sect]
+      system_default = system_default_sect
+      [system_default_sect]
+      Options = UnsafeLegacyRenegotiation
+      [system_default_sect]
+      CipherString = Default:@SECLEVEL=0
+    '';
 
     networking.hosts = {
       "127.0.0.1" = ["localhost"];
@@ -55,8 +60,8 @@
 
     networking.networkmanager = {
       enable = true;
-      enableStrongSwan = true;
       wifi.macAddress = "random";
+      plugins = [pkgs.networkmanager-strongswan];
 
       ensureProfiles = {
         environmentFiles = ["/run/secrets/wifi_env"];
@@ -81,7 +86,7 @@
               addr-gen-mode = "stable-privacy";
               method = "auto";
             };
-            proxy = { };
+            proxy = {};
             wifi = {
               mode = "infrastructure";
               ssid = "$UNI_SSID";
