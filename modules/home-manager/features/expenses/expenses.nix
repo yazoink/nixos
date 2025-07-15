@@ -3,7 +3,7 @@ pkgs.python312Packages.buildPythonApplication rec {
   pname = "expenses";
   version = "1.0";
   pyproject = true;
-  build-system = with pkgs; [setup-tools];
+  build-system = ["setup-tools"];
 
   src = ./expenses;
 
