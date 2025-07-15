@@ -3,7 +3,7 @@ pkgs.python312Packages.buildPythonApplication rec {
   pname = "audtousd";
   version = "1.0";
   pyproject = true;
-  build-system = ["setup-tools"];
+  build-system = [setuptools];
 
   src = ./audtousd;
 
