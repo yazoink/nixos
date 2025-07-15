@@ -15,11 +15,11 @@ pkgs.python312Packages.buildPythonApplication rec {
   nativeBuildInputs = [
     pkgs.gobject-introspection
     pkgs.wrapGAppsHook
+    pkgs.python312Packages.pygobject3
   ];
 
   propagatedBuildInputs = with pkgs.python312Packages;
     [
-      pygobject3
       sh
     ]
     ++ [

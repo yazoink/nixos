@@ -56,6 +56,7 @@
       spaceCadetPinball.enable = true;
       prismlauncher.enable = true;
       lutgen.enable = true;
+      krita.enable = true;
     };
     hardwareFeatures = {
       bootloader = {

@@ -62,10 +62,10 @@
       desktopFull.enable = true;
     };
     features = {
-      etterna.enable = true;
+      # etterna.enable = true;
       prismlauncher.enable = true;
       osu.enable = true;
-      ollama.enable = true;
+      # ollama.enable = true;
       steam.enable = true;
       gamescope.enable = true;
       virtManager.enable = true;
