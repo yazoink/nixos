@@ -16,10 +16,12 @@ pkgs.python312Packages.buildPythonApplication rec {
     pkgs.gobject-introspection
     pkgs.wrapGAppsHook
     pkgs.python312Packages.pygobject3
+    pkgs.glib
   ];
 
-  propagatedBuildInputs = with pkgs.python312Packages;
+  propagatedBuildInputs = with pkgs.python3Packages;
     [
+      pygobject3
       sh
     ]
     ++ [
