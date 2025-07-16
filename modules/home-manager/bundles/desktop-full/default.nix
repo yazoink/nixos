@@ -15,7 +15,7 @@
       lyricli.enable = true;
       ncmpcpp.enable = true;
       newsboat.enable = true;
-      soundboard.enable = true;
+      # soundboard.enable = true; # broken, fix later
       usdtoaud.enable = true;
       ytDlp.enable = true;
       cava.enable = true;
