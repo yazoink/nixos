@@ -20,7 +20,7 @@
         ms-vscode.cpptools
         jnoortheen.nix-ide
         ms-python.python
-        devsense.phptools-vscode
+        # devsense.phptools-vscode
         ecmel.vscode-html-css
         mads-hartmann.bash-ide-vscode
         ms-python.debugpy
