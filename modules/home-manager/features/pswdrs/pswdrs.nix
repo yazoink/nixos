@@ -8,7 +8,6 @@ pkgs.rustPlatform.buildRustPackage rec {
     rev = "main";
     sha256 = "sha256-tkJL3365pKOXPt7o6Z7JqdUFqHPKaSinfRpXh0X06DM=";
   };
-  useFetchCargoVendor = true;
   cargoHash = "sha256-rkoOJMILF5UENdlYh7F3WCSJImxGGFq1EgpdOVxPRxc=";
   buildInputs = [];
   nativeBuildInputs = [];
