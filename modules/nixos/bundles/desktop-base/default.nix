@@ -35,5 +35,6 @@
       silentBoot.enable = true;
       sway.enable = lib.mkIf (config.myOptions.bundles.desktopBase.windowManager == "sway") true;
     };
+    nixpkgs.config.permittedInsecurePackages = ["libsoup-2.74.3"];
   };
 }
