@@ -12,4 +12,7 @@
     ./features/disk-burner
     ./features/opentabletdriver
   ];
+  config = {
+    nixpkgs.config.permittedInsecurePackages = ["libsoup-2.74.3"];
+  };
 }
