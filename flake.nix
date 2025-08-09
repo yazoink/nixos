@@ -50,6 +50,11 @@
         modules = [
           ./options
           ./nixos/fluoride
+          {
+            config = {
+              nixpkgs.config.permittedInsecurePackages = ["libsoup-2.74.3"];
+            };
+          }
         ];
       };
 
@@ -59,6 +64,11 @@
         modules = [
           ./options
           ./nixos/cyberia
+          {
+            config = {
+              nixpkgs.config.permittedInsecurePackages = ["libsoup-2.74.3"];
+            };
+          }
         ];
       };
 
@@ -68,6 +78,11 @@
         modules = [
           ./options
           ./nixos/stardust
+          {
+            config = {
+              nixpkgs.config.permittedInsecurePackages = ["libsoup-2.74.3"];
+            };
+          }
         ];
       };
 
@@ -76,6 +91,11 @@
         modules = [
           ./options
           ./nixos/iris
+          {
+            config = {
+              nixpkgs.config.permittedInsecurePackages = ["libsoup-2.74.3"];
+            };
+          }
         ];
       };
 
@@ -84,6 +104,11 @@
         modules = [
           ./options
           ./nixos/tallulah
+          {
+            config = {
+              nixpkgs.config.permittedInsecurePackages = ["libsoup-2.74.3"];
+            };
+          }
         ];
       };
     };
