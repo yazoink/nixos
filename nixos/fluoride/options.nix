@@ -52,7 +52,7 @@
       };
       sddm = {
         scale = 0.8;
-        wallpaper = ../../wallpapers/a_close_up_of_flowers.jpg;
+        wallpaper = ../../wallpapers/flowers-1.jpg;
       };
     };
     bundles = {
