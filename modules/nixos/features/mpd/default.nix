@@ -1,5 +1,9 @@
-{pkgs, config, lib, ...}:
 {
+  pkgs,
+  config,
+  lib,
+  ...
+}: {
   options = {
     bundles.desktopFull.mpd.enable = lib.mkOption {
       type = lib.types.bool;
@@ -36,7 +40,7 @@
 
     environment.systemPackages = with pkgs; [
       #cantata (abandoned/broken)
-      ario
+      # ario
       mpc-cli
     ];
   };
