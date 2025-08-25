@@ -87,8 +87,8 @@
     ../../features/soundboard
     ../../features/usdtoaud
     ../../features/yt-dlp
-    ../../features/mpdris2-rs
-    # ../../features/mpdris2
+    # ../../features/mpdris2-rs
+    ../../features/mpdris2
     ../../features/cava
   ];
 }

@@ -152,7 +152,7 @@
         ];
       };
       settings = {
-        manager = {
+        mgr = {
           ratio = [1 2 2];
           sort_by = "natural";
           linemode = "size";
