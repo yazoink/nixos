@@ -38,7 +38,7 @@
         kid3-qt
 
         ### gui utilities ###
-        easyeffects
+        # easyeffects
         transmission_4-gtk
         bleachbit
         #qbittorrent-enhanced
@@ -49,7 +49,7 @@
         #gnome-disk-utility
         gnome-font-viewer
         galculator
-        d-spy
+        # d-spy
 
         ### programming ####
         texliveFull

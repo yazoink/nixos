@@ -18,7 +18,7 @@ pkgs.python312Packages.buildPythonApplication rec {
     glib
   ];
 
-  propagatedBuildInputs = with pkgs; [
+  buildInputs = with pkgs; [
     (python3.withPackages (p:
       with p; [
         pygobject3
