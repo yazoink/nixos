@@ -12,21 +12,20 @@ pkgs.python312Packages.buildPythonApplication rec {
     sha256 = "sha256-XxtYx1HOAWG24y3Nr9o3E2wrhdnLvU8m9eCUy5aoOao=";
   };
 
-  nativeBuildInputs = [
-    pkgs.gobject-introspection
-    pkgs.wrapGAppsHook
-    pkgs.python312Packages.pygobject3
-    pkgs.glib
+  nativeBuildInputs = with pkgs; [
+    gobject-introspection
+    wrapGAppsHook
+    glib
   ];
 
-  propagatedBuildInputs = with pkgs.python312Packages;
-    [
-      pygobject3
-      sh
-    ]
-    ++ [
-      pkgs.gtk3
-    ];
+  propagatedBuildInputs = with pkgs; [
+    (python3.withPackages (p:
+      with p; [
+        pygobject3
+        sh
+      ]))
+    gtk3
+  ];
 
   makeWrapperArgs = [
     "--prefix GI_TYPELIB_PATH : ${pkgs.gtk3}/lib/girepository-1.0"
