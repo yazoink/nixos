@@ -13,18 +13,19 @@ pkgs.python312Packages.buildPythonApplication rec {
   };
 
   nativeBuildInputs = with pkgs; [
-    gobject-introspection
     wrapGAppsHook
     glib
   ];
 
-  buildInputs = with pkgs; [
+  propagatedBuildInputs = with pkgs; [
     (python3.withPackages (p:
       with p; [
         pygobject3
         sh
       ]))
     gtk3
+    gobject-introspection
+    wrapGAppsHook
   ];
 
   makeWrapperArgs = [
