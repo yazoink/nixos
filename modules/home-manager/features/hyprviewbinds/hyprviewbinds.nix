@@ -25,7 +25,6 @@ pkgs.python312Packages.buildPythonApplication rec {
       ]))
     gtk3
     gobject-introspection
-    wrapGAppsHook
   ];
 
   makeWrapperArgs = [
