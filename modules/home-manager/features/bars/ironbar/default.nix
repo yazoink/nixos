@@ -324,8 +324,8 @@ in {
         .brightness-icon,
         .systray-revealer-icon {
           font-size: 16px;
-          padding-left: 12px;
-          padding-right: 12px;
+          padding-left: 15px;
+          padding-right: 15px;
         }
 
         .volume-icon {
