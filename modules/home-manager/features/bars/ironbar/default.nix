@@ -324,12 +324,22 @@ in {
         .brightness-icon,
         .systray-revealer-icon {
           font-size: 16px;
-          padding-left: 15px;
-          padding-right: 15px;
+          padding-left: 14px;
+          padding-right: 14px;
         }
 
         .volume-icon {
           font-size: 21px;
+        }
+
+        .power-icon {
+          padding-left: 6px;
+          padding-right: 6px;
+        }
+
+        .volume-icon {
+          padding-left: 8px;
+          padding-right: 8px;
         }
 
         .battery-percent,
