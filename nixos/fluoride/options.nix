@@ -36,7 +36,7 @@
         type = "image";
         image = {
           fillType = "fill";
-          path = ../../wallpapers/flowers-1.jpg;
+          path = ../../wallpapers/a_group_of_purple_flowers2.png;
         };
       };
       terminalPadding = 24;
@@ -52,7 +52,7 @@
       };
       sddm = {
         scale = 0.8;
-        wallpaper = ../../wallpapers/flowers-1.jpg;
+        wallpaper = ../../wallpapers/a_group_of_purple_flowers2.png;
       };
     };
     bundles = {
