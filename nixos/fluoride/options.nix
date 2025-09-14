@@ -31,7 +31,7 @@
     };
     desktopTheme = {
       # name = "paradise";
-      name = "everblush";
+      name = "idk-what-this-one-is-called";
       wallpaper = {
         type = "image";
         image = {
