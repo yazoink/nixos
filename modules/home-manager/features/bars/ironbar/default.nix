@@ -334,7 +334,7 @@ in {
 
         .power-icon {
           padding-left: 4px;
-          padding-right: 8px;
+          padding-right: 10px;
         }
 
         .volume-icon {
