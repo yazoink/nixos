@@ -79,7 +79,6 @@ in {
           copyFileContents.enable = lib.mkIf bloat true;
           copyUserURLs.enable = lib.mkIf bloat true;
           decor.enable = lib.mkIf bloat true;
-          emoteCloner.enable = lib.mkIf bloat true;
           experiments = {
             enable = true;
             toolbarDevMenu = true;
