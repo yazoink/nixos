@@ -9,8 +9,9 @@
   };
   gesture = [
     "3, horizontal, workspace"
-    "3, vertical, close"
-    "3, pinchin, fullscreen, maximize"
-    "3, pinchout, float, tile"
+    "3, down, close"
+    "3, up, float"
+    "3, pinch, fullscreen, maximize"
+    "4, swipe, move"
   ];
 }
