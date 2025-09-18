@@ -205,7 +205,7 @@ in {
     };
   };
   config = lib.mkIf config.bundles.desktopBase.ironbar.enable {
-    home.packages = with pkgs; [ironbar font-awesome_6];
+    home.packages = with pkgs; [ironbar font-awesome];
     xdg.configFile = {
       "ironbar/config.json".text =
         if osConfig.myOptions.hardwareFeatures.laptop.enable
@@ -256,7 +256,7 @@ in {
 
         #bar {
           all: unset;
-          font-family: "${fonts.sansSerif.name}", "Font Awesome 6 Free";
+          font-family: "${fonts.sansSerif.name}", "Font Awesome 7 Free";
           font-weight: bold;
           background-color: #${base16Scheme.base00};
           color: #${base16Scheme.base05};
