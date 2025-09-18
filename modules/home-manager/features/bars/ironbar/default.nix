@@ -323,7 +323,7 @@ in {
         .battery-icon,
         .brightness-icon,
         .systray-revealer-icon {
-          font-size: 16px;
+          font-size: 12px;
           padding-left: 14px;
           padding-right: 14px;
         }
