@@ -205,7 +205,7 @@ in {
     };
   };
   config = lib.mkIf config.bundles.desktopBase.ironbar.enable {
-    home.packages = with pkgs; [ironbar];
+    home.packages = with pkgs; [ironbar font-awesome_6];
     xdg.configFile = {
       "ironbar/config.json".text =
         if osConfig.myOptions.hardwareFeatures.laptop.enable
@@ -330,16 +330,6 @@ in {
 
         .volume-icon {
           font-size: 21px;
-        }
-
-        .power-icon {
-          padding-left: 2px;
-          padding-right: 12px;
-        }
-
-        .volume-icon {
-          padding-left: 8px;
-          padding-right: 8px;
         }
 
         .battery-percent,
