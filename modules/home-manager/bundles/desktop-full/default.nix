@@ -50,6 +50,7 @@
         gnome-font-viewer
         galculator
         # d-spy
+        filezilla
 
         ### programming ####
         texliveFull
