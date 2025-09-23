@@ -21,7 +21,7 @@
         yaml = ["yamllint" "yamlfmt"];
         c = ["uncrustify"];
         json = ["fixjson"];
-        php = ["php_cs_fixer"];
+        php = ["php-codesniffer"];
         rust = ["rustfmt"];
         # zig = ["zigfmt"];
         # latex = ["llf"];
