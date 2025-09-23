@@ -1,6 +1,7 @@
 {
   lib,
   config,
+  pkgs,
   ...
 }: {
   plugins = lib.mkMerge [
@@ -23,7 +24,7 @@
     (import ./neo-tree.nix)
     (import ./illuminate.nix)
     (import ./treesitter.nix)
-    (import ./conform.nix)
+    (import ./conform.nix {inherit pkgs;})
     (import ./cmp.nix)
     (import ./lsp.nix)
     (import ./telescope.nix)
