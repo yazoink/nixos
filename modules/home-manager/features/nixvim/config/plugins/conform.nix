@@ -1,4 +1,4 @@
-{
+{pkgs, ...}: {
   conform-nvim = {
     enable = true;
     settings = {
@@ -21,10 +21,15 @@
         yaml = ["yamllint" "yamlfmt"];
         c = ["uncrustify"];
         json = ["fixjson"];
-        php = ["php-codesniffer"];
+        php = ["phpcbf"];
         rust = ["rustfmt"];
         # zig = ["zigfmt"];
         # latex = ["llf"];
+      };
+      formatters = {
+        phpcbf = {
+          command = "${pkgs.php83Packages.php-codesniffer}/bin/phpcbf";
+        };
       };
     };
   };

@@ -33,11 +33,11 @@
       rustfmt
       gcc
       clang-tools
-      php84Packages.php-codesniffer
+      # php84Packages.php-codesniffer
     ];
     programs.nixvim = lib.mkMerge [
       {enable = true;}
-      (import ./config {inherit lib config;})
+      (import ./config {inherit lib config pkgs;})
     ];
   };
 }
