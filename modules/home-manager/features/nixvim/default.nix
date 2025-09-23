@@ -33,7 +33,7 @@
       rustfmt
       gcc
       clang-tools
-      # php84Packages.php-cs-fixer broken :(
+      php84Packages.php-codesniffer
     ];
     programs.nixvim = lib.mkMerge [
       {enable = true;}
