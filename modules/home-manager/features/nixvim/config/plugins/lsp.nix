@@ -14,7 +14,12 @@
       ts_ls.enable = true; # TS/JS
       cssls.enable = true; # CSS
       html.enable = true; # HTML
-      phpactor.enable = true; # PHP
+      phpactor = {
+        enable = true;
+        autostart = true;
+        cmd = ["phpactor" "language-server"];
+        filetypes = ["php"];
+      };
       pyright.enable = true; # Python
       marksman.enable = true; # Markdown
       # nil_ls.enable = true; # Nix
