@@ -1,4 +1,4 @@
-{
+{pkgs, ...}: {
   opts = {
     number = true;
     #relativenumber = true;
@@ -22,5 +22,6 @@
   clipboard = {
     register = "unnamedplus";
     providers.wl-copy.enable = true;
+    providers.wl-copy.package = pkgs.wl-clipboard;
   };
 }
