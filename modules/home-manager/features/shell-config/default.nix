@@ -5,8 +5,6 @@
   ...
 }: let
   myAliases = {
-    "rebuild-test" = "${scripts}/bin/rebuild -t";
-    "update" = "cd ~/nixos && sudo nix flake update";
     "optimise" = "sudo nix-store --optimise && nix-store --optimise";
     "chx" = "chmod u+x";
     "cp" = "cp -v";
