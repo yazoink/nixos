@@ -33,6 +33,7 @@
       rustfmt
       gcc
       clang-tools
+      racket
       # php84Packages.php-codesniffer
     ];
     programs.nixvim = lib.mkMerge [

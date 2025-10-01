@@ -12,6 +12,7 @@
       # Average webdev LSPs
       # ts-ls.enable = true; # TS/JS
       racket_langserver.enable = true;
+      racket_langserver.package = "null";
       ts_ls.enable = true; # TS/JS
       cssls.enable = true; # CSS
       html.enable = true; # HTML
