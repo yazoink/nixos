@@ -65,8 +65,8 @@
         ### misc ###
         tty-solitaire
         cbonsai
-        factorio
         # wineWowPackages.waylandFull
+        # factorio
       ]
       ++ (
         if osConfig.services.printing.enable
