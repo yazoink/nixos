@@ -44,5 +44,11 @@
       s-tui
       stress
     ];
+
+    xdg.configFile."nixpkgs/config.nix".text = ''
+      {
+        allowUnfree = true;
+      }
+    '';
   };
 }
