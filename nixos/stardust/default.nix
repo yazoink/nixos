@@ -13,6 +13,8 @@
     inputs.stylix.nixosModules.stylix
   ];
 
+  environment.systemPackages = with pkgs; [factorio]; # move later
+
   home-manager = {
     extraSpecialArgs = {inherit inputs;};
     useGlobalPkgs = true;
