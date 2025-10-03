@@ -65,6 +65,7 @@
         ### misc ###
         tty-solitaire
         cbonsai
+        factorio
         # wineWowPackages.waylandFull
       ]
       ++ (
