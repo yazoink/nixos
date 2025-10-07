@@ -1,13 +1,15 @@
 {
   illuminate = {
     enable = true;
-    underCursor = false;
-    filetypesDenylist = [
-      "Outline"
-      "TelescopePrompt"
-      "alpha"
-      "harpoon"
-      "reason"
-    ];
+    settings = {
+      under_cursor = false;
+      filetypes_deny_list = [
+        "Outline"
+        "TelescopePrompt"
+        "alpha"
+        "harpoon"
+        "reason"
+      ];
+    };
   };
 }
