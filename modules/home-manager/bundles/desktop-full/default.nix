@@ -27,7 +27,7 @@
         signal-desktop-bin
 
         ### gui file viewers ###
-        sublime-music
+        supersonic
 
         ### gui file editors ###
         audacity
