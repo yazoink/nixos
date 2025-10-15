@@ -38,7 +38,8 @@
       };
     };
     bundles = {
-      base.starshipFormat = 1;
+      # base.starshipFormat = 1;
+      base.starshipFormat = 2;
       desktopBase.windowManager = "hyprland";
       desktopBase.displayManager = "sddm";
       desktopBase.mpv.profile = "fast";
