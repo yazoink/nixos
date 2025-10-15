@@ -27,7 +27,7 @@
         };
         terminal = {
           # name = "Bm437 NEC APC3 8x16";
-          name = "VictorMono Nerd Font";
+          name = "ZedMono Nerd Font";
           size = 12;
         };
       };
