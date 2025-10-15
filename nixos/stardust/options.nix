@@ -27,7 +27,7 @@
         };
         terminal = {
           # name = "Bm437 NEC APC3 8x16";
-          name = "Cascadia Code";
+          name = "VictorMono Nerd Font";
           size = 12;
         };
       };
