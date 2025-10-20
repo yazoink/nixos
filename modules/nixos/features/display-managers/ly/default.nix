@@ -9,7 +9,7 @@ in {
     services.displayManager.ly = {
       enable = true;
       settings = {
-        animation = "gameoflife";
+        animation = "doom";
         bg = "0X00${colors.base00}";
         fg = "0X00${colors.base05}";
         error_fg = "0X01${colors.base08}";
