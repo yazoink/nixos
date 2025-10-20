@@ -1,12 +1,15 @@
-{config, lib, ...}:
 {
+  config,
+  lib,
+  ...
+}: {
   options = {
-    bundles.desktopBase.silentBoot.enable = lib.mkOption {
+    config.myOptions.bundles.desktopBase.silentBoot.enable = lib.mkOption {
       type = lib.types.bool;
       default = false;
     };
   };
-  config = lib.mkIf config.bundles.desktopBase.silentBoot.enable {
+  config = lib.mkIf config.myOptions.bundles.desktopBase.silentBoot.enable {
     boot = {
       consoleLogLevel = 0;
       initrd.verbose = false;

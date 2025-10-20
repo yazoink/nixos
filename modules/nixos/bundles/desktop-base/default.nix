@@ -32,7 +32,6 @@
       gnomeKeyring.enable = true;
       hyprland.enable = lib.mkIf (config.myOptions.bundles.desktopBase.windowManager == "hyprland") true;
       polkit.enable = true;
-      silentBoot.enable = true;
       sway.enable = lib.mkIf (config.myOptions.bundles.desktopBase.windowManager == "sway") true;
     };
   };
