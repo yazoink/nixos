@@ -34,7 +34,7 @@
 
   outputs = {
     nixpkgs,
-    nixpkgs-stable,
+    # nixpkgs-stable,
     home-manager,
     stylix,
     nixos-hardware,
