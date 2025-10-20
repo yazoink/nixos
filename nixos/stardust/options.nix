@@ -41,9 +41,9 @@
       # base.starshipFormat = 1;
       base.starshipFormat = 2;
       desktopBase.windowManager = "hyprland";
-      desktopBase.displayManager = "regreet";
+      desktopBase.displayManager = "ly";
       desktopBase.mpv.profile = "fast";
-      desktopBase.plymouth.enable = true;
+      desktopBase.plymouth.enable = false;
       desktopFull.enable = true;
       desktopFull.vesktop.bloat = false;
     };

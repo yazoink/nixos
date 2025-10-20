@@ -1,7 +1,6 @@
 {lib, ...}: {
   imports = [
     ./firefox
-    ./zen
     ./brave
     ./librewolf
   ];
