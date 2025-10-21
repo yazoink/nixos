@@ -17,7 +17,7 @@ in {
   "$terminal" = "${defaultApps.terminal.command}";
   "$browser" = "${defaultApps.webBrowser.command}";
   "$fileManager" = "${defaultApps.fileManager.command}";
-  "$menu" = "pkill wofi || wofi --show drun";
+  "$menu" = "pkill walker || walker";
   "$screenshot" = "${config.bundles.desktopBase.screenshot.package}/bin/screenshot -s";
   "$screenshotFullscreen" = "${config.bundles.desktopBase.screenshot.package}/bin/screenshot";
   "$lock" = "hyprlock";

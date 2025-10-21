@@ -11,7 +11,8 @@
     stylix.targets.hyprland.enable = false;
     bundles.desktopBase = {
       mako.enable = true;
-      wofi.enable = true;
+      # wofi.enable = true;
+      walker.enable = true;
       # ironbar.enable = true;
       waybar.enable = true;
       screenshot.enable = true;

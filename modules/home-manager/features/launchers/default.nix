@@ -2,5 +2,6 @@
   imports = [
     ./anyrun
     ./wofi
+    ./walker
   ];
 }

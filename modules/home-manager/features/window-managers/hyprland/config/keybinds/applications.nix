@@ -7,7 +7,7 @@
     "$mainMod, R, exec, $menu"
     "$mainMod SHIFT, B, exec, bash ${../../../scripts/waybar.sh}"
     "$mainMod, N, exec, $terminal -e ncmpcpp"
-    "$mainMod SHIFT, O, exec, rofi -show window"
+    # "$mainMod SHIFT, O, exec, rofi -show window"
     "$mainMod, S, exec, $screenshot"
     "$mainMod CTRL, S, exec, $screenshotFullscreen"
     "$mainMod CTRL, L, exec, $lock"
