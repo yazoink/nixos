@@ -23,7 +23,7 @@ in {
     hover_icon_on_border = true;
   };
   decoration = {
-    rounding = 10;
+    rounding = 15;
     blur.enabled = false;
     shadow = {
       enabled = true;
