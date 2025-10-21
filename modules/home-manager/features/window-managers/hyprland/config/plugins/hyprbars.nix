@@ -30,7 +30,7 @@ in {
         bar_text_align = "center";
         bar_precedence_over_border = true;
         bar_padding = 15;
-        bar_button_padding = 15;
+        bar_button_padding = 12;
         disable_initialization_message = true;
         "col.text" = "rgb(${base16Scheme.base03})";
         bar_buttons_alignment = "left";

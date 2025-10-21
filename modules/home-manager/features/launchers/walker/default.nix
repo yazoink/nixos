@@ -14,7 +14,10 @@ in {
     };
   };
   config = lib.mkIf config.bundles.desktopBase.walker.enable {
-    home.packages = [pkgs.walker];
+    services.walker = {
+      enable = true;
+      systemd.enable = true;
+    };
     xdg.configFile = {
       "walker/config.toml".source = ./config.toml;
       "walker/themes/mytheme.toml".text = ''
