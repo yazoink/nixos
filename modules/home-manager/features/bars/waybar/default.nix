@@ -213,7 +213,7 @@ in {
             ${powerModule}
           }
         '';
-      "waybar/menus/power.xml".file = ./power.xml;
+      "waybar/menus/power.xml".source = ./power.xml;
       "waybar/style.css".text =
         ''
           @define-color bg #${base16Scheme.base00};
