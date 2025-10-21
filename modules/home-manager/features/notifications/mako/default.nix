@@ -24,7 +24,7 @@
         actions = "true";
         icons = "true";
         anchor = "top-right";
-        border-radius = "10";
+        border-radius = "15";
         background-color = "#${config.stylix.base16Scheme.base00}";
         text-color = "#${config.stylix.base16Scheme.base05}";
         progress-color = "over #${config.stylix.base16Scheme.base05}";
