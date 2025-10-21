@@ -6,7 +6,7 @@
       #   command = "thunar";
       # };
       terminal = {
-        command = "kitty";
+        command = "footclient";
       };
       discordClient = {
         command = "vesktop";

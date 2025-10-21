@@ -3,12 +3,12 @@
     <object class="GtkMenu" id="menu">
         <child>
             <object class="GtkMenuItem" id="lock">
-                <property name="label"> Lock</property>
+                <property name="label">Lock</property>
             </object>
         </child>
         <child>
             <object class="GtkMenuItem" id="shutdown">
-                <property name="label"> Shutdown</property>
+                <property name="label">Shutdown</property>
             </object>
         </child>
         <child>
@@ -16,7 +16,7 @@
         </child>
         <child>
             <object class="GtkMenuItem" id="reboot">
-                <property name="label"> Reboot</property>
+                <property name="label">Reboot</property>
             </object>
         </child>
     </object>

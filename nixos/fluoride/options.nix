@@ -20,7 +20,7 @@
         command = "imv";
       };
       terminal = {
-        command = "kitty";
+        command = "footclient";
       };
       webBrowser = {
         command = "firefox";
