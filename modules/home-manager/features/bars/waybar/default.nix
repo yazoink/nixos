@@ -7,6 +7,7 @@
 }: let
   inherit (config.stylix) base16Scheme fonts;
   inherit (osConfig.myOptions.hardwareFeatures) laptop;
+  inherit (osConfig.myOptions) desktopTheme;
   barHeight = 36;
   barPosition = "top";
   workspacesModule = ''
@@ -234,12 +235,12 @@ in {
           }
 
           window#waybar {
-            font-size: ${builtins.toString fonts.sizes.desktop}pt;
+            font-size: ${builtins.toString desktopTheme.fonts.desktop.size}pt;
           }
 
           tooltip label,
           menuitem {
-            font-size: ${builtins.toString fonts.sizes.popups}pt;
+            font-size: ${builtins.toString desktopTheme.fonts.desktop.size}pt;
           }
 
           #custom-tray-icon,
@@ -248,7 +249,7 @@ in {
           #custom-backlight-icon,
           #idle_inhibitor,
           #custom-power {
-            font-size: ${builtins.toString fonts.sizes.desktop - 1}pt;
+            font-size: ${builtins.toString desktopTheme.fonts.desktop.size - 1}pt;
           }
         ''
         + builtins.readFile ./style.css;
