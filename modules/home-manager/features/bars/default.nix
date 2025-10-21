@@ -1,6 +1,6 @@
 {
   imports = [
-    ./waybar-old
+    ./waybar
     ./ironbar
   ];
 }

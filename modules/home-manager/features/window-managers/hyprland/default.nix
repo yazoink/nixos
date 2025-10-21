@@ -12,7 +12,8 @@
     bundles.desktopBase = {
       mako.enable = true;
       wofi.enable = true;
-      ironbar.enable = true;
+      # ironbar.enable = true;
+      waybar.enable = true;
       screenshot.enable = true;
       # hyprViewBinds.enable = true; # nix package stopped building, fix later
       swayosd.enable = true;

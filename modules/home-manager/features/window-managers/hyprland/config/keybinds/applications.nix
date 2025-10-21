@@ -5,7 +5,7 @@
     "$mainMod, E, exec, $fileManager"
     "$mainMod, P, exec, $menu"
     "$mainMod, R, exec, $menu"
-    "$mainMod SHIFT, B, exec, bash ${../../../scripts/ironbar.sh}"
+    "$mainMod SHIFT, B, exec, bash ${../../../scripts/waybar.sh}"
     "$mainMod, N, exec, $terminal -e ncmpcpp"
     "$mainMod SHIFT, O, exec, rofi -show window"
     "$mainMod, S, exec, $screenshot"

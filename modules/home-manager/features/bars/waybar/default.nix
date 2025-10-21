@@ -6,7 +6,7 @@
   ...
 }: let
   inherit (config.stylix) base16Scheme fonts;
-  inherit (osConfig.myOptions.hardwareFeatures.laptop) batteryName;
+  inherit (osConfig.myOptions.hardwareFeatures) laptop;
   barHeight = 36;
   barPosition = "top";
   workspacesModule = ''
@@ -71,4 +71,159 @@
       "format": "{capacity}%"
     }
   '';
-in {}
+  volumeModule = ''
+    "group/volume-expander": {
+      "orientation": "inherit",
+      "drawer": {
+        "transition-duration": 600,
+        "children-class": "tray-group-item"
+      },
+      "modules": ["wireplumber#icon", "wireplumber#volume"]
+    },
+    "wireplumber#icon": {
+      "format": "{icon}",
+      "format-muted": "",
+      "on-click-right": "pavucontrol",
+      "on-click-middle": "amixer -D pipewire set Master toggle",
+      "on-click": "amixer -D pipewire set Master toggle",
+      "tooltip-format": "Volume\n- Click to mute\n- Right click to open settings\n- Scroll to adjust",
+      "format-icons": [
+        "",
+        "",
+        ""
+      ]
+    },
+    "wireplumber#volume": {
+      "on-click-right": "pavucontrol",
+      "on-click-middle": "amixer -D pipewire set Master toggle",
+      "on-click": "amixer -D pipewire set Master toggle",
+      "format": "{volume}%",
+      "format-muted": "{volume}%"
+    }
+  '';
+  backlightModule = ''
+    "group/backlight-expander": {
+      "orientation": "inherit",
+      "drawer": {
+        "transition-duration": 600,
+        "children-class": "tray-group-item"
+      },
+      "modules": ["custom/backlight-icon", "backlight"]
+    },
+    "custom/backlight-icon": {
+      "format": "",
+      "tooltip": true,
+      "tooltip-format": "Backlight (scroll to adjust)"
+    },
+    "backlight": {
+      "device": "intel_backlight",
+      "format": "{percent}%",
+      "tooltip": true,
+      "tooltip-format": "Backlight (scroll to adjust)"
+    }
+  '';
+  powerModule = ''
+    "custom/power": {
+      "format" : "⏻ ",
+        "tooltip": true,
+        "tooltip-format": "Power menu",
+        "menu": "on-click",
+        "menu-file": "~/.config/waybar/menus/power.xml",
+        "menu-actions": {
+          "lock": "sleep 0.1 && hyprlock",
+          "shutdown": "shutdown",
+          "reboot": "reboot"
+        }
+    }
+  '';
+  idleInhibitorModule = ''
+    "idle_inhibitor": {
+      "format": "{icon}",
+      "tooltip": true,
+      "tooltip-format-activated": "Idle inhibitor (click to deactivate)",
+      "tooltip-format-deactivated": "Idle inhibitor (click to activate)",
+      "format-icons": {
+        "activated": "",
+        "deactivated": ""
+      }
+    }
+  '';
+  barConfig = ''
+    "reload_style_on_change": true,
+    "layer": "top",
+    "mode": "dock",
+    "exclusive": "true",
+    "position": "${barPosition}",
+    "spacing": 20,
+    "height": ${builtins.toString barHeight},
+    "modules-left": ["hyprland/workspaces"],
+    "modules-center": ["clock"]
+  '';
+in {
+  options = {
+    bundles.desktopBase.waybar.enable = lib.mkOption {
+      type = lib.types.bool;
+      default = false;
+    };
+  };
+  config = lib.mkIf config.bundles.desktopBase.waybar.enable {
+    home.packages = with pkgs; [waybar font-awesome];
+    xdg.configFile = {
+      "waybar/config.jsonc".text =
+        if laptop.enable
+        then ''
+          {
+            ${barConfig},
+            "modules-right": [
+              "group/volume-expander",
+              "group/backlight-expander",
+              "group/battery-expander",
+              "group/tray-expander",
+              "idle_inhibitor",
+              "custom/power"
+            ],
+            ${workspacesModule},
+            ${clockModule},
+            ${volumeModule},
+            ${backlightModule},
+            ${batteryModule},
+            ${trayModule},
+            ${idleInhibitorModule},
+            ${powerModule}
+          }
+        ''
+        else ''
+          {
+            ${barConfig},
+            "modules-right": [
+              "group/volume-expander",
+              "group/backlight-expander",
+              "group/battery-expander",
+              "group/tray-expander",
+              "idle_inhibitor",
+              "custom/power"
+            ],
+            ${workspacesModule},
+            ${clockModule},
+            ${volumeModule},
+            ${backlightModule},
+            ${batteryModule},
+            ${trayModule},
+            ${idleInhibitorModule},
+            ${powerModule}
+          }
+        '';
+      "waybar/menus/power.xml".file = ./power.xml;
+      "waybar/style.css".text =
+        ''
+          @define-color bg #${base16Scheme.base00};
+          @define-color bg2 #${base16Scheme.base02};
+          @define-color fg #${base16Scheme.base05};
+          @define-color unfocused ${base16Scheme.base04};
+          @define-color urgent #${base16Scheme.base08};
+          @define-color border #${base16Scheme.base01};
+        ''
+        + builtins.readFile ./style.css;
+    };
+  };
+}

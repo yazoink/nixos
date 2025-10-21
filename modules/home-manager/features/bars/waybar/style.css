@@ -1,0 +1,91 @@
+* {
+  all: unset;
+}
+
+window#waybar {
+  background-color: @bg;
+  color: @fg;
+  background-color: @bg;
+  color: @fg;
+  font-family: "Rubik", "Font Awesome 7 Free";
+  font-weight: bold;
+  font-size: 11pt;
+}
+
+.modules-left {
+  margin-left: 15px;
+}
+
+.modules-right {
+  margin-right: 12px;
+}
+
+tooltip {
+  background-color: @bg;
+  border: 1px solid @border;
+  border-radius: 15px;
+}
+
+tooltip label {
+  padding: 5px;
+  font-family: "Rubik", "Font Awesome 7 Free";
+  font-size: 11pt;
+  font-weight: normal;
+  color: @fg;
+}
+
+menu {
+  font-family: "Rubik", "Font Awesome 7 Free";
+  font-weight: normal;
+  background-color: @bg;
+  color: @fg;
+  padding: 10px;
+  border: 1px solid @border;
+  border-radius: 15px;
+}
+
+menuitem {
+  padding: 5px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 5px;
+}
+
+menuitem:hover {
+  background-color: @bg2;
+}
+
+#workspaces button {
+  margin-right: 15px;
+  color: @unfocused;
+  min-width: 10pt;
+  /* border: 1px solid black; */
+}
+
+#workspaces button.active {
+  color: @fg;
+}
+
+#workspaces button.urgent {
+  color: @urgent;
+}
+
+#tray,
+#battery.percentage,
+#wireplumber.volume,
+#backlight {
+  margin-left: 5px;
+}
+
+#custom-tray-icon,
+#battery.icon,
+#wireplumber.icon,
+#custom-backlight-icon,
+#idle_inhibitor,
+#custom-power {
+  font-size: 10pt;
+}
+
+#custom-power {
+  color: @urgent;
+}
