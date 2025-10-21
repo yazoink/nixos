@@ -76,7 +76,7 @@ in {
         wrap = true
 
         [ui.window.box.scroll.list]
-        marker_color = "#${base16Scheme.${osConfig.desktopTheme.accent}}"
+        marker_color = "#${base16Scheme.${osConfig.desktopTheme.base16Accent}}"
         max_height = 300
         max_width = 400
         min_width = 400
