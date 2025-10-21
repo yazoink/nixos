@@ -5,7 +5,7 @@
         command = "vesktop";
       };
       terminal = {
-        command = "alacritty";
+        command = "foot";
       };
       mediaPlayer.command = "mpv";
       documentReader.command = "zathura";
