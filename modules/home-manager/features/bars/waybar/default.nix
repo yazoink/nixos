@@ -39,7 +39,7 @@
     },
     "tray": {
       "icon-size": 16,
-      "spacing": 17
+      "spacing": 5
     }
   '';
   batteryModule = ''
