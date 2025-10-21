@@ -8,6 +8,7 @@
   inherit (config.stylix) base16Scheme fonts;
   inherit (osConfig.myOptions.hardwareFeatures) laptop;
   inherit (osConfig.myOptions) desktopTheme;
+  iconSize = desktopTheme.fonts.desktop.size - 1;
   barHeight = 36;
   barPosition = "top";
   workspacesModule = ''
@@ -249,7 +250,7 @@ in {
           #custom-backlight-icon,
           #idle_inhibitor,
           #custom-power {
-            font-size: ${builtins.toString desktopTheme.fonts.desktop.size - 1}pt;
+            font-size: ${builtins.toString iconSize}pt;
           }
         ''
         + builtins.readFile ./style.css;
