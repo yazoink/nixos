@@ -7,9 +7,7 @@ window#waybar {
   color: @fg;
   background-color: @bg;
   color: @fg;
-  font-family: "Rubik", "Font Awesome 7 Free";
   font-weight: bold;
-  font-size: 11pt;
 }
 
 .modules-left {
@@ -28,14 +26,11 @@ tooltip {
 
 tooltip label {
   padding: 5px;
-  font-family: "Rubik", "Font Awesome 7 Free";
-  font-size: 11pt;
   font-weight: normal;
   color: @fg;
 }
 
 menu {
-  font-family: "Rubik", "Font Awesome 7 Free";
   font-weight: normal;
   background-color: @bg;
   color: @fg;

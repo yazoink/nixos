@@ -50,7 +50,7 @@
       "modules": ["battery#icon", "battery#percentage"]
     },
     "battery#icon": {
-      "bat": "BAT1",
+      "bat": "${laptop.batteryName}",
       "interval": 60,
       "tooltip-format": "Battery",
       "states": {
@@ -222,6 +222,34 @@ in {
           @define-color unfocused ${base16Scheme.base04};
           @define-color urgent #${base16Scheme.base08};
           @define-color border #${base16Scheme.base01};
+
+          * {
+            all: unset;
+          }
+
+          window#waybar,
+          tooltip label,
+          menuitem {
+            font-family: ${fonts.sansSerif.name}, "Font Awesome 7 Free";
+          }
+
+          window#waybar {
+            font-size: ${builtins.toString fonts.sizes.desktop}pt;
+          }
+
+          tooltip label,
+          menuitem {
+            font-size: ${builtins.toString fonts.sizes.popups}pt;
+          }
+
+          #custom-tray-icon,
+          #battery.icon,
+          #wireplumber.icon,
+          #custom-backlight-icon,
+          #idle_inhibitor,
+          #custom-power {
+            font-size: ${builtins.toString fonts.sizes.desktop - 1}pt;
+          }
         ''
         + builtins.readFile ./style.css;
     };
