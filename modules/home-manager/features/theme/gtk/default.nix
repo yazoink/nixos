@@ -62,6 +62,10 @@ in {
           border-radius: 0;
           box-shadow: none;
         }
+
+        .dialog-action-area > .text-button {
+          color: @dialog_fg_color;
+        }
       '';
     };
   };
