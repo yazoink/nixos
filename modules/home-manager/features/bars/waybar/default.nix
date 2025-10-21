@@ -217,7 +217,7 @@ in {
           @define-color bg #${base16Scheme.base00};
           @define-color bg2 #${base16Scheme.base02};
           @define-color fg #${base16Scheme.base05};
-          @define-color unfocused #${base16Scheme.base04};
+          @define-color unfocused #${base16Scheme.base03};
           @define-color urgent #${base16Scheme.base08};
           @define-color border #${base16Scheme.base01};
 
