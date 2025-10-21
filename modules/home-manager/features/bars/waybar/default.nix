@@ -199,8 +199,6 @@ in {
             ${barConfig},
             "modules-right": [
               "group/volume-expander",
-              "group/backlight-expander",
-              "group/battery-expander",
               "group/tray-expander",
               "idle_inhibitor",
               "custom/power"
@@ -208,8 +206,6 @@ in {
             ${workspacesModule},
             ${clockModule},
             ${volumeModule},
-            ${backlightModule},
-            ${batteryModule},
             ${trayModule},
             ${idleInhibitorModule},
             ${powerModule}
@@ -221,7 +217,7 @@ in {
           @define-color bg #${base16Scheme.base00};
           @define-color bg2 #${base16Scheme.base02};
           @define-color fg #${base16Scheme.base05};
-          @define-color unfocused ${base16Scheme.base04};
+          @define-color unfocused #${base16Scheme.base04};
           @define-color urgent #${base16Scheme.base08};
           @define-color border #${base16Scheme.base01};
 

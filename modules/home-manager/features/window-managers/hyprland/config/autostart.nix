@@ -5,7 +5,7 @@ in {
     [
       "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
       "$wallpaper -q"
-      "ironbar"
+      "waybar"
       "hypridle"
       "poweralertd"
       "nm-applet"
