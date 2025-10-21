@@ -42,6 +42,13 @@ menuitem {
   border-radius: 5px;
 }
 
+.arrow.up,
+.arrow.down,
+.arrow.left,
+.arrow.right {
+  color: @fg;
+}
+
 menuitem:hover {
   background-color: @bg2;
 }
