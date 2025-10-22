@@ -20,15 +20,6 @@ in {
       "widgets/widgets".source = ./config/widgets;
       "widgets/windows".source = ./config/windows;
       "widgets/eww.yuck".source = ./config/eww.yuck;
-      "widgets/scripts/get_name.sh".source = ./config/scripts/get_name.sh;
-      "widgets/scripts/get_os.sh".source = ./config/scripts/get_os.sh;
-      "widgets/scripts/confirm-prompt.sh".text =
-        ''
-          #!/usr/bin/env bash
-
-          config="/home/${osConfig.myOptions.userAccount.username}/.config/widgets"
-        ''
-        + builtins.readFile ./config/scripts/confirm.sh;
       "widgets/close-power-menu.sh".text =
         ''
           #!/usr/bin/env bash
