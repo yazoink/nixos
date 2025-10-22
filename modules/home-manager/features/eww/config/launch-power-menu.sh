@@ -22,6 +22,7 @@ if [[ $? == 0 ]]; then
     hyprctl keyword bindn ,L,exec,hyprlock
     hyprctl keyword bindn ,R,exec,systemctl reboot
     hyprctl keyword bindn ,S,exec,systemctl shutdown
+    hyprctl keyword bindn ,E,exec,hyprctl dispatch exit
     hyprctl keyword bindn ,Escape,exec,bash ~/.config/widgets/launch-power-menu.sh
     echo "set keybinds"
     while true; do

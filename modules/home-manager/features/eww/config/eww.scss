@@ -5,7 +5,7 @@ $round: 10px;
   color: $fg;
 }
 
-.power {
+.power, .confirm {
   background: none;
   padding-top: 5px;
   padding-bottom: 25px;
@@ -14,24 +14,38 @@ $round: 10px;
   border-radius: 20px;
 }
 
-.power-box {
-  margin-top: 5px;
-  margin-bottom: 25px;
-  margin-left: 25px;
-  margin-right: 25px;
+.power-box, .confirm-box {
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
-  padding: 15px;
+  padding: 20px;
   border: 1px solid $border;
   border-radius: 20px;
   background-color: $bg;
 }
 
-.power-button-box button {
-  font-size: 21pt;
-  font-family: "Font Awesome 7 Free";
-  padding: 15px;
-  border-radius: 15px;
+.power-box {
+  margin-top: 5px;
+  margin-bottom: 25px;
+  margin-left: 25px;
+  margin-right: 25px;
+}
+
+.confirm-box {
+  margin: 25px;
+}
+
+button {
+  padding: 10px;
+  border-radius: 5px;
   background-color: $bg2;
+}
+
+button:hover {
+  background-color: $bg3;
+}
+
+.power-button-box button {
+  font-family: "Font Awesome 7 Free";
+  font-size: 21pt;
 }
 
 // .user-box {
@@ -42,7 +56,8 @@ $round: 10px;
 // }
 
 .profile-picture {
-  border: 5px solid $bg;
+  border-radius: 5px;
+  margin: 5px;
 }
 
 .heading {

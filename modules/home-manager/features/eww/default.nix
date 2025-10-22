@@ -21,6 +21,13 @@ in {
       "widgets/widgets".source = ./config/widgets;
       "widgets/windows".source = ./config/windows;
       "widgets/eww.yuck".source = ./config/eww.yuck;
+      "widgets/confirm.sh".text =
+        ''
+          #!/usr/bin/env bash
+
+          config="/home/${osConfig.myOptions.userAccount.username}/.config/widgets"
+        ''
+        + builtins.readFile ./config/confirm.sh;
       "widgets/close-power-menu.sh".text =
         ''
           #!/usr/bin/env bash
@@ -55,8 +62,9 @@ in {
       "widgets/eww.scss".text =
         ''
           $border: #${base16Scheme.base01};
-          $bg2: #${base16Scheme.base02};
           $bg: #${base16Scheme.base00};
+          $bg2: #${base16Scheme.base02};
+          $bg3: #${base16Scheme.base03};
           $fg: #${base16Scheme.base05};
           $red: #${base16Scheme.base08};
           $yellow: #${base16Scheme.base0A};
