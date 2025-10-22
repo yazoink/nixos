@@ -12,6 +12,7 @@ if [[ $? != 0 ]]; then
             sleep 0.2
             eww active-windows | grep "power"
             if [[ $? != 0 ]]; then
+                echo "RELOADING HYPRLAND"
                 hyprctl reload
                 exit 0
             fi
