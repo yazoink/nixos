@@ -7,13 +7,12 @@ in {
       "$wallpaper -q"
       "waybar"
       "hypridle"
-      "eww --config ~/.config/widgets daemon"
-      "eww --config ~/.config/widgets open fakecorners"
-      "hyprland-monitor-attached ~/.config/widgets/monitor-attached.sh"
+      "eww --config ~/.config/widgets open fakecorners --screen $(hyprctl monitors -j | jq '.[] | select(.focused==true) | .id') --id $(hyprctl monitors -j | jq '.[] | select(.focused==true) | .id')"
       "poweralertd"
       "nm-applet"
       "wl-clip-persist --clipboard regular"
       "wayland-pipewire-idle-inhibit"
+      "hyprland-monitor-attached ~/.config/widgets/monitor-attached.sh"
     ]
     ++ (
       if (terminal.command == "footclient")
