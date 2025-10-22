@@ -21,6 +21,13 @@ in {
       "widgets/widgets".source = ./config/widgets;
       "widgets/windows".source = ./config/windows;
       "widgets/eww.yuck".source = ./config/eww.yuck;
+      "widgets/close-power-menu.sh".text =
+        ''
+          #!/usr/bin/env bash
+
+          config="/home/${osConfig.myOptions.userAccount.username}/.config/widgets"
+        ''
+        + builtins.readFile ./config/close-power-menu.sh;
       "widgets/launch-corners.sh".text =
         ''
           #!/usr/bin/env bash
