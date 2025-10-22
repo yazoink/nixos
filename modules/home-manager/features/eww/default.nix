@@ -22,7 +22,7 @@ in {
       "widgets/eww.yuck".source = ./config/eww.yuck;
       "widgets/scripts/get_name.sh".source = ./config/scripts/get_name.sh;
       "widgets/scripts/get_os.sh".source = ./config/scripts/get_os.sh;
-      "widgets/scripts/confirm.sh".text =
+      "widgets/scripts/confirm-prompt.sh".text =
         ''
           #!/usr/bin/env bash
 
