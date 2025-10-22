@@ -21,7 +21,7 @@ in {
       "widgets/widgets".source = ./config/widgets;
       "widgets/windows".source = ./config/windows;
       "widgets/eww.yuck".source = ./config/eww.yuck;
-      "widgets/confirm.sh".text =
+      "widgets/scripts/confirm.sh".text =
         ''
           #!/usr/bin/env bash
 
