@@ -181,6 +181,7 @@ in {
           margin-right: 12px;
           color: @foreground;
           opacity: 0.2;
+          /*font-style: italic;*/
         }
 
         #clear {
@@ -245,7 +246,7 @@ in {
         #sub {
           opacity: 0.5;
           font-size: 11pt;
-          font-style: italic;
+          /*font-style: italic;*/
         }
 
         #activationlabel {
