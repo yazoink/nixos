@@ -1,5 +1,5 @@
 (defpoll username-and-hostname :initial "idk" :interval "24h" 'echo "$(whoami)@$(hostname)"')
-(defpoll os-version :initial "idk" :interval "24h" '/home/gene/.config/eww/scripts/get_os.sh')
+(defpoll os-version :initial "idk" :interval "24h" 'bash /home/gene/.config/eww/scripts/get_os.sh')
 
 (defwidget user [image]
   (box
