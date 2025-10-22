@@ -42,7 +42,7 @@
       base.starshipFormat = 2;
       desktopBase.windowManager = "hyprland";
       desktopBase.displayManager = "ly";
-      desktopBase.silentBoot.enable = false;
+      desktopBase.silentBoot.enable = true;
       desktopBase.mpv.profile = "fast";
       desktopBase.plymouth.enable = false;
       desktopFull.enable = true;
