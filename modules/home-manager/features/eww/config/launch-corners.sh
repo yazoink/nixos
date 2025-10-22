@@ -1,4 +1,3 @@
-config="/home/gene/.config/widgets"
 monitors=$(hyprctl monitors -j | jq length)
 ((monitors--))
 
