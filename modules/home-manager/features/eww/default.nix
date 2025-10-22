@@ -27,7 +27,7 @@ in {
 
           config="/home/${osConfig.myOptions.userAccount.username}/.config/widgets"
         ''
-        + builtins.readFile ./config/confirm.sh;
+        + builtins.readFile ./config/scripts/confirm.sh;
       "widgets/close-power-menu.sh".text =
         ''
           #!/usr/bin/env bash
