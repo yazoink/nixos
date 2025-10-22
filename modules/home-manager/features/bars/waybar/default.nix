@@ -144,7 +144,7 @@
     "custom/power": {
       "format" : "⏻ ",
       "tooltip": true,
-      "tooltip-format": "Power menu",
+      "tooltip-format": "Power menu (Mod+Shift+Q)",
       "on-click": "bash ~/.config/widgets/launch-power-menu.sh"
     }
   '';
