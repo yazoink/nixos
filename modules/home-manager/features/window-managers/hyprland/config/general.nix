@@ -11,7 +11,7 @@
     else "rgb(${base16Scheme.base01})";
 in {
   general = {
-    gaps_in = 5;
+    gaps_in = 4.5;
     gaps_out = 10;
     border_size = 1;
     layout = "dwindle";
