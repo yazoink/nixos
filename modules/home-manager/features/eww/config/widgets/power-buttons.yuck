@@ -12,7 +12,7 @@
       :spacing 10
       (button
         :class "power-button"
-        :onclick "sleep 0.1 && hyprlock"
+        :onclick "bash ./scripts/lock.sh"
         :tooltip "Lock (l)"
         ""
       )
