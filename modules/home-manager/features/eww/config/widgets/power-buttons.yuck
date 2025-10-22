@@ -30,7 +30,8 @@
       )
       (button
         :class "power-button"
-        :onclick "bash /home/${osConfig.userAccount.username}/.config/widgets/scripts/confirm-prompt.sh 'shutdown' 'shutdown now'"
+        ;:onclick "bash /home/${osConfig.userAccount.username}/.config/widgets/scripts/confirm-prompt.sh 'shutdown' 'shutdown now'"
+        :onclick "systemctl shutdown"
         :tooltip "Shutdown (s)"
         ""
       )
