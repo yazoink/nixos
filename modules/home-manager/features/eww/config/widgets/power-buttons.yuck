@@ -18,6 +18,12 @@
       )
       (button
         :class "power-button"
+        :onclick "hyprctl dispatch exit"
+        :tooltip "Exit (e)"
+        ""
+      )
+      (button
+        :class "power-button"
         :onclick "systemctl reboot"
         :tooltip "Reboot (r)"
         ""

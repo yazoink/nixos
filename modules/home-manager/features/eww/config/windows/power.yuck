@@ -21,8 +21,8 @@
     :space-evenly "false"
     :class "power-box"
     :spacing 15
-    (label :text "Have a nice day :)" :class "heading")
     (separator)
+    (label :text "Have a nice day :)" :class "heading")
     (quote 
       :text "Thou shalt not blow pot smoke in the face\\n of thy pet." 
       :author "William S. Burroughs"
