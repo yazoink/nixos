@@ -35,5 +35,6 @@
     ../../features/swayosd
     ../../features/eww
     ../../features/hyprland-monitor-attached
+    ../../features/no-display-manager
   ];
 }
