@@ -8,6 +8,7 @@ in {
       "waybar"
       "hypridle"
       "eww --config ~/.config/widgets daemon"
+      "eww --config ~/.config/widgets open fakecorners"
       "poweralertd"
       "nm-applet"
       "wl-clip-persist --clipboard regular"

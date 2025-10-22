@@ -1,3 +1,10 @@
+$round: 15px;
+
+* {
+  all: unset;
+  color: $fg;
+}
+
 .power {
   background: none;
   padding: 25px;
@@ -8,7 +15,7 @@
   margin: 25px;
   padding: 15px;
   border: 1px solid $border;
-  border-radius: 15px;
+  border-radius: 25px;
   background-color: $bg;
 }
 
@@ -17,6 +24,7 @@
   font-family: "Font Awesome 7 Free";
   padding: 15px;
   border-radius: 15px;
+  background-color: $bg2;
 }
 
 // .user-box {
@@ -56,6 +64,7 @@
   // border-radius: 5px;
   margin: 5px;
   border: 1px solid $bg2;
+  border-radius: 5px;
 }
 
 .text-box label {
@@ -110,4 +119,92 @@ tooltip label {
 
 .purple {
   color: $purple;
+}
+
+.fakecornersl {
+  transition: box-shadow 500ms, border-radius 500ms, margin 500ms;
+  margin: 0;
+  &.active {
+    margin: 0px;
+    margin-top: 0;
+    border-radius: $round + 10px; 
+    box-shadow: 0px 0px 0px 50px $bg;
+    &.locked {
+      margin: 0px;
+    }
+  }
+  &.inactive {
+    border-radius: 0;
+    box-shadow: none;
+  }
+}
+
+.fakecornersr {
+  transition: box-shadow 500ms, border-radius 500ms;
+  &.active {
+    border-top-right-radius: $round + 10px; 
+    border-bottom-right-radius: $round + 10px; 
+    box-shadow: 
+      20px -20px 0px $bg,
+      20px 20px 0px $bg;
+  }
+  &.inactive {
+    border-radius: 0;
+    box-shadow: none;
+  }
+}
+
+.filler {
+  transition: border-radius 500ms, background-color 500ms;
+  margin: 0px;
+  margin-top: 10px;
+  margin-left: -1px;
+  margin-right: -1px;
+  border-top-left-radius: $round + 10px;
+  border-top-right-radius: $round + 10px;
+  box-shadow: 
+    0px -26px 0px 5px $bg;
+
+  &.inactive {
+    background-color: $bg;
+    border-radius: 0;
+  }
+}
+
+.fillerl {
+  @extend .filler;
+  margin: 0;
+  border-top-left-radius: 0;
+  box-shadow: 
+    20px -20px 0px -10px $bg;
+}
+
+.fillerr {
+  @extend .filler;
+  margin: 0;
+  border-top-right-radius: 0;
+  box-shadow: 
+    -20px -20px 0px -10px $bg;
+}
+
+.fillerrs {
+  @extend .filler;
+  margin: 0;
+  border-top-right-radius: 0;
+  box-shadow: 
+    -20px 0px 0px 0px $bg;
+}
+
+.fillerls {
+  @extend .filler;
+  margin: 0;
+  border-top-left-radius: 0;
+  box-shadow: 
+    20px 0px 0px 0px $bg;
+}
+
+.launchcover {
+  border-radius: $round; 
+  margin: 5px;
+  box-shadow: 0px 0px 0px 10px $bg;
 }

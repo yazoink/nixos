@@ -1,1 +1,2 @@
 (include "./windows/power.yuck")
+(include "./windows/corners.yuck")

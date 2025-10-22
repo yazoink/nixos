@@ -1,0 +1,18 @@
+; stolen from https://github.com/Failedex/MereWhimsy
+
+(defvar locked false)
+
+(defwindow fakecorners
+  :geometry (geometry 
+              :x "0%"
+              :y "0%"
+              :width "100%"
+              :height "100%"
+              :anchor "top center")
+              
+  :stacking "bottom"
+  :exclusive false
+  :monitor '["eDP-1", "<primary>", 0]'
+  :wm-ignore false
+  (box 
+    :class "fakecornersl active"))
