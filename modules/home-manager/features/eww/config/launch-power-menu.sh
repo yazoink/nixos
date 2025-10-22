@@ -1,19 +1,21 @@
 eww --config "$config" close power
 
 if [[ $? != 0 ]]; then
-    echo "?"
+    echo "opening power menu"
     eww --config "$config" open power
     if [[ $? == 0 ]]; then
+        echo "power menu opened"
         hyprctl keyword bindn ,L,exec,hyprlock
         hyprctl keyword bindn ,R,exec,systemctl reboot
         hyprctl keyword bindn ,S,exec,systemctl shutdown
-        hyprctl keyword bindn ,Escape,exec,eww close power
+        hyprctl keyword bindn ,Escape,exec,bash ~/.config/widgets/launch-power-menu.sh
+        echo "set keybinds"
         while true; do
             sleep 0.5
             eww --config "$config" active-windows | grep "power"
             if [[ $? != 0 ]]; then
-                echo "RELOADING HYPRLAND"
                 hyprctl reload
+                echo "hyprland reloaded"
                 exit 0
             fi
         done
