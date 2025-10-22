@@ -3,9 +3,13 @@ pkill walker
 monitors=$(hyprctl monitors -j | jq length)
 ((monitors--))
 
+windows="$(eww --config $config active-windows)"
 for monitor in $(seq 0 $monitors); do
-    eww --config "$config" close power-$monitor
-    # [[ $? == 0 ]] && break
+    echo "$windows" | grep "power-$monitor"
+    if [[ $? == 0 ]]; then
+        eww --config "$config" close power-$monitor
+        break
+    fi
 done
 
 monitor=$(hyprctl monitors -j | jq '.[] | select(.focused==true) | .id')
