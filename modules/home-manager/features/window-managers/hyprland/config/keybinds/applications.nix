@@ -19,7 +19,7 @@
     "$mainMod SHIFT, V, exec, ${../../../scripts/virsh-net-toggle.sh}"
     # "$mainMod SHIFT, D, exec, ${../../../scripts/dnd.sh}"
     "$mainMod SHIFT, F, exec, ${../../../scripts/restart-foot-server.sh}"
-    "$mainMod SHIFT, P, exec, ~/.config/widgets/launch-power-menu.sh"
+    "$mainMod SHIFT, Q, exec, ~/.config/widgets/launch-power-menu.sh"
     ", XF86Lock, exec, $lock"
     ", code:107, exec, $screenshot"
   ];

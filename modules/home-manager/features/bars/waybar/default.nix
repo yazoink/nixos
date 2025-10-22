@@ -124,18 +124,28 @@
       "tooltip-format": "Backlight (scroll to adjust)"
     }
   '';
+  /*
+       powerModule = ''
+      "custom/power": {
+        "format" : "⏻ ",
+          "tooltip": true,
+          "tooltip-format": "Power menu",
+          "menu": "on-click",
+          "menu-file": "~/.config/waybar/menus/power.xml",
+          "menu-actions": {
+            "lock": "sleep 0.1 && hyprlock",
+            "shutdown": "shutdown",
+            "reboot": "reboot"
+          }
+      }
+  '';
+  */
   powerModule = ''
     "custom/power": {
       "format" : "⏻ ",
-        "tooltip": true,
-        "tooltip-format": "Power menu",
-        "menu": "on-click",
-        "menu-file": "~/.config/waybar/menus/power.xml",
-        "menu-actions": {
-          "lock": "sleep 0.1 && hyprlock",
-          "shutdown": "shutdown",
-          "reboot": "reboot"
-        }
+      "tooltip": true,
+      "tooltip-format": "Power menu",
+      "on-click": "bash ~/.config/widgets/launch-power-menu.sh"
     }
   '';
   idleInhibitorModule = ''
