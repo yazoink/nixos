@@ -4,7 +4,7 @@
   ...
 }: let
   wm =
-    if (osConfig.bundles.desktopBase.windowManager == "hyprland")
+    if (osConfig.myOptions.bundles.desktopBase.windowManager == "hyprland")
     then "Hyprland"
     else "sway";
 in {
