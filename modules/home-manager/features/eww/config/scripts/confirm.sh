@@ -9,7 +9,7 @@ if [[ $? == 0 ]]; then
     echo "set keybinds"
     while true; do
         sleep 0.5
-        eww --config "$config" active-windows | grep "confirm"
+        eww --config "$config" active-windows | grep -q "confirm"
         if [[ $? != 0 ]]; then
             hyprctl reload
             echo "hyprland reloaded"

@@ -21,7 +21,7 @@
       :spacing 10
       (button
         :class "confirm-button bold"
-        :onclick "${action}"
+        :onclick action
         :tooltip "(y)"
         "Yes"
       )
