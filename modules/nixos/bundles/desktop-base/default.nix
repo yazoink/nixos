@@ -18,6 +18,7 @@
     ../../features/polkit
     ../../features/silent-boot
     ../../features/theme
+    ../../features/no-display-manager
   ];
 
   config = lib.mkIf config.myOptions.bundles.desktopBase.enable {
