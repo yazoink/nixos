@@ -16,7 +16,7 @@ for monitor in $(seq 0 $monitors); do
 done
 
 echo "opening power menu"
-eww --config "$config" open power --monitor $monitor --id power-$monitor
+eww --config "$config" open power --screen $monitor --id power-$monitor
 if [[ $? == 0 ]]; then
     echo "power menu opened"
     hyprctl keyword bindn ,L,exec,hyprlock
