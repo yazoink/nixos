@@ -4,6 +4,9 @@ monitors=$(hyprctl monitors -j | jq length)
 eww --config "$config" kill
 eww --config "$config" daemon
 
-for monitor in $(seq 0 $monitors); do
-    eww --config "$config" open fakecorners --screen $monitor
-done
+eww --config "$config" open fakecorners
+
+# for monitor in $(seq 0 $monitors); do
+#     eww --config "$config" open fakecorners --screen $monitor
+#     echo "opening fakecorners"
+# done
