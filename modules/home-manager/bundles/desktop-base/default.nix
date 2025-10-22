@@ -34,5 +34,6 @@
     ../../features/dconf
     ../../features/swayosd
     ../../features/eww
+    ../../features/hyprland-monitor-attached
   ];
 }
