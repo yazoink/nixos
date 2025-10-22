@@ -23,6 +23,13 @@ in {
       "widgets/eww.yuck".source = ./config/eww.yuck;
       "widgets/monitor-attached.sh" = {
         source = ./config/monitor-attached.sh;
+        text =
+          ''
+            #!/usr/bin/env bash
+
+            config="/home/${osConfig.myOptions.userAccount.username}/.config/widgets"
+          ''
+          + builtins.readFile ./config/monitor-attached.sh;
         executable = true;
       };
       "widgets/launch-power-menu.sh".text =

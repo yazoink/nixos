@@ -1,7 +1,3 @@
-#!/usr/bin/env bash
-
-config="~/.config/widgets"
-
 monitors=$(hyprctl monitors -j | jq length)
 ((monitors--))
 
