@@ -23,7 +23,7 @@
     "$mainMod SHIFT, 0, movetoworkspace, 10"
 
     "$mainMod SHIFT, S, togglespecialworkspace,"
-    "$mainMod SHIFT, S, exec, eww --config ~/.config/widgets close power"
+    "$mainMod SHIFT, S, exec, bash ~/.config/widgets/close-power-menu.sh"
     "$mainMod Ctrl, Up, movetoworkspacesilent, special"
 
     "$mainMod, mouse_down, workspace, e-1"
