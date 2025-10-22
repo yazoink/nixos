@@ -22,7 +22,6 @@ in {
       "widgets/windows".source = ./config/windows;
       "widgets/eww.yuck".source = ./config/eww.yuck;
       "widgets/monitor-attached.sh" = {
-        source = ./config/monitor-attached.sh;
         text =
           ''
             #!/usr/bin/env bash
