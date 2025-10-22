@@ -1,4 +1,4 @@
-$monitor=$(hyprctl monitors -j | jq '.[] | select(.focused==true) | .id')
+monitor=$(hyprctl monitors -j | jq '.[] | select(.focused==true) | .id')
 eww --config "$config" open confirm --arg screen=$monitor --arg thing="$1" --arg action="$2"
 
 if [[ $? == 0 ]]; then

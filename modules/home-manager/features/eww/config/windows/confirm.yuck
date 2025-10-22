@@ -27,7 +27,7 @@
       )
       (button
         :class "confirm-button bold"
-        :onclick "bash ./scripts/cancel.sh"
+        :onclick "bash eww --config /home/gene/widgets close confirm"
         :tooltip "(n)"
         "No"
       )
