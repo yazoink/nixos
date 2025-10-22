@@ -21,6 +21,13 @@ in {
       "widgets/widgets".source = ./config/widgets;
       "widgets/windows".source = ./config/windows;
       "widgets/eww.yuck".source = ./config/eww.yuck;
+      "widgets/launch-corners.sh".text =
+        ''
+          #!/usr/bin/env bash
+
+          config="/home/${osConfig.myOptions.userAccount.username}/.config/widgets"
+        ''
+        + builtins.readFile ./config/launch-corners.sh;
       "widgets/monitor-attached.sh" = {
         text =
           ''

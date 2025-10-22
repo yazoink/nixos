@@ -7,7 +7,7 @@ in {
       "$wallpaper -q"
       "waybar"
       "hypridle"
-      "eww --config ~/.config/widgets open fakecorners --screen $(hyprctl monitors -j | jq '.[] | select(.focused==true) | .id') --id $(hyprctl monitors -j | jq '.[] | select(.focused==true) | .id')"
+      "bash ~/.config/widgets/launch-corners.sh"
       "poweralertd"
       "nm-applet"
       "wl-clip-persist --clipboard regular"
