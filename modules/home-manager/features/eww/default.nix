@@ -2,6 +2,7 @@
   pkgs,
   config,
   lib,
+  osConfig,
   ...
 }: let
   inherit (config.stylix) base16Scheme;
@@ -20,7 +21,13 @@ in {
       "widgets/widgets".source = ./config/widgets;
       "widgets/windows".source = ./config/windows;
       "widgets/eww.yuck".source = ./config/eww.yuck;
-      "widgets/launch-power-menu.sh".source = ./config/launch-power-menu.sh;
+      "widgets/launch-power-menu.sh".text =
+        ''
+          #!/usr/bin/env bash
+
+          config="/home/${osConfig.myOptions.userAccount.username}/.config/widgets"
+        ''
+        + builtins.readFile ./config/launch-power-menu.sh;
       "widgets/eww.scss".text =
         ''
           $border: #${base16Scheme.base01};

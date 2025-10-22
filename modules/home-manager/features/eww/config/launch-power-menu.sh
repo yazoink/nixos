@@ -1,7 +1,3 @@
-#!/usr/bin/env bash
-
-config="~/.config/widgets"
-
 eww --config "$config" close power
 
 if [[ $? != 0 ]]; then
