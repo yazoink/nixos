@@ -1,1 +1,1 @@
-(include "./eww/windows/power.yuck")
+(include "./windows/power.yuck")
