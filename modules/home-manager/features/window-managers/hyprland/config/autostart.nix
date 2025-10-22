@@ -11,7 +11,6 @@ in {
       "nm-applet"
       "wl-clip-persist --clipboard regular"
       "wayland-pipewire-idle-inhibit"
-      "walker --gapplication-service"
     ]
     ++ (
       if (terminal.command == "footclient")

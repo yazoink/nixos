@@ -208,6 +208,7 @@ in {
         #typeahead {
           color: @foreground;
           opacity: 0.8;
+          font-style: italic;
         }
 
         #input placeholder {
@@ -244,6 +245,7 @@ in {
         #sub {
           opacity: 0.5;
           font-size: 11pt;
+          font-style: italic;
         }
 
         #activationlabel {
