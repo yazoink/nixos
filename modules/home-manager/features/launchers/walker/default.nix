@@ -163,7 +163,7 @@ in {
         }
 
         #box {
-          border-radius: 15px;
+          border-radius: 20px;
           background: @background;
           padding: 15px;
           border: 1px solid @border;
