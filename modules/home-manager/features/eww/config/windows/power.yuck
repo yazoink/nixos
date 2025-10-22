@@ -4,8 +4,8 @@
 (include "./widgets/resource-usage-grid.yuck")
 (include "./widgets/user.yuck")
 
-(defwindow power
-  :monitor 0
+(defwindow power [screen]
+  :monitor screen
   :geometry (geometry
     :x "-20px"
     :y "0px"

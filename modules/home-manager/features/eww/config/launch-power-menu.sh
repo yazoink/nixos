@@ -1,9 +1,18 @@
 pkill walker
-eww --config "$config" close power
+
+monitors=$(hyprctl monitors -j | jq length)
+((monitors--))
+
+for monitor in $(seq 0 $monitors); do
+    eww --config "$config" close power-$monitor
+    # [[ $? == 0 ]] && break
+done
+
+monitor=$(hyprctl monitors -j | jq '.[] | select(.focused==true) | .id')
 
 if [[ $? != 0 ]]; then
     echo "opening power menu"
-    eww --config "$config" open power
+    eww --config "$config" open power --monitor $monitor --id power-$monitor
     if [[ $? == 0 ]]; then
         echo "power menu opened"
         hyprctl keyword bindn ,L,exec,hyprlock
