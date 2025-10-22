@@ -6,7 +6,7 @@ pkgs.rustPlatform.buildRustPackage rec {
     owner = "coffebar";
     repo = "hyprland-monitor-attached";
     rev = "main";
-    sha256 = "sha256-ZEtZYrr/gatkfKLjvmN3JPV/gzHExoW1PbQ9gsiE15w=";
+    sha256 = "sha256-+bgOOm1B513COcWdUIJ/+GREQH5CR8/RNOcZVkjO2hI=";
   };
   cargoHash = "sha256-8Pwr7RGgsEnRbRXnh/q9q5SnUJBQNucw00XPSbvuuIE=";
 }
