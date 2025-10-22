@@ -33,5 +33,6 @@
     ../../features/xdg
     ../../features/dconf
     ../../features/swayosd
+    ../../features/eww
   ];
 }

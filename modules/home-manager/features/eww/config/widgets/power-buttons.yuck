@@ -1,0 +1,33 @@
+(defwidget power-buttons []
+  (box
+    :orientation "vertical"
+    :space-evenly "false"
+    :class "power-button-box"
+    :spacing 10
+    ; (left-text :text "Power Options" :class "bold")
+    (box
+      :orientation "horizontal"
+      :halign "center"
+      :space-evenly "true"
+      :spacing 10
+      (button
+        :class "power-button"
+        :onclick "sleep 0.1 && hyprlock"
+        :tooltip "Lock (l)"
+        ""
+      )
+      (button
+        :class "power-button"
+        :onclick "systemctl reboot"
+        :tooltip "Reboot (r)"
+        ""
+      )
+      (button
+        :class "power-button"
+        :onclick "systemctl shutdown"
+        :tooltip "Shutdown (s)"
+        ""
+      )
+    )
+  )
+)

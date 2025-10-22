@@ -18,6 +18,7 @@
       screenshot.enable = true;
       # hyprViewBinds.enable = true; # nix package stopped building, fix later
       swayosd.enable = true;
+      eww.enable = true;
     };
     home.packages = with pkgs; [
       wl-clipboard

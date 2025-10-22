@@ -7,6 +7,7 @@ in {
       "$wallpaper -q"
       "waybar"
       "hypridle"
+      "eww daemon"
       "poweralertd"
       "nm-applet"
       "wl-clip-persist --clipboard regular"
