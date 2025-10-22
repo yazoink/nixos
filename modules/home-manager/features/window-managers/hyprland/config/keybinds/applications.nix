@@ -5,6 +5,8 @@
     "$mainMod, E, exec, $fileManager"
     "$mainMod, P, exec, $menu"
     "$mainMod, R, exec, $menu"
+    "$mainMod, P, exec, eww --config ~/.config/widgets close power"
+    "$mainMod, R, exec, eww --config ~/.config/widgets close power"
     "$mainMod SHIFT, B, exec, bash ${../../../scripts/waybar.sh}"
     "$mainMod, N, exec, $terminal -e ncmpcpp"
     # "$mainMod SHIFT, O, exec, rofi -show window"

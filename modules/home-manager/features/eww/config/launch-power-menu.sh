@@ -1,3 +1,4 @@
+pkill walker
 eww --config "$config" close power
 
 if [[ $? != 0 ]]; then
