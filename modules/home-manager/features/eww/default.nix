@@ -24,7 +24,7 @@ in {
         recursive = true;
         force = true;
       };
-      "widgets/colours.scss".text = ''
+      "widgets/_colours.scss".text = ''
         $border: #${base16Scheme.base01};
         $bg: #${base16Scheme.base00};
         $bg2: #${base16Scheme.base02};
