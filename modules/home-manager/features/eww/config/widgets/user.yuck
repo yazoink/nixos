@@ -8,7 +8,7 @@
     :valign "end"
     :halign "fill"
     :space-evenly "false"
-    :spacing 15
+    :spacing 20
     ;(hline)
     ;(separator)
     (box
