@@ -163,7 +163,7 @@ in {
         }
 
         #box {
-          border-radius: 20px;
+          border-radius: 15px;
           background: @background;
           padding: 15px;
           border: 1px solid @border;
@@ -173,7 +173,7 @@ in {
         #search {
           background: none;
           padding: 8px;
-          border-radius: 5px;
+          //border-radius: 5px;
         }
 
         #prompt {

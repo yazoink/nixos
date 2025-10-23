@@ -24,7 +24,7 @@
         actions = "true";
         icons = "true";
         anchor = "top-right";
-        border-radius = "20";
+        border-radius = "15";
         background-color = "#${config.stylix.base16Scheme.base00}";
         text-color = "#${config.stylix.base16Scheme.base05}";
         progress-color = "over #${config.stylix.base16Scheme.base05}";
@@ -35,7 +35,7 @@
         border-size = "1";
         font = "${config.stylix.fonts.sansSerif.name} ${toString config.stylix.fonts.sizes.popups}";
         padding = "15";
-        margin = "5";
+        margin = "10";
         default-timeout = "5000";
         icon-path = "/run/current-system/sw/share/icons/${config.gtk.iconTheme.name}";
       };

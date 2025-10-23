@@ -8,8 +8,8 @@
 (defwindow power [screen]
   :monitor screen
   :geometry (geometry
-    :x "0px"
-    :y "0px"
+    :x "5px"
+    :y "5px"
     :width "318px"
     :anchor "top right"
   )
@@ -40,7 +40,7 @@
         :vexpand "true"
         :hexpand "true"
         :valign "center"
-        (user :image "./images/profile_image_rounded4.png")
+        (user :image "./images/profile_image_rounded.png")
       )
     )
     (hline)
