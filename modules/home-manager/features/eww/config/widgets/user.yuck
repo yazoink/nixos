@@ -6,17 +6,19 @@
     :class "user-box"
     :orientation "horizontal"
     :valign "end"
+    :halign "fill"
     :space-evenly "false"
     :spacing 15
     ;(hline)
     ;(separator)
     (box
       ;:vexpand "true"
-      ;:valign "end"
+      :halign "end"
       :orientation "vertical"
       :spacing 5
       :space-evenly "false"
       :valign "center"
+      :hexpand "true"
       (right-text
         :class "username-and-hostname bold"
         :text "${username-and-hostname}"
@@ -30,7 +32,7 @@
       :path "${image}"
       :image-width 60
       :image-height 60
-      :halign "start"
+      :halign "end"
       :class "profile-picture"
     )
   )

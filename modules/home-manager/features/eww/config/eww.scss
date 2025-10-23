@@ -20,15 +20,12 @@ $round: 10px;
 
 .power, .confirm {
   background: none;
-  padding-top: 5px;
-  padding-bottom: 25px;
-  padding-left: 25px;
-  padding-right: 25px;
   border-radius: 20px;
 }
 
 .confirm-text {
   font-weight: bold;
+  font-size: 15pt;
 }
 
 .power-box, .confirm-box {
@@ -37,17 +34,7 @@ $round: 10px;
   border: 1px solid $border;
   border-radius: 20px;
   background-color: $bg;
-}
-
-.power-box {
-  margin-top: 5px;
-  margin-bottom: 25px;
-  margin-left: 25px;
-  margin-right: 25px;
-}
-
-.confirm-box {
-  margin: 25px;
+  margin: 5px;
 }
 
 .user-box {

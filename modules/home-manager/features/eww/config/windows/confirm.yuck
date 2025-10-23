@@ -1,7 +1,9 @@
 (defwindow confirm [screen thing action]
   :monitor screen
   :geometry (geometry
-    :anchor "center"
+    :anchor "top right"
+    :x "0px"
+    :y "0px"
   )
   :stacking "fg"
   :exclusive "false"
@@ -12,13 +14,16 @@
     :space-evenly "false"
     :class "confirm-box"
     :spacing 15
-    :halign "center"
+    :halign "fill"
     (separator)
     (label :text "${thing}" :class "confirm-text")
+    ;(user :image "./images/profile_image_rounded4.png")
+    (hline)
     (box
       :orientation "horizontal"
       :space-evenly "true"
       :spacing 10
+      :class "confirm-buttons"
       (button
         :class "confirm-button bold"
         :onclick "hyprctl reload; ${action}; eww --config ${dir} close confirm"
