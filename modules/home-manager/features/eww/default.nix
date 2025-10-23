@@ -15,8 +15,14 @@ in {
   };
   config = lib.mkIf config.bundles.desktopBase.eww.enable {
     home.packages = with pkgs; [eww font-awesome];
+    # requires EWW_CONFIG_DIR env variable to be set to work
+    # toggle power menu with launch-power-menu.sh
+    # launch corners with launch-corners.sh
     xdg.configFile = {
-      "widgets/".source = ./config;
+      "widgets" = {
+        source = ./config;
+        recursive = true;
+      };
     };
     /*
       xdg.configFile = {
