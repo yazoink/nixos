@@ -17,11 +17,11 @@
       :spacing 5
       :space-evenly "false"
       :valign "center"
-      (left-text
+      (right-text
         :class "username-and-hostname bold"
         :text "${username-and-hostname}"
       )
-      (left-text
+      (right-text
         :text "${os-version}"
         :class "os-version italic"
       )
