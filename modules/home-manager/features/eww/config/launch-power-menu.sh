@@ -29,7 +29,6 @@ if [[ $? == 0 ]]; then
     echo "set keybinds"
     while true; do
         sleep 0.5
-        echo "looping"
         eww --config "$config" active-windows | grep -q "power"
         if [[ $? -ne 0 ]]; then
             exit 0

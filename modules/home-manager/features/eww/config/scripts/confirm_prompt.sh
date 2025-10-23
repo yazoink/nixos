@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 echo "confirm_prompt.sh"
-config="$(echo $EWW_CONFIG_DIR)"
+config=$EWW_CONFIG_DIR
 monitor=$(hyprctl monitors -j | jq '.[] | select(.focused==true) | .id')
 eww --config "$config" close power
 eww --config "$config" open confirm --arg screen=$monitor --arg thing="$1" --arg action="$2"

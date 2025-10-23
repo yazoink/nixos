@@ -1,14 +1,4 @@
-$border: #1C2326;
-$bg: #141B1E;
-$bg2: #232A2D;
-$bg3: #353C3F;
-$fg: #DADADA;
-$red: #E57474;
-$yellow: #E5C76B;
-$green: #8CCF7E;
-$blue: #67B0E8;
-$purple: #C47FD5;
-$round: 10px;
+@import "./colours.scss";
 
 * {
   all: unset;
