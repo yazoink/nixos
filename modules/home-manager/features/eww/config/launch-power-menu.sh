@@ -10,6 +10,7 @@ monitor=$(hyprctl monitors -j | jq '.[] | select(.focused==true) | .id')
 
 eww --config="$config" active-windows | grep -q power
 [[ $? == 0 ]] && {
+    hyprctl reload
     eww --config "$config" close power
     echo "closed power"
     exit 0
