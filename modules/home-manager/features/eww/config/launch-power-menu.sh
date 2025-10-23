@@ -8,8 +8,12 @@ monitors=$(hyprctl monitors -j | jq length)
 
 monitor=$(hyprctl monitors -j | jq '.[] | select(.focused==true) | .id')
 
-eww --config "$config" close power
-echo "closed power"
+eww --config="$config" active-windows | grep -q power
+[[ $? == 0 ]] && {
+    eww --config "$config" close power
+    echo "closed power"
+    exit 0
+}
 
 echo "opening power menu"
 eww --config "$config" open power --screen $monitor
