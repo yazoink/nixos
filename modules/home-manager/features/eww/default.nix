@@ -16,7 +16,7 @@ in {
   config = lib.mkIf config.bundles.desktopBase.eww.enable {
     home.packages = with pkgs; [eww font-awesome];
     xdg.configFile = {
-      widgets.source = ./config;
+      "widgets/".source = ./config;
     };
     /*
       xdg.configFile = {
