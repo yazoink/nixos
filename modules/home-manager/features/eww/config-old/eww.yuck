@@ -1,0 +1,3 @@
+;(include "./windows/confirm.yuck")
+(include "./windows/corners.yuck")
+(include "./windows/power.yuck")

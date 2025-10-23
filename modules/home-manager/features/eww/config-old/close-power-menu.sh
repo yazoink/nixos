@@ -1,6 +1,3 @@
-#!/usr/bin/env bash
-
-config="$EWW_CONFIG_DIR"
 monitors=$(hyprctl monitors -j | jq length)
 ((monitors--))
 

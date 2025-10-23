@@ -18,19 +18,20 @@
       )
       (button
         :class "power-button"
-        :onclick "bash ./scripts/confirm_prompt.sh 'Are you sure you want to exit to TTY?' 'hyprctl dispatch exit' & disown"
+        :onclick "hyprctl dispatch exit"
         :tooltip "Exit (e)"
         ""
       )
       (button
         :class "power-button"
-        :onclick "bash ./scripts/confirm_prompt.sh 'Are you sure you want to reboot?' 'systemctl reboot' & disown"
+        :onclick "systemctl reboot"
         :tooltip "Reboot (r)"
         ""
       )
       (button
         :class "power-button"
-        :onclick "bash ./scripts/confirm_prompt.sh 'Are you sure you want to shut down?' 'systemctl shutdown' & disown"
+        ;:onclick "bash /home/${osConfig.userAccount.username}/.config/widgets/scripts/confirm-prompt.sh 'shutdown' 'shutdown now'"
+        :onclick "systemctl shutdown"
         :tooltip "Shutdown (s)"
         ""
       )

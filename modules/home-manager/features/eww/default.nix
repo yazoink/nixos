@@ -14,8 +14,12 @@ in {
     };
   };
   config = lib.mkIf config.bundles.desktopBase.eww.enable {
-    home.packages = with pkgs; [eww];
+    home.packages = with pkgs; [eww font-awesome];
     xdg.configFile = {
+      widgets.source = ./config;
+    };
+    /*
+      xdg.configFile = {
       "widgets/images".source = ./config/images;
       "widgets/widgets".source = ./config/widgets;
       "widgets/windows".source = ./config/windows;
@@ -76,5 +80,6 @@ in {
         ''
         + builtins.readFile ./config/eww.scss;
     };
+    */
   };
 }

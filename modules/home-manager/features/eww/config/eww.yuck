@@ -1,3 +1,5 @@
-;(include "./windows/confirm.yuck")
+(defpoll dir :interval "24h" :initial "widgets" `echo $EWW_CONFIG_DIR`)
+
+(include "./windows/confirm.yuck")
 (include "./windows/corners.yuck")
 (include "./windows/power.yuck")

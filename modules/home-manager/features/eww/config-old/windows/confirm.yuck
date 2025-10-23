@@ -13,21 +13,21 @@
     :class "confirm-box"
     :spacing 15
     :halign "center"
-    (separator)
-    (label :text "${thing}")
+    (label :text "Confirm ${thing}?")
+    (hline)
     (box
       :orientation "horizontal"
       :space-evenly "true"
       :spacing 10
       (button
         :class "confirm-button bold"
-        :onclick "${action}; eww --config ${dir} close confirm"
+        :onclick action
         :tooltip "(y)"
         "Yes"
       )
       (button
         :class "confirm-button bold"
-        :onclick "eww --config ${dir} close confirm"
+        :onclick "bash eww --config /home/gene/widgets close confirm"
         :tooltip "(n)"
         "No"
       )

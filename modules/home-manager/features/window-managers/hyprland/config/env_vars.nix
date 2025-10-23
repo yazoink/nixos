@@ -14,5 +14,6 @@
     "QT_ENABLE_HIGHDPI_SCALING,0"
     "_JAVA_AWT_WM_NONREPARENTING,1"
     "ELECTRON_OZONE_PLATFORM_HINT,wayland"
+    "EWW_CONFIG_DIR,~/.config/widgets"
   ];
 }

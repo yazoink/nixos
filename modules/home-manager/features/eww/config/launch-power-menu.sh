@@ -1,3 +1,6 @@
+#!/usr/bin/env bash
+
+config="$EWW_CONFIG_DIR"
 pkill walker
 
 monitors=$(hyprctl monitors -j | jq length)
@@ -5,30 +8,26 @@ monitors=$(hyprctl monitors -j | jq length)
 
 monitor=$(hyprctl monitors -j | jq '.[] | select(.focused==true) | .id')
 
-windows="$(eww --config $config active-windows)"
-for monitor in $(seq 0 $monitors); do
-    echo "$windows" | grep "power-$monitor"
-    if [[ $? == 0 ]]; then
-        eww --config "$config" close power-$monitor
-        echo "closed window"
-        exit 0
-    fi
-done
+eww --config "$config" close power
+echo "closed power"
 
 echo "opening power menu"
-eww --config "$config" open power --screen $monitor --id power-$monitor
+eww --config "$config" open power --screen $monitor
+echo "pwd $(pwd)"
+
 if [[ $? == 0 ]]; then
     echo "power menu opened"
     hyprctl keyword bindn ,L,exec,hyprlock
-    hyprctl keyword bindn ,R,exec,systemctl reboot
-    hyprctl keyword bindn ,S,exec,systemctl shutdown
-    hyprctl keyword bindn ,E,exec,hyprctl dispatch exit
-    hyprctl keyword bindn ,Escape,exec,bash ~/.config/widgets/launch-power-menu.sh
+    hyprctl keyword bindn ,E,exec,"EWW_CONFIG_DIR=$config bash $config/scripts/confirm_prompt.sh 'Are you sure you want to exit to TTY?' 'hyprctl dispatch exit'"
+    hyprctl keyword bindn ,R,exec,"EWW_CONFIG_DIR=$config bash $config/scripts/confirm_prompt.sh 'Are you sure you want to reboot?' 'systemctl reboot'"
+    hyprctl keyword bindn ,S,exec,"EWW_CONFIG_DIR=$config bash $config/scripts/confirm_prompt.sh 'Are you sure you want to shut down?' 'systemctl shutdown'"
+    hyprctl keyword bindn ,Escape,exec,"EWW_CONFIG_DIR=$config eww --config $config close power"
     echo "set keybinds"
     while true; do
         sleep 0.5
+        echo "looping"
         eww --config "$config" active-windows | grep -q "power"
-        if [[ $? != 0 ]]; then
+        if [[ $? -ne 0 ]]; then
             hyprctl reload
             echo "hyprland reloaded"
             exit 0
