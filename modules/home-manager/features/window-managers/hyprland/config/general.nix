@@ -29,7 +29,7 @@ in {
       enabled = true;
       ignore_window = true;
       range = 10;
-      offset = "0 0";
+      offset = "0 5";
       render_power = 3;
       color = "rgba(00000030)";
     };
