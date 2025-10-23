@@ -21,13 +21,13 @@
       :spacing 10
       (button
         :class "confirm-button bold"
-        :onclick "${action}; eww --config ${dir} close confirm"
+        :onclick "hyprctl reload; ${action}; eww --config ${dir} close confirm"
         :tooltip "(y)"
         "Yes"
       )
       (button
         :class "confirm-button bold"
-        :onclick "eww --config ${dir} close confirm"
+        :onclick "hyprctl reload; eww --config ${dir} close confirm"
         :tooltip "(n)"
         "No"
       )
