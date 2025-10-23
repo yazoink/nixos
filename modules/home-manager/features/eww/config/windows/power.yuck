@@ -3,6 +3,7 @@
 (include "./widgets/quote.yuck")
 (include "./widgets/resource-usage-grid.yuck")
 (include "./widgets/user.yuck")
+(include "./widgets/time.yuck")
 
 (defwindow power [screen]
   :monitor screen
@@ -21,17 +22,28 @@
     :space-evenly "false"
     :class "power-box"
     :spacing 15
-    (separator)
-    (label :text "Have a nice day :)" :class "heading")
-    (quote 
-      :text "Thou shalt not blow pot smoke in the face\\n of thy pet." 
-      :author "William S. Burroughs"
+    ;(label :text "Have a nice day :)" :class "heading")
+    (pretty-time)
+    (hline)
+    ;(quote 
+    ;  :text "Thou shalt not blow pot smoke in the face\\n of thy pet." 
+    ;  :author "William S. Burroughs"
+    ;)
+    (box
+      :orientation "horizontal"
+      :space-evenly "false"
+      :spacing 5
+      (power-buttons)
+      (box
+        :halign "fill"
+        :valign "fill"
+        :vexpand "true"
+        :hexpand "true"
+        :valign "center"
+        (user :image "./images/profile_image_rounded4.png")
+      )
     )
     (hline)
-    (power-buttons)
-    (hline)
     (resource-usage-grid)
-    (hline)
-    (user :image "./images/profile_image_rounded2.png")
   )
 )

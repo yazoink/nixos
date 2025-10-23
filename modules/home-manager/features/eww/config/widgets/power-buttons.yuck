@@ -2,37 +2,50 @@
   (box
     :orientation "vertical"
     :space-evenly "false"
+    :valign "center"
     :class "power-button-box"
     :spacing 10
     ; (left-text :text "Power Options" :class "bold")
     (box
-      :orientation "horizontal"
+      :orientation "vertical"
       :halign "center"
       :space-evenly "true"
       :spacing 10
-      (button
-        :class "power-button"
-        :onclick "bash ./scripts/lock.sh"
-        :tooltip "Lock (l)"
-        ""
+      (box
+        :orientation "horizontal"
+        :halign "center"
+        :space-evenly "true"
+        :spacing 10
+        (button
+          :class "power-button"
+          :onclick "bash ./scripts/lock.sh"
+          :tooltip "Lock (l)"
+          ""
+        )
+        (button
+          :class "power-button"
+          :onclick "bash ./scripts/confirm_prompt.sh 'Exit window manager?' 'hyprctl dispatch exit' & disown"
+          :tooltip "Exit (e)"
+          ""
+        )
       )
-      (button
-        :class "power-button"
-        :onclick "bash ./scripts/confirm_prompt.sh 'Exit to TTY?' 'hyprctl dispatch exit' & disown"
-        :tooltip "Exit (e)"
-        ""
-      )
-      (button
-        :class "power-button"
-        :onclick "bash ./scripts/confirm_prompt.sh 'Reboot system?' 'systemctl reboot' & disown"
-        :tooltip "Reboot (r)"
-        ""
-      )
-      (button
-        :class "power-button"
-        :onclick "bash ./scripts/confirm_prompt.sh 'Shut down system?' 'systemctl shutdown' & disown"
-        :tooltip "Shutdown (s)"
-        ""
+      (box
+        :orientation "horizontal"
+        :halign "center"
+        :space-evenly "true"
+        :spacing 10
+        (button
+          :class "power-button"
+          :onclick "bash ./scripts/confirm_prompt.sh 'Reboot system?' 'systemctl reboot' & disown"
+          :tooltip "Reboot (r)"
+          ""
+        )
+        (button
+          :class "power-button"
+          :onclick "bash ./scripts/confirm_prompt.sh 'Shut down system?' 'systemctl shutdown' & disown"
+          :tooltip "Shutdown (s)"
+          ""
+        )
       )
     )
   )

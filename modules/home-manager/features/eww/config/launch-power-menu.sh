@@ -23,9 +23,9 @@ echo "pwd $(pwd)"
 if [[ $? == 0 ]]; then
     echo "power menu opened"
     hyprctl keyword bindn ,L,exec,hyprlock
-    hyprctl keyword bindn ,E,exec,"hyprctl reload; EWW_CONFIG_DIR=$config bash $config/scripts/confirm_prompt.sh 'Are you sure you want to exit to TTY?' 'hyprctl dispatch exit'"
-    hyprctl keyword bindn ,R,exec,"hyprctl reload; EWW_CONFIG_DIR=$config bash $config/scripts/confirm_prompt.sh 'Are you sure you want to reboot?' 'systemctl reboot'"
-    hyprctl keyword bindn ,S,exec,"hyprctl reload; EWW_CONFIG_DIR=$config bash $config/scripts/confirm_prompt.sh 'Are you sure you want to shut down?' 'systemctl shutdown'"
+    hyprctl keyword bindn ,E,exec,"hyprctl reload; EWW_CONFIG_DIR=$config bash $config/scripts/confirm_prompt.sh 'Exit window manager?' 'hyprctl dispatch exit'"
+    hyprctl keyword bindn ,R,exec,"hyprctl reload; EWW_CONFIG_DIR=$config bash $config/scripts/confirm_prompt.sh 'Reboot system?' 'systemctl reboot'"
+    hyprctl keyword bindn ,S,exec,"hyprctl reload; EWW_CONFIG_DIR=$config bash $config/scripts/confirm_prompt.sh 'Shut down system?' 'systemctl shutdown'"
     hyprctl keyword bindn ,Escape,exec,"hyprctl reload; EWW_CONFIG_DIR=$config eww --config $config close power"
     echo "set keybinds"
     while true; do

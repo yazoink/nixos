@@ -14,7 +14,7 @@
     :spacing 15
     :halign "center"
     (separator)
-    (label :text "${thing}")
+    (label :text "${thing}" :class "confirm-text")
     (box
       :orientation "horizontal"
       :space-evenly "true"

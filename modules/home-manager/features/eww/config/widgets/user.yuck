@@ -1,31 +1,37 @@
-(defpoll username-and-hostname :initial "idk" :interval "24h" 'echo "$(whoami)@$(hostname)"')
+(defpoll username-and-hostname :initial "idk" :interval "24h" 'echo "$(whoami) @ $(hostname)"')
 (defpoll os-version :initial "idk" :interval "24h" 'bash ./scripts/get_os.sh')
 
 (defwidget user [image]
   (box
     :class "user-box"
     :orientation "horizontal"
+    :valign "end"
     :space-evenly "false"
-    (image
-      :path "${image}"
-      :halign "start"
-      :image-width 50
-      :image-height 50
-      :class "profile-picture"
-    )
+    :spacing 15
+    ;(hline)
+    ;(separator)
     (box
-      :halign "end"
-      :hexpand true
+      ;:vexpand "true"
+      ;:valign "end"
       :orientation "vertical"
-      (label
-        :halign "end"
-        :class "bold"
+      :spacing 5
+      :space-evenly "false"
+      :valign "center"
+      (left-text
+        :class "username-and-hostname bold"
         :text "${username-and-hostname}"
       )
-      (label 
+      (left-text
         :text "${os-version}"
-        :class "italic"
+        :class "os-version italic"
       )
+    )
+    (image
+      :path "${image}"
+      :image-width 60
+      :image-height 60
+      :halign "start"
+      :class "profile-picture"
     )
   )
 )

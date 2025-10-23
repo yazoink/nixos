@@ -27,6 +27,10 @@ $round: 10px;
   border-radius: 20px;
 }
 
+.confirm-text {
+  font-weight: bold;
+}
+
 .power-box, .confirm-box {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
   padding: 20px;
@@ -46,6 +50,14 @@ $round: 10px;
   margin: 25px;
 }
 
+.user-box {
+  padding: 15px;
+  border: 1px solid $border;
+  border-radius: 5px;
+  margin: 5px;
+  font-style: italic;
+}
+
 button {
   padding: 10px;
   border-radius: 5px;
@@ -56,9 +68,14 @@ button:hover {
   background-color: $bg3;
 }
 
+.power-button-box {
+  padding: 5px;
+}
+
 .power-button-box button {
   font-family: "Font Awesome 7 Free";
-  font-size: 35pt;
+  font-size: 15pt;
+  padding: 10px;
 }
 
 // .user-box {
@@ -70,12 +87,16 @@ button:hover {
 
 .profile-picture {
   border-radius: 5px;
-  margin: 5px;
+  // box-shadw: 0 0 5px rgba(0, 0, 0, 0.15);
 }
 
 .heading {
   font-weight: bold;
   font-size: 18pt;
+}
+
+.os-version {
+  font-size: unset;
 }
 
 .bold {
@@ -96,16 +117,33 @@ button:hover {
 .grid-list-box, .text-box {
   // background-color: $bg2;
   padding: 15px;
-  // border-radius: 5px;
+  border-radius: 5px;
   margin: 5px;
   border: 1px solid $bg2;
-  border-radius: 0px;
+  // border-radius: 0px;
 }
 
-.text-box label {
-  // font-family: "ZedMono Nerd Font";
+.quote {
   font-style: italic;
   opacity: 0.5;
+  margin-left: 25px;
+  margin-right: 25px;
+}
+
+.pretty-time-date {
+  font-size: 13pt;
+  font-style: italic;
+  opacity: 0.5;
+}
+
+.pretty-time-clock {
+  font-size: 40pt;
+  font-weight: bold;
+}
+
+.pretty-time-separator {
+  font-size: 5pt;
+  font-family: "Font Awesome 7 Free";
 }
 
 .separator {
