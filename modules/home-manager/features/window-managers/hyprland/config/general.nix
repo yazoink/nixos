@@ -28,9 +28,9 @@ in {
     shadow = {
       enabled = true;
       ignore_window = true;
-      range = 20;
+      range = 10;
       offset = "0 0";
-      render_power = 4;
+      render_power = 3;
       color = "rgba(00000030)";
     };
   };

@@ -8,7 +8,6 @@ eww --config "$config" open confirm --arg screen=$monitor --arg thing="$1" --arg
 
 if [[ $? == 0 ]]; then
     echo "confirm prompt opened"
-    sleep 0.6
     hyprctl keyword bindn ,Y,exec,"$2; eww --config $config close confirm"
     hyprctl keyword bindn ,N,exec,"eww --config $config close confirm"
     hyprctl keyword bindn ,"Escape,exec,eww --config $config close confirm"
