@@ -22,6 +22,7 @@ in {
       "widgets" = {
         source = ./config;
         recursive = true;
+        force = true;
       };
     };
     /*
