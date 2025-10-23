@@ -28,8 +28,8 @@ in {
     shadow = {
       enabled = true;
       ignore_window = true;
-      range = 10;
-      offset = "0 5";
+      range = 5;
+      offset = "0 0";
       render_power = 3;
       color = "rgba(00000030)";
     };
