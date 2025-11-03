@@ -41,7 +41,7 @@
     environment.systemPackages = with pkgs; [
       #cantata (abandoned/broken)
       # ario
-      mpc-cli
+      mpc
     ];
   };
 }
