@@ -14,7 +14,7 @@
     fonts.packages = with pkgs; [
       liberation_ttf
       noto-fonts
-      noto-fonts-emoji
+      noto-fonts-color-emoji
       font-awesome
       twemoji-color-font
       material-symbols
