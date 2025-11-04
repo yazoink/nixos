@@ -64,7 +64,7 @@
       "format-charging": ""
     },
     "battery#percentage": {
-      "bat": "BAT1",
+      "bat": "${laptop.batteryName}",
       "interval": 60,
       "states": {
         "warning": 30,

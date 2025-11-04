@@ -76,6 +76,7 @@
         enable = true;
         hyprlandTouchpadScrollFactor = 0.2;
         isThinkPad = true;
+        batteryName = "BAT0";
       };
     };
   };
