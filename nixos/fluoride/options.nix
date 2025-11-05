@@ -31,12 +31,12 @@
     };
     desktopTheme = {
       # name = "paradise";
-      name = "idk-what-this-one-is-called";
+      name = "everblush";
       wallpaper = {
         type = "image";
         image = {
           fillType = "fill";
-          path = ../../wallpapers/a_group_of_purple_flowers2.png;
+          path = ../../wallpapers/flowers-1.jpg;
         };
       };
       terminalPadding = 24;
@@ -52,7 +52,7 @@
       };
       sddm = {
         scale = 0.8;
-        wallpaper = ../../wallpapers/a_group_of_purple_flowers2.png;
+        wallpaper = ../../wallpapers/flowers-1.jpg;
       };
     };
     bundles = {
