@@ -12,7 +12,7 @@
 in {
   general = {
     gaps_in = 5;
-    gaps_out = 10;
+    gaps_out = 15;
     border_size = 1;
     layout = "dwindle";
     allow_tearing = false;
