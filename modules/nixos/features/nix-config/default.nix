@@ -20,6 +20,7 @@
       settings = {
         experimental-features = "nix-command flakes";
         auto-optimise-store = true;
+        keep-outputs = true;
         substituters = [
           "https://nix-community.cachix.org"
           "https://cache.nixos.org/"
