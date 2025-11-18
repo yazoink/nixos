@@ -18,16 +18,8 @@
     }
   '';
   clockModule = ''
-    "group/datetime": {
-      "orientation": "vertical",
-      "modules": ["clock#time", "clock#date"]
-    },
-    "clock#time": {
-      "format": "{:%I:%M %p}",
-      "tooltip": false
-    },
-    "clock#date": {
-      "format": "{:%b %d %Y}",
+    "clock": {
+      "format": "{:%b %d, %I:%M %p}",
       "tooltip": false
     }
   '';
@@ -177,7 +169,11 @@
     }
   '';
   separatorModule = ''
-    "custom/separator": {
+    "custom/separator#left": {
+      "format": "|",
+      "tooltip": false
+    },
+    "custom/separator#right": {
       "format": "|",
       "tooltip": false
     }
@@ -190,7 +186,8 @@
     "position": "${barPosition}",
     "spacing": 15,
     "height": ${builtins.toString barHeight},
-    "modules-left": ["custom/search", "hyprland/workspaces"]
+    "modules-left": ["custom/search", "custom/separator#left", "clock"],
+    "modules-center": ["hyprland/workspaces"]
   '';
 in {
   options = {
@@ -212,8 +209,7 @@ in {
               "group/backlight-expander",
               "group/battery-expander",
               "group/tray-expander",
-              "group/datetime",
-              "custom/separator",
+              "custom/separator#right",
               "custom/power"
             ],
             ${workspacesModule},
@@ -233,15 +229,14 @@ in {
             "modules-right": [
               "group/volume-expander",
               "group/tray-expander",
-              "group/datetime",
-              "custom/separator",
+              "custom/separator#right",
               "custom/power"
             ],
             ${workspacesModule},
             ${clockModule},
             ${volumeModule},
             ${trayModule},
-            ${idleInhibitorModule},
+            ${separatorModule},
             ${powerModule}
           }
         '';
@@ -254,6 +249,7 @@ in {
           @define-color unfocused #${base16Scheme.base03};
           @define-color urgent #${base16Scheme.base08};
           @define-color border #${base16Scheme.base01};
+          @define-color accent #${base16Scheme.${osConfig.desktopTheme.base16Accent}};
 
           * {
             all: unset;

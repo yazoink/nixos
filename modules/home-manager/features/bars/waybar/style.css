@@ -81,15 +81,10 @@ menuitem:hover {
   color: @urgent;
 }
 
-#datetime {
-  font-size: 9.5pt;
-  margin-top: 8px;
-}
-
-#clock.date {
-  font-weight: normal;
-}
-
 #custom-separator {
   color: @bg2;
+}
+
+#custom-search {
+  color: @accent;
 }
