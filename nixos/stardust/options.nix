@@ -29,7 +29,7 @@
           name = "Aporetic Serif Mono";
           # name = "Terminess Nerd Font";
           # name = "ZedMono Nerd Font";
-          size = 10;
+          size = 12;
         };
       };
       sddm = {
