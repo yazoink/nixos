@@ -20,6 +20,7 @@ function main() {
             "-t" | "--test") switch_arg="test" ;;
             "-b" | "--boot") switch_arg="boot" ;;
             "-i" | "--impure") extra_args="$extra_args --impure" ;;
+            "-o" | "--offline") extra_args="$extra_args --offline" ;;
             "-d" | "--debug") extra_args="$extra_args --show-trace" ;;
             "-u" | "--update") do_update=true ;;
             *) echo "Error: argument \"$arg\" invalid."; exit 1 ;;
@@ -54,6 +55,7 @@ function help() {
     echo "    -b | --boot: rebuild boot"
     echo "    -d | --debug: --show-trace"
     echo "    -i | --impure: --impure"
+    echo "    -o | --offline: --offline"
     echo "    -u | --update: update flake inputs before rebuilding"
     echo "    -h | --help: show this menu"
 }
