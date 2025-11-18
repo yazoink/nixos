@@ -10,7 +10,7 @@
   inherit (osConfig.myOptions) desktopTheme;
   iconSize = desktopTheme.fonts.desktop.size - 1;
   barHeight = 42;
-  barPosition = "top";
+  barPosition = "bottom";
   workspacesModule = ''
     "hyprland/workspaces": {
       "on-click": "activate",
@@ -184,7 +184,7 @@
   '';
   barConfig = ''
     "reload_style_on_change": true,
-    "layer": "bottom",
+    "layer": "top",
     "mode": "dock",
     "exclusive": "true",
     "position": "${barPosition}",
