@@ -8,8 +8,8 @@
 (defwindow power [screen]
   :monitor screen
   :geometry (geometry
-    :x "5px"
-    :y "5px"
+    :x "0px"
+    :y "0px"
     :width "318px"
     :anchor "bottom right"
   )
