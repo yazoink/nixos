@@ -12,5 +12,6 @@
     ./sf-mono
     ./cozette
     ./terminess
+    ./aporetic-sans-mono
   ];
 }
