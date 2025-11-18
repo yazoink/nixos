@@ -23,9 +23,9 @@ in {
       "walker/themes/mytheme.toml".text = ''
         [ui.anchors]
         bottom = true
-        left = true
+        left = false
         right = true
-        top = true
+        top = false
 
         [ui.window]
         h_align = "fill"
