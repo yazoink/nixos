@@ -176,9 +176,10 @@ in {
         }
 
         #search {
-          background: none;
+          background: @color1;
           padding: 8px;
-          //border-radius: 5px;
+          border-radius: 15px;
+          margin-bottom: 10px;
         }
 
         #prompt {
@@ -197,7 +198,7 @@ in {
         #password,
         #input,
         #typeahead {
-          border-radius: 5px;
+          border-radius: 10px;
         }
 
         #input {
@@ -225,8 +226,8 @@ in {
         }
 
         child {
-          padding: 5px;
-          border-radius: 5px;
+          padding: 10px;
+          border-radius: 10px;
         }
 
         child:selected,
@@ -274,7 +275,7 @@ in {
 
         .aiItem {
           padding: 5px;
-          border-radius: 5px;
+          border-radius: 10px;
           color: @foreground;
           background: @background;
         }
