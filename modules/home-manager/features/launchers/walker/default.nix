@@ -154,7 +154,7 @@ in {
 
         #window {
           margin-left: 5px;
-          margin-bottom: 51px;
+          margin-bottom: 47px;
         }
 
         #cfgerr {
