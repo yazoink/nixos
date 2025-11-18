@@ -22,7 +22,7 @@
       };
       fonts = {
         desktop = {
-          name = "Rubik";
+          name = "SF Pro Display";
           size = 11;
         };
         terminal = {
