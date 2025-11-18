@@ -28,6 +28,7 @@
         terminal = {
           # name = "Bm437 NEC APC3 8x16";
           name = "Terminess Nerd Font";
+          # name = "ZedMono Nerd Font";
           size = 12;
         };
       };
@@ -38,8 +39,8 @@
       };
     };
     bundles = {
-      # base.starshipFormat = 1;
-      base.starshipFormat = 2;
+      base.starshipFormat = 1;
+      # base.starshipFormat = 2;
       desktopBase.windowManager = "hyprland";
       desktopBase.displayManager = "none";
       desktopBase.silentBoot.enable = true;
