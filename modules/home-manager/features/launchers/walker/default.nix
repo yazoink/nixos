@@ -153,8 +153,8 @@ in {
         }
 
         #window {
-          margin-left: 10px;
-          margin-bottom: 56px;
+          margin-left: 5px;
+          margin-bottom: 51px;
         }
 
         #cfgerr {
