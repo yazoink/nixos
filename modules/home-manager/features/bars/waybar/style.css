@@ -92,6 +92,4 @@ menuitem:hover {
 
 #custom-separator {
   color: @bg2;
-  margin-left: -10px;
-  margin-right: -10px;
 }
