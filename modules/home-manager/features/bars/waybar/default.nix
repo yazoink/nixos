@@ -167,6 +167,7 @@
     "exclusive": "true",
     "position": "${barPosition}",
     "spacing": 20,
+    "height": 42,
     "height": ${builtins.toString barHeight},
     "modules-left": ["hyprland/workspaces"],
     "modules-center": ["clock"]
@@ -221,7 +222,7 @@ in {
             ${powerModule}
           }
         '';
-      "waybar/menus/power.xml".source = ./power.xml;
+      # "waybar/menus/power.xml".source = ./power.xml;
       "waybar/style.css".text =
         ''
           @define-color bg #${base16Scheme.base00};
