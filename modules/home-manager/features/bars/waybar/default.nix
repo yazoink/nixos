@@ -188,7 +188,7 @@
     "mode": "dock",
     "exclusive": "true",
     "position": "${barPosition}",
-    "spacing": 20,
+    "spacing": 15,
     "height": ${builtins.toString barHeight},
     "modules-left": ["custom/search", "hyprland/workspaces"]
   '';
