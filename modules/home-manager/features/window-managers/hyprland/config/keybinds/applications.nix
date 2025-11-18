@@ -22,6 +22,7 @@
     # "$mainMod SHIFT, D, exec, ${../../../scripts/dnd.sh}"
     "$mainMod SHIFT, F, exec, ${../../../scripts/restart-foot-server.sh}"
     "$mainMod SHIFT, Q, exec, bash ~/.config/widgets/launch-power-menu.sh"
+    "$mainMod SHIFT, C, exec, bash ~/.config/widgets/launch-calendar.sh"
     ", XF86Lock, exec, $lock"
     ", code:107, exec, $screenshot"
   ];
