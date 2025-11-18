@@ -24,7 +24,7 @@ in {
     plugin = {
       hyprbars = {
         bar_color = "rgb(${base16Scheme.base00})";
-        bar_height = 42;
+        bar_height = 46;
         bar_text_font = "${fonts.sansSerif.name} Bold";
         bar_text_size = fonts.sizes.applications;
         bar_text_align = "center";
