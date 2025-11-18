@@ -279,6 +279,7 @@ in {
           #wireplumber.icon,
           #custom-backlight-icon,
           #idle_inhibitor,
+          #custom-search,
           #custom-power {
             font-size: ${builtins.toString iconSize}pt;
           }
