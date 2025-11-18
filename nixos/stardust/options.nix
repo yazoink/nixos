@@ -12,7 +12,7 @@
     };
     userAccount.username = "gene";
     desktopTheme = {
-      name = "rose-pine";
+      name = "biscuit-de-mar-dark";
       wallpaper = {
         type = "image";
         image = {
