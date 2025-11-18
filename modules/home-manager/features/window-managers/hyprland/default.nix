@@ -19,7 +19,7 @@
       # hyprViewBinds.enable = true; # nix package stopped building, fix later
       swayosd.enable = true;
       eww.enable = true;
-      hyprlandMonitorAttached.enable = true;
+      # hyprlandMonitorAttached.enable = true;
     };
     home.packages = with pkgs; [
       wl-clipboard

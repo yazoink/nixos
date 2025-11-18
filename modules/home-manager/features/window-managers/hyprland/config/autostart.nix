@@ -12,7 +12,7 @@ in {
       "nm-applet"
       "wl-clip-persist --clipboard regular"
       "wayland-pipewire-idle-inhibit"
-      "hyprland-monitor-attached ~/.config/widgets/monitor-attached.sh"
+      # "hyprland-monitor-attached ~/.config/widgets/monitor-attached.sh"
     ]
     ++ (
       if (terminal.command == "footclient")
