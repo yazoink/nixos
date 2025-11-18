@@ -16,14 +16,14 @@
       :halign "end"
       :orientation "vertical"
       :spacing 5
-      :space-evenly "false"
+      :space-evenly "true"
       :valign "center"
       :hexpand "true"
-      (right-text
+      (left-text
         :class "username-and-hostname bold"
         :text "${username-and-hostname}"
       )
-      (right-text
+      (left-text
         :text "${os-version}"
         :class "os-version italic"
       )

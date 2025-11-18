@@ -24,11 +24,11 @@
     :spacing 15
     ;(label :text "Have a nice day :)" :class "heading")
     (pretty-time)
-    (hline)
     ;(quote 
     ;  :text "Thou shalt not blow pot smoke in the face\\n of thy pet." 
     ;  :author "William S. Burroughs"
     ;)
+    (resource-usage-grid)
     (box
       :orientation "horizontal"
       :space-evenly "false"
@@ -43,7 +43,5 @@
         (user :image "./images/profile_image_rounded.png")
       )
     )
-    (hline)
-    (resource-usage-grid)
   )
 )

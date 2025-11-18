@@ -31,7 +31,7 @@ in {
       range = 5;
       offset = "0 0";
       render_power = 3;
-      color = "rgba(00000030)";
+      color = "rgba(00000040)";
     };
   };
   misc = {
