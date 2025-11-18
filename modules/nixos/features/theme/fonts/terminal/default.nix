@@ -11,5 +11,6 @@
     ./terminus
     ./sf-mono
     ./cozette
+    ./terminess
   ];
 }
