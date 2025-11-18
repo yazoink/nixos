@@ -26,7 +26,7 @@
           size = 11;
         };
         terminal = {
-          name = "Aporetic Sans Mono";
+          name = "Aporetic Serif Mono";
           # name = "Terminess Nerd Font";
           # name = "ZedMono Nerd Font";
           size = 10;
