@@ -23,8 +23,8 @@ in {
       "walker/themes/mytheme.toml".text = ''
         [ui.anchors]
         bottom = true
-        left = false
-        right = true
+        left = true
+        right = false
         top = false
 
         [ui.window]
@@ -150,6 +150,11 @@ in {
         #sub,
         #activationlabel {
           all: unset;
+        }
+
+        #window {
+          margin-left: 15px;
+          margin-bottom: 61px;
         }
 
         #cfgerr {
