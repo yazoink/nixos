@@ -17,7 +17,8 @@
         type = "image";
         image = {
           fillType = "fill";
-          path = ../../wallpapers/flowers-1.jpg;
+          # path = ../../wallpapers/flowers-1.jpg;
+          path = ../../wallpapers/wall1.jpg;
         };
       };
       fonts = {
