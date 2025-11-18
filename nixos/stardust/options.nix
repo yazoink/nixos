@@ -23,8 +23,8 @@
       };
       fonts = {
         desktop = {
-          name = "Lexend";
-          size = 11;
+          name = "Gabarito";
+          size = 12;
         };
         terminal = {
           name = "Aporetic Serif Mono";
