@@ -9,7 +9,7 @@
               :y "0%"
               :width "100%"
               :height "100%"
-              :anchor "top center")
+              :anchor "bottom center")
               
   :stacking "bottom"
   :exclusive false

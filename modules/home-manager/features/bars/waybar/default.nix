@@ -9,7 +9,7 @@
   inherit (osConfig.myOptions.hardwareFeatures) laptop;
   inherit (osConfig.myOptions) desktopTheme;
   iconSize = desktopTheme.fonts.desktop.size - 1;
-  barHeight = 36;
+  barHeight = 42;
   barPosition = "top";
   workspacesModule = ''
     "hyprland/workspaces": {
@@ -18,8 +18,16 @@
     }
   '';
   clockModule = ''
-    "clock": {
-      "format": "{:%I:%M %p %b %d %Y}",
+    "group/datetime": {
+      "orientation": "vertical",
+      "modules": ["clock#time", "clock#date"]
+    },
+    "clock#time": {
+      "format": "{:%I:%M %p}",
+      "tooltip": false
+    },
+    "clock#date": {
+      "format": "{:%b %d %Y}",
       "tooltip": false
     }
   '';
@@ -142,7 +150,7 @@
   */
   powerModule = ''
     "custom/power": {
-      "format" : "⏻ ",
+      "format" : "",
       "tooltip": true,
       "tooltip-format": "Power menu (Mod+Shift+Q)",
       "on-click": "bash ~/.config/widgets/launch-power-menu.sh"
@@ -160,6 +168,20 @@
       }
     }
   '';
+  searchModule = ''
+    "custom/search": {
+       "format": "",
+       "tooltip": true,
+       "tooltip-format": "Application menu (Mod+P, Mod+R)",
+       "on-click": "pkill walker || walker"
+    }
+  '';
+  separatorModule = ''
+    "custom/separator": {
+      "format": "|",
+      "tooltip": false
+    }
+  '';
   barConfig = ''
     "reload_style_on_change": true,
     "layer": "top",
@@ -167,10 +189,8 @@
     "exclusive": "true",
     "position": "${barPosition}",
     "spacing": 20,
-    "height": 42,
     "height": ${builtins.toString barHeight},
-    "modules-left": ["hyprland/workspaces"],
-    "modules-center": ["clock"]
+    "modules-left": ["custom/search", "hyprland/workspaces"],
   '';
 in {
   options = {
@@ -192,7 +212,8 @@ in {
               "group/backlight-expander",
               "group/battery-expander",
               "group/tray-expander",
-              "idle_inhibitor",
+              "group/datetime",
+              "custom/separator",
               "custom/power"
             ],
             ${workspacesModule},
@@ -201,7 +222,8 @@ in {
             ${backlightModule},
             ${batteryModule},
             ${trayModule},
-            ${idleInhibitorModule},
+            ${searchModule},
+            ${separatorModule},
             ${powerModule}
           }
         ''

@@ -36,7 +36,7 @@ menu {
 }
 
 menuitem {
-  padding: 5px;
+  /* padding: 5px; */
   padding-left: 20px;
   padding-right: 20px;
   border-radius: 5px;
@@ -77,4 +77,17 @@ menuitem:hover {
 
 #custom-power {
   color: @urgent;
+}
+
+#datetime {
+  font-size: 9.5pt;
+  margin-top: 8px;
+}
+
+#clock.date {
+  font-weight: normal;
+}
+
+#custom-separator {
+  color: @bg2;
 }
