@@ -2,8 +2,8 @@
   :monitor screen
   :geometry (geometry
     :anchor "top right"
-    :x "5px"
-    :y "5px"
+    :x "0px"
+    :y "0px"
   )
   :stacking "fg"
   :exclusive "false"
