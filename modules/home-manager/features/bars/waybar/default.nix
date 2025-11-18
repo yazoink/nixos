@@ -9,7 +9,7 @@
   inherit (osConfig.myOptions.hardwareFeatures) laptop;
   inherit (osConfig.myOptions) desktopTheme;
   iconSize = desktopTheme.fonts.desktop.size - 1;
-  barHeight = 42;
+  barHeight = 46;
   barPosition = "bottom";
   workspacesModule = ''
     "hyprland/workspaces": {
