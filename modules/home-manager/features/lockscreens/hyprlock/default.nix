@@ -84,7 +84,7 @@ in {
           monitor =
           size = 470, 50
           outline_thickness = 0
-          rounding = 15
+          rounding = 10
           inner_color = $bg1
           check_color = rgb(d9bc8c)
           fail_color = rgb(b66467)
