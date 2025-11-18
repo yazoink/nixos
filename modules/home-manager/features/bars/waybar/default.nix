@@ -184,7 +184,7 @@
   '';
   barConfig = ''
     "reload_style_on_change": true,
-    "layer": "top",
+    "layer": "bottom",
     "mode": "dock",
     "exclusive": "true",
     "position": "${barPosition}",
@@ -233,7 +233,8 @@ in {
             "modules-right": [
               "group/volume-expander",
               "group/tray-expander",
-              "idle_inhibitor",
+              "group/datetime",
+              "custom/separator",
               "custom/power"
             ],
             ${workspacesModule},
