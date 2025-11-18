@@ -178,7 +178,7 @@ in {
         #search {
           background: @color1;
           padding: 8px;
-          border-radius: 15px;
+          border-radius: 10px;
           margin-bottom: 10px;
         }
 
