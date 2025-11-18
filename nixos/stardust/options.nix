@@ -12,7 +12,7 @@
     };
     userAccount.username = "gene";
     desktopTheme = {
-      name = "paradise";
+      name = "biscuit-de-mar-dark";
       wallpaper = {
         type = "image";
         image = {
@@ -23,8 +23,8 @@
       };
       fonts = {
         desktop = {
-          name = "Gabarito";
-          size = 12;
+          name = "Lexend";
+          size = 11;
         };
         terminal = {
           name = "Aporetic Serif Mono";
