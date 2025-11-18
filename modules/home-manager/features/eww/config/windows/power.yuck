@@ -23,7 +23,7 @@
     :class "power-box"
     :spacing 15
     ;(label :text "Have a nice day :)" :class "heading")
-    (pretty-time)
+    (separator)
     (resource-usage-grid)
     (box
       :orientation "horizontal"
