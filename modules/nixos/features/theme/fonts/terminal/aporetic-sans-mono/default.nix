@@ -8,7 +8,7 @@
     stylix = {
       fonts = {
         monospace = {
-          name = "Aporitic Sans Mono Bold";
+          name = "Aporitic Sans Mono";
           package = pkgs.aporetic;
         };
       };
