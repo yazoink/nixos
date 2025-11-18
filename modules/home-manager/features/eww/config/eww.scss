@@ -41,7 +41,6 @@ $round: 15px;
   padding: 22px;
   border-radius: 10px;
   background-color: $bg2;
-  font-style: italic;
 }
 
 button {
@@ -108,9 +107,9 @@ button:hover {
 
 .quote {
   font-style: italic;
-  opacity: 0.5;
-  margin-left: 25px;
-  margin-right: 25px;
+  background-color: $bg2;
+  padding: 15px;
+  border-radius: 10px;
 }
 
 .pretty-time-date {

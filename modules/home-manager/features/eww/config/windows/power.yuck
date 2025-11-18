@@ -24,10 +24,6 @@
     :spacing 15
     ;(label :text "Have a nice day :)" :class "heading")
     (pretty-time)
-    ;(quote 
-    ;  :text "Thou shalt not blow pot smoke in the face\\n of thy pet." 
-    ;  :author "William S. Burroughs"
-    ;)
     (resource-usage-grid)
     (box
       :orientation "horizontal"
@@ -42,6 +38,10 @@
         :valign "center"
         (user :image "./images/profile_image_rounded.png")
       )
+    )
+    (quote 
+      :text "Thou shalt not blow pot smoke in the face\\n of thy pet." 
+      :author "William S. Burroughs"
     )
   )
 )
