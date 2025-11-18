@@ -9,7 +9,7 @@ $green: #8CCF7E;
 $blue: #67B0E8;
 $purple: #C47FD5;
 
-// @import "colours";
+@import "colours";
 
 $round: 15px;
 
@@ -154,6 +154,31 @@ tooltip label {
   margin: 5px;
   padding: 0;
   color: $fg;
+}
+
+.cal {
+  background-color: $bg2;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+calendar.header {
+  border-bottom: 1px solid $bg3;
+  border-radius: 0px;
+}
+
+calendar.button {
+  background-color: transparent;
+}
+
+calendar.day-number {
+  padding: 5px;
+  margin: 0;
+}
+
+calendar:selected {
+  background-color: $blue;
+  color: $bg;
 }
 
 .red {
