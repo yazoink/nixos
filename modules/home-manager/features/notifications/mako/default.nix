@@ -35,7 +35,7 @@
         border-size = "1";
         font = "${config.stylix.fonts.sansSerif.name} ${toString config.stylix.fonts.sizes.popups}";
         padding = "15";
-        margin = "5";
+        margin = "5, 5, 5";
         default-timeout = "5000";
         icon-path = "/run/current-system/sw/share/icons/${config.gtk.iconTheme.name}";
       };
