@@ -6,7 +6,7 @@ in {
       # "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
       "$wallpaper -q"
       "waybar"
-      "bash ~/.config/widgets/launch-corners.sh"
+      # "bash ~/.config/widgets/launch-corners.sh"
       "hypridle"
       "poweralertd"
       "nm-applet"
