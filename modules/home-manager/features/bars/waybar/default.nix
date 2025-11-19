@@ -19,7 +19,7 @@
   '';
   clockModule = ''
     "clock": {
-      "format": "{:%b %d, %I:%M %p}",
+      "format": "{:%I:%M %p}",
       "on-click": "bash ~/.config/widgets/launch-calendar.sh",
       "tooltip": true,
       "tooltip-format": "Open calendar"
