@@ -70,11 +70,11 @@
           "browser.newtabpage.activity-stream.feeds.topsites" = false;
           "browser.topsites.contile.enabled" = false;
 
-          "privacy.resistFingerprinting" = true;
-          "privacy.resistFingerprinting.randomization.canvas.use_siphash" = true;
-          "privacy.resistFingerprinting.randomization.daily_reset.enabled" = true;
-          "privacy.resistFingerprinting.randomization.daily_reset.private.enabled" = true;
-          "privacy.resistFingerprinting.block_mozAddonManager" = true;
+          "privacy.resistFingerprinting" = false;
+          # "privacy.resistFingerprinting.randomization.canvas.use_siphash" = true;
+          # "privacy.resistFingerprinting.randomization.daily_reset.enabled" = true;
+          # "privacy.resistFingerprinting.randomization.daily_reset.private.enabled" = true;
+          # "privacy.resistFingerprinting.block_mozAddonManager" = true;
           "privacy.spoof_english" = 1;
 
           "privacy.firstparty.isolate" = true;

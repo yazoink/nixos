@@ -143,7 +143,7 @@
         webBrowser = {
           command = lib.mkOption {
             type = lib.types.str;
-            default = "firefox";
+            default = "zen";
             description = "Options: firefox, zen, brave, librewolf";
           };
         };
