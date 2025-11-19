@@ -240,6 +240,7 @@ in {
             ${trayModule},
             ${separatorModule},
             ${powerModule}
+            ${searchModule}
           }
         '';
       # "waybar/menus/power.xml".source = ./power.xml;

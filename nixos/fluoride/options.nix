@@ -30,13 +30,13 @@
       username = "gene";
     };
     desktopTheme = {
-      # name = "paradise";
-      name = "everblush";
+      name = "paradise";
+      # name = "everblush";
       wallpaper = {
         type = "image";
         image = {
           fillType = "fill";
-          path = ../../wallpapers/flowers-1.jpg;
+          path = ../../wallpapers/wall1.jpg;
         };
       };
       terminalPadding = 24;
