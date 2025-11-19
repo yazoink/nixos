@@ -16,16 +16,16 @@
     desktopTheme = {
       name = "moonfly";
       fonts.terminal = {
-        name = "Iosevka Nerd Font";
+        # name = "Iosevka Nerd Font";
         # name = "SFMono";
         # name = "Bm437 NEC APC3 8x16";
         # name = "Terminus";
-        size = 12;
+        # size = 12;
       };
       fonts.desktop = {
         # name = "SF Pro Display";
-        name = "Rubik";
-        size = 11;
+        # name = "Rubik";
+        # size = 11;
       };
       wallpaper = {
         type = "image";

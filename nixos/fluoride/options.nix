@@ -42,13 +42,13 @@
       terminalPadding = 24;
       fonts.desktop = {
         # name = "SF Pro Display";
-        name = "Rubik";
-        size = 11;
+        # name = "Rubik";
+        # size = 11;
       };
       fonts.terminal = {
-        name = "Iosevka Nerd Font";
+        # name = "Iosevka Nerd Font";
         # name = "Bm437 NEC APC3 8x16";
-        size = 12;
+        # size = 12;
       };
       sddm = {
         scale = 0.8;
