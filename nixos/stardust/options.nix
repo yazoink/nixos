@@ -4,6 +4,7 @@
       discordClient = {
         command = "vesktop";
       };
+      webBrowser.command = "zen";
       terminal = {
         command = "footclient";
       };
