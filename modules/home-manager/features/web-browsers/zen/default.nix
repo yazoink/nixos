@@ -54,7 +54,7 @@
               floccus
               control-panel-for-twitter
             ]
-            (lib.mkIf h264ify.enable [enhanced-h264ify])
+            (lib.mkIf osConfig.myOptions.hardwareFeatures.h264ify.enable [enhanced-h264ify])
           ];
         settings = {
           "zen.workspaces.continue-where-left-off" = true;

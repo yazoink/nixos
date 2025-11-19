@@ -197,7 +197,7 @@
           terminal = {
             name = lib.mkOption {
               type = lib.types.str;
-              default = "Iosevka Nerd Font";
+              default = "Aporetic Serif Mono";
               description = ''
                 See nixos/modules/nixos/features/theme/fonts/terminal for
                 options.
@@ -214,7 +214,7 @@
           desktop = {
             name = lib.mkOption {
               type = lib.types.str;
-              default = "Rubik";
+              default = "Gabarito";
               description = ''
                 See nixos/modules/nixos/features/theme/fonts/desktop for
                 options.
@@ -225,7 +225,7 @@
             };
             size = lib.mkOption {
               type = lib.types.number;
-              default = 11;
+              default = 12;
             };
           };
         };
