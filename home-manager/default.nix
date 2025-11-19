@@ -9,6 +9,7 @@ in {
   imports = [
     inputs.nixvim.homeModules.nixvim
     inputs.nixcord.homeModules.nixcord
+    inputs.zen-browser.homeModules.beta
     ../modules/home-manager
   ];
 

@@ -3,6 +3,7 @@
     ./firefox
     ./brave
     ./librewolf
+    ./zen
   ];
   options = {
     defaultApps.webBrowser.desktopFile = lib.mkOption {
