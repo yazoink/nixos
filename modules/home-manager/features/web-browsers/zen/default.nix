@@ -41,17 +41,21 @@
         };
       };
       profiles.main = {
-        extensions.packages = with inputs.firefox-addons.packages.${pkgs.stdenv.hostPlatform.system}; [
-          ublock-origin
-          sponsorblock
-          stylus
-          violentmonkey
-          localcdn
-          #foxytab
-          libredirect
-          floccus
-          control-panel-for-twitter
-        ];
+        extensions.packages = with inputs.firefox-addons.packages.${pkgs.stdenv.hostPlatform.system};
+          lib.mkMerge [
+            [
+              ublock-origin
+              sponsorblock
+              stylus
+              violentmonkey
+              localcdn
+              clearurls
+              libredirect
+              floccus
+              control-panel-for-twitter
+            ]
+            (lib.mkIf h264ify.enable [enhanced-h264ify])
+          ];
         settings = {
           "zen.workspaces.continue-where-left-off" = true;
           "zen.workspaces.natural-scroll" = true;
