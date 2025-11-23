@@ -16,7 +16,7 @@
     };
     programs.nvf = {
       enable = true;
-      vim = {
+      settings.vim = {
         # Plugins
         telescope.enable = true;
         mini.statusline.enable = true;
