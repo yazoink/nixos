@@ -16,6 +16,12 @@
     };
     programs.nvf = {
       enable = true;
+
+      vim = {
+        comments = {
+          comment-nvim.enable = true;
+        };
+      };
       # Plugins
       telescope.enable = true;
       mini.statusline.enable = true;
@@ -26,10 +32,6 @@
 
       gestures = {
         gesture-nvim.enable = false;
-      };
-
-      comments = {
-        comment-nvim.enable = true;
       };
 
       spellcheck = {
