@@ -126,7 +126,7 @@ in {
       "walker/themes/mytheme.css".text = ''
         @define-color foreground #${base16Scheme.base05};
         @define-color background #${base16Scheme.base00};
-        @define-color color1 #${base16Scheme.base02};
+        @define-color color1 #${base16Scheme.base01};
         @define-color border #${base16Scheme.base01};
 
         #window,
