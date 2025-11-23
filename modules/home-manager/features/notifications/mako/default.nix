@@ -5,7 +5,7 @@
   osConfig,
   ...
 }: let
-  margin = osConfig.myOptions.desktopTheme.windowGaps.outer - 5 + 42;
+  margin = osConfig.myOptions.desktopTheme.windowGaps.outer - 5;
 in {
   options = {
     bundles.desktopBase.mako.enable = lib.mkOption {
