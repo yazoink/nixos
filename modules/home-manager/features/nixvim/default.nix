@@ -11,8 +11,8 @@
     };
   };
   config = lib.mkIf config.bundles.base.nixvim.enable {
-    stylix.targets.nixvim = {
-      enable = lib.mkDefault true;
+    stylix.targets.nixvim = lib.mkiIf (config.stylix.polarity == "dark") {
+      enable = true;
     };
     home.packages = with pkgs; [
       fzf

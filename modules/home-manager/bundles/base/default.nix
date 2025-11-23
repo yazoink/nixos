@@ -9,7 +9,6 @@
     ../../features/garfetch
     ../../features/git
     ../../features/nixvim
-    # ../../features/nvim
     ../../features/pswdgen
     ../../features/pswdrs
     ../../features/shell-config
