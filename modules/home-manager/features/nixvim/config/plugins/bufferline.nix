@@ -14,33 +14,27 @@ in {
       highlights = lib.mkIf enable {
         fill = {
           fg = "none";
-          bg = "none";
+          bg = "#${base16Scheme.base00}";
         };
         background = {
           fg = "none";
-          bg = "none";
+          bg = "${base16Scheme.base00}";
         };
         buffer = {
           fg = "none";
-          bg =
-            if (polarity == "dark")
-            then "#${base16Scheme.base00}"
-            else "none";
+          bg = "${base16Scheme.base00}";
           bold = false;
           italic = false;
         };
         buffer_selected = {
           fg = "#${config.stylix.base16Scheme.base05 or "ffffff"}";
-          bg = "none";
+          bg = "${base16Scheme.base00}";
           bold = false;
           italic = false;
         };
         buffer_visible = {
           fg = "#${config.stylix.base16Scheme.base05 or "ffffff"}";
-          bg =
-            if (polarity == "dark")
-            then "#${base16Scheme.base00}"
-            else "none";
+          bg = "${base16Scheme.base00}";
           bold = false;
           italic = false;
         };
@@ -81,24 +75,15 @@ in {
         };
         separator = {
           fg = "#${config.stylix.base16Scheme.base00 or "000000"}";
-          bg =
-            if (polarity == "dark")
-            then "#${base16Scheme.base00}"
-            else "none";
+          bg = "${base16Scheme.base00}";
         };
         separator_selected = {
           fg = "#${config.stylix.base16Scheme.base00 or "000000"}";
-          bg =
-            if (polarity == "dark")
-            then "#${base16Scheme.base00}"
-            else "none";
+          bg = "${base16Scheme.base00}";
         };
         separator_visible = {
           fg = "#${config.stylix.base16Scheme.base00 or "000000"}";
-          bg =
-            if (polarity == "dark")
-            then "#${base16Scheme.base00}"
-            else "none";
+          bg = "${base16Scheme.base00}";
         };
         modified = {
           fg = "#${config.stylix.base16Scheme.base03 or "ffffff"}";
