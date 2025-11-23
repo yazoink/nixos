@@ -20,6 +20,7 @@
         # Plugins
         telescope.enable = true;
         mini.statusline.enable = true;
+        autopairs.nvim-autopairs.enable = true;
 
         session = {
           nvim-session-manager.enable = false;
@@ -111,7 +112,6 @@
           fidget-nvim.enable = true;
           highlight-undo.enable = true;
           indent-blankline.enable = true;
-          autopairs.nvim-autopairs.enable = true;
         };
 
         ui = {
