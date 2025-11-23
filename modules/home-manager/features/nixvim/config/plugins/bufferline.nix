@@ -79,7 +79,7 @@ in {
         };
         separator = {
           fg = "#${config.stylix.base16Scheme.base00 or "000000"}";
-          bg = "#${base16Scheme.base00}"
+          bg = "#${base16Scheme.base00}";
         };
         separator_selected = {
           fg = "#${config.stylix.base16Scheme.base00 or "000000"}";
