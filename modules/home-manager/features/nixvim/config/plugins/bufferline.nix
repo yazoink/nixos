@@ -83,24 +83,18 @@ in {
         };
         modified_selected = {
           fg = "#${config.stylix.base16Scheme.base0B or "ffffff"}";
-          bg =
-            if (polarity == "dark")
-            then "#${base16Scheme.base00}"
-            else "none";
+          bg = "#${base16Scheme.base00}";
         };
         tab_close = {
           fg = "#${config.stylix.base16Scheme.base00 or "000000"}";
-          bg =
-            if (polarity == "dark")
-            then "#${base16Scheme.base00}"
-            else "none";
+          bg = "#${base16Scheme.base00}";
         };
         duplicate = {
-          bg = "none";
+          bg = "#${base16Scheme.base00}";
           italic = false;
         };
         duplicate_visible = {
-          bg = "none";
+          bg = "#${base16Scheme.base00}";
           italic = false;
         };
         duplicate_selected = {
