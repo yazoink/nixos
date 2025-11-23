@@ -18,53 +18,41 @@ in {
         };
         background = {
           fg = "none";
-          bg = "${base16Scheme.base00}";
+          bg = "#${base16Scheme.base00}";
         };
         buffer = {
           fg = "none";
-          bg = "${base16Scheme.base00}";
+          bg = "#${base16Scheme.base00}";
           bold = false;
           italic = false;
         };
         buffer_selected = {
           fg = "#${config.stylix.base16Scheme.base05 or "ffffff"}";
-          bg = "${base16Scheme.base00}";
+          bg = "#${base16Scheme.base00}";
           bold = false;
           italic = false;
         };
         buffer_visible = {
           fg = "#${config.stylix.base16Scheme.base05 or "ffffff"}";
-          bg = "${base16Scheme.base00}";
+          bg = "#${base16Scheme.base00}";
           bold = false;
           italic = false;
         };
         close_button = {
           fg = "none";
-          bg =
-            if (polarity == "dark")
-            then "#${base16Scheme.base00}"
-            else "none";
+          bg = "#${base16Scheme.base00}";
         };
         close_button_visible = {
           fg = "#${config.stylix.base16Scheme.base03 or "ffffff"}";
-          bg =
-            if (polarity == "dark")
-            then "#${base16Scheme.base00}"
-            else "none";
+          bg = "#${base16Scheme.base00}";
         };
         close_button_selected = {
           fg = "#${config.stylix.base16Scheme.base08 or "ffffff"}";
-          bg =
-            if (polarity == "dark")
-            then "#${base16Scheme.base00}"
-            else "none";
+          bg = "#${base16Scheme.base00}";
         };
         indicator_selected = {
           fg = "#${config.stylix.base16Scheme.base0E or "ffffff"}";
-          bg =
-            if (polarity == "dark")
-            then "#${base16Scheme.base00}"
-            else "none";
+          bg = "#${base16Scheme.base00}";
         };
         indicator_visible = {
           fg = "#${config.stylix.base16Scheme.base0E or "ffffff"}";
