@@ -13,6 +13,7 @@ in {
     };
   };
   config = lib.mkIf config.bundles.base.nvim.enable {
+    stylix.targets.nvf.enable = false;
     programs.nvf = {
       enable = true;
       settings.vim = {
