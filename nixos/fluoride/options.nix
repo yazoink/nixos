@@ -30,7 +30,7 @@
       username = "gene";
     };
     desktopTheme = {
-      name = "paradise";
+      name = "biscuit-de-mar-light";
       # name = "everblush";
       wallpaper = {
         type = "image";
