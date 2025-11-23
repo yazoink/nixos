@@ -239,7 +239,7 @@ in {
             ${volumeModule},
             ${trayModule},
             ${separatorModule},
-            ${powerModule}
+            ${powerModule},
             ${searchModule}
           }
         '';
