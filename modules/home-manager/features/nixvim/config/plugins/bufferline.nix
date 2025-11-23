@@ -10,6 +10,10 @@ in {
     settings = {
       options = {
         separator_style = "thin"; # “slant”, “padded_slant”, “slope”, “padded_slope”, “thick”, “thin”
+        indicator = {
+          style = "none";
+        };
+        show_tab_indicators = false;
       };
       highlights = lib.mkIf enable {
         fill = {
@@ -147,7 +151,7 @@ in {
         };
         duplicate_selected = {
           fg = "none";
-          bg = "#${config.stylix.base16Scheme.base00 or "000000"}";
+          bg = lib.mkIf (polarity == "dark") "#${config.stylix.base16Scheme.base00 or "000000"}";
           italic = false;
         };
       };
