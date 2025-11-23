@@ -27,8 +27,8 @@ in {
       "widgets/_colours.scss".text = ''
         $border: #${base16Scheme.base01};
         $bg: #${base16Scheme.base00};
-        $bg2: #${base16Scheme.base02};
-        $bg3: #${base16Scheme.base03};
+        $bg2: #${base16Scheme.base01};
+        $bg3: #${base16Scheme.base02};
         $fg: #${base16Scheme.base05};
         $red: #${base16Scheme.base08};
         $yellow: #${base16Scheme.base0A};
