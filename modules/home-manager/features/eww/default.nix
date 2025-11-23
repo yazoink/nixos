@@ -6,6 +6,7 @@
   ...
 }: let
   inherit (config.stylix) base16Scheme;
+  margin = osConfig.myOptions.desktopTheme.windowGaps.outer - 5;
 in {
   options = {
     bundles.desktopBase.eww.enable = lib.mkOption {
@@ -35,7 +36,7 @@ in {
         $green: #${base16Scheme.base0B};
         $blue: #${base16Scheme.base0D};
         $purple: #${base16Scheme.base0E};
-        $margin: ${builtins.toString osConfig.myOptions.desktopTheme.windowGaps.outer - 5}px;
+        $margin: ${builtins.toString margin}px;
       '';
     };
   };
