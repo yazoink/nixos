@@ -41,7 +41,7 @@ in {
         };
         buffer_visible = {
           fg = "#${config.stylix.base16Scheme.base05 or "ffffff"}";
-          bg = "#${base16Scheme.base00}"
+          bg = "#${base16Scheme.base00}";
           bold = false;
           italic = false;
         };
