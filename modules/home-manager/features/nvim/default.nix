@@ -43,10 +43,6 @@
         };
       };
 
-      autocomplete = {
-        nvim-cmp.enable = true;
-      };
-
       tabline = {
         nvimBufferline.enable = true;
       };
@@ -87,6 +83,10 @@
       languages = {
         enableTreesitter = true;
         enableFormat = true;
+
+        autocomplete = {
+          nvim-cmp.enable = true;
+        };
 
         nix.enable = true;
         ts.enable = true;
