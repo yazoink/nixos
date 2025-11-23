@@ -3,7 +3,9 @@
   lib,
   pkgs,
   ...
-}: {
+}: let
+  inherit (config.stylix) base16Scheme;
+in {
   options = {
     bundles.base.nvim.enable = lib.mkOption {
       type = lib.types.bool;
@@ -11,12 +13,32 @@
     };
   };
   config = lib.mkIf config.bundles.base.nvim.enable {
-    stylix.targets.nvf = {
-      enable = true;
-    };
     programs.nvf = {
       enable = true;
       settings.vim = {
+        # Theme
+        theme = {
+          enable = true;
+          base16-colors = {
+            base00 = base16Scheme.base00;
+            base01 = base16Scheme.base01;
+            base02 = base16Scheme.base02;
+            base03 = base16Scheme.base03;
+            base04 = base16Scheme.base04;
+            base05 = base16Scheme.base05;
+            base06 = base16Scheme.base06;
+            base07 = base16Scheme.base07;
+            base08 = base16Scheme.base08;
+            base09 = base16Scheme.base09;
+            base0A = base16Scheme.base0A;
+            base0B = base16Scheme.base0B;
+            base0C = base16Scheme.base0C;
+            base0D = base16Scheme.base0D;
+            base0E = base16Scheme.base0E;
+            base0F = base16Scheme.base0F;
+          };
+        };
+
         # Plugins
         telescope.enable = true;
         mini.statusline.enable = true;
