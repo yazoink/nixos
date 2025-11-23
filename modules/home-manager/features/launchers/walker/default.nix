@@ -7,6 +7,7 @@
 }: let
   inherit (config.stylix) base16Scheme;
   margin = osConfig.myOptions.desktopTheme.windowGaps.outer - 5;
+  marginBottom = margin + 42;
 in {
   options = {
     bundles.desktopBase.walker.enable = lib.mkOption {
@@ -155,7 +156,7 @@ in {
 
         #window {
           margin-left: ${builtins.toString margin}px;
-          margin-bottom: ${builtins.toString margin}px;
+          margin-bottom: ${builtins.toString marginBottom}px;
         }
 
         #cfgerr {

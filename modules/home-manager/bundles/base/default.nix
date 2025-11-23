@@ -9,7 +9,7 @@
     ../../features/garfetch
     ../../features/git
     # ../../features/nixvim
-    # ../../features/nvim
+    ../../features/nvim
     ../../features/pswdgen
     ../../features/pswdrs
     ../../features/shell-config
@@ -24,7 +24,7 @@
       btop.enable = true;
       garfetch.enable = true;
       git.enable = true;
-      # nvim.enable = true;
+      nvim.enable = true;
       pswdgen.enable = false;
       pswdrs.enable = true;
       shellConfig.enable = true;
