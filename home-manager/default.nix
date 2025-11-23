@@ -10,6 +10,7 @@ in {
     inputs.nixvim.homeModules.nixvim
     inputs.nixcord.homeModules.nixcord
     inputs.zen-browser.homeModules.beta
+    inputs.nvf.nixosModules.default
     ../modules/home-manager
   ];
 
