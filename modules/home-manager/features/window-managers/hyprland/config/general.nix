@@ -32,7 +32,10 @@ in {
       range = 5;
       offset = "0 0";
       render_power = 3;
-      color = "rgba(00000040)";
+      color =
+        if (config.stylix.polarity == "dark")
+        then "rgba(00000040)"
+        else "rgba(00000020)";
     };
   };
   misc = {
