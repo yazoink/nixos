@@ -35,7 +35,7 @@ in {
         $green: #${base16Scheme.base0B};
         $blue: #${base16Scheme.base0D};
         $purple: #${base16Scheme.base0E};
-        $margin: ${builtins.toString osConfig.myOptions.desktopTheme.windowGaps.outer - 5}px;
+        $margin: ${builtins.toString (osConfig.myOptions.desktopTheme.windowGaps.outer - 5)}px;
       '';
     };
   };

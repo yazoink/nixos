@@ -154,7 +154,7 @@ in {
 
         #window {
           margin-left: ${builtins.toString osConfig.myOptions.desktopTheme.windowGaps.outer - 5}px;
-          margin-bottom: ${builtins.toString 42 + osConfig.myOptions.desktopTheme.windowGaps.outer - 5}px;
+          margin-bottom: ${builtins.toString (42 + osConfig.myOptions.desktopTheme.windowGaps.outer - 5)}px;
         }
 
         #cfgerr {
