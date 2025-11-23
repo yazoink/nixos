@@ -62,6 +62,10 @@
           };
         };
 
+        autocomplete = {
+          nvim-cmp.enable = true;
+        };
+
         # LSP
         lsp = {
           # This must be enabled for the language modules to hook into
@@ -79,10 +83,6 @@
         languages = {
           enableTreesitter = true;
           enableFormat = true;
-
-          autocomplete = {
-            nvim-cmp.enable = true;
-          };
 
           nix.enable = true;
           ts.enable = true;
