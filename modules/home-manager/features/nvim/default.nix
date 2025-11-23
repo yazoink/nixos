@@ -19,6 +19,7 @@ in {
         # Theme
         theme = {
           enable = true;
+          theme = "base16";
           base16-colors = {
             base00 = "#${base16Scheme.base00}";
             base01 = "#${base16Scheme.base01}";
