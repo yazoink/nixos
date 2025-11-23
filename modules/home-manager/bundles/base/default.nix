@@ -24,7 +24,7 @@
       btop.enable = true;
       garfetch.enable = true;
       git.enable = true;
-      nvim.enable = true;
+      # nvim.enable = true;
       pswdgen.enable = false;
       pswdrs.enable = true;
       shellConfig.enable = true;
