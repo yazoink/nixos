@@ -10,8 +10,8 @@ in {
     enable = true;
     colorscheme = {
       base00 = "#${base16Scheme.base00}";
-      base01 = "#${base16Scheme.base00}";
-      base02 = "#${base16Scheme.base02}";
+      base01 = "#${base16Scheme.base01}";
+      base02 = "#${base16Scheme.base00}";
       base03 = "#${base16Scheme.base03}";
       base04 = "#${base16Scheme.base04}";
       base05 = "#${base16Scheme.base05}";
