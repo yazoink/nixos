@@ -10,9 +10,11 @@
       default = false;
     };
   };
-  config = lib.mkIf config.bundles.base.nixvim.enable {
-    stylix.targets.nixvim = lib.mkIf (config.stylix.polarity == "dark") {
+  config = {
+    stylix.targets.nixvim = lib.mkIf {
       enable = true;
+      transparentBackground.numberLine = lib.mkIf (config.stylix.polarity == "light") true;
+      transparentBackground.signColumn = lib.mkIf (config.stylix.polarity == "light") true;
     };
     home.packages = with pkgs; [
       fzf
