@@ -23,7 +23,7 @@
         command = "footclient";
       };
       webBrowser = {
-        command = "firefox";
+        command = "zen";
       };
     };
     userAccount = {
