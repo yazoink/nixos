@@ -5,14 +5,15 @@
 }: let
   themeName = osConfig.myOptions.desktopTheme.name;
   inherit (config.stylix) base16Scheme;
+  inherit (osConfig.myOptions.desktopTheme.windowGaps) inner outer;
   borderColor =
     if (themeName == "catppuccin-mocha")
     then "rgb(${base16Scheme.base02})"
     else "rgb(${base16Scheme.base01})";
 in {
   general = {
-    gaps_in = 5;
-    gaps_out = 10;
+    gaps_in = inner;
+    gaps_out = outer;
     border_size = 1;
     layout = "dwindle";
     allow_tearing = false;

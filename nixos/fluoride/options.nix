@@ -39,6 +39,10 @@
           path = ../../wallpapers/wall1.jpg;
         };
       };
+      windowGaps = {
+        inner = 10;
+        outer = 15;
+      };
       terminalPadding = 24;
       fonts.desktop = {
         # name = "SF Pro Display";
@@ -52,7 +56,7 @@
       };
       sddm = {
         scale = 0.8;
-        wallpaper = ../../wallpapers/flowers-1.jpg;
+        wallpaper = ../../wallpapers/biscuit-de-mar/peter-bucks-hY4TcvzyPlw-unsplash_current.png;
       };
     };
     bundles = {

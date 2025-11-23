@@ -193,6 +193,16 @@
           type = lib.types.number;
           default = 24;
         };
+        windowGaps = {
+          outer = lib.mkOption {
+            type = lib.types.number;
+            default = 10;
+          };
+          inner = lib.mkOption {
+            type = lib.types.number;
+            default = 5;
+          };
+        };
         fonts = {
           terminal = {
             name = lib.mkOption {
