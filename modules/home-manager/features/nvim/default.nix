@@ -44,8 +44,7 @@
       };
 
       autocomplete = {
-        nvim-cmp.enable = !isMaximal;
-        blink-cmp.enable = isMaximal;
+        nvim-cmp.enable = true;
       };
 
       tabline = {
