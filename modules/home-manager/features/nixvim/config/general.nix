@@ -3,7 +3,9 @@
   config,
   lib,
   ...
-}: {
+}: let
+  inherit (config.stylix) base16Scheme;
+in {
   colorschemes.base16 = lib.mkIf (config.stylix.polarity == "light") {
     enable = true;
     colorscheme = {
