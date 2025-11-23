@@ -36,7 +36,7 @@
         font = "${config.stylix.fonts.sansSerif.name} ${toString config.stylix.fonts.sizes.popups}";
         padding = "15";
         margin = "0";
-        outer-margin = "${builtins.toString (osConfig.myOptions.desktopTheme.windowGaps.outer - 5)}";
+        outer-margin = "${builtins.toString osConfig.myOptions.desktopTheme.windowGaps.outer - 5}";
         default-timeout = "5000";
         icon-path = "/run/current-system/sw/share/icons/${config.gtk.iconTheme.name}";
       };
