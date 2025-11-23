@@ -3,8 +3,7 @@
   lib,
   ...
 }: let
-  inherit (config.stylix) base16Scheme enable;
-  polarity = "dark";
+  inherit (config.stylix) base16Scheme enable polarity;
 in {
   bufferline = {
     enable = true;
@@ -15,11 +14,11 @@ in {
       highlights = lib.mkIf enable {
         fill = {
           fg = "none";
-          bg = "#${config.stylix.base16Scheme.base00 or "000000"}";
+          bg = "none";
         };
         background = {
           fg = "none";
-          bg = "#${config.stylix.base16Scheme.base00 or "000000"}";
+          bg = "none";
         };
         buffer = {
           fg = "none";
@@ -32,6 +31,12 @@ in {
         };
         buffer_selected = {
           fg = "#${config.stylix.base16Scheme.base05 or "ffffff"}";
+          bg = "none";
+          bold = false;
+          italic = false;
+        };
+        buffer_visible = {
+          fg = "#${config.stylix.base16Scheme.base05 or "ffffff"}";
           bg =
             if (polarity == "dark")
             then "#${base16Scheme.base00}"
@@ -39,15 +44,12 @@ in {
           bold = false;
           italic = false;
         };
-        buffer_visible = {
-          fg = "#${config.stylix.base16Scheme.base05 or "ffffff"}";
-          bg = "#${base16Scheme.base00}";
-          bold = false;
-          italic = false;
-        };
         close_button = {
           fg = "none";
-          bg = "#${base16Scheme.base00}";
+          bg =
+            if (polarity == "dark")
+            then "#${base16Scheme.base00}"
+            else "none";
         };
         close_button_visible = {
           fg = "#${config.stylix.base16Scheme.base03 or "ffffff"}";
@@ -79,15 +81,24 @@ in {
         };
         separator = {
           fg = "#${config.stylix.base16Scheme.base00 or "000000"}";
-          bg = "#${base16Scheme.base00}";
+          bg =
+            if (polarity == "dark")
+            then "#${base16Scheme.base00}"
+            else "none";
         };
         separator_selected = {
           fg = "#${config.stylix.base16Scheme.base00 or "000000"}";
-          bg = "#${base16Scheme.base00}";
+          bg =
+            if (polarity == "dark")
+            then "#${base16Scheme.base00}"
+            else "none";
         };
         separator_visible = {
           fg = "#${config.stylix.base16Scheme.base00 or "000000"}";
-          bg = "#${base16Scheme.base00}";
+          bg =
+            if (polarity == "dark")
+            then "#${base16Scheme.base00}"
+            else "none";
         };
         modified = {
           fg = "#${config.stylix.base16Scheme.base03 or "ffffff"}";
