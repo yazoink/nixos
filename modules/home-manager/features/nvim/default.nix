@@ -47,9 +47,11 @@
       };
 
       treesitter.context.enable = true;
-      binds = {
-        whichKey.enable = true;
-        cheatsheet.enable = true;
+      vim = {
+        binds = {
+          whichKey.enable = true;
+          cheatsheet.enable = true;
+        };
       };
 
       git = {
