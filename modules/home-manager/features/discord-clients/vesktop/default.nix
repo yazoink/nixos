@@ -33,7 +33,8 @@ in {
         enable = false;
       };
       vesktop.enable = true;
-      quickCss = ''
+      /*
+        quickCss = ''
         :root {
           --font: ${config.stylix.fonts.sansSerif.name};
           --font-primary: ${config.stylix.fonts.sansSerif.name};
@@ -50,9 +51,10 @@ in {
           --font-display: ${config.stylix.fonts.sansSerif.name};
         }
       '';
+      */
       config = {
-        useQuickCss = true;
-        enabledThemes = ["my.theme.css"];
+        # useQuickCss = true;
+        # enabledThemes = ["my.theme.css"];
         transparent = false;
         enableReactDevtools = true;
         disableMinSize = true;
