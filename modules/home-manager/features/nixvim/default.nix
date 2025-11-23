@@ -13,10 +13,6 @@
   config = lib.mkIf config.bundles.base.nixvim.enable {
     stylix.targets.nixvim = {
       enable = lib.mkDefault true;
-      plugin =
-        if (config.stylix.polarity == "dark")
-        then "base16-nvim"
-        else "mini.base16";
     };
     home.packages = with pkgs; [
       fzf
