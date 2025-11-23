@@ -18,8 +18,8 @@
       enable = true;
       # Plugins
       telescope.enable = true;
-      autocomplete.nvim-cmp.enable = true;
       mini.statusline.enable = true;
+      autopairs.nvim-autopairs.enable = true;
 
       session = {
         nvim-session-manager.enable = false;
@@ -41,6 +41,11 @@
         neo-tree = {
           enable = true;
         };
+      };
+
+      autocomplete = {
+        nvim-cmp.enable = !isMaximal;
+        blink-cmp.enable = isMaximal;
       };
 
       tabline = {
