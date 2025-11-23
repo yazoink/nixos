@@ -54,8 +54,6 @@
           cheatsheet.enable = true;
         };
 
-        telescope.enable = true;
-
         git = {
           enable = true;
           gitsigns.enable = true;
