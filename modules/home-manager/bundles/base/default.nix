@@ -8,8 +8,8 @@
     ../../features/btop
     ../../features/garfetch
     ../../features/git
-    # ../../features/nixvim
-    ../../features/nvim
+    ../../features/nixvim
+    # ../../features/nvim
     ../../features/pswdgen
     ../../features/pswdrs
     ../../features/shell-config
@@ -24,7 +24,7 @@
       btop.enable = true;
       garfetch.enable = true;
       git.enable = true;
-      nvim.enable = true;
+      nixvim.enable = true;
       pswdgen.enable = false;
       pswdrs.enable = true;
       shellConfig.enable = true;
