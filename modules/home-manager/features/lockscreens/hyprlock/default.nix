@@ -67,16 +67,16 @@ in {
 
         # ----- MPD ----- #
 
-        label {
-          monitor =
-          color = $fg
-          text = cmd[update:5000] ${./bottom_text.sh}
-          font_family = $font
-          halign = center
-          valign = center
-          position = 0, -180
-          font_size = 12
-        }
+        #label {
+        #  monitor =
+        #  color = $fg
+        #  text = cmd[update:5000] ${./bottom_text.sh}
+        #  font_family = $font
+        #  halign = center
+        #  valign = center
+        #  position = 0, -180
+        #  font_size = 12
+        #}
 
         # ----- Input Field ----- #
 
