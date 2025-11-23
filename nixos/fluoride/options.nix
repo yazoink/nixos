@@ -36,7 +36,7 @@
         type = "image";
         image = {
           fillType = "fill";
-          path = ../../wallpapers/wall1.jpg;
+          path = ../../wallpapers/biscuit-de-mar/peter-bucks-hY4TcvzyPlw-unsplash_current.png;
         };
       };
       windowGaps = {
