@@ -66,7 +66,6 @@ in {
           anonymiseFileNames = {
             enable = true;
             anonymiseByDefault = true;
-            method = "timestamp";
           };
           betterFolders.enable = lib.mkIf bloat true;
           betterGifAltText.enable = lib.mkIf bloat true;
