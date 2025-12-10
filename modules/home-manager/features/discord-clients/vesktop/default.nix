@@ -137,7 +137,6 @@ in {
           reverseImageSearch.enable = true;
           serverListIndicators = {
             enable = lib.mkIf bloat true;
-            mode = "both";
           };
           showConnections.enable = true;
           showHiddenChannels.enable = true;
