@@ -125,12 +125,6 @@ in {
           noF1.enable = true;
           noMaskedUrlPaste.enable = true;
           noOnboardingDelay.enable = true;
-          noPendingCount = {
-            enable = true;
-            hideFriendRequestsCount = false;
-            hideMessageRequestCount = false;
-            hidePremiumOffersCount = true;
-          };
           noProfileThemes.enable = true;
           noTypingAnimation.enable = true;
           noUnblockToJump.enable = true;
