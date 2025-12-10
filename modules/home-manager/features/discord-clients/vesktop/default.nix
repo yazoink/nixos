@@ -135,11 +135,6 @@ in {
           platformIndicators.enable = lib.mkIf bloat true;
           previewMessage.enable = true;
           relationshipNotifier.enable = true;
-          replaceGoogleSearch = {
-            enable = true;
-            customEngineName = "4get";
-            customEngineURL = "https://4get.yazo.ink/web?s=";
-          };
           reverseImageSearch.enable = true;
           serverListIndicators = {
             enable = lib.mkIf bloat true;
