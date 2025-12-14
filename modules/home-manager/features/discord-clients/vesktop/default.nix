@@ -74,7 +74,7 @@ in {
           betterUploadButton.enable = true;
           biggerStreamPreview.enable = lib.mkIf bloat true;
           callTimer.enable = lib.mkIf bloat true;
-          clearURLs.enable = true;
+          clearUrLs.enable = true;
           copyFileContents.enable = lib.mkIf bloat true;
           copyUserURLs.enable = lib.mkIf bloat true;
           decor.enable = lib.mkIf bloat true;
@@ -127,7 +127,7 @@ in {
           noProfileThemes.enable = true;
           noTypingAnimation.enable = true;
           noUnblockToJump.enable = true;
-          onePingPerDM.enable = true;
+          onePingPerDm.enable = true;
           permissionsViewer.enable = lib.mkIf bloat true;
           pictureInPicture.enable = lib.mkIf bloat true;
           pinDMs.enable = lib.mkIf bloat true;
