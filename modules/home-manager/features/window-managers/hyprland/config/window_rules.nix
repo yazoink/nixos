@@ -15,13 +15,5 @@
     "float, title:^(Picture-in-Picture)$"
     "float, title:^(Authentication Required)$"
     "float, title:^(Soundboard)$"
-    "plugin:hyprbars:nobar, class:^(org.kde.kruler)"
-    "plugin:hyprbars:nobar, title:^(vesktop)$"
-    "plugin:hyprbars:nobar, title:^(File Upload)$"
-    "plugin:hyprbars:nobar, title:^(Empty Trash)$"
-    "plugin:hyprbars:nobar, title:^(File Manager Preferences)$"
-    "plugin:hyprbars:nobar, title:^(Choose a color)$"
-    "plugin:hyprbars:nobar, title:^(Open File)$"
-    "plugin:hyprbars:nobar, title:^(Thunar Preferences)$"
   ];
 }

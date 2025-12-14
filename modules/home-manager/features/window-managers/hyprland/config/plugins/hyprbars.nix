@@ -43,15 +43,15 @@ in {
       };
     };
     windowrulev2 = [
-      "plugin:hyprbars:title_color rgb(${base16Scheme.base05}), focus:1"
-      "plugin:hyprbars:nobar, class:^(org.kde.kruler)"
-      "plugin:hyprbars:nobar, title:^(vesktop)$"
-      "plugin:hyprbars:nobar, title:^(File Upload)$"
-      "plugin:hyprbars:nobar, title:^(Empty Trash)$"
-      "plugin:hyprbars:nobar, title:^(File Manager Preferences)$"
-      "plugin:hyprbars:nobar, title:^(Choose a color)$"
-      "plugin:hyprbars:nobar, title:^(Open File)$"
-      "plugin:hyprbars:nobar, title:^(Thunar Preferences)$"
+      "plugin:hyprbars:title_color rgb(${base16Scheme.base05}), match:focus"
+      "plugin:hyprbars:no_bar, class:^(org.kde.kruler)"
+      "plugin:hyprbars:no_bar, title:^(vesktop)$"
+      "plugin:hyprbars:no_bar, title:^(File Upload)$"
+      "plugin:hyprbars:no_bar, title:^(Empty Trash)$"
+      "plugin:hyprbars:no_bar, title:^(File Manager Preferences)$"
+      "plugin:hyprbars:no_bar, title:^(Choose a color)$"
+      "plugin:hyprbars:no_bar, title:^(Open File)$"
+      "plugin:hyprbars:no_bar, title:^(Thunar Preferences)$"
     ];
   };
 }
