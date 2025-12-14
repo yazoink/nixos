@@ -43,7 +43,7 @@ in {
       };
     };
     windowrule = [
-      "plugin:hyprbars:title_color rgb(${base16Scheme.base05}), match:focus"
+      "match:focus true, hyprbars:title_color rgb(${base16Scheme.base05})"
       "plugin:hyprbars:no_bar, class:^(org.kde.kruler)"
       "plugin:hyprbars:no_bar, title:^(vesktop)$"
       "plugin:hyprbars:no_bar, title:^(File Upload)$"

@@ -1,5 +1,5 @@
 {
-  windowrulev2 = [
+  windowrule = [
     "suppressevent maximize, class:.*"
     "nomaxsize, title:^(Wine configuration)$"
     "float, class:^(org.kde.kruler)$"
