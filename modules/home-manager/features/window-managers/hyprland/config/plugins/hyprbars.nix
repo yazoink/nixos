@@ -44,14 +44,14 @@ in {
     };
     windowrule = [
       "match:focus true, hyprbars:title_color rgb(${base16Scheme.base05})"
-      "match:class ^(org.kde.kruler), hyprbars:no_bar"
-      "match:class ^(Vesktop), hyprbars:no_bar"
-      "match:class ^(File Upload), hyprbars:no_bar"
-      "match:class ^(Empty Trash), hyprbars:no_bar"
-      "match:class ^(File Manager Preferences), hyprbars:no_bar"
-      "match:class ^(Choose a color), hyprbars:no_bar"
-      "match:class ^(Open File), hyprbars:no_bar"
-      "match:class ^(Thunar Preferences), hyprbars:no_bar"
+      "match:class ^(org.kde.kruler), hyprbars:no_bar true"
+      "match:class ^(Vesktop), hyprbars:no_bar true"
+      "match:class ^(File Upload), hyprbars:no_bar true"
+      "match:class ^(Empty Trash), hyprbars:no_bar true"
+      "match:class ^(File Manager Preferences), hyprbars:no_bar true"
+      "match:class ^(Choose a color), hyprbars:no_bar true"
+      "match:class ^(Open File), hyprbars:no_bar true"
+      "match:class ^(Thunar Preferences), hyprbars:no_bar true"
     ];
   };
 }
