@@ -42,7 +42,7 @@ in {
         ];
       };
     };
-    windowrulev2 = [
+    windowrule = [
       "plugin:hyprbars:title_color rgb(${base16Scheme.base05}), match:focus"
       "plugin:hyprbars:no_bar, class:^(org.kde.kruler)"
       "plugin:hyprbars:no_bar, title:^(vesktop)$"
