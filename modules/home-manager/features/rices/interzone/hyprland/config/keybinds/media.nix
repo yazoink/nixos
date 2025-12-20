@@ -13,7 +13,7 @@ lib.mkMerge [
       ", XF86AudioPrev, exec, playerctl previous"
     ];
   }
-  (lib.mkIf osConfig.myOptions.desktopTheme.interzone.swayosd.enable {
+  (lib.mkIf osConfig.myOptions.desktopTheme.rice.interzone.swayosd.enable {
     bind = [
       ", XF86AudioMute, exec, swayosd-client --output-volume mute-toggle"
       ", XF86AudioMicMute, exec, swayosd-client --input-volume mute-toggle"
