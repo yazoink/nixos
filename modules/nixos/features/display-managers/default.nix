@@ -1,7 +1,0 @@
-{
-  imports = [
-    ./sddm
-    ./regreet
-    ./ly
-  ];
-}

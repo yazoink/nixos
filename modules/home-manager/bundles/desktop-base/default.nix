@@ -24,7 +24,6 @@
 
     ../../features/direnv
     ../../features/hyprviewbinds
-    ../../features/screenshot
     ../../features/simple-logout
     ../../features/theme
     ../../features/xdg
