@@ -14,7 +14,7 @@
       guiTextEditor.command = "vscode";
     };
     desktopTheme = {
-      name = "moonfly";
+      colorscheme = "moonfly";
       fonts.terminal = {
         # name = "Iosevka Nerd Font";
         # name = "SFMono";
@@ -37,16 +37,9 @@
           hex = config.stylix.base16Scheme.base03;
         };
       };
-      sddm = {
-        scale = 1.3;
-        wallpaper = ../../wallpapers/wall.png;
-        # wallpaper = config.myOptions.desktopTheme.wallpaper.image.path;
-      };
     };
     bundles = {
       base.starshipFormat = 2;
-      desktopBase.displayManager = "none";
-      desktopBase.windowManager = "hyprland";
       desktopBase.plymouth.enable = false;
       desktopFull.enable = true;
     };

@@ -30,7 +30,7 @@
       username = "gene";
     };
     desktopTheme = {
-      name = "biscuit-de-mar-light";
+      colorscheme = "biscuit-de-mar-light";
       # name = "everblush";
       wallpaper = {
         type = "image";
@@ -54,15 +54,9 @@
         # name = "Bm437 NEC APC3 8x16";
         # size = 12;
       };
-      sddm = {
-        scale = 0.8;
-        wallpaper = ../../wallpapers/biscuit-de-mar/peter-bucks-hY4TcvzyPlw-unsplash_current.png;
-      };
     };
     bundles = {
       base.starshipFormat = 2;
-      desktopBase.windowManager = "hyprland";
-      desktopBase.displayManager = "none";
       desktopBase.plymouth.enable = false;
       desktopFull.enable = true;
     };
