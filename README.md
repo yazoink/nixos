@@ -24,11 +24,11 @@ My NixOS desktop configs with home-manager.
 
 #### Screenshots
 
-[!rice](./assets/paradise1.png)
-[!rice](./assets/paradise2.png)
-[!rice](./assets/paradise3.png)
-[!rice](./assets/paradise4.png)
-[!rice](./assets/paradise5.png)
+![rice](./assets/paradise1.png)
+![rice](./assets/paradise2.png)
+![rice](./assets/paradise3.png)
+![rice](./assets/paradise4.png)
+![rice](./assets/paradise5.png)
 
 ### Misc Software
 
