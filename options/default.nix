@@ -169,6 +169,7 @@
       # Theming options for the desktop.
 
       desktopTheme = {
+        # Do not enable more than one rice at once
         rice = {
           interzone = {
             enable = lib.mkOption {
