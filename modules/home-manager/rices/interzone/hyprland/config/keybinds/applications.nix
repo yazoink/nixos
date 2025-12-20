@@ -8,6 +8,7 @@
     "$mainMod, P, exec, hyprctl reload; eww --config $EWW_CONFIG_DIR close power"
     "$mainMod, R, exec, hyprctl reload; eww --config $EWW_CONFIG_DIR close power"
     "$mainMod SHIFT, B, exec, bash ${../../../scripts/waybar.sh}"
+    "$mainMod SHIFT, T, exec, bash ${../../../scripts/toggle_touchpad.sh}"
     "$mainMod, N, exec, $terminal -e ncmpcpp"
     # "$mainMod SHIFT, O, exec, rofi -show window"
     "$mainMod, S, exec, $screenshot"

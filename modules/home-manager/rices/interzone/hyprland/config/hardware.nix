@@ -18,7 +18,7 @@ in
         scroll_points = "flat";
         numlock_by_default = true;
         touchpad = {
-          disable_while_typing = false;
+          disable_while_typing = true;
           scroll_factor = hyprlandTouchpadScrollFactor;
         };
       };

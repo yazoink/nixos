@@ -1,20 +1,16 @@
 {
-  windowrulev2 = [
-    # fix later
-    "suppressevent maximize, class:.*"
-    "nomaxsize, title:^(Wine configuration)$"
-    "float, class:^(org.kde.kruler)$"
-    "float, title:^(HyprViewBinds)$"
-    "float, title:^(galculator)$"
-    "float, title:^(Open File)(.*)$"
-    "float, title:^(Select a File)(.*)$"
-    "float, title:^(Open Folder)(.*)$"
-    "float, title:^(Save As)(.*)$"
-    "fullscreen, title:^((E|e)tterna)(.*)$"
-    # "size 640 360, title:(Picture-in-Picture)"
-    "pin, title:^(Picture-in-Picture)$"
-    "float, title:^(Picture-in-Picture)$"
-    "float, title:^(Authentication Required)$"
-    "float, title:^(Soundboard)$"
+  windowrule = [
+    "match:title ^(HyprViewBinds)$, float"
+    "match:class ^(org.kde.kruler)$, float"
+    "match:title ^(galculator)$, float"
+    "match:title ^(Open File)(.*)$, float"
+    "match:title ^(Select a File)(.*)$, float"
+    "match:title ^(Open Folder)(.*)$, float"
+    "match:title ^(Save As)(.*)$, float"
+    "match:title ^(Picture-in-Picture)$, float"
+    "match:title ^(Picture-in-Picture)$, pin"
+    "match:title ^(Authentication Required)$, float"
+    "match:title ^(Soundboard)$, float"
+    "match:title ^((E|e)tterna)(.*)$, fullscreen"
   ];
 }
