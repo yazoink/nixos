@@ -182,11 +182,6 @@
               default = true;
               description = "enable swayosd";
             };
-            corners.enable = lib.mkOption {
-              type = lib.types.bool;
-              default = true;
-              description = "enable corners on bar";
-            };
           };
         };
         # These options may be overridden by certain rices
