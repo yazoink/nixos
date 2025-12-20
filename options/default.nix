@@ -188,6 +188,7 @@
             };
           };
         };
+        # These options may be overridden by certain rices
         colorscheme = lib.mkOption {
           type = lib.types.str;
           default = "everblush";
