@@ -1,9 +1,0 @@
-(defwidget quote [text author]
-  (box
-    :orientation "vertical"
-    :class "quote"
-    :space-evenly "false"
-    (left-text :text '"${text}"\\n' :class "")
-    (right-text :text "~ ${author}" :class "")
-  )
-)
