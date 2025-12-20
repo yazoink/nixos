@@ -32,7 +32,6 @@ in {
           border-radius = 15;
           border-size = 2;
           min-width = 250;
-          min-height = 100;
           max-timeout = 10;
         };
         low = {
