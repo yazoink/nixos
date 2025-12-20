@@ -30,7 +30,7 @@ My NixOS desktop configs with home-manager.
 ![rice](./assets/paradise4.png)
 ![rice](./assets/paradise5.png)
 
-### Misc Software
+## Misc Software
 
 - Terminal: Foot/Alacritty/Kitty
 - Editor: Neovim
