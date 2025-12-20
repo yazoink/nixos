@@ -34,7 +34,7 @@ in {
           fg = "none";
           bg =
             if (polarity == "dark")
-            then "#${base16Scheme.base00}"
+            then "#${base16Scheme.base00 or "000000"}"
             else "none";
           bold = false;
           italic = false;
@@ -43,7 +43,7 @@ in {
           fg = "#${config.stylix.base16Scheme.base05 or "ffffff"}";
           bg =
             if (polarity == "dark")
-            then "#${base16Scheme.base00}"
+            then "#${base16Scheme.base00 or "000000"}"
             else "none";
           bold = false;
           italic = false;
@@ -52,7 +52,7 @@ in {
           fg = "#${config.stylix.base16Scheme.base05 or "ffffff"}";
           bg =
             if (polarity == "dark")
-            then "#${base16Scheme.base00}"
+            then "#${base16Scheme.base00 or "000000"}"
             else "none";
           bold = false;
           italic = false;
@@ -61,84 +61,84 @@ in {
           fg = "none";
           bg =
             if (polarity == "dark")
-            then "#${base16Scheme.base00}"
+            then "#${base16Scheme.base00 or "000000"}"
             else "none";
         };
         close_button_visible = {
           fg = "#${config.stylix.base16Scheme.base03 or "ffffff"}";
           bg =
             if (polarity == "dark")
-            then "#${base16Scheme.base00}"
+            then "#${base16Scheme.base00 or "000000"}"
             else "none";
         };
         close_button_selected = {
           fg = "#${config.stylix.base16Scheme.base08 or "ffffff"}";
           bg =
             if (polarity == "dark")
-            then "#${base16Scheme.base00}"
+            then "#${base16Scheme.base00 or "000000"}"
             else "none";
         };
         indicator_selected = {
           fg = "#${config.stylix.base16Scheme.base0E or "ffffff"}";
           bg =
             if (polarity == "dark")
-            then "#${base16Scheme.base00}"
+            then "#${base16Scheme.base00 or "000000"}"
             else "none";
         };
         indicator_visible = {
           fg = "#${config.stylix.base16Scheme.base0E or "ffffff"}";
           bg =
             if (polarity == "dark")
-            then "#${base16Scheme.base00}"
+            then "#${base16Scheme.base00 or "000000"}"
             else "none";
         };
         separator = {
           fg = "#${config.stylix.base16Scheme.base00 or "000000"}";
           bg =
             if (polarity == "dark")
-            then "#${base16Scheme.base00}"
+            then "#${base16Scheme.base00 or "000000"}"
             else "none";
         };
         separator_selected = {
           fg = "#${config.stylix.base16Scheme.base00 or "000000"}";
           bg =
             if (polarity == "dark")
-            then "#${base16Scheme.base00}"
+            then "#${base16Scheme.base00 or "000000"}"
             else "none";
         };
         separator_visible = {
           fg = "#${config.stylix.base16Scheme.base00 or "000000"}";
           bg =
             if (polarity == "dark")
-            then "#${base16Scheme.base00}"
+            then "#${base16Scheme.base00 or "000000"}"
             else "none";
         };
         modified = {
           fg = "#${config.stylix.base16Scheme.base03 or "ffffff"}";
           bg =
             if (polarity == "dark")
-            then "#${base16Scheme.base00}"
+            then "#${base16Scheme.base00 or "000000"}"
             else "none";
         };
         modified_visible = {
           fg = "#${config.stylix.base16Scheme.base00 or "000000"}";
           bg =
             if (polarity == "dark")
-            then "#${base16Scheme.base00}"
+            then "#${base16Scheme.base00 or "000000"}"
             else "none";
         };
         modified_selected = {
           fg = "#${config.stylix.base16Scheme.base0B or "ffffff"}";
           bg =
             if (polarity == "dark")
-            then "#${base16Scheme.base00}"
+            then "#${base16Scheme.base00 or "000000"}"
             else "none";
         };
         tab_close = {
           fg = "#${config.stylix.base16Scheme.base00 or "000000"}";
           bg =
             if (polarity == "dark")
-            then "#${base16Scheme.base00}"
+            then "#${base16Scheme.base00 or "000000"}"
             else "none";
         };
         duplicate = {

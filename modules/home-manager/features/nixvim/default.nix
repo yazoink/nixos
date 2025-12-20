@@ -13,8 +13,8 @@
   config = {
     stylix.targets.nixvim = {
       enable = true;
-      transparentBackground.numberLine = lib.mkIf (config.stylix.polarity == "light") true;
-      transparentBackground.signColumn = lib.mkIf (config.stylix.polarity == "light") true;
+      transparentBackground.numberLine = true;
+      transparentBackground.signColumn = true;
     };
     home.packages = with pkgs; [
       fzf

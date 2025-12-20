@@ -5,7 +5,7 @@
 }: let
   wm =
     if (osConfig.myOptions.bundles.desktopBase.windowManager == "hyprland")
-    then "Hyprland"
+    then "start-hyprland"
     else "sway";
 in {
   config = lib.mkIf (osConfig.myOptions.bundles.desktopBase.displayManager == "none" && osConfig.myOptions.bundles.desktopBase.enable) {
