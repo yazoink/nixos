@@ -1,6 +1,7 @@
 {
   lib,
   config,
+  osConfig,
   ...
 }:
 lib.mkMerge [
@@ -12,7 +13,7 @@ lib.mkMerge [
       ", XF86AudioPrev, exec, playerctl previous"
     ];
   }
-  (lib.mkIf config.bundles.desktopBase.swayosd.enable {
+  (lib.mkIf osConfig.myOptions.desktopTheme.interzone.swayosd.enable {
     bind = [
       ", XF86AudioMute, exec, swayosd-client --output-volume mute-toggle"
       ", XF86AudioMicMute, exec, swayosd-client --input-volume mute-toggle"
@@ -32,7 +33,7 @@ lib.mkMerge [
       "CAPS, Caps_Lock, exec, swayosd-client --caps-lock"
     ];
   })
-  (lib.mkIf (config.bundles.desktopBase.swayosd.enable == false) {
+  (lib.mkIf (osConfig.myOptions.desktopTheme.rice.interzone.swayosd.enable == false) {
     bind = [
       ", XF86AudioMute, exec, pamixer -t"
       ", XF86AudioMicMute, exec, pamixer --default-source -t"

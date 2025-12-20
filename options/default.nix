@@ -186,6 +186,11 @@
               default = true;
               description = "hyprland/eww/waybar/fnott/swaync/hyprlock w/ lower bar & titlebars";
             };
+            swayosd.enable = lib.mkOption {
+              type = lib.types.bool;
+              default = true;
+              description = "enable swayosd";
+            };
           };
         };
         name = lib.mkOption {
