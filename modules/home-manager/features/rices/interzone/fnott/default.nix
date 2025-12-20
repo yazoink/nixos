@@ -23,7 +23,9 @@ in {
         padding-horizontal = 15;
         border-radius = 15;
         border-size = 2;
-        min-width = 250;
+        min-width = 300;
+        max-width = 300;
+        max-height = 100;
         max-timeout = 10;
       };
       low = {
