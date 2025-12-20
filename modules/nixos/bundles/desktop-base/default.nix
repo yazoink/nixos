@@ -4,10 +4,8 @@
   ...
 }: {
   imports = [
+    ../../features/rices
     ../../features/file-managers
-    ../../features/window-managers
-    ../../features/display-managers
-    ../../features/lockscreens
 
     ../../features/acpi
     ../../features/audio
