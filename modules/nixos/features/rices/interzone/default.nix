@@ -7,11 +7,8 @@
 }: let
   inherit (config.myOptions.desktopTheme.rice) interzone;
 in {
-  config = lib.mkMerge [
-    (
-      lib.mkIf interzone.enable
-      (import ./hyprland {inherit pkgs inputs;})
-      (import ./hyprlock)
-    )
-  ];
+  config = lib.mkIf interzone.enable (lib.mkMerge [
+    (import ./hyprland {inherit pkgs inputs;})
+    (import ./hyprlock {})
+  ]);
 }
