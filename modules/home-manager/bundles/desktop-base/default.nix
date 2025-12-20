@@ -13,7 +13,8 @@
   };
 
   imports = [
-    ../../features/rices
+    ../../rices
+
     ../../features/gui-text-editors
     ../../features/document-readers
     ../../features/terminals

@@ -1,7 +1,0 @@
-{
-  imports = [
-    ./mako
-    ./swaync
-    ./fnott
-  ];
-}

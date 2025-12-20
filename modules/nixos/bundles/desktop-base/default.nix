@@ -4,7 +4,8 @@
   ...
 }: {
   imports = [
-    ../../features/rices
+    ../../rices
+
     ../../features/file-managers
 
     ../../features/acpi
