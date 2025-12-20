@@ -10,7 +10,8 @@
   config = lib.mkIf osConfig.bundles.desktopBase.hyprland.enable {
     stylix.targets.hyprland.enable = false;
     bundles.desktopBase = {
-      mako.enable = true;
+      # mako.enable = true;
+      fnott.enable = true;
       # wofi.enable = true;
       walker.enable = true;
       # ironbar.enable = true;

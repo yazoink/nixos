@@ -2,5 +2,6 @@
   imports = [
     ./mako
     ./swaync
+    ./fnott
   ];
 }
