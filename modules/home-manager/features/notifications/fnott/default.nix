@@ -6,7 +6,7 @@
   ...
 }: let
   margin = osConfig.myOptions.desktopTheme.windowGaps.outer - 5;
-  inherit (config.stylix.base16Scheme) base05;
+  inherit (config.stylix.base16Scheme) base01;
 in {
   options = {
     bundles.desktopBase.fnott.enable = lib.mkOption {
@@ -35,13 +35,13 @@ in {
           max-timeout = 10;
         };
         low = {
-          border-color = lib.mkForce "${base05}ff";
+          border-color = lib.mkForce "${base01}ff";
         };
         normal = {
-          border-color = lib.mkForce "${base05}ff";
+          border-color = lib.mkForce "${base01}ff";
         };
         critical = {
-          border-color = lib.mkForce "${base05}ff";
+          border-color = lib.mkForce "${base01}ff";
         };
       };
     };
