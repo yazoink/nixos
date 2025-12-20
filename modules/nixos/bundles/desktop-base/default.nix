@@ -31,9 +31,8 @@
       dconf.enable = true;
       fonts.enable = true;
       gnomeKeyring.enable = true;
-      hyprland.enable = lib.mkIf (config.myOptions.bundles.desktopBase.windowManager == "hyprland") true;
+      hyprland.enable = true;
       polkit.enable = true;
-      sway.enable = lib.mkIf (config.myOptions.bundles.desktopBase.windowManager == "sway") true;
     };
   };
 }

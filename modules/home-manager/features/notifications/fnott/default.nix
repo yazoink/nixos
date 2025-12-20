@@ -6,6 +6,7 @@
   ...
 }: let
   margin = osConfig.myOptions.desktopTheme.windowGaps.outer - 5;
+  inherit (config.stylix.base16Scheme) base05;
 in {
   options = {
     bundles.desktopBase.fnott.enable = lib.mkOption {
@@ -28,6 +29,14 @@ in {
           edge-margin-vertical = margin;
           padding-vertical = 15;
           padding-horizontal = 15;
+          border-radius = 15;
+          border-size = 2;
+          min-width = 250;
+          min-height = 100;
+          max-timeout = 10;
+        };
+        low = {
+          border-color = lib.mkForce base05;
         };
       };
     };
