@@ -18,8 +18,8 @@ in {
   "$browser" = "${defaultApps.webBrowser.command}";
   "$fileManager" = "${defaultApps.fileManager.command}";
   "$menu" = "pkill walker || walker";
-  "$screenshot" = "${config.bundles.desktopBase.screenshot.package}/bin/screenshot -s";
-  "$screenshotFullscreen" = "${config.bundles.desktopBase.screenshot.package}/bin/screenshot";
+  "$screenshot" = "bash ${../../scripts/screenshot} -s";
+  "$screenshotFullscreen" = "bash ${../../scripts/screenshot}";
   "$lock" = "hyprlock";
   "$colorPicker" = "${../../scripts/color.sh}";
   "$mainMod" = "SUPER";

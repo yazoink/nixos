@@ -28,6 +28,6 @@
     ../../features/theme
     ../../features/xdg
     ../../features/dconf
-    ../../features/hyprland-monitor-attached
+    # ../../features/hyprland-monitor-attached
   ];
 }

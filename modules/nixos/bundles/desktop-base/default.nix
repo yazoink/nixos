@@ -29,7 +29,6 @@
       dconf.enable = true;
       fonts.enable = true;
       gnomeKeyring.enable = true;
-      hyprland.enable = true;
       polkit.enable = true;
     };
   };
