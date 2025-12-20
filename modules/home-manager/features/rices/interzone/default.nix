@@ -6,7 +6,7 @@
   inputs,
   ...
 }: let
-  inherit (osConfig.myOptions.desktopBase.rice) interzone;
+  inherit (osConfig.myOptions.desktopTheme.rice) interzone;
 in {
   config = lib.mkIf interzone.enable (lib.mkMerge [
     (import ./display-manager {inherit config osConfig lib pkgs;})

@@ -5,7 +5,7 @@
   inputs,
   ...
 }: let
-  inherit (config.myOptions.desktopBase.rice) interzone;
+  inherit (config.myOptions.desktopTheme.rice) interzone;
 in {
   config = lib.mkIf interzone.enable (lib.mkMerge [
     (import ./hyprland {inherit pkgs inputs;})
