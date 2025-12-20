@@ -7,7 +7,7 @@
   cursors = pkgs.callPackage ./biscuit-cursors.nix {};
   icons = pkgs.callPackage ./biscuit-icons.nix {};
 in {
-  config = lib.mkIf (config.myOptions.bundles.desktopBase.enable && config.myOptions.desktopTheme.name == "biscuit-de-mar-dark") {
+  config = lib.mkIf (config.myOptions.bundles.desktopBase.enable && config.myOptions.desktopTheme.colorscheme == "biscuit-de-mar-dark") {
     desktopTheme.base16Accent = "base0B";
     desktopTheme.iconTheme = {
       name = "papirus-biscuit-dark";

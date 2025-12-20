@@ -6,7 +6,7 @@
 }: let
   cursors = pkgs.callPackage ./cursors.nix {};
 in {
-  config = lib.mkIf (config.myOptions.bundles.desktopBase.enable && config.myOptions.desktopTheme.name == "moonfly") {
+  config = lib.mkIf (config.myOptions.bundles.desktopBase.enable && config.myOptions.desktopTheme.colorscheme == "moonfly") {
     desktopTheme.base16Accent = "base0D";
 
     environment.systemPackages = [cursors];

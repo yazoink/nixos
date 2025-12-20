@@ -8,7 +8,7 @@
 let
   cursors = pkgs.callPackage ./peachy-cursors.nix {};
 in {
-  config = lib.mkIf (config.myOptions.bundles.desktopBase.enable && config.myOptions.desktopTheme.name == "peachy") {
+  config = lib.mkIf (config.myOptions.bundles.desktopBase.enable && config.myOptions.desktopTheme.colorscheme == "peachy") {
     desktopTheme.base16Accent = "base0F";
     environment.systemPackages = [cursors];
     stylix = {

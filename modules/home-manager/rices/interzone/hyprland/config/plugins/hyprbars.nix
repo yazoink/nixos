@@ -6,7 +6,7 @@
   ...
 }: let
   inherit (config.stylix) base16Scheme fonts;
-  themeName = osConfig.myOptions.desktopTheme.name;
+  themeName = osConfig.myOptions.desktopTheme.colorscheme;
   closeButtonColor =
     if (themeName == "caroline")
     then base16Scheme.base0E

@@ -6,7 +6,7 @@
 }: let
   wizardTheme = pkgs.callPackage ./wizard-theme.nix {};
 in {
-  config = lib.mkIf (config.myOptions.bundles.desktopBase.enable && config.myOptions.desktopTheme.name == "wizard") {
+  config = lib.mkIf (config.myOptions.bundles.desktopBase.enable && config.myOptions.desktopTheme.colorscheme == "wizard") {
     desktopTheme.base16Accent = "base0B";
     desktopTheme.iconTheme = {
       name = "Wizard-Icons";

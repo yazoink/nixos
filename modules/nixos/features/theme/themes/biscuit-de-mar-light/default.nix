@@ -6,7 +6,7 @@
 }: let
   icons = pkgs.callPackage ./biscuit-icons.nix {};
 in {
-  config = lib.mkIf (config.myOptions.bundles.desktopBase.enable && config.myOptions.desktopTheme.name == "biscuit-de-mar-light") {
+  config = lib.mkIf (config.myOptions.bundles.desktopBase.enable && config.myOptions.desktopTheme.colorscheme == "biscuit-de-mar-light") {
     desktopTheme.base16Accent = "base0B";
     desktopTheme.iconTheme = {
       name = "papirus-biscuit-light";

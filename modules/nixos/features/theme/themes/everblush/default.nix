@@ -8,7 +8,7 @@
   cursors = pkgs.callPackage ./everblush-cursors.nix {};
   icons = pkgs.callPackage ./everblush-icons.nix {};
 in {
-  config = lib.mkIf (config.myOptions.bundles.desktopBase.enable && config.myOptions.desktopTheme.name == "everblush") {
+  config = lib.mkIf (config.myOptions.bundles.desktopBase.enable && config.myOptions.desktopTheme.colorscheme == "everblush") {
     desktopTheme.base16Accent = "base0D";
     desktopTheme.iconTheme = {
       name = "Everblush-Icons";

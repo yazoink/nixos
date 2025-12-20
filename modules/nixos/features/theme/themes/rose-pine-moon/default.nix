@@ -6,7 +6,7 @@
 }: let
   rosepineCursors = pkgs.callPackage ./rosepine-cursors.nix {};
 in {
-  config = lib.mkIf (config.myOptions.bundles.desktopBase.enable && config.myOptions.desktopTheme.name == "rose-pine-moon") {
+  config = lib.mkIf (config.myOptions.bundles.desktopBase.enable && config.myOptions.desktopTheme.colorscheme == "rose-pine-moon") {
     desktopTheme.base16Accent = "base0B";
     desktopTheme.iconTheme = {
       name = "Rose-Pine-Moon";

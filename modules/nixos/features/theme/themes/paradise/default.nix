@@ -9,7 +9,7 @@ let
   cursors = pkgs.callPackage ./paradise-cursors.nix {};
   icons = pkgs.callPackage ./paradise-icons.nix {};
 in {
-  config = lib.mkIf (config.myOptions.bundles.desktopBase.enable && config.myOptions.desktopTheme.name == "paradise") {
+  config = lib.mkIf (config.myOptions.bundles.desktopBase.enable && config.myOptions.desktopTheme.colorscheme == "paradise") {
     desktopTheme.base16Accent = "base0D";
     desktopTheme.iconTheme = {
       name = "Papirus-Paradise-Yellow";

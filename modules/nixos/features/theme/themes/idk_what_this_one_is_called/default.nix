@@ -5,7 +5,7 @@
   lib,
   ...
 }: {
-  config = lib.mkIf (config.myOptions.bundles.desktopBase.enable && config.myOptions.desktopTheme.name == "idk-what-this-one-is-called") {
+  config = lib.mkIf (config.myOptions.bundles.desktopBase.enable && config.myOptions.desktopTheme.colorscheme == "idk-what-this-one-is-called") {
     desktopTheme.base16Accent = "base0D";
 
     stylix = {

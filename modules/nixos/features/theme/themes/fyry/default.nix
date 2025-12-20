@@ -8,7 +8,7 @@
 let
   cursors = pkgs.callPackage ./fyry-cursors.nix {};
 in {
-  config = lib.mkIf (config.myOptions.bundles.desktopBase.enable && config.myOptions.desktopTheme.name == "fyry") {
+  config = lib.mkIf (config.myOptions.bundles.desktopBase.enable && config.myOptions.desktopTheme.colorscheme == "fyry") {
     desktopTheme.base16Accent = "base0D";
     environment.systemPackages = [cursors];
     stylix = {

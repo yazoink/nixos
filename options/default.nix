@@ -58,16 +58,6 @@
             type = lib.types.bool;
             default = false;
           };
-          # windowManager = lib.mkOption {
-          #   type = lib.types.str;
-          #   default = "hyprland";
-          #   description = "Options: hyprland, sway";
-          # };
-          # displayManager = lib.mkOption {
-          #   type = lib.types.str;
-          #   default = "sddm";
-          #   description = "Options: sddm, regreet, ly";
-          # };
           plymouth.enable = lib.mkOption {
             type = lib.types.bool;
             default = false;
@@ -198,7 +188,7 @@
             };
           };
         };
-        name = lib.mkOption {
+        colorscheme = lib.mkOption {
           type = lib.types.str;
           default = "everblush";
           description = ''

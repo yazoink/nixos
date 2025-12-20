@@ -1,6 +1,10 @@
-{pkgs, config, lib, ...}:
 {
-  config = lib.mkIf (config.myOptions.bundles.desktopBase.enable && config.myOptions.desktopTheme.name == "atelier-savanna") {
+  pkgs,
+  config,
+  lib,
+  ...
+}: {
+  config = lib.mkIf (config.myOptions.bundles.desktopBase.enable && config.myOptions.desktopTheme.colorscheme == "atelier-savanna") {
     desktopTheme.base16Accent = "base0F";
 
     stylix = {

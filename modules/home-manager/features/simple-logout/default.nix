@@ -1,5 +1,10 @@
-{pkgs, config, lib, osConfig, ...}:
-let
+{
+  pkgs,
+  config,
+  lib,
+  osConfig,
+  ...
+}: let
   inherit (osConfig.myOptions.bundles.desktopBase) windowManager;
   script = ./script.sh;
   simpleLogout = pkgs.callPackage ./simple-logout.nix {};
@@ -7,8 +12,7 @@ let
     template = ./config/style.css.mustache;
     extension = ".css";
   };
-in
-{
+in {
   options = {
     bundles.desktopBase.simpleLogout.enable = lib.mkOption {
       type = lib.types.bool;
@@ -20,7 +24,6 @@ in
     home = {
       packages = [simpleLogout];
       file = {
-        #".config/simple-logout/icons".source = ./config/icons/${osConfig.myOptions.desktopTheme.name};
         ".config/simple-logout/config.json".source = ./config/${windowManager}.json;
         ".config/simple-logout/style.css".source = styleCss;
       };

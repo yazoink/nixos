@@ -7,7 +7,7 @@
   tarotCursors = pkgs.callPackage ./tarot-cursors.nix {};
   tarotIcons = pkgs.callPackage ./tarot-icons.nix {};
 in {
-  config = lib.mkIf (config.myOptions.bundles.desktopBase.enable && config.myOptions.desktopTheme.name == "tarot") {
+  config = lib.mkIf (config.myOptions.bundles.desktopBase.enable && config.myOptions.desktopTheme.colorscheme == "tarot") {
     desktopTheme.base16Accent = "base0A";
     desktopTheme.iconTheme = {
       name = "Tarot-Icons";

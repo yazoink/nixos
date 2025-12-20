@@ -1,7 +1,7 @@
 {pkgs, config, lib, ...}:
 # I made this one
 {
-  config = lib.mkIf (config.myOptions.bundles.desktopBase.enable && config.myOptions.desktopTheme.name == "mulberry") {
+  config = lib.mkIf (config.myOptions.bundles.desktopBase.enable && config.myOptions.desktopTheme.colorscheme == "mulberry") {
     desktopTheme.base16Accent = "base0A";
 
     stylix = {

@@ -4,7 +4,7 @@
   lib,
   ...
 }: {
-  config = lib.mkIf (config.myOptions.bundles.desktopBase.enable && config.myOptions.desktopTheme.name == "catppuccin-mocha") {
+  config = lib.mkIf (config.myOptions.bundles.desktopBase.enable && config.myOptions.desktopTheme.colorscheme == "catppuccin-mocha") {
     desktopTheme.base16Accent = "base0D";
     desktopTheme.iconTheme = {
       name = "Papirus";

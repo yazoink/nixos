@@ -7,7 +7,7 @@
   carolineCursors = pkgs.callPackage ./caroline-cursors.nix {};
   carolineIcons = pkgs.callPackage ./caroline-icons.nix {};
 in {
-  config = lib.mkIf (config.myOptions.bundles.desktopBase.enable && config.myOptions.desktopTheme.name == "caroline") {
+  config = lib.mkIf (config.myOptions.bundles.desktopBase.enable && config.myOptions.desktopTheme.colorscheme == "caroline") {
     desktopTheme.base16Accent = "base0F";
     desktopTheme.iconTheme = {
       name = "caroline-suru-aspromauros";

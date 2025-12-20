@@ -22,10 +22,6 @@ in {
       background-color = "#${config.stylix.base16Scheme.base00}";
       text-color = "#${config.stylix.base16Scheme.base05}";
       progress-color = "over #${config.stylix.base16Scheme.base05}";
-      border-color =
-        if (osConfig.myOptions.desktopTheme.name == "catppuccin-mocha")
-        then "#${config.stylix.base16Scheme.base02}"
-        else "#${config.stylix.base16Scheme.base01}";
       border-size = "1";
       font = "${config.stylix.fonts.sansSerif.name} ${toString config.stylix.fonts.sizes.popups}";
       padding = "15";
