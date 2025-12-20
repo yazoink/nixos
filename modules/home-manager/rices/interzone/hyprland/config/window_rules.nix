@@ -1,16 +1,16 @@
 {
   windowrule = [
-    "match:title ^(HyprViewBinds)$, float"
-    "match:class ^(org.kde.kruler)$, float"
-    "match:title ^(galculator)$, float"
-    "match:title ^(Open File)(.*)$, float"
-    "match:title ^(Select a File)(.*)$, float"
-    "match:title ^(Open Folder)(.*)$, float"
-    "match:title ^(Save As)(.*)$, float"
-    "match:title ^(Picture-in-Picture)$, float"
-    "match:title ^(Picture-in-Picture)$, pin"
-    "match:title ^(Authentication Required)$, float"
-    "match:title ^(Soundboard)$, float"
-    "match:title ^((E|e)tterna)(.*)$, fullscreen"
+    "match:title ^(HyprViewBinds)$, float true"
+    "match:class ^(org.kde.kruler)$, float true"
+    "match:title ^(galculator)$, float true"
+    "match:title ^(Open File)(.*)$, float true"
+    "match:title ^(Select a File)(.*)$, float true"
+    "match:title ^(Open Folder)(.*)$, float true"
+    "match:title ^(Save As)(.*)$, float true"
+    "match:title ^(Picture-in-Picture)$, float true"
+    "match:title ^(Picture-in-Picture)$, pin true"
+    "match:title ^(Authentication Required)$, float true"
+    "match:title ^(Soundboard)$, float true"
+    "match:title ^((E|e)tterna)(.*)$, fullscreen true"
   ];
 }
