@@ -58,16 +58,16 @@
             type = lib.types.bool;
             default = false;
           };
-          windowManager = lib.mkOption {
-            type = lib.types.str;
-            default = "hyprland";
-            description = "Options: hyprland, sway";
-          };
-          displayManager = lib.mkOption {
-            type = lib.types.str;
-            default = "sddm";
-            description = "Options: sddm, regreet, ly";
-          };
+          # windowManager = lib.mkOption {
+          #   type = lib.types.str;
+          #   default = "hyprland";
+          #   description = "Options: hyprland, sway";
+          # };
+          # displayManager = lib.mkOption {
+          #   type = lib.types.str;
+          #   default = "sddm";
+          #   description = "Options: sddm, regreet, ly";
+          # };
           plymouth.enable = lib.mkOption {
             type = lib.types.bool;
             default = false;
@@ -129,14 +129,14 @@
         documentReader = {
           command = lib.mkOption {
             type = lib.types.str;
-            default = "atril";
+            default = "zathura";
             description = "Options: atril, zathura";
           };
         };
         mediaPlayer = {
           command = lib.mkOption {
             type = lib.types.str;
-            default = "vlc";
+            default = "mpv";
             description = "Options: vlc, mpv, celluloid";
           };
         };
@@ -179,6 +179,15 @@
       # Theming options for the desktop.
 
       desktopTheme = {
+        rice = {
+          interzone = {
+            enable = lib.mkOption {
+              type = lib.types.bool;
+              default = true;
+              description = "hyprland/eww/waybar/fnott/swaync/hyprlock w/ lower bar & titlebars";
+            };
+          };
+        };
         name = lib.mkOption {
           type = lib.types.str;
           default = "everblush";
@@ -264,17 +273,6 @@
               type = lib.types.str;
               default = "000000";
             };
-          };
-        };
-        sddm = {
-          scale = lib.mkOption {
-            type = lib.types.number;
-            default = 1;
-            description = "Scale for the theme.";
-          };
-          wallpaper = lib.mkOption {
-            type = lib.types.path;
-            default = config.myOptions.desktopTheme.wallpaper.image.path;
           };
         };
       };

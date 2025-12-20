@@ -1,0 +1,1 @@
+pidof hyprlock || hyprlock

@@ -1,0 +1,22 @@
+(defwidget resource-usage-grid []
+  (box 
+    :orientation "vertical"
+    :space-evenly "false"
+    :spacing 5
+    :class "resource-usage-box"
+    ;(left-text :text "Resource Usage" :class "bold")
+    (box
+      :class "grid-list-box"
+      :orientation "vertical"
+      :space-evenly "false"
+      :spacing 5
+      (grid-list-item :key "Memory" :value "${round(EWW_RAM.used_mem * 0.000000001, 2)}/${round(EWW_RAM.total_mem * 0.000000001, 2)} GB")
+      (box :class "hline" :hexpand "true" :space-evenly "true")
+      (grid-list-item :key "Swap" :value "${round((EWW_RAM.total_swap - EWW_RAM.free_swap) * 0.000000001, 2)}/${round(EWW_RAM.total_swap * 0.000000001, 2)} GB")
+      (box :class "hline" :hexpand "true" :space-evenly "true")
+      (grid-list-item :key "CPU" :value "${round(EWW_CPU.avg, 0)}%")
+      (box :class "hline" :hexpand "true" :space-evenly "true")
+      (grid-list-item :key "Storage" :value "${round(EWW_DISK['/'].used * 0.000000001, 0)}/${round(EWW_DISK['/'].total * 0.000000001, 0)} GB")
+    )
+  )
+)

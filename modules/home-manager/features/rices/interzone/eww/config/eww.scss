@@ -1,0 +1,289 @@
+$border: #1C2326;
+$bg: #141B1E;
+$bg2: #232A2D;
+$bg3: #353C3F;
+$fg: #DADADA;
+$red: #E57474;
+$yellow: #E5C76B;
+$green: #8CCF7E;
+$blue: #67B0E8;
+$purple: #C47FD5;
+
+@import "colours";
+
+$round: 15px;
+
+* {
+  all: unset;
+  color: $fg;
+}
+
+.power, .confirm {
+  background: none;
+  border-radius: 15px;
+}
+
+.confirm-text {
+  font-weight: bold;
+  font-size: 15pt;
+}
+
+.power-box, .confirm-box {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+  padding: 20px;
+  border: 1px solid $border;
+  border-radius: 15px;
+  background-color: $bg;
+  margin: $margin;
+}
+
+.user-box {
+  padding: 22px;
+  border-radius: 10px;
+  background-color: $bg2;
+}
+
+button {
+  padding: 10px;
+  border-radius: 10px;
+  background-color: $bg2;
+}
+
+button:hover {
+  background-color: $bg3;
+}
+
+.power-button-box {
+  padding: 5px;
+}
+
+.power-button-box button {
+  font-family: "Font Awesome 7 Free";
+  font-size: 19pt;
+  padding: 10px;
+}
+
+// .user-box {
+//   border: 1px solid $border2;
+//   // background-color: $border2;
+//   padding: 10px;
+//   border-radius: 5px;
+// }
+
+.profile-picture {
+  border-radius: 5px;
+  // box-shadw: 0 0 5px rgba(0, 0, 0, 0.15);
+}
+
+.heading {
+  font-weight: bold;
+  font-size: 18pt;
+}
+
+.os-version {
+  font-size: unset;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.italic {
+  font-style: italic;
+  opacity: 0.5;
+}
+
+.hline {
+  // border-top: 1px solid $fg;
+  // opacity: 0.15;
+  border-top: 1px solid $bg2;
+}
+
+.grid-list-box, .text-box {
+  background-color: $bg2;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.quote {
+  font-style: italic;
+  background-color: $bg2;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.pretty-time-date {
+  font-size: 13pt;
+  font-style: italic;
+  opacity: 0.5;
+}
+
+.pretty-time-clock {
+  font-size: 40pt;
+  font-weight: bold;
+}
+
+.pretty-time-separator {
+  font-size: 5pt;
+  font-family: "Font Awesome 7 Free";
+}
+
+.separator {
+  font-family: "Font Awesome 7 Free";
+  font-weight: bold;
+  font-size: 7pt;
+}
+
+.separator-center {
+  font-size: 11pt;
+}
+
+.separator-edge {
+  font-size: 3pt;
+}
+
+tooltip {
+  background-color: $bg;
+  opacity: 1.0;
+  border: 1px solid $border;
+  border-radius: 10px;
+  padding: 0;
+}
+
+tooltip label {
+  margin: 5px;
+  padding: 0;
+  color: $fg;
+}
+
+.cal {
+  background-color: $bg2;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+calendar.header {
+  border-bottom: 1px solid $bg3;
+  border-radius: 0px;
+}
+
+calendar.button {
+  background-color: transparent;
+}
+
+calendar.day-number {
+  padding: 5px;
+  margin: 0;
+}
+
+calendar:selected {
+  color: $blue;
+}
+
+.red {
+  color: $red;
+}
+
+.yellow {
+  color: $yellow;
+}
+
+.blue {
+  color: $blue;
+}
+
+.green {
+  color: $green;
+}
+
+.purple {
+  color: $purple;
+}
+
+.fakecornersl {
+  transition: box-shadow 500ms, border-radius 500ms, margin 500ms;
+  margin: 0;
+  &.active {
+    margin: 0px;
+    margin-top: 0;
+    border-radius: $round + 10px; 
+    box-shadow: 0px 0px 0px 50px $bg;
+    &.locked {
+      margin: 0px;
+    }
+  }
+  &.inactive {
+    border-radius: 0;
+    box-shadow: none;
+  }
+}
+
+.fakecornersr {
+  transition: box-shadow 500ms, border-radius 500ms;
+  &.active {
+    border-top-right-radius: $round + 10px; 
+    border-bottom-right-radius: $round + 10px; 
+    box-shadow: 
+      20px -20px 0px $bg,
+      20px 20px 0px $bg;
+  }
+  &.inactive {
+    border-radius: 0;
+    box-shadow: none;
+  }
+}
+
+.filler {
+  transition: border-radius 500ms, background-color 500ms;
+  margin: 0px;
+  margin-top: 10px;
+  margin-left: -1px;
+  margin-right: -1px;
+  border-top-left-radius: $round + 10px;
+  border-top-right-radius: $round + 10px;
+  box-shadow: 
+    0px -26px 0px 5px $bg;
+
+  &.inactive {
+    background-color: $bg;
+    border-radius: 0;
+  }
+}
+
+.fillerl {
+  @extend .filler;
+  margin: 0;
+  border-top-left-radius: 0;
+  box-shadow: 
+    20px -20px 0px -10px $bg;
+}
+
+.fillerr {
+  @extend .filler;
+  margin: 0;
+  border-top-right-radius: 0;
+  box-shadow: 
+    -20px -20px 0px -10px $bg;
+}
+
+.fillerrs {
+  @extend .filler;
+  margin: 0;
+  border-top-right-radius: 0;
+  box-shadow: 
+    -20px 0px 0px 0px $bg;
+}
+
+.fillerls {
+  @extend .filler;
+  margin: 0;
+  border-top-left-radius: 0;
+  box-shadow: 
+    20px 0px 0px 0px $bg;
+}
+
+.launchcover {
+  border-radius: $round; 
+  margin: 5px;
+  box-shadow: 0px 0px 0px 10px $bg;
+}

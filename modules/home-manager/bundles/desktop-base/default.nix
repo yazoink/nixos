@@ -19,11 +19,6 @@
     ../../features/web-browsers
     ../../features/image-viewers
     ../../features/media-players
-    ../../features/window-managers
-    ../../features/notifications
-    ../../features/launchers
-    ../../features/bars
-    ../../features/lockscreens
 
     ../../features/direnv
     ../../features/hyprviewbinds
@@ -32,9 +27,6 @@
     ../../features/theme
     ../../features/xdg
     ../../features/dconf
-    ../../features/swayosd
-    ../../features/eww
     ../../features/hyprland-monitor-attached
-    ../../features/no-display-manager
   ];
 }
