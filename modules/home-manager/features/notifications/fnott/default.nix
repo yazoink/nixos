@@ -35,7 +35,13 @@ in {
           max-timeout = 10;
         };
         low = {
-          border-color = lib.mkForce base05;
+          border-color = lib.mkForce "${base05}ff";
+        };
+        normal = {
+          border-color = lib.mkForce "${base05}ff";
+        };
+        critical = {
+          border-color = lib.mkForce "${base05}ff";
         };
       };
     };
