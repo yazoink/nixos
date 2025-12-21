@@ -119,7 +119,6 @@ in {
           messageLatency.enable = lib.mkIf bloat true;
           messageLinkEmbeds.enable = true;
           messageLogger.enable = lib.mkIf bloat true;
-          moreKaomoji.enable = lib.mkIf bloat true;
           noDevtoolsWarning.enable = true;
           noF1.enable = true;
           noMaskedUrlPaste.enable = true;
