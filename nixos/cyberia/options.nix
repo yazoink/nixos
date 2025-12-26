@@ -14,6 +14,10 @@
       guiTextEditor.command = "pluma";
     };
     desktopTheme = {
+      windowGaps = {
+        inner = 10;
+        outer = 15;
+      };
       colorscheme = "rose-pine";
       fonts.terminal = {
         # name = "Iosevka Nerd Font";
