@@ -35,7 +35,7 @@
         type = "image";
         image = {
           fillType = "fill";
-          path = ../../wallpapers/abstract1.jpg;
+          path = ../../wallpapers/a_close_up_of_a_white_flower.jpg;
         };
         color = {
           hex = config.stylix.base16Scheme.base03;
