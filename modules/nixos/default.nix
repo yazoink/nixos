@@ -11,5 +11,6 @@
     ./features/retroarch
     ./features/disk-burner
     ./features/opentabletdriver
+    ./features/bluetooth
   ];
 }
