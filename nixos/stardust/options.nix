@@ -14,7 +14,7 @@
     userAccount.username = "gene";
     desktopTheme = {
       rice.interzone.enable = true;
-      colorscheme = "i-cant-believe-its-not-butter";
+      colorscheme = "caroline";
       wallpaper = {
         type = "image";
         image = {
@@ -29,9 +29,8 @@
           size = 12;
         };
         terminal = {
-          name = "Aporetic Serif Mono";
-          # name = "Terminess Nerd Font";
-          # name = "ZedMono Nerd Font";
+          name = "Monocraft";
+          # name = "Aporetic Serif Mono";
           size = 12;
         };
       };

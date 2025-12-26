@@ -1,4 +1,8 @@
-{config, ...}: let
+{
+  config,
+  osConfig,
+  ...
+}: let
   confFile = config.lib.stylix.colors {
     template = ./hyprlock-colors.conf.mustache;
     extension = "conf";
@@ -20,7 +24,7 @@ in {
       background {
         monitor =
         color = $bg0
-        path = screenshot
+        path = ${osConfig.myOptions.desktopTheme.wallpaper.path}
         blur_size = 2
         vibrancy = 0
         brightness = 0.7
