@@ -31,7 +31,7 @@ in {
       color =
         if (config.stylix.polarity == "dark")
         then "rgba(00000040)"
-        else "rgba(00000020)";
+        else "rgba(00000010)";
     };
   };
   misc = {
