@@ -432,6 +432,10 @@
           type = lib.types.bool;
           default = false;
         };
+        bluetooth.enable = lib.mkOption {
+          type = lib.types.bool;
+          default = false;
+        };
         touchscreen = {
           enable = lib.mkOption {
             type = lib.types.bool;
