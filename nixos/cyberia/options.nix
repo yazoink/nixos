@@ -14,7 +14,7 @@
       guiTextEditor.command = "pluma";
     };
     desktopTheme = {
-      colorscheme = "moonfly";
+      colorscheme = "rose-pine";
       fonts.terminal = {
         # name = "Iosevka Nerd Font";
         # name = "SFMono";
