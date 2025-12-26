@@ -14,7 +14,7 @@
     userAccount.username = "gene";
     desktopTheme = {
       rice.interzone.enable = true;
-      colorscheme = "paradise";
+      colorscheme = "i-cant-believe-its-not-butter";
       wallpaper = {
         type = "image";
         image = {

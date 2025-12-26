@@ -40,8 +40,8 @@
       };
       cursor = {
         size = lib.mkDefault 32;
-        name = lib.mkDefault "phinger-cursors-dark";
-        package = lib.mkDefault pkgs.phinger-cursors;
+        name = lib.mkDefault "Posy's Cursor";
+        package = lib.mkDefault pkgs.posy-cursors;
       };
       fonts = {
         sizes = {
