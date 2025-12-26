@@ -40,8 +40,8 @@
         };
       };
       windowGaps = {
-        inner = 5;
-        outer = 10;
+        inner = 10;
+        outer = 15;
       };
       terminalPadding = 24;
       fonts.desktop = {
