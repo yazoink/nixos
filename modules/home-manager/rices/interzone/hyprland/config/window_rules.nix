@@ -1,6 +1,6 @@
 {
   windowrule = [
-    "match:title ^(HyprViewBinds)$, float "
+    "match:title ^(HyprViewBinds)$, float true"
     "match:class ^(org.kde.kruler)$, float true"
     "match:title ^(galculator)$, float true"
     "match:title ^(Open File)(.*)$, float true"
