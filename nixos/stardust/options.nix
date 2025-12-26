@@ -29,7 +29,7 @@
           size = 12;
         };
         terminal = {
-          name = "Monocraft";
+          name = "Terminess Nerd Font";
           # name = "Aporetic Serif Mono";
           size = 12;
         };
@@ -58,6 +58,7 @@
       krita.enable = true;
       calibre.enable = true;
       obsidian.enable = true;
+      lutgen.enable = true;
     };
     hardwareFeatures = {
       bootloader.type = "uefi";
