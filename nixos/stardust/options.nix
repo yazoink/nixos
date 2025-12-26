@@ -62,6 +62,7 @@
     hardwareFeatures = {
       bootloader.type = "uefi";
       ssd.enable = true;
+      bluetooth.enable = true;
       # diskBurner.enable = true;
       h264ify.enable = true;
       laptop = {

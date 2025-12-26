@@ -11,7 +11,7 @@
       discordClient = {
         command = "vesktop";
       };
-      guiTextEditor.command = "vscode";
+      guiTextEditor.command = "pluma";
     };
     desktopTheme = {
       colorscheme = "moonfly";
@@ -50,6 +50,7 @@
       prismlauncher.enable = true;
       lutgen.enable = true;
       krita.enable = true;
+      vscode.enable = true;
     };
     hardwareFeatures = {
       bootloader = {
@@ -63,6 +64,7 @@
         };
       };
       diskBurner.enable = true;
+      bluetooth.enable = true;
       ssd.enable = true;
       h264ify.enable = true;
       laptop = {
