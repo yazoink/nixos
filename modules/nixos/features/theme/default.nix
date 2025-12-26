@@ -40,7 +40,7 @@
       };
       cursor = {
         size = lib.mkDefault 32;
-        name = lib.mkDefault "Posy's Cursor";
+        name = lib.mkDefault "Posy_Cursor";
         package = lib.mkDefault pkgs.posy-cursors;
       };
       fonts = {
