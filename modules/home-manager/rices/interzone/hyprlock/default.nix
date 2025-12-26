@@ -24,7 +24,7 @@ in {
       background {
         monitor =
         color = $bg0
-        path = ${osConfig.myOptions.desktopTheme.wallpaper.path}
+        path = ${osConfig.myOptions.desktopTheme.wallpaper.image.path}
         blur_size = 2
         vibrancy = 0
         brightness = 0.7
