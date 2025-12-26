@@ -363,6 +363,18 @@
           type = lib.types.bool;
           default = false;
         };
+        calibre.enable = lib.mkOption {
+          type = lib.types.bool;
+          default = false;
+        };
+        vscode.enable = lib.mkOption {
+          type = lib.types.bool;
+          default = false;
+        };
+        obsidian.enable = lib.mkOption {
+          type = lib.types.bool;
+          default = false;
+        };
       };
 
       # ----- HARDWARE FEATURES ----- #

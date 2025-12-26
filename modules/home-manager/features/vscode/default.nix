@@ -4,8 +4,7 @@
   osConfig,
   ...
 }: {
-  config = lib.mkIf (osConfig.myOptions.bundles.desktopBase.enable && osConfig.myOptions.defaultApps.guiTextEditor.command == "vscode") {
-    defaultApps.guiTextEditor.desktopFile = "vscodium.desktop";
+  config = lib.mkIf osConfig.myOptions.features.vscode.enable {
     programs.vscode = {
       enable = true;
       package = pkgs.vscodium;
