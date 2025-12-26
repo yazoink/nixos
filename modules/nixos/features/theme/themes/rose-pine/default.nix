@@ -8,7 +8,7 @@
     desktopTheme.base16Accent = "base0B";
     desktopTheme.iconTheme = {
       name = "Rose-Pine";
-      package = pkgs.rosepineIcons;
+      package = pkgs.rose-pine-icon-theme;
     };
 
     stylix = {
