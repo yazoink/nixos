@@ -24,7 +24,7 @@ in {
     swapfile = false;
     ignorecase = true;
     smartcase = true;
-    wrap = false;
+    wrap = true;
   };
   clipboard = {
     register = "unnamedplus";
