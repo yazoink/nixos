@@ -46,10 +46,10 @@
       terminalPadding = 24;
       fonts.desktop = {
         # name = "SF Pro Display";
-        name = "Terminess Nerd Font";
-        size = 12;
       };
       fonts.terminal = {
+        name = "Terminess Nerd Font";
+        size = 12;
         # name = "Iosevka Nerd Font";
         # name = "Bm437 NEC APC3 8x16";
         # size = 12;
