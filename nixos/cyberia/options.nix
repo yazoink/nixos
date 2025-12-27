@@ -15,7 +15,7 @@
     };
     desktopTheme = {
       windowGaps = {
-        inner = 10;
+        inner = 5;
         outer = 15;
       };
       colorscheme = "rose-pine";
