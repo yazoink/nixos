@@ -15,8 +15,8 @@
     };
     desktopTheme = {
       windowGaps = {
-        inner = 5;
-        outer = 10;
+        inner = 3;
+        outer = 5;
       };
       colorscheme = "rose-pine";
       fonts.terminal = {

@@ -202,11 +202,11 @@
         windowGaps = {
           outer = lib.mkOption {
             type = lib.types.number;
-            default = 10;
+            default = 5;
           };
           inner = lib.mkOption {
             type = lib.types.number;
-            default = 5;
+            default = 3;
           };
         };
         fonts = {
