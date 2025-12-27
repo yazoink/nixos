@@ -6,7 +6,7 @@
 }: let
   inherit (config.stylix) base16Scheme;
   margin = osConfig.myOptions.desktopTheme.windowGaps.outer - 5;
-  marginBottom = margin + 42;
+  marginBottom = margin + 50;
 in {
   services.walker = {
     enable = true;
