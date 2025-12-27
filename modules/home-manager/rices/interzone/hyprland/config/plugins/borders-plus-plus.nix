@@ -17,8 +17,5 @@
         border_size_1 = 1;
       };
     };
-    windowrule = [
-      "match:focus true, plugin:borders-plus-plus:col.border_1 rgb(${config.stylix.base16Scheme.base05})"
-    ];
   };
 }
