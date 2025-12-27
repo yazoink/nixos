@@ -10,11 +10,11 @@ in {
   general = {
     gaps_in = inner;
     gaps_out = outer;
-    border_size = 2;
+    border_size = 5;
     layout = "dwindle";
     allow_tearing = false;
     "col.inactive_border" = borderColor;
-    "col.active_border" = borderColor;
+    "col.active_border" = "rgb(${base16Scheme.base00})";
     resize_on_border = true;
     extend_border_grab_area = 15;
     hover_icon_on_border = true;
