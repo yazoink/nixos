@@ -38,11 +38,11 @@ window#waybar {
 }
 
 .modules-left {
-  margin-left: 14px;
+  margin-left: 7px;
 }
 
 .modules-right {
-  margin-right: 14px;
+  margin-right: 7px;
 }
 
 tooltip {
