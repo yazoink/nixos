@@ -5,7 +5,7 @@
   osConfig,
   ...
 }: let
-  margin = osConfig.myOptions.desktopTheme.windowGaps.outer - 5;
+  margin = 5;
 in {
   home.packages = with pkgs; [
     libnotify
