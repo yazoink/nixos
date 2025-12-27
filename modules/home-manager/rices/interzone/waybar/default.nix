@@ -8,7 +8,7 @@
   inherit (config.stylix) base16Scheme fonts;
   inherit (osConfig.myOptions.hardwareFeatures) laptop;
   inherit (osConfig.myOptions) desktopTheme;
-  iconSize = desktopTheme.fonts.desktop.size - 2;
+  iconSize = desktopTheme.fonts.desktop.size - 1;
   barHeight = 50;
   barPosition = "bottom";
   workspacesModule = ''
