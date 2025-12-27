@@ -8,8 +8,8 @@
   inherit (config.stylix) base16Scheme fonts;
   inherit (osConfig.myOptions.hardwareFeatures) laptop;
   inherit (osConfig.myOptions) desktopTheme;
-  iconSize = desktopTheme.fonts.desktop.size - 1;
-  barHeight = 42;
+  iconSize = desktopTheme.fonts.desktop.size - 2;
+  barHeight = 44;
   barPosition = "bottom";
   workspacesModule = ''
     "hyprland/workspaces": {
@@ -170,6 +170,58 @@
        "on-click": "pkill walker || walker"
     }
   '';
+  quickAccessModuleLaptop = ''
+    "group/quick-access": {
+      "orientation": "inherit",
+      "modules": [
+      "group/volume-expander",
+      "group/backlight-expander",
+      "group/battery-expander",
+      "group/tray-expander"
+      ]
+    },
+    "custom/left-arrow": {
+      "format": "",
+      "tooltip": false
+    },
+    "group/quick-access-slider": {
+      "orientation": "inherit",
+      "drawer": {
+        "click-to-reveal": true,
+        "transition-duration": 1000,
+        "children-class": "tray-group-item"
+      },
+      "modules": [
+        "custom/left-arrow",
+        "group/quick-access"
+      ]
+    }
+  '';
+  quickAccessModuleDesktop = ''
+    "group/quick-access": {
+      "orientation": "inherit",
+      "modules": [
+      "group/volume-expander",
+      "group/tray-expander"
+      ]
+    },
+    "custom/left-arrow": {
+      "format": "",
+      "tooltip": false
+    },
+    "group/quick-access-slider": {
+      "orientation": "inherit",
+      "drawer": {
+        "click-to-reveal": true,
+        "transition-duration": 1000,
+        "children-class": "tray-group-item"
+      },
+      "modules": [
+        "custom/left-arrow",
+        "group/quick-access"
+      ]
+    }
+  '';
   separatorModule = ''
     "custom/separator#left": {
       "format": "|",
@@ -189,7 +241,12 @@
     "spacing": 15,
     "height": ${builtins.toString barHeight},
     "modules-left": ["custom/search", "custom/separator#left", "clock"],
-    "modules-center": ["hyprland/workspaces"]
+    "modules-center": ["hyprland/workspaces"],
+    "modules-right": [
+      "group/quick-access-slider",
+      "clock",
+      "custom/power"
+    ]
   '';
 in {
   home.packages = with pkgs; [waybar font-awesome];
@@ -199,14 +256,6 @@ in {
       then ''
         {
           ${barConfig},
-          "modules-right": [
-            "group/volume-expander",
-            "group/backlight-expander",
-            "group/battery-expander",
-            "group/tray-expander",
-            "custom/separator#right",
-            "custom/power"
-          ],
           ${workspacesModule},
           ${clockModule},
           ${volumeModule},
@@ -214,35 +263,29 @@ in {
           ${batteryModule},
           ${trayModule},
           ${searchModule},
-          ${separatorModule},
-          ${powerModule}
+          ${powerModule},
+          ${quickAccessModuleLaptop}
         }
       ''
       else ''
         {
           ${barConfig},
-          "modules-right": [
-            "group/volume-expander",
-            "group/tray-expander",
-            "custom/separator#right",
-            "custom/power"
-          ],
           ${workspacesModule},
           ${clockModule},
           ${volumeModule},
           ${trayModule},
-          ${separatorModule},
           ${powerModule},
-          ${searchModule}
+          ${searchModule},
+          ${quickAccessModuleDesktop}
         }
       '';
     # "waybar/menus/power.xml".source = ./power.xml;
     "waybar/style.css".text =
       ''
         @define-color bg #${base16Scheme.base00};
-        @define-color bg2 #${base16Scheme.base02};
+        @define-color bg2 #${base16Scheme.base01};
         @define-color fg #${base16Scheme.base05};
-        @define-color unfocused #${base16Scheme.base03};
+        @define-color unfocused #${base16Scheme.base04};
         @define-color urgent #${base16Scheme.base08};
         @define-color border #${base16Scheme.base01};
         @define-color accent #${base16Scheme.${osConfig.desktopTheme.base16Accent}};
@@ -272,7 +315,8 @@ in {
         #custom-backlight-icon,
         #idle_inhibitor,
         #custom-search,
-        #custom-power {
+        #custom-power,
+        #custom-left-arrow {
           font-size: ${builtins.toString iconSize}pt;
         }
       ''
