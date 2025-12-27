@@ -31,6 +31,7 @@
         # name = "Rubik";
         # size = 11;
       };
+      terminalPadding = 28;
       wallpaper = {
         type = "image";
         image = {
