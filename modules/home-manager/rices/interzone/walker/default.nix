@@ -166,7 +166,7 @@ in {
         background: @background;
         padding: 15px;
         border: 1px solid @border;
-        box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
       }
 
       #search {
