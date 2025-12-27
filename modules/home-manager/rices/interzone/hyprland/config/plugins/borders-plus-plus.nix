@@ -6,7 +6,6 @@
   ...
 }: let
   inherit (config.stylix) base16Scheme fonts;
-  themeName = osConfig.myOptions.desktopTheme.colorscheme;
 in {
   plugins = [
     inputs.hyprland-plugins.packages.${pkgs.stdenv.hostPlatform.system}.borders-plus-plus
@@ -14,10 +13,12 @@ in {
   settings = {
     plugin = {
       borders-plus-plus = {
-        add_borders = 0;
-        col.border_1 = "rgb(ffffff)";
         natural_rounding = "yes";
+        add_borders = 2;
+        col.border_1 = "rgb(ffffff)";
+        col.border_2 = "rgb(000000)";
         border_size_1 = 3;
+        border_size_2 = 3;
       };
     };
   };
