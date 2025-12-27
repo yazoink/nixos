@@ -25,7 +25,7 @@ in {
       hyprbars = {
         bar_color = "rgb(${base16Scheme.base01})";
         inactive_button_color = "rgb(${base16Scheme.base04})";
-        bar_height = 40;
+        bar_height = 38;
         bar_text_font = "${fonts.sansSerif.name} Bold";
         bar_text_size = fonts.sizes.applications;
         bar_text_align = "center";
