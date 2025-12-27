@@ -330,6 +330,7 @@ in {
         #custom-search,
         #custom-power,
         #custom-left-arrow {
+          font-family: "Font Awesome 7 Free";
           font-size: ${builtins.toString iconSize}pt;
         }
       ''

@@ -24,7 +24,7 @@
         name = "Terminess Nerd Font";
         # name = "Bm437 NEC APC3 8x16";
         # name = "Terminus";
-        # size = 12;
+        size = 12;
       };
       fonts.desktop = {
         # name = "SF Pro Display";
