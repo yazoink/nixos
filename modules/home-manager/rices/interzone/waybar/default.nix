@@ -170,6 +170,14 @@
        "on-click": "pkill walker || walker"
     }
   '';
+  windowModule = ''
+    "hyprland/window": {
+      "icon-size": 24,
+      "icon": true,
+      "max-length": 50,
+      "format": "{title}"
+    }
+  '';
   quickAccessModuleLaptop = ''
     "group/quick-access": {
       "orientation": "inherit",
@@ -240,7 +248,11 @@
     "position": "${barPosition}",
     "spacing": 7,
     "height": ${builtins.toString barHeight},
-    "modules-left": ["custom/search", "hyprland/workspaces"],
+    "modules-left": [
+      "custom/search",
+      "hyprland/workspaces",
+      "hyprland/window"
+    ],
     "modules-right": [
       "group/quick-access-slider",
       "clock",
@@ -263,6 +275,7 @@ in {
           ${trayModule},
           ${searchModule},
           ${powerModule},
+          ${windowModule},
           ${quickAccessModuleLaptop}
         }
       ''
@@ -275,6 +288,7 @@ in {
           ${trayModule},
           ${powerModule},
           ${searchModule},
+          ${windowModule},
           ${quickAccessModuleDesktop}
         }
       '';
