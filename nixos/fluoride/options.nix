@@ -43,7 +43,7 @@
         inner = 5;
         outer = 15;
       };
-      terminalPadding = 24;
+      # terminalPadding = 24;
       fonts.desktop = {
         # name = "SF Pro Display";
       };
