@@ -197,7 +197,7 @@
         };
         terminalPadding = lib.mkOption {
           type = lib.types.number;
-          default = 24;
+          default = 32;
         };
         windowGaps = {
           outer = lib.mkOption {
