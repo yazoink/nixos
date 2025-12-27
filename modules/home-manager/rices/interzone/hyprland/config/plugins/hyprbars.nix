@@ -33,7 +33,7 @@ in {
         bar_padding = 15;
         bar_button_padding = 10;
         disable_initialization_message = true;
-        "col.text" = "rgb(${base16Scheme.base03})";
+        "col.text" = "rgb(${base16Scheme.base04})";
         bar_buttons_alignment = "left";
         bar_part_of_window = true;
         hyprbars-button = [
