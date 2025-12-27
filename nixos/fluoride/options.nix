@@ -40,14 +40,14 @@
         };
       };
       windowGaps = {
-        inner = 3;
-        outer = 5;
+        inner = 5;
+        outer = 15;
       };
       terminalPadding = 24;
       fonts.desktop = {
         # name = "SF Pro Display";
-        # name = "Rubik";
-        # size = 11;
+        name = "Terminess Nerd Font";
+        size = 12;
       };
       fonts.terminal = {
         # name = "Iosevka Nerd Font";
