@@ -5,16 +5,16 @@
 }: let
   inherit (config.stylix) base16Scheme;
   inherit (osConfig.myOptions.desktopTheme.windowGaps) inner outer;
-  borderColor = "rgb(${base16Scheme.base01})";
+  borderColor = "rgb(${base16Scheme.base02})";
 in {
   general = {
     gaps_in = inner;
     gaps_out = outer;
-    border_size = 5;
+    border_size = 1;
     layout = "dwindle";
     allow_tearing = false;
     "col.inactive_border" = borderColor;
-    "col.active_border" = "rgb(${base16Scheme.base00})";
+    "col.active_border" = borderColor;
     resize_on_border = true;
     extend_border_grab_area = 15;
     hover_icon_on_border = true;
