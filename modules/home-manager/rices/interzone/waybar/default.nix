@@ -240,8 +240,7 @@
     "position": "${barPosition}",
     "spacing": 7,
     "height": ${builtins.toString barHeight},
-    "modules-left": ["custom/search", "custom/separator#left", "clock"],
-    "modules-center": ["hyprland/workspaces"],
+    "modules-left": ["custom/search", "hyprland/workspaces"],
     "modules-right": [
       "group/quick-access-slider",
       "clock",
