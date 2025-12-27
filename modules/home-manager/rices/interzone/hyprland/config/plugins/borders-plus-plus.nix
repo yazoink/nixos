@@ -11,7 +11,7 @@
   settings = {
     plugin = {
       borders-plus-plus = {
-        natural_rounding = "yes";
+        natural_rounding = "no";
         add_borders = 1;
         "col.border_1" = "rgb(${config.stylix.base16Scheme.base02})";
         border_size_1 = 1;
