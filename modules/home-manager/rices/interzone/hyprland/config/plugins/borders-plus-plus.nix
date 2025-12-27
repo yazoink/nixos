@@ -15,7 +15,7 @@
         add_borders = 2;
         col.border_1 = "rgb(ffffff)";
         col.border_2 = "rgb(000000)";
-        border_size_1 = 3;
+        border_size_1 = 5;
         border_size_2 = 3;
       };
     };
