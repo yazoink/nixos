@@ -87,7 +87,7 @@ menuitem:hover {
 }
 
 #workspaces button {
-  margin-right: 15px;
+  margin-right: 14px;
   color: @unfocused;
   min-width: 8pt;
   /* border: 1px solid black; */
