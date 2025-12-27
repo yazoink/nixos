@@ -17,8 +17,8 @@
         border_size_1 = 1;
       };
     };
+    windowrule = [
+      "match:focus true, borders-plus-plus:title_color rgb(${config.stylix.base16Scheme.base05})"
+    ];
   };
-  windowrule = [
-    "match:focus true, borders-plus-plus:title_color rgb(${config.stylix.base16Scheme.base05})"
-  ];
 }
