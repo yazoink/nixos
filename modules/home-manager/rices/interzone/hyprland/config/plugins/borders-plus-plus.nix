@@ -4,9 +4,7 @@
   osConfig,
   inputs,
   ...
-}: let
-  inherit (config.stylix) base16Scheme fonts;
-in {
+}: {
   plugins = [
     inputs.hyprland-plugins.packages.${pkgs.stdenv.hostPlatform.system}.borders-plus-plus
   ];

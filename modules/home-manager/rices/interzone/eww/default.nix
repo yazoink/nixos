@@ -5,7 +5,7 @@
   ...
 }: let
   inherit (config.stylix) base16Scheme;
-  margin = osConfig.myOptions.desktopTheme.windowGaps.outer - 5;
+  margin = 5;
 in {
   home.packages = with pkgs; [eww font-awesome];
   # requires EWW_CONFIG_DIR env variable to be set to work
