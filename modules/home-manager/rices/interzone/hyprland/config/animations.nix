@@ -12,7 +12,7 @@
       "windowsIn, 1, 6, winIn, slide"
       "windowsOut, 1, 5, winOut, slide"
       "windowsMove, 1, 5, wind, slide"
-      "border, 1, 1, liner"
+      "border, 0, 1, liner"
       "borderangle, 1, 30, liner, once"
       "fade, 1, 10, default"
       "workspaces, 1, 5, wind"
