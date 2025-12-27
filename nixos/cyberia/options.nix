@@ -21,7 +21,7 @@
       colorscheme = "rose-pine";
       fonts.terminal = {
         # name = "Iosevka Nerd Font";
-        name = "Monocraft";
+        name = "Terminess Nerd Font";
         # name = "Bm437 NEC APC3 8x16";
         # name = "Terminus";
         # size = 12;
@@ -35,7 +35,7 @@
         type = "image";
         image = {
           fillType = "fill";
-          path = ../../wallpapers/a_close_up_of_a_white_flower.jpg;
+          path = ../../wallpapers/RosesWallpaper.png;
         };
         color = {
           hex = config.stylix.base16Scheme.base03;
