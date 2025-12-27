@@ -56,7 +56,7 @@
       };
     };
     bundles = {
-      base.starshipFormat = 1;
+      base.starshipFormat = 2;
       desktopBase.plymouth.enable = false;
       desktopFull.enable = true;
     };
