@@ -29,7 +29,7 @@ in {
         bar_text_font = "${fonts.sansSerif.name} Bold";
         bar_text_size = fonts.sizes.applications;
         bar_text_align = "center";
-        bar_precedence_over_border = true;
+        bar_precedence_over_border = false;
         bar_padding = 15;
         bar_button_padding = 10;
         disable_initialization_message = true;
