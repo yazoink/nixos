@@ -64,6 +64,7 @@
           "zen.view.compact.animate-sidebar" = false;
           "zen.welcome-screen.seen" = true;
           "zen.urlbar.behavior" = "float";
+          "zen.theme.content-element-separation" = 0;
 
           "browser.aboutConfig.showWarning" = false;
           "browser.tabs.warnOnClose" = false;
