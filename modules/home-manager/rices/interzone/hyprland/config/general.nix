@@ -23,7 +23,7 @@ in {
     rounding = 15;
     blur.enabled = false;
     shadow = {
-      enabled = true;
+      enabled = false;
       ignore_window = true;
       range = 5;
       offset = "0 0";

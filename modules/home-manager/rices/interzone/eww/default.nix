@@ -18,7 +18,7 @@ in {
       force = true;
     };
     "widgets/_colours.scss".text = ''
-      $border: #${base16Scheme.base01};
+      $border: #${base16Scheme.base02};
       $bg: #${base16Scheme.base00};
       $bg2: #${base16Scheme.base01};
       $bg3: #${base16Scheme.base02};

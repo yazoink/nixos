@@ -121,7 +121,7 @@ in {
       @define-color foreground #${base16Scheme.base05};
       @define-color background #${base16Scheme.base00};
       @define-color color1 #${base16Scheme.base01};
-      @define-color border #${base16Scheme.base01};
+      @define-color border #${base16Scheme.base02};
 
       #window,
       #box,
@@ -165,8 +165,8 @@ in {
         border-radius: 15px;
         background: @background;
         padding: 15px;
-        border: 1px solid @border;
-        box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+        border: 2px solid @border;
+        /*box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);*/
       }
 
       #search {
