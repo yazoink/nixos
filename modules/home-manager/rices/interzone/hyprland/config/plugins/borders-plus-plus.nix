@@ -19,6 +19,6 @@
     };
   };
   windowrule = [
-    "match:focus true, hyprbars:title_color rgb(${config.stylix.base16Scheme.base05})"
+    "match:focus true, borders-plus-plus:title_color rgb(${config.stylix.base16Scheme.base05})"
   ];
 }
