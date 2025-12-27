@@ -34,11 +34,11 @@ window#waybar {
 }
 
 .modules-left {
-  margin-left: 15px;
+  margin-left: 14px;
 }
 
 .modules-right {
-  margin-right: 12px;
+  margin-right: 14px;
 }
 
 tooltip {
