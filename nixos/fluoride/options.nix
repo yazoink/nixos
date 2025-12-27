@@ -48,8 +48,8 @@
         # name = "SF Pro Display";
       };
       fonts.terminal = {
-        name = "Terminess Nerd Font";
-        size = 12;
+        # name = "Terminess Nerd Font";
+        # size = 12;
         # name = "Iosevka Nerd Font";
         # name = "Bm437 NEC APC3 8x16";
         # size = 12;
