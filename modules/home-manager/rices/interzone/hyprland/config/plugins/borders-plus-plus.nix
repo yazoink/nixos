@@ -18,7 +18,7 @@
       };
     };
     windowrule = [
-      "match:focus true, borders-plus-plus:title_color rgb(${config.stylix.base16Scheme.base05})"
+      "match:focus true, borders-plus-plus:col.border_1 rgb(${config.stylix.base16Scheme.base05})"
     ];
   };
 }
