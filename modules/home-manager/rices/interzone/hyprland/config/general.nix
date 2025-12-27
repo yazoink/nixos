@@ -5,7 +5,7 @@
 }: let
   inherit (config.stylix) base16Scheme;
   inherit (osConfig.myOptions.desktopTheme.windowGaps) inner outer;
-  borderColor = "rgb(${base16Scheme.base02})";
+  borderColor = "rgb(${base16Scheme.base01})";
 in {
   general = {
     gaps_in = inner;
