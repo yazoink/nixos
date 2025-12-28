@@ -25,7 +25,7 @@
       };
       windowGaps = {
         inner = 5;
-        outer = 15;
+        outer = 10;
       };
       fonts = {
         desktop = {
