@@ -11,6 +11,10 @@ window#waybar {
   margin-left: 7px;
 }
 
+#custom-left-arrow {
+  font-size: 10pt;
+}
+
 #tray-expander,
 #battery-expander,
 #backlight-expander {
