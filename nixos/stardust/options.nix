@@ -23,6 +23,10 @@
           path = ../../wallpapers/wall1.jpg;
         };
       };
+      windowGaps = {
+        inner = 5;
+        outer = 15;
+      };
       fonts = {
         desktop = {
           name = "Gabarito";
