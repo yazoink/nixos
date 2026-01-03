@@ -37,7 +37,7 @@ in {
         monitor =
         size = 170, 170
         position = 0, 132
-        border_size = 2
+        border_size = 1
         border_color = $border
         color = $bg0
         rounding = -1
@@ -47,7 +47,7 @@ in {
         monitor =
         size = 550, 300
         rounding = 15
-        border_size = 2
+        border_size = 1
         border_color = $border
         color = $bg0
         halign = center
@@ -129,7 +129,7 @@ in {
         size = 135
         rounding = -1
         position = 0, 132
-        border_size = 2
+        border_size = 1
         border_color = $border
       }
     '';
