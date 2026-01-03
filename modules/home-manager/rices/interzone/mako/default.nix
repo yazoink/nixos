@@ -23,7 +23,7 @@ in {
       border-color = "#${config.stylix.base16Scheme.base02}";
       text-color = "#${config.stylix.base16Scheme.base05}";
       progress-color = "over #${config.stylix.base16Scheme.base05}";
-      border-size = "2";
+      border-size = "1";
       font = "${config.stylix.fonts.sansSerif.name} ${toString config.stylix.fonts.sizes.popups}";
       padding = "15";
       margin = "0";

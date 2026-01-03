@@ -10,7 +10,7 @@ in {
   general = {
     gaps_in = inner;
     gaps_out = outer;
-    border_size = 2;
+    border_size = 1;
     layout = "dwindle";
     allow_tearing = false;
     "col.inactive_border" = borderColor;

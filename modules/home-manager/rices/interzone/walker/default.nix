@@ -165,7 +165,7 @@ in {
         border-radius: 15px;
         background: @background;
         padding: 15px;
-        border: 2px solid @border;
+        border: 1px solid @border;
         /*box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);*/
       }
 

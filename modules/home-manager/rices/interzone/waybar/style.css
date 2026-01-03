@@ -4,7 +4,7 @@ window#waybar {
   background-color: @bg;
   color: @fg;
   font-weight: bold;
-  border-top: 2px solid @border;
+  /* border-top: 2px solid @border; */
 }
 
 #window {
