@@ -18,6 +18,7 @@ in {
     (import ./hyprland {inherit config osConfig lib pkgs inputs;})
     (import ./swayosd {inherit config osConfig lib pkgs;})
     (import ./walker {inherit config osConfig lib pkgs;})
+    # (import ./wofi {inherit config osConfig lib pkgs;}) # eithet walker or wofi
     (import ./waybar {inherit config osConfig lib pkgs;})
   ]);
 }

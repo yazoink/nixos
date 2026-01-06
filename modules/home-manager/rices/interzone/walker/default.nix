@@ -16,7 +16,7 @@ in {
     "walker/config.toml".source = ./config.toml;
     "walker/themes/mytheme.toml".text = ''
       [ui.anchors]
-      bottom = false
+      bottom = true
       left = true
       right = true
       top = true
