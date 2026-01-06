@@ -23,7 +23,7 @@ in {
   settings = {
     plugin = {
       hyprbars = {
-        bar_color = "rgb(${base16Scheme.base01})";
+        bar_color = "rgb(${base16Scheme.base00})";
         inactive_button_color = "rgb(${base16Scheme.base04})";
         bar_height = 38;
         bar_text_font = "${fonts.sansSerif.name} Bold";
@@ -46,7 +46,7 @@ in {
     };
     windowrule = [
       "match:focus true, hyprbars:title_color rgb(${base16Scheme.base05})"
-      "match:focus true, hyprbars:bar_color rgb(${base16Scheme.base00})"
+      # "match:focus true, hyprbars:bar_color rgb(${base16Scheme.base00})"
       "match:class ^(org.kde.kruler), hyprbars:no_bar true"
       "match:class ^(Vesktop), hyprbars:no_bar true"
       "match:class ^(File Upload), hyprbars:no_bar true"
