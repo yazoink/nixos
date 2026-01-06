@@ -7,10 +7,6 @@ window#waybar {
   /* border-top: 2px solid @border; */
 }
 
-#window {
-  margin-left: 7px;
-}
-
 #custom-left-arrow {
   font-size: 10pt;
   color: @unfocused;
@@ -30,10 +26,13 @@ window#waybar {
 #custom-search,
 #custom-power {
   padding-left: 7px;
-  padding-right: 7px;
   margin-top: 7px;
   margin-bottom: 7px;
   border-radius: 10px;
+}
+
+#custom-power {
+  padding-right: 7px;
 }
 
 #workspaces {

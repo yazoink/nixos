@@ -250,13 +250,11 @@
     "height": ${builtins.toString barHeight},
     "modules-left": [
       "custom/search",
-      "clock"
-    ],
-    "modules-center": [
       "hyprland/workspaces"
     ],
     "modules-right": [
       "group/quick-access-slider",
+      "clock",
       "custom/power"
     ]
   '';
