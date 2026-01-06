@@ -23,6 +23,8 @@ window#waybar {
 }
 
 #workspaces,
+#quick-access-slider,
+#clock,
 #custom-search,
 #custom-power {
   padding-left: 7px;
