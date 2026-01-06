@@ -189,7 +189,7 @@
       ]
     },
     "custom/left-arrow": {
-      "format": "",
+      "format": "",
       "tooltip": false
     },
     "group/quick-access-slider": {

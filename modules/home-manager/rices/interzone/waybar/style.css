@@ -12,7 +12,7 @@ window#waybar {
 }
 
 #custom-left-arrow {
-  font-size: 9pt;
+  font-size: 10pt;
   color: @unfocused;
 }
 
