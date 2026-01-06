@@ -12,6 +12,11 @@ theme_location = []
 plugin_location = []
 js_runtime = "node"
 
+shell.anchor_top = true
+shell.anchor_left = true
+shell.anchor_bottom = false
+shell.anchor_right = false
+
 [keys]
 accept_typeahead = ["tab"]
 trigger_labels = "lalt"

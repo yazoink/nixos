@@ -25,7 +25,7 @@ in {
       progress-color = "over #${config.stylix.base16Scheme.base05}";
       border-size = "1";
       font = "${config.stylix.fonts.sansSerif.name} ${toString config.stylix.fonts.sizes.popups}";
-      padding = "15";
+      padding = "10";
       margin = "5";
       outer-margin = "${builtins.toString margin}";
       default-timeout = "5000";
