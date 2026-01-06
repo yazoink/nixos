@@ -8,9 +8,9 @@
   inherit (config.stylix) base16Scheme fonts;
   inherit (osConfig.myOptions.hardwareFeatures) laptop;
   inherit (osConfig.myOptions) desktopTheme;
-  iconSize = desktopTheme.fonts.desktop.size - 1;
-  barHeight = 44;
-  barPosition = "bottom";
+  iconSize = desktopTheme.fonts.desktop.size - 2;
+  barHeight = 38;
+  barPosition = "top";
   workspacesModule = ''
     "hyprland/workspaces": {
       "on-click": "activate",
@@ -175,7 +175,7 @@
       "icon-size": 24,
       "icon": true,
       "max-length": 50,
-      "format": "{title}"
+      "format": "{initialTitle}"
     }
   '';
   quickAccessModuleLaptop = ''
@@ -250,12 +250,13 @@
     "height": ${builtins.toString barHeight},
     "modules-left": [
       "custom/search",
-      "hyprland/workspaces",
-      "hyprland/window"
+      "clock"
+    ],
+    "modules-center": [
+      "hyprland/workspaces"
     ],
     "modules-right": [
       "group/quick-access-slider",
-      "clock",
       "custom/power"
     ]
   '';

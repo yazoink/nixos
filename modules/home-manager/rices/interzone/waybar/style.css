@@ -12,7 +12,8 @@ window#waybar {
 }
 
 #custom-left-arrow {
-  font-size: 10pt;
+  font-size: 9pt;
+  color: @unfocused;
 }
 
 #tray-expander,
@@ -22,17 +23,14 @@ window#waybar {
 }
 
 #quick-access {
-  margin-left: 7px;
+  margin-left: 12px;
 }
 
-#quick-access,
 #workspaces,
 #custom-search,
-#custom-power,
-#clock {
-  background-color: @bg2;
-  padding-left: 14px;
-  padding-right: 14px;
+#custom-power {
+  padding-left: 7px;
+  padding-right: 7px;
   margin-top: 7px;
   margin-bottom: 7px;
   border-radius: 10px;
