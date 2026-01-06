@@ -27,7 +27,7 @@ in {
       ignore_window = true;
       range = 5;
       offset = "0 0";
-      render_power = 3;
+      render_power = 5;
       color =
         if (config.stylix.polarity == "dark")
         then "rgba(00000040)"
