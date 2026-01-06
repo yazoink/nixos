@@ -24,7 +24,7 @@ in {
     plugin = {
       hyprbars = {
         bar_color = "rgb(${base16Scheme.base00})";
-        inactive_button_color = "rgb(${base16Scheme.base04})";
+        inactive_button_color = "rgb(${base16Scheme.base03})";
         bar_height = 38;
         bar_text_font = "${fonts.sansSerif.name} Bold";
         bar_text_size = fonts.sizes.applications;
