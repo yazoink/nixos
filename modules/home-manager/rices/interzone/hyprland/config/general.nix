@@ -21,9 +21,9 @@ in {
   };
   decoration = {
     rounding = 15;
-    blur.enabled = true;
+    blur.enabled = false;
     shadow = {
-      enabled = false;
+      enabled = true;
       ignore_window = true;
       range = 5;
       offset = "0 0";
