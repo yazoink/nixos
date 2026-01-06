@@ -80,7 +80,7 @@ in {
           decor.enable = lib.mkIf bloat true;
           experiments = {
             enable = true;
-            toolbarDevMenu = true;
+            toolbarDevMenu = false;
           };
           fakeNitro = {
             enable = true;
