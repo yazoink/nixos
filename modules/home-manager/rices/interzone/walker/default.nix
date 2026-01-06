@@ -16,7 +16,7 @@ in {
     "walker/config.toml".source = ./config.toml;
     "walker/themes/mytheme.toml".text = ''
       [ui.anchors]
-      bottom = false
+      bottom = true
       left = true
       right = false
       top = true
@@ -144,11 +144,6 @@ in {
       #sub,
       #activationlabel {
         all: unset;
-      }
-
-      #window {
-        margin-left: ${builtins.toString margin}px;
-        margin-top: ${builtins.toString marginBottom}px;
       }
 
       #cfgerr {
