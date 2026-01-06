@@ -146,10 +146,10 @@ in {
         all: unset;
       }
 
-      #window {
+      /*#window {
         margin-left: ${builtins.toString margin}px;
         margin-top: ${builtins.toString marginBottom}px;
-      }
+      }*/
 
       #cfgerr {
         background: @background;
