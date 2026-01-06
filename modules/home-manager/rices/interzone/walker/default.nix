@@ -148,7 +148,7 @@ in {
 
       #window {
         margin-left: ${builtins.toString margin}px;
-        margin-bottom: ${builtins.toString marginBottom}px;
+        margin-top: ${builtins.toString marginBottom}px;
       }
 
       #cfgerr {
