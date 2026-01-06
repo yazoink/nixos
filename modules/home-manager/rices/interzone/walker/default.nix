@@ -8,8 +8,9 @@
   margin = 5;
   marginBottom = margin + 38;
 in {
-  programs.walker = {
+  services.walker = {
     enable = true;
+    # systemd.enable = true;
   };
   xdg.configFile = {
     "walker/config.toml".source = ./config.toml;
@@ -17,7 +18,7 @@ in {
       [ui.anchors]
       bottom = false
       left = true
-      right = false
+      right = true
       top = true
 
       [ui.window]

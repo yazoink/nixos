@@ -8,7 +8,6 @@
 in {
   imports = [
     inputs.nixvim.homeModules.nixvim
-    inputs.walker.homeManagerModules.default
     inputs.nixcord.homeModules.nixcord
     inputs.zen-browser.homeModules.beta
     inputs.nvf.homeManagerModules.default
