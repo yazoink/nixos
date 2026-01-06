@@ -15,8 +15,8 @@ js_runtime = "node"
 [shell]
 anchor_top = true
 anchor_left = true
-anchor_bottom = true
-anchor_right = true
+anchor_bottom = false
+anchor_right = false
 
 [keys]
 accept_typeahead = ["tab"]

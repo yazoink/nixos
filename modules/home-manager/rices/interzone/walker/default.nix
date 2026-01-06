@@ -8,15 +8,14 @@
   margin = 5;
   marginBottom = margin + 38;
 in {
-  services.walker = {
+  programs.walker = {
     enable = true;
-    # systemd.enable = true;
   };
   xdg.configFile = {
     "walker/config.toml".source = ./config.toml;
     "walker/themes/mytheme.toml".text = ''
       [ui.anchors]
-      bottom = true
+      bottom = false
       left = true
       right = false
       top = true
@@ -144,6 +143,11 @@ in {
       #sub,
       #activationlabel {
         all: unset;
+      }
+
+      #window {
+        margin-left: ${builtins.toString margin}px;
+        margin-top: ${builtins.toString marginBottom}px;
       }
 
       #cfgerr {
