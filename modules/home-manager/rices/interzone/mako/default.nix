@@ -17,7 +17,7 @@ in {
       layer = "overlay";
       actions = "true";
       icons = "true";
-      anchor = "bottom-right";
+      anchor = "top-right";
       border-radius = "15";
       background-color = "#${config.stylix.base16Scheme.base00}";
       border-color = "#${config.stylix.base16Scheme.base02}";
@@ -26,7 +26,7 @@ in {
       border-size = "1";
       font = "${config.stylix.fonts.sansSerif.name} ${toString config.stylix.fonts.sizes.popups}";
       padding = "15";
-      margin = "0";
+      margin = "15";
       outer-margin = "${builtins.toString margin}";
       default-timeout = "5000";
       icon-path = "/run/current-system/sw/share/icons/${config.gtk.iconTheme.name}";

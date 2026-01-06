@@ -6,7 +6,7 @@
 }: let
   inherit (config.stylix) base16Scheme;
   margin = 5;
-  marginBottom = margin + 48;
+  marginBottom = margin + 38;
 in {
   services.walker = {
     enable = true;
@@ -16,10 +16,10 @@ in {
     "walker/config.toml".source = ./config.toml;
     "walker/themes/mytheme.toml".text = ''
       [ui.anchors]
-      bottom = true
+      bottom = false
       left = true
       right = false
-      top = false
+      top = true
 
       [ui.window]
       h_align = "fill"

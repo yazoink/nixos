@@ -11,7 +11,7 @@
     :x "0px"
     :y "0px"
     :width "318px"
-    :anchor "bottom right"
+    :anchor "top right"
   )
   :stacking "fg"
   :exclusive "false"
