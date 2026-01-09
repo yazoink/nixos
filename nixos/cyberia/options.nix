@@ -21,9 +21,9 @@
       colorscheme = "rose-pine";
       fonts.terminal = {
         # name = "Iosevka Nerd Font";
-        name = "Terminess Nerd Font";
+        # name = "Terminess Nerd Font";
+        name = "Aporetic Serif Mono";
         # name = "Bm437 NEC APC3 8x16";
-        # name = "Terminus";
         size = 12;
       };
       fonts.desktop = {
