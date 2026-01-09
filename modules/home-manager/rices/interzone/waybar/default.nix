@@ -279,6 +279,7 @@ in {
           ${searchModule},
           ${powerModule},
           ${windowModule},
+          ${separatorModule},
           ${quickAccessModuleLaptop}
         }
       ''
@@ -292,6 +293,7 @@ in {
           ${powerModule},
           ${searchModule},
           ${windowModule},
+          ${separatorModule},
           ${quickAccessModuleDesktop}
         }
       '';
