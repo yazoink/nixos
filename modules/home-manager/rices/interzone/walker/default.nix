@@ -6,7 +6,7 @@
 }: let
   inherit (config.stylix) base16Scheme;
   margin = 5;
-  marginBottom = margin + 38;
+  marginBottom = margin + 42;
 in {
   services.walker = {
     enable = true;
@@ -18,8 +18,8 @@ in {
       [ui.anchors]
       bottom = true
       left = true
-      right = true
-      top = true
+      right = false
+      top = false
 
       [ui.window]
       h_align = "fill"
@@ -146,10 +146,10 @@ in {
         all: unset;
       }
 
-      /*#window {
+      #window {
         margin-left: ${builtins.toString margin}px;
-        margin-top: ${builtins.toString marginBottom}px;
-      }*/
+        margin-bottom: ${builtins.toString marginBottom}px;
+      }
 
       #cfgerr {
         background: @background;

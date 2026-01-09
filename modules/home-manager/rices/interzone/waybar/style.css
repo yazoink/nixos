@@ -26,7 +26,8 @@ window#waybar {
 #quick-access-slider,
 #clock,
 #custom-search,
-#custom-power {
+#custom-power,
+custom-separator {
   padding-left: 7px;
   margin-top: 7px;
   margin-bottom: 7px;

@@ -1,7 +1,7 @@
 (defwindow calendar-window [screen]
   :monitor screen
   :geometry (geometry
-    :anchor "top right"
+    :anchor "bottom left"
     :x "0px"
     :y "0px"
   )
