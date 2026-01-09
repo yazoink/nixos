@@ -37,6 +37,10 @@ window#waybar {
   padding-right: 7px;
 }
 
+#window {
+  margin-left: -7px;
+}
+
 #workspaces {
   padding-right: 0;
 }

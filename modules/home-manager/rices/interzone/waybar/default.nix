@@ -250,7 +250,8 @@
     "height": ${builtins.toString barHeight},
     "modules-left": [
       "custom/search",
-      "hyprland/workspaces"
+      "hyprland/workspaces",
+      "hyprland/window"
     ],
     "modules-right": [
       "group/quick-access-slider",
