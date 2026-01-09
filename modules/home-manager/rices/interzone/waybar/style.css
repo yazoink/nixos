@@ -27,7 +27,7 @@ window#waybar {
 #clock,
 #custom-search,
 #custom-power,
-custom-separator {
+#custom-separator {
   padding-left: 7px;
   margin-top: 7px;
   margin-bottom: 7px;
