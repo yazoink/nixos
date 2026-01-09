@@ -18,7 +18,7 @@
         inner = 5;
         outer = 10;
       };
-      colorscheme = "rose-pine";
+      colorscheme = "everblush";
       fonts.terminal = {
         # name = "Iosevka Nerd Font";
         # name = "Terminess Nerd Font";
@@ -36,7 +36,7 @@
         type = "image";
         image = {
           fillType = "fill";
-          path = ../../wallpapers/RosesWallpaper.png;
+          path = ../../wallpapers/flowers-1.jpg;
         };
         color = {
           hex = config.stylix.base16Scheme.base03;
