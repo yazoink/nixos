@@ -9,8 +9,8 @@
   inherit (osConfig.myOptions.hardwareFeatures) laptop;
   inherit (osConfig.myOptions) desktopTheme;
   iconSize = desktopTheme.fonts.desktop.size - 2;
-  barHeight = 38;
-  barPosition = "top";
+  barHeight = 42;
+  barPosition = "bottom";
   workspacesModule = ''
     "hyprland/workspaces": {
       "on-click": "activate",
@@ -250,12 +250,15 @@
     "height": ${builtins.toString barHeight},
     "modules-left": [
       "custom/search",
-      "hyprland/workspaces",
-      "hyprland/window"
+      "custom/separator#left",
+      "clock"
+    ],
+    "modules-center": [
+      "hyprland/workspaces"
     ],
     "modules-right": [
-      "group/quick-access-slider",
-      "clock",
+      "group/quick-access",
+      "custom/separator#right",
       "custom/power"
     ]
   '';
@@ -276,6 +279,7 @@ in {
           ${searchModule},
           ${powerModule},
           ${windowModule},
+          ${separatorModule},
           ${quickAccessModuleLaptop}
         }
       ''
@@ -289,6 +293,7 @@ in {
           ${powerModule},
           ${searchModule},
           ${windowModule},
+          ${separatorModule},
           ${quickAccessModuleDesktop}
         }
       '';
