@@ -46,11 +46,11 @@ window#waybar {
 }
 
 .modules-left {
-  margin-left: 7px;
+  margin-left: 10px;
 }
 
 .modules-right {
-  margin-right: 7px;
+  margin-right: 10px;
 }
 
 tooltip {
