@@ -4,7 +4,7 @@
   ...
 }: {
   imports = [
-    ../../features/adb
+    # ../../features/adb
     ../../features/gamemode
     ../../features/kdeconnect
     ../../features/mpd
