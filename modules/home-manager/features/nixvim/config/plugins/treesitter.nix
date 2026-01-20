@@ -12,7 +12,7 @@
     };
   };
 
-  treesitter-refactor = {
-    enable = true;
-  };
+  # treesitter-refactor = {
+  #   enable = true;
+  # };
 }
