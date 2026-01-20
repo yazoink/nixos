@@ -74,7 +74,7 @@ in {
           betterUploadButton.enable = true;
           biggerStreamPreview.enable = lib.mkIf bloat true;
           callTimer.enable = lib.mkIf bloat true;
-          clearUrLs.enable = true;
+          # clearUrLs.enable = true;
           copyFileContents.enable = lib.mkIf bloat true;
           copyUserUrLs.enable = lib.mkIf bloat true;
           decor.enable = lib.mkIf bloat true;
