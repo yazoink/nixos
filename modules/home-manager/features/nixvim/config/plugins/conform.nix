@@ -27,9 +27,9 @@
         # latex = ["llf"];
       };
       formatters = {
-        phpcbf = {
-          command = "${pkgs.php83Packages.php-codesniffer}/bin/phpcbf";
-        };
+        # phpcbf = {
+        #   command = "${pkgs.php83Packages.php-codesniffer}/bin/phpcbf";
+        # };
       };
     };
   };
