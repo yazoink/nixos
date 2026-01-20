@@ -60,7 +60,7 @@
 
       ##### Samba #####
       cifs-utils
-      mtpfs
+      # mtpfs #failed to build
 
       ##### Misc #####
       linux-firmware
