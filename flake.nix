@@ -79,19 +79,11 @@
         ];
       };
 
-      iris = nixpkgs.lib.nixosSystem {
+      interzone = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs system;};
         modules = [
           ./options
-          ./nixos/iris
-        ];
-      };
-
-      tallulah = nixpkgs.lib.nixosSystem {
-        specialArgs = {inherit inputs system;};
-        modules = [
-          ./options
-          ./nixos/tallulah
+          ./nixos/interzone
         ];
       };
     };
