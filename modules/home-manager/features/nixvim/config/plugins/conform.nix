@@ -27,7 +27,7 @@
         # latex = ["llf"];
       };
       formatters = {
-        # phpcbf = {
+        # phpcbf = { # build failed
         #   command = "${pkgs.php83Packages.php-codesniffer}/bin/phpcbf";
         # };
       };
