@@ -29,11 +29,6 @@
             "camera"
           ]
           ++ (
-            if config.programs.adb.enable
-            then ["adbusers"]
-            else []
-          )
-          ++ (
             if config.myOptions.bundles.desktopBase.enable
             then [
               "audio"
