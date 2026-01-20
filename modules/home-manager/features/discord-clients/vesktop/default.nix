@@ -126,7 +126,7 @@ in {
           noProfileThemes.enable = true;
           noTypingAnimation.enable = true;
           noUnblockToJump.enable = true;
-          onePingPerDm.enable = true;
+          # onePingPerDm.enable = true;
           permissionsViewer.enable = lib.mkIf bloat true;
           pictureInPicture.enable = lib.mkIf bloat true;
           pinDMs.enable = lib.mkIf bloat true;
