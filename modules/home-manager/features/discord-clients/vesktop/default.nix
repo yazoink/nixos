@@ -129,7 +129,7 @@ in {
           # onePingPerDm.enable = true;
           permissionsViewer.enable = lib.mkIf bloat true;
           pictureInPicture.enable = lib.mkIf bloat true;
-          pinDMs.enable = lib.mkIf bloat true;
+          # pinDMs.enable = lib.mkIf bloat true;
           platformIndicators.enable = lib.mkIf bloat true;
           previewMessage.enable = true;
           relationshipNotifier.enable = true;
