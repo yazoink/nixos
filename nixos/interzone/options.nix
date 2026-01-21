@@ -66,7 +66,7 @@
       lutgen.enable = true;
     };
     hardwareFeatures = {
-      bootloader.type = "uefi";
+      bootloader.type = "legacy";
       ssd.enable = true;
       bluetooth.enable = true;
       # diskBurner.enable = true;
