@@ -29,7 +29,7 @@ in {
       margin = "5";
       outer-margin = "${builtins.toString margin}";
       default-timeout = "5000";
-      icon-path = "/run/current-system/sw/share/icons/${config.gtk.icons.name}";
+      icon-path = "/run/current-system/sw/share/icons/${config.gtk.iconTheme.name}";
     };
     /*
       extraConfig = ''
