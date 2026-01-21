@@ -48,7 +48,7 @@
         #gnome-clocks
         #gnome-disk-utility
         gnome-font-viewer
-        galculator
+        # galculator
         # d-spy
         filezilla
 
