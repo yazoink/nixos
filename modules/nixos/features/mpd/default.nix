@@ -13,12 +13,12 @@
   config = lib.mkIf config.bundles.desktopFull.mpd.enable {
     services.mpd = {
       enable = true;
-      musicDirectory = "/home/${config.myOptions.userAccount.username}/mu";
+      music_directory = "/home/${config.myOptions.userAccount.username}/mu";
       user = "${config.myOptions.userAccount.username}";
       # Optional:
-      network.listenAddress = "any"; # if you want to allow non-localhost connections
 
       settings = {
+        bind_to_address = "any";
         audio_output = [
           {
             type = "pipewire";
