@@ -8,7 +8,7 @@
     [Appearance]
     custom_palette=false
     style=kvantum
-    icon_theme=${iconTheme.${polarity}}
+    icon_theme=${icons.${polarity}}
     standard_dialogs=default
 
     [Fonts]

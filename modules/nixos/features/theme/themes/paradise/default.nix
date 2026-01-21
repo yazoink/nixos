@@ -11,7 +11,7 @@ let
 in {
   config = lib.mkIf (config.myOptions.bundles.desktopBase.enable && config.myOptions.desktopTheme.colorscheme == "paradise") {
     desktopTheme.base16Accent = "base0D";
-    desktopTheme.iconTheme = {
+    desktopTheme.icons = {
       name = "Papirus-Paradise-Yellow";
       package = icons;
     };

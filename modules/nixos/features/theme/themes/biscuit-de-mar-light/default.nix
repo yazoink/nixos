@@ -8,7 +8,7 @@
 in {
   config = lib.mkIf (config.myOptions.bundles.desktopBase.enable && config.myOptions.desktopTheme.colorscheme == "biscuit-de-mar-light") {
     desktopTheme.base16Accent = "base0B";
-    desktopTheme.iconTheme = {
+    desktopTheme.icons = {
       name = "papirus-biscuit-light";
       package = icons;
     };

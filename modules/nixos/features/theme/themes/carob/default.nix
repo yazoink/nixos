@@ -8,7 +8,7 @@
 in {
   config = lib.mkIf (config.myOptions.bundles.desktopBase.enable && config.myOptions.desktopTheme.colorscheme == "carob") {
     desktopTheme.base16Accent = "base0D";
-    desktopTheme.iconTheme = {
+    desktopTheme.icons = {
       name = "Carob";
       package = carobTheme;
     };

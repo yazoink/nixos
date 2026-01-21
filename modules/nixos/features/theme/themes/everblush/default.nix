@@ -10,7 +10,7 @@
 in {
   config = lib.mkIf (config.myOptions.bundles.desktopBase.enable && config.myOptions.desktopTheme.colorscheme == "everblush") {
     desktopTheme.base16Accent = "base0D";
-    desktopTheme.iconTheme = {
+    desktopTheme.icons = {
       name = "Everblush-Icons";
       package = icons;
     };

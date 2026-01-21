@@ -9,7 +9,7 @@
 in {
   config = lib.mkIf (config.myOptions.bundles.desktopBase.enable && config.myOptions.desktopTheme.colorscheme == "tarot") {
     desktopTheme.base16Accent = "base0A";
-    desktopTheme.iconTheme = {
+    desktopTheme.icons = {
       name = "Tarot-Icons";
       package = tarotIcons;
     };

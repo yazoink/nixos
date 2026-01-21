@@ -8,7 +8,7 @@
 in {
   config = lib.mkIf (config.myOptions.bundles.desktopBase.enable && config.myOptions.desktopTheme.colorscheme == "manuscript") {
     desktopTheme.base16Accent = "base0A";
-    desktopTheme.iconTheme = {
+    desktopTheme.icons = {
       name = "Manuscript-Icons";
       package = manuscriptTheme;
     };

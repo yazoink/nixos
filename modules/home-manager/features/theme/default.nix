@@ -8,11 +8,11 @@
   config = lib.mkIf osConfig.myOptions.bundles.desktopBase.enable (
     lib.mkMerge [
       {
-        stylix.iconTheme = {
+        stylix.icons = {
           enable = true;
-          dark = osConfig.desktopTheme.iconTheme.name;
-          light = osConfig.desktopTheme.iconTheme.name;
-          package = osConfig.desktopTheme.iconTheme.package;
+          dark = osConfig.desktopTheme.icons.name;
+          light = osConfig.desktopTheme.icons.name;
+          package = osConfig.desktopTheme.icons.package;
         };
       }
       (import ./gtk {inherit config osConfig;})

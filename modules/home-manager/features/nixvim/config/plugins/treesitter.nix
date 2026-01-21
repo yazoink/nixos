@@ -2,7 +2,7 @@
   treesitter = {
     enable = true;
     nixvimInjections = true;
-    folding = false;
+    folding.enable = false;
     nixGrammars = true;
     settings = {
       ensure_installed = "all";
