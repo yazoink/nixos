@@ -33,7 +33,7 @@
     LIBVA_DRIVER_NAME = "i965";
   };
 
-  boot.kernelParams = ["i915.enable_rc6=7"];
+  # boot.kernelParams = ["i915.enable_rc6=7"];
 
   hardware.graphics = {
     enable = true;
