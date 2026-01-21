@@ -32,7 +32,7 @@ in {
         '';
       };
     };
-    xdg.configFile."mimeapps.list".force = true;
+    xdg.configFile."mimeapps.list".force = false;
     xdg = {
       mimeApps = rec {
         enable = true;
