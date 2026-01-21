@@ -11,7 +11,7 @@
     ../../modules/nixos
     inputs.home-manager.nixosModules.home-manager
     inputs.stylix.nixosModules.stylix
-    inputs.nixos-hardware.nixosModules.lenovo-thinkpad-x220
+    # inputs.nixos-hardware.nixosModules.lenovo-thinkpad-x220
   ];
 
   home-manager = {
@@ -31,5 +31,14 @@
 
   environment.sessionVariables = {
     LIBVA_DRIVER_NAME = "i965";
+  };
+
+  hardware.graphics = {
+    enable = true;
+    extraPackages = with pkgs; [
+      intel-vaapi-driver
+      libvdpau-va-gl
+      # intel-media-sdk
+    ];
   };
 }
