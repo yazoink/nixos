@@ -60,7 +60,7 @@
 
       ##### Samba #####
       cifs-utils
-      mtpfs
+      # mtpfs
       ##### Misc #####
       linux-firmware
     ];
