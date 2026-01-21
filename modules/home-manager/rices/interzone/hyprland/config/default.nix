@@ -14,7 +14,7 @@ lib.mkMerge [
       (import ./animations.nix)
       (import ./env_vars.nix {inherit osConfig;})
       (import ./window_rules.nix)
-      (import ./general.nix {inherit config osConfig;})
+      # (import ./general.nix {inherit config osConfig;})
       (import ./hardware.nix {inherit lib osConfig;})
       (import ./vars.nix {inherit config osConfig;})
     ];
