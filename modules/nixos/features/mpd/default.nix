@@ -13,11 +13,11 @@
   config = lib.mkIf config.bundles.desktopFull.mpd.enable {
     services.mpd = {
       enable = true;
-      musicDirectory = "/home/${config.myOptions.userAccount.username}/mu";
       user = "${config.myOptions.userAccount.username}";
       # Optional:
 
       settings = {
+        music_directory = "/home/${config.myOptions.userAccount.username}/mu";
         bind_to_address = "any";
         audio_output = [
           {
