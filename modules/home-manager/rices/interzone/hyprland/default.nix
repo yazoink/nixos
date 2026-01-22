@@ -26,7 +26,7 @@
     {
       enable = true;
       package = pkgs.hyprland;
-      portalPackage = null;
+      portalPackage = pkgs.xdg-deskstop-portal-hyprland;
     }
     (import ./config {
       inherit lib osConfig config pkgs inputs;
