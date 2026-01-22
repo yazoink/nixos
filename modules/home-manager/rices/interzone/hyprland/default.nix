@@ -25,7 +25,7 @@
   wayland.windowManager.hyprland = lib.mkMerge [
     {
       enable = true;
-      package = null;
+      package = pkgs.hyprland;
       portalPackage = null;
     }
     (import ./config {
