@@ -25,8 +25,8 @@
   wayland.windowManager.hyprland = lib.mkMerge [
     {
       enable = true;
-      package = pkgs.hyprland;
-      portalPackage = pkgs.xdg-deskstop-portal-hyprland;
+      package = null;
+      portalPackage = null;
     }
     (import ./config {
       inherit lib osConfig config pkgs inputs;
