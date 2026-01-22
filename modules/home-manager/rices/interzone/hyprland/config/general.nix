@@ -7,6 +7,9 @@
   inherit (osConfig.myOptions.desktopTheme.windowGaps) inner outer;
   borderColor = "rgb(${base16Scheme.base01})";
 in {
+  debug = {
+    disable_logs = false;
+  };
   general = {
     gaps_in = inner;
     gaps_out = outer;
