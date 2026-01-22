@@ -28,8 +28,8 @@
       package = null;
       portalPackage = null;
     }
-    # (import ./config {
-    #   inherit lib osConfig config pkgs inputs;
-    # })
+    (import ./config {
+      inherit lib osConfig config pkgs inputs;
+    })
   ];
 }
