@@ -15,7 +15,7 @@ in {
     (import ./mako {inherit config osConfig lib pkgs;}) # either fnott or mako
     (import ./hypridle {inherit config osConfig lib pkgs;})
     (import ./hyprlock {inherit config osConfig lib pkgs;})
-    (import ./hyprland {inherit config osConfig lib pkgs inputs;})
+    # (import ./hyprland {inherit config osConfig lib pkgs inputs;})
     (import ./swayosd {inherit config osConfig lib pkgs;})
     (import ./walker {inherit config osConfig lib pkgs;})
     # (import ./wofi {inherit config osConfig lib pkgs;}) # eithet walker or wofi
