@@ -17,8 +17,8 @@ function main() {
     for arg in "$@"; do
         case "$arg" in
             "-s" | "--switch") switch_arg="switch" ;;
-            "-t" | "--test") switch_arg="test" ;;
             "-b" | "--boot") switch_arg="boot" ;;
+            "-t" | "--test") switch_arg="test" ;;
             "-i" | "--impure") extra_args="$extra_args --impure" ;;
             "-o" | "--offline") extra_args="$extra_args --offline" ;;
             "-d" | "--debug") extra_args="$extra_args --show-trace" ;;
