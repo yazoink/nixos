@@ -2,9 +2,9 @@
   myOptions = {
     userAccount.username = "gene";
     defaultApps = {
-      # fileManager = {
-      #   command = "thunar";
-      # };
+      fileManager = {
+        command = "thunar";
+      };
       terminal = {
         command = "footclient";
       };
@@ -50,8 +50,8 @@
     };
     features = {
       virtManager.enable = true;
-      virtualbox.enable = true;
-      spaceCadetPinball.enable = true;
+      # virtualbox.enable = true;
+      # spaceCadetPinball.enable = true;
       prismlauncher.enable = true;
       lutgen.enable = true;
       krita.enable = true;

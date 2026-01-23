@@ -76,6 +76,7 @@
         type = "uefi";
       };
       ssd.enable = true;
+      bluetooth.enable = true;
     };
   };
 }
