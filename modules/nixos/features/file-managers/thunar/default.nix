@@ -7,7 +7,6 @@
   config = lib.mkIf (config.myOptions.bundles.desktopBase.enable && config.myOptions.defaultApps.fileManager.command == "thunar") {
     defaultApps.fileManager.desktopFile = "thunar.desktop";
     programs = {
-      file-roller.enable = true;
       thunar = {
         enable = true;
         plugins = with pkgs.xfce; [
@@ -18,6 +17,8 @@
       };
       xfconf.enable = true;
     };
+
+    environment.systemPackages = with pkgs; file-roller;
 
     services = {
       gvfs.enable = true;
