@@ -15,13 +15,13 @@
     userAccount.username = "gene";
     desktopTheme = {
       rice.interzone.enable = true;
-      colorscheme = "everblush";
+      colorscheme = "carob";
       wallpaper = {
         type = "image";
         image = {
           fillType = "fill";
-          path = ../../wallpapers/1751142470750001.jpg;
-          # path = ../../wallpapers/wall1.jpg;
+          # path = ../../wallpapers/flowers-1.jpg;
+          path = ../../wallpapers/sumingliu-youyou-e89_8VQOKPI.jpg;
         };
       };
       windowGaps = {
