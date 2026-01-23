@@ -14,6 +14,7 @@
     services.mpd = {
       enable = true;
       user = "${config.myOptions.userAccount.username}";
+      openFirewall = true;
       # Optional:
 
       settings = {
