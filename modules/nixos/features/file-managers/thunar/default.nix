@@ -6,6 +6,7 @@
 }: {
   config = lib.mkIf (config.myOptions.bundles.desktopBase.enable && config.myOptions.defaultApps.fileManager.command == "thunar") {
     defaultApps.fileManager.desktopFile = "thunar.desktop";
+    environment.systemPackages = with pkgs; [file-roller];
     programs = {
       thunar = {
         enable = true;
@@ -17,8 +18,6 @@
       };
       xfconf.enable = true;
     };
-
-    environment.systemPackages = with pkgs; file-roller;
 
     services = {
       gvfs.enable = true;
