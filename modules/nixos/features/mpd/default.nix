@@ -20,6 +20,7 @@
       settings = {
         music_directory = "/home/${config.myOptions.userAccount.username}/mu";
         bind_to_address = "any";
+        port = 6600;
         audio_output = [
           {
             type = "pipewire";
