@@ -10,6 +10,7 @@
       };
       mediaPlayer.command = "mpv";
       documentReader.command = "zathura";
+      fileManager.command = "thunar";
     };
     userAccount.username = "gene";
     desktopTheme = {
