@@ -24,7 +24,7 @@
         )
         (button
           :class "power-button"
-          :onclick "bash ./scripts/confirm_prompt.sh 'Exit window manager?' 'hyprctl dispatch exit' & disown"
+          :onclick "bash ./scripts/confirm_prompt.sh 'Exit window manager?' 'command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch exit' & disown"
           :tooltip "Exit (e)"
           ""
         )

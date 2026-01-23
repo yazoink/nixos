@@ -5,6 +5,7 @@
     "$mainMod, F, togglefloating,"
     "$mainMod SHIFT, P, pseudo,"
     "$mainMod, X, pin,"
+    "$mainMod, V, togglesplit,"
     "$mainMod, M, fullscreen, 1"
     "$mainMod SHIFT, M, fullscreen, 0"
 
