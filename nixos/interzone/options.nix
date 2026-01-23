@@ -20,7 +20,7 @@
         type = "image";
         image = {
           fillType = "fill";
-          path = ../../wallpapers/flowers-1.jpg;
+          path = ../../wallpapers/1751142470750001.jpg;
           # path = ../../wallpapers/wall1.jpg;
         };
       };
