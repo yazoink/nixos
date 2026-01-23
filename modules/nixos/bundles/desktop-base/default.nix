@@ -20,7 +20,7 @@
   ];
 
   config = lib.mkIf config.myOptions.bundles.desktopBase.enable {
-    boot.loader.timeout = 0;
+    boot.loader.timeout = 5;
     myOptions = {
       bundles.base.enable = true;
     };
