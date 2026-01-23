@@ -19,7 +19,7 @@ lib.mkMerge [
       (import ./vars.nix {inherit config osConfig;})
     ];
   }
-  (import ./plugins {
-    inherit lib pkgs config osConfig inputs;
-  })
+  # (import ./plugins {
+  #   inherit lib pkgs config osConfig inputs;
+  # })
 ]
