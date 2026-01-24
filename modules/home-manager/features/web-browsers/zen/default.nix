@@ -12,6 +12,7 @@
     home = {
       sessionVariables = {
         MOZ_USE_XINPUT2 = 1;
+        MOZ_LEGACY_PROFILES = 1;
       };
     };
     stylix.targets.zen-browser.profileNames = ["main"];
