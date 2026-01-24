@@ -42,7 +42,7 @@
         )
         (button
           :class "power-button"
-          :onclick "bash ./scripts/confirm_prompt.sh 'Shut down system?' 'systemctl shutdown' & disown"
+          :onclick "bash ./scripts/confirm_prompt.sh 'Shut down system?' 'shutdown now' & disown"
           :tooltip "Shutdown (s)"
           ""
         )
