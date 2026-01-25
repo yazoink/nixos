@@ -51,7 +51,6 @@
               violentmonkey
               localcdn
               clearurls
-              libredirect
               floccus
               control-panel-for-twitter
             ]
@@ -66,6 +65,7 @@
           "zen.welcome-screen.seen" = true;
           "zen.urlbar.behavior" = "float";
           "zen.theme.content-element-separation" = 0;
+          "zen.view.experimental-no-window-controls" = true;
 
           "browser.aboutConfig.showWarning" = false;
           "browser.tabs.warnOnClose" = false;
