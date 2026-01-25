@@ -5,7 +5,7 @@
   osConfig,
   ...
 }: let
-  margin = 0;
+  margin = 5;
 in {
   home.packages = with pkgs; [
     libnotify
@@ -26,7 +26,7 @@ in {
       border-size = "1";
       font = "${config.stylix.fonts.sansSerif.name} ${toString config.stylix.fonts.sizes.popups}";
       padding = "15";
-      margin = "5";
+      margin = "0";
       outer-margin = "${builtins.toString margin}";
       default-timeout = "5000";
       icon-path = "/run/current-system/sw/share/icons/${config.gtk.iconTheme.name}";
