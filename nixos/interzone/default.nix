@@ -11,7 +11,7 @@
     ../../modules/nixos
     inputs.home-manager.nixosModules.home-manager
     inputs.stylix.nixosModules.stylix
-    # inputs.nixos-hardware.nixosModules.lenovo-thinkpad-x220
+    inputs.nixos-hardware.nixosModules.lenovo-thinkpad-x220
   ];
 
   home-manager = {
@@ -33,7 +33,8 @@
   #  LIBVA_DRIVER_NAME = "i965";
   #};
 
-  boot.kernelParams = ["i915.enable_rc6=7"];
+  /*
+    boot.kernelParams = ["i915.enable_rc6=7"];
 
   hardware.graphics = {
     enable = true;
@@ -43,4 +44,5 @@
       # intel-media-sdk
     ];
   };
+  */
 }
