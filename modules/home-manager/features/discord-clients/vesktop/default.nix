@@ -74,9 +74,9 @@ in {
           betterUploadButton.enable = true;
           biggerStreamPreview.enable = lib.mkIf bloat true;
           callTimer.enable = lib.mkIf bloat true;
-          # clearUrLs.enable = true;
+          ClearURLs.enable = true;
           copyFileContents.enable = lib.mkIf bloat true;
-          # copyUserUrLs.enable = lib.mkIf bloat true;
+          CopyUserURLs.enable = lib.mkIf bloat true;
           decor.enable = lib.mkIf bloat true;
           experiments = {
             enable = true;
@@ -122,6 +122,7 @@ in {
           noDevtoolsWarning.enable = true;
           noF1.enable = true;
           noMaskedUrlPaste.enable = true;
+          noMosaic.enable = true;
           noOnboardingDelay.enable = true;
           noProfileThemes.enable = true;
           noTypingAnimation.enable = true;
