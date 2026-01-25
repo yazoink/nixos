@@ -17,7 +17,7 @@ in {
       layer = "overlay";
       actions = "true";
       icons = "true";
-      anchor = "top-right";
+      anchor = "bottom-right";
       border-radius = "15";
       background-color = "#${config.stylix.base16Scheme.base00}";
       border-color = "#${config.stylix.base16Scheme.base01}";
