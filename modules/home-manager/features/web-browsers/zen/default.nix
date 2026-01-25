@@ -56,6 +56,17 @@
             ]
             (lib.mkIf osConfig.myOptions.hardwareFeatures.h264ify.enable [enhanced-h264ify])
           ];
+        mods = [
+          "1b88a6d1-d931-45e8-b6c3-bfdca2c7e9d6" # remove tab x
+          "a6335949-4465-4b71-926c-4a52d34bc9c0" # better find bar
+          "b0f635d7-c3bf-4709-af68-4712f0e5b2e5" # cleaner bookmark menu
+          "1e9f3101-210b-4ff5-8830-434e4919100d" # better letterboxing
+          "6c122084-c4ec-4c9e-8cc5-3d87c3a089cb" # navbar margin
+        ];
+        search = {
+          force = true;
+          default = "ddg";
+        };
         settings = {
           "zen.workspaces.continue-where-left-off" = true;
           "zen.workspaces.natural-scroll" = true;
@@ -64,8 +75,9 @@
           "zen.view.compact.animate-sidebar" = false;
           "zen.welcome-screen.seen" = true;
           "zen.urlbar.behavior" = "float";
-          "zen.theme.content-element-separation" = 0;
+          "zen.theme.content-element-separation" = 15;
           "zen.view.experimental-no-window-controls" = true;
+          "zen.urlbar.replace-newtab" = false;
 
           "browser.aboutConfig.showWarning" = false;
           "browser.tabs.warnOnClose" = false;
