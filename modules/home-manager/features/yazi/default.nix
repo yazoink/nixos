@@ -13,7 +13,7 @@
   config = lib.mkIf config.bundles.base.yazi.enable {
     programs.yazi = {
       enable = true;
-      package = pkgs-stable.yazi;
+      # package = pkgs-stable.yazi;
       enableZshIntegration = true;
       shellWrapperName = "y";
       settings = {

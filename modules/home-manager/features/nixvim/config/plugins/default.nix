@@ -15,7 +15,7 @@
       colorizer.enable = true;
       luasnip.enable = true;
     }
-    (import ./lualine.nix {inherit config lib;})
+    # (import ./lualine.nix {inherit config lib;})
     # (import ./bufferline.nix {inherit config lib;})
     (import ./floaterm.nix)
     (import ./gitsigns.nix)

@@ -12,6 +12,7 @@
       (import ./pairs.nix)
       (import ./comment.nix)
       (import ./tabline.nix)
+      (import ./statusline.nix)
     ];
   };
 }
