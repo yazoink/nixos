@@ -2,7 +2,7 @@
   pkgs,
   config,
   lib,
-  inputs,
+  pkgs-stable,
   ...
 }: {
   options = {
@@ -12,6 +12,6 @@
     };
   };
   config = lib.mkIf config.bundles.base.zenKernel.enable {
-    boot.kernelPackages = inputs.nixpkgs-stable.linuxKernel.packages.linux_zen;
+    boot.kernelPackages = pkgs-stable.linuxKernel.packages.linux_zen;
   };
 }

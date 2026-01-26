@@ -50,11 +50,14 @@
     ...
   } @ inputs: let
     system = "x86_64-linux";
+    lib = nixpkgs.lib;
+    pkgs = nixpkgs.legacyPackages.${system};
+    pkgs-stable = nixpkgs-stable.legacyPackages.${system};
   in {
     nixosConfigurations = {
       ##### Desktop #####
       fluoride = nixpkgs.lib.nixosSystem {
-        specialArgs = {inherit inputs system;};
+        specialArgs = {inherit inputs system pkgs-stable;};
         modules = [
           ./options
           ./nixos/fluoride
@@ -63,7 +66,7 @@
 
       ##### Laptop #####
       cyberia = nixpkgs.lib.nixosSystem {
-        specialArgs = {inherit inputs system;};
+        specialArgs = {inherit inputs system pkgs-stable;};
         modules = [
           ./options
           ./nixos/cyberia
@@ -72,7 +75,7 @@
 
       ##### Portable Laptop #####
       stardust = nixpkgs.lib.nixosSystem {
-        specialArgs = {inherit inputs system;};
+        specialArgs = {inherit inputs system pkgs-stable;};
         modules = [
           ./options
           ./nixos/stardust
@@ -80,7 +83,7 @@
       };
 
       interzone = nixpkgs.lib.nixosSystem {
-        specialArgs = {inherit inputs system;};
+        specialArgs = {inherit inputs system pkgs-stable;};
         modules = [
           ./options
           ./nixos/interzone
