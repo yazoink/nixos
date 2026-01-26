@@ -2,8 +2,8 @@
   description = "Gene's NixOS config";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-    # nixpkgs-stable.url = "nixpkgs/nixos-25.05";
+    nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
+    nixpkgs.url = "nixpkgs/nixos-25.11";
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -40,7 +40,7 @@
 
   outputs = {
     nixpkgs,
-    # nixpkgs-stable,
+    nixpkgs-unstable,
     home-manager,
     stylix,
     nixos-hardware,
