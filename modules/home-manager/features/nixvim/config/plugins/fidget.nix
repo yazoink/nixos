@@ -1,0 +1,5 @@
+{
+  fidget = {
+    enable = true;
+  };
+}

@@ -13,7 +13,6 @@
       (import ./comment.nix)
       (import ./tabline.nix)
       (import ./statusline.nix)
-      (import ./completion.nix {inherit lib;})
     ];
   };
 }
