@@ -25,7 +25,7 @@
     (import ./illuminate.nix)
     (import ./treesitter.nix)
     (import ./conform.nix {inherit pkgs;})
-    (import ./cmp.nix)
+    # (import ./cmp.nix)
     (import ./lsp.nix)
     (import ./telescope.nix)
     # (import ./undotree.nix)
