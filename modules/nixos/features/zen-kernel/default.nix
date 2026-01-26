@@ -12,6 +12,6 @@
     };
   };
   config = lib.mkIf config.bundles.base.zenKernel.enable {
-    boot.kernelPackages = inputs.pkgs-stable.linuxKernel.packages.linux_zen;
+    boot.kernelPackages = inputs.nixpkgs-stable.linuxKernel.packages.linux_zen;
   };
 }
