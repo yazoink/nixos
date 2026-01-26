@@ -49,6 +49,7 @@ in {
       "match:focus true, hyprbars:title_color rgb(${base16Scheme.base05})"
       # "match:focus true, hyprbars:bar_color rgb(${base16Scheme.base00})"
       "match:class ^(org.kde.kruler), hyprbars:no_bar true"
+      "match:class ^(Select Destination Folder), hyprbars:no_bar true"
       "match:class ^(Vesktop), hyprbars:no_bar true"
       "match:class ^(File Upload), hyprbars:no_bar true"
       "match:class ^(Empty Trash), hyprbars:no_bar true"

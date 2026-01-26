@@ -1,6 +1,7 @@
 {
   windowrule = [
     "match:title ^(HyprViewBinds)$, float true"
+    "match:title ^(File Operation Progress)$, float true"
     "match:title ^(Rename)(.*)$, float true"
     "match:class ^(org.kde.kruler)$, float true"
     "match:title ^(galculator)$, float true"
