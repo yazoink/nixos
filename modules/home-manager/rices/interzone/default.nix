@@ -9,7 +9,7 @@
   inherit (osConfig.myOptions.desktopTheme.rice) interzone;
 in {
   config = lib.mkIf interzone.enable (lib.mkMerge [
-    (import ./display-manager {inherit config osConfig lib pkgs;})
+    # (import ./display-manager {inherit config osConfig lib pkgs;})
     (import ./eww {inherit config osConfig lib pkgs;})
     # (import ./fnott {inherit config osConfig lib pkgs;})
     (import ./mako {inherit config osConfig lib pkgs;}) # either fnott or mako

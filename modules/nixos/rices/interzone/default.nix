@@ -10,5 +10,6 @@ in {
   config = lib.mkIf interzone.enable (lib.mkMerge [
     (import ./hyprland {inherit pkgs inputs;})
     (import ./hyprlock {})
+    (import ./regreet {})
   ]);
 }
