@@ -11,6 +11,7 @@
       (import ./icons.nix)
       (import ./pairs.nix)
       (import ./comment.nix)
+      (import ./tabline.nix)
     ];
   };
 }
