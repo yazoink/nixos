@@ -23,22 +23,24 @@
           linemode = "size";
           show_symlink = true;
         };
-        status = {
-          sep_left = {
-            open = "";
-            close = "";
+        theme = {
+          status = {
+            sep_left = {
+              open = "";
+              close = "";
+            };
+            sep_right = {
+              open = "";
+              close = "";
+            };
           };
-          sep_right = {
-            open = "";
-            close = "";
+          icon = {
+            globs = [];
+            dirs = [];
+            files = [];
+            exts = [];
+            conds = [];
           };
-        };
-        icon = {
-          globs = [];
-          dirs = [];
-          files = [];
-          exts = [];
-          conds = [];
         };
       };
     };
