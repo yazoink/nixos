@@ -28,7 +28,8 @@
     (import ./cmp.nix)
     (import ./lsp.nix)
     (import ./telescope.nix)
-    (import ./fidget.nix)
+    # (import ./fidget.nix)
+    (import ./noice.nix)
     # (import ./undotree.nix)
   ];
 }

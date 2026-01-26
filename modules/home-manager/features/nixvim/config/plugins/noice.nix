@@ -1,0 +1,5 @@
+{
+  noice = {
+    enable = true;
+  };
+}
