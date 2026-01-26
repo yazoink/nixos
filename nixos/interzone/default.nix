@@ -27,9 +27,9 @@
 
   networking.hostName = "interzone";
 
-  nixpkgs.config.permittedInsecurePackages = ["intel-media-sdk-23.2.2"];
+  # nixpkgs.config.permittedInsecurePackages = ["intel-media-sdk-23.2.2"];
 
-  # hardware.cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
+  hardware.cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
 
   #environment.sessionVariables = {
   #  LIBVA_DRIVER_NAME = "i965";
