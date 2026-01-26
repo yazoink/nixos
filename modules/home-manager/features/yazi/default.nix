@@ -23,25 +23,6 @@
           linemode = "size";
           show_symlink = true;
         };
-        theme = {
-          status = {
-            sep_left = {
-              open = "";
-              close = "";
-            };
-            sep_right = {
-              open = "";
-              close = "";
-            };
-          };
-          icon = {
-            globs = [];
-            dirs = [];
-            files = [];
-            exts = [];
-            conds = [];
-          };
-        };
       };
     };
   };
