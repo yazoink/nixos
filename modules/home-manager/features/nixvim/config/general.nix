@@ -25,7 +25,7 @@ in {
     ignorecase = true;
     smartcase = true;
     wrap = true;
-    noshowmode = true;
+    # noshowmode = true;
   };
   clipboard = {
     register = "unnamedplus";
