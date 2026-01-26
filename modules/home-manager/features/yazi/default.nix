@@ -23,8 +23,22 @@
           linemode = "size";
           show_symlink = true;
         };
+        status = {
+          sep_left = {
+            open = "";
+            close = "";
+          };
+          sep_right = {
+            open = "";
+            close = "";
+          };
+        };
         icon = {
-          rules = [];
+          globs = [];
+          dirs = [];
+          files = [];
+          exts = [];
+          conds = [];
         };
       };
     };
