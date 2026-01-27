@@ -30,13 +30,13 @@
       username = "gene";
     };
     desktopTheme = {
-      colorscheme = "biscuit-de-mar-light";
+      colorscheme = "carob";
       # name = "everblush";
       wallpaper = {
         type = "image";
         image = {
           fillType = "fill";
-          path = ../../wallpapers/biscuit-de-mar/peter-bucks-hY4TcvzyPlw-unsplash_current.png;
+          path = ../../wallpapers/andrei-lazarev-QtM-8j_1o3Q.jpg;
         };
       };
       windowGaps = {
