@@ -52,7 +52,8 @@
         };
         serif = {
           package = pkgs.gyre-fonts;
-          name = "DejaVu Math TeX Gyre";
+          # name = "DejaVu Math TeX Gyre";
+          name = "TeX Gyre Schola";
         };
       };
       image = config.myOptions.desktopTheme.wallpaper.image.path;
