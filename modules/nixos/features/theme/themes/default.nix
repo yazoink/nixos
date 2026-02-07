@@ -52,5 +52,6 @@
     ./i-cant-believe-its-not-butter
     ./i-forgor
     ./idk_what_this_one_is_called
+    ./posterpole
   ];
 }

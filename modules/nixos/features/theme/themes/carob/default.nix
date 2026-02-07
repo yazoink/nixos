@@ -17,17 +17,18 @@ in {
       cursor = {
         name = "Bibata-Carob";
         package = carobTheme;
+        # size = 24;
       };
       base16Scheme = {
         base00 = "242120";
-        base01 = "2b2726";
-        base02 = "332e2b";
-        base03 = "3b3431";
-        base04 = "ad9b84";
-        base05 = "b5a48d";
-        base06 = "bdae97";
-        base07 = "c8baa4";
-        base08 = "c65f5f";
+        base01 = "2F2B29";
+        base02 = "3A3532";
+        base03 = "45403A";
+        base04 = "71685E";
+        base05 = "C8BAA4";
+        base06 = "C8BAA4";
+        base07 = "C8BAA4";
+        base08 = "C65F5F";
         base09 = "d08b65";
         base0A = "d9b27c";
         base0B = "859e82";
