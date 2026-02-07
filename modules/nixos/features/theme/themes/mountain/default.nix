@@ -1,7 +1,17 @@
-{pkgs, config, lib, ...}:
 {
+  pkgs,
+  config,
+  lib,
+  ...
+}: let
+  icons = pkgs.callPackage ./icons.nix;
+in {
   config = lib.mkIf (config.myOptions.bundles.desktopBase.enable && config.myOptions.desktopTheme.colorscheme == "mountain") {
     desktopTheme.base16Accent = "base0D";
+    desktopTheme.icons = {
+      name = "Mountain";
+      package = icons;
+    };
 
     stylix = {
       base16Scheme = {

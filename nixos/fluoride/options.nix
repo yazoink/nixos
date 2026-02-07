@@ -30,7 +30,7 @@
       username = "gene";
     };
     desktopTheme = {
-      colorscheme = "carob";
+      colorscheme = "posterpole";
       # name = "everblush";
       wallpaper = {
         type = "image";
