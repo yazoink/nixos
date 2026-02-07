@@ -28,7 +28,7 @@ in {
         base05 = "C8BAA4";
         base06 = "C8BAA4";
         base07 = "C8BAA4";
-        base08 = "C8BAA4";
+        base08 = "C65F5F";
         base09 = "d08b65";
         base0A = "d9b27c";
         base0B = "859e82";
