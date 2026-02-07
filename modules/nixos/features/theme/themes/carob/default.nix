@@ -17,7 +17,7 @@ in {
       cursor = {
         name = "Bibata-Carob";
         package = carobTheme;
-        size = 24;
+        # size = 24;
       };
       base16Scheme = {
         base00 = "242120";
