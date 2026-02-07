@@ -53,6 +53,7 @@
               clearurls
               floccus
               control-panel-for-twitter
+              keepassxc-browser
             ]
             (lib.mkIf osConfig.myOptions.hardwareFeatures.h264ify.enable [enhanced-h264ify])
           ];

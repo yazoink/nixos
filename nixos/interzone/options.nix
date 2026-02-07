@@ -62,7 +62,7 @@
       # virtualbox.enable = true;
       # expenses.enable = true;
       krita.enable = true;
-      # calibre.enable = true;
+      calibre.enable = true;
       # obsidian.enable = true;
       lutgen.enable = true;
     };
