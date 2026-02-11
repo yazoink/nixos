@@ -3,6 +3,7 @@
 {
   lib,
   config,
+  pkgs,
   ...
 }: rec {
   options = {
@@ -262,7 +263,10 @@
               description = ''
                 Path to wallpaper. Required for stylix, even if color is set.
               '';
-              default = ../wallpapers/flowers-1.jpg;
+              default = pkgs.fetchUrl {
+                url = "https://raw.githubusercontent.com/yazoink/wallpapers/refs/heads/main/trees-and-leaves/andrei-lazarev-QtM-8j_1o3Q.jpg";
+                hash = "";
+              };
             };
           };
           color = {

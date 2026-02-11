@@ -1,4 +1,8 @@
-{config, ...}: {
+{
+  config,
+  pkgs,
+  ...
+}: {
   myOptions = builtins.trace "options set" {
     defaultApps = {
       discordClient = {
@@ -36,7 +40,10 @@
         type = "image";
         image = {
           fillType = "fill";
-          path = ../../wallpapers/andrei-lazarev-QtM-8j_1o3Q.jpg;
+          path = pkgs.fetchUrl {
+            url = "https://raw.githubusercontent.com/yazoink/wallpapers/refs/heads/main/trees-and-leaves/andrei-lazarev-QtM-8j_1o3Q.jpg";
+            hash = "";
+          };
         };
       };
       windowGaps = {

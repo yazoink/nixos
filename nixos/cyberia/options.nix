@@ -1,4 +1,8 @@
-{config, ...}: {
+{
+  config,
+  pkgs,
+  ...
+}: {
   myOptions = {
     userAccount.username = "gene";
     defaultApps = {
@@ -36,8 +40,12 @@
         type = "image";
         image = {
           fillType = "fill";
-          path = ../../wallpapers/wall1.jpg;
+          path = pkgs.fetchUrl {
+            url = "https://raw.githubusercontent.com/yazoink/wallpapers/refs/heads/main/trees-and-leaves/wall1.jpg";
+            hash = "";
+          };
         };
+      };
         color = {
           hex = config.stylix.base16Scheme.base03;
         };
