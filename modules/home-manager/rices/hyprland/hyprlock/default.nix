@@ -7,6 +7,10 @@
     template = ./hyprlock-colors.conf.mustache;
     extension = "conf";
   };
+  fractionalScaling =
+    if (osConfig.networking.hostName == "fluoride")
+    then "1"
+    else "2";
 in {
   xdg.configFile = {
     # "hypr/hyprlock-colors.conf".source = confFile;
@@ -19,12 +23,14 @@ in {
       general {
         hide_cursor = false
         grace = 0
+        ignore_empty_input = true
+        fractional_scaling = ${fractionalScaling}
       }
 
       background {
         monitor =
         color = $bg0
-        path = ${osConfig.myOptions.desktopTheme.wallpaper.image.path}
+        path = screenshot
         blur_size = 2
         vibrancy = 0
         brightness = 0.7
