@@ -33,7 +33,6 @@
     ./vesper
     ./petrichor-dew
     ./crayon
-    ./substrata
     ./unnamed-1
     ./moonfly
     ./da-one-black
