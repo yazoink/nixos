@@ -19,8 +19,10 @@
         type = "image";
         image = {
           fillType = "fill";
-          # path = ../../wallpapers/flowers-1.jpg;
-          path = ../../wallpapers/wall1.jpg;
+          path = pkgs.fetchurl {
+            url = "https://raw.githubusercontent.com/yazoink/wallpapers/refs/heads/main/trees-and-leaves/wall1.jpg";
+            hash = "";
+          };
         };
       };
       windowGaps = {
