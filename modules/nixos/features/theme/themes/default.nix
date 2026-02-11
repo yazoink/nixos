@@ -3,17 +3,14 @@
     ./carob
     ./caroline
     ./manuscript
-    ./rose-pine-moon
     ./rose-pine
     ./tarot
     ./wizard
-    ./embers
     ./twilight
     ./swamp
     ./mountain
     ./terracotta
     ./atelier-savanna
-    ./blood-rust
     ./spirit
     ./darkmoss
     ./gruvbox-dark-hard
@@ -33,7 +30,6 @@
     ./paradise
     ./jellybeans
     ./far
-    ./decay
     ./haze
     ./fyry
     ./terracotta-light
@@ -44,13 +40,11 @@
     ./crayon
     ./substrata
     ./unnamed-1
-    ./blue-velvet
     ./moonfly
     ./da-one-black
     ./jardo-brighter
     ./catppuccin-mocha
     ./i-cant-believe-its-not-butter
-    ./i-forgor
     ./idk_what_this_one_is_called
     ./posterpole
   ];
