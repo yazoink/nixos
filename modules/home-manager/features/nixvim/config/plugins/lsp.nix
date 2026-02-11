@@ -37,7 +37,7 @@
       ltex = {
         enable = true;
         settings = {
-          enabled = ["html" "latex" "markdown" "text" "tex" "gitcommit"];
+          enabled = ["html" "latex" "tex" "gitcommit"];
           completionEnabled = true;
           language = "en-US";
         };
@@ -47,14 +47,16 @@
         enable = true;
         autostart = true;
       };
-
       lua_ls = {
-        # Lua
         enable = true;
         settings.telemetry.enable = false;
       };
-
-      # Rust
+      # phptools = {
+      #   enable = true;
+      #   settings = {
+      #     hostname = "localhost:8080";
+      #   };
+      # };
       rust_analyzer = {
         enable = true;
         installRustc = true;
