@@ -4,7 +4,6 @@
     ./caroline
     ./manuscript
     ./rose-pine
-    ./wizard
     ./twilight
     ./swamp
     ./mountain
