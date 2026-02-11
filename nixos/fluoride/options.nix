@@ -40,7 +40,7 @@
         type = "image";
         image = {
           fillType = "fill";
-          path = pkgs.fetchUrl {
+          path = pkgs.fetchurl {
             url = "https://raw.githubusercontent.com/yazoink/wallpapers/refs/heads/main/trees-and-leaves/andrei-lazarev-QtM-8j_1o3Q.jpg";
             hash = "";
           };

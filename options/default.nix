@@ -263,7 +263,7 @@
               description = ''
                 Path to wallpaper. Required for stylix, even if color is set.
               '';
-              default = pkgs.fetchUrl {
+              default = pkgs.fetchurl {
                 url = "https://raw.githubusercontent.com/yazoink/wallpapers/refs/heads/main/trees-and-leaves/andrei-lazarev-QtM-8j_1o3Q.jpg";
                 hash = "";
               };
