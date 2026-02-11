@@ -22,7 +22,6 @@
     ./black-metal-khold
     ./oxocarbon
     ./henna
-    ./mulberry
     ./paradise
     ./jellybeans
     ./far
