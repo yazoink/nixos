@@ -51,6 +51,15 @@ in {
           "inode/x-empty" = ["${textEditor}"]; # Any text files
           "application/pdf" = ["${documentReader}"]; # .pdf
           "image/vnd.djvu" = ["${documentReader}"]; # .pdf
+          "application/epub+zip" = ["${documentReader}"]; # .pdf
+          "application/vnd.oasis.opendocument.text" = ["writer.desktop"];
+          "application/vnd.oasis.opendocument.text-template " = ["writer.desktop"];
+          "application/vnd.oasis.opendocument.spreadsheet" = ["calc.desktop"];
+          "application/vnd.oasis.opendocument.spreadsheet-template " = ["calc.desktop"];
+          "application/vnd.oasis.opendocument.presentation" = ["impress.desktop"];
+          "application/vnd.oasis.opendocument.presentation-template" = ["impress.desktop"];
+          "application/vnd.oasis.opendocument.graphics" = ["draw.desktop"];
+          "application/vnd.oasis.opendocument.graphics-template" = ["draw.desktop"];
           "video/ogg" = ["${mediaPlayer}"];
           "video/x-msvideo" = ["${mediaPlayer}"];
           "video/mpeg" = ["${mediaPlayer}"];
