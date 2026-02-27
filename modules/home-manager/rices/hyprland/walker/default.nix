@@ -10,6 +10,7 @@
 in {
   services.walker = {
     enable = true;
+    systemd.enable = true;
     # systemd.enable = true;
   };
   xdg.configFile = {
