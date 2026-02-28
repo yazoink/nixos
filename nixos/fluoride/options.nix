@@ -76,7 +76,7 @@
       gamescope.enable = true;
       virtManager.enable = true;
       lutgen.enable = true;
-      # krita.enable = true;
+      krita.enable = true;
     };
     hardwareFeatures = {
       bootloader = {
