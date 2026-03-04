@@ -24,7 +24,7 @@
     home.packages = with pkgs;
       [
         ### communication ###
-        signal-desktop-bin
+        signal-desktop
 
         ### gui file viewers ###
         supersonic
