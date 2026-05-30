@@ -75,22 +75,22 @@
       );
   };
   imports = [
-    ../../features/discord-clients
+    ./discord-clients
 
-    ../../features/audtousd
-    ../../features/color-scripts
-    ../../features/gimp
-    ../../features/kjtocal
-    ../../features/kooha
-    ../../features/obs
-    ../../features/lyricli
-    ../../features/ncmpcpp
-    ../../features/newsboat
-    ../../features/soundboard
-    ../../features/usdtoaud
-    ../../features/yt-dlp
-    # ../../features/mpdris2-rs
-    ../../features/mpdris2
-    ../../features/cava
+    ./audtousd
+    ./color-scripts
+    ./gimp
+    ./kjtocal
+    # ./kooha
+    ./obs
+    ./lyricli
+    ./ncmpcpp
+    ./newsboat
+    # ./soundboard
+    ./usdtoaud
+    ./yt-dlp
+    # ./mpdris2-rs
+    ./mpdris2
+    ./cava
   ];
 }

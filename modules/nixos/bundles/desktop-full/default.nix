@@ -1,15 +1,16 @@
+# fully featured desktop
 {
   config,
   lib,
   ...
 }: {
   imports = [
-    ../../features/gamemode
-    ../../features/kdeconnect
-    ../../features/mpd
-    ../../features/mullvad
-    ../../features/printing
-    # ../../features/syncthing
+    ./features/gamemode
+    # ./features/kdeconnect
+    ./features/mpd
+    ./features/mullvad
+    ./features/printing
+    # ./features/syncthing
   ];
 
   config = lib.mkIf config.myOptions.bundles.desktopFull.enable {

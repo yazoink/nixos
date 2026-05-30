@@ -5,17 +5,17 @@
   ...
 }: {
   imports = [
-    ../../features/btop
-    ../../features/garfetch
-    ../../features/git
-    ../../features/nixvim
-    ../../features/pswdgen
-    ../../features/pswdrs
-    ../../features/shell-config
-    ../../features/ssh
-    ../../features/tmux
-    ../../features/yazi
-    ../../features/fastfetch
+    ./btop
+    ./garfetch
+    ./git
+    ./nixvim
+    ./pswdgen
+    ./pswdrs
+    ./shell-config
+    ./ssh
+    ./tmux
+    ./yazi
+    ./fastfetch
   ];
 
   config = lib.mkIf osConfig.myOptions.bundles.base.enable {

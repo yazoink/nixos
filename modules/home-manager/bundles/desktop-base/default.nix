@@ -13,21 +13,20 @@
   };
 
   imports = [
-    ../../rices
+    ./desktops
 
-    ../../features/gui-text-editors
-    ../../features/document-readers
-    ../../features/terminals
-    ../../features/web-browsers
-    ../../features/image-viewers
-    ../../features/media-players
+    ./gui-text-editors
+    ./document-readers
+    ./terminals
+    ./web-browsers
+    ./image-viewers
+    ./media-players
 
-    ../../features/direnv
-    ../../features/hyprviewbinds
-    ../../features/simple-logout
-    ../../features/theme
-    ../../features/xdg
-    ../../features/dconf
-    # ../../features/hyprland-monitor-attached
+    ./direnv
+    ./hyprviewbinds
+    ./simple-logout
+    ./theme
+    ./xdg
+    ./dconf
   ];
 }

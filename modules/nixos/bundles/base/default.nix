@@ -5,15 +5,15 @@
   ...
 }: {
   imports = [
-    ../../features/avahi
-    ../../features/locale
-    ../../features/network
-    ../../features/nix-config
-    ../../features/sops
-    ../../features/user
-    ../../features/zen-kernel
-    ../../features/bootloader
-    ../../features/ssh
+    ./avahi
+    ./locale
+    ./network
+    ./features/nix-config
+    ./features/sops
+    ./features/user
+    ./features/zen-kernel
+    ./features/bootloader
+    ./features/ssh
   ];
 
   config = lib.mkIf config.myOptions.bundles.base.enable {

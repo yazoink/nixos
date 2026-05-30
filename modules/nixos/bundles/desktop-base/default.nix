@@ -1,22 +1,21 @@
+# bare minimum desktop
 {
   config,
   lib,
   ...
 }: {
   imports = [
-    ../../rices
-
-    ../../features/file-managers
-
-    ../../features/acpi
-    ../../features/audio
-    ../../features/dconf
-    ../../features/fonts
-    ../../features/gnome-keyring
-    ../../features/plymouth
-    ../../features/polkit
-    ../../features/silent-boot
-    ../../features/theme
+    ./desktops
+    ./file-managers
+    ./features/acpi
+    ./features/audio
+    ./features/dconf
+    ./features/fonts
+    ./features/gnome-keyring
+    ./features/plymouth
+    ./features/polkit
+    ./features/silent-boot
+    ./features/theme
   ];
 
   config = lib.mkIf config.myOptions.bundles.desktopBase.enable {

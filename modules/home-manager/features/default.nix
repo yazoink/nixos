@@ -1,0 +1,24 @@
+{
+  imports = [
+    ./pychess
+    ./space-cadet-pinball
+    ./gzdoom
+    ./minetest
+    ./knavalbattle
+    ./etterna
+    ./osu
+    ./prismlauncher
+    ./virt-manager
+    ./dither
+    ./replacecolor
+    ./eduke32
+    ./super-tux-kart
+    ./lutgen
+    ./wine
+    ./krita
+    ./expenses
+    ./calibre
+    ./vscode
+    ./obsidian
+  ];
+}
