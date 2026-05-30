@@ -3,7 +3,6 @@
     ./etterna
     ./virt-manager
     ./dither
-    ./replacecolor
     ./lutgen
     ./wine
     ./expenses
