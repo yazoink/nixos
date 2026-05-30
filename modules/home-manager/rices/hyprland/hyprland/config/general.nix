@@ -40,7 +40,6 @@ in {
     disable_hyprland_logo = true;
     disable_splash_rendering = true;
     # disable_hyprland_qtutils_check = true;
-    vfr = true;
     vrr = true;
     enable_swallow = true;
     swallow_regex = "(foot|kitty|alacritty|Alacritty)";
