@@ -6,7 +6,7 @@
     nixpkgs-stable.url = "nixpkgs/nixos-25.11";
     home-manager = {
       url = "github:nix-community/home-manager";
-      # inputs.nixpkgs.follows = "nixpkgs";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
     stylix.url = "github:danth/stylix";
     firefox-addons = {
