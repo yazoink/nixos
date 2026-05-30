@@ -122,34 +122,34 @@ in {
             opacity: 0;
           }
         '';
-      };
-      layouts = {
-        "layout" = ''
-          <?xml version="1.0" encoding="UTF-8"?>
-          <interface>
-            <requires lib="gtk" version="4.0"></requires>
-            <object class="GtkWindow" id="Window">
-              <style>
-                <class name="window"></class>
-              </style>
-              <property name="resizable">true</property>
-              <property name="title">Walker</property>
-              <child>
-                <object class="GtkBox" id="BoxWrapper">
-                  <style>
-                    <class name="box-wrapper"></class>
-                  </style>
-                  <property name="orientation">horizontal</property>
-                  <property name="valign">bottom</property>
-                  <property name="halign">left</property>
-                  <property name="width-request">400</property>
-                  <property name="height-request">300</property>
-                  <!-- Content here -->
-                </object>
-              </child>
-            </object>
-          </interface>
-        '';
+        layouts = {
+          "layout" = ''
+            <?xml version="1.0" encoding="UTF-8"?>
+            <interface>
+              <requires lib="gtk" version="4.0"></requires>
+              <object class="GtkWindow" id="Window">
+                <style>
+                  <class name="window"></class>
+                </style>
+                <property name="resizable">true</property>
+                <property name="title">Walker</property>
+                <child>
+                  <object class="GtkBox" id="BoxWrapper">
+                    <style>
+                      <class name="box-wrapper"></class>
+                    </style>
+                    <property name="orientation">horizontal</property>
+                    <property name="valign">bottom</property>
+                    <property name="halign">left</property>
+                    <property name="width-request">400</property>
+                    <property name="height-request">300</property>
+                    <!-- Content here -->
+                  </object>
+                </child>
+              </object>
+            </interface>
+          '';
+        };
       };
     };
   };
