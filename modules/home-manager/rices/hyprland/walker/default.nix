@@ -105,7 +105,7 @@ in {
 
           .item-quick-activation {
             margin-left: 10px;
-            background: @color2;
+            background: @border;
             border-radius: 5px;
             padding: 10px;
           }
