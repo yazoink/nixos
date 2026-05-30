@@ -63,5 +63,6 @@ in {
     wrap_focus = true;
     wrap_swapcol = true;
     direction = "right";
+    follow_focus = true;
   };
 }
