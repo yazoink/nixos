@@ -4,7 +4,7 @@
   lib,
   ...
 }: let
-  inherit (config.stylix) base16Scheme fonts;
+  inherit (config.stylix) base16Scheme;
   margin = 5;
   marginBottom = margin + 42;
 in {
@@ -47,7 +47,7 @@ in {
           @define-color foreground #${base16Scheme.base05};
           @define-color background #${base16Scheme.base00};
           @define-color color1 #${base16Scheme.base01};
-          @define-color color2 #${base16Scheme.base04}
+          @define-color color2 #${base16Scheme.base04};
           @define-color border #${base16Scheme.base02};
 
           * {
@@ -60,6 +60,7 @@ in {
             border: 1px solid @border;
             border-radius: 15px;
             color: @foreground;
+            margin-bottom: ${builtins.toString marginBottom};
           }
 
           .box {
