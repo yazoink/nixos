@@ -1,5 +1,5 @@
 {
   icons = {
-    style = "glyph";
+    style = "ascii";
   };
 }
