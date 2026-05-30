@@ -32,10 +32,10 @@
     # old layout
     #"$mainMod, Minus, splitratio, -0.1"
     #"$mainMod, Equal, splitratio, 0.1"
-    "$mainMod, Minus, resizeactive, -10 0"
-    "$mainMod SHIFT, Minus, resizeactive, 0 -10"
-    "$mainMod, Equal, resizeactive, 10 0"
-    "$mainMod SHIFT, Equal, resizeactive, 0 -10"
+    "$mainMod, Minus, resizeactive, -20 0"
+    "$mainMod SHIFT, Minus, resizeactive, 0 -20"
+    "$mainMod, Equal, resizeactive, 20 0"
+    "$mainMod SHIFT, Equal, resizeactive, 0 20"
   ];
   bindm = [
     "$mainMod, mouse:272, movewindow"
