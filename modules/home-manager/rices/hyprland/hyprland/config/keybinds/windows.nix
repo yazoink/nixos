@@ -8,11 +8,11 @@
     "$mainMod SHIFT, M, fullscreen, 0"
     "$mainMod ALT, left, move -col"
     "$mainMod ALT, left, move +col"
-    "$mainMod CTRL, SPACE, layoutmsg fit all"
-    "$mainMod SHIFT, SPACE, layoutmsg expel"
-    "$mainMod ALT, SPACE, layoutmsg consume"
-    "$mainMod, SPACE, layoutmsg promote"
-    "$mainMod SHIFT, X, layoutmsg inhibit_scroll"
+    "$mainMod CTRL, SPACE, layoutmsg, fit all"
+    "$mainMod SHIFT, SPACE, layoutmsg, expel"
+    "$mainMod ALT, SPACE, layoutmsg, consume"
+    "$mainMod, SPACE, layoutmsg, promote"
+    "$mainMod SHIFT, X, layoutmsg, inhibit_scroll"
 
     # old layout
     #"$mainMod SHIFT, P, pseudo,"
