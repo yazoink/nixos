@@ -10,12 +10,10 @@
       colorScripts.enable = true;
       gimp.enable = true;
       kjtocal.enable = true;
-      # kooha.enable = true;
       obs.enable = true;
       lyricli.enable = true;
       ncmpcpp.enable = true;
       newsboat.enable = true;
-      # soundboard.enable = true; # broken, fix later
       usdtoaud.enable = true;
       ytDlp.enable = true;
       cava.enable = true;
@@ -36,6 +34,7 @@
         # olive-editor
         shotcut
         kid3-qt
+        krita
 
         ### gui utilities ###
         # easyeffects
@@ -81,12 +80,10 @@
     ./color-scripts
     ./gimp
     ./kjtocal
-    # ./kooha
     ./obs
     ./lyricli
     ./ncmpcpp
     ./newsboat
-    # ./soundboard
     ./usdtoaud
     ./yt-dlp
     # ./mpdris2-rs

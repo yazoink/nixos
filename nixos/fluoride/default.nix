@@ -34,6 +34,8 @@
     VDPAU_DRIVER_NAME = "radeonsi";
   };
 
+  environment.systemPackages = with pkgs; [osu-lazer-bin prismlauncher];
+
   hardware = {
     amdgpu = {
       initrd.enable = true;

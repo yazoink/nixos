@@ -71,14 +71,10 @@
     };
     features = {
       # etterna.enable = true;
-      prismlauncher.enable = true;
-      osu.enable = true;
-      # ollama.enable = true;
       steam.enable = true;
       gamescope.enable = true;
       virtManager.enable = true;
       lutgen.enable = true;
-      krita.enable = true;
     };
     hardwareFeatures = {
       bootloader = {

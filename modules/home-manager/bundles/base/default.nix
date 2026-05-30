@@ -9,7 +9,7 @@
     ./garfetch
     ./git
     ./nixvim
-    ./pswdgen
+    # ./pswdgen
     ./pswdrs
     ./shell-config
     ./ssh
@@ -24,7 +24,7 @@
       garfetch.enable = true;
       git.enable = true;
       nixvim.enable = true;
-      pswdgen.enable = false;
+      # pswdgen.enable = true;
       pswdrs.enable = true;
       shellConfig.enable = true;
       tmux.enable = true;

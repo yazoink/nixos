@@ -23,8 +23,6 @@
     ./media-players
 
     ./direnv
-    ./hyprviewbinds
-    ./simple-logout
     ./theme
     ./xdg
     ./dconf

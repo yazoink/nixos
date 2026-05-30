@@ -57,17 +57,9 @@
       desktopFull.vesktop.bloat = false;
     };
     features = {
-      # minetest.enable = true;
-      # pychess.enable = true;
-      # knavalbattle.enable = true;
-      # gzdoom.enable = true;
-      # eduke32.enable = true;
-      prismlauncher.enable = true;
-      # superTuxKart.enable = true;
       virtManager.enable = true;
       # virtualbox.enable = true;
       # expenses.enable = true;
-      krita.enable = true;
       calibre.enable = true;
       # obsidian.enable = true;
       lutgen.enable = true;

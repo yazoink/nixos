@@ -299,55 +299,11 @@
           type = lib.types.bool;
           default = false;
         };
-        eduke32.enable = lib.mkOption {
-          type = lib.types.bool;
-          default = false;
-        };
-        superTuxKart.enable = lib.mkOption {
-          type = lib.types.bool;
-          default = false;
-        };
         gamescope.enable = lib.mkOption {
           type = lib.types.bool;
           default = false;
         };
-        prismlauncher.enable = lib.mkOption {
-          type = lib.types.bool;
-          default = false;
-        };
         retroarch.enable = lib.mkOption {
-          type = lib.types.bool;
-          default = false;
-        };
-        osu.enable = lib.mkOption {
-          type = lib.types.bool;
-          default = false;
-        };
-        gzdoom.enable = lib.mkOption {
-          type = lib.types.bool;
-          default = false;
-        };
-        spaceCadetPinball.enable = lib.mkOption {
-          type = lib.types.bool;
-          default = false;
-        };
-        pychess.enable = lib.mkOption {
-          type = lib.types.bool;
-          default = false;
-        };
-        knavalbattle.enable = lib.mkOption {
-          type = lib.types.bool;
-          default = false;
-        };
-        minetest.enable = lib.mkOption {
-          type = lib.types.bool;
-          default = false;
-        };
-        ollama.enable = lib.mkOption {
-          type = lib.types.bool;
-          default = false;
-        };
-        krita.enable = lib.mkOption {
           type = lib.types.bool;
           default = false;
         };

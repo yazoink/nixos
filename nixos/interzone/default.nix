@@ -26,6 +26,8 @@
     };
   };
 
+  environment.systemPackages = with pkgs; [prismlauncher];
+
   networking.hostName = "interzone";
 
   # nixpkgs.config.permittedInsecurePackages = ["intel-media-sdk-23.2.2"];
