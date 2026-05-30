@@ -58,13 +58,19 @@ in {
             background-color: @background;
             padding: 20px;
             border: 1px solid @border;
+            border-radius: 15px;
+            color: @foreground;
+          }
+
+          .box {
+            border-radius: 15px;
+            border: none;
           }
 
           .input {
             caret-color: @foreground;
             background: @color1;
             padding: 10px;
-            color: @fg;
             border-radius: 10px;
           }
 
