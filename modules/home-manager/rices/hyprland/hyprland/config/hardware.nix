@@ -35,8 +35,8 @@ in
     })
     (lib.mkIf (hostName == "fluoride") {
       monitor = [
-        "DP-1,2560x1440@59.95100,0x0,1.25"
-        "DP-2,2560x1440@59.95100,0x0,1.25"
+        "DP-1,highres,auto,1.25"
+        "DP-2,highres,auto,1.25"
         ",preferred,auto,1"
       ];
     })
