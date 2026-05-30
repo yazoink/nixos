@@ -9,7 +9,7 @@
     ./avahi
     ./locale
     ./network
-    ./nix-config
+    ./nix
     ./sops
     ./user
     ./zen-kernel
