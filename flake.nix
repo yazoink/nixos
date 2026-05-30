@@ -39,12 +39,6 @@
   outputs = {
     nixpkgs,
     nixpkgs-stable,
-    home-manager,
-    stylix,
-    nixos-hardware,
-    zen-browser,
-    nixvim,
-    hyprland,
     ...
   } @ inputs: let
     system = "x86_64-linux";
