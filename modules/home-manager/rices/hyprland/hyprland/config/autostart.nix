@@ -7,11 +7,12 @@ in {
       "$wallpaper -q"
       "waybar"
       # "bash ~/.config/widgets/launch-corners.sh"
-      "hypridle"
+      "walker --gapplication-service"
       "poweralertd"
       "nm-applet"
       "wl-clip-persist --clipboard regular"
       "wayland-pipewire-idle-inhibit"
+      "hypridle"
       # "hyprland-monitor-attached ~/.config/widgets/monitor-attached.sh"
     ]
     ++ (
