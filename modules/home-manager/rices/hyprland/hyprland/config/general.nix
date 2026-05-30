@@ -59,7 +59,7 @@ in {
     column_width = 0.5;
     # 0 = center, 1 = fit
     focus_fit_method = 1;
-    follow_min_visible = 0.4;
+    follow_min_visible = 0.0;
     wrap_focus = true;
     wrap_swapcol = true;
     direction = "right";
