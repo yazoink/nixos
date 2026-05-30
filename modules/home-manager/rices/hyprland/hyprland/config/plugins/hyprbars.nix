@@ -24,10 +24,12 @@ in {
   settings = {
     plugin = {
       hyprbars = {
+        bar_title_enabled = true;
         bar_color = "rgb(${base16Scheme.base00})";
         inactive_button_color = "rgb(${base16Scheme.base03})";
         bar_height = 38;
-        bar_text_font = "${fonts.sansSerif.name} Bold";
+        bar_text_font = fonts.sansSerif.name;
+        bar_text_weight = "bold";
         bar_text_size = fonts.sizes.applications;
         bar_text_align = "center";
         bar_precedence_over_border = true;
