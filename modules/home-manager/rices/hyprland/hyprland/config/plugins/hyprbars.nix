@@ -29,7 +29,7 @@ in {
         inactive_button_color = "rgb(${base16Scheme.base03})";
         bar_height = 38;
         bar_text_font = fonts.sansSerif.name;
-        bar_text_weight = 700;
+        bar_text_weight = "bold";
         bar_text_size = fonts.sizes.applications + 4;
         bar_text_align = "center";
         bar_precedence_over_border = true;
