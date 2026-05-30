@@ -60,7 +60,8 @@ in {
             border: 1px solid @border;
             border-radius: 15px;
             color: @foreground;
-            margin-bottom: ${builtins.toString marginBottom};
+            margin-bottom: ${builtins.toString marginBottom}px;
+            margin-left: ${builtins.toString margin}px;
           }
 
           .box {
