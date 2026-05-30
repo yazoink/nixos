@@ -4,7 +4,7 @@
   lib,
   ...
 }: let
-  inherit (config.stylix) base16Scheme;
+  inherit (config.stylix) base16Scheme fonts;
   margin = 5;
   marginBottom = margin + 42;
 in {
@@ -47,167 +47,108 @@ in {
           @define-color foreground #${base16Scheme.base05};
           @define-color background #${base16Scheme.base00};
           @define-color color1 #${base16Scheme.base01};
+          @define-color color2 #${base16Scheme.base04}
           @define-color border #${base16Scheme.base02};
 
-          #window,
-          #box,
-          #aiScroll,
-          #aiList,
-          #search,
-          #password,
-          #input,
-          #prompt,
-          #clear,
-          #typeahead,
-          #list,
-          child,
-          scrollbar,
-          slider,
-          #item,
-          #text,
-          #label,
-          #bar,
-          #sub,
-          #activationlabel {
+          * {
             all: unset;
           }
 
-          #window {
-            margin-left: ${builtins.toString margin}px;
-            margin-bottom: ${builtins.toString marginBottom}px;
-          }
-
-          #cfgerr {
-            background: @background;
-            margin-top: 20px;
-            padding: 5px;
-          }
-
-          #window {
-            color: @foreground;
-          }
-
-          #box {
-            border-radius: 15px;
-            background: @background;
-            padding: 15px;
+          .box-wrapper {
+            background-color: @background;
+            padding: 20px;
             border: 1px solid @border;
-            /*box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);*/
           }
 
-          #search {
+          .input {
+            caret-color: @foreground;
             background: @color1;
-            padding: 8px;
-            border-radius: 10px;
-            margin-bottom: 5px;
-          }
-
-          #prompt {
-            margin-left: 4px;
-            margin-right: 12px;
-            color: @foreground;
-            opacity: 0.2;
-            /*font-style: italic;*/
-          }
-
-          #clear {
-            color: @foreground;
-            opacity: 0.8;
-          }
-
-          #password,
-          #input,
-          #typeahead {
-            border-radius: 10px;
-          }
-
-          #input {
-            background: none;
-          }
-
-          #password {
-          }
-
-          #spinner {
-            padding: 8px;
-          }
-
-          #typeahead {
-            color: @foreground;
-            opacity: 0.8;
-            font-style: italic;
-          }
-
-          #input placeholder {
-            opacity: 0.5;
-          }
-
-          #list {
-          }
-
-          child {
             padding: 10px;
+            color: @fg;
             border-radius: 10px;
           }
 
-          child:selected,
-          child:hover {
-            background: @color1;
+          .input placeholder {
+            color: @color2;
           }
 
-          #item {
-          }
-
-          #icon {
-            margin-right: 8px;
-          }
-
-          #text {
-          }
-
-          #label {
-            font-weight: bold;
-          }
-
-          #sub {
-            opacity: 0.5;
-            font-size: 11pt;
-            /*font-style: italic;*/
-          }
-
-          #activationlabel {
-          }
-
-          #bar {
-          }
-
-          .barentry {
-          }
-
-          .activation #activationlabel {
-          }
-
-          .activation #text,
-          .activation #icon,
-          .activation #search {
-            opacity: 0.5;
-          }
-
-          .aiItem {
-            padding: 5px;
-            border-radius: 10px;
+          .list {
             color: @foreground;
-            background: @background;
           }
 
-          .aiItem.user {
-            padding-left: 0;
-            padding-right: 0;
+          .item-box {
+            border-radius: 10px;
+            padding: 10px;
           }
 
-          .aiItem.assistant {
+          child:hover .item-box,
+          child:selected .item-box {
             background: @color1;
           }
+
+          .item-subtext {
+            font-size: 12px;
+            opacity: 0.5;
+          }
+
+          .item-image,
+          .item-image-text {
+            margin-right: 10px;
+          }
+
+          .item-quick-activation {
+            margin-left: 10px;
+            background: @color2;
+            border-radius: 5px;
+            padding: 10px;
+          }
+
+          .placeholder,
+          .elephant-hint {
+            color: @color2;
+          }
+
+          .keybinds-wrapper {
+            border-top: 1px solid @border;
+            color: @color2;
+          }
+
+          .keybind-bind {
+            font-weight: bold;
+            text-transform: lowercase;
+          }
+
+          scrollbar {
+            opacity: 0;
+          }
+        '';
+      };
+      layouts = {
+        "layout" = ''
+          <?xml version="1.0" encoding="UTF-8"?>
+          <interface>
+            <requires lib="gtk" version="4.0"></requires>
+            <object class="GtkWindow" id="Window">
+              <style>
+                <class name="window"></class>
+              </style>
+              <property name="resizable">true</property>
+              <property name="title">Walker</property>
+              <child>
+                <object class="GtkBox" id="BoxWrapper">
+                  <style>
+                    <class name="box-wrapper"></class>
+                  </style>
+                  <property name="orientation">horizontal</property>
+                  <property name="valign">bottom</property>
+                  <property name="halign">left</property>
+                  <property name="width-request">400</property>
+                  <property name="height-request">300</property>
+                  <!-- Content here -->
+                </object>
+              </child>
+            </object>
+          </interface>
         '';
       };
     };
