@@ -24,7 +24,7 @@ in {
   settings = {
     plugin = {
       hyprbars = {
-        #bar_title_enabled = true; bold text broken?
+        bar_title_enabled = false; # bold text broken?
         bar_color = "rgb(${base16Scheme.base00})";
         inactive_button_color = "rgb(${base16Scheme.base03})";
         bar_height = 38;
