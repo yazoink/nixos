@@ -1,3 +1,4 @@
+# basic system, no desktop
 {
   pkgs,
   config,
@@ -8,12 +9,12 @@
     ./avahi
     ./locale
     ./network
-    ./features/nix-config
-    ./features/sops
-    ./features/user
-    ./features/zen-kernel
-    ./features/bootloader
-    ./features/ssh
+    ./nix-config
+    ./sops
+    ./user
+    ./zen-kernel
+    ./bootloader
+    ./ssh
   ];
 
   config = lib.mkIf config.myOptions.bundles.base.enable {
