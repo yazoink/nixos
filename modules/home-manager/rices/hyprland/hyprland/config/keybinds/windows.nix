@@ -2,12 +2,21 @@
   bind = [
     "$mainMod, Q, killactive,"
     "$mainMod SHIFT, E, exit,"
-    "$mainMod, F, togglefloating,"
-    "$mainMod SHIFT, P, pseudo,"
     "$mainMod, X, pin,"
-    "$mainMod, V, togglesplit,"
     "$mainMod, M, fullscreen, 1"
+    "$mainMod, F, togglefloating,"
     "$mainMod SHIFT, M, fullscreen, 0"
+    "$mainMod CTRL, left, move -col"
+    "$mainMod CTRL, left, move +col"
+    "$mainMod CTRL, space, fit all"
+    "$mainMod SHIFT, space, expel"
+    "$mainMod ALT, space, consume"
+    "$mainMod, space, promote"
+    "$mainMod SHIFT, X, inhibit_scroll"
+
+    # old layout
+    #"$mainMod SHIFT, P, pseudo,"
+    #"$mainMod, V, togglesplit,"
 
     "$mainMod, left, movefocus, l"
     "$mainMod, right, movefocus, r"
@@ -20,8 +29,9 @@
     "$mainMod SHIFT, up, movewindow, u"
   ];
   binde = [
-    "$mainMod, Minus, splitratio, -0.1"
-    "$mainMod, Equal, splitratio, 0.1"
+    # old layout
+    #"$mainMod, Minus, splitratio, -0.1"
+    #"$mainMod, Equal, splitratio, 0.1"
   ];
   bindm = [
     "$mainMod, mouse:272, movewindow"

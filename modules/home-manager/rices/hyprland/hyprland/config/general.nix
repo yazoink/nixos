@@ -14,7 +14,7 @@ in {
     gaps_in = inner;
     gaps_out = outer;
     border_size = 1;
-    layout = "dwindle";
+    layout = "scrolling";
     allow_tearing = false;
     "col.inactive_border" = borderColor;
     "col.active_border" = borderColor;
@@ -27,7 +27,6 @@ in {
     blur.enabled = false;
     shadow = {
       enabled = true;
-      ignore_window = true;
       range = 5;
       offset = "0 0";
       render_power = 5;
@@ -51,8 +50,19 @@ in {
   ecosystem = {
     no_donation_nag = true;
   };
-  dwindle = {
-    pseudotile = true;
-    preserve_split = true;
+  /*
+      dwindle = {
+      preserve_split = true;
+  };
+  */
+  scrolling = {
+    fullscreen_on_one_column = true;
+    column_width = 0.5;
+    # 0 = center, 1 = fit
+    focus_fit_method = 1;
+    follow_min_visible = 0.4;
+    wrap_focus = true;
+    wrap_swapcol = true;
+    direction = "right";
   };
 }
