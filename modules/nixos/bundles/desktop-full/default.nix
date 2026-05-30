@@ -5,12 +5,12 @@
   ...
 }: {
   imports = [
-    ./features/gamemode
-    # ./features/kdeconnect
-    ./features/mpd
-    ./features/mullvad
-    ./features/printing
-    # ./features/syncthing
+    ./gamemode
+    # ./kdeconnect
+    ./mpd
+    ./mullvad
+    ./printing
+    # ./syncthing
   ];
 
   config = lib.mkIf config.myOptions.bundles.desktopFull.enable {

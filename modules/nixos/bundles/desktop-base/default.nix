@@ -7,15 +7,15 @@
   imports = [
     ./desktops
     ./file-managers
-    ./features/acpi
-    ./features/audio
-    ./features/dconf
-    ./features/fonts
-    ./features/gnome-keyring
-    ./features/plymouth
-    ./features/polkit
-    ./features/silent-boot
-    ./features/theme
+    ./acpi
+    ./audio
+    ./dconf
+    ./fonts
+    ./gnome-keyring
+    ./plymouth
+    ./polkit
+    ./silent-boot
+    ./theme
   ];
 
   config = lib.mkIf config.myOptions.bundles.desktopBase.enable {
