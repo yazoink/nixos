@@ -27,7 +27,7 @@
         command = "footclient";
       };
       webBrowser = {
-        command = "zen";
+        command = "zen-twilight";
       };
     };
     userAccount = {

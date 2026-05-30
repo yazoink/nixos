@@ -134,8 +134,8 @@
         webBrowser = {
           command = lib.mkOption {
             type = lib.types.str;
-            default = "zen";
-            description = "Options: firefox, zen, brave, librewolf";
+            default = "zen-twilight";
+            description = "Options: firefox, zen-twilight, brave, librewolf";
           };
         };
         imageViewer = {

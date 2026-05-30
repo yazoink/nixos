@@ -7,7 +7,7 @@
   pkgs,
   ...
 }: {
-  config = lib.mkIf (osConfig.myOptions.bundles.desktopBase.enable && osConfig.myOptions.defaultApps.webBrowser.command == "zen") {
+  config = lib.mkIf (osConfig.myOptions.bundles.desktopBase.enable && osConfig.myOptions.defaultApps.webBrowser.command == "zen-twilight") {
     defaultApps.webBrowser.desktopFile = "zen.desktop";
     home = {
       sessionVariables = {
@@ -15,9 +15,13 @@
         MOZ_LEGACY_PROFILES = 1;
       };
     };
-    stylix.targets.zen-browser.profileNames = ["main"];
+    stylix.targets.zen-browser = {
+      enable = true;
+      profileNames = ["hi"];
+    };
     programs.zen-browser = {
       enable = true;
+      setAsDefaultBrowser = true;
       nativeMessagingHosts = [pkgs.firefoxpwa];
       policies = {
         AutofillAddressEnabled = false;
@@ -41,7 +45,7 @@
           Cache = true;
         };
       };
-      profiles.main = {
+      profiles.hi = {
         extensions.packages = with inputs.firefox-addons.packages.${pkgs.stdenv.hostPlatform.system};
           lib.mkMerge [
             [
