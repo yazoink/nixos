@@ -10,6 +10,7 @@ in {
     inputs.nixvim.homeModules.nixvim
     inputs.nixcord.homeModules.nixcord
     inputs.zen-browser.homeModules.twilight
+    inputs.walker.packages.x86_64-linux.default
     ../modules/home-manager
   ];
 

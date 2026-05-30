@@ -8,14 +8,214 @@
   margin = 5;
   marginBottom = margin + 42;
 in {
-  services.walker = {
-    enable = true;
-    systemd.enable = true;
-    # systemd.enable = true;
+  /*
+      services.walker = {
+      enable = true;
+      systemd.enable = true;
+      # systemd.enable = true;
   };
-  xdg.configFile = {
+  */
+  programs.walker = {
+    enable = true;
+    runAsService = true;
+    config = {
+      theme = "my-theme";
+      shell = {
+        anchor_top = false;
+        anchor_bottom = true;
+        anchor_left = true;
+        anchor_right = false;
+      };
+      placeholders.default = {
+        input = "Search";
+        list = "No Results";
+        providers.prefixes = [
+          {
+            provider = "websearch";
+            prefix = "+";
+          }
+          {
+            provider = "providerlist";
+            prefix = "_";
+          }
+        ];
+      };
+    };
+    themes = {
+      "my-theme" = {
+        style = ''
+          @define-color foreground #${base16Scheme.base05};
+          @define-color background #${base16Scheme.base00};
+          @define-color color1 #${base16Scheme.base01};
+          @define-color border #${base16Scheme.base02};
+
+          #window,
+          #box,
+          #aiScroll,
+          #aiList,
+          #search,
+          #password,
+          #input,
+          #prompt,
+          #clear,
+          #typeahead,
+          #list,
+          child,
+          scrollbar,
+          slider,
+          #item,
+          #text,
+          #label,
+          #bar,
+          #sub,
+          #activationlabel {
+            all: unset;
+          }
+
+          #window {
+            margin-left: ${builtins.toString margin}px;
+            margin-bottom: ${builtins.toString marginBottom}px;
+          }
+
+          #cfgerr {
+            background: @background;
+            margin-top: 20px;
+            padding: 5px;
+          }
+
+          #window {
+            color: @foreground;
+          }
+
+          #box {
+            border-radius: 15px;
+            background: @background;
+            padding: 15px;
+            border: 1px solid @border;
+            /*box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);*/
+          }
+
+          #search {
+            background: @color1;
+            padding: 8px;
+            border-radius: 10px;
+            margin-bottom: 5px;
+          }
+
+          #prompt {
+            margin-left: 4px;
+            margin-right: 12px;
+            color: @foreground;
+            opacity: 0.2;
+            /*font-style: italic;*/
+          }
+
+          #clear {
+            color: @foreground;
+            opacity: 0.8;
+          }
+
+          #password,
+          #input,
+          #typeahead {
+            border-radius: 10px;
+          }
+
+          #input {
+            background: none;
+          }
+
+          #password {
+          }
+
+          #spinner {
+            padding: 8px;
+          }
+
+          #typeahead {
+            color: @foreground;
+            opacity: 0.8;
+            font-style: italic;
+          }
+
+          #input placeholder {
+            opacity: 0.5;
+          }
+
+          #list {
+          }
+
+          child {
+            padding: 10px;
+            border-radius: 10px;
+          }
+
+          child:selected,
+          child:hover {
+            background: @color1;
+          }
+
+          #item {
+          }
+
+          #icon {
+            margin-right: 8px;
+          }
+
+          #text {
+          }
+
+          #label {
+            font-weight: bold;
+          }
+
+          #sub {
+            opacity: 0.5;
+            font-size: 11pt;
+            /*font-style: italic;*/
+          }
+
+          #activationlabel {
+          }
+
+          #bar {
+          }
+
+          .barentry {
+          }
+
+          .activation #activationlabel {
+          }
+
+          .activation #text,
+          .activation #icon,
+          .activation #search {
+            opacity: 0.5;
+          }
+
+          .aiItem {
+            padding: 5px;
+            border-radius: 10px;
+            color: @foreground;
+            background: @background;
+          }
+
+          .aiItem.user {
+            padding-left: 0;
+            padding-right: 0;
+          }
+
+          .aiItem.assistant {
+            background: @color1;
+          }
+        '';
+      };
+    };
+  };
+  /*
+    xdg.configFile = {
     "walker/config.toml".source = ./config.toml;
-    "walker/themes/mytheme.toml".text = ''
+    "walker/themes/my-theme.toml".text = ''
       [ui.anchors]
       bottom = true
       left = true
@@ -118,171 +318,6 @@ in {
       [ui.window.box.search.spinner]
       hide = true
     '';
-    "walker/themes/mytheme.css".text = ''
-      @define-color foreground #${base16Scheme.base05};
-      @define-color background #${base16Scheme.base00};
-      @define-color color1 #${base16Scheme.base01};
-      @define-color border #${base16Scheme.base02};
-
-      #window,
-      #box,
-      #aiScroll,
-      #aiList,
-      #search,
-      #password,
-      #input,
-      #prompt,
-      #clear,
-      #typeahead,
-      #list,
-      child,
-      scrollbar,
-      slider,
-      #item,
-      #text,
-      #label,
-      #bar,
-      #sub,
-      #activationlabel {
-        all: unset;
-      }
-
-      #window {
-        margin-left: ${builtins.toString margin}px;
-        margin-bottom: ${builtins.toString marginBottom}px;
-      }
-
-      #cfgerr {
-        background: @background;
-        margin-top: 20px;
-        padding: 5px;
-      }
-
-      #window {
-        color: @foreground;
-      }
-
-      #box {
-        border-radius: 15px;
-        background: @background;
-        padding: 15px;
-        border: 1px solid @border;
-        /*box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);*/
-      }
-
-      #search {
-        background: @color1;
-        padding: 8px;
-        border-radius: 10px;
-        margin-bottom: 5px;
-      }
-
-      #prompt {
-        margin-left: 4px;
-        margin-right: 12px;
-        color: @foreground;
-        opacity: 0.2;
-        /*font-style: italic;*/
-      }
-
-      #clear {
-        color: @foreground;
-        opacity: 0.8;
-      }
-
-      #password,
-      #input,
-      #typeahead {
-        border-radius: 10px;
-      }
-
-      #input {
-        background: none;
-      }
-
-      #password {
-      }
-
-      #spinner {
-        padding: 8px;
-      }
-
-      #typeahead {
-        color: @foreground;
-        opacity: 0.8;
-        font-style: italic;
-      }
-
-      #input placeholder {
-        opacity: 0.5;
-      }
-
-      #list {
-      }
-
-      child {
-        padding: 10px;
-        border-radius: 10px;
-      }
-
-      child:selected,
-      child:hover {
-        background: @color1;
-      }
-
-      #item {
-      }
-
-      #icon {
-        margin-right: 8px;
-      }
-
-      #text {
-      }
-
-      #label {
-        font-weight: bold;
-      }
-
-      #sub {
-        opacity: 0.5;
-        font-size: 11pt;
-        /*font-style: italic;*/
-      }
-
-      #activationlabel {
-      }
-
-      #bar {
-      }
-
-      .barentry {
-      }
-
-      .activation #activationlabel {
-      }
-
-      .activation #text,
-      .activation #icon,
-      .activation #search {
-        opacity: 0.5;
-      }
-
-      .aiItem {
-        padding: 5px;
-        border-radius: 10px;
-        color: @foreground;
-        background: @background;
-      }
-
-      .aiItem.user {
-        padding-left: 0;
-        padding-right: 0;
-      }
-
-      .aiItem.assistant {
-        background: @color1;
-      }
-    '';
   };
+  */
 }
