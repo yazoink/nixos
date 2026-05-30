@@ -13,6 +13,8 @@
     #"$mainMod ALT, SPACE, layoutmsg, consume"
     #"$mainMod, SPACE, layoutmsg, promote"
     "$mainMod SHIFT, X, layoutmsg, inhibit_scroll"
+    "$mainMod CTRL, F, layoutmsg, fit all"
+    "$mainMod ALT, F, layoutmsg, fit visible"
 
     # old layout
     #"$mainMod SHIFT, P, pseudo,"
