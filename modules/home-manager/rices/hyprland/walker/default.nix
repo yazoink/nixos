@@ -126,9 +126,9 @@ in {
             text-transform: lowercase;
           }
 
-          scrollbar {
+          /*scrollbar {
             opacity: 0;
-          }
+          }*/
         '';
         layouts = {
           "layout" = ''
