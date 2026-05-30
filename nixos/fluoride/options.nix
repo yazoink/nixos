@@ -55,6 +55,8 @@
         # name = "SF Pro Display";
       };
       fonts.terminal = {
+        name = "Cozette";
+        size = 13;
         # name = "Terminess Nerd Font";
         # size = 12;
         # name = "Iosevka Nerd Font";
@@ -63,7 +65,7 @@
       };
     };
     bundles = {
-      base.starshipFormat = 2;
+      base.starshipFormat = 1;
       desktopBase.plymouth.enable = false;
       desktopFull.enable = true;
     };
