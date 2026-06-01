@@ -27,7 +27,7 @@
       enable = true;
       package = null;
       portalPackage = null;
-      configType = "hyprlang";
+      configType = "lua";
     }
     (import ./config {
       inherit lib osConfig config pkgs inputs;
