@@ -32,6 +32,7 @@
       jsonls.enable = true;
       sqls.enable = true;
       zls.enable = true;
+      tinymist.enable = true;
       #csharp_ls.enable = true; # C#
       yamlls.enable = true; # YAML
       ltex = {

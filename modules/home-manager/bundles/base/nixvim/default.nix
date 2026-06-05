@@ -32,6 +32,7 @@
       gcc
       clang-tools
       racket
+      prettytypst
       # php84Packages.php-codesniffer
     ];
     programs.nixvim = lib.mkMerge [

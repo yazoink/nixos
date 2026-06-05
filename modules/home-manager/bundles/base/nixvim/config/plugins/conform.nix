@@ -21,10 +21,11 @@
         yaml = ["yamllint" "yamlfmt"];
         c = ["uncrustify"];
         json = ["fixjson"];
-        php = ["phpcbf"];
+        php = ["phpcbf" "php_cs_fixer"];
         rust = ["rustfmt"];
         # zig = ["zigfmt"];
         # latex = ["llf"];
+        typst = ["prettytypst"];
       };
       formatters = {
         # phpcbf = { # build failed

@@ -60,6 +60,7 @@
         gnumake
         clang-tools
         python3
+        typst
 
         ### misc ###
         tty-solitaire
