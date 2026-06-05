@@ -25,7 +25,7 @@
         rust = ["rustfmt"];
         # zig = ["zigfmt"];
         # latex = ["llf"];
-        typst = ["prettytypst"];
+        typst = ["prettypst"];
       };
       formatters = {
         # phpcbf = { # build failed
