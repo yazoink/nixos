@@ -22,7 +22,7 @@
     programs.zen-browser = {
       enable = true;
       setAsDefaultBrowser = true;
-      nativeMessagingHosts = [pkgs.firefoxpwa];
+      # nativeMessagingHosts = [pkgs.firefoxpwa]; broken?
       policies = {
         AutofillAddressEnabled = false;
         AutofillCreditCardEnabled = false;

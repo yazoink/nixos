@@ -1,5 +1,11 @@
 #!/usr/bin/env bash
 
+if [[ "$1" == "-h" ]] || [[ "$1" == "--help" ]]; then
+    echo "usage: flash <input> <output>"
+    exit 0
+fi
+
+
 input="$1"
 output="$2"
 
