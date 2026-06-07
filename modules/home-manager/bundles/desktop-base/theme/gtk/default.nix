@@ -16,7 +16,7 @@ in {
     gtk2 = {
       extraConfig = builtins.readFile gtkrcFile;
     };
-    gtk4.theme = config.gtk.theme; # might cause issues?
+    # gtk4.theme = config.gtk.theme; # might cause issues?
     # gtk3 = {
     #   extraConfig = {
     #     gtk-decoration-layout = "menu";
