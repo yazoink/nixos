@@ -260,7 +260,7 @@
       "wlr/taskbar"
     ],
     "modules-right": [
-      "group/quick-access",
+      "group/quick-access-slider",
       "custom/separator#right",
       "clock",
       "custom/power"
