@@ -26,6 +26,8 @@
       "on-click": "activate",
       "sort-by-id": true,
       "active-only": true,
+      "tooltip": true,
+      "tooltip-format": "Mod + 1-5 to switch workspaces",
       "format": "{icon}"
     }
   '';

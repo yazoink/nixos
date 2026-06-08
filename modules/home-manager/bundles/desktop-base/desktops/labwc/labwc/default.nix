@@ -74,8 +74,8 @@ in {
     window.label.text.justify: center
 
     # window button width and spacing
-    window.button.width: 26
-    window.button.height: 26
+    window.button.width: 18
+    window.button.height: 18
     window.button.spacing: 5
 
     # window button hover overlay
