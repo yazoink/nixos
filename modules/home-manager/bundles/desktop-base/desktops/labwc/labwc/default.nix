@@ -248,7 +248,6 @@ in {
           dropShadowsOnTiled = "yes";
         };
       };
-      gap = 10;
       focus = {
         followMouse = "yes";
         raiseOnFocus = "no";
@@ -286,8 +285,7 @@ in {
           {
             "@key" = "W-m";
             action = {
-              "@name" = "SnapToEdge";
-              "@direction" = "center";
+              "@name" = "ToggleMaximize";
             };
           }
           # toggle pin

@@ -20,13 +20,13 @@
     desktopTheme = {
       rice.labwc.enable = true;
       rice.hyprland.enable = false;
-      colorscheme = "biscuit-de-mar-dark";
+      colorscheme = "rose-pine";
       wallpaper = {
         type = "image";
         image = {
           fillType = "fill";
           path = pkgs.fetchurl {
-            url = "https://raw.githubusercontent.com/yazoink/wallpapers/refs/heads/main/flowers/1751142470750001.jpg";
+            url = "https://raw.githubusercontent.com/yazoink/wallpapers/refs/heads/main/flowers/a_close_up_of_a_white_flower.jpg";
             hash = "sha256-jpfmaXcqSyiiEk336DK5OmunHONWn0l0nAnYFid7AZE=";
           };
         };
