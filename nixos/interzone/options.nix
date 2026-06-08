@@ -18,7 +18,7 @@
     };
     userAccount.username = "gene";
     desktopTheme = {
-      rice.hyprland.enable = true;
+      rice.labwc.enable = true;
       colorscheme = "paradise";
       wallpaper = {
         type = "image";
