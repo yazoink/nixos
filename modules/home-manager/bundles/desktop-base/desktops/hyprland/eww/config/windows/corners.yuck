@@ -2,8 +2,8 @@
 
 (defvar locked false)
 
-(defwindow fakecorners []
-  :monitor <primary>
+(defwindow fakecorners [screen]
+  :monitor screen
   :geometry (geometry 
               :x "0%"
               :y "0%"

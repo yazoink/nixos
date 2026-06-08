@@ -3,15 +3,21 @@
 config="$EWW_CONFIG_DIR"
 pkill walker
 
+monitors=$(hyprctl monitors -j | jq length)
+((monitors--))
+
+monitor=$(hyprctl monitors -j | jq '.[] | select(.focused==true) | .id')
+
 eww --config="$config" active-windows | grep -q power
 [[ $? == 0 ]] && {
+    hyprctl reload
     eww --config "$config" close power
     echo "closed power"
     exit 0
 }
 
 echo "opening power menu"
-eww --config "$config" open power
+eww --config "$config" open power --screen $monitor
 echo "pwd $(pwd)"
 
 if [[ $? == 0 ]]; then
