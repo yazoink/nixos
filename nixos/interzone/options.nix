@@ -20,13 +20,13 @@
     desktopTheme = {
       rice.labwc.enable = true;
       rice.hyprland.enable = false;
-      colorscheme = "paradise";
+      colorscheme = "biscuit-de-mar-dark";
       wallpaper = {
         type = "image";
         image = {
           fillType = "fill";
           path = pkgs.fetchurl {
-            url = "https://raw.githubusercontent.com/yazoink/wallpapers/refs/heads/main/trees-and-leaves/wall1.jpg";
+            url = "https://raw.githubusercontent.com/yazoink/wallpapers/refs/heads/main/flowers/1751142470750001.jpg";
             hash = "sha256-H8Hsm73MPbqrKl4RUiAhKUlkXPSntyghB95PpTmkuKM=";
           };
         };
