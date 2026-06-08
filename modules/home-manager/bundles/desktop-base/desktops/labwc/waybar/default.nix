@@ -28,8 +28,8 @@
       "active-only": true,
       "tooltip": true,
       "tooltip-format": "Mod + 1-5 to switch workspaces",
-      "on-scroll-up": "${pkgs.wtype}/bin/wtype -M win -M shift -P left -d 200",
-      "on-scroll-down": "${pkgs.wtype}/bin/wtype -M win -M shift -P right -d 200",
+      "on-scroll-up": "${pkgs.wtype}/bin/wtype -M win -M shift -P left -d 500",
+      "on-scroll-down": "${pkgs.wtype}/bin/wtype -M win -M shift -P right -d 500",
       "format": "{icon}"
     }
   '';
