@@ -422,7 +422,7 @@ in {
           }
           # launch browser
           {
-            "@key" = "W-b";
+            "@key" = "W-w";
             action = {
               "@name" = "Execute";
               "@command" = "${defaultApps.webBrowser.command}";
@@ -458,6 +458,14 @@ in {
             action = {
               "@name" = "Execute";
               "@command" = "${../scripts/restart-foot-server.sh}";
+            };
+          }
+          # close eww windows and launcher
+          {
+            "@key" = "Esc";
+            action = {
+              "@name" = "Execute";
+              "@command" = "eww --config ~/.config/widgets close-all; pkill walker";
             };
           }
         ];
