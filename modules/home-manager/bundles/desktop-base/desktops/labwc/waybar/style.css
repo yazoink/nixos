@@ -122,7 +122,7 @@ menuitem:hover {
 #workspaces button {
   margin-right: 14px;
   min-width: 12px;
-  max-height: 8px
+  height: 8px
   color: transparent;
   background-color: @fg;
   border-radius: 20px;
