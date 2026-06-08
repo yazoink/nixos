@@ -1,4 +1,4 @@
-# todo: menu, media keybinds, eww keybinds, better waybar workspace widget(?)
+# todo: menu, media keybinds, eww keybinds, better waybar workspace widget(?), window button svgs(?)
 {
   osConfig,
   config,
