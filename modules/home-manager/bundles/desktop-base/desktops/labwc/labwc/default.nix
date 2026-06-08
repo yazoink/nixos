@@ -201,7 +201,7 @@ in {
         cornerRadius = 10;
         font = {
           "@name" = "${fonts.sansSerif.name}";
-          "@size" = "${fonts.sizes.desktop}";
+          "@size" = "${builtins.toString fonts.sizes.desktop}";
           "@weight" = "bold";
         };
         icon = "${osConfig.desktopTheme.icons.name}";
