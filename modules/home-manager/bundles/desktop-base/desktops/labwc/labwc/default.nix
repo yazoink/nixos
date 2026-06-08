@@ -1,3 +1,4 @@
+# todo: menu, media keys
 {
   osConfig,
   config,
