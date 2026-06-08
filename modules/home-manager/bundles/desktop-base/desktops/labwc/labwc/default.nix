@@ -1,4 +1,4 @@
-# todo: menu, media keys
+# todo: menu, media keybinds, eww keybinds
 {
   osConfig,
   config,
