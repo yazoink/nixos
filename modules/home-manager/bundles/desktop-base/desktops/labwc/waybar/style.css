@@ -17,8 +17,8 @@ window#waybar {
   border-bottom: 2px solid @accent;
 }
 
-#taskbar button.active {
-  opacity: 0.75;
+#taskbar button.minimizede {
+  opacity: 0.5;
 }
 
 #custom-left-arrow {
