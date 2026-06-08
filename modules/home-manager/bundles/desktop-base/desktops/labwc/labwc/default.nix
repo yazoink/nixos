@@ -180,6 +180,20 @@ in {
     environment = [
       "XDG_CURRENT_DESKTOP=labwc:wlroots"
       "XKB_DEFAULT_LAYOUT=us"
+      "NIXOS_OZONE_WL,1"
+      "MOZ_ENABLE_WAYLAND,1"
+      "GDK_BACKEND,wayland"
+      "GDK_SCALE,1"
+      "CLUTTER_BACKEND,wayland"
+      "XDG_SESSION_TYPE,wayland"
+      "QT_AUTO_SCREEN_SCALE_FACTOR,1"
+      "QT_WAYLAND_DISABLE_WINDOWDECORATION,1"
+      "QT_QPA_PLATFORM,wayland;xcb"
+      "QT_SCALE_FACTOR,1"
+      "QT_ENABLE_HIGHDPI_SCALING,0"
+      "_JAVA_AWT_WM_NONREPARENTING,1"
+      "ELECTRON_OZONE_PLATFORM_HINT,wayland"
+      "EWW_CONFIG_DIR,/home/${osConfig.myOptions.userAccount.username}/.config/widgets"
     ];
     autostart =
       [
@@ -197,7 +211,14 @@ in {
         then ["foot --server"]
         else []
       );
+    extraCommands = [
+      "systemctl --user stop labwc-session.target"
+      "systemctl --user start labwc-session.target"
+    ];
     rc = {
+      desktops = {
+        "@number" = 5;
+      };
       theme = {
         name = "${config.gtk.theme.name}";
         cornerRadius = 10;
@@ -221,6 +242,133 @@ in {
       keyboard = {
         default = true;
         keybind = [
+          # reconfigure
+          {
+            "@key" = "W-S-r";
+            action = {
+              "@name" = "Reconfigure";
+            };
+          }
+          # close window
+          {
+            "@key" = "A-F4";
+            action = {
+              "@name" = "Close";
+            };
+          }
+          # toggle fullscreen
+          {
+            "@key" = "W-S-m";
+            action = {
+              "@name" = "ToggleFullscreen";
+            };
+          }
+          # toggle maximise
+          {
+            "@key" = "W-m";
+            action = {
+              "@name" = "ToggleMaximize";
+            };
+          }
+          # toggle pin
+          {
+            "@key" = "W-x";
+            action = {
+              "@name" = "ToggleOmnipresent";
+            };
+          }
+          {
+            "@key" = "W-q";
+            action = {
+              "@name" = "Close";
+            };
+          }
+          # unsnap
+          {
+            "@key" = "W-f";
+            action = {
+              "@name" = "UnSnap";
+            };
+          }
+          # switch to workspace
+          {
+            "@key" = "W-1";
+            action = {
+              "@name" = "GoToDesktop";
+              "@to" = 1;
+            };
+          }
+          {
+            "@key" = "W-2";
+            action = {
+              "@name" = "GoToDesktop";
+              "@to" = 2;
+            };
+          }
+          {
+            "@key" = "W-3";
+            action = {
+              "@name" = "GoToDesktop";
+              "@to" = 3;
+            };
+          }
+          {
+            "@key" = "W-4";
+            action = {
+              "@name" = "GoToDesktop";
+              "@to" = 4;
+            };
+          }
+          {
+            "@key" = "W-5";
+            action = {
+              "@name" = "GoToDesktop";
+              "@to" = 5;
+            };
+          }
+          # send to workspace
+          {
+            "@key" = "W-S-1";
+            action = {
+              "@name" = "SendToDesktop";
+              "@to" = 1;
+            };
+          }
+          {
+            "@key" = "W-S-2";
+            action = {
+              "@name" = "SendToDesktop";
+              "@to" = 2;
+            };
+          }
+          {
+            "@key" = "W-S-3";
+            action = {
+              "@name" = "SendToDesktop";
+              "@to" = 3;
+            };
+          }
+          {
+            "@key" = "W-S-4";
+            action = {
+              "@name" = "SendToDesktop";
+              "@to" = 4;
+            };
+          }
+          {
+            "@key" = "W-S-5";
+            action = {
+              "@name" = "SendToDesktop";
+              "@to" = 5;
+            };
+          }
+          # show desktop
+          {
+            "@key" = "W-S-d";
+            action = {
+              "@name" = "ShowDesktop";
+            };
+          }
           # terminal
           {
             "@key" = "W-Return";
@@ -302,7 +450,7 @@ in {
           }
           # restart foot server
           {
-            "@key" = "W-S-b";
+            "@key" = "W-S-f";
             action = {
               "@name" = "Execute";
               "@command" = "${../scripts/restart-foot-server.sh}";
