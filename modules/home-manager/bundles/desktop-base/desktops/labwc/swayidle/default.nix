@@ -9,11 +9,11 @@
     timeouts = [
       {
         timeout = 500;
-        command = "${pkgs.swaylock}/bin/swaylock -fF";
+        command = "hyprlock";
       }
       {
         timeout = 1000;
-        command = "${pkgs.systemd}/bin/systemctl suspend";
+        command = "systemctl suspend";
       }
     ];
   };
