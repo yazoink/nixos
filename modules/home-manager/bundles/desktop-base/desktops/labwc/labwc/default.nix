@@ -247,7 +247,7 @@ in {
             "@key" = "W-s";
             action = {
               "@name" = "Execute";
-              "@command" = "bash ${../../scripts/screenshot} -s";
+              "@command" = "bash ${../scripts/screenshot} -s";
             };
           }
           # fullscreen screenshot
