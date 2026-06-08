@@ -9,7 +9,7 @@
   inherit (osConfig.myOptions.hardwareFeatures) laptop;
   inherit (osConfig.myOptions) desktopTheme;
   iconSize = desktopTheme.fonts.desktop.size - 2;
-  barHeight = 42;
+  barHeight = 48;
   barPosition = "bottom";
   taskbarModule = ''
     "wlr/taskbar": {
@@ -312,9 +312,9 @@ in {
         @define-color border #${base16Scheme.base02};
         @define-color accent #${base16Scheme.${osConfig.desktopTheme.base16Accent}};
 
-        * {
+        /* * {
           all: unset;
-        }
+        } */
 
         window#waybar,
         tooltip label,
