@@ -17,7 +17,7 @@ window#waybar {
   border-bottom: 2px solid @accent;
 }
 
-#taskbar button.minimizede {
+#taskbar button.minimized {
   opacity: 0.5;
 }
 
