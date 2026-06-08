@@ -7,6 +7,12 @@ window#waybar {
   /* border-top: 2px solid @border; */
 }
 
+#taskbar button {
+  background: transparent;
+  margin: 0;
+  padding: 2px 4px;
+}
+
 #custom-left-arrow {
   font-size: 10pt;
   color: @unfocused;

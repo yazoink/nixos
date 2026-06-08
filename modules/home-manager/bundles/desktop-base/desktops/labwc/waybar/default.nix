@@ -14,6 +14,7 @@
   taskbarModule = ''
     "wlr/taskbar": {
       "format": "{icon}",
+      "icon-theme": "${osConfig.desktopTheme.icons.name}",
       "icon-size": 14,
       "tooltip-format": "{title}",
       "on-click": "activate",
@@ -259,10 +260,10 @@
     "modules-left": [
       "custom/search",
       "custom/separator#left",
-      "wlr/taskbar"
+      "ext/workspaces"
     ],
     "modules-center": [
-      "ext/workspaces"
+      "wlr/taskbar"
     ],
     "modules-right": [
       "group/quick-access",
