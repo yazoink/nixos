@@ -20,14 +20,14 @@
     desktopTheme = {
       rice.labwc.enable = true;
       rice.hyprland.enable = false;
-      colorscheme = "rose-pine";
+      colorscheme = "paradise";
       wallpaper = {
         type = "image";
         image = {
           fillType = "fill";
           path = pkgs.fetchurl {
-            url = "https://raw.githubusercontent.com/yazoink/wallpapers/refs/heads/main/flowers/a_close_up_of_a_white_flower.jpg";
-            hash = "sha256-x4+3gIBSdgo2GzR6AuFDcIPLf5tSf5Z4k+zu075Zz90=";
+            url = "https://raw.githubusercontent.com/yazoink/wallpapers/refs/heads/main/flowers/1751142470750001.jpg";
+            hash = "sha256-jpfmaXcqSyiiEk336DK5OmunHONWn0l0nAnYFid7AZE=";
           };
         };
       };
