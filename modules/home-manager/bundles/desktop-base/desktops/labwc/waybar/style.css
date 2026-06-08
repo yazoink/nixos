@@ -120,6 +120,7 @@ menuitem:hover {
 }*/
 
 #workspaces button {
+  font-size: 4pt;
   margin-right: 14px;
   min-width: 12px;
   padding-top: 0;

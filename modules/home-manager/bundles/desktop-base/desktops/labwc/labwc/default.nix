@@ -166,8 +166,8 @@ in {
     # snapping.overlay.region.border.enabled:
     # snapping.overlay.edge.border.enabled:
 
-    snapping.overlay.region.bg.color: #8080b380
-    snapping.overlay.edge.bg.color: #8080b380
+    snapping.overlay.region.bg.color: #${base16Scheme.${osConfig.desktopTheme.base16Accent}}80
+    snapping.overlay.edge.bg.color: #${base16Scheme.${osConfig.desktopTheme.base16Accent}}80
     snapping.overlay.region.border.width: 1
     snapping.overlay.edge.border.width: 1
     snapping.overlay.region.border.color: #${base16Scheme.${osConfig.desktopTheme.base16Accent}}
@@ -234,6 +234,9 @@ in {
           dropShadows = true;
           dropShadowsOnTiled = true;
         };
+      };
+      focus = {
+        followMouse = true;
       };
       keyboard = {
         default = true;
