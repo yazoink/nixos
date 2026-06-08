@@ -25,6 +25,7 @@
     "ext/workspaces": {
       "on-click": "activate",
       "sort-by-id": true,
+      "active-only": true,
       "format": "{icon}"
     }
   '';

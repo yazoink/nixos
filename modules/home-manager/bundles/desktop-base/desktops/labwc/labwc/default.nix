@@ -225,10 +225,6 @@ in {
         };
         icon = "${osConfig.desktopTheme.icons.name}";
         titlebar = {
-          # "@showTitle" = true;
-          # "@layout" = "icon:iconify,max,close";
-          # "@dropShadows" = true;
-          # "@dropShadowsOnTiled" = true;
           showTitle = true;
           layout = "icon:iconify,max,close";
           dropShadows = true;
@@ -237,6 +233,7 @@ in {
       };
       focus = {
         followMouse = true;
+        raiseOnFocus = true;
       };
       keyboard = {
         default = true;

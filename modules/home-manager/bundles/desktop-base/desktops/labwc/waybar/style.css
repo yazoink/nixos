@@ -109,7 +109,7 @@ menuitem:hover {
   background-color: @bg2;
 }
 
-/*#workspaces button {
+#workspaces button {
   margin-right: 14px;
   color: @unfocused;
   min-width: 8pt;
@@ -117,28 +117,6 @@ menuitem:hover {
 
 #workspaces button.active {
   color: @fg;
-}*/
-
-#workspaces button {
-  font-size: 4pt;
-  margin-right: 14px;
-  min-width: 12px;
-  padding-top: 0;
-  padding-bottom: 0;
-  color: transparent;
-  background-color: @fg;
-  border-radius: 20px;
-}
-
-#workspaces button.active {
-  color: transparent;
-  background-color: @accent;
-  border-radius: 20px;
-  min-width: 16px;
-}
-
-#workspaces button.empty {
-  color: @unfocused;
 }
 
 #workspaces button.urgent {
