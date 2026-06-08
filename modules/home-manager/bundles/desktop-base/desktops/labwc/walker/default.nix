@@ -6,7 +6,7 @@
 }: let
   inherit (config.stylix) base16Scheme;
   margin = 5;
-  marginBottom = margin + 42;
+  marginBottom = margin + 48;
 in {
   /*
       services.walker = {

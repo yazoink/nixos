@@ -11,7 +11,6 @@ eww --config="$config" active-windows | grep -q calendar-window
 eww --config "$config" open calendar-window
 
 if [[ $? == 0 ]]; then
-    hyprctl keyword bindn ,Escape,exec,"hyprctl reload; EWW_CONFIG_DIR=$config eww --config $config close calendar-window"
     while true; do
         sleep 0.5
         eww --config "$config" active-windows | grep -q "calendar-window"
