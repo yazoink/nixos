@@ -233,7 +233,7 @@ in {
       };
       focus = {
         followMouse = "yes";
-        raiseOnFocus = "yes";
+        raiseOnFocus = "no";
       };
       keyboard = {
         default = true;
