@@ -236,6 +236,11 @@ in {
         followMouse = "yes";
         raiseOnFocus = "no";
       };
+      windowSwitcher = {
+        osd = {
+          "@style" = "thumbnail";
+        };
+      };
       keyboard = {
         default = true;
         keybind = [
