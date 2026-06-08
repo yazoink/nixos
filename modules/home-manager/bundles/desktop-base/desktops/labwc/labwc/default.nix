@@ -73,8 +73,8 @@ in {
     window.label.text.justify: center
 
     # window button width and spacing
-    window.button.width: 15
-    window.button.height: 15
+    window.button.width: 26
+    window.button.height: 26
     window.button.spacing: 10
 
     # window button hover overlay
@@ -82,7 +82,7 @@ in {
     window.button.hover.bg.corner-radius: 15
 
     # window buttons
-    window.active.button.unpressed.image.color: #${base16Scheme.base08}
+    window.active.button.unpressed.image.color: #${base16Scheme.base05}
     window.inactive.button.unpressed.image.color: #${base16Scheme.base03}
 
     # window drop-shadows
