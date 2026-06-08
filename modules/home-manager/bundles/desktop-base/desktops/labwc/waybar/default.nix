@@ -253,7 +253,7 @@
   barConfig = ''
     "reload_style_on_change": true,
     "layer": "top",
-    "mode": "dock",
+    "mode": "overlay",
     "exclusive": "true",
     "position": "${barPosition}",
     "spacing": 7,
