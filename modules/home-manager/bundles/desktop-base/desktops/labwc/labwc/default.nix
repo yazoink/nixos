@@ -58,7 +58,7 @@ in {
     window.active.indicator.toggled-keybind.color: #${base16Scheme.base08}
 
     # window titlebar background
-    window.active.title.bg.color: #${base16Scheme.base01}
+    window.active.title.bg.color: #${base16Scheme.base02}
     window.inactive.title.bg.color: #${base16Scheme.base01}
     window.*.title.bg: Solid
 
