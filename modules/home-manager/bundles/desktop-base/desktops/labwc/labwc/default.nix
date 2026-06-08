@@ -232,8 +232,8 @@ in {
         };
       };
       focus = {
-        followMouse = true;
-        raiseOnFocus = true;
+        followMouse = "yes";
+        raiseOnFocus = "yes";
       };
       keyboard = {
         default = true;
