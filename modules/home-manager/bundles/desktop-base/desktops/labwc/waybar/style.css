@@ -135,7 +135,7 @@ menuitem:hover {
 }
 
 #workspaces button.empty {
-  color: @unfocuses;
+  color: @unfocused;
 }
 
 #workspaces button.urgent {
