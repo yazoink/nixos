@@ -257,12 +257,6 @@ in {
           "@style" = "thumbnail";
         };
       };
-      margin = {
-        "@top" = 10;
-        "@bottom" = 10;
-        "@left" = 10;
-        "@right" = 10;
-      };
       keyboard = {
         default = true;
         keybind = [
@@ -543,10 +537,18 @@ in {
           }
           # launch poer menu
           {
-            "@key" = "W-S-f";
+            "@key" = "W-S-q";
             action = {
               "@name" = "Execute";
               "@command" = "bash /home/${osConfig.myOptions.userAccount.username}/.config/widgets/launch-power-menu.sh";
+            };
+          }
+          # launch calendar
+          {
+            "@key" = "W-S-c";
+            action = {
+              "@name" = "Execute";
+              "@command" = "bash /home/${osConfig.myOptions.userAccount.username}/.config/widgets/launch-calendar.sh";
             };
           }
           # media keys
