@@ -245,8 +245,8 @@ in {
           showTitle = true;
           layout = "icon:iconify,max,close";
           # layout = "iconify,max,close:";
-          dropShadows = true;
-          dropShadowsOnTiled = true;
+          dropShadows = "yes";
+          dropShadowsOnTiled = "yes";
         };
       };
       focus = {
