@@ -2,16 +2,11 @@
 
 echo "confirm_prompt.sh"
 config=$EWW_CONFIG_DIR
-monitor=$(hyprctl monitors -j | jq '.[] | select(.focused==true) | .id')
 eww --config "$config" close power
-eww --config "$config" open confirm --arg screen=$monitor --arg thing="$1" --arg action="$2"
+eww --config "$config" open confirm --arg thing="$1" --arg action="$2"
 
 if [[ $? == 0 ]]; then
     echo "confirm prompt opened"
-    hyprctl keyword bindn ,Y,exec,"$2; eww --config $config close confirm"
-    hyprctl keyword bindn ,N,exec,"eww --config $config close confirm"
-    hyprctl keyword bindn ,"Escape,exec,eww --config $config close confirm"
-    echo "set keybinds"
     while true; do
         sleep 0.5
         eww --config "$config" active-windows | grep -q "confirm"
