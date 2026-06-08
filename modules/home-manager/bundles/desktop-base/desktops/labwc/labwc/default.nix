@@ -49,8 +49,8 @@ in {
     window.titlebar.padding.height: 5
 
     # window border
-    window.active.border.color: #${base16Scheme.base01}
-    window.inactive.border.color: #${base16Scheme.base01}
+    window.active.border.color: #${base16Scheme.base02}
+    window.inactive.border.color: #${base16Scheme.base02}
 
     # ToggleKeybinds status indicator
     window.active.indicator.toggled-keybind.color: #${base16Scheme.base08}
@@ -75,7 +75,7 @@ in {
     # window button width and spacing
     window.button.width: 26
     window.button.height: 26
-    window.button.spacing: 10
+    window.button.spacing: 5
 
     # window button hover overlay
     window.button.hover.bg.color: #${base16Scheme.base05}20
@@ -102,7 +102,7 @@ in {
     menu.width.min: 20
     menu.width.max: 200
     menu.border.width: 1
-    menu.border.color: #${base16Scheme.base01}
+    menu.border.color: #${base16Scheme.base02}
     menu.items.bg.color: #${base16Scheme.base00}
     menu.items.text.color: #${base16Scheme.base05}
     menu.items.active.bg.color: #${base16Scheme.base01}
@@ -111,28 +111,28 @@ in {
     menu.items.padding.y: 5
     menu.separator.width: 1
     menu.separator.padding.width: 5
-    menu.separator.padding.height: 5
+    menu.separator.padding.height: 0
     menu.separator.color: #${base16Scheme.base02}
     menu.title.bg.color: #${base16Scheme.base01}
     menu.title.text.color: #${base16Scheme.base05}
     menu.title.text.justify: Center
 
     # on screen display (window-cycle dialog)
-    osd.bg.color: #e1dedb
-    osd.border.color: #000000
+    osd.bg.color: #${base16Scheme.base00}
+    osd.border.color: #${base16Scheme.base02}
     osd.border.width: 1
-    osd.label.text.color: #000000
+    osd.label.text.color: #${base16Scheme.base05}
 
     # width can be set as percent (of screen width)
     # example 50% or 75% instead of 600, max 100%
     osd.window-switcher.style-classic.width: 600
 
-    osd.window-switcher.style-classic.padding: 4
+    osd.window-switcher.style-classic.padding: 5
     osd.window-switcher.style-classic.item.padding.x: 10
     osd.window-switcher.style-classic.item.padding.y: 1
-    osd.window-switcher.style-classic.item.active.border.width: 2
+    osd.window-switcher.style-classic.item.active.border.width: 0
     osd.window-switcher.style-classic.item.active.border.color: #706f6d
-    osd.window-switcher.style-classic.item.active.bg.color: #bfbcba
+    osd.window-switcher.style-classic.item.active.bg.color: #${base16Scheme.base01}
     # The icon size the same as the font size by default
     # osd.window-switcher.style-classic.item.icon.size: 50
 
@@ -141,17 +141,17 @@ in {
     osd.window-switcher.style-thumbnail.item.width: 300
     osd.window-switcher.style-thumbnail.item.height: 250
     osd.window-switcher.style-thumbnail.item.padding: 10
-    osd.window-switcher.style-thumbnail.item.active.border.width: 2
+    osd.window-switcher.style-thumbnail.item.active.border.width: 0
     osd.window-switcher.style-thumbnail.item.active.border.color: #706f6d
-    osd.window-switcher.style-thumbnail.item.active.bg.color: #bfbcba
+    osd.window-switcher.style-thumbnail.item.active.bg.color: #${base16Scheme.base01}
     osd.window-switcher.style-thumbnail.item.icon.size: 60
 
     osd.window-switcher.preview.border.width: 1
-    osd.window-switcher.preview.border.color: #dddda6,#000000,#dddda6
+    osd.window-switcher.preview.border.color: #${base16Scheme.${osConfig.desktopTheme.base16Accent}}
 
     osd.workspace-switcher.boxes.width: 20
     osd.workspace-switcher.boxes.height: 20
-    osd.workspace-switcher.boxes.border.width: 2
+    osd.workspace-switcher.boxes.border.width: 1
 
     # Default values for following options change depending on the rendering
     # backend. For software-based renderers, *.bg.enabled is "no" and
@@ -169,8 +169,8 @@ in {
     snapping.overlay.edge.bg.color: #8080b380
     snapping.overlay.region.border.width: 1
     snapping.overlay.edge.border.width: 1
-    snapping.overlay.region.border.color: #dddda6,#000000,#dddda6
-    snapping.overlay.edge.border.color: #dddda6,#000000,#dddda6
+    snapping.overlay.region.border.color: #${base16Scheme.${osConfig.desktopTheme.base16Accent}}
+    snapping.overlay.edge.border.color: #${base16Scheme.${osConfig.desktopTheme.base16Accent}}
   '';
   wayland.windowManager.labwc = {
     enable = true;
