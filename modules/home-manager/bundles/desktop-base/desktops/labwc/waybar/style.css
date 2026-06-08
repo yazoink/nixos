@@ -17,6 +17,10 @@ window#waybar {
   border-bottom: 2px solid @accent;
 }
 
+#taskbar button.active {
+  opacity: 0.75;
+}
+
 #custom-left-arrow {
   font-size: 10pt;
   color: @unfocused;
@@ -105,15 +109,33 @@ menuitem:hover {
   background-color: @bg2;
 }
 
-#workspaces button {
+/*#workspaces button {
   margin-right: 14px;
   color: @unfocused;
   min-width: 8pt;
-  /* border: 1px solid black; */
 }
 
 #workspaces button.active {
   color: @fg;
+}*/
+
+#workspaces button {
+  margin-right: 14px;
+  min-width: 8pt;
+  color: transparent;
+  background-color: @fg;
+  border-radius: 20px;
+}
+
+#workspaces button.active {
+  color: transparent;
+  background-color: @accent;
+  border-radius: 20px;
+  min-width: 16pt;
+}
+
+#workspaces button.empty {
+  color: @unfocuses;
 }
 
 #workspaces button.urgent {

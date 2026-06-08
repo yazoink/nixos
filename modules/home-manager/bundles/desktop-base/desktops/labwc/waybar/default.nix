@@ -24,7 +24,7 @@
   workspacesModule = ''
     "ext/workspaces": {
       "on-click": "activate",
-      "sort-by-number": true,
+      "sort-by-id": true,
       "format": "{icon}"
     }
   '';
