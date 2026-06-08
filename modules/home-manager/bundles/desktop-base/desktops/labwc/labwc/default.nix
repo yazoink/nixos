@@ -80,7 +80,7 @@ in {
     window.button.spacing: 5
 
     # window button hover overlay
-    window.button.hover: #${base16Scheme.base05}20
+    window.button.hover: #00000000
 
     # window buttons
     window.active.button.unpressed.image.color: #${base16Scheme.base05}
