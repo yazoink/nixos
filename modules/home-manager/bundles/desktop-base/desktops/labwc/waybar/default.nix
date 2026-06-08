@@ -15,16 +15,10 @@
     "wlr/taskbar": {
       "format": "{icon}",
       "icon-theme": "${osConfig.desktopTheme.icons.name}",
-      "icon-size": 14,
+      "icon-size": 28,
       "tooltip-format": "{title}",
       "on-click": "activate",
-      "on-click-middle": "close",
-      "ignore-list": [
-        "Alacritty",
-        "foot",
-        "footclient",
-        "kitty"
-      ]
+      "on-click-middle": "close"
     }
   '';
   workspacesModule = ''

@@ -46,7 +46,7 @@ in {
     # The global padding.{width,height} of openbox are not supported because
     # the default labwc button geometry deviates from that of openbox
     #
-    window.titlebar.padding.width: 5
+    window.titlebar.padding.width: 10
     window.titlebar.padding.height: 5
 
     # window border
