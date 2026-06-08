@@ -48,8 +48,8 @@
       };
     };
     bundles = {
-      # base.starshipFormat = 1;
-      base.starshipFormat = 2;
+      base.starshipFormat = 1;
+      # base.starshipFormat = 2;
       desktopBase.silentBoot.enable = true;
       desktopBase.mpv.profile = "fast";
       desktopBase.plymouth.enable = false;

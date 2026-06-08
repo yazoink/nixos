@@ -14,7 +14,7 @@ window#waybar {
 }
 
 #taskbar button.active {
-  border-bottom: 3px solid @accent;
+  border-bottom: 2px solid @accent;
 }
 
 #custom-left-arrow {
