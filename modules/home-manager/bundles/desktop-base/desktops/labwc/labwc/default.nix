@@ -255,7 +255,7 @@ in {
             "@key" = "W-Shift-s";
             action = {
               "@name" = "Execute";
-              "@command" = "bash ${../../scripts/screenshot}";
+              "@command" = "bash ${../scripts/screenshot}";
             };
           }
           # lock screen
