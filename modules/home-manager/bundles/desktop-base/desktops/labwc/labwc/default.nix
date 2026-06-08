@@ -211,10 +211,6 @@ in {
         then ["foot --server"]
         else []
       );
-    extraCommands = [
-      "systemctl --user stop labwc-session.target"
-      "systemctl --user start labwc-session.target"
-    ];
     rc = {
       desktops = {
         "@number" = 5;
