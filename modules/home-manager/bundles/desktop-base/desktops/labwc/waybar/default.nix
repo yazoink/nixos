@@ -11,6 +11,21 @@
   iconSize = desktopTheme.fonts.desktop.size - 2;
   barHeight = 42;
   barPosition = "bottom";
+  taskbarModule = ''
+    "wlr/taskbar": {
+      "format": {icon},
+      "icon-size": 14,
+      "tooltip-format": "{title}",
+      "on-click": "activate",
+      "on-click-middle": "close",
+      "ignore-list": [
+        "Alacritty",
+        "foot",
+        "footclient",
+        "kitty"
+      ]
+    }
+  '';
   workspacesModule = ''
     "ext/workspaces": {
       "on-click": "activate",
@@ -252,7 +267,7 @@
     "modules-left": [
       "custom/search",
       "custom/separator#left",
-      "clock"
+      "wlr/taskbar"
     ],
     "modules-center": [
       "ext/workspaces"
@@ -260,6 +275,7 @@
     "modules-right": [
       "group/quick-access",
       "custom/separator#right",
+      "clock",
       "custom/power"
     ]
   '';
@@ -272,15 +288,15 @@ in {
         {
           ${barConfig},
           ${workspacesModule},
-          ${clockModule},
+          ${taskbarModule},
           ${volumeModule},
           ${backlightModule},
           ${batteryModule},
           ${trayModule},
           ${searchModule},
           ${powerModule},
-          ${windowModule},
           ${separatorModule},
+          ${clockModule},
           ${quickAccessModuleLaptop}
         }
       ''
@@ -288,13 +304,13 @@ in {
         {
           ${barConfig},
           ${workspacesModule},
-          ${clockModule},
+          ${taskbarModule},
           ${volumeModule},
           ${trayModule},
           ${powerModule},
           ${searchModule},
-          ${windowModule},
           ${separatorModule},
+          ${clockModule},
           ${quickAccessModuleDesktop}
         }
       '';
