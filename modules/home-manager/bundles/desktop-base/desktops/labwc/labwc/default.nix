@@ -198,6 +198,7 @@ in {
       );
     rc = {
       theme = {
+        name = "${config.gtk.theme.name}";
         cornerRadius = 10;
         font = {
           "@name" = "${fonts.sansSerif.name}";
@@ -252,7 +253,7 @@ in {
           }
           # fullscreen screenshot
           {
-            "@key" = "W-Shift-s";
+            "@key" = "W-S-s";
             action = {
               "@name" = "Execute";
               "@command" = "bash ${../scripts/screenshot}";
@@ -292,7 +293,7 @@ in {
           }
           # restart waybar
           {
-            "@key" = "W-Shift-b";
+            "@key" = "W-S-b";
             action = {
               "@name" = "Execute";
               "@command" = "${../scripts/waybar.sh}";
@@ -300,7 +301,7 @@ in {
           }
           # restart foot server
           {
-            "@key" = "W-Shift-b";
+            "@key" = "W-S-b";
             action = {
               "@name" = "Execute";
               "@command" = "${../scripts/restart-foot-server.sh}";
