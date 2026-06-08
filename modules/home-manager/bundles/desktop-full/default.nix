@@ -30,7 +30,7 @@
         ### gui file editors ###
         audacity
         libreoffice-qt
-        inkscape
+        # inkscape
         # olive-editor
         shotcut
         kid3-qt

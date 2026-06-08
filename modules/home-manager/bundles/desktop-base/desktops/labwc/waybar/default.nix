@@ -12,8 +12,9 @@
   barHeight = 42;
   barPosition = "bottom";
   workspacesModule = ''
-    "hyprland/workspaces": {
+    "ext/workspaces": {
       "on-click": "activate",
+      "sort-by-number": true,
       "format": "{icon}"
     }
   '';
@@ -254,7 +255,7 @@
       "clock"
     ],
     "modules-center": [
-      "hyprland/workspaces"
+      "ext/workspaces"
     ],
     "modules-right": [
       "group/quick-access",

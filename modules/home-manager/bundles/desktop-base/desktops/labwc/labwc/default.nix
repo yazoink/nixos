@@ -189,7 +189,7 @@ in {
         "nm-applet &"
         "wl-clip-persist --clipboard regular &"
         "wayland-pipewire-idle-inhibit &"
-        "hypridle &"
+        "swayidle &"
       ]
       ++ (
         if (defaultApps.terminal.command == "footclient")
