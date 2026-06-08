@@ -257,6 +257,12 @@ in {
           "@style" = "thumbnail";
         };
       };
+      margin = {
+        "@top" = 10;
+        "@bottom" = 10;
+        "@left" = 10;
+        "@right" = 10;
+      };
       keyboard = {
         default = true;
         keybind = [
@@ -535,6 +541,14 @@ in {
               "@command" = "eww --config /home/${osConfig.myOptions.userAccount.username}/.config/widgets close-all; pkill walker";
             };
           }
+          # launch poer menu
+          {
+            "@key" = "W-S-f";
+            action = {
+              "@name" = "Execute";
+              "@command" = "bash /home/${osConfig.myOptions.userAccount.username}/.config/widgets/launch-power-menu.sh";
+            };
+          }
           # media keys
           {
             "@key" = "XF86AudioPlay";
@@ -607,7 +621,7 @@ in {
             };
           }
           {
-            "@key" = "w-F10";
+            "@key" = "W-F10";
             action = {
               "@name" = "Execute";
               "@command" = "swayosd-client --output-volume mute-toggle";
