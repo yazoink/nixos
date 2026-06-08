@@ -1,5 +1,5 @@
 (defwindow calendar-window []
-  :monitor <primary>
+  :monitor "<primary>"
   :geometry (geometry
     :anchor "bottom left"
     :x "0px"

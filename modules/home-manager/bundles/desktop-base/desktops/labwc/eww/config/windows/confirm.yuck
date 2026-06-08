@@ -1,5 +1,5 @@
 (defwindow confirm [thing action]
-  :monitor <primary>
+  :monitor "<primary>"
   :geometry (geometry
     :anchor "bottom right"
     :x "0px"
