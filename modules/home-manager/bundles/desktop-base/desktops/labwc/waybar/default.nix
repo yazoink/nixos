@@ -261,8 +261,8 @@
     ],
     "modules-right": [
       "group/quick-access-slider",
-      "custom/separator#right",
       "clock",
+      "custom/separator#right",
       "custom/power"
     ]
   '';
@@ -312,9 +312,9 @@ in {
         @define-color border #${base16Scheme.base02};
         @define-color accent #${base16Scheme.${osConfig.desktopTheme.base16Accent}};
 
-        /* * {
+        * {
           all: unset;
-        } */
+        }
 
         window#waybar,
         tooltip label,
