@@ -1,0 +1,130 @@
+window#waybar {
+  background-color: @bg;
+  color: @fg;
+  background-color: @bg;
+  color: @fg;
+  font-weight: bold;
+  /* border-top: 2px solid @border; */
+}
+
+#custom-left-arrow {
+  font-size: 10pt;
+  color: @unfocused;
+}
+
+#tray-expander,
+#battery-expander,
+#backlight-expander {
+  margin-left: 14px;
+}
+
+#quick-access {
+  margin-left: 12px;
+}
+
+#workspaces,
+#quick-access-slider,
+#clock,
+#custom-search,
+#custom-power,
+#custom-separator {
+  padding-left: 7px;
+  margin-top: 7px;
+  margin-bottom: 7px;
+  border-radius: 10px;
+}
+
+#custom-power {
+  padding-right: 7px;
+}
+
+#window {
+  margin-left: -7px;
+}
+
+#workspaces {
+  padding-right: 0;
+}
+
+.modules-left {
+  margin-left: 10px;
+}
+
+.modules-right {
+  margin-right: 10px;
+}
+
+tooltip {
+  background-color: @bg;
+  border: 1px solid @border;
+  border-radius: 15px;
+}
+
+tooltip label {
+  padding: 5px;
+  font-weight: normal;
+  color: @fg;
+}
+
+menu {
+  font-weight: normal;
+  background-color: @bg;
+  color: @fg;
+  padding: 10px;
+  border: 1px solid @border;
+  border-radius: 15px;
+}
+
+menuitem {
+  /* padding: 5px; */
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 5px;
+}
+
+/*.arrow.up,
+.arrow.down,
+.arrow.left,
+.arrow.right {
+  color: @fg;
+}*/
+
+menuitem:hover {
+  background-color: @bg2;
+}
+
+#workspaces button {
+  margin-right: 14px;
+  color: @unfocused;
+  min-width: 8pt;
+  /* border: 1px solid black; */
+}
+
+#workspaces button.active {
+  color: @fg;
+}
+
+#workspaces button.urgent {
+  color: @urgent;
+}
+
+#tray,
+#battery.percentage,
+#wireplumber.volume,
+#backlight {
+  margin-left: 7px;
+}
+
+#custom-power {
+  color: @urgent;
+}
+
+#custom-separator {
+  color: @bg2;
+}
+
+#custom-search {
+  color: @accent;
+}

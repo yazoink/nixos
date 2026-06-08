@@ -172,11 +172,23 @@
       desktopTheme = {
         # Do not enable more than one rice at once
         rice = {
-          interzone = {
+          hyprland = {
             enable = lib.mkOption {
               type = lib.types.bool;
               default = true;
-              description = "hyprland/eww/waybar/fnott/swaync/hyprlock w/ lower bar & titlebars";
+              description = "hyprland desktop";
+            };
+            swayosd.enable = lib.mkOption {
+              type = lib.types.bool;
+              default = true;
+              description = "enable swayosd";
+            };
+          };
+          labwc = {
+            enable = lib.mkOption {
+              type = lib.types.bool;
+              default = true;
+              description = "labwc desktop";
             };
             swayosd.enable = lib.mkOption {
               type = lib.types.bool;

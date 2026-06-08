@@ -5,9 +5,9 @@
   inputs,
   ...
 }: let
-  inherit (config.myOptions.desktopTheme.rice) interzone;
+  inherit (config.myOptions.desktopTheme.rice) hyprland;
 in {
-  config = lib.mkIf interzone.enable (lib.mkMerge [
+  config = lib.mkIf hyprland.enable (lib.mkMerge [
     (import ./hyprland {inherit pkgs inputs;})
     (import ./hyprlock {})
   ]);

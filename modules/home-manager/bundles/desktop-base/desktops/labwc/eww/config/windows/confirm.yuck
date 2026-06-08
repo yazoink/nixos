@@ -1,0 +1,41 @@
+(defwindow confirm [screen thing action]
+  :monitor screen
+  :geometry (geometry
+    :anchor "bottom right"
+    :x "0px"
+    :y "0px"
+  )
+  :stacking "fg"
+  :exclusive "false"
+  :focusable "ondemand"
+  :class "confirm"
+  (box
+    :orientation "vertical"
+    :space-evenly "false"
+    :class "confirm-box"
+    :spacing 15
+    :halign "fill"
+    (separator)
+    (label :text "${thing}" :class "confirm-text")
+    ;(user :image "./images/profile_image_rounded4.png")
+    (hline)
+    (box
+      :orientation "horizontal"
+      :space-evenly "true"
+      :spacing 10
+      :class "confirm-buttons"
+      (button
+        :class "confirm-button bold"
+        :onclick "hyprctl reload; ${action}; eww --config ${dir} close confirm"
+        :tooltip "(y)"
+        "Yes"
+      )
+      (button
+        :class "confirm-button bold"
+        :onclick "hyprctl reload; eww --config ${dir} close confirm"
+        :tooltip "(n)"
+        "No"
+      )
+    )
+  )
+)
