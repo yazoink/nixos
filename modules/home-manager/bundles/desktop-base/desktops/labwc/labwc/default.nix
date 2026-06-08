@@ -30,7 +30,7 @@ in {
     wdisplays
     swaybg
   ];
-  home.file.".config/labwc/theme-override".text = ''
+  home.file.".config/labwc/themerc-override".text = ''
     # This file contains all themerc options with default values
     #
     # System-wide and local themes can be overridden by creating a copy of this
@@ -261,7 +261,7 @@ in {
           }
           # lock screen
           {
-            "@key" = "W-Ctrl-l";
+            "@key" = "W-C-l";
             action = {
               "@name" = "Execute";
               "@command" = "hyprlock";
