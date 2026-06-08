@@ -59,7 +59,7 @@ in {
 
     # window titlebar background
     window.active.title.bg.color: #${base16Scheme.base00}
-    window.inactive.title.bg.color: #${base16Scheme.base01}
+    window.inactive.title.bg.color: #${base16Scheme.base00}
     window.*.title.bg: Solid
 
     # Vertical and SplitVertical gradients are supported for window.*.title.bg
