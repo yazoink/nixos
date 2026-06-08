@@ -86,6 +86,20 @@ in {
     # window buttons
     window.active.button.unpressed.image.color: #${base16Scheme.base05}
     window.inactive.button.unpressed.image.color: #${base16Scheme.base03}
+    window.active.button.disabled.image.color: #${base16Scheme.base04}
+    window.inactive.button.disabled.image.color: #${base16Scheme.base04}
+
+    window.active.button.iconify.unpressed.image.color: #${base16Scheme.base0A}
+    window.active.button.max.unpressed.image.color: #${base16Scheme.base0B}
+    window.active.button.close.unpressed.image.color: #${base16Scheme.base08}
+    window.active.button.shade.unpressed.image.color: #${base16Scheme.base0D}
+    window.active.button.desk.unpressed.image.color: #${base16Scheme.base05}
+
+    window.active.button.iconify.pressed.image.color: #${base16Scheme.base0A}
+    window.active.button.max.pressed.image.color: #${base16Scheme.base0B}
+    window.active.button.close.pressed.image.color: #${base16Scheme.base08}
+    window.active.button.shade.pressed.image.color: #${base16Scheme.base0D}
+    window.active.button.desk.pressed.image.color: #${base16Scheme.base05}
 
     # window drop-shadows
     window.active.shadow.size: 60
