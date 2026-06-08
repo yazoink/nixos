@@ -29,6 +29,7 @@ in {
     hyprpicker
     wdisplays
     swaybg
+    libnotify
   ];
   home.file.".config/labwc/themerc-override".text = ''
     # This file contains all themerc options with default values
