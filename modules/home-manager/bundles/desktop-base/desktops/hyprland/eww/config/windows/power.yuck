@@ -5,8 +5,8 @@
 (include "./widgets/user.yuck")
 (include "./widgets/time.yuck")
 
-(defwindow power [screen]
-  :monitor screen
+(defwindow power []
+  :monitor <primary>
   :geometry (geometry
     :x "0px"
     :y "0px"

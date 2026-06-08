@@ -74,8 +74,8 @@ in {
     window.label.text.justify: center
 
     # window button width and spacing
-    window.button.width: 18
-    window.button.height: 18
+    window.button.width: 20
+    window.button.height: 20
     window.button.spacing: 5
 
     # window button hover overlay
@@ -442,6 +442,14 @@ in {
             action = {
               "@name" = "Execute";
               "@command" = "${../scripts/waybar.sh}";
+            };
+          }
+          # reset wallpaper
+          {
+            "@key" = "W-S-w";
+            action = {
+              "@name" = "Execute";
+              "@command" = "${wallpaperCommand} -q";
             };
           }
           # restart foot server
