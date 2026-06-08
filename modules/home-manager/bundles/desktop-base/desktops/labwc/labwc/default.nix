@@ -593,6 +593,27 @@ in {
             };
           }
           {
+            "@key" = "W-F12";
+            action = {
+              "@name" = "Execute";
+              "@command" = "swayosd-client --output-volume raise";
+            };
+          }
+          {
+            "@key" = "W-F11";
+            action = {
+              "@name" = "Execute";
+              "@command" = "swayosd-client --output-volume lower";
+            };
+          }
+          {
+            "@key" = "w-F10";
+            action = {
+              "@name" = "Execute";
+              "@command" = "swayosd-client --output-volume mute-toggle";
+            };
+          }
+          {
             "@key" = "XF86MonBrightnessDown";
             action = {
               "@name" = "Execute";
@@ -604,6 +625,13 @@ in {
             action = {
               "@name" = "Execute";
               "@command" = "swayosd-client --brightness raise";
+            };
+          }
+          {
+            "@key" = "Caps_Lock";
+            action = {
+              "@name" = "Execute";
+              "@command" = "swayosd-client --caps-lock";
             };
           }
         ];
