@@ -13,6 +13,10 @@ window#waybar {
   padding: 2px 4px;
 }
 
+#taskbar button.active {
+  border-bottom: 3px solid @accent;
+}
+
 #custom-left-arrow {
   font-size: 10pt;
   color: @unfocused;
