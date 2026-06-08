@@ -51,8 +51,8 @@ in {
     window.titlebar.padding.height: 10
 
     # window border
-    window.active.border.color: #${base16Scheme.base02}
-    window.inactive.border.color: #${base16Scheme.base02}
+    window.active.border.color: #${base16Scheme.base01}
+    window.inactive.border.color: #${base16Scheme.base01}
 
     # ToggleKeybinds status indicator
     window.active.indicator.toggled-keybind.color: #${base16Scheme.base08}
@@ -72,7 +72,7 @@ in {
     # window titlebar text
     window.active.label.text.color: #${base16Scheme.base05}
     window.inactive.label.text.color: #${base16Scheme.base04}
-    window.label.text.justify: center
+    window.label.text.justify: Center
 
     # window button width and spacing
     window.button.width: 20
