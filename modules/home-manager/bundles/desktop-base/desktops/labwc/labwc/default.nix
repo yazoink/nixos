@@ -271,7 +271,7 @@ in {
             "@key" = "W-c";
             action = {
               "@name" = "Execute";
-              "@command" = "${../../scripts/color.sh}";
+              "@command" = "${../scripts/color.sh}";
             };
           }
           # launch browser
