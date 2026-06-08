@@ -1,5 +1,6 @@
 # relies on labwc home-manager module
 {pkgs, ...}: {
+  programs.labwc.enable = true;
   services = {
     upower.enable = true; # for poweralertd
     dbus.enable = true;
