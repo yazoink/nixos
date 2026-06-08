@@ -41,9 +41,10 @@
           size = 12;
         };
         terminal = {
-          name = "Cozette";
+          # name = "Cozette";
+          name = "Terminess Nerd Font";
           # name = "Aporetic Serif Mono";
-          size = 13;
+          size = 12;
         };
       };
     };
