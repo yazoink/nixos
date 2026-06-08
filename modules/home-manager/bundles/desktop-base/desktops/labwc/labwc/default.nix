@@ -174,6 +174,7 @@ in {
     snapping.overlay.region.border.color: #${base16Scheme.${osConfig.desktopTheme.base16Accent}}
     snapping.overlay.edge.border.color: #${base16Scheme.${osConfig.desktopTheme.base16Accent}}
   '';
+  home.file.".themes/my-labwc/labwc".source = ./icons;
   wayland.windowManager.labwc = {
     enable = true;
     systemd.enable = true;
@@ -217,7 +218,8 @@ in {
         "@number" = 5;
       };
       theme = {
-        name = "${config.gtk.theme.name}";
+        # name = "${config.gtk.theme.name}";
+        name = "my-labwc";
         cornerRadius = 10;
         font = {
           "@name" = "${fonts.sansSerif.name}";
