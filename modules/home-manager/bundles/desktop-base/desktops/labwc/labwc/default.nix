@@ -286,6 +286,32 @@ in {
               "@name" = "UnSnap";
             };
           }
+          # iconify
+          {
+            "@key" = "W-i";
+            action = {
+              "@name" = "iconify";
+            };
+          }
+          # cycle focus
+          {
+            "@key" = "W-Tab";
+            action = {
+              "@name" = "NextWindow";
+              "@workspace" = "current";
+              "@output" = "all";
+              "@identifier" = "all";
+            };
+          }
+          {
+            "@key" = "W-S-Tab";
+            action = {
+              "@name" = "PreviousWindow";
+              "@workspace" = "current";
+              "@output" = "all";
+              "@identifier" = "all";
+            };
+          }
           # switch to workspace
           {
             "@key" = "W-1";
@@ -465,7 +491,7 @@ in {
             "@key" = "Esc";
             action = {
               "@name" = "Execute";
-              "@command" = "eww --config ~/.config/widgets close-all; pkill walker";
+              "@command" = "eww --config /home/${osConfig.myOptions.userAccount.username}/.config/widgets close-all; pkill walker";
             };
           }
         ];
