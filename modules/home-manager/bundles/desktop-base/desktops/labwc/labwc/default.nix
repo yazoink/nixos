@@ -243,7 +243,8 @@ in {
         icon = "${osConfig.desktopTheme.icons.name}";
         titlebar = {
           showTitle = true;
-          layout = "icon:iconify,max,close";
+          # layout = "icon:iconify,max,close";
+          layout = "iconify,max,close";
           dropShadows = true;
           dropShadowsOnTiled = true;
         };
