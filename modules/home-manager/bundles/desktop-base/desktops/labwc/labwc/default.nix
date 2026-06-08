@@ -41,7 +41,7 @@ in {
     # make sure all other lines are commented out or deleted.
 
     # general
-    border.width: 3
+    border.width: 1
 
     #
     # The global padding.{width,height} of openbox are not supported because
