@@ -13,7 +13,7 @@
   barPosition = "bottom";
   taskbarModule = ''
     "wlr/taskbar": {
-      "format": {icon},
+      "format": "{icon}",
       "icon-size": 14,
       "tooltip-format": "{title}",
       "on-click": "activate",
@@ -184,14 +184,6 @@
        "tooltip": true,
        "tooltip-format": "Application menu (Mod+P, Mod+R)",
        "on-click": "pkill walker || walker"
-    }
-  '';
-  windowModule = ''
-    "hyprland/window": {
-      "icon-size": 24,
-      "icon": true,
-      "max-length": 50,
-      "format": "{initialTitle}"
     }
   '';
   quickAccessModuleLaptop = ''
