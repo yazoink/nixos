@@ -48,6 +48,11 @@ window#waybar {
   border-radius: 10px;
 }
 
+#custom-search,
+#custom-power {
+  font-size: 12pt;
+}
+
 #custom-power {
   padding-right: 7px;
 }

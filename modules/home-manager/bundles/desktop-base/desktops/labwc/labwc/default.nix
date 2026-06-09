@@ -19,6 +19,8 @@
       );
 in {
   home.packages = with pkgs; [
+    wlr-randr
+    wtype
     wl-clipboard
     wf-recorder
     wayland-pipewire-idle-inhibit
