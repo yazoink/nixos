@@ -234,7 +234,7 @@ in {
         device = [
           {
             "@category" = "touchpad";
-            scrollFactor = osConfig.myOptions.hardwareFeatures.labwcTouchpadScrollFactor;
+            scrollFactor = osConfig.myOptions.hardwareFeatures.laptop.labwcTouchpadScrollFactor;
           }
         ];
       };
