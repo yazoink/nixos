@@ -37,6 +37,7 @@ window#waybar {
 }
 
 #workspaces,
+#custom-workspaces,
 #quick-access-slider,
 #clock,
 #custom-search,
@@ -48,6 +49,7 @@ window#waybar {
   border-radius: 10px;
 }
 
+#custom-workspaces,
 #custom-power {
   padding-right: 7px;
 }
@@ -107,19 +109,6 @@ menuitem {
 
 menuitem:hover {
   background-color: @bg2;
-}
-
-#workspaces button {
-  color: @unfocused;
-  min-width: 8pt;
-}
-
-#workspaces button.active {
-  color: @fg;
-}
-
-#workspaces button.urgent {
-  color: @urgent;
 }
 
 #tray,
