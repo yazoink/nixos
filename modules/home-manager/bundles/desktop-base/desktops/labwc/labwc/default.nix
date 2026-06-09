@@ -214,7 +214,7 @@ in {
       [
         "waybar &"
         "${wallpaperCommand} -q &"
-        "walker --gapplication-service &"
+        # "walker --gapplication-service &"
         "poweralertd &"
         "nm-applet &"
         "wl-clip-persist --clipboard regular &"
@@ -445,14 +445,14 @@ in {
             "@key" = "W-p";
             action = {
               "@name" = "Execute";
-              "@command" = "pkill walker || walker";
+              "@command" = "pkill wofi || wofi --show drun";
             };
           }
           {
             "@key" = "W-r";
             action = {
               "@name" = "Execute";
-              "@command" = "pkill walker || walker";
+              "@command" = "pkill wofi || wofi --show drun";
             };
           }
           # selective screenshot
@@ -532,7 +532,7 @@ in {
             "@key" = "Esc";
             action = {
               "@name" = "Execute";
-              "@command" = "eww --config /home/${osConfig.myOptions.userAccount.username}/.config/widgets close-all; pkill walker";
+              "@command" = "eww --config /home/${osConfig.myOptions.userAccount.username}/.config/widgets close-all; pkill wofi";
             };
           }
           # launch poer menu

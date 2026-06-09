@@ -15,7 +15,8 @@ in {
     (import ./swayidle {inherit config osConfig lib pkgs;})
     (import ./hyprlock {inherit config osConfig lib pkgs;})
     (import ./swayosd {inherit config osConfig lib pkgs;})
-    (import ./walker {inherit config osConfig lib pkgs;})
+    # (import ./walker {inherit config osConfig lib pkgs;})
+    (import ./wofi {inherit config osConfig lib pkgs;})
     (import ./waybar {inherit config osConfig lib pkgs;})
     (import ./labwc {inherit config osConfig lib pkgs;})
   ]);
