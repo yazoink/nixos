@@ -31,6 +31,20 @@
       "on-scroll-up": "${lib.getExe pkgs.wtype} -M win -M shift -P left",
       "on-scroll-down": "${lib.getExe pkgs.wtype} -M win -M shift -P right",
       "format": "{name}"
+    },
+    "custom/workspaces": {
+      "tooltip": true,
+      "tooltip-format": "Switch workspaces",
+      "format": "",
+      "menu": "on-click",
+      "menu-file": "${./workspaces.xml}",
+      "menu-actions": {
+        "w-1": "${lib.getExe pkgs.wtype} -M win -P 1",
+        "w-2": "${lib.getExe pkgs.wtype} -M win -P 2",
+        "w-3": "${lib.getExe pkgs.wtype} -M win -P 3",
+        "w-4": "${lib.getExe pkgs.wtype} -M win -P 4",
+        "w-5": "${lib.getExe pkgs.wtype} -M win -P 5"
+      }
     }
   '';
   clockModule = ''
@@ -259,6 +273,7 @@
     "modules-left": [
       "custom/search",
       "custom/separator#left",
+      "custom/workspaces",
       "ext/workspaces"
     ],
     "modules-center": [

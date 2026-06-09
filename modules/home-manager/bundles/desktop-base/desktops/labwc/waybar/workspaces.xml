@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+    <object class="GtkMenu" id="menu">
+        <child>
+            <object class="GtkMenuItem" id="w-1">
+                <property name="label">Workspace 1</property>
+            </object>
+        </child>
+        <child>
+            <object class="GtkMenuItem" id="w-2">
+                <property name="label">Workspace 2</property>
+            </object>
+        </child>
+        <child>
+            <object class="GtkMenuItem" id="w-3">
+                <property name="label">Workspace 3</property>
+            </object>
+        </child>
+        <child>
+            <object class="GtkSeparatorMenuItem" id="delimiter1" />
+        </child>
+        <child>
+            <object class="GtkMenuItem" id="w-4">
+                <property name="label">Workspace 4</property>
+            </object>
+        </child>
+        <child>
+            <object class="GtkMenuItem" id="w-5">
+                <property name="label">Workspace 5</property>
+            </object>
+        </child>
+    </object>
+</interface>
