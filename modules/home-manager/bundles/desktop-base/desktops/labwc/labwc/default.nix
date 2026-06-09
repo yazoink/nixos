@@ -548,7 +548,7 @@ in {
             "@key" = "W-S-c";
             action = {
               "@name" = "Execute";
-              "@command" = "bash /home/${osConfig.myOptions.userAccount.username}/.config/widgets/launch-calendar.sh";
+              "@command" = "bash $EWW_CONFIG_DIR/launch-calendar.sh";
             };
           }
           # media keys
