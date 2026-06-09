@@ -18,13 +18,15 @@ body {
   --code-font: "Iosevka Nerd Font"; /* change to '' for default discord font */
   font-weight: normal /* normal text font weight. DOES NOT AFFECT BOLD TEXT */;
 
+
+  --radius-lg: 5px;
   /* sizes */
   --gap: 10px; /* spacing between panels */
   --divider-thickness: 2px; /* thickness of unread messages divider and highlighted message borders */
-  --border-thickness: 1px; /* thickness of borders around main panels. DOES NOT AFFECT OTHER BORDERS */
+  --border-thickness: 0px; /* thickness of borders around main panels. DOES NOT AFFECT OTHER BORDERS */
 
   /* animation/transition options */
-  --animations: on; /* off: disable animations/transitions, on: enable animations/transitions */
+  --animations: off; /* off: disable animations/transitions, on: enable animations/transitions */
   --list-item-transition: 0.2s ease; /* transition for list items */
   --dms-icon-svg-transition: 0.4s ease; /* transition for the dms icon */
   --border-hover-transition: 0.2s ease; /* transition for borders when hovered */
@@ -88,14 +90,14 @@ body {
   --text-5: #{{base04}}; /* muted channels/chats and timestamps */
 
   /* background and dark colors */
-  --bg-1: #{{base02}}; /* dark buttons when clicked */
+  --bg-1: #{{base01}}; /* dark buttons when clicked */
   --bg-2: #{{base01}}; /* dark buttons */
   --bg-3: #{{base01}}; /* spacing, secondary elements */
   --bg-4: #{{base00}}; /* main background color */
-  --hover: rgba({{base05-rgb-r}}, {{base05-rgb-g}}, {{base05-rgb-b}}, 0.045); /* channels and buttons when hovered */
-  --active: rgba({{base05-rgb-r}}, {{base05-rgb-g}}, {{base05-rgb-b}}, 0.09);
-  --active-2: rgba({{base05-rgb-r}}, {{base05-rgb-g}}, {{base05-rgb-b}}, 0.09);
-  --message-hover: rgba({{base05-rgb-r}}, {{base05-rgb-g}}, {{base05-rgb-b}}, 0.045); /* messages when hovered */
+  --hover: #{{base01}}; /* channels and buttons when hovered */
+  --active: #{{base01}};
+  --active-2: #{{base01}};
+  --message-hover: #{{base00}}; /* messages when hovered */
 
   /* accent colors */
   --accent-new: var(
