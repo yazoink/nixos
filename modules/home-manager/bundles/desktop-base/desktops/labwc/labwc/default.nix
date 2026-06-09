@@ -445,14 +445,14 @@ in {
             "@key" = "W-p";
             action = {
               "@name" = "Execute";
-              "@command" = "pkill wofi; wofi --show drun";
+              "@command" = "wofi --show drun";
             };
           }
           {
             "@key" = "W-r";
             action = {
               "@name" = "Execute";
-              "@command" = "pkill wofi; wofi --show drun";
+              "@command" = "wofi --show drun";
             };
           }
           # selective screenshot
