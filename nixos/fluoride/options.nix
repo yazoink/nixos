@@ -35,6 +35,8 @@
     };
     desktopTheme = {
       colorscheme = "carob";
+      rice.labwc.enable = true;
+      rice.hyprland.enable = false;
       # name = "everblush";
       wallpaper = {
         type = "image";
