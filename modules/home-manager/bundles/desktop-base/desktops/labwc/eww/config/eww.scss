@@ -64,19 +64,19 @@ button:hover {
   padding: 10px;
 }
 
- .power-button-box button .power-button-lock {
+.power-button-lock label {
   color: $blue;
 }
 
-.power-button-box button .power-button-exit {
+.power-button-exit label {
   color: $green;
 }
 
-.power-button-box button .power-button-reboot {
+.power-button-reboot label {
   color: $yellow;
 }
 
-.power-button-box button .power-button-shutdown {
+.power-button-shutdown label {
   color: $red;
 }
 
@@ -127,6 +127,10 @@ button:hover {
   background-color: $bg2;
   padding: 15px;
   border-radius: 5px;
+}
+
+.quote-author {
+  opacity: 0.5;
 }
 
 .pretty-time-date {

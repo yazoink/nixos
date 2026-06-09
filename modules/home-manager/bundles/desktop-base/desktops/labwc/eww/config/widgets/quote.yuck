@@ -3,7 +3,7 @@
     :orientation "vertical"
     :class "quote"
     :space-evenly "false"
-    (left-text :text '"${text}"\\n' :class "")
-    (right-text :text "~ ${author}" :class "")
+    (left-text :text '"${text}"\\n' :class "quote-text")
+    (right-text :text "~ ${author}" :class "quote-author")
   )
 )
