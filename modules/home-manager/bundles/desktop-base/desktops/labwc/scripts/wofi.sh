@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 
-pkill wofi
+pkill wofi || wofi --show drun
 
-if [[ $? != 0 ]]; then
-    eww --config "$EWW_CONFIG_DIR" open closer-window
-    wofi --show drun
-else
-    eww --config "$EWW_CONFIG_DIR" close-all
-fi
+# if [[ $? != 0 ]]; then
+#     eww --config "$EWW_CONFIG_DIR" open closer-window
+#     wofi --show drun
+# else
+#     eww --config "$EWW_CONFIG_DIR" close-all
+# fi
