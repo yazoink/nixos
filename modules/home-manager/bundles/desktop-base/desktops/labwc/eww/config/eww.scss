@@ -193,12 +193,13 @@ tooltip label {
 
 .cal {
   background-color: $bg2;
-  padding: 5px;
+  padding: 10px;
   border-radius: 5px;
 }
 
 calendar.header {
-  border-bottom: 1px solid $bg3;
+  background-color: $bg2;
+  border-bottom: 2px dashed $bg3;
   border-radius: 0px;
 }
 
@@ -207,12 +208,13 @@ calendar.button {
 }
 
 calendar.day-number {
-  padding: 5px;
+  padding: 3px;
   margin: 0;
 }
 
 calendar:selected {
   color: $blue;
+  background-color: $bg3;
 }
 
 .red {
