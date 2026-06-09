@@ -3,7 +3,6 @@
 echo "confirm_prompt.sh"
 config=$EWW_CONFIG_DIR
 eww --config "$config" close power
-eww --config "$config" open closer-window
 eww --config "$config" open confirm --arg thing="$1" --arg action="$2"
 
 if [[ $? == 0 ]]; then
