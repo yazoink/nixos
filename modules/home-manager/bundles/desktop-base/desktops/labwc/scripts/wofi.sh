@@ -3,9 +3,8 @@
 pkill wofi
 
 if [[ $? != 0 ]]; then
-    eww --config ~/.config/widgets open closer-window
+    eww --config "$EWW_CONFIG_DIR" open closer-window
     wofi --show drun
 else
-    eww --config ~/.config/widgets close closer-window
+    eww --config "$EWW_CONFIG_DIR" close closer-window
 fi
-
