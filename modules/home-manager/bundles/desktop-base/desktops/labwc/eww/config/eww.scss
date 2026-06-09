@@ -64,19 +64,19 @@ button:hover {
   padding: 10px;
 }
 
-.power-button-lock {
+ .power-button-box button .power-button-lock {
   color: $blue;
 }
 
-.power-button-exit {
+.power-button-box button .power-button-exit {
   color: $green;
 }
 
-.power-button-reboot {
+.power-button-box button .power-button-reboot {
   color: $yellow;
 }
 
-.power-button-shutdown {
+.power-button-box button .power-button-shutdown {
   color: $red;
 }
 
