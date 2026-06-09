@@ -29,13 +29,17 @@ $round: 15px;
   font-size: 15pt;
 }
 
-.power-box, .confirm-box {
+.power-box, .confirm-box, .calendar-box {
   // box-shadow: 0 0 5px -5px rgba(0, 0, 0, 0.2);
   padding: 15px;
   border: 1px solid $border;
   border-radius: 15px;
   background-color: $bg;
   margin: $margin;
+}
+
+.power-box {
+  padding-top: 25px;
 }
 
 .user-box {
@@ -62,7 +66,7 @@ button:hover {
 
 .power-button-box button {
   font-family: "Font Awesome 7 Free";
-  font-size: 14pt;
+  font-size: 15pt;
   padding: 10px;
 }
 
@@ -90,13 +94,16 @@ button:hover {
 // }
 
 .profile-picture {
-  border-radius: 5px;
+  // border-radius: 5px;
+  border: 1px solid $fg;
   // box-shadw: 0 0 5px rgba(0, 0, 0, 0.15);
 }
 
 .heading {
   font-weight: bold;
-  font-size: 18pt;
+  font-size: 21pt;
+  margin: 5px;
+  padding-bottom: 10px;
 }
 
 .os-version {
@@ -133,6 +140,11 @@ button:hover {
 
 .quote-author {
   opacity: 0.5;
+}
+
+.pretty-time {
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .pretty-time-date {
@@ -181,7 +193,7 @@ tooltip label {
 
 .cal {
   background-color: $bg2;
-  padding: 10px;
+  padding: 5px;
   border-radius: 5px;
 }
 

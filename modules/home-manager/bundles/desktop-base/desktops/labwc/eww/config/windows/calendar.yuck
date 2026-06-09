@@ -8,11 +8,11 @@
   :stacking "fg"
   :exclusive "false"
   :focusable "ondemand"
-  :class "confirm"
+  :class "calendar"
   (box
     :orientation "vertical"
     :space-evenly "false"
-    :class "confirm-box"
+    :class "calendar-box"
     :spacing 15
     :halign "fill"
     (pretty-time)

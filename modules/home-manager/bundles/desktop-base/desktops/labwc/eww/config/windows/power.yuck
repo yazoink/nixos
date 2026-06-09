@@ -39,7 +39,7 @@
         :vexpand "true"
         :hexpand "true"
         :valign "center"
-        (user :image "./images/profile_image_rounded.png")
+        (user :image "./images/profile_image.jpg")
       )
     )
     (resource-usage-grid)
