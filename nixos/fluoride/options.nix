@@ -58,7 +58,7 @@
       };
       fonts.terminal = {
         name = "Cozette";
-        size = 13;
+        size = 15;
         # name = "Terminess Nerd Font";
         # size = 12;
         # name = "Iosevka Nerd Font";
