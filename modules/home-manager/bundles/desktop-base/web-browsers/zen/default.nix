@@ -21,8 +21,8 @@ in {
       };
     };
     stylix.targets.zen-browser = {
-      enable = false;
-      # profileNames = ["hi"];
+      enable = true;
+      profileNames = ["hi"];
     };
     programs.zen-browser = {
       enable = true;
@@ -77,8 +77,6 @@ in {
           force = true;
           default = "ddg";
         };
-        userChrome = ''
-        '';
         settings = {
           "zen.theme.use-system-colors" = true;
           "zen.theme.gradient.show-custom-colors" = false;
