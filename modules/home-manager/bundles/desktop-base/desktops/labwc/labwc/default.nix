@@ -117,7 +117,7 @@ in {
     menu.width.min: 20
     menu.width.max: 200
     menu.border.width: 1
-    menu.border.color: #${base16Scheme.base02}
+    menu.border.color: #${base16Scheme.base01}
     menu.items.bg.color: #${base16Scheme.base00}
     menu.items.text.color: #${base16Scheme.base05}
     menu.items.active.bg.color: #${base16Scheme.base01}
@@ -127,14 +127,14 @@ in {
     menu.separator.width: 1
     menu.separator.padding.width: 5
     menu.separator.padding.height: 0
-    menu.separator.color: #${base16Scheme.base02}
+    menu.separator.color: #${base16Scheme.base01}
     menu.title.bg.color: #${base16Scheme.base01}
     menu.title.text.color: #${base16Scheme.base05}
     menu.title.text.justify: Center
 
     # on screen display (window-cycle dialog)
     osd.bg.color: #${base16Scheme.base00}
-    osd.border.color: #${base16Scheme.base02}
+    osd.border.color: #${base16Scheme.base01}
     osd.border.width: 1
     osd.label.text.color: #${base16Scheme.base05}
 
@@ -152,7 +152,7 @@ in {
     # osd.window-switcher.style-classic.item.icon.size: 50
 
     osd.window-switcher.style-thumbnail.width.max: 80%
-    osd.window-switcher.style-thumbnail.padding: 4
+    osd.window-switcher.style-thumbnail.padding: 5
     osd.window-switcher.style-thumbnail.item.width: 300
     osd.window-switcher.style-thumbnail.item.height: 250
     osd.window-switcher.style-thumbnail.item.padding: 10
@@ -533,14 +533,6 @@ in {
             action = {
               "@name" = "Execute";
               "@command" = "${../scripts/restart-foot-server.sh}";
-            };
-          }
-          # close eww windows and launcher
-          {
-            "@key" = "Esc";
-            action = {
-              "@name" = "Execute";
-              "@command" = "eww --config /home/${osConfig.myOptions.userAccount.username}/.config/widgets close-all; pkill wofi";
             };
           }
           # launch poer menu
