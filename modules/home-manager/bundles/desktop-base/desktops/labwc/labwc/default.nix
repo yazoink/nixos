@@ -17,10 +17,6 @@
         then "${../scripts/swaybg.sh} -i ${desktopTheme.wallpaper.image.path}"
         else "${../scripts/swaybg.sh} -t ${desktopTheme.wallpaper.image.path}"
       );
-  qtScaleFactor =
-    if (osConfig.networking.hostName == "fluoride")
-    then "1.4"
-    else "1";
 in {
   home.packages = with pkgs; [
     wl-clipboard
@@ -206,10 +202,10 @@ in {
       "GDK_SCALE=1"
       "CLUTTER_BACKEND=wayland"
       "XDG_SESSION_TYPE=wayland"
-      "QT_AUTO_SCREEN_SCALE_FACTOR=${qtScaleFactor}"
+      "QT_AUTO_SCREEN_SCALE_FACTOR=1"
       "QT_WAYLAND_DISABLE_WINDOWDECORATION=1"
       "QT_QPA_PLATFORM=wayland;xcb"
-      "QT_SCALE_FACTOR=${qtScaleFactor}"
+      "QT_SCALE_FACTOR=1"
       "QT_QPA_PLATFORMTHEME=qt6ct"
       "QT_ENABLE_HIGHDPI_SCALING=0"
       "_JAVA_AWT_WM_NONREPARENTING=1"
