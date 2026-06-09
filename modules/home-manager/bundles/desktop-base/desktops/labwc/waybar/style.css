@@ -110,7 +110,6 @@ menuitem:hover {
 }
 
 #workspaces button {
-  margin-right: 14px;
   color: @unfocused;
   min-width: 8pt;
 }
