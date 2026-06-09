@@ -55,16 +55,14 @@ in {
 
     # window border
     window.active.border.color: #${base16Scheme.base01}
-    window.inactive.border.color: #${base16Scheme.base01}
+    window.inactive.border.color: #${base16Scheme.base02}
 
     # ToggleKeybinds status indicator
     window.active.indicator.toggled-keybind.color: #${base16Scheme.base08}
 
     # window titlebar background
-    # window.active.title.bg.color: #${base16Scheme.base00}
-    # window.inactive.title.bg.color: #${base16Scheme.base00}
-    window.active.title.bg.color: #0f0f0f
-    window.inactive.title.bg.color: #0f0f0f
+    window.active.title.bg.color: #${base16Scheme.base01}
+    window.inactive.title.bg.color: #${base16Scheme.base01}
     window.*.title.bg: Solid
 
     # Vertical and SplitVertical gradients are supported for window.*.title.bg

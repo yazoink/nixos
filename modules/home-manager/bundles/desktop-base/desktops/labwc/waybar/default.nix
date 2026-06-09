@@ -324,12 +324,12 @@ in {
     # "waybar/menus/power.xml".source = ./power.xml;
     "waybar/style.css".text =
       ''
-        @define-color bg #0f0f0f;
-        @define-color bg2 #${base16Scheme.base01};
+        @define-color bg #${base16Scheme.base01};
+        @define-color bg2 #${base16Scheme.base02};
         @define-color fg #${base16Scheme.base05};
         @define-color unfocused #${base16Scheme.base04};
         @define-color urgent #${base16Scheme.base08};
-        @define-color border #${base16Scheme.base01};
+        @define-color border #${base16Scheme.base02};
         @define-color accent #${base16Scheme.${osConfig.desktopTheme.base16Accent}};
 
         * {
