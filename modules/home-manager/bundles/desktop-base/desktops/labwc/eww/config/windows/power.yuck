@@ -22,7 +22,7 @@
     :space-evenly "false"
     :class "power-box"
     :spacing 15
-    ;(separator)
+    (separator)
     (label :text "Have a nice day :)" :class "heading")
     (resource-usage-grid)
     (box
