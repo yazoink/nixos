@@ -77,7 +77,12 @@ in {
           force = true;
           default = "ddg";
         };
+        userChrome = ''
+        '';
         settings = {
+          "zen.theme.use-system-colors" = true;
+          "zen.theme.gradient.show-custom-colors" = false;
+          "zen.theme.gradient" = false;
           "zen.workspaces.continue-where-left-off" = true;
           "zen.workspaces.natural-scroll" = true;
           "zen.view.compact.hide-tabbar" = true;
