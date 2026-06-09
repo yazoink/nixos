@@ -28,8 +28,8 @@
       "active-only": true,
       "tooltip": true,
       "tooltip-format": "Mod + 1-5, or scroll to switch workspaces",
-      "on-scroll-up": "${lib.getExe pkgs.wtype} -M win -M shift -P left -p left -m shift -m win",
-      "on-scroll-down": "${lib.getExe pkgs.wtype} -M win -M shift -P right -p right -m shift -m win",
+      "on-scroll-up": "${lib.getExe pkgs.wtype} -M win -M shift -P left -p left -m shift -s 500 -m win",
+      "on-scroll-down": "${lib.getExe pkgs.wtype} -M win -M shift -P right -p right -m shift -s 500 -m win",
       "format": "{name}"
     },
     "custom/workspaces": {
@@ -39,11 +39,11 @@
       "menu": "on-click",
       "menu-file": "${./workspaces.xml}",
       "menu-actions": {
-        "w-1": "${lib.getExe pkgs.wtype} -M win 1 -m win",
-        "w-2": "${lib.getExe pkgs.wtype} -M win 2 -m win",
-        "w-3": "${lib.getExe pkgs.wtype} -M win 3 -m win",
-        "w-4": "${lib.getExe pkgs.wtype} -M win 4 -m win",
-        "w-5": "${lib.getExe pkgs.wtype} -M win 5 -m win"
+        "w-1": "${lib.getExe pkgs.wtype} -M win 1 -s 500 -m win",
+        "w-2": "${lib.getExe pkgs.wtype} -M win 2 -s 500 -m win",
+        "w-3": "${lib.getExe pkgs.wtype} -M win 3 -s 500 -m win",
+        "w-4": "${lib.getExe pkgs.wtype} -M win 4 -s 500 -m win",
+        "w-5": "${lib.getExe pkgs.wtype} -M win 5 -s 500 -m win"
       }
     }
   '';
