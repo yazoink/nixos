@@ -16,6 +16,7 @@ if [[ $? == 0 ]]; then
         sleep 0.5
         eww --config "$config" active-windows | grep -q "calendar-window"
         if [[ $? -ne 0 ]]; then
+            eww --config "$config" close closer-window
             exit 0
         fi
     done

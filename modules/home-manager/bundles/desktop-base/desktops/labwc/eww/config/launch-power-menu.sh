@@ -1,11 +1,10 @@
 #!/usr/bin/env bash
 
 config="$EWW_CONFIG_DIR"
-pkill walker
 
 eww --config="$config" active-windows | grep -q power
 [[ $? == 0 ]] && {
-    eww --config "$config" close power
+    eww --config "$config" close-all
     echo "closed power"
     exit 0
 }
@@ -21,6 +20,7 @@ if [[ $? == 0 ]]; then
         sleep 0.5
         eww --config "$config" active-windows | grep -q "power"
         if [[ $? -ne 0 ]]; then
+            eww --config "$config" close closer-window
             exit 0
         fi
     done
