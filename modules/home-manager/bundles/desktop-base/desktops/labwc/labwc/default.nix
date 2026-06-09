@@ -437,7 +437,7 @@ in {
           {
             "@key" = "W-S-d";
             action = {
-              "@name" = "ShowDesktop";
+              "@name" = "ToggleShowDesktop";
             };
           }
           # terminal
