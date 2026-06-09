@@ -26,16 +26,11 @@
       "on-click": "activate",
       "sort-by-id": true,
       "active-only": true,
-      "format": "{icon}"
-    },
-    "group/workspaces": {
-      "modules": ["ext/workspaces"],
       "tooltip": true,
       "tooltip-format": "Mod + 1-5, or scroll to switch workspaces",
-      "on-click": "${lib.getExe pkgs.wtype} -M win -M shift -P right &",
-      "on-double-click": "${lib.getExe pkgs.wtype} -M win -M shift -P left &",
       "on-scroll-up": "${lib.getExe pkgs.wtype} -M win -M shift -P left",
-      "on-scroll-down": "${lib.getExe pkgs.wtype} -M win -M shift -P right"
+      "on-scroll-down": "${lib.getExe pkgs.wtype} -M win -M shift -P right",
+      "format": "{icon}"
     }
   '';
   clockModule = ''
@@ -264,7 +259,7 @@
     "modules-left": [
       "custom/search",
       "custom/separator#left",
-      "group/workspaces"
+      "ext/workspaces"
     ],
     "modules-center": [
       "wlr/taskbar"
