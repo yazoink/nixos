@@ -21,8 +21,8 @@ in {
       };
     };
     stylix.targets.zen-browser = {
-      enable = true;
-      profileNames = ["hi"];
+      enable = false;
+      # profileNames = ["hi"];
     };
     programs.zen-browser = {
       enable = true;
