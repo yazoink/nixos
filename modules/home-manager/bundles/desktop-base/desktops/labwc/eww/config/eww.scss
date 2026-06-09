@@ -8,6 +8,7 @@ $yellow: #E5C76B;
 $green: #8CCF7E;
 $blue: #67B0E8;
 $purple: #C47FD5;
+$margin: 5px;
 
 @import "colours";
 
@@ -38,7 +39,7 @@ $round: 15px;
 }
 
 .user-box {
-  padding: 10px;
+  padding: 15px;
   border-radius: 5px;
   background-color: $bg2;
 }
@@ -59,8 +60,24 @@ button:hover {
 
 .power-button-box button {
   font-family: "Font Awesome 7 Free";
-  font-size: 19pt;
+  font-size: 16pt;
   padding: 10px;
+}
+
+.power-button-lock {
+  color: $blue;
+}
+
+.power-button-exit {
+  color: $green;
+}
+
+.power-button-reboot {
+  color: $yellow;
+}
+
+.power-button-shutdown {
+  color: $red;
 }
 
 // .user-box {
@@ -101,14 +118,14 @@ button:hover {
 
 .grid-list-box, .text-box {
   background-color: $bg2;
-  padding: 10px;
+  padding: 15px;
   border-radius: 5px;
 }
 
 .quote {
   font-style: italic;
   background-color: $bg2;
-  padding: 10px;
+  padding: 15px;
   border-radius: 5px;
 }
 

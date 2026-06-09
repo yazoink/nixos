@@ -17,13 +17,13 @@
         :space-evenly "true"
         :spacing 10
         (button
-          :class "power-button"
+          :class "power-button-lock"
           :onclick "bash ./scripts/lock.sh"
           :tooltip "Lock (l)"
           ""
         )
         (button
-          :class "power-button"
+          :class "power-button-exit"
           :onclick "bash ./scripts/confirm_prompt.sh 'Exit window manager?' 'labwc --exit' & disown"
           :tooltip "Exit (e)"
           ""
@@ -35,13 +35,13 @@
         :space-evenly "true"
         :spacing 10
         (button
-          :class "power-button"
+          :class "power-button-reboot"
           :onclick "bash ./scripts/confirm_prompt.sh 'Reboot system?' 'systemctl reboot' & disown"
           :tooltip "Reboot (r)"
           ""
         )
         (button
-          :class "power-button"
+          :class "power-button-shutdown"
           :onclick "bash ./scripts/confirm_prompt.sh 'Shut down system?' 'shutdown now' & disown"
           :tooltip "Shutdown (s)"
           ""
