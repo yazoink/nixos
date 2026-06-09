@@ -453,14 +453,14 @@ in {
             "@key" = "W-p";
             action = {
               "@name" = "Execute";
-              "@command" = "wofi --show drun";
+              "@command" = "eww --config $EWW_CONFIG_DIR open closer-window; wofi --show drun";
             };
           }
           {
             "@key" = "W-r";
             action = {
               "@name" = "Execute";
-              "@command" = "wofi --show drun";
+              "@command" = "eww --config $EWW_CONFIG_DIR open closer-window; wofi --show drun";
             };
           }
           # selective screenshot

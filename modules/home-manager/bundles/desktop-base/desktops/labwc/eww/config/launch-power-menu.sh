@@ -11,6 +11,7 @@ eww --config="$config" active-windows | grep -q power
 }
 
 echo "opening power menu"
+eww --config "$config" open closer-window
 eww --config "$config" open power
 echo "pwd $(pwd)"
 

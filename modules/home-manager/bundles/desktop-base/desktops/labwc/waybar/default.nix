@@ -197,7 +197,7 @@
        "format": "",
        "tooltip": true,
        "tooltip-format": "Application menu (Mod+P, Mod+R)",
-       "on-click": "pkill wofi || wofi --show drun"
+       "on-click": "pkill wofi; eww --config ~/.config/widgets open closer-window; wofi --show drun"
     }
   '';
   quickAccessModuleLaptop = ''

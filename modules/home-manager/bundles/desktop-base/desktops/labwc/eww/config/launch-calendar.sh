@@ -8,6 +8,7 @@ eww --config="$config" active-windows | grep -q calendar-window
     exit 0
 }
 
+eww --config "$config" open closer-window
 eww --config "$config" open calendar-window
 
 if [[ $? == 0 ]]; then

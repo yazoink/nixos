@@ -1,3 +1,6 @@
+(defwidget closer []
+  (eventbox :onclick "bash ./scripts/closer.sh"))
+
 (defwidget left-text [text class]
   (box
     :orientation "horizontal"
