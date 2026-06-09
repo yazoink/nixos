@@ -185,7 +185,7 @@
        "format": "",
        "tooltip": true,
        "tooltip-format": "Application menu (Mod+P, Mod+R)",
-       "on-click": "pkill wofi || wofi"
+       "on-click": "pkill wofi || wofi --show drun"
     }
   '';
   quickAccessModuleLaptop = ''
