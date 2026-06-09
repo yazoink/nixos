@@ -26,7 +26,7 @@ in {
       xoffset = 5;
       location = "bottom_left";
       display_generic = true;
-      prompt = "Run";
+      prompt = "Search...";
     };
     style =
       ''
