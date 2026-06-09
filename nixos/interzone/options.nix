@@ -20,6 +20,7 @@
     desktopTheme = {
       rice.labwc.enable = true;
       rice.hyprland.enable = false;
+      zenBrowserShowBorders = false;
       colorscheme = "paradise";
       wallpaper = {
         type = "image";
@@ -27,7 +28,7 @@
           fillType = "fill";
           path = pkgs.fetchurl {
             url = "https://raw.githubusercontent.com/yazoink/wallpapers/refs/heads/main/paintings/painting3.jpg";
-            hash = "sha256-jpfmaXcqSyiiEk336DK5OmunHONWn0l0nAnYFid7AZE=";
+            hash = "sha256-BzrYxsHcZ/l2ZdZ1pwSmtMXgFaPNFDWUObjIzSy3Gh8=";
           };
         };
       };

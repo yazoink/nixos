@@ -6,7 +6,12 @@
   osConfig,
   pkgs,
   ...
-}: {
+}: let
+  borders =
+    if osConfig.myOptions.desktopTheme.zenBrowserShowBorders
+    then 15
+    else 0;
+in {
   config = lib.mkIf (osConfig.myOptions.bundles.desktopBase.enable && osConfig.myOptions.defaultApps.webBrowser.command == "zen-twilight") {
     defaultApps.webBrowser.desktopFile = "zen.desktop";
     home = {
@@ -80,7 +85,7 @@
           "zen.view.compact.animate-sidebar" = false;
           "zen.welcome-screen.seen" = true;
           "zen.urlbar.behavior" = "float";
-          "zen.theme.content-element-separation" = 15;
+          "zen.theme.content-element-separation" = borders;
           "zen.view.experimental-no-window-controls" = true;
           "zen.urlbar.replace-newtab" = false;
           "zen.view.hide-window-controls" = true;

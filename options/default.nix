@@ -198,6 +198,10 @@
           };
         };
         # These options may be overridden by certain rices
+        zenBrowserShowBorders = lib.mkOption {
+          type = lib.types.bool;
+          default = true;
+        };
         colorscheme = lib.mkOption {
           type = lib.types.str;
           default = "everblush";
