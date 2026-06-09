@@ -453,7 +453,7 @@ in {
             "@key" = "W-p";
             action = {
               "@name" = "Execute";
-              "@command" = "eww --config $EWW_CONFIG_DIR open closer-window; wofi --show drun";
+              "@command" = "eww --config ~/.config/widgets open closer-window; wofi --show drun";
             };
           }
           {
