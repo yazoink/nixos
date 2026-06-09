@@ -30,7 +30,7 @@ $round: 15px;
 
 .power-box, .confirm-box {
   // box-shadow: 0 0 5px -5px rgba(0, 0, 0, 0.2);
-  padding: 20px;
+  padding: 15px;
   border: 1px solid $border;
   border-radius: 15px;
   background-color: $bg;
@@ -38,14 +38,14 @@ $round: 15px;
 }
 
 .user-box {
-  padding: 22px;
+  padding: 15px;
   border-radius: 10px;
   background-color: $bg2;
 }
 
 button {
   padding: 10px;
-  border-radius: 10px;
+  border-radius: 5px;
   background-color: $bg2;
 }
 
@@ -102,14 +102,14 @@ button:hover {
 .grid-list-box, .text-box {
   background-color: $bg2;
   padding: 15px;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
 .quote {
   font-style: italic;
   background-color: $bg2;
   padding: 15px;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
 .pretty-time-date {
@@ -159,7 +159,7 @@ tooltip label {
 .cal {
   background-color: $bg2;
   padding: 10px;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
 calendar.header {
