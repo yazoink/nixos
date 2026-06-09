@@ -24,13 +24,13 @@
   workspacesModule = ''
     "ext/workspaces": {
       "on-click": "activate",
-      "sort-by-id": true,
+      "sort-by-name": true,
       "active-only": true,
       "tooltip": true,
       "tooltip-format": "Mod + 1-5, or scroll to switch workspaces",
       "on-scroll-up": "${lib.getExe pkgs.wtype} -M win -M shift -P left",
       "on-scroll-down": "${lib.getExe pkgs.wtype} -M win -M shift -P right",
-      "format": "{icon}"
+      "format": "{name}"
     }
   '';
   clockModule = ''
