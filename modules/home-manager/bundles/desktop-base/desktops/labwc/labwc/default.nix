@@ -243,7 +243,7 @@ in {
         titlebar = {
           showTitle = true;
           # layout = "icon:iconify,max,close";
-          layout = "close,max,iconify:";
+          layout = "close,iconify,max:";
           dropShadows = "yes";
           dropShadowsOnTiled = "yes";
         };
