@@ -50,7 +50,7 @@
   clockModule = ''
     "clock": {
       "format": "{:%I:%M %p}",
-      "on-click": "bash ~/.config/widgets/launch-calendar.sh",
+      "on-click": "bash $EWW_CONFIG_DIR/launch-calendar.sh",
       "tooltip": true,
       "tooltip-format": "Open calendar"
     }
@@ -177,7 +177,7 @@
       "format" : "",
       "tooltip": true,
       "tooltip-format": "Power menu (Mod+Shift+Q)",
-      "on-click": "bash ~/.config/widgets/launch-power-menu.sh"
+      "on-click": "bash $EWW_CONFIG_DIR/launch-power-menu.sh"
     }
   '';
   idleInhibitorModule = ''

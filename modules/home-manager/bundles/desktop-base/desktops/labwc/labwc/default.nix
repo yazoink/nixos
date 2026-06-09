@@ -540,7 +540,7 @@ in {
             "@key" = "W-S-q";
             action = {
               "@name" = "Execute";
-              "@command" = "bash /home/${osConfig.myOptions.userAccount.username}/.config/widgets/launch-power-menu.sh";
+              "@command" = "bash $EWW_CONFIG_DIR/launch-power-menu.sh";
             };
           }
           # launch calendar
