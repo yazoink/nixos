@@ -20,7 +20,7 @@
     desktopTheme = {
       rice.labwc.enable = true;
       rice.hyprland.enable = false;
-      zenBrowserShowBorders = false;
+      # zenBrowserShowBorders = false;
       colorscheme = "paradise";
       wallpaper = {
         type = "image";
