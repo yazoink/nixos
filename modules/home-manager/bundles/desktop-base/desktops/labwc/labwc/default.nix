@@ -230,6 +230,14 @@ in {
       desktops = {
         "@number" = 5;
       };
+      libinput = {
+        device = [
+          {
+            "@category" = "touchpad";
+            scrollFactor = osConfig.myOptions.hardwareFeatures.labwcTouchpadScrollFactor;
+          }
+        ];
+      };
       theme = {
         # name = "${config.gtk.theme.name}";
         name = "my-labwc";

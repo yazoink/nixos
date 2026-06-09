@@ -443,6 +443,10 @@
             type = lib.types.number;
             default = 1;
           };
+          labwcTouchpadScrollFactor = lib.mkOption {
+            type = lib.types.number;
+            default = 1;
+          };
           batteryName = lib.mkOption {
             type = lib.types.str;
             default = "BAT0";

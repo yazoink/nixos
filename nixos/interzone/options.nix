@@ -76,6 +76,7 @@
       laptop = {
         enable = true;
         hyprlandTouchpadScrollFactor = 0.15;
+        labwcTouchpadScrollFactor = 0.15;
         batteryName = "BAT0";
       };
     };
