@@ -14,7 +14,7 @@ in {
     settings = {
       term = osConfig.myOptions.defaultApps.terminal.command;
       width = "35%";
-      height = "35%";
+      height = "45%";
       show_all = false;
       allow_markup = true;
       always_parse_args = true;
@@ -22,7 +22,7 @@ in {
       allow_images = true;
       sort_order = "alphabetical";
       key_expand = "Tab";
-      yoffset = -27;
+      yoffset = -28;
       xoffset = 5;
       location = "bottom_left";
       display_generic = true;
