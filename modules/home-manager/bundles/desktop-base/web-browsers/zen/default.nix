@@ -90,6 +90,25 @@ in {
               --zen-toolbar-element-bg: #${base01-hex} !important;
             }
 
+            .zen-toolbar-background {
+              box-shadow: none !important;;
+              &::before,
+              &::after {
+                border: none !important;
+                outline: none !important;
+              }
+
+              &,
+              &::before,
+              &::after {
+                border-radius: 15px !important;;
+              }
+              &,
+               &::before {
+                border: 1px solid #${base01-hex} !important;
+              }
+            }
+
             .urlbar {
               :root[zen-single-toolbar="true"] &[breakout-extend="true"], &[zen-floating-urlbar="true"] {
                 --urlbar-container-padding: 0 !important;;
