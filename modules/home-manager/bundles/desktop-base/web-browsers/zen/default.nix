@@ -90,6 +90,15 @@ in {
               --zen-toolbar-element-bg: #${base01-hex} !important;
             }
 
+             #urlbar[breakout-extend="true"] {
+                & .urlbar-background {
+                  border-radius: 15px !important;
+                  border: none !important;
+                  box-shadow: none !important;
+                  outline: none !important;
+                }
+              }
+
             .tab-background {
               min-height: 40px !important;
             }
