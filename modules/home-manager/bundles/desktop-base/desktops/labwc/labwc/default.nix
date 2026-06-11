@@ -18,6 +18,7 @@
       );
 in
   lib.mkMerge [
+    (import ./themerc.nix {inherit config osConfig;})
     {
       home.packages = with pkgs; [
         wlr-randr
@@ -37,7 +38,6 @@ in
         libnotify
       ];
       wayland.windowManager.labwc = lib.mkMerge [
-        (import ./themerc.nix {inherit config osConfig;})
         {
           enable = true;
           systemd.enable = true;
