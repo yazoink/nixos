@@ -90,6 +90,12 @@ in {
               --zen-toolbar-element-bg: #${base01-hex} !important;
             }
 
+            .urlbar {
+              :root[zen-single-toolbar="true"] &[breakout-extend="true"], &[zen-floating-urlbar="true"] {
+                --urlbar-container-padding: 0 !important;;
+              }
+            }
+
              #urlbar[breakout-extend="true"] {
                 & .urlbar-background {
                   border-radius: 15px !important;
