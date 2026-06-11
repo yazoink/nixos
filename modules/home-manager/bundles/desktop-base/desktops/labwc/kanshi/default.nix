@@ -10,12 +10,7 @@
       desktop = {
         outputs = [
           {
-            criteria = "DP-1";
-            scale = 1.35;
-            status = "enable";
-          }
-          {
-            criteria = "DP-2";
+            criteria = "Dell Inc. DELL U2715H 6VY7R72K01YS";
             scale = 1.35;
             status = "enable";
           }
