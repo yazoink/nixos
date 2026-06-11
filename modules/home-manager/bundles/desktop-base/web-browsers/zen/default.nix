@@ -79,6 +79,8 @@ in {
             --zen-main-browser-background: #${base00-hex} !important;
             --toolbox-bgcolor-inactive: #${base01-hex} !important;
             --zen-themed-toolbar-bg-transparent: #${base01-hex} !important;
+            --input-color: #${base05-hex} !important;
+            --border-radius-medium: 5px !important;
           }
 
           zen-workspace {
