@@ -71,7 +71,7 @@
     "@key" = "W-Left";
     action = {
       "@name" = "ResizeRelative";
-      "@left" = 10;
+      "@right" = -10;
     };
   }
   {
@@ -85,7 +85,7 @@
     "@key" = "W-Up";
     action = {
       "@name" = "ResizeRelative";
-      "@up" = 10;
+      "@down" = -10;
     };
   }
   {
