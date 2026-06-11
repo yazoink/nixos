@@ -1,11 +1,7 @@
-{
-  osConfig,
-  lib,
-  pkgs,
-  ...
-}: {
+{...}: {
   services.kanshi = {
     enable = true;
+    systemdTarget = "labwc-session.target";
     profiles = {
       desktop = {
         outputs = [

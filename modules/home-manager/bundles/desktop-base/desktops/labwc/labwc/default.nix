@@ -40,7 +40,13 @@ in
       wayland.windowManager.labwc = lib.mkMerge [
         {
           enable = true;
-          systemd.enable = true;
+          systemd = {
+            enable = true;
+            extraCommands = [
+              "systemctl --user stop labwc-session.target"
+              "systemctl --user start labwc-session.target"
+            ];
+          };
           xwayland.enable = true;
         }
         (import ./config {inherit osConfig config lib wallpaperCommand;})
