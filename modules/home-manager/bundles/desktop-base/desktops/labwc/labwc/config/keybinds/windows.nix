@@ -85,14 +85,14 @@
     "@key" = "W-Up";
     action = {
       "@name" = "ResizeRelative";
-      "@down" = -10;
+      "@bottom" = -10;
     };
   }
   {
     "@key" = "W-Down";
     action = {
       "@name" = "ResizeRelative";
-      "@down" = 10;
+      "@bottom" = 10;
     };
   }
   # move window
