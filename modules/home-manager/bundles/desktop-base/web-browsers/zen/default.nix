@@ -109,10 +109,6 @@ in {
               min-height: 40px !important;
             }
 
-            .tab-content {
-              padding: 0 15px !important;
-            }
-
             .tabbrowser-tab[zen-essential="true"], #zen-welcome-initial-essentials-browser-sidebar-essentials .tabbrowser-tab {
               &:hover .tab-background {
                 background: var(--zen-toolbar-element-bg) !important;
