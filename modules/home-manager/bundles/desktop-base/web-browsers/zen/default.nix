@@ -81,13 +81,27 @@ in {
               --toolbox-bgcolor-inactive: #${base01-hex} !important;
               --zen-themed-toolbar-bg-transparent: #${base01-hex} !important;
               --input-color: #${base05-hex} !important;
-              --border-radius-medium: 5px !important;
-              --zen-border-radius: 20px !important;
+              --zen-native-inner-radius: 15px !important;
               --zen-toolbar-height: 48px !important;
               --toolbarbutton-hover-background: #${base01-hex} !important;
               --panel-color: #${base05-hex} !important;
               --panel-border-color: #${base01-hex} !important;
               --panel-border-radius: 15px !important;
+              --zen-toolbar-element-bg: #${base01-hex} !important;
+            }
+
+            .tab-background {
+              min-height: 40px !important;
+            }
+
+            .tab-content {
+              padding: 0 15px !important;
+            }
+
+            .tabbrowser-tab[zen-essential="true"], #zen-welcome-initial-essentials-browser-sidebar-essentials .tabbrowser-tab {
+              &:hover .tab-background {
+                background: var(--zen-toolbar-element-bg) !important;
+              }
             }
 
             :is(menupopup, panel) {
@@ -106,6 +120,12 @@ in {
 
             menuitem {
               border-radius: 5px !important;
+            }
+
+            menuitem {
+            &:hover {
+              background-color: #${base01-hex} !important;
+              }
             }
 
             menupopup {
@@ -263,7 +283,7 @@ in {
             #tabbrowser-tabs {
             & .tabbrowser-tab {
               & .tab-background {
-                border-radius: 5px !important;
+                border-radius: 10px !important;
                 box-shadow: none !important;
               }
             }
