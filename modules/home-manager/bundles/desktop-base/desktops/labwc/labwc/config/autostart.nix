@@ -6,8 +6,8 @@
     else
       (
         if (osConfig.myOptions.desktopTheme.wallpaper.image.fillType == "fill")
-        then "${../scripts/swaybg.sh} -i ${desktopTheme.wallpaper.image.path}"
-        else "${../scripts/swaybg.sh} -t ${desktopTheme.wallpaper.image.path}"
+        then "${../../scripts/swaybg.sh} -i ${desktopTheme.wallpaper.image.path}"
+        else "${../../scripts/swaybg.sh} -t ${desktopTheme.wallpaper.image.path}"
       );
 in {
   autostart =
