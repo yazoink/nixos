@@ -11,6 +11,14 @@
     if osConfig.myOptions.desktopTheme.zenBrowserShowBorders
     then 15
     else 0;
+  userChrome = config.lib.stylix.colors {
+    template = ./userChrome.css.mustache;
+    extension = "css";
+  };
+  userContent = config.lib.stylix.colors {
+    template = ./userContent.css.mustache;
+    extension = "css";
+  };
 in {
   config = lib.mkIf (osConfig.myOptions.bundles.desktopBase.enable && osConfig.myOptions.defaultApps.webBrowser.command == "zen-twilight") {
     defaultApps.webBrowser.desktopFile = "zen.desktop";
@@ -21,13 +29,15 @@ in {
       };
     };
     stylix.targets.zen-browser = {
-      enable = true;
+      enable = false;
       profileNames = ["hi"];
     };
     programs.zen-browser = {
       enable = true;
       setAsDefaultBrowser = true;
       # nativeMessagingHosts = [pkgs.firefoxpwa]; broken?
+      userChrome = userChrome;
+      userContent = userContent;
       policies = {
         AutofillAddressEnabled = false;
         AutofillCreditCardEnabled = false;
@@ -78,6 +88,7 @@ in {
           default = "ddg";
         };
         settings = {
+          "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
           "zen.theme.use-system-colors" = true;
           "zen.theme.gradient.show-custom-colors" = false;
           "zen.theme.gradient" = false;
