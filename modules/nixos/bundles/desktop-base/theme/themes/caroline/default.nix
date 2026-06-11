@@ -10,7 +10,7 @@ in {
   config = lib.mkIf (config.myOptions.bundles.desktopBase.enable && config.myOptions.desktopTheme.colorscheme == "caroline") {
     desktopTheme.base16Accent = "base0F";
     desktopTheme.icons = {
-      name = "caroline-suru-aspromauros";
+      name = "caroline-papirus";
       package = carolineIcons;
     };
 
