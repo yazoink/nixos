@@ -3,7 +3,8 @@
   {
     "@key" = "W-S-r";
     action = {
-      "@name" = "Reconfigure";
+      "@name" = "Execute";
+      "@command" = "labwc -r && notify-send 'labwc' 'Configuration reloaded'";
     };
   }
   # show desktop

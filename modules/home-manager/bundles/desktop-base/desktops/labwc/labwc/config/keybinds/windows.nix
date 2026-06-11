@@ -68,28 +68,28 @@
   }
   # resize window
   {
-    "@key" = "W-Left";
+    "@key" = "W-S-Left";
     action = {
       "@name" = "ResizeRelative";
       "@right" = -10;
     };
   }
   {
-    "@key" = "W-Right";
+    "@key" = "W-S-Right";
     action = {
       "@name" = "ResizeRelative";
       "@right" = 10;
     };
   }
   {
-    "@key" = "W-Up";
+    "@key" = "W-S-Up";
     action = {
       "@name" = "ResizeRelative";
       "@bottom" = -10;
     };
   }
   {
-    "@key" = "W-Down";
+    "@key" = "W-S-Down";
     action = {
       "@name" = "ResizeRelative";
       "@bottom" = 10;
@@ -97,28 +97,28 @@
   }
   # move window
   {
-    "@key" = "W-S-Left";
+    "@key" = "W-Left";
     action = {
       "@name" = "MoveRelative";
       "@x" = -10;
     };
   }
   {
-    "@key" = "W-S-Right";
+    "@key" = "W-Right";
     action = {
       "@name" = "MoveRelative";
       "@x" = 10;
     };
   }
   {
-    "@key" = "W-S-Up";
+    "@key" = "W-Up";
     action = {
       "@name" = "MoveRelative";
       "@y" = -10;
     };
   }
   {
-    "@key" = "W-S-Down";
+    "@key" = "W-Down";
     action = {
       "@name" = "MoveRelative";
       "@y" = 10;
