@@ -73,7 +73,7 @@
   }
   # show next/prev workspace
   {
-    "@key" = "W-S-Left";
+    "@key" = "W-C-Left";
     action = {
       "@name" = "GoToDesktop";
       "@to" = "left";
@@ -82,7 +82,7 @@
     };
   }
   {
-    "@key" = "W-S-Right";
+    "@key" = "W-C-Right";
     action = {
       "@name" = "GoToDesktop";
       "@to" = "right";

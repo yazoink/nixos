@@ -70,29 +70,29 @@
   {
     "@key" = "W-Left";
     action = {
-      "@name" = "Resize";
-      "@direction" = "left";
+      "@name" = "ResizeRelative";
+      "@left" = 10;
     };
   }
   {
     "@key" = "W-Right";
     action = {
-      "@name" = "Resize";
-      "@direction" = "right";
+      "@name" = "ResizeRelative";
+      "@right" = 10;
     };
   }
   {
     "@key" = "W-Up";
     action = {
-      "@name" = "Resize";
-      "@direction" = "up";
+      "@name" = "ResizeRelative";
+      "@up" = 10;
     };
   }
   {
     "@key" = "W-Down";
     action = {
-      "@name" = "Resize";
-      "@direction" = "down";
+      "@name" = "ResizeRelative";
+      "@down" = 10;
     };
   }
   # move window
