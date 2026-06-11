@@ -312,6 +312,41 @@ in {
               }
             }
           }
+
+          #urlbar[open][zen-floating-urlbar="true"] {
+              & .urlbar-background {
+                background: #${base00-hex} !important;
+                outline: none !important;
+                border: 1px solid #${base01-hex} !important;
+                border-radius: 15px !important;
+              }
+            }
+
+            .urlbar-input-container {
+              background: #${base01-hex} !important;
+            }
+
+            .urlbar[breakout][breakout-extend] {
+              & > .urlbar-input-container {
+                height: 50px !important;
+                margin: 10px !important;
+                width: calc(100% - 20px) !important;;
+                padding-left: 5px !important;
+                padding-right: 15px !important;
+              }
+            }
+
+            .urlbar {
+              &[breakout-extend="true"] {
+                --urlbar-container-padding: 0;
+              }
+            }
+
+            .urlbarView-body-inner {
+              #urlbar[open] > .urlbarView > .urlbarView-body-outer > & {
+                border-top: 1px solid #${base01-hex} !important;
+              }
+            }
         '';
         userContent = with colors; ''
           /* Common variables affecting all pages */
