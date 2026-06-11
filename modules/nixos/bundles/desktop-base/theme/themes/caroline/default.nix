@@ -88,9 +88,9 @@ in {
         base02 = "563837";
         base03 = "6d4745";
         base04 = "8b5d57";
-        base05 = "a87569";
-        base06 = "a87569";
-        base07 = "a87569";
+        base05 = "c58d7b";
+        base06 = "c58d7b";
+        base07 = "c58d7b";
         base08 = "c24f57";
         base09 = "a63650";
         base0A = "f28171";
