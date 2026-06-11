@@ -11,14 +11,7 @@
     if osConfig.myOptions.desktopTheme.zenBrowserShowBorders
     then 15
     else 0;
-  userChrome = config.lib.stylix.colors {
-    template = ./userChrome.css.mustache;
-    extension = "css";
-  };
-  userContent = config.lib.stylix.colors {
-    template = ./userContent.css.mustache;
-    extension = "css";
-  };
+  inherit (config.lib.stylix) colors;
 in {
   config = lib.mkIf (osConfig.myOptions.bundles.desktopBase.enable && osConfig.myOptions.defaultApps.webBrowser.command == "zen-twilight") {
     defaultApps.webBrowser.desktopFile = "zen.desktop";
@@ -59,8 +52,318 @@ in {
         };
       };
       profiles.hi = {
-        userChrome = userChrome;
-        userContent = userContent;
+        userChrome = with colors; ''
+          :root {
+            --zen-colors-primary: #${base02-hex} !important;
+            --zen-primary-color: #${base0D-hex} !important;
+            --zen-colors-secondary: #${base02-hex} !important;
+            --zen-colors-tertiary: #${base01-hex} !important;
+            --zen-colors-border: #${base0D-hex} !important;
+            --toolbarbutton-icon-fill: #${base0D-hex} !important;
+            --lwt-text-color: #${base05-hex} !important;
+            --toolbar-field-color: #${base05-hex} !important;
+            --toolbar-textcolor: #${base05-hex} !important;
+            --toolbox-textcolor: #${base05-hex} !important;
+            --tab-selected-textcolor: #${base05-hex} !important;
+            --toolbar-field-focus-color: #${base05-hex} !important;
+            --toolbar-color: #${base05-hex} !important;
+            --newtab-text-primary-color: #${base05-hex} !important;
+            --arrowpanel-color: #${base05-hex} !important;
+            --arrowpanel-background: #${base00-hex} !important;
+            --sidebar-text-color: #${base05-hex} !important;
+            --lwt-sidebar-text-color: #${base05-hex} !important;
+            --lwt-sidebar-background-color: #${base00-hex} !important;
+            --toolbar-bgcolor: #${base02-hex} !important;
+            --newtab-background-color: #${base00-hex} !important;
+            --zen-themed-toolbar-bg: #${base00-hex} !important;
+            --zen-main-browser-background: #${base00-hex} !important;
+            --toolbox-bgcolor-inactive: #${base01-hex} !important;
+            --zen-themed-toolbar-bg-transparent: #${base01-hex} !important;
+          }
+
+          zen-workspace {
+            --toolbox-textcolor: #${base05-hex} !important;
+          }
+
+          #permissions-granted-icon {
+            color: #${base05-hex} !important;
+          }
+
+          #historySwipeAnimationPreviousArrow,#historySwipeAnimationNextArrow {
+            --swipe-nav-icon-primary-color: #${base0D-hex} !important;
+            --swipe-nav-icon-accent-color: #${base00-hex} !important;
+          }
+
+          #sidebar-box {
+            background-color: #${base00-hex} !important;
+          }
+
+          .sidebar-placesTree {
+            background-color: #${base00-hex} !important;
+          }
+
+          #zen-workspaces-button {
+            background-color: #${base00-hex} !important;
+          }
+
+          .urlbar-background {
+            background-color: #${base02-hex} !important;
+          }
+
+          .content-shortcuts {
+            background-color: #${base00-hex} !important;
+            border-color: #${base0D-hex} !important;
+          }
+
+          .urlbarView-url {
+            color: #${base0D-hex} !important;
+          }
+
+          #urlbar-input::selection {
+            background-color: #${base0D-hex} !important;
+            color: #${base00-hex} !important;
+          }
+
+          #zenEditBookmarkPanelFaviconContainer {
+            background: #${base00-hex} !important;
+          }
+
+          #zen-media-controls-toolbar {
+            & #zen-media-progress-bar {
+              &::-moz-range-track {
+                background: #${base02-hex} !important;
+              }
+            }
+          }
+
+          toolbar .toolbarbutton-1 {
+            &:not([disabled]) {
+              &:is([open], [checked])
+                > :is(
+                  .toolbarbutton-icon,
+                  .toolbarbutton-text,
+                  .toolbarbutton-badge-stack
+                ) {
+                fill: #${base00-hex};
+              }
+            }
+          }
+
+          .identity-color-blue {
+            --identity-tab-color: #${base0D-hex} !important;
+            --identity-icon-color: #${base0D-hex} !important;
+          }
+
+          .identity-color-turquoise {
+            --identity-tab-color: #${base0C-hex} !important;
+            --identity-icon-color: #${base0C-hex} !important;
+          }
+
+          .identity-color-green {
+            --identity-tab-color: #${base0B-hex} !important;
+            --identity-icon-color: #${base0B-hex} !important;
+          }
+
+          .identity-color-yellow {
+            --identity-tab-color: #${base0A-hex} !important;
+            --identity-icon-color: #${base0A-hex} !important;
+          }
+
+          .identity-color-orange {
+            --identity-tab-color: #${base09-hex} !important;
+            --identity-icon-color: #${base09-hex} !important;
+          }
+
+          .identity-color-red {
+            --identity-tab-color: #${base08-hex} !important;
+            --identity-icon-color: #${base08-hex} !important;
+          }
+
+          .identity-color-pink {
+            --identity-tab-color: #${base0E-hex} !important;
+            --identity-icon-color: #${base0E-hex} !important;
+          }
+
+          .identity-color-purple {
+            --identity-tab-color: #${base0F-hex} !important;
+            --identity-icon-color: #${base0F-hex} !important;
+          }
+
+          #zen-toolbar-background {
+            --zen-main-browser-background-toolbar: #${base00-hex} !important;
+          }
+
+          #commonDialog {
+            background-color: #${base00-hex} !important;
+          }
+
+          #zen-browser-background {
+            --zen-main-browser-background: #${base00-hex} !important;
+          }
+
+          menu,
+          menuitem,
+          menupopup {
+            color: #${base05-hex} !important;
+          }
+        '';
+        userContent = with colors; ''
+          /* Common variables affecting all pages */
+          @-moz-document url-prefix("about:") {
+            :root {
+              --in-content-page-color: #${base05-hex} !important;
+              --color-accent-primary: #${base0D-hex} !important;
+              --color-accent-primary-hover: #${base0D-hex} !important;
+              --color-accent-primary-active: #${base0D-hex} !important;
+              background-color: #${base00-hex} !important;
+              --in-content-page-background: #${base00-hex} !important;
+            }
+          }
+
+          /* Variables and styles specific to about:newtab and about:home */
+          @-moz-document url("about:newtab"), url("about:home") {
+
+            :root {
+              --newtab-background-color: #${base00-hex} !important;
+              --newtab-background-color-secondary: #${base02-hex} !important;
+              --newtab-element-hover-color: #${base02-hex} !important;
+              --newtab-text-primary-color: #${base05-hex} !important;
+              --newtab-wordmark-color: #${base05-hex} !important;
+              --newtab-primary-action-background: #${base0D-hex}$ !important;
+            }
+
+            .icon {
+              color: #${base0D-hex} !important;
+            }
+
+            .search-wrapper .logo-and-wordmark .logo {
+              display: inline-block !important;
+              height: 82px !important;
+              width: 82px !important;
+              background-size: 82px !important;
+            }
+
+            @media (max-width: 609px) {
+              .search-wrapper .logo-and-wordmark .logo {
+                background-size: 64px !important;
+                height: 64px !important;
+                width: 64px !important;
+              }
+            }
+
+            .card-outer:is(:hover, :focus, .active):not(.placeholder) .card-title {
+              color: #${base0D-hex} !important;
+            }
+
+            .top-site-outer .search-topsite {
+              background-color: #${base0D-hex} !important;
+            }
+
+            .compact-cards .card-outer .card-context .card-context-icon.icon-download {
+              fill: #${base0B-hex} !important;
+            }
+          }
+
+          /* Variables and styles specific to about:preferences */
+          @-moz-document url-prefix("about:preferences") {
+            :root {
+              --zen-colors-tertiary: #${base01-hex} !important;
+              --in-content-text-color: #${base05-hex} !important;
+              --link-color: #${base0D-hex} !important;
+              --link-color-hover: #${base0D-hex} !important;
+              --zen-colors-primary: #${base02-hex} !important;
+              --in-content-box-background: #${base02-hex} !important;
+              --zen-primary-color: #${base0D-hex} !important;
+            }
+
+            groupbox , moz-card{
+              background: #${base00-hex} !important;
+            }
+
+            button,
+            groupbox menulist {
+              background: #${base02-hex} !important;
+              color: #${base05-hex} !important;
+            }
+
+            .main-content {
+              background-color: #${base00-hex} !important;
+            }
+
+            .identity-color-blue {
+              --identity-tab-color: #${base0D-hex} !important;
+              --identity-icon-color: #${base0D-hex} !important;
+            }
+
+            .identity-color-turquoise {
+              --identity-tab-color: #${base0C-hex} !important;
+              --identity-icon-color: #${base0C-hex} !important;
+            }
+
+            .identity-color-green {
+              --identity-tab-color: #${base0B-hex} !important;
+              --identity-icon-color: #${base0B-hex} !important;
+            }
+
+            .identity-color-yellow {
+              --identity-tab-color: #${base0A-hex} !important;
+              --identity-icon-color: #${base0A-hex} !important;
+            }
+
+            .identity-color-orange {
+              --identity-tab-color: #${base09-hex} !important;
+              --identity-icon-color: #${base09-hex} !important;
+            }
+
+            .identity-color-red {
+              --identity-tab-color: #${base08-hex} !important;
+              --identity-icon-color: #${base08-hex} !important;
+            }
+
+            .identity-color-pink {
+              --identity-tab-color: #${base0E-hex} !important;
+              --identity-icon-color: #${base0E-hex} !important;
+            }
+
+            .identity-color-purple {
+              --identity-tab-color: #${base0F-hex} !important;
+              --identity-icon-color: #${base0F-hex} !important;
+            }
+          }
+
+          /* Variables and styles specific to about:addons */
+          @-moz-document url-prefix("about:addons") {
+            :root {
+              --zen-dark-color-mix-base: #${base01-hex} !important;
+              --background-color-box: #${base00-hex} !important;
+            }
+          }
+
+          /* Variables and styles specific to about:protections */
+          @-moz-document url-prefix("about:protections") {
+            :root {
+              --zen-primary-color: #${base00-hex} !important;
+              --social-color: #${base0E-hex} !important;
+              --coockie-color: #${base0D-hex} !important;
+              --fingerprinter-color: #${base0A-hex} !important;
+              --cryptominer-color: #${base0F-hex} !important;
+              --tracker-color: #${base0B-hex} !important;
+              --in-content-primary-button-background-hover: #${base03-hex} !important;
+              --in-content-primary-button-text-color-hover: #${base05-hex} !important;
+              --in-content-primary-button-background: #${base03-hex} !important;
+              --in-content-primary-button-text-color: #${base05-hex} !important;
+            }
+
+            .card {
+              background-color: #${base02-hex} !important;
+            }
+          }
+
+          ::selection {
+            background-color: #${base02-hex} !important;
+            color: #${base05-hex} !important;
+          }
+        '';
         extensions.packages = with inputs.firefox-addons.packages.${pkgs.stdenv.hostPlatform.system};
           lib.mkMerge [
             [
