@@ -43,8 +43,8 @@
         image = {
           fillType = "fill";
           path = pkgs.fetchurl {
-            url = "https://raw.githubusercontent.com/yazoink/wallpapers/refs/heads/main/trees-and-leaves/andrei-lazarev-QtM-8j_1o3Q.jpg";
-            hash = "sha256-UvKYWT/5HA2s+Na9dcfzCDzThq9x92iH3u/uxn53pEQ=";
+            url = "https://raw.githubusercontent.com/yazoink/wallpapers/refs/heads/main/flowers/1751142470750001.jpg";
+            hash = "";
           };
         };
       };
