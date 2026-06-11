@@ -28,8 +28,8 @@
       "active-only": true,
       "tooltip": true,
       "tooltip-format": "Mod + 1-5, or scroll to switch workspaces",
-      "on-scroll-up": "${lib.getExe pkgs.wtype} -M win -M shift -P left -p left -m shift -s 500 -m win",
-      "on-scroll-down": "${lib.getExe pkgs.wtype} -M win -M shift -P right -p right -m shift -s 500 -m win",
+      "on-scroll-up": "${lib.getExe pkgs.wtype} -M win -M ctrl -P left -p left -m shift -s 500 -m win",
+      "on-scroll-down": "${lib.getExe pkgs.wtype} -M win -M ctrl -P right -p right -m shift -s 500 -m win",
       "format": "{name}"
     },
     "custom/workspaces": {

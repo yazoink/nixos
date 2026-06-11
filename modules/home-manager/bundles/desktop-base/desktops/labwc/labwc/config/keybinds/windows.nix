@@ -66,4 +66,91 @@
       "@identifier" = "all";
     };
   }
+  # resize window
+  {
+    "@key" = "W-Left";
+    action = {
+      "@name" = "Resize";
+      "@direction" = "left";
+    };
+  }
+  {
+    "@key" = "W-Right";
+    action = {
+      "@name" = "Resize";
+      "@direction" = "right";
+    };
+  }
+  {
+    "@key" = "W-Up";
+    action = {
+      "@name" = "Resize";
+      "@direction" = "up";
+    };
+  }
+  {
+    "@key" = "W-Down";
+    action = {
+      "@name" = "Resize";
+      "@direction" = "down";
+    };
+  }
+  # move window
+  {
+    "@key" = "W-S-Left";
+    action = {
+      "@name" = "MoveRelative";
+      "@x" = -10;
+    };
+  }
+  {
+    "@key" = "W-S-Right";
+    action = {
+      "@name" = "MoveRelative";
+      "@x" = 10;
+    };
+  }
+  {
+    "@key" = "W-S-Up";
+    action = {
+      "@name" = "MoveRelative";
+      "@y" = -10;
+    };
+  }
+  {
+    "@key" = "W-S-Down";
+    action = {
+      "@name" = "MoveRelative";
+      "@y" = 10;
+    };
+  }
+  # snap to edge
+  {
+    "@key" = "W-A-Left";
+    action = {
+      "@direction" = "left";
+      "@combine" = "yes";
+    };
+  }
+  {
+    "@key" = "W-A-Right";
+    action = {
+      "@direction" = "right";
+      "@combine" = "yes";
+    };
+  }
+  {
+    "@key" = "W-A-Up";
+    action = {
+      "@direction" = "up";
+      "@combine" = "yes";
+    };
+  }
+  {
+    "@key" = "W-A-Down";
+    action = {
+      "@direction" = "down";
+      "@combine" = "yes";
+    };
+  }
 ]
