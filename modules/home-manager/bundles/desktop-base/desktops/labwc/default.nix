@@ -18,5 +18,6 @@ in {
     (import ./wofi {inherit config osConfig lib pkgs;})
     (import ./waybar {inherit config osConfig lib pkgs;})
     (import ./labwc {inherit config osConfig lib pkgs;})
+    (import ./kanshi {inherit config osConfig lib pkgs;})
   ]);
 }
