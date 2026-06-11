@@ -128,7 +128,7 @@
   {
     "@key" = "W-A-Left";
     action = {
-      "@name" = "SnapToEdge";
+      "@name" = "ToggleSnapToEdge";
       "@direction" = "left";
       "@combine" = "yes";
     };
@@ -136,7 +136,7 @@
   {
     "@key" = "W-A-Right";
     action = {
-      "@name" = "SnapToEdge";
+      "@name" = "ToggleSnapToEdge";
       "@direction" = "right";
       "@combine" = "yes";
     };
@@ -144,7 +144,7 @@
   {
     "@key" = "W-A-Up";
     action = {
-      "@name" = "SnapToEdge";
+      "@name" = "ToggleSnapToEdge";
       "@direction" = "up";
       "@combine" = "yes";
     };
@@ -152,7 +152,7 @@
   {
     "@key" = "W-A-Down";
     action = {
-      "@name" = "SnapToEdge";
+      "@name" = "ToggleSnapToEdge";
       "@direction" = "down";
       "@combine" = "yes";
     };
