@@ -6,7 +6,7 @@ pkgs.stdenv.mkDerivation {
     owner = "yazoink";
     repo = "caroline-icons";
     rev = "51fd705bd82bf2da45d3a35937d9d329759184a7";
-    sha256 = "sha256-RzhihJwyA0dq/RJtWizLTyaNenXzEaAeOlTD66gvDFI=";
+    sha256 = "";
   };
 
   dontUnpack = true;
