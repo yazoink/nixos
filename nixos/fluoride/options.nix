@@ -34,7 +34,7 @@
       username = "gene";
     };
     desktopTheme = {
-      colorscheme = "caroline";
+      colorscheme = "paradise";
       rice.labwc.enable = true;
       rice.hyprland.enable = false;
       # name = "everblush";
