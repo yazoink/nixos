@@ -36,8 +36,6 @@ in {
       enable = true;
       setAsDefaultBrowser = true;
       # nativeMessagingHosts = [pkgs.firefoxpwa]; broken?
-      userChrome = userChrome;
-      userContent = userContent;
       policies = {
         AutofillAddressEnabled = false;
         AutofillCreditCardEnabled = false;
@@ -61,6 +59,8 @@ in {
         };
       };
       profiles.hi = {
+        userChrome = userChrome;
+        userContent = userContent;
         extensions.packages = with inputs.firefox-addons.packages.${pkgs.stdenv.hostPlatform.system};
           lib.mkMerge [
             [
