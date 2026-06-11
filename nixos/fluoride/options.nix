@@ -44,7 +44,7 @@
           fillType = "fill";
           path = pkgs.fetchurl {
             url = "https://raw.githubusercontent.com/yazoink/wallpapers/refs/heads/main/flowers/1751142470750001.jpg";
-            hash = "";
+            hash = "sha256-jpfmaXcqSyiiEk336DK5OmunHONWn0l0nAnYFid7AZE=";
           };
         };
       };
