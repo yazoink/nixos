@@ -20,7 +20,10 @@
     };
 
     services = {
-      gvfs.enable = true;
+      gvfs = {
+        enable = true;
+        package = lib.mkForce pkgs.gnome.gvfs;
+      };
       tumbler.enable = true;
     };
   };
