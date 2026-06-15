@@ -17,7 +17,7 @@ in {
     };
     icon = "${icons.name}";
     titlebar = {
-      showTitle = true;
+      showTitle = "yes";
       # layout = "icon:iconify,max,close";
       layout = "close,iconify,max:";
       dropShadows = "yes";
