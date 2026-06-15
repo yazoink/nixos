@@ -35,7 +35,8 @@
       username = "gene";
     };
     desktopTheme = {
-      colorscheme = "paradise";
+      colorscheme = "camellia";
+      # colorscheme = "paradise";
       rice.openbox.enable = false;
       rice.labwc.enable = true;
       rice.hyprland.enable = false;
