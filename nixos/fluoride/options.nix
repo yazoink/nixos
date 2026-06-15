@@ -9,7 +9,7 @@
         command = "vesktop";
       };
       fileManager = {
-        command = "nemo";
+        command = "thunar";
       };
       guiTextEditor = {
         command = "pluma";
