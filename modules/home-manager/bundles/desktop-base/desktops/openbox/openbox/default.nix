@@ -82,7 +82,7 @@
         <drawContents>no</drawContents>
         <popupShow>Always</popupShow>
         <popupPosition>Fixed</popupPosition>
-        <popupFixedposition>
+        <popupFixedPosition>
           <x>400</x>
           <y>center</y>
         </popupFixedPosition>
