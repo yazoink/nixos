@@ -17,7 +17,7 @@
       "icon-theme": "${osConfig.desktopTheme.icons.name}",
       "icon-size": 26,
       "tooltip-format": "{title}",
-      "on-click": "maximize-raise",
+      "on-click": "minimize-raise",
       "on-click-middle": "close"
     }
   '';
