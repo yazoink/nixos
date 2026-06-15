@@ -15,13 +15,13 @@ in {
       "@size" = "${builtins.toString fonts.sizes.desktop}";
       "@weight" = "bold";
     };
+    dropShadows = "yes";
+    dropShadowsOnTiled = "yes";
     icon = "${icons.name}";
     titlebar = {
       showTitle = "yes";
       # layout = "icon:iconify,max,close";
       layout = "close,iconify,max:";
-      dropShadows = "yes";
-      dropShadowsOnTiled = "yes";
     };
   };
 }
