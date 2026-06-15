@@ -66,7 +66,7 @@
       </theme>
 
       <desktops>
-        <number>5/number>
+        <number>5</number>
         <firstdesk>1</firstdesk>
         <popupTime>1000</popupTime>
         <names>
