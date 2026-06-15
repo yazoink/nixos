@@ -18,7 +18,8 @@
     };
     userAccount.username = "gene";
     desktopTheme = {
-      rice.labwc.enable = true;
+      rice.openbox.enable = true;
+      rice.labwc.enable = false;
       rice.hyprland.enable = false;
       # zenBrowserShowBorders = false;
       colorscheme = "paradise";
