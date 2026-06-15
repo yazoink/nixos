@@ -10,7 +10,7 @@
 in {
   options = {
     desktopTheme.rice.labwc.barColor = lib.mkOption {
-      type = lib.types.string;
+      type = lib.types.str;
       default = config.stylix.base16Scheme.base00;
     };
   };
