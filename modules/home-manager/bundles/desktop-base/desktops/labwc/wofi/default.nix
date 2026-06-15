@@ -13,7 +13,7 @@ in {
     enable = true;
     settings = {
       term = osConfig.myOptions.defaultApps.terminal.command;
-      width = "35%";
+      width = "25%";
       height = "45%";
       show_all = false;
       allow_markup = true;
