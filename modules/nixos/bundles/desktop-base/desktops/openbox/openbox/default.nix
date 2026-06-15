@@ -5,7 +5,7 @@
     libnotify
     xorg-server
     xf86-input-evdev
-    xf86-input-mouse
+    #xf86-input-mouse
     xf86-input-wacom
     xf86-input-synaptics
     xf86-video-intel

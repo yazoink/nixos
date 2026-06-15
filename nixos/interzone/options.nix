@@ -10,6 +10,7 @@
       };
       webBrowser.command = "zen-twilight";
       terminal = {
+        # command = "urxvt";
         command = "footclient";
       };
       mediaPlayer.command = "mpv";
