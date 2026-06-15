@@ -50,7 +50,7 @@
             # url = "https://raw.githubusercontent.com/yazoink/wallpapers/refs/heads/main/trees-and-leaves/wall1.jpg";
             # hash = "sha256-H8Hsm73MPbqrKl4RUiAhKUlkXPSntyghB95PpTmkuKM=";
             url = "https://raw.githubusercontent.com/yazoink/wallpapers/refs/heads/main/flowers/a_group_of_purple_flowers2.png";
-            hash = "";
+            hash = "sha256-QmP4czF4Mp2UN0kOBrVmo/VRCdpfDETQPwesxdYjRJs=";
           };
         };
       };
