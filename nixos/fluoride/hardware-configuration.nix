@@ -45,7 +45,7 @@
   fileSystems."/mnt/smb1" = {
     device = "//192.168.1.74/files";
     fsType = "cifs";
-    options = ["username=gmav" "users" "noauto"];
+    options = ["username=gmav" "users" "noauto" "uid=1000"];
   };
 
   swapDevices = [];
