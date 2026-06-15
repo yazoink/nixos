@@ -15,9 +15,11 @@ in {
     };
   };
   config = lib.mkIf labwc.enable (lib.mkMerge [
-    {
+    /*
+      {
       desktopTheme.rice.labwc.barColor = lib.mkIf (osConfig.myOptions.desktopTheme.colorscheme == "paradise") "101010";
     }
+    */
     (import ./display-manager {inherit config osConfig lib pkgs;})
     (import ./eww {inherit config osConfig lib pkgs;})
     (import ./mako {inherit config osConfig lib pkgs;}) # either fnott or mako

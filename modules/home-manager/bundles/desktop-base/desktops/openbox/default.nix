@@ -6,7 +6,8 @@
   inputs,
   ...
 }: let
-  inherit (osConfig.myOptions.desktopTheme.rice) openbox;
+  # inherit (osConfig.myOptions.desktopTheme.rice.openbox) enable;
+  inherit (osConfig.myOptions.desktopTheme.rice.labwc) enable;
 in {
   options = {
     desktopTheme.rice.openbox.barColor = lib.mkOption {
@@ -14,7 +15,7 @@ in {
       default = config.stylix.base16Scheme.base00;
     };
   };
-  config = lib.mkIf openbox.enable (lib.mkMerge [
+  config = lib.mkIf enable (lib.mkMerge [
     {
       desktopTheme.rice.labwc.barColor = lib.mkIf (osConfig.myOptions.desktopTheme.colorscheme == "paradise") "101010";
     }
