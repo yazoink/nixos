@@ -49,5 +49,5 @@
     ];
   };
 
-  services.xserver.videodrivers = ["modesetting" "fbdev"];
+  services.xserver.videoDrivers = ["modesetting" "fbdev"];
 }
