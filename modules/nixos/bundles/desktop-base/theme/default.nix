@@ -13,11 +13,11 @@
       icons = {
         name = lib.mkOption {
           type = lib.types.str;
-          default = "Numix";
+          default = "Papirus";
         };
         package = lib.mkOption {
           type = lib.types.package;
-          default = pkgs.numix-icon-theme;
+          default = pkgs.papirus-icon-theme;
         };
       };
     };
