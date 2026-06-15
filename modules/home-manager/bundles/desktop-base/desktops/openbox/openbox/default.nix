@@ -221,7 +221,7 @@
     </labwc_config>
   '';
 
-  home.file.".local/share/themes/my-openbox/openbox-3/themerc" = ''
+  home.file.".local/share/themes/my-openbox/openbox-3/themerc".text = ''
     # general
     border.width: 1
 
