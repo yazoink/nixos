@@ -45,7 +45,7 @@
         "w-4": "${lib.getExe pkgs.wtype} -M win 4 -s 500 -m win",
         "w-5": "${lib.getExe pkgs.wtype} -M win 5 -s 500 -m win"
       }
-    }
+    },
     "group/workspaces-group": {
       "orientation": "inherit",
       "modules": ["custom/workspaces", "ext/workspaces"]
