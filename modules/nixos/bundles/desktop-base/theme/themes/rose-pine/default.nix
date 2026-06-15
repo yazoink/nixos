@@ -5,7 +5,7 @@
   ...
 }: {
   config = lib.mkIf (config.myOptions.bundles.desktopBase.enable && config.myOptions.desktopTheme.colorscheme == "rose-pine") {
-    desktopTheme.base16Accent = "base0B";
+    desktopTheme.base16Accent = "base0D";
     desktopTheme.icons = {
       name = "rose-pine";
       package = pkgs.rose-pine-icon-theme;
