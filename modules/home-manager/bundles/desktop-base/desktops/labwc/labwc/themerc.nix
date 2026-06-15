@@ -4,6 +4,7 @@
 }: let
   inherit (config.stylix) base16Scheme;
   inherit (osConfig.desktopTheme) base16Accent;
+  inherit (config.desktopTheme.labwc) barColor;
 in {
   home.file.".themes/my-labwc/labwc".source = ./icons;
   home.file.".config/labwc/themerc-override".text = ''
@@ -32,8 +33,8 @@ in {
     window.active.indicator.toggled-keybind.color: #${base16Scheme.base08}
 
     # window titlebar background
-    window.active.title.bg.color: #${base16Scheme.base00}
-    window.inactive.title.bg.color: #${base16Scheme.base00}
+    window.active.title.bg.color: #${barColor}
+    window.inactive.title.bg.color: #${barColor}
     window.*.title.bg: Solid
 
     # Vertical and SplitVertical gradients are supported for window.*.title.bg
