@@ -15,7 +15,7 @@
     "wlr/taskbar": {
       "format": "{icon}",
       "icon-theme": "${osConfig.desktopTheme.icons.name}",
-      "icon-size": 28,
+      "icon-size": 26,
       "tooltip-format": "{title}",
       "on-click": "activate",
       "on-click-middle": "close"
