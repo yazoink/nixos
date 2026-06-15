@@ -46,6 +46,10 @@
         "w-5": "${lib.getExe pkgs.wtype} -M win 5 -s 500 -m win"
       }
     }
+    "group/workspaces-group": {
+      "orientation": "inherit",
+      "modules": ["custom/workspaces", "ext/workspaces"]
+    }
   '';
   clockModule = ''
     "clock": {
@@ -272,9 +276,7 @@
     "height": ${builtins.toString barHeight},
     "modules-left": [
       "custom/search",
-      "custom/separator#left",
-      "custom/workspaces",
-      "ext/workspaces"
+      "group/workspaces-group"
     ],
     "modules-center": [
       "wlr/taskbar"
@@ -282,7 +284,6 @@
     "modules-right": [
       "group/quick-access-slider",
       "clock",
-      "custom/separator#right",
       "custom/power"
     ]
   '';

@@ -24,8 +24,8 @@
         command = "imv";
       };
       terminal = {
-        # command = "footclient";
-        command = "urxvt";
+        command = "footclient";
+        # command = "urxvt";
       };
       webBrowser = {
         command = "zen-twilight";
@@ -36,8 +36,8 @@
     };
     desktopTheme = {
       colorscheme = "paradise";
-      rice.openbox.enable = true;
-      rice.labwc.enable = false;
+      rice.openbox.enable = false;
+      rice.labwc.enable = true;
       rice.hyprland.enable = false;
       # name = "everblush";
       wallpaper = {
