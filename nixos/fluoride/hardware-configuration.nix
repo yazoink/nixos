@@ -38,10 +38,14 @@
     ];
   };
 
+  systemd.tmpfiles.rules = [
+    "d /mnt/smb1 0775 gene users - -"
+  ];
+
   fileSystems."/mnt/smb1" = {
     device = "//192.168.1.74/files";
     fsType = "cifs";
-    options = ["username=gmav" "users" "noauto"]; #not sure if I need commas or whitespaces here. Changinf back and forth doesn't help
+    options = ["username=gmav" "users" "noauto"];
   };
 
   swapDevices = [];
