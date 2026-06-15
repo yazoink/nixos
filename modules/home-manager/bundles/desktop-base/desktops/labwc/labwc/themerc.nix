@@ -22,7 +22,7 @@ in {
     # the default labwc button geometry deviates from that of openbox
     #
     window.titlebar.padding.width: 10
-    window.titlebar.padding.height: 8
+    window.titlebar.padding.height: 10
 
     # window border
     window.active.border.color: #${base16Scheme.base01}

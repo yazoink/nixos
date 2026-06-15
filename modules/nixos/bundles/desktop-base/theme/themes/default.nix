@@ -42,5 +42,6 @@
     ./idk_what_this_one_is_called
     ./posterpole
     ./camellia
+    ./saga
   ];
 }
