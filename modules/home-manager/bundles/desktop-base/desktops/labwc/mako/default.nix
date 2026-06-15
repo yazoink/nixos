@@ -17,7 +17,7 @@
       icons = "true";
       anchor = "bottom-right";
       border-radius = "15";
-      background-color = "#${config.desktopTheme.rice.labwc.barColor}";
+      background-color = "#${config.stylix.base16Scheme.base00}";
       border-color = "#${config.stylix.base16Scheme.base01}";
       text-color = "#${config.stylix.base16Scheme.base05}";
       progress-color = "over #${config.stylix.base16Scheme.base05}";
