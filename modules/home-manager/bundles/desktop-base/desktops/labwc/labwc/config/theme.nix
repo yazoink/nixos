@@ -9,7 +9,7 @@ in {
   theme = {
     # name = "${config.gtk.theme.name}";
     name = "my-labwc";
-    cornerRadius = 10;
+    cornerRadius = 15;
     font = {
       "@name" = "${fonts.sansSerif.name}";
       "@size" = "${builtins.toString fonts.sizes.desktop}";
