@@ -32,6 +32,14 @@
       fastfetch.enable = true;
     };
 
+    security.wrappers."mount.cifs" = {
+      program = "mount.cifs";
+      source = "${lib.getBin pkgs.cifs-utils}/bin/mount.cifs";
+      owner = "root";
+      group = "root";
+      setuid = true;
+    };
+
     home.packages = with pkgs; [
       ### terminal utilities ###
       # tldr
