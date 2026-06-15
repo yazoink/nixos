@@ -1,7 +1,7 @@
 {osConfig, ...}: {
   home.file.".config/openbox/rc.xml".text = ''
     <?xml version="1.0" encoding="UTF-8"?>
-    <openbox_config xmlns="http://openbox.org/3.4/rc" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <openbox_config xmlns="http://openbox.org/3.4/rc">
       <resistance>
         <strength>10</strength>
         <screen_edge_strength>20</screen_edge_strength>
@@ -70,11 +70,11 @@
         <firstdesk>1</firstdesk>
         <popupTime>1000</popupTime>
         <names>
-          <name>1</name>
-          <name>2</name>
-          <name>3</name>
-          <name>4</name>
-          <name>5</name>
+          <name>Desktop 1</name>
+          <name>Desktop 2</name>
+          <name>Desktop 3</name>
+          <name>Desktop 4</name>
+          <name>Desktop 5</name>
         </names>
       </desktops>
 
@@ -469,7 +469,7 @@
       </mouse>
     </openbox_config>
   '';
-  home.file.".config/openbox/rc.xml2".text = ''
+  home.file.".deletelater".text = ''
     <?xml version="1.0" encoding="UTF-8"?>
     <!-- ### This file was generated with Nix. Don't modify this file directly. -->
     <openbox_config xmlns="http://openbox.org/3.4/rc" xmlns:xi="http://www.w3.org/2001/XInclude">
