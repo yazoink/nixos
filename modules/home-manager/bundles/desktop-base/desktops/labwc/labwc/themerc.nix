@@ -75,8 +75,8 @@ in {
     window.active.button.desk.pressed.image.color: #${base16Scheme.base05}
 
     # window drop-shadows
-    window.active.shadow.size: 10
-    window.inactive.shadow.size: 10
+    window.active.shadow.size: 8
+    window.inactive.shadow.size: 8
     window.active.shadow.color: #00000060
     window.inactive.shadow.color: #00000040
 
