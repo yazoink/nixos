@@ -2,10 +2,9 @@
 {pkgs, ...}: {
   environment.systemPackages = with pkgs; [xinit libnotify];
   services.xserver = {
+    enable = true;
     windowManager.openbox.enable = true;
-    libinput.enable = true;
     layout = "us";
-    xkbVariant = "";
   };
   services = {
     upower.enable = true; # for poweralertd
