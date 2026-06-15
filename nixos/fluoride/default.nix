@@ -49,7 +49,7 @@
     };
   };
 
-  services.xserver.videoDrivers = ["amdgpu"];
+  services.xserver.videoDrivers = ["amdgpu" "modesetting" "fbdev"];
 
   networking.hostName = "fluoride";
 }

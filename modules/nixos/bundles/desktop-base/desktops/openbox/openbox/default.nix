@@ -1,6 +1,6 @@
 # relies on openbox home-manager module
 {pkgs, ...}: {
-  environment.systemPackages = with pkgs; [xinit libnotify];
+  environment.systemPackages = with pkgs; [xinit libnotify xorg-server];
   services.xserver = {
     enable = true;
     windowManager.openbox.enable = true;

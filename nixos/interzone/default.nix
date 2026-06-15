@@ -48,4 +48,6 @@
       # intel-media-sdk
     ];
   };
+
+  services.xserver.videodrivers = ["modesetting" "fbdev"];
 }
