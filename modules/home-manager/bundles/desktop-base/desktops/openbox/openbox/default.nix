@@ -99,7 +99,7 @@
           <action name="FocusToBottom"/>
           <action name="Unfocus"/>
         </keybind>
-        <keybind key="W-t">
+        <keybind key="W-Return">
           <action name="Execute" command="${osConfig.myOptions.defaultApps.terminal.command}" />
         </keybind>
         <keybind key="W-space">

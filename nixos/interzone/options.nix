@@ -10,8 +10,8 @@
       };
       webBrowser.command = "zen-twilight";
       terminal = {
-        command = "urxvt";
-        # command = "footclient";
+        # command = "urxvt";
+        command = "footclient";
       };
       mediaPlayer.command = "mpv";
       documentReader.command = "zathura";
@@ -19,8 +19,8 @@
     };
     userAccount.username = "gene";
     desktopTheme = {
-      rice.openbox.enable = true;
-      rice.labwc.enable = false;
+      rice.openbox.enable = false;
+      rice.labwc.enable = true;
       rice.hyprland.enable = false;
       # zenBrowserShowBorders = false;
       colorscheme = "paradise";
