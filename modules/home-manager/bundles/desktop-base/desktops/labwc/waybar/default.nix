@@ -324,7 +324,7 @@ in {
     # "waybar/menus/power.xml".source = ./power.xml;
     "waybar/style.css".text =
       ''
-        @define-color bg #${config.desktopTheme.labwc.barColor};
+        @define-color bg #${config.desktopTheme.rice.labwc.barColor};
         @define-color bg2 #${base16Scheme.base00};
         @define-color fg #${base16Scheme.base05};
         @define-color unfocused #${base16Scheme.base04};

@@ -4,7 +4,7 @@
 }: let
   inherit (config.stylix) base16Scheme;
   inherit (osConfig.desktopTheme) base16Accent;
-  inherit (config.desktopTheme.labwc) barColor;
+  inherit (config.desktopTheme.rice.labwc) barColor;
 in {
   home.file.".themes/my-labwc/labwc".source = ./icons;
   home.file.".config/labwc/themerc-override".text = ''
