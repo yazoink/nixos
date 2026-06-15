@@ -9,7 +9,7 @@
   inherit (osConfig.myOptions.desktopTheme.rice) labwc;
 in {
   options = {
-    desktopTheme.rice.labwc.barColour = lib.mkOption {
+    desktopTheme.rice.labwc.barColor = lib.mkOption {
       type = lib.types.string;
       default = config.stylix.base16Scheme.base00;
     };
