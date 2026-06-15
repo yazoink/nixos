@@ -6,8 +6,8 @@
   inputs,
   ...
 }: let
-  # inherit (osConfig.myOptions.desktopTheme.rice.openbox) enable;
-  inherit (osConfig.myOptions.desktopTheme.rice.labwc) enable;
+  inherit (osConfig.myOptions.desktopTheme.rice.openbox) enable;
+  # inherit (osConfig.myOptions.desktopTheme.rice.labwc) enable;
 in {
   options = {
     desktopTheme.rice.openbox.barColor = lib.mkOption {
