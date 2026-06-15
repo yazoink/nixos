@@ -3,5 +3,6 @@
     ./foot
     ./alacritty
     ./kitty
+    ./urxvt
   ];
 }

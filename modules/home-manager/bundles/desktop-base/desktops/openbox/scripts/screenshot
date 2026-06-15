@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+
+DIR="$HOME/pic/screenshots"
+FILENAME="$DIR/$(date +%Y%m%d_%H:%M:%S_screenshot).png"
+
+[ ! -d "$DIR" ] && mkdir -p "$DIR"
+
+function main() {
+  case "$1" in
+    "-h" | "--help") help && exit 0;;
+    "-f" | "--fullscreen" | "") grim "$FILENAME";;
+    "-s" | "--select") grim -g "$(slurp)" "$FILENAME";;
+    *) echo "Error: argument not recognised" && exit 1;;
+  esac
+  [ $? == 0 ] && notify-send -i "$FILENAME" "Screenshot Saved" "$FILENAME"
+}
+
+function help() {
+  echo "usage: screenshot [option]"
+  echo "options:"
+  echo "    -f | --fullscreen) take a fullscreen screenshot"
+  echo "    -s | --select) take a selective screenshot"
+}
+
+main "$@"

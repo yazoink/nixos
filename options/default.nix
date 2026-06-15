@@ -196,6 +196,13 @@
               description = "enable swayosd";
             };
           };
+          openbox = {
+            enable = lib.mkOption {
+              type = lib.types.bool;
+              default = false;
+              description = "openbox desktop";
+            };
+          };
         };
         # These options may be overridden by certain rices
         zenBrowserShowBorders = lib.mkOption {
