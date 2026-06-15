@@ -218,7 +218,7 @@
         <osd style="thumbnail" />
       </windowSwitcher>
 
-    </labwc_config>
+    </openbox_config>
   '';
 
   home.file.".local/share/themes/my-openbox/openbox-3/themerc".text = ''
