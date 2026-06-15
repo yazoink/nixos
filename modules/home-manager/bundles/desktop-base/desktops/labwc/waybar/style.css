@@ -10,7 +10,7 @@ window#waybar {
   background: @bg2;
   margin: 8px 3px;
   padding: 5px;
-  border-radius: 5px;
+  border-radius: 7px;
 }
 
 #taskbar button.active {
@@ -46,7 +46,7 @@ window#waybar {
   margin-top: 8px;
   margin-bottom: 8px;
   background-color: @bg2;
-  border-radius: 5px;
+  border-radius: 7px;
   padding-top: 5px;
   padding-bottom: 5px;
   padding-left: 12px;
