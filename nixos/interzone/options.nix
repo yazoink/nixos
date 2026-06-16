@@ -20,8 +20,8 @@
     userAccount.username = "gene";
     desktopTheme = {
       rice.openbox.enable = false;
-      rice.labwc-glass.enable = true;
-      rice.labwc.enable = false;
+      rice.labwc-glass.enable = false;
+      rice.labwc.enable = true;
       rice.hyprland.enable = false;
       # zenBrowserShowBorders = false;
       colorscheme = "paradise";
