@@ -83,15 +83,14 @@
 }
 
 /* title button */
-.widget-title > button {
+.widget-title button {
   font-weight: initial;
   font-size: initial;
-  background: var(--base02);
-  background-image: linear-gradient(to bottom, var(--base03), transparent);
+  background-image: linear-gradient(to bottom, var(--base03), var(--base02));
   border-radius: 8px;
   padding: 8px;
 }
-.widget-title > button:hover {
+.widget-title button:hover {
   background-image: none;
   background: var(--base03);
 }
