@@ -57,7 +57,7 @@
         };
         mpris = {
           blacklist = [];
-          autohide = false;
+          autohide = true;
           show-album-art = "always";
           image-size = 80;
           image-radius = 16;
