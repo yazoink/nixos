@@ -16,14 +16,14 @@
       "tooltip": true,
       "format": "{icon}",
       "format-icons": {
-        "notification": "󱅫",
-        "none": "󰂜",
-        "dnd-notification": "󰂠",
-        "dnd-none": "󰪓",
-        "inhibited-notification": "󰂛",
-        "inhibited-none": "󰪑",
-        "dnd-inhibited-notification": "󰂛",
-        "dnd-inhibited-none": "󰪑"
+        "notification": "",
+        "none": "",
+        "dnd-notification": "",
+        "dnd-none": "",
+        "inhibited-notification": "",
+        "inhibited-none": "",
+        "dnd-inhibited-notification": "",
+        "dnd-inhibited-none": ""
       },
       "return-type": "json",
       "exec-if": "which swaync-client",
@@ -358,7 +358,7 @@ in {
         @define-color urgent #${base16Scheme.base08};
         @define-color border #${base16Scheme.base02};
         @define-color accent #${base16Scheme.${osConfig.desktopTheme.base16Accent}};
-        @define-color yellow #${base16Scheme.base0A};
+        @define-color yellow #${base16Scheme.base0B};
 
         * {
           all: unset;
