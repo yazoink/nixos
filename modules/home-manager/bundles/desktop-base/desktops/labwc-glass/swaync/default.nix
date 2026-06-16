@@ -33,7 +33,7 @@
       widgets = ["title" "dnd" "mpris" "notifications"];
       widget-config = {
         title = {
-          text = " Notifications";
+          text = "  Notifications";
           clear-all-button = true;
           button-text = "Clear All";
         };
