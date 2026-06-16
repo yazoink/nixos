@@ -24,7 +24,7 @@
   );
   border-radius: 8px;
   outline: 1px solid var(--base02);
-  margin: 4px;
+  margin: 8px;
   padding: 16px;
   box-shadow: 0 0 4px #00000040;
 }
