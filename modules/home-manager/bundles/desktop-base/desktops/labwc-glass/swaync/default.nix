@@ -12,6 +12,7 @@
   services.swaync = {
     enable = true;
     settings = {
+      "$schema" = "/etc/xdg/swaync/configSchema.json";
       positionX = "right";
       positionY = "bottom";
       layer = "overlay";
@@ -41,7 +42,7 @@
       hide-on-clear = false;
       hide-on-action = true;
       script-fail-notify = true;
-      widgets = ["title" "dnd" "mpris" "notifications"];
+      widgets = ["title" "dnd" "volume" "mpris" "notifications"];
       widget-config = {
         title = {
           text = "Notifications";
@@ -51,14 +52,25 @@
         dnd = {
           text = "Do Not Disturb";
         };
-        mpris = {
-          image-size = 96;
-          image-radius = 15;
-        };
         notifications = {
           text = "Notifications";
           clear-all-button = true;
           button-text = " Clear";
+        };
+        mpris = {
+          blacklist = [];
+          autohide = false;
+          show-album-art = "always";
+          image-size = 96;
+          image-radius = 15;
+        };
+        volume = {
+          label = "";
+          expand-button-label = "";
+          collapse-button-label = "";
+          show-per-app = true;
+          show-per-app-icon = true;
+          show-per-app-label = true;
         };
       };
     };
