@@ -179,8 +179,8 @@ button:hover {
 .quote {
   font-style: italic;
   border-radius: 8px;
-  background: linear-gradient($bg2, $bg, $bg2);
-  // background: $bg2;
+  // background: linear-gradient($bg2, $bg, $bg2);
+  background: $bg2;
   border: 1px solid $bg3;
   margin: 16px;
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
