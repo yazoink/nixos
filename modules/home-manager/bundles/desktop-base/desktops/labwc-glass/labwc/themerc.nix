@@ -86,8 +86,8 @@ in {
     window.active.button.desk.pressed.image.color: #${base16Scheme.base05}
 
     # window drop-shadows
-    window.active.shadow.size: 10
-    window.inactive.shadow.size: 10
+    window.active.shadow.size: 8
+    window.inactive.shadow.size: 8
     window.active.shadow.color: #00000040
     window.inactive.shadow.color: #00000040
 
@@ -102,15 +102,15 @@ in {
     menu.width.min: 20
     menu.width.max: 200
     menu.border.width: 1
-    menu.border.color: #${base16Scheme.base01}
+    menu.border.color: #${base16Scheme.base02}
     menu.items.bg.color: #${base16Scheme.base00}
     menu.items.text.color: #${base16Scheme.base05}
     menu.items.active.bg.color: #${base16Scheme.base01}
     menu.items.active.text.color: #${base16Scheme.base05}
-    menu.items.padding.x: 10
-    menu.items.padding.y: 5
+    menu.items.padding.x: 8
+    menu.items.padding.y: 4
     menu.separator.width: 1
-    menu.separator.padding.width: 5
+    menu.separator.padding.width: 4
     menu.separator.padding.height: 0
     menu.separator.color: #${base16Scheme.base01}
     menu.title.bg.color: #${base16Scheme.base01}
@@ -127,8 +127,8 @@ in {
     # example 50% or 75% instead of 600, max 100%
     osd.window-switcher.style-classic.width: 600
 
-    osd.window-switcher.style-classic.padding: 5
-    osd.window-switcher.style-classic.item.padding.x: 10
+    osd.window-switcher.style-classic.padding: 4
+    osd.window-switcher.style-classic.item.padding.x: 8
     osd.window-switcher.style-classic.item.padding.y: 1
     osd.window-switcher.style-classic.item.active.border.width: 0
     osd.window-switcher.style-classic.item.active.border.color: #706f6d
