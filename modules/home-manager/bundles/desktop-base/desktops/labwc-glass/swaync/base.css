@@ -157,7 +157,8 @@
 }
 
 .widget-mpris button:hover {
-  background-image: radial-gradient(var(--base02), var(--base01));
+  background-image: none;
+  background: var(--base02);
 }
 
 .widget-mpris-title {

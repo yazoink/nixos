@@ -11,6 +11,28 @@
   iconSize = desktopTheme.fonts.desktop.size - 2;
   barHeight = 48;
   barPosition = "bottom";
+  notifsModule = ''
+    "custom/notification": {
+      "tooltip": true,
+      "format": "{icon}",
+      "format-icons": {
+        "notification": "󱅫",
+        "none": "󰂜",
+        "dnd-notification": "󰂠",
+        "dnd-none": "󰪓",
+        "inhibited-notification": "󰂛",
+        "inhibited-none": "󰪑",
+        "dnd-inhibited-notification": "󰂛",
+        "dnd-inhibited-none": "󰪑"
+      },
+      "return-type": "json",
+      "exec-if": "which swaync-client",
+      "exec": "swaync-client -swb",
+      "on-click": "swaync-client -t -sw",
+      "on-click-right": "swaync-client -d -sw",
+      "escape": true
+    }
+  '';
   taskbarModule = ''
     "wlr/taskbar": {
       "format": "{icon}",
@@ -284,6 +306,7 @@
     "modules-right": [
       "group/quick-access-slider",
       "clock",
+      "custom/notification",
       "custom/power"
     ]
   '';
@@ -305,6 +328,7 @@ in {
           ${powerModule},
           ${separatorModule},
           ${clockModule},
+          ${notifsModule},
           ${quickAccessModuleLaptop}
         }
       ''
@@ -319,6 +343,7 @@ in {
           ${searchModule},
           ${separatorModule},
           ${clockModule},
+          ${notifsModule},
           ${quickAccessModuleDesktop}
         }
       '';
