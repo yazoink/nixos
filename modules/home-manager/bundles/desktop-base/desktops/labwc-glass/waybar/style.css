@@ -125,8 +125,8 @@ menu {
 }
 
 menuitem {
-  padding: 4px;
-  border-radius: 4px;
+  padding: 8px;
+  border-radius: 8px;
 }
 
 /*.arrow.up,
@@ -161,5 +161,7 @@ menuitem:hover {
 
 #custom-notification {
   font-family: "Font Awesome 7 Free";
+  font-weight: bold;
+  font-size: 12pt;
   color: @yellow;
 }
