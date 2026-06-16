@@ -1,187 +1,165 @@
-progress,
-progressbar,
-trough {
-  border: 1px solid @base02;
+* {
+  all: unset;
 }
 
-trough {
-  background: @base01;
+/* main window */
+.control-center {
+  font-family: "sans", "Font Awesome 7 Free";
+  color: var(--base05);
+  background-color: var(--base00);
+  border-radius: 16px;
+  /* padding: 16px; */
+  outline: 1px solid var(--base02);
+  /* background-image: linear-gradient(to bottom, var(--base01), transparent); */
+  box-shadow: 8px 8px #00000006;
 }
 
-.notification.low {
-  border: 1px solid @base03;
+/* notifs */
+.notification-row {
+  background-image: linear-gradient(to top, var(--base01), transparent);
+  border-radius: 10px;
+  outline: 1px solid var(--base02);
+  margin: 4px;
+  padding: 16px;
+}
+.notification-row:hover,
+.notification-row:focus,
+.control-center .notification-row:focus,
+.control-center .notification-row:hover {
+  background-color: var(--base01);
 }
 
-.notification.low progress {
-  background: @base03;
+.notification-group-headers {
+  padding: 8px;
 }
 
-.notification.normal {
-  border: 1px solid @base0D;
+.notification-row > button {
+  background-color: var(--base02);
+  background-image: linear-gradient(to bottom, var(--base02), transparent);
+  padding: 8px;
+  border-radius: 8px;
 }
 
-.notification.normal progress {
-  background: @base0F;
+/* list of notifs in control center */
+.control-center-list {
+  /* border-top: 2px dashed var(--base02); */
+  padding: 8px;
 }
 
-.notification.critical {
-  border: 1px solid @base08;
+.summary,
+.time {
+  font-weight: bold;
 }
 
-.notification.critical progress {
-  background: @base08;
-}
-
-.summary {
-  color: @base05;
+.image {
+  margin-right: 8px;
 }
 
 .body {
-  color: @base06;
-}
-
-.time {
-  color: @base06;
-}
-
-.notification-action {
-  color: @base05;
-  background: @base01;
-}
-
-.notification-action:hover {
-  background: @base01;
-  color: @base05;
-}
-
-.notification-action:active {
-  background: @base0F;
-  color: @base05;
-}
-
-.close-button {
-  color: @base02;
-  background: @base08;
-}
-
-.close-button:hover {
-  background: lighter(@base08);
-  color: lighter(@base02);
-}
-
-.close-button:active {
-  background: @base08;
-  color: @base00;
 }
 
 .notification-content {
-  background: @base00;
-  border: 1px solid @base02;
 }
 
-.floating-notifications.background .notification-row .notification-background {
-  background: transparent;
-  color: @base05;
+.close-button {
+  color: transparent;
 }
 
-.notification-group .notification-group-buttons,
-.notification-group .notification-group-headers {
-  color: @base05;
-}
-
-.notification-group .notification-group-headers .notification-group-icon {
-  color: @base05;
-}
-
-.notification-group .notification-group-headers .notification-group-header {
-  color: @base05;
-}
-
-.notification-group.collapsed .notification-row .notification {
-  background: @base01;
-}
-
-.notification-group.collapsed:hover
-  .notification-row:not(:only-child)
-  .notification {
-  background: @base01;
-}
-
-.control-center {
-  background: @base00;
-  border: 1px solid @base02;
-  color: @base05;
-}
-
-.control-center .notification-row .notification-background {
-  background: @base01;
-  color: @base05;
-}
-
-.control-center .notification-row .notification-background:hover {
-  background: @base01;
-  color: @base05;
-}
-
-.control-center .notification-row .notification-background:active {
-  background: @base0F;
-  color: @base05;
-}
-
+/* title */
 .widget-title {
-  color: @base05;
-  margin: 0.5rem;
+  font-weight: bold;
+  font-size: 1.5rem;
+  padding: 16px;
+  /* border-bottom: 2px dashed var(--base02); */
+  background-image: linear-gradient(to top, var(--base01), transparent);
 }
 
+/* title button */
 .widget-title > button {
-  background: @base01;
-  border: 1px solid @base0D;
-  color: @base05;
+  font-weight: initial;
+  font-size: initial;
+  background: var(--base02);
+  background-image: linear-gradient(to bottom, var(--base01), transparent);
+  border-radius: 8px;
+  padding: 8px;
 }
-
 .widget-title > button:hover {
-  background: @base01;
+  background: var(--base03);
+  background-image: linear-gradient(to bottom, var(--base02), transparent);
 }
 
+/* dnd */
 .widget-dnd {
-  color: @base05;
+  font-size: 1.1rem;
+  border-bottom: 2px dashed var(--base02);
+  padding: 8px 16px;
 }
-
 .widget-dnd > switch {
-  background: @base01;
-  border: 1px solid @base0D;
+  font-size: initial;
+  background-image: radial-gradient(var(--base00), var(--base01));
+  border: 1px solid var(--base03);
+  border-radius: 100px;
+  min-height: 18px;
+  min-width: 36px;
+  padding: 3px;
 }
-
-.widget-dnd > switch:hover {
-  background: @base01;
-}
-
 .widget-dnd > switch:checked {
-  background: @base0F;
+  background: var(--base0D);
+  border: 1px solid var(--base0D);
 }
-
 .widget-dnd > switch slider {
-  background: @base06;
+  background: var(--base05);
+  border-radius: 100px;
 }
 
+/* mpris */
 .widget-mpris {
-  color: @base05;
+  padding: 16px;
+  /* border-bottom: 2px dashed var(--base02); */
 }
 
-.widget-mpris .widget-mpris-player {
-  background: @base01;
-  border: 1px solid @base0D;
+.widget-mpris-album-art {
+  border: 1px solid var(--base05);
+  margin-top: 16px;
+  margin-left: 16px;
+  border-radius: 8px;
 }
 
-.widget-mpris .widget-mpris-player button:hover {
-  background: @base01;
+.widget-mpris-player {
+  border: 1px solid var(--base02);
+  border-radius: 16px;
 }
 
-.widget-mpris .widget-mpris-player > box > button {
-  border: 1px solid @base0D;
+.mpris-background {
+  filter: blur(10px);
+  border-radius: 16px;
 }
 
-.widget-mpris .widget-mpris-player > box > button:hover {
-  background: @base01;
-  border: 1px solid @base0D;
+.mpris-overlay {
+  background: rgba(0, 0, 0, 0.6);
+  background-image: radial-gradient(transparent, #00000006);
+}
+
+.widget-mpris button {
+  background: var(--base01);
+  background-image: radial-gradient(var(--base01), var(--base00));
+  outline: 1px solid var(--base02);
+  border-radius: 16px;
+  margin-bottom: 8px;
+  padding: 8px;
+}
+
+.widget-mpris button:hover {
+  background-image: radial-gradient(var(--base02), var(--base01));
+}
+
+.widget-mpris-title {
+  font-weight: bold;
+  font-size: 1.1rem;
+  padding: 8px;
+  margin-right: 16px;
+}
+
+.widget-mpris-subtitle {
+  margin-right: 16px;
 }
