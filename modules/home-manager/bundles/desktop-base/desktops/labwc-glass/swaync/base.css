@@ -146,6 +146,7 @@
 
 .widget-mpris-album-art {
   border: 1px solid var(--base05);
+  box-shadow: 0 0 4px rgba(255, 255, 255, 0.3);
   margin-top: 16px;
   margin-left: 16px;
   border-radius: 8px;
@@ -176,8 +177,7 @@
 }
 
 .widget-mpris button:hover {
-  background-image: none;
-  background: var(--base02);
+  background-image: radial-gradient(var(--base01), var(--base02));
 }
 
 .widget-mpris-title {
