@@ -170,11 +170,11 @@
 
 .widget-mpris button {
   background-image: linear-gradient(
+    var(--base02),
     var(--base01),
-    var(--base00),
-    var(--base01)
+    var(--base02)
   );
-  border: 1px solid var(--base01);
+  border: 1px solid var(--base02);
   border-radius: 8px;
   margin-bottom: 8px;
   padding: 8px;
