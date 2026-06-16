@@ -87,8 +87,8 @@
     ./newsboat
     ./usdtoaud
     ./yt-dlp
-    ./mpdris2-rs
-    # ./mpdris2
+    # ./mpdris2-rs
+    ./mpdris2
     ./cava
   ];
 }

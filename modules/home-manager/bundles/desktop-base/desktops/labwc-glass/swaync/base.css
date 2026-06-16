@@ -33,11 +33,26 @@
   padding: 8px;
 }
 
-.notification-row > button {
+.notification-alt-actions {
   background-color: var(--base02);
-  background-image: linear-gradient(to bottom, var(--base02), transparent);
+  background-image: linear-gradient(to top, var(--base03), transparent);
   padding: 8px;
   border-radius: 8px;
+  margin-top: 16px;
+}
+
+.notification-alt-actions:hover,
+.notification-alt-actions:focus {
+  background-color: var(--base03);
+}
+
+.close-button {
+  color: transparent;
+}
+
+.inline-reply,
+.notification-action {
+  /* The inline reply section */
 }
 
 /* list of notifs in control center */
@@ -58,13 +73,6 @@
 .body {
 }
 
-.notification-content {
-}
-
-.close-button {
-  color: transparent;
-}
-
 /* title */
 .widget-title {
   font-weight: bold;
@@ -78,8 +86,8 @@
 .widget-title > button {
   font-weight: initial;
   font-size: initial;
+  background-image: none;
   background: var(--base02);
-  background-image: linear-gradient(to bottom, var(--base01), transparent);
   border-radius: 8px;
   padding: 8px;
 }
@@ -141,16 +149,16 @@
 }
 
 .widget-mpris button {
+  background: var(--base01);
   background-image: radial-gradient(var(--base01), var(--base00));
   outline: 1px solid var(--base02);
-  border-radius: 16px;
+  border-radius: 8px;
   margin-bottom: 8px;
   padding: 8px;
 }
 
 .widget-mpris button:hover {
-  background-image: none;
-  background: var(--base01);
+  background-image: radial-gradient(var(--base02), var(--base01));
 }
 
 .widget-mpris-title {
