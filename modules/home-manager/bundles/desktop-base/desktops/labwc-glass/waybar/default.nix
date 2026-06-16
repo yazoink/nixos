@@ -9,7 +9,7 @@
   inherit (osConfig.myOptions.hardwareFeatures) laptop;
   inherit (osConfig.myOptions) desktopTheme;
   iconSize = desktopTheme.fonts.desktop.size - 2;
-  barHeight = 48;
+  barHeight = 52;
   barPosition = "bottom";
   notifsModule = ''
     "custom/notification": {
@@ -37,7 +37,7 @@
     "wlr/taskbar": {
       "format": "{icon}",
       "icon-theme": "${osConfig.desktopTheme.icons.name}",
-      "icon-size": 26,
+      "icon-size": 28,
       "tooltip-format": "{title}",
       "on-click": "minimize-raise",
       "on-click-middle": "close"

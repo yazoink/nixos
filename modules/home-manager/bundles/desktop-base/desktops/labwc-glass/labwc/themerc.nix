@@ -112,7 +112,7 @@ in {
     menu.separator.width: 1
     menu.separator.padding.width: 4
     menu.separator.padding.height: 0
-    menu.separator.color: #${base16Scheme.base01}
+    menu.separator.color: #${base16Scheme.base02}
     menu.title.bg.color: #${base16Scheme.base01}
     menu.title.text.color: #${base16Scheme.base05}
     menu.title.text.justify: Center
