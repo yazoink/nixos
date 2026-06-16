@@ -1,6 +1,6 @@
 {...}: {
   core = {
-    gap = 10;
+    gap = 8;
   };
   desktops = {
     "@number" = 5;
