@@ -17,6 +17,7 @@
       layer = "overlay";
       control-center-layer = "top";
       layer-shell = true;
+      layer-shell-cover-screen = true;
       cssPriority = "application";
       control-center-margin-top = 5;
       control-center-margin-bottom = 5;
@@ -24,12 +25,22 @@
       control-center-margin-left = 5;
       control-center-height = 500;
       control-center-width = 400;
+      notification-window-width = 375;
       fit-to-screen = false;
       notification-2fa-action = true;
       notification-inline-replies = false;
       notification-icon-size = 64;
       notification-body-image-height = 74;
       notification-body-image-width = 74;
+      timeout = 10;
+      timeout-low = 5;
+      timeout-critical = 0;
+      keyboard-shortcuts = true;
+      image-visibility = "when-available";
+      transition-time = 200;
+      hide-on-clear = false;
+      hide-on-action = true;
+      script-fail-notify = true;
       widgets = ["title" "dnd" "mpris" "notifications"];
       widget-config = {
         title = {
@@ -43,6 +54,11 @@
         mpris = {
           image-size = 96;
           image-radius = 15;
+        };
+        notifications = {
+          text = "Notifications";
+          clear-all-button = true;
+          button-text = " Clear";
         };
       };
     };
