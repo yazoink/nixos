@@ -28,7 +28,7 @@
       notification-body-image-height = 100;
       notification-body-image-width = 200;
     };
-    services.swaync.style = with config.stylix.base16Scheme;
+    style = with config.stylix.base16Scheme;
       ''
         @define-color base00 ${base00}; @define-color base01 ${base01};
         @define-color base02 ${base02}; @define-color base03 ${base03};
