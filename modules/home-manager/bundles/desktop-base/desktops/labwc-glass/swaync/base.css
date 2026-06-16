@@ -17,7 +17,7 @@
 /* notifs */
 .notification-row {
   background-image: linear-gradient(to top, var(--base01), transparent);
-  border-radius: 16px;
+  border-radius: 8px;
   outline: 1px solid var(--base02);
   margin: 4px;
   padding: 16px;
