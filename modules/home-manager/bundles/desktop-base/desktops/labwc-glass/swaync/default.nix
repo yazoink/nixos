@@ -42,7 +42,7 @@
       hide-on-clear = false;
       hide-on-action = true;
       script-fail-notify = true;
-      widgets = ["title" "dnd" "mpris"];
+      widgets = ["title" "mpris" "dnd"];
       widget-config = {
         title = {
           text = "Notifications";
