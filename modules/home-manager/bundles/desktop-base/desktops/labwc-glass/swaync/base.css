@@ -58,7 +58,7 @@
 /* list of notifs in control center */
 .control-center-list {
   /* border-top: 2px dashed var(--base02); */
-  padding: 8px;
+  padding: 16px;
 }
 
 .summary,
