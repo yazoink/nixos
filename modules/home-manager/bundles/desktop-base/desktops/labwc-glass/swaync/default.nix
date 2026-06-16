@@ -42,7 +42,7 @@
       hide-on-clear = false;
       hide-on-action = true;
       script-fail-notify = true;
-      widgets = ["title" "dnd" "mpris" "notifications"];
+      widgets = ["title" "dnd" "notifications" "mpris"];
       widget-config = {
         title = {
           text = "Notifications";
@@ -62,7 +62,7 @@
           autohide = false;
           show-album-art = "always";
           image-size = 80;
-          image-radius = 15;
+          image-radius = 16;
         };
         volume = {
           label = "";
