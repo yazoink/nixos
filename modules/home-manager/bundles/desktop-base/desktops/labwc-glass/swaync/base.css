@@ -60,6 +60,7 @@
   /* border-top: 2px dashed var(--base02); */
   padding: 16px;
   border-radius: 8px;
+  background-image: linear-gradient(to top, var(--base01), var(--base00));
 }
 
 .summary,
