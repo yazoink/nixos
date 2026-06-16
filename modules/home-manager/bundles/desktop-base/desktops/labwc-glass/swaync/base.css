@@ -89,18 +89,23 @@
   font-size: initial;
   background-image: linear-gradient(
     to bottom,
+    var(--base02),
+    var(--base01),
+    var(--base02)
+  );
+  border-radius: 8px;
+  padding: 8px;
+  border: 1px solid var(--base03);
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+}
+.widget-title > button:hover {
+  background-image: linear-gradient(
+    to bottom,
     var(--base03),
     var(--base02),
     var(--base03)
   );
-  border-radius: 8px;
-  padding: 8px;
-  border-top: 1px solid var(--base03);
-  box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
-}
-.widget-title > button:hover {
-  background-image: none;
-  background: var(--base03);
+  border: 1px solid var(--base04);
 }
 
 /* dnd */
