@@ -16,8 +16,8 @@ window#waybar {
 
 #taskbar button.active {
   /* border-bottom: 2px solid @accent; */
-  background-color: @accent;
-  background-image: linear-gradient(to bottom, @accent, @fg);
+  /* background-color: @accent; */
+  background-image: linear-gradient(to bottom, @accent, @accent, @fg);
 }
 
 #taskbar button.minimized {
