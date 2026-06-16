@@ -28,8 +28,8 @@
       notification-2fa-action = true;
       notification-inline-replies = false;
       notification-icon-size = 64;
-      notification-body-image-height = 100;
-      notification-body-image-width = 200;
+      notification-body-image-height = 74;
+      notification-body-image-width = 74;
     };
     /*
     style = with config.stylix.base16Scheme;
