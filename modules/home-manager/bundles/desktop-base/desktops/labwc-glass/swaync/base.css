@@ -115,7 +115,7 @@
   font-weight: bold;
   padding: 16px;
   background-image: linear-gradient(var(--base01), transparent, var(--base01));
-  border-bottom: 1px solid var(--base02);
+  border-top: 1px solid var(--base02);
 }
 .widget-dnd > switch {
   font-size: initial;
