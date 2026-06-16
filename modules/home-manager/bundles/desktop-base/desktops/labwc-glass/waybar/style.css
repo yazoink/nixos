@@ -64,7 +64,7 @@ window#waybar {
 #clock:hover,
 #taskbar button:hover,
 #custom-notification:hover,
-#quick-access:hover,
+/* #quick-access:hover, */
 #workspaces-group:hover,
 #custom-search:hover,
 #custom-power:hover {
