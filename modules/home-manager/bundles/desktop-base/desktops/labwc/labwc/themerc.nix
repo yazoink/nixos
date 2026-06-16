@@ -32,9 +32,11 @@ in {
     window.active.indicator.toggled-keybind.color: #${base16Scheme.base08}
 
     # window titlebar background
-    window.active.title.bg.color: #${base16Scheme.base00}
-    window.inactive.title.bg.color: #${base16Scheme.base00}
-    window.*.title.bg: Solid
+    window.active.title.bg.color: #${base16Scheme.base0D}
+    window.inactive.title.bg.color: #${base16Scheme.base0D}
+    #window.*.title.bg: Solid
+    window.*.title.bg.colorTo: #${base16Scheme.base00}
+    window.*.title.bg: Gradient Vertical
 
     # Vertical and SplitVertical gradients are supported for window.*.title.bg
     # with the following additional color fields. See labwc-theme(5) for examples.
