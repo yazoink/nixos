@@ -22,8 +22,8 @@
       control-center-margin-bottom = 5;
       control-center-margin-right = 5;
       control-center-margin-left = 5;
-      control-center-height = 600;
-      control-center-width = 500;
+      control-center-height = 500;
+      control-center-width = 400;
       fit-to-screen = false;
       notification-2fa-action = true;
       notification-inline-replies = false;
