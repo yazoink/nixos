@@ -104,9 +104,9 @@ window#waybar {
 }
 
 tooltip {
-  background-color: @bg;
+  background-color: linear-gradient(to bottom, transparent, @bg1);
   border: 1px solid @border;
-  border-radius: 16px;
+  border-radius: 8px;
 }
 
 tooltip label {

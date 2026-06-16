@@ -26,6 +26,7 @@
       control-center-margin-left = 4;
       control-center-height = 600;
       control-center-width = 450;
+      notification-window-width = 325;
       fit-to-screen = false;
       notification-2fa-action = true;
       notification-inline-replies = false;
