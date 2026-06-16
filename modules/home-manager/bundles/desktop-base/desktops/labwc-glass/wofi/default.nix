@@ -22,7 +22,7 @@ in {
       allow_images = true;
       sort_order = "alphabetical";
       key_expand = "Tab";
-      yoffset = 0;
+      yoffset = 18;
       xoffset = 0;
       location = "bottom_left";
       display_generic = true;
