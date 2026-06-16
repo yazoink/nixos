@@ -61,7 +61,7 @@
           blacklist = [];
           autohide = false;
           show-album-art = "always";
-          image-size = 60;
+          image-size = 80;
           image-radius = 15;
         };
         volume = {
