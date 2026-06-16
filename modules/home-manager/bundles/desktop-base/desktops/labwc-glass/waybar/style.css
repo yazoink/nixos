@@ -1,6 +1,6 @@
 window#waybar {
   color: @fg;
-  background-image: linearGradient(to bottom, @bg, @bg2);
+  background-image: linear-gradient(to bottom, @bg, @bg2);
   color: @fg;
   font-weight: bold;
   border-top: 1px solid @border;
