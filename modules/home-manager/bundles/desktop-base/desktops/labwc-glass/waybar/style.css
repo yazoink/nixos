@@ -114,7 +114,7 @@ window#waybar {
 }
 
 tooltip {
-  background-image: linear-gradient(to bottom, transparent, @bg1);
+  background-image: linear-gradient(to bottom, transparent, @bg2);
   border: 1px solid @border;
   border-radius: 8px;
 }
