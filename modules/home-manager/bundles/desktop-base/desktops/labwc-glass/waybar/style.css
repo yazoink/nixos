@@ -7,10 +7,11 @@ window#waybar {
 }
 
 #taskbar button {
-  background: @bg2;
+  /* background: @bg2; */
   margin: 8px 3px;
   padding: 5px;
   border-radius: 10px;
+  background-image: linear-gradient(to bottom, @bg2, @bg3);
 }
 
 #taskbar button.active {
@@ -45,7 +46,8 @@ window#waybar {
   font-size: 11pt;
   margin-top: 8px;
   margin-bottom: 8px;
-  background-color: @bg2;
+  /* background-color: @bg2; */
+  background-image: linear-gradient(to bottom, @bg2, @bg3);
   border-radius: 10px;
   padding-top: 5px;
   padding-bottom: 5px;
