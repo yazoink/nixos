@@ -10,7 +10,7 @@
   :geometry (geometry
     :x "0px"
     :y "0px"
-    :width "318px"
+    :width "400px"
     :anchor "bottom right"
   )
   :stacking "fg"
@@ -24,14 +24,7 @@
       :orientation "vertical"
       :halign "center"
       :space-evenly "false"
-      (box
-        :halign "fill"
-        :valign "fill"
-        :vexpand "true"
-        :hexpand "true"
-        :valign "center"
-        (user :image "./images/profile_image.jpg")
-      )
+      (user :image "./images/profile_image.jpg")
       ;(separator)
       ;(label :text "Have a nice day :)" :class "heading")
       (quote 

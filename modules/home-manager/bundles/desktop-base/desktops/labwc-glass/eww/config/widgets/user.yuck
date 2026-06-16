@@ -7,16 +7,17 @@
     :orientation "horizontal"
     :valign "end"
     :halign "fill"
-    :space-evenly "false"
+    :space-evenly "true"
     :spacing 20
     ;(hline)
     ;(separator)
     (box
       ;:vexpand "true"
-      :halign "start"
+      :hexpand "true"
+      :halign "fill"
       :orientation "vertical"
       :spacing 4
-      :space-evenly "true"
+      :space-evenly "false"
       :valign "center"
       :hexpand "true"
       (left-text
@@ -30,8 +31,8 @@
     )
     (image
       :path "${image}"
-      :image-width 46
-      :image-height 46
+      :image-width 65
+      :image-height 65
       :halign "end"
       :class "profile-picture"
     )
