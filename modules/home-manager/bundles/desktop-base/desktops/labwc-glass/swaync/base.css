@@ -27,7 +27,8 @@
 .notification-row:focus,
 .control-center .notification-row:focus,
 .control-center .notification-row:hover {
-  background: var(--base01);
+  background-image: linear-gradient(to top, var(--base02), var(--base01));
+  /* background: var(--base01); */
 }
 
 .notification-group-headers {
@@ -36,13 +37,8 @@
 
 .notification-alt-actions {
   background-color: var(--base02);
-  background-image: linear-gradient(
-    to top,
-    var(--base03),
-    var(--base02),
-    var(--base03)
-  );
-  border: 1px solid var(--base03);
+  background-image: linear-gradient(to top, var(--base02), var(--base01));
+  border: 1px solid var(--base02);
   padding: 8px;
   border-radius: 8px;
   margin-top: 16px;
@@ -50,7 +46,7 @@
 
 .notification-alt-actions:hover,
 .notification-alt-actions:focus {
-  background-color: var(--base03);
+  background-image: linear-gradient(to top, var(--base03), var(--base02));
 }
 
 .close-button {
