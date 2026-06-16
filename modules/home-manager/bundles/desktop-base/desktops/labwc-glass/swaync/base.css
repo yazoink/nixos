@@ -36,9 +36,15 @@
 
 .notification-alt-actions {
   background-color: var(--base02);
-  background-image: linear-gradient(to top, var(--base03), transparent);
+  background-image: linear-gradient(
+    to top,
+    var(--base03),
+    var(--base02),
+    var(--base03)
+  );
+  border: 1px solid var(--base03);
   padding: 8px;
-  border-radius: 16px;
+  border-radius: 8px;
   margin-top: 16px;
 }
 
@@ -155,17 +161,17 @@
 
 .widget-mpris-player {
   border: 1px solid var(--base02);
-  border-radius: 16px;
+  border-radius: 8px;
 }
 
 .mpris-background {
   filter: blur(10px);
-  border-radius: 16px;
+  border-radius: 8px;
 }
 
 .mpris-overlay {
   background: rgba(0, 0, 0, 0.6);
-  background-image: linear-gradient(transparent, #00000060, transparent);
+  /* background-image: linear-gradient(transparent, #00000060, transparent); */
 }
 
 .widget-mpris button {

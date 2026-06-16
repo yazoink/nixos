@@ -73,8 +73,8 @@ button:hover {
 .confirm-text {
   padding: 8px 16px;
   background: linear-gradient($bg, $bg2);
-  border-top-right-radius: 16px;
-  border-top-left-radius: 16px;
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
 }
 
 .user-box {
@@ -83,8 +83,8 @@ button:hover {
   background: linear-gradient($bg2, $bg, $bg2);
   border-bottom: 1px solid $border;
   // border-top-left-radius: 16px;
-  border-top-right-radius: 16px;
-  border-top-left-radius: 16px;
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
 }
 
 .username-and-hostname {
@@ -99,8 +99,8 @@ button:hover {
   background: linear-gradient($bg2, $bg, $bg2);
   // background-blend-mode: hard-light;
   border-top: 1px solid $border;
-  border-bottom-left-radius: 16px;
-  border-bottom-right-radius: 16px;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
 }
 
 .power-button-box button {
@@ -243,7 +243,7 @@ tooltip label {
 .cal {
   background-color: $bg2;
   padding: 10px;
-  border-radius: 5px;
+  border-radius: 8px;
 }
 
 calendar.header {
