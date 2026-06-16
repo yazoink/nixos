@@ -1,6 +1,6 @@
 window#waybar {
   color: @fg;
-  background-image: linear-gradient(to bottom, @bg, @bg2);
+  background-image: linear-gradient(to bottom, @bg2, @bg, @bg2);
   color: @fg;
   font-weight: bold;
   border-top: 1px solid @border;
@@ -11,7 +11,7 @@ window#waybar {
   margin: 8px 4px;
   padding: 4px;
   border-radius: 8px;
-  background-image: linear-gradient(to bottom, @bg2, @bg3);
+  background-image: linear-gradient(to bottom, @bg2, @bg3, @bg2);
 }
 
 #taskbar button.active {
