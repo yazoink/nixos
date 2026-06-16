@@ -1,7 +1,7 @@
 {...}: {
   core = {
     gap = 8;
-    decoration = "client";
+    decoration = "server";
   };
   desktops = {
     "@number" = 5;
