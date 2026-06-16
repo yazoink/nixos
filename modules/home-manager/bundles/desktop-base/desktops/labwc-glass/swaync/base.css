@@ -79,8 +79,7 @@
   font-size: 1.5rem;
   padding: 16px;
   /* border-bottom: 2px dashed var(--base02); */
-  background-image:
-    linear-gradient(to top, var(--base01), transparent), var(--base01);
+  background-image: linear-gradient(var(--base01), transparent, var(--base01));
   border-bottom: 1px solid var(--base02);
 }
 
