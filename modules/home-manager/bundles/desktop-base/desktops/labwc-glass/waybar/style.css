@@ -17,7 +17,7 @@ window#waybar {
 #taskbar button.active {
   /* border-bottom: 2px solid @accent; */
   /* background-color: @accent; */
-  background-image: linear-gradient(to bottom, @accent, @accent);
+  background: @accent;
 }
 
 #taskbar button.minimized {
@@ -65,6 +65,12 @@ window#waybar {
 #custom-search:hover,
 #custom-power:hover {
   background: @bg3;
+}
+
+#taskbar button.active:hover {
+  /* border-bottom: 2px solid @accent; */
+  /* background-color: @accent; */
+  background: @accent;
 }
 
 #window {
