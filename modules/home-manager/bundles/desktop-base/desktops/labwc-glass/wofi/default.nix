@@ -22,8 +22,8 @@ in {
       allow_images = true;
       sort_order = "alphabetical";
       key_expand = "Tab";
-      yoffset = -23;
-      xoffset = 5;
+      yoffset = -22;
+      xoffset = 4;
       location = "bottom_left";
       display_generic = true;
       prompt = "Search...";
