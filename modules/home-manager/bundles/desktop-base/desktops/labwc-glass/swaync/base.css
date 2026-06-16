@@ -132,7 +132,7 @@
 }
 .widget-dnd > switch:checked {
   background: var(--base0D);
-  border: 1px solid var(--base0D);
+  border: 1px solid var(--base05);
 }
 .widget-dnd > switch slider {
   background: var(--base05);
