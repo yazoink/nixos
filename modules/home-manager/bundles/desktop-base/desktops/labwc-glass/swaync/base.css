@@ -113,7 +113,6 @@
   font-size: 1.1rem;
   padding: 8px 16px;
   font-weight: bold;
-  padding: 16px;
   background-image: linear-gradient(var(--base01), transparent, var(--base01));
   border-top: 1px solid var(--base02);
 }
