@@ -54,8 +54,6 @@
         };
         notifications = {
           text = "Notifications";
-          clear-all-button = true;
-          button-text = " Clear";
         };
         mpris = {
           blacklist = [];
