@@ -358,7 +358,7 @@ in {
         @define-color urgent #${base16Scheme.base08};
         @define-color border #${base16Scheme.base02};
         @define-color accent #${base16Scheme.${osConfig.desktopTheme.base16Accent}};
-        @define-color yellow #${base16Scheme.base0B};
+        @define-color yellow #${base16Scheme.base0A};
 
         * {
           all: unset;
