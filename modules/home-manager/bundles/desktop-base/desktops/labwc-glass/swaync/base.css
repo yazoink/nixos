@@ -165,7 +165,7 @@
 
 .mpris-overlay {
   background: rgba(0, 0, 0, 0.6);
-  background-image: linear-gradient(transparent, #00000040, transparent);
+  background-image: linear-gradient(transparent, #00000060, transparent);
 }
 
 .widget-mpris button {
