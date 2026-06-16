@@ -5,7 +5,7 @@
   ...
 }: let
   inherit (config.stylix) base16Scheme;
-  margin = 5;
+  margin = 4;
 in {
   home.packages = with pkgs; [eww font-awesome];
   # requires EWW_CONFIG_DIR env variable to be set to work
