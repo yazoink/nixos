@@ -119,15 +119,16 @@
 .widget-dnd > switch {
   font-size: initial;
   background-image: linear-gradient(
+    var(--base01),
     var(--base02),
-    var(--base03),
-    var(--base02)
+    var(--base01)
   );
-  border: 1px solid var(--base03);
+  border: 1px solid var(--base02);
   border-radius: 100px;
   min-height: 18px;
   min-width: 36px;
   padding: 3px;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
 }
 .widget-dnd > switch:checked {
   background: var(--base0D);
@@ -164,20 +165,30 @@
 
 .mpris-overlay {
   background: rgba(0, 0, 0, 0.6);
-  background-image: radial-gradient(transparent, #00000006);
+  background-image: linear-gradient(transparent, #00000040, transparent);
 }
 
 .widget-mpris button {
-  background: var(--base01);
-  background-image: radial-gradient(var(--base01), var(--base00));
+  background-image: linear-gradient(
+    var(--base02),
+    var(--base01),
+    var(--base02)
+  );
   outline: 1px solid var(--base02);
   border-radius: 8px;
   margin-bottom: 8px;
   padding: 8px;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
 }
 
 .widget-mpris button:hover {
-  background-image: linear-gradient(var(--base01), var(--base02));
+  background-image: linear-gradient(
+    to bottom,
+    var(--base03),
+    var(--base02),
+    var(--base03)
+  );
+  border: 1px solid var(--base03);
 }
 
 .widget-mpris-title {
