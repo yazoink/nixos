@@ -25,7 +25,7 @@
       control-center-margin-right = 4;
       control-center-margin-left = 4;
       control-center-height = 500;
-      control-center-width = 450;
+      control-center-width = 400;
       notification-window-width = 350;
       fit-to-screen = false;
       notification-2fa-action = true;
