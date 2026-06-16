@@ -47,7 +47,7 @@ button:hover {
 
 .power-box, .confirm-box, .calendar-box {
   // box-shadow: 0 0 5px -5px rgba(0, 0, 0, 0.2);
-  box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
   border: 1px solid $border;
   border-radius: 16px;
   background-color: $bg;
@@ -110,7 +110,7 @@ button:hover {
   background: linear-gradient($bg3, $bg2, $bg3);
   // background-image: repeating-linear-gradient($bg3, $bg2 20%, $bg2 50%, $bg, $bg2 90%, $bg3);
   border: 1px solid $bg3;
-  box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
 }
 
 .power-button-box button:hover {
