@@ -20,10 +20,10 @@
       layer-shell = true;
       layer-shell-cover-screen = true;
       cssPriority = "application";
-      control-center-margin-top = 8;
-      control-center-margin-bottom = 8;
-      control-center-margin-right = 8;
-      control-center-margin-left = 8;
+      control-center-margin-top = 0;
+      control-center-margin-bottom = 0;
+      control-center-margin-right = 0;
+      control-center-margin-left = 0;
       control-center-height = 500;
       control-center-width = 400;
       notification-window-width = 350;

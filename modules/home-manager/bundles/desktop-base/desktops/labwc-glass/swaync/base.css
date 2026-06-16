@@ -7,9 +7,10 @@
   font-family: "sans", "Font Awesome 7 Free";
   color: var(--base05);
   background-color: var(--base00);
-  border-radius: 8px;
+  border-top-left-radius: 8px;
   /* padding: 16px; */
-  outline: 1px solid var(--base02);
+  border-left: 1px solid var(--base02);
+  border-top: 1px solid var(--base02);
   /* background-image: linear-gradient(to bottom, var(--base01), transparent); */
   box-shadow: 0 0 8px #00000040;
 }

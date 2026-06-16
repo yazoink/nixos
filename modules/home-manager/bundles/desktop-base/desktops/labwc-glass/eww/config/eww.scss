@@ -25,6 +25,8 @@ button {
   padding: 8px;
   border-radius: 8px;
   background-color: $bg2;
+  border: 1px solid $border;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
 }
 
 button:hover {
@@ -47,13 +49,10 @@ button:hover {
 .power-box, .confirm-box, .calendar-box {
   // box-shadow: 0 0 5px -5px rgba(0, 0, 0, 0.2);
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
-  border: 1px solid $border;
-  border-radius: 8px;
+  border-left: 1px solid $border;
+  border-top: 1px solid $border;
+  border-top-left-radius: 8px;
   background-color: $bg;
-  margin: 1px;
-}
-
-.power-box {
 }
 
 /*.user-logout-box {
@@ -80,8 +79,9 @@ button:hover {
 
 .confirm-text {
   padding: 8px 16px;
-  background: linear-gradient($bg, $bg2);
-  border-top-right-radius: 8px;
+  background: linear-gradient($bg2, $bg, $bg2);
+  border-bottom: 1px solid $border;
+  // border-top-right-radius: 8px;
   border-top-left-radius: 8px;
 }
 
@@ -91,7 +91,7 @@ button:hover {
   background: linear-gradient($bg2, $bg, $bg2);
   border-bottom: 1px solid $border;
   // border-top-left-radius: 16px;
-  border-top-right-radius: 8px;
+  // border-top-right-radius: 8px;
   border-top-left-radius: 8px;
 }
 
@@ -107,8 +107,8 @@ button:hover {
   background: linear-gradient($bg2, $bg, $bg2);
   // background-blend-mode: hard-light;
   border-top: 1px solid $border;
-  border-bottom-left-radius: 8px;
-  border-bottom-right-radius: 8px;
+  // border-bottom-left-radius: 8px;
+  // border-bottom-right-radius: 8px;
 }
 
 .power-button-box button {

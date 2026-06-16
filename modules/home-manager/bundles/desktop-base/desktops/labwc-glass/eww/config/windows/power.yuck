@@ -10,12 +10,12 @@
   :geometry (geometry
     :x "0px"
     :y "0px"
-    :width "400px"
     :anchor "bottom right"
   )
   :stacking "fg"
   :exclusive "false"
   :focusable "ondemand"
+  :class "power"
   (box
     :orientation "vertical"
     :halign "center"
