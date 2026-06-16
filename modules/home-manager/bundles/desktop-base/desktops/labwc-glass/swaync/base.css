@@ -16,7 +16,7 @@
 
 /* notifs */
 .notification-row {
-  background-image: linear-gradient(to top, var(--base01), transparent);
+  background-image: linear-gradient(to top, var(--base01), var(--base00));
   border-radius: 8px;
   outline: 1px solid var(--base02);
   margin: 4px;
@@ -59,8 +59,6 @@
 .control-center-list {
   /* border-top: 2px dashed var(--base02); */
   padding: 16px;
-  border-radius: 8px;
-  background-image: linear-gradient(to top, var(--base01), var(--base00));
 }
 
 .summary,
