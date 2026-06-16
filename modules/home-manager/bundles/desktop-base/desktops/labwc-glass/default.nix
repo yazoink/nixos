@@ -8,12 +8,6 @@
 }: let
   inherit (osConfig.myOptions.desktopTheme.rice) labwc-glass;
 in {
-  options = {
-    desktopTheme.rice.labwc.barColor = lib.mkOption {
-      type = lib.types.str;
-      default = config.stylix.base16Scheme.base00;
-    };
-  };
   config = lib.mkIf labwc-glass.enable (lib.mkMerge [
     /*
       {
