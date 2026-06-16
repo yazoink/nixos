@@ -1,0 +1,24 @@
+(defwindow calendar-window []
+  :monitor 0
+  :geometry (geometry
+    :anchor "bottom right"
+    :x "0px"
+    :y "0px"
+  )
+  :stacking "fg"
+  :exclusive "false"
+  :focusable "ondemand"
+  :class "calendar"
+  (box
+    :orientation "vertical"
+    :space-evenly "false"
+    :class "calendar-box"
+    :spacing 15
+    :halign "fill"
+    (pretty-time)
+    (calendar
+      :show-details "true"
+      :class "cal"
+    )
+  )
+)

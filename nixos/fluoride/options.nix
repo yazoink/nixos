@@ -39,7 +39,7 @@
       # colorscheme = "camellia";
       # colorscheme = "paradise";
       rice.openbox.enable = false;
-      rice.labwc.enable = true;
+      rice.labwc-glass.enable = true;
       rice.hyprland.enable = false;
       # name = "everblush";
       wallpaper = {

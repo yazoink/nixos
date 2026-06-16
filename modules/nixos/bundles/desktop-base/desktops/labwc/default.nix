@@ -4,10 +4,12 @@
   pkgs,
   ...
 }: let
-  inherit (config.myOptions.desktopTheme.rice) labwc;
+  inherit (config.myOptions.desktopTheme.rice) labwc labwc-glass;
 in {
-  config = lib.mkIf labwc.enable (lib.mkMerge [
-    (import ./labwc {inherit pkgs;})
-    (import ./hyprlock {})
-  ]);
+  config =
+    lib.mkIf labwc.enable
+    || labwc-glass.enable (lib.mkMerge [
+      (import ./labwc {inherit pkgs;})
+      (import ./hyprlock {})
+    ]);
 }

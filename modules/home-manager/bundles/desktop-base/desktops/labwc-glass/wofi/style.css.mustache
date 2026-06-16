@@ -1,0 +1,56 @@
+window {
+  color: #{{base05}};
+  background: transparent;
+}
+
+#outer-box {
+  background: #{{base00}};
+  border: 1px solid #{{base01}};
+  border-radius: 15px;
+  padding: 8px;
+  /*box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);*/
+  color: #{{base05}};
+}
+
+#input, #input:focus {
+  margin-bottom: 10px;
+  border-radius: 7px;
+  background: #{{base01}};
+  border: transparent;
+  outline: transparent;
+  box-shadow: none;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 0;
+  padding-bottom: 0;
+  color: #{{base05}};
+}
+
+#inner-box {
+  border-radius: 7px;
+  padding: none;
+}
+
+#entry, #selected, #unselected, #entry:focus {
+  padding: 3px;
+  border-radius: 7px;
+  border: transparent;
+  outline: transparent;
+}
+
+#entry:selected {
+  /*background: rgba({{base05-rgb-r}}, {{base05-rgb-g}}, {{base05-rgb-b}}, 0.09);*/
+  background: #{{base0D}};
+}
+
+#entry:selected #text {
+  color: #{{base00}};
+}
+
+#img {
+  padding-right: 10px;
+}
+
+/*#input > image.left {
+  -gtk-icon-transform:scaleX(0);
+}*/

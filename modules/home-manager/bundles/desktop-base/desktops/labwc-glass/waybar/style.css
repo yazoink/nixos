@@ -1,0 +1,160 @@
+window#waybar {
+  color: @fg;
+  background-color: @bg;
+  color: @fg;
+  font-weight: bold;
+  border-top: 1px solid @border;
+}
+
+#taskbar button {
+  background: @bg2;
+  margin: 8px 3px;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+#taskbar button.active {
+  /* border-bottom: 2px solid @accent; */
+  background-color: @accent;
+}
+
+#taskbar button.minimized {
+  opacity: 0.5;
+}
+
+#custom-left-arrow {
+  font-size: 10pt;
+  color: @unfocused;
+}
+
+#tray-expander,
+#battery-expander,
+#backlight-expander {
+  margin-left: 14px;
+}
+
+#quick-access {
+  margin-left: 5px;
+}
+
+#clock,
+#quick-access,
+#workspaces-group,
+#custom-search,
+#custom-power {
+  font-size: 11pt;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  background-color: @bg2;
+  border-radius: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+#window {
+  margin-left: -7px;
+}
+
+#custom-workspaces {
+  margin-right: 5px;
+}
+
+/*#workspaces {
+  font-size: 0;
+  padding-right: 0;
+  background-color: @bg2;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+#workspaces button {
+  color: transparent;
+  margin-left: 5px;
+  margin-right: 5px;
+  padding-left: 7px;
+  padding-right: 7px;
+  background-color: @unfocused;
+  border-radius: 100px;
+}
+
+#workspaces button.active {
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: @accent;
+  color: @bg;
+}*/
+
+.modules-left {
+  margin-left: 10px;
+}
+
+.modules-right {
+  margin-right: 10px;
+}
+
+tooltip {
+  background-color: @bg;
+  border: 1px solid @border;
+  border-radius: 15px;
+}
+
+tooltip label {
+  padding: 5px;
+  font-weight: normal;
+  color: @fg;
+}
+
+menu {
+  font-weight: normal;
+  background-color: @bg;
+  color: @fg;
+  padding: 10px;
+  border: 1px solid @border;
+  border-radius: 15px;
+}
+
+menuitem {
+  /* padding: 5px; */
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 5px;
+}
+
+/*.arrow.up,
+.arrow.down,
+.arrow.left,
+.arrow.right {
+  color: @fg;
+}*/
+
+menuitem:hover {
+  background-color: @bg2;
+}
+
+#tray,
+#battery.percentage,
+#wireplumber.volume,
+#backlight {
+  margin-left: 7px;
+}
+
+#custom-power {
+  color: @urgent;
+}
+
+#custom-separator {
+  color: @bg2;
+}
+
+#custom-search {
+  color: @accent;
+}

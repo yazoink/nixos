@@ -196,6 +196,13 @@
               description = "enable swayosd";
             };
           };
+          labwc-glass = {
+            enable = lib.mkOption {
+              type = lib.types.bool;
+              default = false;
+              description = "labwc desktop with glassy rose-pine theme";
+            };
+          };
           openbox = {
             enable = lib.mkOption {
               type = lib.types.bool;
