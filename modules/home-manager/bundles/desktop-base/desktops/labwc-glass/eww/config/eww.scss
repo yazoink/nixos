@@ -1,56 +1,30 @@
-$border: #1C2326;
-$bg: #141B1E;
-$bg2: #232A2D;
-$bg3: #353C3F;
-$fg: #DADADA;
-$red: #E57474;
-$yellow: #E5C76B;
-$green: #8CCF7E;
-$blue: #67B0E8;
-$purple: #C47FD5;
+$border: #343240;
+$bg: #191724;
+$bg2: #262432;
+$bg3: #343240;
+$bg4: #413F4E;
+$fg: #E0DEF4;
+$red: #EB6F92;
+$yellow: #EA9A97;
+$green: #3E8FB0;
+$blue: #C4A7E7;
+$purple: #F6C177;
+$margin: 5px;
 $margin: 5px;
 
 @import "colours";
 
-$round: 15px;
+$round: 16px;
+
 
 * {
   all: unset;
   color: $fg;
 }
 
-.power, .confirm {
-  background: none;
-  border-radius: 15px;
-}
-
-.confirm-text {
-  font-weight: bold;
-  font-size: 15pt;
-}
-
-.power-box, .confirm-box, .calendar-box {
-  // box-shadow: 0 0 5px -5px rgba(0, 0, 0, 0.2);
-  padding: 15px;
-  border: 1px solid $border;
-  border-radius: 15px;
-  background-color: $bg;
-  margin: $margin;
-}
-
-.power-box {
-  padding-top: 25px;
-}
-
-.user-box {
-  padding: 15px;
-  border-radius: 5px;
-  background-color: $bg2;
-}
-
 button {
-  padding: 10px;
-  border-radius: 5px;
+  padding: 8px;
+  border-radius: 8px;
   background-color: $bg2;
 }
 
@@ -58,16 +32,86 @@ button:hover {
   background-color: $bg3;
 }
 
+.power, .confirm {
+  background: none;
+}
+
+.confirm-text {
+  font-weight: bold;
+  // font-size: 1.25rem;
+}
+
+.confirm-buttons {
+  margin: 8px;
+}
+
+.power-box, .confirm-box, .calendar-box {
+  // box-shadow: 0 0 5px -5px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+  border: 1px solid $border;
+  border-radius: 16px;
+  background-color: $bg;
+  margin: $margin;
+}
+
+.power-box {
+}
+
+/*.user-logout-box {
+  padding: 16px;
+  // background: repeating-linear-gradient($bg2, $bg2 8%, transparent 25%, $bg2, $bg2 85%, transparent 100%);
+  // background: repeating-linear-gradient($bg3, $bg2 20%, $bg2 50%, $bg, $bg2 90%, $bg3);
+  background: linear-gradient($bg2, $bg);
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  // border-top: 1px solid $border;
+  // background-color: $red;
+  // background-image: linear-gradient(to bottom, rgba(255, 255, 150, 0.25), transparent, transparent, rgba(10, 7, 65, 0.2), rgba(10, 7, 65, 0.4), rgba(10, 7, 65, 0.5), rgba(10, 7, 65, 0.6), rgba(10, 7, 65, 0.4), rgba(255, 255, 150, 0.1));
+  // background-blend-mode: hard-light;
+  // border: 1px solid $red;
+}*/
+
+.confirm-text {
+  padding: 8px 16px;
+  background: linear-gradient($bg, $bg2);
+  border-top-right-radius: 16px;
+  border-top-left-radius: 16px;
+}
+
+.user-box {
+  padding: 16px;
+  // background: repeating-linear-gradient($bg3, $bg2 20%, $bg2 50%, $bg, $bg2 90%, $bg3);
+  background: linear-gradient($bg2, $bg, $bg2);
+  border-bottom: 1px solid $border;
+  // border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  border-top-left-radius: 16px;
+}
+
 .power-button-box {
-  padding-top: 5px;
-  padding-bottom: 5px;
-  padding-right: 5px;
+  padding: 8px;
+  // background-image: linear-gradient(to left, rgba(255, 255, 150, 0.25), transparent, transparent, rgba(10, 7, 65, 0.2), rgba(10, 7, 65, 0.4), rgba(10, 7, 65, 0.5), rgba(10, 7, 65, 0.6), rgba(10, 7, 65, 0.4), rgba(255, 255, 150, 0.1));
+  // background-image: linear-gradient(to right, transparent, rgba(0, 0, 50, 0.2), rgba(0, 0, 50, 0.3), rgba(0, 0, 50, 0.3), rgba(0, 0, 50, 0.2), transparent);
+  // background-image: linear-gradient(to right, rgba(0, 0, 50, 0.3), transparent, rgba(0, 0, 50, 0.3));
+  background: linear-gradient($bg2, $bg, $bg2);
+  // background-blend-mode: hard-light;
+  border-top: 1px solid $border;
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
 }
 
 .power-button-box button {
   font-family: "Font Awesome 7 Free";
-  font-size: 15pt;
-  padding: 10px;
+  font-size: 20pt;
+  background: linear-gradient($bg3, $bg2, $bg3);
+  // background-image: repeating-linear-gradient($bg3, $bg2 20%, $bg2 50%, $bg, $bg2 90%, $bg3);
+  border: 1px solid $bg3;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+}
+
+.power-button-box button:hover {
+  background: linear-gradient($bg4, $bg3, $bg4);
+  border: 1px solid $bg4;
 }
 
 .power-button-lock label {
@@ -96,14 +140,14 @@ button:hover {
 .profile-picture {
   // border-radius: 5px;
   border: 1px solid $fg;
+  box-shadow: 0 0 4px rgba(255, 255, 255, 0.3);
   // box-shadw: 0 0 5px rgba(0, 0, 0, 0.15);
 }
 
 .heading {
   font-weight: bold;
-  font-size: 21pt;
-  margin: 5px;
-  padding-bottom: 10px;
+  font-size: 1.5rem;
+  margin: 16px;
 }
 
 .os-version {
@@ -122,20 +166,15 @@ button:hover {
 .hline {
   // border-top: 1px solid $fg;
   // opacity: 0.15;
-  border-top: 2px dashed $bg3;
+  border-top: 1px solid $border;
 }
 
-.grid-list-box, .text-box {
-  background-color: $bg2;
-  padding: 15px;
-  border-radius: 5px;
+.grid-list-box, .text-box, .quote {
+  padding: 16px;
 }
 
 .quote {
   font-style: italic;
-  background-color: $bg2;
-  padding: 15px;
-  border-radius: 5px;
 }
 
 .quote-author {
@@ -178,14 +217,15 @@ button:hover {
 }
 
 tooltip {
-  background-color: $bg;
-  opacity: 1.0;
+  background: linear-gradient(transparent, $bg2);
   border: 1px solid $border;
-  border-radius: 10px;
+  border-radius: 8px;
   padding: 0;
 }
 
 tooltip label {
+  text-shadow: none;
+  background: none;
   margin: 5px;
   padding: 0;
   color: $fg;
@@ -235,92 +275,4 @@ calendar:selected {
 
 .purple {
   color: $purple;
-}
-
-.fakecornersl {
-  transition: box-shadow 500ms, border-radius 500ms, margin 500ms;
-  margin: 0;
-  &.active {
-    margin: 0px;
-    margin-top: 0;
-    border-radius: $round + 10px; 
-    box-shadow: 0px 0px 0px 50px $bg;
-    &.locked {
-      margin: 0px;
-    }
-  }
-  &.inactive {
-    border-radius: 0;
-    box-shadow: none;
-  }
-}
-
-.fakecornersr {
-  transition: box-shadow 500ms, border-radius 500ms;
-  &.active {
-    border-top-right-radius: $round + 10px; 
-    border-bottom-right-radius: $round + 10px; 
-    box-shadow: 
-      20px -20px 0px $bg,
-      20px 20px 0px $bg;
-  }
-  &.inactive {
-    border-radius: 0;
-    box-shadow: none;
-  }
-}
-
-.filler {
-  transition: border-radius 500ms, background-color 500ms;
-  margin: 0px;
-  margin-top: 10px;
-  margin-left: -1px;
-  margin-right: -1px;
-  border-top-left-radius: $round + 10px;
-  border-top-right-radius: $round + 10px;
-  box-shadow: 
-    0px -26px 0px 5px $bg;
-
-  &.inactive {
-    background-color: $bg;
-    border-radius: 0;
-  }
-}
-
-.fillerl {
-  @extend .filler;
-  margin: 0;
-  border-top-left-radius: 0;
-  box-shadow: 
-    20px -20px 0px -10px $bg;
-}
-
-.fillerr {
-  @extend .filler;
-  margin: 0;
-  border-top-right-radius: 0;
-  box-shadow: 
-    -20px -20px 0px -10px $bg;
-}
-
-.fillerrs {
-  @extend .filler;
-  margin: 0;
-  border-top-right-radius: 0;
-  box-shadow: 
-    -20px 0px 0px 0px $bg;
-}
-
-.fillerls {
-  @extend .filler;
-  margin: 0;
-  border-top-left-radius: 0;
-  box-shadow: 
-    20px 0px 0px 0px $bg;
-}
-
-.launchcover {
-  border-radius: $round; 
-  margin: 5px;
-  box-shadow: 0px 0px 0px 10px $bg;
 }

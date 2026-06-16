@@ -79,16 +79,25 @@
   font-size: 1.5rem;
   padding: 16px;
   /* border-bottom: 2px dashed var(--base02); */
-  background-image: linear-gradient(to top, var(--base01), transparent);
+  background-image:
+    linear-gradient(to top, var(--base01), transparent), var(--base01);
+  border-bottom: 1px solid var(--base02);
 }
 
 /* title button */
 .widget-title > button {
   font-weight: initial;
   font-size: initial;
-  background-image: linear-gradient(to bottom, var(--base03), var(--base02));
+  background-image: linear-gradient(
+    to bottom,
+    var(--base03),
+    var(--base02),
+    var(--base03)
+  );
   border-radius: 8px;
   padding: 8px;
+  border-top: 1px solid var(--base03);
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
 }
 .widget-title > button:hover {
   background-image: none;
@@ -98,7 +107,7 @@
 /* dnd */
 .widget-dnd {
   font-size: 1.1rem;
-  border-bottom: 2px dashed var(--base02);
+  border-bottom: 1px solid var(--base02);
   padding: 8px 16px;
 }
 .widget-dnd > switch {

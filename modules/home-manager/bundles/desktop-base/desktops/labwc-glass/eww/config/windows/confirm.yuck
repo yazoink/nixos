@@ -13,25 +13,25 @@
     :orientation "vertical"
     :space-evenly "false"
     :class "confirm-box"
-    :spacing 15
     :halign "fill"
-    (separator)
+    ;(separator)
     (label :text "${thing}" :class "confirm-text")
     ;(user :image "./images/profile_image_rounded4.png")
-    (hline)
+    ;(hline)
     (box
+      :halign "fill"
       :orientation "horizontal"
       :space-evenly "true"
-      :spacing 10
+      :spacing 8
       :class "confirm-buttons"
       (button
-        :class "confirm-button bold"
+        :class "confirm-button"
         :onclick "hyprctl reload; ${action}; eww --config ${dir} close confirm"
         :tooltip "(y)"
         "Yes"
       )
       (button
-        :class "confirm-button bold"
+        :class "confirm-button"
         :onclick "hyprctl reload; eww --config ${dir} close confirm"
         :tooltip "(n)"
         "No"
