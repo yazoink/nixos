@@ -30,6 +30,21 @@
       notification-icon-size = 64;
       notification-body-image-height = 74;
       notification-body-image-width = 74;
+      widgets = ["title" "dnd" "mpris" "notifications"];
+      widget-config = {
+        title = {
+          text = " Notifications";
+          clear-all-button = true;
+          button-text = "Clear All";
+        };
+        dnd = {
+          text = "Do Not Disturb";
+        };
+        mpris = {
+          image-size = 96;
+          image-radius = 15;
+        };
+      };
     };
     /*
     style = with config.stylix.base16Scheme;
