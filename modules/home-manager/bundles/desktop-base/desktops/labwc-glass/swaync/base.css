@@ -16,20 +16,24 @@
 
 /* notifs */
 .notification-row {
-  background-image: linear-gradient(to top, var(--base01), var(--base00));
+  background-image: linear-gradient(
+    to top,
+    var(--base01),
+    var(--base00),
+    var(--base01)
+  );
   border-radius: 8px;
   outline: 1px solid var(--base02);
   margin: 4px;
   padding: 16px;
   box-shadow: 0 0 4px #00000040;
 }
-.notification-row:hover,
+/*.notification-row:hover,
 .notification-row:focus,
 .control-center .notification-row:focus,
 .control-center .notification-row:hover {
   background-image: linear-gradient(to top, var(--base02), var(--base01));
-  /* background: var(--base01); */
-}
+}*/
 
 .notification-group-headers {
   padding: 8px;
@@ -37,7 +41,12 @@
 
 .notification-alt-actions {
   background-color: var(--base02);
-  background-image: linear-gradient(to top, var(--base02), var(--base01));
+  background-image: linear-gradient(
+    to top,
+    var(--base02),
+    var(--base01),
+    var(--base02)
+  );
   border: 1px solid var(--base02);
   padding: 8px;
   border-radius: 8px;
@@ -46,7 +55,12 @@
 
 .notification-alt-actions:hover,
 .notification-alt-actions:focus {
-  background-image: linear-gradient(to top, var(--base03), var(--base02));
+  background-image: linear-gradient(
+    to top,
+    var(--base03),
+    var(--base02),
+    var(--base03)
+  );
 }
 
 .close-button {
