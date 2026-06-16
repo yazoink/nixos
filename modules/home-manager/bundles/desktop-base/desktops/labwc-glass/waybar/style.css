@@ -125,11 +125,7 @@ menu {
 }
 
 menuitem {
-  /* padding: 5px; */
-  padding-left: 16px;
-  padding-right: 16px;
-  padding-top: 4px;
-  padding-bottom: 4px;
+  padding: 4px;
   border-radius: 4px;
 }
 
@@ -161,4 +157,9 @@ menuitem:hover {
 
 #custom-search {
   color: @accent;
+}
+
+#custom-notification {
+  font-family: "Font Awesome 7 Free";
+  color: @yellow;
 }
