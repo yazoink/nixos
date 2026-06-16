@@ -16,12 +16,13 @@
 
 /* notifs */
 .notification-row {
-  background-image: linear-gradient(
+  /*background-image: linear-gradient(
     to top,
     var(--base01),
     var(--base00),
     var(--base01)
-  );
+  );*/
+  background: var(--base01);
   border-radius: 8px;
   outline: 1px solid var(--base02);
   margin: 8px;
@@ -41,13 +42,13 @@
 
 .notification-alt-actions {
   background-color: var(--base02);
-  background-image: linear-gradient(
+  /*background-image: linear-gradient(
     to top,
     var(--base02),
     var(--base01),
     var(--base02)
-  );
-  border: 1px solid var(--base02);
+  );*/
+  border: 1px solid var(--base03);
   padding: 8px;
   border-radius: 8px;
   margin-top: 16px;
