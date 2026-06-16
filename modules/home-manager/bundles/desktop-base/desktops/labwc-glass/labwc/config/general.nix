@@ -1,6 +1,6 @@
 {...}: {
   core = {
-    gap = 8;
+    gap = 0;
     decoration = "server";
   };
   desktops = {

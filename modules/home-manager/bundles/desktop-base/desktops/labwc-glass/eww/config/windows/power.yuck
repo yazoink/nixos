@@ -31,7 +31,7 @@
         :text "Thou shalt not blow pot smoke in the face\\n of thy pet." 
         :author "William S. Burroughs"
       )
-      (hline)
+      ;(hline)
       (resource-usage-grid)
     )
     (power-buttons)

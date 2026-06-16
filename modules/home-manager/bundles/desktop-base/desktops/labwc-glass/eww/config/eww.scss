@@ -11,7 +11,7 @@ $blue: #C4A7E7;
 $purple: #F6C177;
 $margin: 5px;
 
-@import "colours";
+// @import "colours";
 
 $round: 16px;
 
@@ -69,6 +69,14 @@ button:hover {
   // background-blend-mode: hard-light;
   // border: 1px solid $red;
 }*/
+
+.resource-usage-label {
+  padding: 8px 16px;
+  background: linear-gradient($bg2, $bg, $bg2);
+  border-top: 1px solid $border;
+  border-bottom: 1px solid $border;
+  font-weight: bold;
+}
 
 .confirm-text {
   padding: 8px 16px;
