@@ -68,7 +68,9 @@ window#waybar {
 #workspaces-group:hover,
 #custom-search:hover,
 #custom-power:hover {
-  background: @bg3;
+  background-image: linear-gradient(to bottom, @bg4, @bg3, @bg4);
+  border: 1px solid @bg4;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
 }
 
 #taskbar button.active:hover {
