@@ -118,8 +118,12 @@
 }
 .widget-dnd > switch {
   font-size: initial;
-  background-image: radial-gradient(var(--base00), var(--base01));
-  border: 1px solid var(--base03);
+  background-image: linear-gradient(
+    var(--base02),
+    var(--base03),
+    var(--base02)
+  );
+  border: 1px solid var(--base02);
   border-radius: 100px;
   min-height: 18px;
   min-width: 36px;
