@@ -11,7 +11,7 @@ $blue: #C4A7E7;
 $purple: #F6C177;
 $margin: 5px;
 
-// @import "colours";
+@import "colours";
 
 $round: 16px;
 
@@ -199,12 +199,15 @@ button:hover {
 }
 
 .pretty-time {
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  background: linear-gradient($bg2, $bg, $bg2);
+  border-bottom: 1px solid $border;
+  border-top-left-radius: 8px;
 }
 
 .pretty-time-date {
-  font-size: 13pt;
+  font-size: 1.25rem;
   font-style: italic;
   opacity: 0.5;
 }
@@ -249,14 +252,13 @@ tooltip label {
 }
 
 .cal {
-  background-color: $bg2;
-  padding: 10px;
-  border-radius: 8px;
+  background-color: $bg;
+  padding: 16px;
+  padding-top: 0;
+  padding-bottom: 8px;
 }
 
 calendar.header {
-  background-color: $bg2;
-  border-bottom: 2px dashed $bg3;
   border-radius: 0px;
 }
 
@@ -270,8 +272,10 @@ calendar.day-number {
 }
 
 calendar:selected {
+  border-radius: 8px;
   color: $blue;
-  background-color: $bg3;
+  background-color: $bg2;
+  border: 1px solid $border;
 }
 
 .red {
