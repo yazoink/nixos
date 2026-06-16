@@ -10,6 +10,7 @@ in {
   home.file.".themes/my-labwc/labwc/desk.xbm".source = ./icon.xbm;
   home.file.".themes/my-labwc/labwc/iconify.xbm".source = ./icon.xbm;
   home.file.".themes/my-labwc/labwc/shade.xbm".source = ./icon.xbm;
+  home.file.".themes/my-labwc/labwc/max.xbm".source = ./icon.xbm;
   home.file.".config/labwc/themerc-override".text = ''
     # This file contains all themerc options with default values
     #
