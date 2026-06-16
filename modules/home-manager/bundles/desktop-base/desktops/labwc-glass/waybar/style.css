@@ -21,7 +21,7 @@ window#waybar {
 }
 
 #taskbar button.minimized {
-  opacity: 0.5;
+  opacity: 0.4;
 }
 
 #custom-left-arrow {
