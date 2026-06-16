@@ -139,7 +139,7 @@ tooltip label {
 
 menu {
   font-weight: normal;
-  background-color: @bg2;
+  background-color: @bg;
   color: @fg;
   padding: 8px;
   border: 1px solid @border;
@@ -159,7 +159,7 @@ menuitem {
 }*/
 
 menuitem:hover {
-  background-color: @bg3;
+  background-color: @bg2;
 }
 
 #tray,
