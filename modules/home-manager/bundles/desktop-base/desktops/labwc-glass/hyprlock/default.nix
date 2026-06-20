@@ -18,11 +18,10 @@ in {
       source = ${confFile}
 
       $font = ${config.stylix.fonts.sansSerif.name}
-      $radius = 10
+      $radius = 8
 
       general {
         hide_cursor = false
-        grace = 0
         ignore_empty_input = true
         fractional_scaling = ${fractionalScaling}
       }
@@ -52,7 +51,7 @@ in {
       shape {
         monitor =
         size = 550, 300
-        rounding = 15
+        rounding = 8
         border_size = 1
         border_color = $border
         color = $bg0
@@ -88,7 +87,7 @@ in {
         monitor =
         size = 470, 50
         outline_thickness = 0
-        rounding = 10
+        rounding = 8
         inner_color = $bg1
         check_color = rgb(d9bc8c)
         fail_color = rgb(b66467)
@@ -101,6 +100,8 @@ in {
         valign = center
         font_family = Rubik
         position = 0, -87
+        border_size = 1
+        border_color = $border
       }
 
       # ----- Date / Time ----- #
