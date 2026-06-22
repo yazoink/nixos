@@ -9,7 +9,7 @@
   inherit (osConfig.myOptions.hardwareFeatures) laptop;
   inherit (osConfig.myOptions) desktopTheme;
   iconSize = desktopTheme.fonts.desktop.size - 2;
-  barHeight = 52;
+  barHeight = 46;
   barPosition = "bottom";
   notifsModule = ''
     "custom/notification": {
@@ -70,7 +70,11 @@
     },
     "group/workspaces-group": {
       "orientation": "inherit",
-      "modules": ["custom/workspaces", "ext/workspaces"]
+      "modules": ["custom/workspaces", "ext/workspaces"],
+      "drawer": {
+          "transition-duration": 600,
+          "children-class": "not-power"
+      }
     }
   '';
   clockModule = ''

@@ -8,7 +8,7 @@ window#waybar {
 
 #taskbar button {
   /* background: @bg2; */
-  margin: 8px 4px;
+  margin: 4px 4px;
   padding: 4px;
   border-radius: 8px;
   background-image: linear-gradient(to bottom, @bg3, @bg2, @bg3);
@@ -17,9 +17,14 @@ window#waybar {
 }
 
 #taskbar button.active {
-  /* border-bottom: 2px solid @accent; */
-  /* background-color: @accent; */
-  background: @accent;
+  background-color: @accent;
+  background-image: linear-gradient(
+    to bottom,
+    transparent,
+    rgba(0, 0, 0, 0.4),
+    transparent
+  );
+  border: 1px solid @accent;
 }
 
 #taskbar button.minimized {
@@ -44,12 +49,10 @@ window#waybar {
 #clock,
 #custom-notification,
 #quick-access,
-#workspaces-group,
-#custom-search,
-#custom-power {
+#workspaces-group {
   font-size: 11pt;
-  margin-top: 8px;
-  margin-bottom: 8px;
+  margin-top: 4px;
+  margin-bottom: 4px;
   /* background-color: @bg2; */
   border-radius: 8px;
   padding-top: 4px;
@@ -61,22 +64,85 @@ window#waybar {
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
 }
 
+#custom-power {
+  margin: 0px;
+  padding-left: 12px;
+  padding-right: 12px;
+  background-color: @urgent;
+  background-image: linear-gradient(
+    to bottom,
+    transparent,
+    rgba(0, 0, 0, 0.3),
+    transparent
+  );
+  border: 1px solid @urgent;
+  font-size: 14pt;
+}
+
+#custom-search {
+  margin: 0px;
+  padding-left: 12px;
+  padding-right: 12px;
+  background-color: @accent;
+  background-image: linear-gradient(
+    to bottom,
+    transparent,
+    rgba(0, 0, 0, 0.3),
+    transparent
+  );
+  border: 1px solid @accent;
+  font-size: 14pt;
+}
+
 #clock:hover,
 #taskbar button:hover,
 #custom-notification:hover,
 /* #quick-access:hover, */
-#workspaces-group:hover,
-#custom-search:hover,
-#custom-power:hover {
+#workspaces-group:hover {
   background-image: linear-gradient(to bottom, @bg4, @bg3, @bg4);
   border: 1px solid @bg4;
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
 }
 
+#custom-power:hover {
+  margin: 0px;
+  padding-left: 12px;
+  padding-right: 12px;
+  background-color: @urgent;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.2),
+    rgba(0, 0, 0, 0.3),
+    rgba(255, 255, 255, 0.2)
+  );
+  border: 1px solid @urgent;
+}
+
+#custom-search:hover {
+  margin: 0px;
+  padding-left: 12px;
+  padding-right: 12px;
+  background-image: linear-gradient(to bottom, @bg3, @bg2, @bg3);
+  background-color: @accent;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.2),
+    rgba(0, 0, 0, 0.3),
+    rgba(255, 255, 255, 0.2)
+  );
+  border: 1px solid @accent;
+}
+
 #taskbar button.active:hover {
   /* border-bottom: 2px solid @accent; */
   /* background-color: @accent; */
-  background: @accent;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.2),
+    rgba(0, 0, 0, 0.3),
+    rgba(255, 255, 255, 0.2)
+  );
+  border: 1px solid @accent;
 }
 
 #window {
@@ -118,11 +184,11 @@ window#waybar {
 }*/
 
 .modules-left {
-  margin-left: 8px;
+  margin-left: 0px;
 }
 
 .modules-right {
-  margin-right: 8px;
+  margin-right: 0px;
 }
 
 tooltip {
@@ -169,16 +235,8 @@ menuitem:hover {
   margin-left: 8px;
 }
 
-#custom-power {
-  color: @urgent;
-}
-
 #custom-separator {
   color: @bg2;
-}
-
-#custom-search {
-  color: @accent;
 }
 
 #custom-notification {
