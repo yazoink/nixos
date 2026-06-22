@@ -65,7 +65,6 @@ window#waybar {
 }
 
 #custom-power {
-  margin: 0px;
   padding-left: 12px;
   padding-right: 12px;
   background-color: @urgent;
@@ -77,10 +76,12 @@ window#waybar {
   );
   border: 1px solid @urgent;
   font-size: 14pt;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  border-radius: 8px;
 }
 
 #custom-search {
-  margin: 0px;
   padding-left: 12px;
   padding-right: 12px;
   background-color: @accent;
@@ -92,6 +93,9 @@ window#waybar {
   );
   border: 1px solid @accent;
   font-size: 14pt;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  border-radius: 8px;
 }
 
 #clock:hover,
@@ -105,7 +109,6 @@ window#waybar {
 }
 
 #custom-power:hover {
-  margin: 0px;
   padding-left: 12px;
   padding-right: 12px;
   background-color: @urgent;
@@ -119,7 +122,6 @@ window#waybar {
 }
 
 #custom-search:hover {
-  margin: 0px;
   padding-left: 12px;
   padding-right: 12px;
   background-image: linear-gradient(to bottom, @bg3, @bg2, @bg3);
@@ -184,11 +186,11 @@ window#waybar {
 }*/
 
 .modules-left {
-  margin-left: 0px;
+  margin-left: 8px;
 }
 
 .modules-right {
-  margin-right: 0px;
+  margin-right: 8px;
 }
 
 tooltip {
