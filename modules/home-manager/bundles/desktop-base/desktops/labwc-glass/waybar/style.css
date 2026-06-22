@@ -81,7 +81,7 @@ window#waybar {
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
   font-size: 13pt;
   color: @urgent;
-  border: 1px solid @bg4;
+  border: 1px solid @bg3;
   /* text-shadow: 0 0 2px rgba(255, 255, 255, 0.4); */
 }
 
@@ -102,7 +102,7 @@ window#waybar {
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
   font-size: 13pt;
   color: @accent;
-  border: 1px solid @bg4;
+  border: 1px solid @bg3;
   /* text-shadow: 0 0 2px rgba(255, 255, 255, 0.4); */
 }
 
