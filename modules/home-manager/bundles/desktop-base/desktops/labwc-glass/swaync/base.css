@@ -152,9 +152,9 @@
 .widget-dnd > switch:checked {
   background-color: var(--base0D);
   background-image: linear-gradient(
-    rgba(0, 0, 0, 0.2),
     transparent,
-    rgba(0, 0, 0, 0.2)
+    rgba(0, 0, 0, 0.2),
+    transparent
   );
   border: 1px solid var(--base0D);
 }
