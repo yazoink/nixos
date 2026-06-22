@@ -13,6 +13,6 @@ pkgs.stdenv.mkDerivation {
 
   installPhase = ''
     mkdir -p $out/share/icons
-    cp -r $src/icons/RoséPine $out/share/icons
+    cp -r $src/icons/RoséPine-Moon $out/share/icons
   '';
 }
