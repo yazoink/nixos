@@ -149,8 +149,8 @@ window#waybar {
   margin-left: -8px;
 }
 
-#custom-workspaces {
-  margin-right: 4px;
+#workspaces {
+  margin-left: 4px;
 }
 
 /*#workspaces {
