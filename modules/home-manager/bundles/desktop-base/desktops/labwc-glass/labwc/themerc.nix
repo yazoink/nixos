@@ -6,7 +6,8 @@
   inherit (osConfig.desktopTheme) base16Accent;
 in {
   # home.file.".themes/my-labwc/labwc".source = ./icons;
-  home.file.".themes/my-labwc/labwc/close.xbm".source = ./icon.xbm;
+  /*
+    home.file.".themes/my-labwc/labwc/close.xbm".source = ./icon.xbm;
   home.file.".themes/my-labwc/labwc/desk.xbm".source = ./icon.xbm;
   home.file.".themes/my-labwc/labwc/desk_toggled.xbm".source = ./icon.xbm;
   home.file.".themes/my-labwc/labwc/iconify.xbm".source = ./icon.xbm;
@@ -15,6 +16,8 @@ in {
   home.file.".themes/my-labwc/labwc/max.xbm".source = ./icon.xbm;
   home.file.".themes/my-labwc/labwc/max_toggled.xbm".source = ./icon.xbm;
   home.file.".themes/my-labwc/labwc/max_disabled.xbm".source = ./icon.xbm;
+  */
+  home.file.".themes/my-labwc/labwc".source = ./svg-icons;
   home.file.".config/labwc/themerc-override".text = ''
     # This file contains all themerc options with default values
     #
