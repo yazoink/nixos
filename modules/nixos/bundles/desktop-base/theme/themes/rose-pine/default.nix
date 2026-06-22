@@ -19,8 +19,7 @@ in {
         package = pkgs.rose-pine-cursor;
         size = 32;
       };
-      /*
-        base16Scheme = {
+      base16Scheme = {
         base00 = "191724";
         base01 = "262432";
         base02 = "343240";
@@ -38,8 +37,8 @@ in {
         base0E = "F6C177";
         base0F = "56526E";
       };
-      */
-      base16Scheme = {
+      /*
+        base16Scheme = {
         base00 = "191724";
         base01 = "1F1D2E";
         base02 = "26233A";
@@ -57,6 +56,7 @@ in {
         base0E = "F6C177";
         base0F = "56526E";
       };
+      */
     };
   };
 }
