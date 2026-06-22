@@ -3,16 +3,16 @@ pkgs.stdenv.mkDerivation {
   name = "rose-pine-icons";
 
   src = pkgs.fetchFromGitHub {
-    owner = "Fausto-Korpsvart";
-    repo = "Rose-Pine-GTK-Theme";
+    owner = "Henriquehnnm";
+    repo = "rose-pine-icon-theme";
     rev = "main";
-    sha256 = "sha256-eeBuGvJKdv/puMg2FN3Ue52OU1LgipEte/OhRwIDDs8=";
+    sha256 = "";
   };
 
   dontUnpack = true;
 
   installPhase = ''
     mkdir -p $out/share/icons
-    cp -r $src/icons/Rose-Pine $out/share/icons
+    cp -r $src/icons/RoséPine $out/share/icons
   '';
 }
