@@ -81,6 +81,7 @@ window#waybar {
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
   font-size: 13pt;
   color: @bg;
+  text-shadow: 0 0 2px rgba(255, 255, 255, 0.4);
 }
 
 #custom-search {
@@ -100,6 +101,7 @@ window#waybar {
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
   font-size: 13pt;
   color: @bg;
+  text-shadow: 0 0 2px rgba(255, 255, 255, 0.4);
 }
 
 #clock:hover,
