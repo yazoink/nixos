@@ -21,7 +21,7 @@ window#waybar {
   background-image: linear-gradient(
     to bottom,
     transparent,
-    rgba(0, 0, 0, 0.2),
+    rgba(0, 0, 0, 0.3),
     transparent
   );
   border: 1px solid @accent;
@@ -91,7 +91,7 @@ window#waybar {
   background-image: linear-gradient(
     to bottom,
     transparent,
-    rgba(0, 0, 0, 0.2),
+    rgba(0, 0, 0, 0.3),
     transparent
   );
   border: 1px solid @accent;
