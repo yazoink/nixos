@@ -3,12 +3,14 @@
   config,
   lib,
   ...
-}: {
+}: let
+  icons = pkgs.callPackage ./icons.nix {};
+in {
   config = lib.mkIf (config.myOptions.bundles.desktopBase.enable && config.myOptions.desktopTheme.colorscheme == "rose-pine") {
     desktopTheme.base16Accent = "base0D";
     desktopTheme.icons = {
-      name = "rose-pine";
-      package = pkgs.rose-pine-icon-theme;
+      name = "Rose-Pine";
+      package = icons;
     };
 
     stylix = {
