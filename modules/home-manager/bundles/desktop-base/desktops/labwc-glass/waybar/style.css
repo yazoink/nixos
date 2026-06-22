@@ -75,7 +75,6 @@ window#waybar {
     transparent
   );
   border: 1px solid @urgent;
-  font-size: 14pt;
   margin-top: 4px;
   margin-bottom: 4px;
   border-radius: 8px;
@@ -92,7 +91,6 @@ window#waybar {
     transparent
   );
   border: 1px solid @accent;
-  font-size: 14pt;
   margin-top: 4px;
   margin-bottom: 4px;
   border-radius: 8px;
