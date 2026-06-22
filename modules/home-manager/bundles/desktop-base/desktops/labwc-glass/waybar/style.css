@@ -67,7 +67,6 @@ window#waybar {
 #custom-power {
   padding-left: 12px;
   padding-right: 12px;
-  background-color: @urgent;
   /*background-image: linear-gradient(
     to bottom,
     transparent,
@@ -88,7 +87,6 @@ window#waybar {
 #custom-search {
   padding-left: 12px;
   padding-right: 12px;
-  background-color: @accent;
   /*background-image: linear-gradient(
     to bottom,
     transparent,
