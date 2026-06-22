@@ -6,7 +6,7 @@ pkgs.stdenv.mkDerivation {
     owner = "Fausto-Korpsvart";
     repo = "Rose-Pine-GTK-Theme";
     rev = "main";
-    sha256 = "";
+    sha256 = "sha256-eeBuGvJKdv/puMg2FN3Ue52OU1LgipEte/OhRwIDDs8=";
   };
 
   dontUnpack = true;
