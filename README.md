@@ -24,6 +24,8 @@ My NixOS desktop configs with home-manager.
 
 #### Screenshots
 
+![rice](./assets/rose-pine-glass-1.png)
+![rice](./assets/rose-pine-glass-2.png)
 ![rice](./assets/paradise1.png)
 ![rice](./assets/paradise2.png)
 ![rice](./assets/paradise3.png)
