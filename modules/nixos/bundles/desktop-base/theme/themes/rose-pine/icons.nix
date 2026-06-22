@@ -6,7 +6,7 @@ pkgs.stdenv.mkDerivation {
     owner = "Henriquehnnm";
     repo = "rose-pine-icon-theme";
     rev = "main";
-    sha256 = "";
+    sha256 = "sha256-/CGj07sgM4kGQVRSW//tyYrRzh5puPTONLxWPNzeZNM=";
   };
 
   dontUnpack = true;
