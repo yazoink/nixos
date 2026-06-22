@@ -244,6 +244,5 @@ menuitem:hover {
 #custom-notification {
   font-family: "Font Awesome 7 Free";
   font-weight: bold;
-  font-size: 12pt;
   color: @yellow;
 }
