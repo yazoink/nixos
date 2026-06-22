@@ -150,7 +150,13 @@
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
 }
 .widget-dnd > switch:checked {
-  background: var(--base0D);
+  background-color: var(--base0D);
+  background-image: linear-gradient(
+    rgba(0, 0, 0, 0.2),
+    transparent,
+    rgba(0, 0, 0, 0.2)
+  );
+  border: 1px solid var(--base0D);
 }
 .widget-dnd > switch slider {
   background: var(--base05);
