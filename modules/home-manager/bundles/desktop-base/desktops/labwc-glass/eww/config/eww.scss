@@ -116,7 +116,7 @@ button:hover {
   font-size: 20pt;
   background: linear-gradient($bg3, $bg2, $bg3);
   // background-image: repeating-linear-gradient($bg3, $bg2 20%, $bg2 50%, $bg, $bg2 90%, $bg3);
-  border: 1px solid $bg3;
+  border: 1px solid $bg4;
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
 }
 
@@ -127,18 +127,22 @@ button:hover {
 
 .power-button-lock label {
   color: $blue;
+  text-shadow: 0 0 3px $blue;
 }
 
 .power-button-exit label {
   color: $green;
+  text-shadow: 0 0 3px $green;
 }
 
 .power-button-reboot label {
   color: $yellow;
+  text-shadow: 0 0 3px $yellow;
 }
 
 .power-button-shutdown label {
   color: $red;
+  text-shadow: 0 0 3px $red;
 }
 
 // .user-box {
@@ -150,8 +154,8 @@ button:hover {
 
 .profile-picture {
   // border-radius: 5px;
-  border: 1px solid $fg;
-  box-shadow: 0 0 4px rgba(255, 255, 255, 0.3);
+  border: 1px solid $blue;
+  box-shadow: 0 0 3px $blue;
   // box-shadw: 0 0 5px rgba(0, 0, 0, 0.15);
 }
 
