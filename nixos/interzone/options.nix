@@ -26,7 +26,8 @@
       # zenBrowserShowBorders = false;
       colorscheme = "everblush";
       wallpaper = {
-        type = "image";
+        type = "color";
+        color.hex = "353C3F";
         image = {
           fillType = "fill";
           path = pkgs.fetchurl {

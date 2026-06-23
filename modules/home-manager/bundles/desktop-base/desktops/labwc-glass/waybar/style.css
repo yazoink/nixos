@@ -108,9 +108,7 @@ window#waybar {
   text-shadow: 0 0 3px @urgent;
 }
 
-#taskbar button.active:hover {
-  /* border-bottom: 2px solid @accent; */
-  /* background-color: @accent; */
+/*#taskbar button.active:hover {
   background-image: linear-gradient(
     to bottom,
     rgba(255, 255, 255, 0.4),
@@ -120,7 +118,7 @@ window#waybar {
   );
   border: 1px solid @fg;
   text-shadow: 0 0 3px rgba(255, 255, 255, 0.8);
-}
+}*/
 
 #window {
   margin-left: -8px;
