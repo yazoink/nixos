@@ -1,25 +1,32 @@
 window#waybar {
+  background-image: linear-gradient(to top, @bg2, @bg, @bg, @bg2);
   color: @fg;
-  background-image: linear-gradient(to bottom, @bg2, @bg, @bg2);
-  color: @fg;
-  font-weight: bold;
   border-top: 1px solid @border;
 }
 
 #taskbar button {
   /* background: @bg2; */
-  margin: 8px 4px;
-  padding: 4px;
+  margin: 4px;
+  margin-left: 0;
+  padding: 4px 8px;
   border-radius: 8px;
   background-image: linear-gradient(to bottom, @bg3, @bg2, @bg3);
-  border: 1px solid @bg3;
+  border: 1px solid @bg4;
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+  min-width: 144px;
 }
 
 #taskbar button.active {
-  /* border-bottom: 2px solid @accent; */
-  /* background-color: @accent; */
-  background: @accent;
+  background-color: @accent;
+  background-image: linear-gradient(
+    to bottom,
+    transparent,
+    rgba(0, 0, 0, 0.3),
+    transparent
+  );
+  border: 1px solid @accent;
+  color: @bg;
+  text-shadow: 0 0 3px rgba(255, 255, 255, 0.4);
 }
 
 #taskbar button.minimized {
@@ -31,10 +38,25 @@ window#waybar {
   color: @unfocused;
 }
 
-#tray-expander,
+#custom-notification,
 #battery-expander,
+#volume-expander,
 #backlight-expander {
-  margin-left: 14px;
+  margin-right: 12px;
+}
+
+#custom-notification:hover,
+#battery-expander:hover,
+#volume-expander:hover,
+#tray-expander:hover,
+#backlight-expander:hover {
+  text-shadow: 0 0 3px rgba(255, 255, 255, 0.4);
+}
+
+#volume-expander:hover #wireplumber.volume,
+#battery-expander:hover #battery.percentage,
+#backlight-expander:hover #backlight {
+  text-shadow: none;
 }
 
 #quick-access {
@@ -42,49 +64,67 @@ window#waybar {
 }
 
 #clock,
-#custom-notification,
 #quick-access,
 #workspaces-group,
-#custom-search,
-#custom-power {
-  font-size: 11pt;
-  margin-top: 8px;
-  margin-bottom: 8px;
+#custom-power,
+#custom-search {
+  margin-top: 4px;
+  margin-bottom: 4px;
   /* background-color: @bg2; */
   border-radius: 8px;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  padding-left: 12px;
-  padding-right: 12px;
+  padding: 6px 12px;
   background-image: linear-gradient(to bottom, @bg3, @bg2, @bg3);
-  border: 1px solid @bg3;
+  border: 1px solid @bg4;
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+}
+
+#custom-power {
+  color: @urgent;
+}
+
+#custom-search {
+  color: @accent;
 }
 
 #clock:hover,
 #taskbar button:hover,
-#custom-notification:hover,
-/* #quick-access:hover, */
 #workspaces-group:hover,
+#custom-power:hover,
 #custom-search:hover,
-#custom-power:hover {
+#taskbar button:hover {
   background-image: linear-gradient(to bottom, @bg4, @bg3, @bg4);
   border: 1px solid @bg4;
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+  text-shadow: 0 0 3px rgba(255, 255, 255, 0.4);
+}
+
+#custom-search:hover {
+  text-shadow: 0 0 3px @accent;
+}
+
+#custom-power:hover {
+  text-shadow: 0 0 3px @urgent;
 }
 
 #taskbar button.active:hover {
   /* border-bottom: 2px solid @accent; */
   /* background-color: @accent; */
-  background: @accent;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.2),
+    rgba(0, 0, 0, 0.3),
+    rgba(255, 255, 255, 0.2)
+  );
+  border: 1px solid @fg;
+  text-shadow: 0 0 3px rgba(255, 255, 255, 0.8);
 }
 
 #window {
   margin-left: -8px;
 }
 
-#custom-workspaces {
-  margin-right: 4px;
+#workspaces {
+  margin-left: 4px;
 }
 
 /*#workspaces {
@@ -139,16 +179,13 @@ tooltip label {
 
 menu {
   font-weight: normal;
-  background-color: @bg;
+  background-color: @bg2;
   color: @fg;
-  padding: 8px;
-  border: 1px solid @border;
-  border-radius: 8px;
+  border: 1px solid @bg4;
 }
 
 menuitem {
-  padding: 8px;
-  border-radius: 8px;
+  padding: 6px 12px;
 }
 
 /*.arrow.up,
@@ -159,31 +196,38 @@ menuitem {
 }*/
 
 menuitem:hover {
-  background-color: @bg2;
+  background-color: @bg3;
 }
 
 #tray,
 #battery.percentage,
 #wireplumber.volume,
 #backlight {
-  margin-left: 8px;
-}
-
-#custom-power {
-  color: @urgent;
+  margin-left: 6px;
 }
 
 #custom-separator {
   color: @bg2;
 }
 
-#custom-search {
-  color: @accent;
+#clock {
+  font-weight: bold;
 }
 
 #custom-notification {
   font-family: "Font Awesome 7 Free";
   font-weight: bold;
-  font-size: 12pt;
-  color: @yellow;
+}
+
+.bottom-bar {
+  background-color: transparent;
+  border: none;
+}
+
+#custom-thing {
+  background-color: transparent;
+  font-size: 1px;
+  color: transparent;
+  padding-left: 200px;
+  padding-right: 200px;
 }

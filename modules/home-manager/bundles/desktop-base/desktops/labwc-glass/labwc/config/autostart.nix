@@ -19,6 +19,7 @@ in {
       "wl-clip-persist --clipboard regular &"
       "wayland-pipewire-idle-inhibit &"
       "swayidle &"
+      "swayosd-server &"
     ]
     ++ (
       if (defaultApps.terminal.command == "footclient")

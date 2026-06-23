@@ -6,15 +6,16 @@
   inherit (osConfig.desktopTheme) base16Accent;
 in {
   # home.file.".themes/my-labwc/labwc".source = ./icons;
-  home.file.".themes/my-labwc/labwc/close.xbm".source = ./icon.xbm;
-  home.file.".themes/my-labwc/labwc/desk.xbm".source = ./icon.xbm;
-  home.file.".themes/my-labwc/labwc/desk_toggled.xbm".source = ./icon.xbm;
-  home.file.".themes/my-labwc/labwc/iconify.xbm".source = ./icon.xbm;
-  home.file.".themes/my-labwc/labwc/shade.xbm".source = ./icon.xbm;
+  home.file.".themes/my-labwc/labwc/close.xbm".source = ./icon2.xbm;
+  home.file.".themes/my-labwc/labwc/desk.xbm".source = ./icon2.xbm;
+  home.file.".themes/my-labwc/labwc/desk_toggled.xbm".source = ./icon2.xbm;
+  home.file.".themes/my-labwc/labwc/iconify.xbm".source = ./icon2.xbm;
+  home.file.".themes/my-labwc/labwc/shade.xbm".source = ./icon2.xbm;
   home.file.".themes/my-labwc/labwc/shade_toggled.xbm".source = ./icon.xbm;
-  home.file.".themes/my-labwc/labwc/max.xbm".source = ./icon.xbm;
-  home.file.".themes/my-labwc/labwc/max_toggled.xbm".source = ./icon.xbm;
-  home.file.".themes/my-labwc/labwc/max_disabled.xbm".source = ./icon.xbm;
+  home.file.".themes/my-labwc/labwc/max.xbm".source = ./icon2.xbm;
+  home.file.".themes/my-labwc/labwc/max_toggled.xbm".source = ./icon2.xbm;
+  home.file.".themes/my-labwc/labwc/max_disabled.xbm".source = ./icon2.xbm;
+  # home.file.".themes/my-labwc/labwc".source = ./svg-icons;
   home.file.".config/labwc/themerc-override".text = ''
     # This file contains all themerc options with default values
     #
@@ -86,8 +87,8 @@ in {
     window.active.button.desk.pressed.image.color: #${base16Scheme.base05}
 
     # window drop-shadows
-    window.active.shadow.size: 8
-    window.inactive.shadow.size: 8
+    window.active.shadow.size: 16
+    window.inactive.shadow.size: 16
     window.active.shadow.color: #00000040
     window.inactive.shadow.color: #00000040
 
@@ -102,24 +103,24 @@ in {
     menu.width.min: 20
     menu.width.max: 200
     menu.border.width: 1
-    menu.border.color: #${base16Scheme.base02}
-    menu.items.bg.color: #${base16Scheme.base00}
+    menu.border.color: #${base16Scheme.base03}
+    menu.items.bg.color: #${base16Scheme.base01}
     menu.items.text.color: #${base16Scheme.base05}
-    menu.items.active.bg.color: #${base16Scheme.base01}
+    menu.items.active.bg.color: #${base16Scheme.base02}
     menu.items.active.text.color: #${base16Scheme.base05}
     menu.items.padding.x: 8
     menu.items.padding.y: 4
     menu.separator.width: 1
     menu.separator.padding.width: 4
     menu.separator.padding.height: 0
-    menu.separator.color: #${base16Scheme.base02}
-    menu.title.bg.color: #${base16Scheme.base01}
+    menu.separator.color: #${base16Scheme.base03}
+    menu.title.bg.color: #${base16Scheme.base02}
     menu.title.text.color: #${base16Scheme.base05}
     menu.title.text.justify: Center
 
     # on screen display (window-cycle dialog)
-    osd.bg.color: #${base16Scheme.base00}
-    osd.border.color: #${base16Scheme.base01}
+    osd.bg.color: #${base16Scheme.base01}
+    osd.border.color: #${base16Scheme.base02}
     osd.border.width: 1
     osd.label.text.color: #${base16Scheme.base05}
 
@@ -132,7 +133,7 @@ in {
     osd.window-switcher.style-classic.item.padding.y: 1
     osd.window-switcher.style-classic.item.active.border.width: 0
     osd.window-switcher.style-classic.item.active.border.color: #706f6d
-    osd.window-switcher.style-classic.item.active.bg.color: #${base16Scheme.base01}
+    osd.window-switcher.style-classic.item.active.bg.color: #${base16Scheme.base02}
     # The icon size the same as the font size by default
     # osd.window-switcher.style-classic.item.icon.size: 50
 
@@ -143,7 +144,7 @@ in {
     osd.window-switcher.style-thumbnail.item.padding: 10
     osd.window-switcher.style-thumbnail.item.active.border.width: 0
     osd.window-switcher.style-thumbnail.item.active.border.color: #706f6d
-    osd.window-switcher.style-thumbnail.item.active.bg.color: #${base16Scheme.base01}
+    osd.window-switcher.style-thumbnail.item.active.bg.color: #${base16Scheme.base02}
     osd.window-switcher.style-thumbnail.item.icon.size: 60
 
     osd.window-switcher.preview.border.width: 1

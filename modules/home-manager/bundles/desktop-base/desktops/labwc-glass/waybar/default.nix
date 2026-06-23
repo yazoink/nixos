@@ -9,7 +9,6 @@
   inherit (osConfig.myOptions.hardwareFeatures) laptop;
   inherit (osConfig.myOptions) desktopTheme;
   iconSize = desktopTheme.fonts.desktop.size - 2;
-  barHeight = 52;
   barPosition = "bottom";
   notifsModule = ''
     "custom/notification": {
@@ -35,9 +34,9 @@
   '';
   taskbarModule = ''
     "wlr/taskbar": {
-      "format": "{icon}",
+      "format": "{icon} {title:.17}",
       "icon-theme": "${osConfig.desktopTheme.icons.name}",
-      "icon-size": 28,
+      "icon-size": 18,
       "tooltip-format": "{title}",
       "on-click": "minimize-raise",
       "on-click-middle": "close"
@@ -70,7 +69,7 @@
     },
     "group/workspaces-group": {
       "orientation": "inherit",
-      "modules": ["custom/workspaces", "ext/workspaces"]
+      "modules": ["custom/workspaces", "ext/workspaces"],
     }
   '';
   clockModule = ''
@@ -230,6 +229,7 @@
     "group/quick-access": {
       "orientation": "inherit",
       "modules": [
+      "custom/notification",
       "group/volume-expander",
       "group/backlight-expander",
       "group/battery-expander",
@@ -257,6 +257,7 @@
     "group/quick-access": {
       "orientation": "inherit",
       "modules": [
+      "custom/notification",
       "group/volume-expander",
       "group/tray-expander"
       ]
@@ -279,11 +280,7 @@
     }
   '';
   separatorModule = ''
-    "custom/separator#left": {
-      "format": "|",
-      "tooltip": false
-    },
-    "custom/separator#right": {
+    "custom/separator": {
       "format": "|",
       "tooltip": false
     }
@@ -294,19 +291,16 @@
     "mode": "dock",
     "exclusive": "true",
     "position": "${barPosition}",
-    "spacing": 7,
-    "height": ${builtins.toString barHeight},
+    "spacing": 4,
     "modules-left": [
       "custom/search",
-      "group/workspaces-group"
-    ],
-    "modules-center": [
+      "group/workspaces-group",
+      "custom/separator",
       "wlr/taskbar"
     ],
     "modules-right": [
       "group/quick-access-slider",
       "clock",
-      "custom/notification",
       "custom/power"
     ]
   '';
@@ -368,11 +362,7 @@ in {
         window#waybar,
         tooltip label,
         menuitem {
-          font-family: ${fonts.sansSerif.name}, "Font Awesome 7 Free";
-        }
-
-        window#waybar {
-          font-size: ${builtins.toString desktopTheme.fonts.desktop.size}pt;
+          font-family: sans, "Font Awesome 7 Free";
         }
 
         tooltip label,
@@ -381,6 +371,7 @@ in {
         }
 
         #custom-tray-icon,
+        #custom-notification,
         #battery.icon,
         #wireplumber.icon,
         #custom-backlight-icon,

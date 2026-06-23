@@ -8,36 +8,16 @@ My NixOS desktop configs with home-manager.
 - Fluoride: Desktop PC (R5 5600/RX 6600)
 - Stardust: Acer TravelMate B113-E netbook
 
-## Rices
+## Screenshots
 
-### "Interzone"
-
-#### Software
-
-- WM: Hyprland
-- Bar: Waybar
-- Widgets: EWW
-- Launcher: Walker
-- Notifications: Mako
-- OSD: SwayOSD
-- Lockscreen: Hyprlock
-
-#### Screenshots
-
+![rice](./assets/glass1.png)
+![rice](./assets/glass2.png)
+![rice](./assets/glass3.png)
 ![rice](./assets/paradise1.png)
 ![rice](./assets/paradise2.png)
 ![rice](./assets/paradise3.png)
 ![rice](./assets/paradise4.png)
 ![rice](./assets/paradise5.png)
-
-## Misc Software
-
-- Terminal: Foot/Alacritty/Kitty
-- Editor: Neovim
-- Browser: Firefox/Zen/Brave/Librewolf
-- File manager: Thunar/Yazi
-- Shell: Zsh
-- Prompt: Starship
 
 ## Features
 

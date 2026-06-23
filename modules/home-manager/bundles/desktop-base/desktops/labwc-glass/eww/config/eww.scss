@@ -51,7 +51,7 @@ button:hover {
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
   border-left: 1px solid $border;
   border-top: 1px solid $border;
-  border-top-left-radius: 8px;
+  border-top-left-radius: 12px;
   background-color: $bg;
 }
 
@@ -82,7 +82,7 @@ button:hover {
   background: linear-gradient($bg2, $bg, $bg2);
   border-bottom: 1px solid $border;
   // border-top-right-radius: 8px;
-  border-top-left-radius: 8px;
+  border-top-left-radius: 12px;
 }
 
 .user-box {
@@ -92,7 +92,7 @@ button:hover {
   border-bottom: 1px solid $border;
   // border-top-left-radius: 16px;
   // border-top-right-radius: 8px;
-  border-top-left-radius: 8px;
+  border-top-left-radius: 12px;
 }
 
 .username-and-hostname {
@@ -116,7 +116,7 @@ button:hover {
   font-size: 20pt;
   background: linear-gradient($bg3, $bg2, $bg3);
   // background-image: repeating-linear-gradient($bg3, $bg2 20%, $bg2 50%, $bg, $bg2 90%, $bg3);
-  border: 1px solid $bg3;
+  border: 1px solid $bg4;
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
 }
 
@@ -141,6 +141,22 @@ button:hover {
   color: $red;
 }
 
+.power-button-lock:hover label {
+  text-shadow: 0 0 3px $blue;
+}
+
+.power-button-exit:hover label {
+  text-shadow: 0 0 3px $green;
+}
+
+.power-button-reboot:hover label {
+  text-shadow: 0 0 3px $yellow;
+}
+
+.power-button-shutdown:hover label {
+  text-shadow: 0 0 3px $red;
+}
+
 // .user-box {
 //   border: 1px solid $border2;
 //   // background-color: $border2;
@@ -150,8 +166,8 @@ button:hover {
 
 .profile-picture {
   // border-radius: 5px;
-  border: 1px solid $fg;
-  box-shadow: 0 0 4px rgba(255, 255, 255, 0.3);
+  border: 1px solid $blue;
+  box-shadow: 0 0 3px $blue;
   // box-shadw: 0 0 5px rgba(0, 0, 0, 0.15);
 }
 
@@ -203,7 +219,7 @@ button:hover {
   padding-bottom: 16px;
   background: linear-gradient($bg2, $bg, $bg2);
   border-bottom: 1px solid $border;
-  border-top-left-radius: 8px;
+  border-top-left-radius: 12px;
 }
 
 .pretty-time-date {
