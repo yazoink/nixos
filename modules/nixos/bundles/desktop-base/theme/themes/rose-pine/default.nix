@@ -21,10 +21,10 @@ in {
       };
       base16Scheme = {
         base00 = "191724";
-        base01 = "262432";
-        base02 = "343240";
-        base03 = "413F4E";
-        base04 = "838193";
+        base01 = "2E2C3A";
+        base02 = "434150";
+        base03 = "434150";
+        base04 = "585666";
         base05 = "E0DEF4";
         base06 = "E0DEF4";
         base07 = "56526E";
