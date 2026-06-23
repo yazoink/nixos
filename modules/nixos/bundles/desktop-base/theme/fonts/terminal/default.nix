@@ -15,5 +15,6 @@
     ./aporetic-sans-mono
     ./aporetic-serif-mono
     ./monocraft
+    ./kosugi-maru
   ];
 }
