@@ -86,6 +86,7 @@ in {
       input-field {
         monitor =
         size = 470, 50
+        outline_thickness = 1
         rounding = 8
         inner_color = $bg1
         check_color = rgb(d9bc8c)
@@ -100,7 +101,7 @@ in {
         font_family = Rubik
         position = 0, -87
         border_size = 1
-        border_color = $border
+        outline_color = $border
       }
 
       # ----- Date / Time ----- #

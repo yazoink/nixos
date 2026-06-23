@@ -82,7 +82,7 @@ button:hover {
   background: linear-gradient($bg2, $bg, $bg2);
   border-bottom: 1px solid $border;
   // border-top-right-radius: 8px;
-  border-top-left-radius: 8px;
+  border-top-left-radius: 12px;
 }
 
 .user-box {
@@ -92,7 +92,7 @@ button:hover {
   border-bottom: 1px solid $border;
   // border-top-left-radius: 16px;
   // border-top-right-radius: 8px;
-  border-top-left-radius: 8px;
+  border-top-left-radius: 12px;
 }
 
 .username-and-hostname {
@@ -219,7 +219,7 @@ button:hover {
   padding-bottom: 16px;
   background: linear-gradient($bg2, $bg, $bg2);
   border-bottom: 1px solid $border;
-  border-top-left-radius: 8px;
+  border-top-left-radius: 12px;
 }
 
 .pretty-time-date {
