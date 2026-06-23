@@ -147,10 +147,10 @@
 .widget-dnd > switch {
   font-size: initial;
   background-image: linear-gradient(
-    var(--base02),
-    var(--base01),
     var(--base00),
-    var(--base02)
+    var(--base01),
+    var(--base02),
+    var(--base00)
   );
   border: 1px solid var(--base02);
   border-radius: 100px;
