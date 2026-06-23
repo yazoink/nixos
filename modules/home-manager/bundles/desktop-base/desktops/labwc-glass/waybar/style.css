@@ -6,7 +6,7 @@ window#waybar {
 
 #taskbar button {
   /* background: @bg2; */
-  margin: 6px 3px;
+  margin: 4px 2px;
   margin-left: 0;
   padding: 4px 8px;
   border-radius: 8px;
@@ -67,8 +67,8 @@ window#waybar {
 #workspaces-group,
 #custom-power,
 #custom-search {
-  margin-top: 6px;
-  margin-bottom: 6px;
+  margin-top: 4px;
+  margin-bottom: 4px;
   /* background-color: @bg2; */
   border-radius: 8px;
   padding: 6px 12px;
