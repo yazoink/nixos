@@ -103,24 +103,24 @@ in {
     menu.width.min: 20
     menu.width.max: 200
     menu.border.width: 1
-    menu.border.color: #${base16Scheme.base02}
-    menu.items.bg.color: #${base16Scheme.base00}
+    menu.border.color: #${base16Scheme.base03}
+    menu.items.bg.color: #${base16Scheme.base01}
     menu.items.text.color: #${base16Scheme.base05}
-    menu.items.active.bg.color: #${base16Scheme.base01}
+    menu.items.active.bg.color: #${base16Scheme.base02}
     menu.items.active.text.color: #${base16Scheme.base05}
     menu.items.padding.x: 8
     menu.items.padding.y: 4
     menu.separator.width: 1
     menu.separator.padding.width: 4
     menu.separator.padding.height: 0
-    menu.separator.color: #${base16Scheme.base02}
-    menu.title.bg.color: #${base16Scheme.base01}
+    menu.separator.color: #${base16Scheme.base03}
+    menu.title.bg.color: #${base16Scheme.base02}
     menu.title.text.color: #${base16Scheme.base05}
     menu.title.text.justify: Center
 
     # on screen display (window-cycle dialog)
-    osd.bg.color: #${base16Scheme.base00}
-    osd.border.color: #${base16Scheme.base01}
+    osd.bg.color: #${base16Scheme.base01}
+    osd.border.color: #${base16Scheme.base02}
     osd.border.width: 1
     osd.label.text.color: #${base16Scheme.base05}
 
@@ -133,7 +133,7 @@ in {
     osd.window-switcher.style-classic.item.padding.y: 1
     osd.window-switcher.style-classic.item.active.border.width: 0
     osd.window-switcher.style-classic.item.active.border.color: #706f6d
-    osd.window-switcher.style-classic.item.active.bg.color: #${base16Scheme.base01}
+    osd.window-switcher.style-classic.item.active.bg.color: #${base16Scheme.base02}
     # The icon size the same as the font size by default
     # osd.window-switcher.style-classic.item.icon.size: 50
 
@@ -144,7 +144,7 @@ in {
     osd.window-switcher.style-thumbnail.item.padding: 10
     osd.window-switcher.style-thumbnail.item.active.border.width: 0
     osd.window-switcher.style-thumbnail.item.active.border.color: #706f6d
-    osd.window-switcher.style-thumbnail.item.active.bg.color: #${base16Scheme.base01}
+    osd.window-switcher.style-thumbnail.item.active.bg.color: #${base16Scheme.base02}
     osd.window-switcher.style-thumbnail.item.icon.size: 60
 
     osd.window-switcher.preview.border.width: 1
