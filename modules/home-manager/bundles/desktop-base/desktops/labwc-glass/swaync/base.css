@@ -96,8 +96,8 @@
   /* border-bottom: 2px dashed var(--base02); */
   background-image: linear-gradient(
     var(--base01),
-    transparent,
-    trasparent,
+    var(--base00),
+    var(--base00),
     var(--base01)
   );
   border-bottom: 1px solid var(--base02);
