@@ -127,21 +127,33 @@ button:hover {
 
 .power-button-lock label {
   color: $blue;
-  text-shadow: 0 0 3px $blue;
 }
 
 .power-button-exit label {
   color: $green;
-  text-shadow: 0 0 3px $green;
 }
 
 .power-button-reboot label {
   color: $yellow;
-  text-shadow: 0 0 3px $yellow;
 }
 
 .power-button-shutdown label {
   color: $red;
+}
+
+.power-button-lock:hover label {
+  text-shadow: 0 0 3px $blue;
+}
+
+.power-button-exit:hover label {
+  text-shadow: 0 0 3px $green;
+}
+
+.power-button-reboot:hover label {
+  text-shadow: 0 0 3px $yellow;
+}
+
+.power-button-shutdown:hover label {
   text-shadow: 0 0 3px $red;
 }
 
