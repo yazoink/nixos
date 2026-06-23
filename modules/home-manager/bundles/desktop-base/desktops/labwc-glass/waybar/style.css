@@ -73,7 +73,7 @@ window#waybar {
   border-radius: 8px;
   padding: 6px 12px;
   background-image: linear-gradient(to bottom, @bg3, @bg2, @bg, @bg3);
-  border: 1px solid @bg4;
+  border: 1px solid @bg3;
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
 }
 
