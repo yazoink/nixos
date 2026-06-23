@@ -50,6 +50,10 @@
       "tooltip-format": "{title}",
       "on-click": "minimize-raise",
       "on-click-middle": "close"
+      "rewrite": {
+        "": "snail man is real"
+
+      }
     }
   '';
   workspacesModule = ''
