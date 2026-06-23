@@ -25,6 +25,8 @@ window#waybar {
     transparent
   );
   border: 1px solid @accent;
+  color: @bg;
+  text-shadow: 0 0 3px rgba(255, 255, 255, 0.4);
 }
 
 #taskbar button.minimized {
@@ -114,7 +116,7 @@ window#waybar {
     rgba(255, 255, 255, 0.2)
   );
   border: 1px solid @fg;
-  text-shadow: 0 0 3px rgba(255, 255, 255, 0.5);
+  text-shadow: 0 0 3px rgba(255, 255, 255, 0.8);
 }
 
 #window {
