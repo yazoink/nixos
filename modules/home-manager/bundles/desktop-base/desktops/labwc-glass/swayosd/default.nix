@@ -18,9 +18,10 @@ in {
     window#osd {
       padding: 0px;
       padding: 6px 12px;
-      border-radius: 0px;
+      border-radius: 8px;
       background-color: #${base16Scheme.base01};
       border: 1px solid #${base16Scheme.base03};
+      box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
     }
 
     window#osd #container {
