@@ -31,7 +31,7 @@
           fillType = "fill";
           path = pkgs.fetchurl {
             url = "https://github.com/yazoink/wallpapers/blob/main/trees-and-leaves/wall1.jpg?raw=true";
-            hash = "";
+            hash = "sha256-H8Hsm73MPbqrKl4RUiAhKUlkXPSntyghB95PpTmkuKM=";
           };
         };
       };
