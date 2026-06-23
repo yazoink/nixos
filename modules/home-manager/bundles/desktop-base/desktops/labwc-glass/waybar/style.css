@@ -21,7 +21,7 @@ window#waybar {
     to bottom,
     rgba(255, 255, 255, 0.3),
     rgba(255, 255, 255, 0.1),
-    rgba(0, 0, 0, 0.2),
+    transparent,
     rgba(255, 255, 255, 0.3)
   );
   border: 1px solid rgba(255, 255, 255, 0.5);
@@ -113,7 +113,7 @@ window#waybar {
     to bottom,
     rgba(255, 255, 255, 0.4),
     rgba(255, 255, 255, 0.2),
-    rgba(0, 0, 0, 0.3),
+    transparent,
     rgba(255, 255, 255, 0.4)
   );
   border: 1px solid @fg;
