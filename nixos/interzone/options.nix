@@ -30,8 +30,8 @@
         image = {
           fillType = "fill";
           path = pkgs.fetchurl {
-            url = "https://raw.githubusercontent.com/yazoink/wallpapers/refs/heads/main/paintings/painting3.jpg";
-            hash = "sha256-BzrYxsHcZ/l2ZdZ1pwSmtMXgFaPNFDWUObjIzSy3Gh8=";
+            url = "https://github.com/yazoink/wallpapers/blob/main/flowers/flowers-1.jpg?raw=true"
+            hash = "";
           };
         };
       };

@@ -24,7 +24,7 @@ window#waybar {
     rgba(0, 0, 0, 0.2),
     rgba(255, 255, 255, 0.3)
   );
-  border: 1px solid @accent;
+  border: 1px solid rgba(255, 255, 255, 0.5);
   color: @bg;
 }
 
