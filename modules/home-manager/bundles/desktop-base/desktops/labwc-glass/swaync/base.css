@@ -138,7 +138,7 @@
     var(--base03),
     var(--base02)
   );
-  border: 1px solid var(--base04);
+  border: 1px solid var(--base03);
   border-radius: 100px;
   min-height: 18px;
   min-width: 36px;
@@ -152,7 +152,7 @@
     rgba(0, 0, 0, 0.2),
     transparent
   );
-  border: 1px solid var(--base05);
+  border: 1px solid var(--base0D);
 }
 .widget-dnd > switch slider {
   background: var(--base05);
