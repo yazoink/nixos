@@ -24,7 +24,9 @@ window#waybar {
     transparent,
     rgba(255, 255, 255, 0.3)
   );
+  background-image: linear-gradient(to bottom, @bg4, @bg3, @b2, @bg4);
   border: 1px solid rgba(255, 255, 255, 0.5);
+  border: 1px solid @bg4;
   color: @bg;
 }
 
