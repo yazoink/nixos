@@ -49,7 +49,7 @@
       "icon-size": 18,
       "tooltip-format": "{title}",
       "on-click": "minimize-raise",
-      "on-click-middle": "close"
+      "on-click-middle": "close",
       "rewrite": {
         "": "snail man is real"
 
