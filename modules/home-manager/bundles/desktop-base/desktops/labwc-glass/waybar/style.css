@@ -1,19 +1,19 @@
 window#waybar {
+  background-image: linear-gradient(to top, @bg2, @bg, @bg, @bg2);
   color: @fg;
-  background-image: linear-gradient(to bottom, @bg2, @bg, @bg);
-  color: @fg;
-  font-weight: bold;
   border-top: 1px solid @border;
 }
 
 #taskbar button {
   /* background: @bg2; */
-  margin: 4px 2px;
-  padding: 4px;
+  margin: 4px;
+  margin-left: 0;
+  padding: 4px 8px;
   border-radius: 8px;
   background-image: linear-gradient(to bottom, @bg3, @bg2, @bg3);
-  border: 1px solid @bg3;
+  border: 1px solid @bg4;
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+  min-width: 144px;
 }
 
 #taskbar button.active {
@@ -36,10 +36,25 @@ window#waybar {
   color: @unfocused;
 }
 
-#tray-expander,
+#custom-notification,
 #battery-expander,
+#volume-expander,
 #backlight-expander {
-  margin-left: 8px;
+  margin-right: 12px;
+}
+
+#custom-notification:hover,
+#battery-expander:hover,
+#volume-expander:hover,
+#tray-expander:hover,
+#backlight-expander:hover {
+  text-shadow: 0 0 3px rgba(255, 255, 255, 0.4);
+}
+
+#volume-expander:hover #wireplumber.volume,
+#battery-expander:hover #battery.percentage,
+#backlight-expander:hover #backlight {
+  text-shadow: none;
 }
 
 #quick-access {
@@ -47,97 +62,46 @@ window#waybar {
 }
 
 #clock,
-#custom-notification,
 #quick-access,
-#workspaces-group {
-  font-size: 11pt;
+#workspaces-group,
+#custom-power,
+#custom-search {
   margin-top: 4px;
   margin-bottom: 4px;
   /* background-color: @bg2; */
   border-radius: 8px;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  padding-left: 12px;
-  padding-right: 12px;
+  padding: 6px 12px;
   background-image: linear-gradient(to bottom, @bg3, @bg2, @bg3);
-  border: 1px solid @bg3;
+  border: 1px solid @bg4;
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
 }
 
 #custom-power {
-  padding-left: 12px;
-  padding-right: 12px;
-  /*background-image: linear-gradient(
-    to bottom,
-    transparent,
-    rgba(0, 0, 0, 0.3),
-    transparent
-  );*/
-  background-image: linear-gradient(to bottom, @bg3, @bg2, @bg3);
-  margin-top: 4px;
-  margin-bottom: 4px;
-  border-radius: 8px;
-  box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
   color: @urgent;
-  border: 1px solid @bg3;
-  /* text-shadow: 0 0 2px rgba(255, 255, 255, 0.4); */
 }
 
 #custom-search {
-  padding-left: 12px;
-  padding-right: 12px;
-  /*background-image: linear-gradient(
-    to bottom,
-    transparent,
-    rgba(0, 0, 0, 0.3),
-    transparent
-  );*/
-  background-image: linear-gradient(to bottom, @bg3, @bg2, @bg3);
-  margin-top: 4px;
-  margin-bottom: 4px;
-  border-radius: 8px;
-  box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
   color: @accent;
-  border: 1px solid @bg3;
-  /* text-shadow: 0 0 2px rgba(255, 255, 255, 0.4); */
 }
 
 #clock:hover,
 #taskbar button:hover,
-#custom-notification:hover,
-/* #quick-access:hover, */
-#workspaces-group:hover {
+#workspaces-group:hover,
+#custom-power:hover,
+#custom-search:hover,
+#taskbar button:hover {
   background-image: linear-gradient(to bottom, @bg4, @bg3, @bg4);
   border: 1px solid @bg4;
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
-}
-
-#custom-power:hover {
-  padding-left: 12px;
-  padding-right: 12px;
-  background-color: @urgent;
-  /*background-image: linear-gradient(
-    to bottom,
-    rgba(255, 255, 255, 0.2),
-    rgba(0, 0, 0, 0.3),
-    rgba(255, 255, 255, 0.2)
-  );*/
-  background-image: linear-gradient(to bottom, @bg4, @bg3, @bg4);
-  border: 1px solid @bg4;
+  text-shadow: 0 0 3px rgba(255, 255, 255, 0.4);
 }
 
 #custom-search:hover {
-  padding-left: 12px;
-  padding-right: 12px;
-  background-image: linear-gradient(to bottom, @bg4, @bg3, @bg4);
-  background-color: @accent;
-  /*background-image: linear-gradient(
-    to bottom,
-    rgba(255, 255, 255, 0.2),
-    rgba(0, 0, 0, 0.3),
-    rgba(255, 255, 255, 0.2)
-  );*/
-  border: 1px solid @bg4;
+  text-shadow: 0 0 3px @accent;
+}
+
+#custom-power:hover {
+  text-shadow: 0 0 3px @urgent;
 }
 
 #taskbar button.active:hover {
@@ -149,7 +113,8 @@ window#waybar {
     rgba(0, 0, 0, 0.3),
     rgba(255, 255, 255, 0.2)
   );
-  border: 1px solid @accent;
+  border: 1px solid @fg;
+  text-shadow: 0 0 3px rgba(255, 255, 255, 0.5);
 }
 
 #window {
@@ -212,16 +177,22 @@ tooltip label {
 
 menu {
   font-weight: normal;
-  background-color: @bg;
+  background-color: @bg2;
   color: @fg;
-  padding: 8px;
-  border: 1px solid @border;
   border-radius: 8px;
+  background-image: linear-gradient(to bottom, @bg, @bg2, @bg);
+  border: 1px solid @border;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+  padding: 6px 4px;
 }
 
 menuitem {
-  padding: 8px;
+  padding: 4px 8px;
+  margin: 2px 4px;
   border-radius: 8px;
+  background-image: linear-gradient(to bottom, @bg3, @bg2, @bg3);
+  border: 1px solid @bg4;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
 }
 
 /*.arrow.up,
@@ -232,22 +203,39 @@ menuitem {
 }*/
 
 menuitem:hover {
-  background-color: @bg2;
+  background-image: linear-gradient(to bottom, @bg4, @bg3, @bg4);
+  text-shadow: 0 0 3px rgba(255, 255, 255, 0.4);
 }
 
 #tray,
 #battery.percentage,
 #wireplumber.volume,
 #backlight {
-  margin-left: 8px;
+  margin-left: 6px;
 }
 
 #custom-separator {
   color: @bg2;
 }
 
+#clock {
+  font-weight: bold;
+}
+
 #custom-notification {
   font-family: "Font Awesome 7 Free";
   font-weight: bold;
-  color: @yellow;
+}
+
+.bottom-bar {
+  background-color: transparent;
+  border: none;
+}
+
+#custom-thing {
+  background-color: transparent;
+  font-size: 1px;
+  color: transparent;
+  padding-left: 200px;
+  padding-right: 200px;
 }

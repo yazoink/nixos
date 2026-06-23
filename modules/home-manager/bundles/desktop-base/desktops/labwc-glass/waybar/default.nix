@@ -9,7 +9,6 @@
   inherit (osConfig.myOptions.hardwareFeatures) laptop;
   inherit (osConfig.myOptions) desktopTheme;
   iconSize = desktopTheme.fonts.desktop.size - 2;
-  barHeight = 48;
   barPosition = "bottom";
   notifsModule = ''
     "custom/notification": {
@@ -35,9 +34,9 @@
   '';
   taskbarModule = ''
     "wlr/taskbar": {
-      "format": "{icon}",
+      "format": "{icon} {title:.17}",
       "icon-theme": "${osConfig.desktopTheme.icons.name}",
-      "icon-size": 28,
+      "icon-size": 18,
       "tooltip-format": "{title}",
       "on-click": "minimize-raise",
       "on-click-middle": "close"
@@ -71,10 +70,6 @@
     "group/workspaces-group": {
       "orientation": "inherit",
       "modules": ["custom/workspaces", "ext/workspaces"],
-      "drawer": {
-          "transition-duration": 600,
-          "children-class": "not-power"
-      }
     }
   '';
   clockModule = ''
@@ -234,6 +229,7 @@
     "group/quick-access": {
       "orientation": "inherit",
       "modules": [
+      "custom/notification",
       "group/volume-expander",
       "group/backlight-expander",
       "group/battery-expander",
@@ -261,6 +257,7 @@
     "group/quick-access": {
       "orientation": "inherit",
       "modules": [
+      "custom/notification",
       "group/volume-expander",
       "group/tray-expander"
       ]
@@ -299,18 +296,15 @@
     "exclusive": "true",
     "position": "${barPosition}",
     "spacing": 4,
-    "height": ${builtins.toString barHeight},
     "modules-left": [
       "custom/search",
-      "group/workspaces-group"
-    ],
-    "modules-center": [
+      "group/workspaces-group",
+      "custom/separator#left",
       "wlr/taskbar"
     ],
     "modules-right": [
       "group/quick-access-slider",
       "clock",
-      "custom/notification",
       "custom/power"
     ]
   '';
