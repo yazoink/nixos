@@ -6,7 +6,7 @@ window#waybar {
 
 #taskbar button {
   /* background: @bg2; */
-  margin: 4px 2px;
+  margin: 4px;
   margin-left: 0;
   padding: 4px 8px;
   border-radius: 8px;
