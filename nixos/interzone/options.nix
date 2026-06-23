@@ -20,11 +20,11 @@
     userAccount.username = "gene";
     desktopTheme = {
       rice.openbox.enable = false;
-      rice.labwc-glass.enable = false;
-      rice.labwc.enable = true;
+      rice.labwc-glass.enable = true;
+      rice.labwc.enable = false;
       rice.hyprland.enable = false;
       # zenBrowserShowBorders = false;
-      colorscheme = "paradise";
+      colorscheme = "biscuit-de-mar-dark";
       wallpaper = {
         type = "image";
         image = {
@@ -45,9 +45,8 @@
           size = 12;
         };
         terminal = {
-          # name = "Cozette";
-          # name = "Terminess Nerd Font";
-          name = "Aporetic Serif Mono";
+          # name = "Aporetic Serif Mono";
+          name = "Kosugi Maru";
           size = 12;
         };
       };
