@@ -179,19 +179,12 @@ menu {
   font-weight: normal;
   background-color: @bg;
   color: @fg;
-  border-radius: 8px;
   border: 1px solid @border;
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
-  padding: 6px 4px;
 }
 
 menuitem {
   padding: 4px 8px;
-  margin: 2px 4px;
-  border-radius: 8px;
-  background-color: @bg2;
-  border: 1px solid @bg3;
-  box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
 }
 
 /*.arrow.up,
@@ -202,7 +195,7 @@ menuitem {
 }*/
 
 menuitem:hover {
-  background-color: @bg3;
+  background-color: @bg2;
 }
 
 #tray,
