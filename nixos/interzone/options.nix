@@ -24,7 +24,7 @@
       rice.labwc.enable = false;
       rice.hyprland.enable = false;
       # zenBrowserShowBorders = false;
-      colorscheme = "biscuit-de-mar-dark";
+      colorscheme = "caroline";
       wallpaper = {
         type = "image";
         image = {
