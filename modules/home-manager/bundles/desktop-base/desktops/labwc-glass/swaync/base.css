@@ -162,7 +162,9 @@
 .widget-dnd > switch:checked {
   background-color: var(--base0D);
   background-image: linear-gradient(
-    rgba(255, 255, 255, 0.3) rgba(255, 255, 255, 0.1) rgba(0, 0, 0, 0.2),
+    rgba(255, 255, 255, 0.3),
+    rgba(255, 255, 255, 0.1),
+    rgba(0, 0, 0, 0.2),
     rgba(255, 255, 255, 0.3)
   );
   border: 1px solid var(--base0D);
