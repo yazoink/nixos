@@ -101,8 +101,7 @@ in {
         font_family = Rubik
         position = 0, -87
         border_size = 1
-        outline_color = $border
-        border_color = $border
+        outer_color = $border
       }
 
       # ----- Date / Time ----- #
