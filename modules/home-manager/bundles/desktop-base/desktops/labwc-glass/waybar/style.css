@@ -177,10 +177,9 @@ tooltip label {
 
 menu {
   font-weight: normal;
-  background-color: @bg;
+  background-color: @bg2;
   color: @fg;
-  border: 1px solid @border;
-  box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+  border: 1px solid @bg4;
 }
 
 menuitem {
@@ -195,7 +194,7 @@ menuitem {
 }*/
 
 menuitem:hover {
-  background-color: @bg2;
+  background-color: @bg3;
 }
 
 #tray,
