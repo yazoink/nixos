@@ -1,6 +1,7 @@
 {
   config,
   osConfig,
+  pkgs,
   ...
 }: let
   confFile = config.lib.stylix.colors {
@@ -119,7 +120,7 @@ in {
 
       label {
         monitor =
-        text = cmd[] date "+%d %b %Y"
+        text = cmd[] ${pkgs.coreutils}/bin/date "+%d %b %Y"
         color = $fg
         font_family = $font
         halign = center
