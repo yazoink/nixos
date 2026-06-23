@@ -9,7 +9,7 @@
     timeouts = [
       {
         timeout = 500;
-        command = "hyprlock";
+        command = "${lib.getExe pkgs.hyprlock}";
       }
       {
         timeout = 1000;
