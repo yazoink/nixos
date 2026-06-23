@@ -102,6 +102,7 @@ in {
         position = 0, -87
         border_size = 1
         outline_color = $border
+        border_color = $border
       }
 
       # ----- Date / Time ----- #
