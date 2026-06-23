@@ -119,7 +119,8 @@
     var(--base02),
     var(--base03)
   );
-  border: 1px solid var(--base04);
+  border: 1px solid var(--base03);
+  text-shadow: 0 0 3px rgba(255, 255, 255, 0.4);
 }
 
 /* dnd */
