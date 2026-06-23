@@ -280,14 +280,10 @@
     }
   '';
   separatorModule = ''
-    "custom/separator#left": {
+    "custom/separator": {
       "format": "|",
       "tooltip": false
     },
-    "custom/separator#right": {
-      "format": "|",
-      "tooltip": false
-    }
   '';
   barConfig = ''
     "reload_style_on_change": true,
@@ -299,7 +295,7 @@
     "modules-left": [
       "custom/search",
       "group/workspaces-group",
-      "custom/separator#left",
+      "custom/separator",
       "wlr/taskbar"
     ],
     "modules-right": [
