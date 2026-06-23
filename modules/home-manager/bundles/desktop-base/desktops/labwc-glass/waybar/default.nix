@@ -51,7 +51,7 @@
       "on-click": "minimize-raise",
       "on-click-middle": "close",
       "rewrite": {
-        "\s": "snail man is real"
+        " ": "snail man is real"
 
       }
     }
