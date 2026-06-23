@@ -17,10 +17,10 @@ in {
   xdg.configFile."swayosd/style.css".text = ''
     window#osd {
       padding: 0px;
-      padding: 10px 15px;
-      border-radius: 999px;
-      background-color: #${config.desktopTheme.rice.labwc.barColor};
-      border: 1px solid #${base16Scheme.base01};
+      padding: 6px 12px;
+      border-radius: 0px;
+      background-color: #${base16Scheme.base01};
+      border: 1px solid #${base16Scheme.base03};
     }
 
     window#osd #container {
