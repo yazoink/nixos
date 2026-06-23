@@ -362,11 +362,7 @@ in {
         window#waybar,
         tooltip label,
         menuitem {
-          font-family: ${fonts.sansSerif.name}, "Font Awesome 7 Free";
-        }
-
-        window#waybar {
-          font-size: ${builtins.toString desktopTheme.fonts.desktop.size}pt;
+          font-family: sans, "Font Awesome 7 Free";
         }
 
         tooltip label,
