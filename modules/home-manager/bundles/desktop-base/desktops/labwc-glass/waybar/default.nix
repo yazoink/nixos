@@ -283,7 +283,7 @@
     "custom/separator": {
       "format": "|",
       "tooltip": false
-    },
+    }
   '';
   barConfig = ''
     "reload_style_on_change": true,
