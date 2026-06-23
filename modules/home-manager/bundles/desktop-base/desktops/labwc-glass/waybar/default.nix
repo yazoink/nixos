@@ -32,7 +32,17 @@
       "escape": true
     }
   '';
-  taskbarModule = ''
+  taskbarModuleLaptop = ''
+    "wlr/taskbar": {
+      "format": "{icon}",
+      "icon-theme": "${osConfig.desktopTheme.icons.name}",
+      "icon-size": 18,
+      "tooltip-format": "{title}",
+      "on-click": "minimize-raise",
+      "on-click-middle": "close"
+    }
+  '';
+  taskbarModuleDesktop = ''
     "wlr/taskbar": {
       "format": "{icon} {title:.17}",
       "icon-theme": "${osConfig.desktopTheme.icons.name}",
@@ -237,7 +247,7 @@
       ]
     },
     "custom/left-arrow": {
-      "format": "",
+      "format": "",
       "tooltip": false
     },
     "group/quick-access-slider": {
@@ -313,7 +323,7 @@ in {
         {
           ${barConfig},
           ${workspacesModule},
-          ${taskbarModule},
+          ${taskbarModuleLaptop},
           ${volumeModule},
           ${backlightModule},
           ${batteryModule},
@@ -330,7 +340,7 @@ in {
         {
           ${barConfig},
           ${workspacesModule},
-          ${taskbarModule},
+          ${taskbarModuleDesktop},
           ${volumeModule},
           ${trayModule},
           ${powerModule},

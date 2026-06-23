@@ -71,7 +71,7 @@ button:hover {
 
 .resource-usage-label {
   padding: 8px 16px;
-  background: linear-gradient($bg2, $bg, $bg2);
+  background: linear-gradient($bg2, $bg, $bg, $bg2);
   border-top: 1px solid $border;
   border-bottom: 1px solid $border;
   font-weight: bold;
@@ -79,7 +79,7 @@ button:hover {
 
 .confirm-text {
   padding: 8px 16px;
-  background: linear-gradient($bg2, $bg, $bg2);
+  background: linear-gradient($bg2, $bg, $bg, $bg2);
   border-bottom: 1px solid $border;
   // border-top-right-radius: 8px;
   border-top-left-radius: 12px;
@@ -88,7 +88,7 @@ button:hover {
 .user-box {
   padding: 16px;
   // background: repeating-linear-gradient($bg3, $bg2 20%, $bg2 50%, $bg, $bg2 90%, $bg3);
-  background: linear-gradient($bg2, $bg, $bg2);
+  background: linear-gradient($bg2, $bg, $bg, $bg2);
   border-bottom: 1px solid $border;
   // border-top-left-radius: 16px;
   // border-top-right-radius: 8px;
@@ -104,7 +104,7 @@ button:hover {
   // background-image: linear-gradient(to left, rgba(255, 255, 150, 0.25), transparent, transparent, rgba(10, 7, 65, 0.2), rgba(10, 7, 65, 0.4), rgba(10, 7, 65, 0.5), rgba(10, 7, 65, 0.6), rgba(10, 7, 65, 0.4), rgba(255, 255, 150, 0.1));
   // background-image: linear-gradient(to right, transparent, rgba(0, 0, 50, 0.2), rgba(0, 0, 50, 0.3), rgba(0, 0, 50, 0.3), rgba(0, 0, 50, 0.2), transparent);
   // background-image: linear-gradient(to right, rgba(0, 0, 50, 0.3), transparent, rgba(0, 0, 50, 0.3));
-  background: linear-gradient($bg2, $bg, $bg2);
+  background: linear-gradient($bg2, $bg, $bg, $bg2);
   // background-blend-mode: hard-light;
   border-top: 1px solid $border;
   // border-bottom-left-radius: 8px;
@@ -114,14 +114,14 @@ button:hover {
 .power-button-box button {
   font-family: "Font Awesome 7 Free";
   font-size: 20pt;
-  background: linear-gradient($bg3, $bg2, $bg3);
+  background: linear-gradient($bg3, $bg2, $bg, $bg3);
   // background-image: repeating-linear-gradient($bg3, $bg2 20%, $bg2 50%, $bg, $bg2 90%, $bg3);
   border: 1px solid $bg4;
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
 }
 
 .power-button-box button:hover {
-  background: linear-gradient($bg4, $bg3, $bg4);
+  background: linear-gradient($bg4, $bg3, $bg2, $bg4);
   border: 1px solid $bg4;
 }
 

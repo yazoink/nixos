@@ -94,7 +94,12 @@
   font-size: 1.5rem;
   padding: 16px;
   /* border-bottom: 2px dashed var(--base02); */
-  background-image: linear-gradient(var(--base01), transparent, var(--base01));
+  background-image: linear-gradient(
+    var(--base01),
+    transparent,
+    trasparent,
+    var(--base01)
+  );
   border-bottom: 1px solid var(--base02);
 }
 
@@ -106,6 +111,7 @@
     to bottom,
     var(--base02),
     var(--base01),
+    var(--base00),
     var(--base02)
   );
   border-radius: 8px;
@@ -118,6 +124,7 @@
     to bottom,
     var(--base03),
     var(--base02),
+    var(--base01),
     var(--base03)
   );
   border: 1px solid var(--base03);
@@ -129,14 +136,20 @@
   font-size: 1.1rem;
   padding: 8px 16px;
   font-weight: bold;
-  background-image: linear-gradient(var(--base01), transparent, var(--base01));
+  background-image: linear-gradient(
+    var(--base01),
+    transparent,
+    transparent,
+    var(--base01)
+  );
   border-top: 1px solid var(--base02);
 }
 .widget-dnd > switch {
   font-size: initial;
   background-image: linear-gradient(
     var(--base02),
-    var(--base03),
+    var(--base01),
+    var(--base00),
     var(--base02)
   );
   border: 1px solid var(--base03);
@@ -149,9 +162,8 @@
 .widget-dnd > switch:checked {
   background-color: var(--base0D);
   background-image: linear-gradient(
-    transparent,
-    rgba(0, 0, 0, 0.2),
-    transparent
+    rgba(255, 255, 255, 0.3) rgba(255, 255, 255, 0.1) rgba(0, 0, 0, 0.2),
+    rgba(255, 255, 255, 0.3)
   );
   border: 1px solid var(--base0D);
 }

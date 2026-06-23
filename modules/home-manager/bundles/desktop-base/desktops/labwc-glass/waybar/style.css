@@ -6,27 +6,26 @@ window#waybar {
 
 #taskbar button {
   /* background: @bg2; */
-  margin: 4px;
+  margin: 6px;
   margin-left: 0;
   padding: 4px 8px;
   border-radius: 8px;
-  background-image: linear-gradient(to bottom, @bg3, @bg2, @bg3);
-  border: 1px solid @bg4;
+  background-image: linear-gradient(to bottom, @bg3, @bg2, @bg, @bg3);
+  border: 1px solid @bg3;
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
-  min-width: 144px;
 }
 
 #taskbar button.active {
   background-color: @accent;
   background-image: linear-gradient(
     to bottom,
-    transparent,
-    rgba(0, 0, 0, 0.3),
-    transparent
+    rgba(255, 255, 255, 0.3),
+    rgba(255, 255, 255, 0.1),
+    rgba(0, 0, 0, 0.2),
+    rgba(255, 255, 255, 0.3)
   );
   border: 1px solid @accent;
   color: @bg;
-  text-shadow: 0 0 3px rgba(255, 255, 255, 0.4);
 }
 
 #taskbar button.minimized {
@@ -68,12 +67,12 @@ window#waybar {
 #workspaces-group,
 #custom-power,
 #custom-search {
-  margin-top: 4px;
-  margin-bottom: 4px;
+  margin-top: 6px;
+  margin-bottom: 6px;
   /* background-color: @bg2; */
   border-radius: 8px;
   padding: 6px 12px;
-  background-image: linear-gradient(to bottom, @bg3, @bg2, @bg3);
+  background-image: linear-gradient(to bottom, @bg3, @bg2, @bg, @bg3);
   border: 1px solid @bg4;
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
 }
@@ -93,6 +92,7 @@ window#waybar {
 #custom-search:hover,
 #taskbar button:hover {
   background-image: linear-gradient(to bottom, @bg4, @bg3, @bg4);
+  background-image: linear-gradient(to bottom, @bg4, @bg3, @bg2, @bg4);
   border: 1px solid @bg4;
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
   text-shadow: 0 0 3px rgba(255, 255, 255, 0.4);
@@ -111,9 +111,10 @@ window#waybar {
   /* background-color: @accent; */
   background-image: linear-gradient(
     to bottom,
+    rgba(255, 255, 255, 0.4),
     rgba(255, 255, 255, 0.2),
     rgba(0, 0, 0, 0.3),
-    rgba(255, 255, 255, 0.2)
+    rgba(255, 255, 255, 0.4)
   );
   border: 1px solid @fg;
   text-shadow: 0 0 3px rgba(255, 255, 255, 0.8);
