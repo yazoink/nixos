@@ -116,7 +116,7 @@
   );
   border-radius: 8px;
   padding: 8px;
-  border: 1px solid var(--base03);
+  border: 1px solid var(--base02);
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
 }
 .widget-title > button:hover {
@@ -152,7 +152,7 @@
     var(--base00),
     var(--base02)
   );
-  border: 1px solid var(--base03);
+  border: 1px solid var(--base02);
   border-radius: 100px;
   min-height: 18px;
   min-width: 36px;
