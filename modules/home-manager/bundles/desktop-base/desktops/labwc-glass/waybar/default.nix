@@ -371,6 +371,7 @@ in {
         }
 
         #custom-tray-icon,
+        #custom-notification,
         #battery.icon,
         #wireplumber.icon,
         #custom-backlight-icon,
