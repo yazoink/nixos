@@ -30,7 +30,7 @@
         image = {
           fillType = "fill";
           path = pkgs.fetchurl {
-            url = "https://github.com/yazoink/wallpapers/blob/main/flowers/flowers-1.jpg?raw=true"
+            url = "https://github.com/yazoink/wallpapers/blob/main/flowers/flowers-1.jpg?raw=true";
             hash = "";
           };
         };
