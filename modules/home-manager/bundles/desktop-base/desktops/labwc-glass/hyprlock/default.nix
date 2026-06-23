@@ -51,7 +51,7 @@ in {
       shape {
         monitor =
         size = 550, 300
-        rounding = 8
+        rounding = 16
         border_size = 1
         border_color = $border
         color = $bg0
@@ -86,7 +86,6 @@ in {
       input-field {
         monitor =
         size = 470, 50
-        outline_thickness = 0
         rounding = 8
         inner_color = $bg1
         check_color = rgb(d9bc8c)
