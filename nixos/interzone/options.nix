@@ -46,14 +46,14 @@
         };
         terminal = {
           # name = "Aporetic Serif Mono";
-          name = "Kosugi Maru";
+          name = "Terminess Nerd Font";
           size = 12;
         };
       };
     };
     bundles = {
-      # base.starshipFormat = 1;
-      base.starshipFormat = 2;
+      base.starshipFormat = 1;
+      # base.starshipFormat = 2;
       desktopBase.silentBoot.enable = true;
       desktopBase.mpv.profile = "fast";
       desktopBase.plymouth.enable = false;
