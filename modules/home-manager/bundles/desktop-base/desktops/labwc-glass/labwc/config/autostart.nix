@@ -2,7 +2,7 @@
   inherit (osConfig.myOptions) defaultApps desktopTheme;
   wallpaperCommand =
     if (desktopTheme.wallpaper.type == "color")
-    then "${../../scripts/swaybg.sh} -i ${desktopTheme.wallpaper.color.hex}"
+    then "${../../scripts/swaybg.sh} -c ${desktopTheme.wallpaper.color.hex}"
     else
       (
         if (osConfig.myOptions.desktopTheme.wallpaper.image.fillType == "fill")
