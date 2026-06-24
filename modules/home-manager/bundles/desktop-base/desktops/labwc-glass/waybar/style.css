@@ -10,7 +10,7 @@ window#waybar {
   margin-left: 0;
   padding: 4px 8px;
   border-radius: 8px;
-  background-image: linear-gradient(to bottom, @bg3, @bg2, @bg, @bg3);
+  background-image: linear-gradient(to bottom, @bg3, @bg2, @bg2, @bg3);
   border: 1px solid @bg3;
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
 }
@@ -24,7 +24,7 @@ window#waybar {
     transparent,
     rgba(255, 255, 255, 0.3)
   );*/
-  background-image: linear-gradient(to bottom, @bg4, @bg3, @bg2, @bg4);
+  background-image: linear-gradient(to bottom, @bg4, @bg3, @bg3, @bg4);
   /* border: 1px solid rgba(255, 255, 255, 0.5); */
   border: 1px solid @bg4;
   /* color: @bg; */
@@ -74,7 +74,7 @@ window#waybar {
   /* background-color: @bg2; */
   border-radius: 8px;
   padding: 6px 12px;
-  background-image: linear-gradient(to bottom, @bg3, @bg2, @bg, @bg3);
+  background-image: linear-gradient(to bottom, @bg3, @bg2, @bg2, @bg3);
   border: 1px solid @bg3;
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
 }
@@ -93,8 +93,7 @@ window#waybar {
 #custom-power:hover,
 #custom-search:hover,
 #taskbar button:hover {
-  background-image: linear-gradient(to bottom, @bg4, @bg3, @bg4);
-  background-image: linear-gradient(to bottom, @bg4, @bg3, @bg2, @bg4);
+  background-image: linear-gradient(to bottom, @bg4, @bg3, @bg3, @bg4);
   border: 1px solid @bg4;
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
   text-shadow: 0 0 3px rgba(255, 255, 255, 0.4);
