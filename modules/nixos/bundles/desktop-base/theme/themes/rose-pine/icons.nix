@@ -3,10 +3,10 @@ pkgs.stdenv.mkDerivation {
   name = "rose-pine-icons";
 
   src = pkgs.fetchFromGitHub {
-    owner = "Henriquehnnm";
-    repo = "rose-pine-icon-theme";
+    owner = "Fausto-Korpsvart";
+    repo = "Rose-Pine-GTK-Theme";
     rev = "main";
-    sha256 = "sha256-/CGj07sgM4kGQVRSW//tyYrRzh5puPTONLxWPNzeZNM=";
+    sha256 = "";
   };
 
   dontUnpack = true;
