@@ -24,7 +24,7 @@
       rice.labwc.enable = false;
       rice.hyprland.enable = false;
       # zenBrowserShowBorders = false;
-      colorscheme = "everblush";
+      colorscheme = "moonfly";
       wallpaper = {
         type = "color";
         color.hex = "353C3F";
