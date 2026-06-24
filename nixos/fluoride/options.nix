@@ -61,6 +61,7 @@
       # terminalPadding = 24;
       fonts.desktop = {
         # name = "SF Pro Display";
+        size = 11;
       };
       fonts.terminal = {
         name = "Cozette";
