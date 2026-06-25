@@ -41,7 +41,7 @@
             name = "TeX Gyre Schola";
           };
         }
-        (import ./fonts {inherit pkgs;})
+        (import ./fonts {inherit pkgs lib;})
       ];
       image = config.myOptions.desktopTheme.wallpaper.image.path;
     }
