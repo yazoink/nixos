@@ -1,4 +1,8 @@
-{lib, ...}: {
+{
+  lib,
+  pkgs,
+  ...
+}: {
   # ----- DESKTOP THEME ----- #
   #
   # Theming options for the desktop.
