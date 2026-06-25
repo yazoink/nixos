@@ -4,7 +4,7 @@
   ...
 }: let
   inherit (config.stylix) fonts;
-  inherit (osConfig.desktopTheme) icons;
+  icons = config.gtk.iconTheme.name;
 in {
   theme = {
     # name = "${config.gtk.theme.name}";
