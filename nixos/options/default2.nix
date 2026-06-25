@@ -2,453 +2,456 @@
 # To be set in ../nixos/<hostname>/options.nix
 {
   lib,
+  config,
   pkgs,
   ...
-}: {
-  myOptions = {
-    # ----- BUNDLES ----- #
-    #
-    # These are bundles of modules and packages that suit different system
-    # configurations.
-    #
-    #
-    # Base: The base modules and packages needed to get a working console.
-    #
-    # Desktop Base: The modules and packages for a working console + basic
-    # desktop. It provides a file manager, terminal, media player, document
-    # reader, image viewer, text editor, and web browser but no extra apps.
-    #
-    # Desktop Full: The modules and packages needed for a working console and
-    # fully-featured desktop.
+}: rec {
+  options = {
+    myOptions = {
+      # ----- BUNDLES ----- #
+      #
+      # These are bundles of modules and packages that suit different system
+      # configurations.
+      #
+      #
+      # Base: The base modules and packages needed to get a working console.
+      #
+      # Desktop Base: The modules and packages for a working console + basic
+      # desktop. It provides a file manager, terminal, media player, document
+      # reader, image viewer, text editor, and web browser but no extra apps.
+      #
+      # Desktop Full: The modules and packages needed for a working console and
+      # fully-featured desktop.
 
-    bundles = {
-      base = {
-        enable = lib.mkOption {
-          type = lib.types.bool;
-          default = true;
-        };
-        ssh = {
-          allowPasswordAuth = lib.mkOption {
+      bundles = {
+        base = {
+          enable = lib.mkOption {
             type = lib.types.bool;
             default = true;
-            description = "Allow SSH authentication via password";
           };
-          allowRootLogin = lib.mkOption {
+          ssh = {
+            allowPasswordAuth = lib.mkOption {
+              type = lib.types.bool;
+              default = true;
+              description = "Allow SSH authentication via password";
+            };
+            allowRootLogin = lib.mkOption {
+              type = lib.types.bool;
+              default = false;
+              description = "Allow root login via SSH";
+            };
+          };
+          starshipFormat = lib.mkOption {
+            type = lib.types.number;
+            default = 2;
+            description = ''
+              Theme/format for Starship prompt.
+
+              Options:
+                1: Best for bitmap fonts
+                2: Best for regulat fonts
+                3 (or any other number): default
+            '';
+          };
+        };
+        desktopBase = {
+          enable = lib.mkOption {
             type = lib.types.bool;
             default = false;
-            description = "Allow root login via SSH";
           };
-        };
-        starshipFormat = lib.mkOption {
-          type = lib.types.number;
-          default = 2;
-          description = ''
-            Theme/format for Starship prompt.
-
-            Options:
-              1: Best for bitmap fonts
-              2: Best for regulat fonts
-              3 (or any other number): default
-          '';
-        };
-      };
-      desktopBase = {
-        enable = lib.mkOption {
-          type = lib.types.bool;
-          default = false;
-        };
-        plymouth.enable = lib.mkOption {
-          type = lib.types.bool;
-          default = false;
-        };
-        silentBoot.enable = lib.mkOption {
-          type = lib.types.bool;
-          default = true;
-        };
-        mpv = {
-          profile = lib.mkOption {
-            type = lib.types.str;
-            default = "gpu-hq";
-            description = "Sets 'profile' in MPV config";
+          plymouth.enable = lib.mkOption {
+            type = lib.types.bool;
+            default = false;
           };
-        };
-      };
-      desktopFull = {
-        enable = lib.mkOption {
-          type = lib.types.bool;
-          default = false;
-        };
-        vesktop = {
-          bloat = lib.mkOption {
+          silentBoot.enable = lib.mkOption {
             type = lib.types.bool;
             default = true;
-            description = "Setting to false installs less plugins.";
           };
-        };
-      };
-    };
-
-    # ----- DEFAULT APPS ----- #
-    #
-    # The apps to install for specific uses. All of these are included in
-    # the Desktop Base bundle except for Discord, which is in Desktop Full.
-
-    defaultApps = {
-      fileManager = {
-        command = lib.mkOption {
-          type = lib.types.str;
-          default = "nemo";
-          description = "Options: thunar, pcmanfm, nemo";
-        };
-      };
-      discordClient = {
-        command = lib.mkOption {
-          type = lib.types.str;
-          default = "vesktop";
-          description = "Options: vesktop, abaddon, dissent, legcord";
-        };
-      };
-      guiTextEditor = {
-        command = lib.mkOption {
-          type = lib.types.str;
-          default = "pluma";
-          description = "Options: pluma, codium";
-        };
-      };
-      documentReader = {
-        command = lib.mkOption {
-          type = lib.types.str;
-          default = "zathura";
-          description = "Options: atril, zathura";
-        };
-      };
-      mediaPlayer = {
-        command = lib.mkOption {
-          type = lib.types.str;
-          default = "mpv";
-          description = "Options: vlc, mpv, celluloid";
-        };
-      };
-      webBrowser = {
-        command = lib.mkOption {
-          type = lib.types.str;
-          default = "zen-twilight";
-          description = "Options: firefox, zen-twilight, brave, librewolf";
-        };
-      };
-      imageViewer = {
-        command = lib.mkOption {
-          type = lib.types.str;
-          default = "imv";
-          description = "Options: ristretto, imv";
-        };
-      };
-      terminal = {
-        command = lib.mkOption {
-          type = lib.types.str;
-          default = "kitty";
-          description = "Options: foot, footclient, alacritty, kitty";
-        };
-      };
-    };
-
-    # ----- USER ACCOUNT ----- #
-    #
-    # Options for the user account.
-
-    userAccount = {
-      username = lib.mkOption {
-        type = lib.types.str;
-        default = "gene";
-      };
-    };
-
-    # ----- DESKTOP THEME ----- #
-    #
-    # Theming options for the desktop.
-
-    desktopTheme = {
-      # Do not enable more than one rice at once
-      rice = {
-        hyprland-flat = {
-          enable = lib.mkOption {
-            type = lib.types.bool;
-            default = false;
-            description = "hyprland desktop with flat theme";
-          };
-        };
-        labwc-flat = {
-          enable = lib.mkOption {
-            type = lib.types.bool;
-            default = false;
-            description = "labwc desktop with flat theme";
-          };
-        };
-        labwc-glass = {
-          enable = lib.mkOption {
-            type = lib.types.bool;
-            default = false;
-            description = "labwc desktop with glassy theme";
-          };
-        };
-      };
-      # These options may be overridden by certain rices
-      zenBrowserShowBorders = lib.mkOption {
-        type = lib.types.bool;
-        default = true;
-      };
-      colorscheme = lib.mkOption {
-        type = lib.types.str;
-        default = "everblush";
-        description = ''
-          See nixos/modules/nixos/features/theme/themes for options.
-
-          The the themes are named after their respective folders. Some also
-          have image previews.
-        '';
-      };
-      terminalPadding = lib.mkOption {
-        type = lib.types.number;
-        default = 32;
-      };
-      windowGaps = {
-        outer = lib.mkOption {
-          type = lib.types.number;
-          default = 5;
-        };
-        inner = lib.mkOption {
-          type = lib.types.number;
-          default = 3;
-        };
-      };
-      fonts = {
-        terminal = {
-          name = lib.mkOption {
-            type = lib.types.str;
-            default = "aporetic-serif-mono";
-            description = ''
-              See nixos/modules/nixos/features/theme/fonts/terminal for
-              options.
-
-              The enter the actual name of the font, not the folder name. The
-              actual names can be found inside the default.nix files.
-            '';
-          };
-          size = lib.mkOption {
-            type = lib.types.number;
-            default = 12;
-          };
-        };
-        desktop = {
-          name = lib.mkOption {
-            type = lib.types.str;
-            default = "gabarito";
-            description = ''
-              See nixos/modules/nixos/features/theme/fonts/desktop for
-              options.
-
-              The enter the actual name of the font, not the folder name. The
-              actual names can be found inside the default.nix files.
-            '';
-          };
-          size = lib.mkOption {
-            type = lib.types.number;
-            default = 11;
-          };
-        };
-      };
-      wallpaper = {
-        type = lib.mkOption {
-          type = lib.types.str;
-          description = "Options: image, color";
-          default = "image";
-        };
-        image = {
-          fillType = lib.mkOption {
-            type = lib.types.str;
-            description = "Options: fill, tile";
-            default = "fill";
-          };
-          path = lib.mkOption {
-            type = lib.types.path;
-            description = ''
-              Path to wallpaper. Required for stylix, even if color is set.
-            '';
-            default = pkgs.fetchurl {
-              url = "https://raw.githubusercontent.com/yazoink/wallpapers/refs/heads/main/trees-and-leaves/andrei-lazarev-QtM-8j_1o3Q.jpg";
-              hash = "";
+          mpv = {
+            profile = lib.mkOption {
+              type = lib.types.str;
+              default = "gpu-hq";
+              description = "Sets 'profile' in MPV config";
             };
           };
         };
-        color = {
-          hex = lib.mkOption {
-            type = lib.types.str;
-            default = "000000";
+        desktopFull = {
+          enable = lib.mkOption {
+            type = lib.types.bool;
+            default = false;
+          };
+          vesktop = {
+            bloat = lib.mkOption {
+              type = lib.types.bool;
+              default = true;
+              description = "Setting to false installs less plugins.";
+            };
           };
         };
       };
-    };
 
-    # ----- FEATURES ----- #
-    #
-    # Miscellaneous modules and packages not in any bundle to be freely
-    # enabled.
-    #
-    # Most, if not all require at least the Desktop Base bundle to be
-    # enabled.
+      # ----- DEFAULT APPS ----- #
+      #
+      # The apps to install for specific uses. All of these are included in
+      # the Desktop Base bundle except for Discord, which is in Desktop Full.
 
-    features = {
-      etterna.enable = lib.mkOption {
-        type = lib.types.bool;
-        default = false;
+      defaultApps = {
+        fileManager = {
+          command = lib.mkOption {
+            type = lib.types.str;
+            default = "nemo";
+            description = "Options: thunar, pcmanfm, nemo";
+          };
+        };
+        discordClient = {
+          command = lib.mkOption {
+            type = lib.types.str;
+            default = "vesktop";
+            description = "Options: vesktop, abaddon, dissent, legcord";
+          };
+        };
+        guiTextEditor = {
+          command = lib.mkOption {
+            type = lib.types.str;
+            default = "pluma";
+            description = "Options: pluma, codium";
+          };
+        };
+        documentReader = {
+          command = lib.mkOption {
+            type = lib.types.str;
+            default = "zathura";
+            description = "Options: atril, zathura";
+          };
+        };
+        mediaPlayer = {
+          command = lib.mkOption {
+            type = lib.types.str;
+            default = "mpv";
+            description = "Options: vlc, mpv, celluloid";
+          };
+        };
+        webBrowser = {
+          command = lib.mkOption {
+            type = lib.types.str;
+            default = "zen-twilight";
+            description = "Options: firefox, zen-twilight, brave, librewolf";
+          };
+        };
+        imageViewer = {
+          command = lib.mkOption {
+            type = lib.types.str;
+            default = "imv";
+            description = "Options: ristretto, imv";
+          };
+        };
+        terminal = {
+          command = lib.mkOption {
+            type = lib.types.str;
+            default = "kitty";
+            description = "Options: foot, footclient, alacritty, kitty";
+          };
+        };
       };
-      lutgen.enable = lib.mkOption {
-        type = lib.types.bool;
-        default = false;
-      };
-      wine.enable = lib.mkOption {
-        type = lib.types.bool;
-        default = false;
-      };
-      gamescope.enable = lib.mkOption {
-        type = lib.types.bool;
-        default = false;
-      };
-      retroarch.enable = lib.mkOption {
-        type = lib.types.bool;
-        default = false;
-      };
-      steam.enable = lib.mkOption {
-        type = lib.types.bool;
-        default = false;
-      };
-      virtManager.enable = lib.mkOption {
-        type = lib.types.bool;
-        default = false;
-      };
-      virtualbox.enable = lib.mkOption {
-        type = lib.types.bool;
-        default = false;
-      };
-      expenses.enable = lib.mkOption {
-        type = lib.types.bool;
-        default = false;
-      };
-      calibre.enable = lib.mkOption {
-        type = lib.types.bool;
-        default = false;
-      };
-      vscode.enable = lib.mkOption {
-        type = lib.types.bool;
-        default = false;
-      };
-      obsidian.enable = lib.mkOption {
-        type = lib.types.bool;
-        default = false;
-      };
-    };
 
-    # ----- HARDWARE FEATURES ----- #
-    #
-    # Miscellaneous modules and packages not included in any bundles -- for
-    # specific hardware.
-    #
-    # h264-ify: Browser extension for better YouTube playback on old
-    # hardware.
-    #
-    # Disk Burner: Installs CD/DVD burning/ripping software.
-    #
-    # SSD: Enables fstrim for solid state drives.
-    #
-    # Laptop: Enables laptop-specific features.
-    #
-    # - Hyprland Touchpad Scroll Factor: tweak the speed of scrolling with
-    #   the touchpad in Hyprland. Less is slower.
-    #
-    # - Battery Name: Name of the battery under /sys/class/power_supply
-    #
-    # - Bootloader: Options for the bootloader
-    #
-    # - Open Tablet Driver: Drivers for drawing tablets
-    #
-    # - Touchscreen: touchscreen-related features
+      # ----- USER ACCOUNT ----- #
+      #
+      # Options for the user account.
 
-    hardwareFeatures = {
-      bootloader = {
-        type = lib.mkOption {
+      userAccount = {
+        username = lib.mkOption {
           type = lib.types.str;
-          default = "uefi";
-          description = "Options: uefi, legacy";
+          default = "gene";
         };
-        legacy = {
-          bootDrive = lib.mkOption {
-            type = lib.types.str;
-            default = "/dev/sda";
-            description = "Location of the boot drive.";
-          };
-          customResolution = {
+      };
+
+      # ----- DESKTOP THEME ----- #
+      #
+      # Theming options for the desktop.
+
+      desktopTheme = {
+        # Do not enable more than one rice at once
+        rice = {
+          hyprland-flat = {
             enable = lib.mkOption {
               type = lib.types.bool;
               default = false;
-              description = "Only set this if you definitely have the right value.";
+              description = "hyprland desktop with flat theme";
             };
-            resolution = lib.mkOption {
+          };
+          labwc-flat = {
+            enable = lib.mkOption {
+              type = lib.types.bool;
+              default = false;
+              description = "labwc desktop with flat theme";
+            };
+          };
+          labwc-glass = {
+            enable = lib.mkOption {
+              type = lib.types.bool;
+              default = false;
+              description = "labwc desktop with glassy theme";
+            };
+          };
+        };
+        # These options may be overridden by certain rices
+        zenBrowserShowBorders = lib.mkOption {
+          type = lib.types.bool;
+          default = true;
+        };
+        colorscheme = lib.mkOption {
+          type = lib.types.str;
+          default = "everblush";
+          description = ''
+            See nixos/modules/nixos/features/theme/themes for options.
+
+            The the themes are named after their respective folders. Some also
+            have image previews.
+          '';
+        };
+        terminalPadding = lib.mkOption {
+          type = lib.types.number;
+          default = 32;
+        };
+        windowGaps = {
+          outer = lib.mkOption {
+            type = lib.types.number;
+            default = 5;
+          };
+          inner = lib.mkOption {
+            type = lib.types.number;
+            default = 3;
+          };
+        };
+        fonts = {
+          terminal = {
+            name = lib.mkOption {
               type = lib.types.str;
-              default = "1024x768";
+              default = "aporetic-serif-mono";
+              description = ''
+                See nixos/modules/nixos/features/theme/fonts/terminal for
+                options.
+
+                The enter the actual name of the font, not the folder name. The
+                actual names can be found inside the default.nix files.
+              '';
+            };
+            size = lib.mkOption {
+              type = lib.types.number;
+              default = 12;
+            };
+          };
+          desktop = {
+            name = lib.mkOption {
+              type = lib.types.str;
+              default = "gabarito";
+              description = ''
+                See nixos/modules/nixos/features/theme/fonts/desktop for
+                options.
+
+                The enter the actual name of the font, not the folder name. The
+                actual names can be found inside the default.nix files.
+              '';
+            };
+            size = lib.mkOption {
+              type = lib.types.number;
+              default = 11;
+            };
+          };
+        };
+        wallpaper = {
+          type = lib.mkOption {
+            type = lib.types.str;
+            description = "Options: image, color";
+            default = "image";
+          };
+          image = {
+            fillType = lib.mkOption {
+              type = lib.types.str;
+              description = "Options: fill, tile";
+              default = "fill";
+            };
+            path = lib.mkOption {
+              type = lib.types.path;
+              description = ''
+                Path to wallpaper. Required for stylix, even if color is set.
+              '';
+              default = pkgs.fetchurl {
+                url = "https://raw.githubusercontent.com/yazoink/wallpapers/refs/heads/main/trees-and-leaves/andrei-lazarev-QtM-8j_1o3Q.jpg";
+                hash = "";
+              };
+            };
+          };
+          color = {
+            hex = lib.mkOption {
+              type = lib.types.str;
+              default = "000000";
             };
           };
         };
       };
-      opentabletdriver.enable = lib.mkOption {
-        type = lib.types.bool;
-        default = false;
-      };
-      bluetooth.enable = lib.mkOption {
-        type = lib.types.bool;
-        default = false;
-      };
-      touchscreen = {
-        enable = lib.mkOption {
+
+      # ----- FEATURES ----- #
+      #
+      # Miscellaneous modules and packages not in any bundle to be freely
+      # enabled.
+      #
+      # Most, if not all require at least the Desktop Base bundle to be
+      # enabled.
+
+      features = {
+        etterna.enable = lib.mkOption {
           type = lib.types.bool;
           default = false;
         };
-        hyprlandGestureSensitivity = lib.mkOption {
-          type = lib.types.number;
-          default = 1.5;
-        };
-      };
-      h264ify.enable = lib.mkOption {
-        type = lib.types.bool;
-        default = false;
-      };
-      diskBurner.enable = lib.mkOption {
-        type = lib.types.bool;
-        default = false;
-      };
-      ssd.enable = lib.mkOption {
-        type = lib.types.bool;
-        default = false;
-      };
-      laptop = {
-        enable = lib.mkOption {
+        lutgen.enable = lib.mkOption {
           type = lib.types.bool;
           default = false;
         };
-        hyprlandTouchpadScrollFactor = lib.mkOption {
-          type = lib.types.number;
-          default = 1;
-        };
-        labwcTouchpadScrollFactor = lib.mkOption {
-          type = lib.types.number;
-          default = 1;
-        };
-        batteryName = lib.mkOption {
-          type = lib.types.str;
-          default = "BAT0";
-        };
-        isThinkPad = lib.mkOption {
+        wine.enable = lib.mkOption {
           type = lib.types.bool;
           default = false;
+        };
+        gamescope.enable = lib.mkOption {
+          type = lib.types.bool;
+          default = false;
+        };
+        retroarch.enable = lib.mkOption {
+          type = lib.types.bool;
+          default = false;
+        };
+        steam.enable = lib.mkOption {
+          type = lib.types.bool;
+          default = false;
+        };
+        virtManager.enable = lib.mkOption {
+          type = lib.types.bool;
+          default = false;
+        };
+        virtualbox.enable = lib.mkOption {
+          type = lib.types.bool;
+          default = false;
+        };
+        expenses.enable = lib.mkOption {
+          type = lib.types.bool;
+          default = false;
+        };
+        calibre.enable = lib.mkOption {
+          type = lib.types.bool;
+          default = false;
+        };
+        vscode.enable = lib.mkOption {
+          type = lib.types.bool;
+          default = false;
+        };
+        obsidian.enable = lib.mkOption {
+          type = lib.types.bool;
+          default = false;
+        };
+      };
+
+      # ----- HARDWARE FEATURES ----- #
+      #
+      # Miscellaneous modules and packages not included in any bundles -- for
+      # specific hardware.
+      #
+      # h264-ify: Browser extension for better YouTube playback on old
+      # hardware.
+      #
+      # Disk Burner: Installs CD/DVD burning/ripping software.
+      #
+      # SSD: Enables fstrim for solid state drives.
+      #
+      # Laptop: Enables laptop-specific features.
+      #
+      # - Hyprland Touchpad Scroll Factor: tweak the speed of scrolling with
+      #   the touchpad in Hyprland. Less is slower.
+      #
+      # - Battery Name: Name of the battery under /sys/class/power_supply
+      #
+      # - Bootloader: Options for the bootloader
+      #
+      # - Open Tablet Driver: Drivers for drawing tablets
+      #
+      # - Touchscreen: touchscreen-related features
+
+      hardwareFeatures = {
+        bootloader = {
+          type = lib.mkOption {
+            type = lib.types.str;
+            default = "uefi";
+            description = "Options: uefi, legacy";
+          };
+          legacy = {
+            bootDrive = lib.mkOption {
+              type = lib.types.str;
+              default = "/dev/sda";
+              description = "Location of the boot drive.";
+            };
+            customResolution = {
+              enable = lib.mkOption {
+                type = lib.types.bool;
+                default = false;
+                description = "Only set this if you definitely have the right value.";
+              };
+              resolution = lib.mkOption {
+                type = lib.types.str;
+                default = "1024x768";
+              };
+            };
+          };
+        };
+        opentabletdriver.enable = lib.mkOption {
+          type = lib.types.bool;
+          default = false;
+        };
+        bluetooth.enable = lib.mkOption {
+          type = lib.types.bool;
+          default = false;
+        };
+        touchscreen = {
+          enable = lib.mkOption {
+            type = lib.types.bool;
+            default = false;
+          };
+          hyprlandGestureSensitivity = lib.mkOption {
+            type = lib.types.number;
+            default = 1.5;
+          };
+        };
+        h264ify.enable = lib.mkOption {
+          type = lib.types.bool;
+          default = false;
+        };
+        diskBurner.enable = lib.mkOption {
+          type = lib.types.bool;
+          default = false;
+        };
+        ssd.enable = lib.mkOption {
+          type = lib.types.bool;
+          default = false;
+        };
+        laptop = {
+          enable = lib.mkOption {
+            type = lib.types.bool;
+            default = false;
+          };
+          hyprlandTouchpadScrollFactor = lib.mkOption {
+            type = lib.types.number;
+            default = 1;
+          };
+          labwcTouchpadScrollFactor = lib.mkOption {
+            type = lib.types.number;
+            default = 1;
+          };
+          batteryName = lib.mkOption {
+            type = lib.types.str;
+            default = "BAT0";
+          };
+          isThinkPad = lib.mkOption {
+            type = lib.types.bool;
+            default = false;
+          };
         };
       };
     };
