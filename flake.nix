@@ -47,33 +47,21 @@
     pkgs-stable = nixpkgs-stable.legacyPackages.${system};
   in {
     nixosConfigurations = {
-      ##### Desktop #####
       fluoride = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs system pkgs-stable;};
         modules = [
           inputs.home-manager.nixosModules.home-manager
-          ./options
-          ./nixos/fluoride
+          ./nixos
+          ./hosts/fluoride
         ];
       };
 
-      ##### Laptop #####
       cyberia = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs system pkgs-stable;};
         modules = [
           inputs.home-manager.nixosModules.home-manager
-          ./options
-          ./nixos/cyberia
-        ];
-      };
-
-      ##### Portable Laptop #####
-      stardust = nixpkgs.lib.nixosSystem {
-        specialArgs = {inherit inputs system pkgs-stable;};
-        modules = [
-          inputs.home-manager.nixosModules.home-manager
-          ./options
-          ./nixos/stardust
+          ./nixos
+          ./hosts/cyberia
         ];
       };
 
@@ -81,8 +69,8 @@
         specialArgs = {inherit inputs system pkgs-stable;};
         modules = [
           inputs.home-manager.nixosModules.home-manager
-          ./options
-          ./nixos/interzone
+          ./nixos
+          ./hosts/interzone
         ];
       };
     };
