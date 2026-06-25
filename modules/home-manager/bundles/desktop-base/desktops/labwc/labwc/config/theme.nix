@@ -16,7 +16,7 @@ in {
       "@weight" = "bold";
     };
     dropShadows = "yes";
-    dropShadowsOnTiled = "yes";
+    # dropShadowsOnTiled = "yes";
     icon = "${icons.name}";
     titlebar = {
       showTitle = "yes";
