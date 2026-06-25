@@ -1,30 +1,26 @@
 {
   pkgs,
-  config,
   lib,
   ...
 }: {
-  config = lib.mkIf (config.myOptions.bundles.desktopBase.enable && config.myOptions.defaultApps.fileManager.command == "thunar") {
-    defaultApps.fileManager.desktopFile = "thunar.desktop";
-    environment.systemPackages = with pkgs; [file-roller];
-    programs = {
-      thunar = {
-        enable = true;
-        plugins = with pkgs; [
-          thunar-archive-plugin
-          thunar-volman
-          thunar-media-tags-plugin
-        ];
-      };
-      xfconf.enable = true;
+  environment.systemPackages = with pkgs; [file-roller];
+  programs = {
+    thunar = {
+      enable = true;
+      plugins = with pkgs; [
+        thunar-archive-plugin
+        thunar-volman
+        thunar-media-tags-plugin
+      ];
     };
+    xfconf.enable = true;
+  };
 
-    services = {
-      gvfs = {
-        enable = true;
-        package = lib.mkForce pkgs.gnome.gvfs;
-      };
-      tumbler.enable = true;
+  services = {
+    gvfs = {
+      enable = true;
+      package = lib.mkForce pkgs.gnome.gvfs;
     };
+    tumbler.enable = true;
   };
 }

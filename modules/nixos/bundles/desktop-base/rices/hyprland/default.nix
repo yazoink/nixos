@@ -10,6 +10,7 @@
   inherit (config.myOptions.desktopTheme.rice) hyprland-flat;
 in
   lib.mkMerge [
+    # common hyprland configs
     (lib.mkIf hyprland-flat.enable
       (import ./common {inherit pkgs-stable config lib pkgs inputs;}))
   ]
