@@ -1,10 +1,10 @@
 {pkgs, ...}: let
   cursors = pkgs.callPackage ./cursors.nix {};
 in {
-  environment.systemPackages = [cursors];
   cursor = {
     name = "BreezeX-Moonfly";
     size = 32;
+    package = cursors;
   };
 
   base16Scheme = {
