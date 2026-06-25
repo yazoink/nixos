@@ -18,7 +18,7 @@ in {
       source = ${confFile}
 
       $font = ${config.stylix.fonts.sansSerif.name}
-      $radius = 10
+      $radius = 16
 
       general {
         hide_cursor = false
@@ -52,7 +52,7 @@ in {
       shape {
         monitor =
         size = 550, 300
-        rounding = 15
+        rounding = $radius
         border_size = 1
         border_color = $border
         color = $bg0
@@ -88,7 +88,7 @@ in {
         monitor =
         size = 470, 50
         outline_thickness = 0
-        rounding = 10
+        rounding = 8
         inner_color = $bg1
         check_color = rgb(d9bc8c)
         fail_color = rgb(b66467)
