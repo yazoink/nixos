@@ -3,7 +3,9 @@
   config,
   lib,
   ...
-}: {
+}: let
+  theme = config.myOptions.desktopTheme.colorscheme;
+in {
   environment.systemPackages = with pkgs; [
     gtk-engine-murrine
   ];
@@ -45,6 +47,6 @@
       ];
       image = config.myOptions.desktopTheme.wallpaper.image.path;
     }
-    (import ./themes {inherit pkgs;})
+    (import ./themes {inherit pkgs theme;})
   ];
 }

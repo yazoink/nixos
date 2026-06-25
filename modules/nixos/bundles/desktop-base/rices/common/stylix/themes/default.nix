@@ -1,4 +1,8 @@
-{pkgs, ...}: let
+{
+  pkgs,
+  theme,
+  ...
+}: let
   # inherit (config.myOptions.desktopTheme) colorscheme;
-  colorscheme = "moonfly";
-in (import (./. + "/${colorscheme}") {inherit pkgs;})
+  # colorscheme = "moonfly";
+in (import (./. + "/${theme}") {inherit pkgs;})
