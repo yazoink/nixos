@@ -2,17 +2,28 @@
 
 My NixOS desktop configs with home-manager.
 
-## Hosts
+## Rices
 
-- Cyberia: Coreboot ThinkPad T430
-- Fluoride: Desktop PC (R5 5600/RX 6600)
-- Stardust: Acer TravelMate B113-E netbook
+### Labwc
 
-## Screenshots
+("moonfly" colorscheme)
+
+![rice](./assets/moonfly1.png)
+![rice](./assets/moonfly2.png)
+![rice](./assets/moonfly3.png)
+
+### Labwc "glass"
+
+("rose-pine" colorscheme)
 
 ![rice](./assets/glass1.png)
 ![rice](./assets/glass2.png)
 ![rice](./assets/glass3.png)
+
+### Hyprland
+
+("paradise" colorscheme)
+
 ![rice](./assets/paradise1.png)
 ![rice](./assets/paradise2.png)
 ![rice](./assets/paradise3.png)
