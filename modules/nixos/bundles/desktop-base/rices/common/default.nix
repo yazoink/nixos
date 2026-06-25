@@ -15,7 +15,9 @@
       };
     };
   };
-  config = lib.mkMerge [
-    (import ./stylix {inherit lib config pkgs inputs;})
-  ];
+  config = {
+    imports = [
+      ./stylix
+    ];
+  };
 }
