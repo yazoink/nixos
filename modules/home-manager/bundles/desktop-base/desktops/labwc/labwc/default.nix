@@ -43,7 +43,7 @@ in
         };
         Service = {
           Type = "oneshot";
-          ExecStart = "${lib.getExe pkgs.labwc-menu-generator} > /home/${osConfig.userAccount.username}/.config/labwc/menu.xml";
+          ExecStart = "${lib.getExe pkgs.labwc-menu-generator} > /home/${osConfig.myOptions.userAccount.username}/.config/labwc/menu.xml";
         };
         Install = {
           WantedBy = ["default.target"];
