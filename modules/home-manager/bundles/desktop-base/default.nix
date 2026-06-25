@@ -23,7 +23,6 @@
     ./media-players
 
     ./direnv
-    ./theme
     ./xdg
     ./dconf
   ];
