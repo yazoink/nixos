@@ -1,20 +1,6 @@
-{
-  imports = [
-    ./nec-apc-3
-    ./geist-mono
-    ./iosevka
-    ./zed-mono
-    ./victor-mono
-    ./cascadia-code
-    ./jetbrains-mono
-    ./consolas
-    ./terminus
-    ./sf-mono
-    ./cozette
-    ./terminess
-    ./aporetic-sans-mono
-    ./aporetic-serif-mono
-    ./monocraft
-    ./kosugi-maru
-  ];
+{pkgs, ...}: let
+  # inherit (config.myOptions.desktopTheme) colorscheme;
+  font = "aporetic-serif-mono";
+in {
+  monospace = import (./. + "/${font}") {inherit pkgs;};
 }

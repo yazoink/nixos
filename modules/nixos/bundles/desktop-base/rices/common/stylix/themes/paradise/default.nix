@@ -4,33 +4,31 @@ let
   cursors = pkgs.callPackage ./paradise-cursors.nix {};
   icons = pkgs.callPackage ./paradise-icons.nix {};
 in {
-  stylix.icons = {
+  icons = {
     dark = "Papirus-Paradise-Yellow";
     package = icons;
   };
-  environment.systemPackages = [cursors icons];
-  stylix = {
-    cursor = {
-      name = "BreezeX-Paradise";
-      size = 32;
-    };
-    base16Scheme = {
-      base00 = "151515";
-      base01 = "232323";
-      base02 = "313030";
-      base03 = "3F3E3E";
-      base04 = "868383";
-      base05 = "E8E3E3";
-      base06 = "E8E3E3";
-      base07 = "E8E3E3";
-      base08 = "B66467";
-      base09 = "D9BC8C";
-      base0A = "D9BC8C";
-      base0B = "8C977D";
-      base0C = "8AA6A2";
-      base0D = "8DA3B9";
-      base0E = "A988B0";
-      base0F = "BBB6B6";
-    };
+  cursor = {
+    name = "BreezeX-Paradise";
+    package = cursors;
+    size = 32;
+  };
+  base16Scheme = {
+    base00 = "151515";
+    base01 = "232323";
+    base02 = "313030";
+    base03 = "3F3E3E";
+    base04 = "868383";
+    base05 = "E8E3E3";
+    base06 = "E8E3E3";
+    base07 = "E8E3E3";
+    base08 = "B66467";
+    base09 = "D9BC8C";
+    base0A = "D9BC8C";
+    base0B = "8C977D";
+    base0C = "8AA6A2";
+    base0D = "8DA3B9";
+    base0E = "A988B0";
+    base0F = "BBB6B6";
   };
 }
