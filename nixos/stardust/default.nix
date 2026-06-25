@@ -32,7 +32,7 @@
     extraPackages = with pkgs; [
       intel-vaapi-driver
       libvdpau-va-gl
-      # intel-media-sdk
+      intel-media-sdk
     ];
   };
 
@@ -40,5 +40,6 @@
 
   environment.sessionVariables = {
     LIBVA_DRIVER_NAME = "i965";
+    VDPAU_DRIVER = "va_gl";
   };
 }
