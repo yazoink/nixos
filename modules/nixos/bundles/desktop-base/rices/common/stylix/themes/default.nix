@@ -6,7 +6,4 @@
 }: let
   # inherit (config.myOptions.desktopTheme) colorscheme;
   colorscheme = "moonfly";
-in
-  lib.mkMerge [
-    (import (./. + "/${colorscheme}") {inherit pkgs;})
-  ]
+in (import (./. + "/${colorscheme}") {inherit pkgs;})
