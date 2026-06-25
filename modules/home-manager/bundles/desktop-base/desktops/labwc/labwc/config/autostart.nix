@@ -1,14 +1,9 @@
-{osConfig, ...}: let
-  inherit (osConfig.myOptions) defaultApps desktopTheme;
-  wallpaperCommand =
-    if (desktopTheme.wallpaper.type == "color")
-    then "${../../scripts/swaybg.sh} -i ${desktopTheme.wallpaper.color.hex}"
-    else
-      (
-        if (osConfig.myOptions.desktopTheme.wallpaper.image.fillType == "fill")
-        then "${../../scripts/swaybg.sh} -i ${desktopTheme.wallpaper.image.path}"
-        else "${../../scripts/swaybg.sh} -t ${desktopTheme.wallpaper.image.path}"
-      );
+{
+  osConfig,
+  wallpaperCommand,
+  ...
+}: let
+  inherit (osConfig.myOptions) defaultApps;
 in {
   autostart =
     [
