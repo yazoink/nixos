@@ -25,4 +25,5 @@ lib.mkMerge [
   (import ./vim {inherit config pkgs osConfig lib;})
   (import ./cava {inherit config pkgs osConfig lib;})
   (import ./vesktop {inherit config pkgs osConfig lib;})
+  (import ./lutgen {inherit config pkgs osConfig lib;})
 ]

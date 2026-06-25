@@ -72,7 +72,8 @@ lib.mkIf osConfig.myOptions.bundles.desktopFull.enable (lib.mkMerge [
   (import ./lyricli {inherit osConfig config lib pkgs inputs;})
   # (import ./mpdris2 {inherit osConfig config lib pkgs inputs;})
   # (import ./mpdris2-rs {inherit osConfig config lib pkgs inputs;})
-  (import ./ncmpcpp {inherit osConfig config lib pkgs inputs;})
+  (lib.mkIf osConfig.services.mpd.enable
+    (import ./ncmpcpp {inherit osConfig config lib pkgs inputs;}))
   (import ./newsboat {inherit osConfig config lib pkgs inputs;})
   (import ./obs {inherit osConfig config lib pkgs inputs;})
   (import ./usdtoaud {inherit osConfig config lib pkgs inputs;})

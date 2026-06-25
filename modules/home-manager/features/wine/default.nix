@@ -1,16 +1,12 @@
-{
-  lib,
-  osConfig,
-  pkgs,
-  ...
-}: {
-  config = lib.mkIf osConfig.myOptions.features.wine.enable {
-    home.packages = with pkgs;
-      [winetricks]
+{pkgs, ...}: {
+  home.packages =
+    with pkgs; [winetricks pkgs.wineWowPackages.waylandFull]
+    /*
       ++ (
-        if osConfig.myOptions.bundles.desktopBase.windowManager == "awesome"
-        then [pkgs.wineWowPackages.full]
-        else [pkgs.wineWowPackages.waylandFull]
-      );
-  };
+      if osConfig.myOptions.bundles.desktopBase.windowManager == "awesome"
+      then [pkgs.wineWowPackages.full]
+      else [pkgs.wineWowPackages.waylandFull]
+    )
+    */
+    ;
 }
