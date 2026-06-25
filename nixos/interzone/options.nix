@@ -21,7 +21,7 @@
     desktopTheme = {
       rice.openbox.enable = false;
       rice.labwc-glass.enable = false;
-      rice.labwc.enable = true;
+      rice.labwc-flat.enable = true;
       rice.hyprland.enable = false;
       # zenBrowserShowBorders = false;
       colorscheme = "moonfly";

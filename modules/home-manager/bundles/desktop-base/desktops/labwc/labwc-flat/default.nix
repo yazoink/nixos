@@ -7,9 +7,9 @@
   inputs,
   ...
 }: let
-  inherit (osConfig.myOptions.desktopTheme.rice) labwc;
+  inherit (osConfig.myOptions.desktopTheme.rice) labwc-flat;
 in {
-  config = lib.mkIf labwc.enable (lib.mkMerge [
+  config = lib.mkIf labwc-flat.enable (lib.mkMerge [
     (import ./eww {inherit config osConfig lib pkgs;})
     (import ./mako {inherit config osConfig lib pkgs;})
     (import ./hyprlock {inherit config osConfig lib pkgs;})

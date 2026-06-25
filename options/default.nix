@@ -172,18 +172,18 @@
       desktopTheme = {
         # Do not enable more than one rice at once
         rice = {
-          hyprland = {
-            enable = lib.mkOption {
-              type = lib.types.bool;
-              default = true;
-              description = "hyprland desktop";
-            };
-          };
-          labwc = {
+          hyprland-flat = {
             enable = lib.mkOption {
               type = lib.types.bool;
               default = false;
-              description = "labwc desktop";
+              description = "hyprland desktop with flat theme";
+            };
+          };
+          labwc-flat = {
+            enable = lib.mkOption {
+              type = lib.types.bool;
+              default = false;
+              description = "labwc desktop with flat theme";
             };
           };
           labwc-glass = {
@@ -191,13 +191,6 @@
               type = lib.types.bool;
               default = false;
               description = "labwc desktop with glassy theme";
-            };
-          };
-          openbox = {
-            enable = lib.mkOption {
-              type = lib.types.bool;
-              default = false;
-              description = "openbox desktop";
             };
           };
         };

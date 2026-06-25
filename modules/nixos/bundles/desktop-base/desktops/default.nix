@@ -3,6 +3,5 @@
   imports = [
     ./hyprland
     ./labwc
-    ./openbox
   ];
 }

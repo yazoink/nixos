@@ -1,7 +1,7 @@
+# window managers
 {
   imports = [
     ./hyprland
     ./labwc
-    ./openbox
   ];
 }
