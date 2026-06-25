@@ -12,6 +12,7 @@ lib.mkIf osConfig.myOptions.bundles.desktopBase.enable (lib.mkMerge [
   }
   (import ./dconf {inherit osConfig config lib pkgs inputs;})
   (import ./direnv {inherit osConfig config lib pkgs inputs;})
+  (import ./rices {inherit osConfig config lib pkgs inputs;})
   (import ./xdg {inherit osConfig config lib pkgs inputs;})
 
   # document readers
