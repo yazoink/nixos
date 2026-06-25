@@ -120,8 +120,8 @@ menu {
 }
 
 menuitem {
-  padding: 4px;
-  border-radius: 8px;
+  padding: 8px 16px;
+  border-radius: 4px;
 }
 
 /*.arrow.up,

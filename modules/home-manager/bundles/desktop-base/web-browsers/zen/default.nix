@@ -80,7 +80,7 @@ in {
               --toolbox-bgcolor-inactive: #${base01-hex} !important;
               --zen-themed-toolbar-bg-transparent: #${base01-hex} !important;
               --input-color: #${base05-hex} !important;
-              --zen-native-inner-radius: 15px !important;
+              --zen-native-inner-radius: 16px !important;
               --zen-toolbar-height: 48px !important;
               --toolbarbutton-hover-background: #${base01-hex} !important;
               --panel-color: #${base05-hex} !important;
@@ -100,7 +100,7 @@ in {
               &,
               &::before,
               &::after {
-                border-radius: 15px !important;;
+                border-radius: 16px !important;;
               }
               &,
                &::before {
@@ -116,7 +116,7 @@ in {
 
              #urlbar[breakout-extend="true"] {
                 & .urlbar-background {
-                  border-radius: 15px !important;
+                  border-radius: 16px !important;
                   border: none !important;
                   box-shadow: none !important;
                   outline: none !important;
@@ -128,7 +128,7 @@ in {
             }
 
             .tab-content {
-              padding: 0 10px !important;
+              padding: 0 8px !important;
             }
 
             .tabbrowser-tab[zen-essential="true"], #zen-welcome-initial-essentials-browser-sidebar-essentials .tabbrowser-tab {
@@ -139,20 +139,20 @@ in {
 
             :is(menupopup, panel) {
               &::part(content) {
-                border-radius: 15px !important;
+                border-radius: 16px !important;
                 border: 1px solid #${base01-hex} !important;
                 box-shadow: none !important;
               }
             }
 
             .menupopup-arrowscrollbox {
-               border-radius: 15px !important;
+               border-radius: 16px !important;
                border: 1px solid #${base01-hex} !important;
                box-shadow: none !important;
             }
 
             menuitem {
-              border-radius: 5px !important;
+              border-radius: 4px !important;
             }
 
             menuitem {
@@ -162,7 +162,7 @@ in {
             }
 
             menupopup {
-              --panel-padding: 10px !important;
+              --panel-padding: 8px !important;
             }
 
             menuseparator {
@@ -316,7 +316,7 @@ in {
             #tabbrowser-tabs {
             & .tabbrowser-tab {
               & .tab-background {
-                border-radius: 10px !important;
+                border-radius: 8px !important;
                 box-shadow: none !important;
               }
             }
@@ -330,7 +330,7 @@ in {
 
             #urlbar[breakout-extend="true"] {
               &, & .urlbar-background {
-                border-radius: 15px !important;
+                border-radius: 16px !important;
                 box-shadow: none !important;
                 outline: none !important;
               }
@@ -353,10 +353,10 @@ in {
             .urlbar[breakout][breakout-extend] {
               & > .urlbar-input-container {
                 height: 50px !important;
-                margin: 10px !important;
+                margin: 8px !important;
                 width: calc(100% - 20px) !important;;
-                padding-left: 5px !important;
-                padding-right: 15px !important;
+                padding-left: 4px !important;
+                padding-right: 16px !important;
               }
             }
 
