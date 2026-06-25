@@ -1,5 +1,4 @@
-{pkgs, config, lib, ...}:
-let
+{pkgs, ...}: let
   colorScripts = pkgs.callPackage ./color-scripts.nix {};
   dollarSign = "$";
   rcs = pkgs.writeShellScriptBin "rcs" ''
@@ -10,15 +9,6 @@ let
     index=$((RANDOM % ${dollarSign}{#scripts[@]}))
     ${colorScripts}/bin/${dollarSign}{scripts[$index]}
   '';
-in
-{
-  options = {
-    bundles.desktopFull.colorScripts.enable = lib.mkOption {
-      type = lib.types.bool;
-      default = false;
-    };
-  };
-  config = lib.mkIf config.bundles.desktopFull.colorScripts.enable {
-    home.packages = [colorScripts rcs];
-  };
+in {
+  home.packages = [colorScripts rcs];
 }

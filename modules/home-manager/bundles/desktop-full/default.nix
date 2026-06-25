@@ -1,24 +1,13 @@
 {
-  pkgs,
   osConfig,
   lib,
+  pkgs,
+  config,
+  inputs,
   ...
-}: {
-  config = lib.mkIf osConfig.myOptions.bundles.desktopFull.enable {
-    bundles.desktopFull = {
-      audtousd.enable = true;
-      colorScripts.enable = true;
-      gimp.enable = true;
-      kjtocal.enable = true;
-      obs.enable = true;
-      lyricli.enable = true;
-      ncmpcpp.enable = true;
-      newsboat.enable = true;
-      usdtoaud.enable = true;
-      ytDlp.enable = true;
-      cava.enable = true;
-    };
-
+}:
+lib.mkIf osConfig.myOptions.bundles.desktopFull.enable (lib.mkMerge [
+  {
     home.packages = with pkgs;
       [
         ### communication ###
@@ -73,22 +62,19 @@
         then with pkgs; [system-config-printer]
         else []
       );
-  };
-  imports = [
-    ./discord-clients
-
-    ./audtousd
-    ./color-scripts
-    ./gimp
-    ./kjtocal
-    ./obs
-    ./lyricli
-    ./ncmpcpp
-    ./newsboat
-    ./usdtoaud
-    ./yt-dlp
-    # ./mpdris2-rs
-    ./mpdris2
-    ./cava
-  ];
-}
+  }
+  (import ./audtousd {inherit osConfig config lib pkgs inputs;})
+  (import ./cava {inherit osConfig config lib pkgs inputs;})
+  (import ./color-scripts {inherit osConfig config lib pkgs inputs;})
+  (import ./discord-clients {inherit osConfig config lib pkgs inputs;})
+  (import ./gimp {inherit osConfig config lib pkgs inputs;})
+  (import ./kjtocal {inherit osConfig config lib pkgs inputs;})
+  (import ./lyricli {inherit osConfig config lib pkgs inputs;})
+  # (import ./mpdris2 {inherit osConfig config lib pkgs inputs;})
+  # (import ./mpdris2-rs {inherit osConfig config lib pkgs inputs;})
+  (import ./ncmpcpp {inherit osConfig config lib pkgs inputs;})
+  (import ./newsboat {inherit osConfig config lib pkgs inputs;})
+  (import ./obs {inherit osConfig config lib pkgs inputs;})
+  (import ./usdtoaud {inherit osConfig config lib pkgs inputs;})
+  (import ./yt-dlp {inherit osConfig config lib pkgs inputs;})
+])
