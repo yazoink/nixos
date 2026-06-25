@@ -20,7 +20,7 @@ in {
       padding: 0px;
       padding: 8px 16px;
       border-radius: 16px;
-      background-color: #${config.desktopTheme.rice.labwc.barColor};
+      background-color: #${base16Scheme.base00};
       border: 1px solid #${base16Scheme.base01};
     }
 
