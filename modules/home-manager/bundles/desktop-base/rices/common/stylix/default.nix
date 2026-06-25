@@ -20,12 +20,16 @@
       (import ./qt {inherit config pkgs osConfig lib;})
 
       (import ./imv {inherit config pkgs osConfig lib;})
-      (import ./kitty {inherit config pkgs osConfig lib;})
+      (
+        lib.mkIf
+        (osConfig.myOptions.defaultApps.terminal.command == "kitty")
+        (import ./kitty {inherit config pkgs osConfig lib;})
+      )
       (lib.mkIf
-        (osConfig.defaultApps.webBrowser.command == "zen-twilight")
+        (osConfig.myOptions.defaultApps.webBrowser.command == "zen-twilight")
         (import ./firefox {inherit config pkgs osConfig lib;}))
       (lib.mkIf
-        (osConfig.defaultApps.webBrowser.command == "zen-twilight")
+        (osConfig.myOptions.defaultApps.webBrowser.command == "zen-twilight")
         (import ./zen {inherit config pkgs osConfig lib;}))
     ]
   );
