@@ -33,10 +33,10 @@ lib.mkIf osConfig.myOptions.bundles.desktopBase.enable (lib.mkMerge [
   # image viewers
   (lib.mkIf
     (osConfig.myOptions.defaultApps.guiTextEditor.command == "imv")
-    (import ./gui-text-editors/imv {inherit osConfig config lib pkgs inputs;}))
+    (import ./image-viewers/imv {inherit osConfig config lib pkgs inputs;}))
   (lib.mkIf
     (osConfig.myOptions.defaultApps.guiTextEditor.command == "ristretto")
-    (import ./gui-text-editors/ristretto {inherit osConfig config lib pkgs inputs;}))
+    (import ./image-viewers/ristretto {inherit osConfig config lib pkgs inputs;}))
 
   # media players
   (lib.mkIf
