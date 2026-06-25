@@ -5,12 +5,6 @@
   ...
 }: {
   options = {
-    desktopTheme = {
-      stylix.enable = lib.mkOption {
-        type = lib.types.bool;
-        default = true;
-        description = "use stylix";
-      };
       base16Accent = lib.mkOption {
         type = lib.types.str;
         description = "options: base09, base0A, base0B, base0C, base0D, base0E, base0F";
