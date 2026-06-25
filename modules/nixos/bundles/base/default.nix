@@ -1,35 +1,13 @@
-# basic system, no desktop
 {
+  lib,
   pkgs,
   config,
-  lib,
+  inputs,
+  pkgs-stable,
   ...
-}: {
-  imports = [
-    ./avahi
-    ./locale
-    ./network
-    ./nix
-    ./sops
-    ./user
-    ./zen-kernel
-    ./bootloader
-    ./ssh
-  ];
-
-  config = lib.mkIf config.myOptions.bundles.base.enable {
-    bundles.base = {
-      ssh.enable = true;
-      avahi.enable = true;
-      locale.enable = true;
-      network.enable = true;
-      nixConfig.enable = true;
-      sops.enable = true;
-      user.enable = true;
-      zenKernel.enable = true;
-      bootloader.enable = true;
-    };
-
+}:
+lib.mkIf config.myOptions.bundles.base.enable (lib.mkMerge [
+  {
     security.wrappers."mount.cifs" = {
       program = "mount.cifs";
       source = "${lib.getBin pkgs.cifs-utils}/bin/mount.cifs";
@@ -73,5 +51,14 @@
       ##### Misc #####
       linux-firmware
     ];
-  };
-}
+  }
+  (import ./avahi {inherit config lib pkgs inputs pkgs-stable;})
+  (import ./bootloader {inherit config lib pkgs inputs pkgs-stable;})
+  (import ./kernel {inherit config lib pkgs inputs pkgs-stable;})
+  (import ./locale {inherit config lib pkgs inputs pkgs-stable;})
+  (import ./network {inherit config lib pkgs inputs pkgs-stable;})
+  (import ./nix {inherit config lib pkgs inputs pkgs-stable;})
+  (import ./sops {inherit config lib pkgs inputs pkgs-stable;})
+  (import ./ssh {inherit config lib pkgs inputs pkgs-stable;})
+  (import ./user {inherit config lib pkgs inputs pkgs-stable;})
+])

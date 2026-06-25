@@ -13,6 +13,7 @@
     inputs.nixos-hardware.nixosModules.lenovo-thinkpad-t430
     inputs.home-manager.nixosModules.home-manager
     inputs.stylix.nixosModules.stylix
+    inputs.sops-nix.nixosModules.sops
   ];
 
   home-manager = {
