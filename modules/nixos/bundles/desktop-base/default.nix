@@ -18,6 +18,21 @@
     ./silent-boot
   ];
 
+  options = {
+    desktopTheme.stylix = {
+      icons = {
+        name = lib.mkOption {
+          type = lib.types.str;
+          default = "Papirus";
+        };
+        package = lib.mkOption {
+          type = lib.types.package;
+          default = pkgs.papirus-icon-theme;
+        };
+      };
+    };
+  };
+
   config = lib.mkIf config.myOptions.bundles.desktopBase.enable {
     boot.loader.timeout = 0;
     myOptions = {

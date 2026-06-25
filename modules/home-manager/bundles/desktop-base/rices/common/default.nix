@@ -1,6 +1,13 @@
-# common configs for labwc desktops
+# common configs
 {
-  imports = [
-    ./stylix
-  ];
-}
+  osConfig,
+  lib,
+  pkgs,
+  config,
+  inputs,
+  ...
+}:
+lib.mkMerge [
+  (lib.mkIf osConfig.desktopTheme.stylix.enable
+    (import ./stylix {inherit osConfig config lib pkgs inputs;}))
+]

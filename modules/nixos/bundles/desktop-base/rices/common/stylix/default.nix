@@ -4,20 +4,6 @@
   lib,
   ...
 }: {
-  options = {
-    desktopTheme.stylix = {
-      icons = {
-        name = lib.mkOption {
-          type = lib.types.str;
-          default = "Papirus";
-        };
-        package = lib.mkOption {
-          type = lib.types.package;
-          default = pkgs.papirus-icon-theme;
-        };
-      };
-    };
-  };
   imports = [
     ./themes
     ./fonts

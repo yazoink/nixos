@@ -1,6 +1,5 @@
 {
   inputs,
-  config,
   lib,
   osConfig,
   pkgs,
@@ -10,166 +9,170 @@
     if osConfig.myOptions.desktopTheme.zenBrowserShowBorders
     then 15
     else 0;
+  desktopFile = "zen.desktop";
 in {
-  config = lib.mkIf (osConfig.myOptions.bundles.desktopBase.enable && osConfig.myOptions.defaultApps.webBrowser.command == "zen-twilight") {
-    defaultApps.webBrowser.desktopFile = "zen.desktop";
-    home = {
-      sessionVariables = {
-        MOZ_USE_XINPUT2 = 1;
-        MOZ_LEGACY_PROFILES = 1;
+  home = {
+    sessionVariables = {
+      MOZ_USE_XINPUT2 = 1;
+      MOZ_LEGACY_PROFILES = 1;
+    };
+  };
+  stylix.targets.zen-browser = {
+    enable = false;
+    profileNames = ["hi"];
+  };
+  programs.zen-browser = {
+    enable = true;
+    setAsDefaultBrowser = true;
+    # nativeMessagingHosts = [pkgs.firefoxpwa]; broken?
+    policies = {
+      AutofillAddressEnabled = false;
+      AutofillCreditCardEnabled = false;
+      DisableAppUpdate = true;
+      DisableFeedbackCommands = true;
+      DisableFirefoxStudies = true;
+      DisablePocket = true;
+      DisableTelemetry = true;
+      DontCheckDefaultBrowser = true;
+      NoDefaultBookmarks = true;
+      OfferToSaveLogins = false;
+      EnableTrackingProtection = {
+        Value = true;
+        Locked = true;
+        Cryptomining = true;
+        Fingerprinting = true;
+      };
+      SanitizeOnShutdown = {
+        FormData = true;
+        Cache = true;
       };
     };
-    stylix.targets.zen-browser = {
-      enable = false;
-      profileNames = ["hi"];
-    };
-    programs.zen-browser = {
-      enable = true;
-      setAsDefaultBrowser = true;
-      # nativeMessagingHosts = [pkgs.firefoxpwa]; broken?
-      policies = {
-        AutofillAddressEnabled = false;
-        AutofillCreditCardEnabled = false;
-        DisableAppUpdate = true;
-        DisableFeedbackCommands = true;
-        DisableFirefoxStudies = true;
-        DisablePocket = true;
-        DisableTelemetry = true;
-        DontCheckDefaultBrowser = true;
-        NoDefaultBookmarks = true;
-        OfferToSaveLogins = false;
-        EnableTrackingProtection = {
-          Value = true;
-          Locked = true;
-          Cryptomining = true;
-          Fingerprinting = true;
-        };
-        SanitizeOnShutdown = {
-          FormData = true;
-          Cache = true;
-        };
-      };
-      profiles.hi = {
-        extensions.packages = with inputs.firefox-addons.packages.${pkgs.stdenv.hostPlatform.system};
-          lib.mkMerge [
-            [
-              ublock-origin
-              sponsorblock
-              stylus
-              violentmonkey
-              localcdn
-              clearurls
-              floccus
-              control-panel-for-twitter
-              keepassxc-browser
-            ]
-            (lib.mkIf osConfig.myOptions.hardwareFeatures.h264ify.enable [enhanced-h264ify])
-          ];
-        mods = [
-          # "1b88a6d1-d931-45e8-b6c3-bfdca2c7e9d6" # remove tab x
-          # "a6335949-4465-4b71-926c-4a52d34bc9c0" # better find bar
-          # "b0f635d7-c3bf-4709-af68-4712f0e5b2e5" # cleaner bookmark menu
-          # "1e9f3101-210b-4ff5-8830-434e4919100d" # better letterboxing
-          # "6c122084-c4ec-4c9e-8cc5-3d87c3a089cb" # navbar margin
+    profiles.hi = {
+      extensions.packages = with inputs.firefox-addons.packages.${pkgs.stdenv.hostPlatform.system};
+        lib.mkMerge [
+          [
+            ublock-origin
+            sponsorblock
+            stylus
+            violentmonkey
+            localcdn
+            clearurls
+            floccus
+            control-panel-for-twitter
+            keepassxc-browser
+          ]
+          (lib.mkIf osConfig.myOptions.hardwareFeatures.h264ify.enable [enhanced-h264ify])
         ];
-        search = {
-          force = true;
-          default = "ddg";
-        };
-        settings = {
-          "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
-          "zen.theme.use-system-colors" = true;
-          "zen.theme.gradient.show-custom-colors" = false;
-          "zen.theme.gradient" = false;
-          "zen.workspaces.continue-where-left-off" = true;
-          "zen.workspaces.natural-scroll" = true;
-          "zen.view.compact.hide-tabbar" = true;
-          "zen.view.compact.hide-toolbar" = true;
-          "zen.view.compact.animate-sidebar" = false;
-          "zen.welcome-screen.seen" = true;
-          "zen.urlbar.behavior" = "float";
-          "zen.theme.content-element-separation" = borders;
-          "zen.view.experimental-no-window-controls" = true;
-          "zen.urlbar.replace-newtab" = false;
-          "zen.view.hide-window-controls" = true;
+      mods = [
+        # "1b88a6d1-d931-45e8-b6c3-bfdca2c7e9d6" # remove tab x
+        # "a6335949-4465-4b71-926c-4a52d34bc9c0" # better find bar
+        # "b0f635d7-c3bf-4709-af68-4712f0e5b2e5" # cleaner bookmark menu
+        # "1e9f3101-210b-4ff5-8830-434e4919100d" # better letterboxing
+        # "6c122084-c4ec-4c9e-8cc5-3d87c3a089cb" # navbar margin
+      ];
+      search = {
+        force = true;
+        default = "ddg";
+      };
+      settings = {
+        "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
+        "zen.theme.use-system-colors" = true;
+        "zen.theme.gradient.show-custom-colors" = false;
+        "zen.theme.gradient" = false;
+        "zen.workspaces.continue-where-left-off" = true;
+        "zen.workspaces.natural-scroll" = true;
+        "zen.view.compact.hide-tabbar" = true;
+        "zen.view.compact.hide-toolbar" = true;
+        "zen.view.compact.animate-sidebar" = false;
+        "zen.welcome-screen.seen" = true;
+        "zen.urlbar.behavior" = "float";
+        "zen.theme.content-element-separation" = borders;
+        "zen.view.experimental-no-window-controls" = true;
+        "zen.urlbar.replace-newtab" = false;
+        "zen.view.hide-window-controls" = true;
 
-          "browser.aboutConfig.showWarning" = false;
-          "browser.tabs.warnOnClose" = false;
-          "media.videocontrols.picture-in-picture.video-toggle.enabled" = true;
-          # Disable swipe gestures (Browser:BackOrBackDuplicate, Browser:ForwardOrForwardDuplicate)
-          "browser.gesture.swipe.left" = "";
-          "browser.gesture.swipe.right" = "";
-          "browser.tabs.hoverPreview.enabled" = true;
-          "browser.newtabpage.activity-stream.feeds.topsites" = false;
-          "browser.topsites.contile.enabled" = false;
+        "browser.aboutConfig.showWarning" = false;
+        "browser.tabs.warnOnClose" = false;
+        "media.videocontrols.picture-in-picture.video-toggle.enabled" = true;
+        # Disable swipe gestures (Browser:BackOrBackDuplicate, Browser:ForwardOrForwardDuplicate)
+        "browser.gesture.swipe.left" = "";
+        "browser.gesture.swipe.right" = "";
+        "browser.tabs.hoverPreview.enabled" = true;
+        "browser.newtabpage.activity-stream.feeds.topsites" = false;
+        "browser.topsites.contile.enabled" = false;
 
-          "privacy.resistFingerprinting" = false;
-          # "privacy.resistFingerprinting.randomization.canvas.use_siphash" = true;
-          # "privacy.resistFingerprinting.randomization.daily_reset.enabled" = true;
-          # "privacy.resistFingerprinting.randomization.daily_reset.private.enabled" = true;
-          # "privacy.resistFingerprinting.block_mozAddonManager" = true;
-          "privacy.spoof_english" = 1;
+        "privacy.resistFingerprinting" = false;
+        # "privacy.resistFingerprinting.randomization.canvas.use_siphash" = true;
+        # "privacy.resistFingerprinting.randomization.daily_reset.enabled" = true;
+        # "privacy.resistFingerprinting.randomization.daily_reset.private.enabled" = true;
+        # "privacy.resistFingerprinting.block_mozAddonManager" = true;
+        "privacy.spoof_english" = 1;
 
-          "privacy.firstparty.isolate" = true;
-          "network.cookie.cookieBehavior" = 5;
-          "dom.battery.enabled" = false;
+        "privacy.firstparty.isolate" = true;
+        "network.cookie.cookieBehavior" = 5;
+        "dom.battery.enabled" = false;
 
-          "gfx.webrender.all" = true;
-          "network.http.http3.enabled" = true;
-          "network.socket.ip_addr_any.disabled" = true; # disallow bind to 0.0.0.0
+        "gfx.webrender.all" = true;
+        "network.http.http3.enabled" = true;
+        "network.socket.ip_addr_any.disabled" = true; # disallow bind to 0.0.0.0
 
-          # fastfox
-          "gfx.content.skia-font-cache-size" = 32;
-          "gfx.canvas.accelerated.cache-items" = 32768;
-          "gfx.canvas.accelerated.cache-size" = 4096;
-          "webgl.max-size" = 16384;
-          "browser.cache.disk.enable" = false;
-          "browser.cache.memory.capacity" = 131072;
-          "browser.cache.memory.max_entry_size" = 20480;
-          "browser.sessionhistory.max_total_viewers" = 4;
-          "browser.sessionstore.max_tabs_undo" = 10;
-          "media.memory_cache_max_size" = 262144;
-          "media.memory_caches_combined_limit_kb" = 1048576;
-          "media.cache_readahead_limit" = 600;
-          "media.cache_resume_threshold" = 300;
-          "image.cache.size" = 10485760;
-          "image.mem.decode_bytes_at_a_time" = 65536;
-          "network.http.max-connections" = 1800;
-          "network.http.max-persistent-connections-per-server" = 10;
-          "network.http.request.max-start-delay" = 5;
-          "network.http.pacing.requests.enabled" = false;
-          "network.dnsCacheEntries" = 10000;
-          "network.dnsCacheExpiration" = 3600;
-          "network.ssl_tokens_cache_capacity" = 10240;
-          "network.http.speculative-parallel-limit" = 0;
-          "network.dns.disablePrefetch" = true;
-          "network.dns.disablePrefetchFromHTTPS" = true;
-          "browser.urlbar.speculativeConnect.enabled" = false;
-          "browser.places.speculativeConnect.enabled" = false;
-          "network.prefetch-next" = false;
-          "network.predictor.enabled" = false;
+        # fastfox
+        "gfx.content.skia-font-cache-size" = 32;
+        "gfx.canvas.accelerated.cache-items" = 32768;
+        "gfx.canvas.accelerated.cache-size" = 4096;
+        "webgl.max-size" = 16384;
+        "browser.cache.disk.enable" = false;
+        "browser.cache.memory.capacity" = 131072;
+        "browser.cache.memory.max_entry_size" = 20480;
+        "browser.sessionhistory.max_total_viewers" = 4;
+        "browser.sessionstore.max_tabs_undo" = 10;
+        "media.memory_cache_max_size" = 262144;
+        "media.memory_caches_combined_limit_kb" = 1048576;
+        "media.cache_readahead_limit" = 600;
+        "media.cache_resume_threshold" = 300;
+        "image.cache.size" = 10485760;
+        "image.mem.decode_bytes_at_a_time" = 65536;
+        "network.http.max-connections" = 1800;
+        "network.http.max-persistent-connections-per-server" = 10;
+        "network.http.request.max-start-delay" = 5;
+        "network.http.pacing.requests.enabled" = false;
+        "network.dnsCacheEntries" = 10000;
+        "network.dnsCacheExpiration" = 3600;
+        "network.ssl_tokens_cache_capacity" = 10240;
+        "network.http.speculative-parallel-limit" = 0;
+        "network.dns.disablePrefetch" = true;
+        "network.dns.disablePrefetchFromHTTPS" = true;
+        "browser.urlbar.speculativeConnect.enabled" = false;
+        "browser.places.speculativeConnect.enabled" = false;
+        "network.prefetch-next" = false;
+        "network.predictor.enabled" = false;
 
-          # securefox
-          "browser.contentblocking.category" = "strict";
-          "privacy.trackingprotection.allow_list.baseline.enabled" = true;
-          "privacy.trackingprotection.allow_list.convenience.enabled" = true;
-          "security.OCSP.enabled" = 0;
-          "security.pki.crlite_mode" = 2;
-          "browser.sessionstore.interval" = 60000;
-          "signon.formlessCapture.enabled" = false;
-          "signon.privateBrowsingCapture.enabled" = false;
-          "network.auth.subresource-http-auth-allow" = 1;
-          "editor.truncate_user_pastes" = false;
-          "network.http.referer.XOriginTrimmingPolicy" = 2;
-          "permissions.default.geo" = 2;
-          "permissions.default.desktop-notification" = 2;
-          "geo.provider.network.url" = "https://beacondb.net/v1/geolocate";
-          "browser.search.update" = false;
-          "permissions.manager.defaultsUrl" = "";
-          "browser.newtabpage.activity-stream.default.sites" = true;
-          "dom.text_fragments.create_text_fragment.enabled" = true;
-        };
+        # securefox
+        "browser.contentblocking.category" = "strict";
+        "privacy.trackingprotection.allow_list.baseline.enabled" = true;
+        "privacy.trackingprotection.allow_list.convenience.enabled" = true;
+        "security.OCSP.enabled" = 0;
+        "security.pki.crlite_mode" = 2;
+        "browser.sessionstore.interval" = 60000;
+        "signon.formlessCapture.enabled" = false;
+        "signon.privateBrowsingCapture.enabled" = false;
+        "network.auth.subresource-http-auth-allow" = 1;
+        "editor.truncate_user_pastes" = false;
+        "network.http.referer.XOriginTrimmingPolicy" = 2;
+        "permissions.default.geo" = 2;
+        "permissions.default.desktop-notification" = 2;
+        "geo.provider.network.url" = "https://beacondb.net/v1/geolocate";
+        "browser.search.update" = false;
+        "permissions.manager.defaultsUrl" = "";
+        "browser.newtabpage.activity-stream.default.sites" = true;
+        "dom.text_fragments.create_text_fragment.enabled" = true;
       };
     };
+  };
+  xdg.mimeApps.defaultApplications = {
+    "x-scheme-handler/https" = [desktopFile];
+    "x-scheme-handler/http" = [desktopFile];
+    "x-scheme-handler/ftp" = [desktopFile];
+    "x-scheme-handler/mailto" = [desktopFile];
   };
 }
