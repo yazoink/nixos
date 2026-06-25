@@ -30,18 +30,13 @@
 
   networking.hostName = "interzone";
 
-  # nixpkgs.config.permittedInsecurePackages = ["intel-media-sdk-23.2.2"];
-
   hardware.cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
-
-  #environment.sessionVariables = {
-  #  LIBVA_DRIVER_NAME = "i965";
-  #};
 
   boot.kernelParams = ["i915.enable_rc6=7"];
 
   hardware.graphics = {
     enable = true;
+    package = pkgs-stable.mesa;
     extraPackages = with pkgs; [
       intel-vaapi-driver
       libvdpau-va-gl

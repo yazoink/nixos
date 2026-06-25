@@ -99,7 +99,7 @@ in {
     menu.items.padding.x: 10
     menu.items.padding.y: 5
     menu.separator.width: 1
-    menu.separator.padding.width: 5
+    menu.separator.padding.width: 0
     menu.separator.padding.height: 0
     menu.separator.color: #${base16Scheme.base01}
     menu.title.bg.color: #${base16Scheme.base01}
@@ -116,8 +116,8 @@ in {
     # example 50% or 75% instead of 600, max 100%
     osd.window-switcher.style-classic.width: 600
 
-    osd.window-switcher.style-classic.padding: 5
-    osd.window-switcher.style-classic.item.padding.x: 10
+    osd.window-switcher.style-classic.padding: 4
+    osd.window-switcher.style-classic.item.padding.x: 12
     osd.window-switcher.style-classic.item.padding.y: 1
     osd.window-switcher.style-classic.item.active.border.width: 0
     osd.window-switcher.style-classic.item.active.border.color: #706f6d
@@ -126,14 +126,14 @@ in {
     # osd.window-switcher.style-classic.item.icon.size: 50
 
     osd.window-switcher.style-thumbnail.width.max: 80%
-    osd.window-switcher.style-thumbnail.padding: 5
+    osd.window-switcher.style-thumbnail.padding: 4
     osd.window-switcher.style-thumbnail.item.width: 300
     osd.window-switcher.style-thumbnail.item.height: 250
-    osd.window-switcher.style-thumbnail.item.padding: 10
+    osd.window-switcher.style-thumbnail.item.padding: 8
     osd.window-switcher.style-thumbnail.item.active.border.width: 0
     osd.window-switcher.style-thumbnail.item.active.border.color: #706f6d
     osd.window-switcher.style-thumbnail.item.active.bg.color: #${base16Scheme.base01}
-    osd.window-switcher.style-thumbnail.item.icon.size: 60
+    osd.window-switcher.style-thumbnail.item.icon.size: 52
 
     osd.window-switcher.preview.border.width: 1
     osd.window-switcher.preview.border.color: #${base16Scheme.${osConfig.desktopTheme.base16Accent}}
