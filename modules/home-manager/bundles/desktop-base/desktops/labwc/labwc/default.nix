@@ -37,13 +37,17 @@ in
         swaybg
         libnotify
       ];
+      home.file.".local/bin/menu-gen.sh".text = ''
+        #!/usr/bin/env bash
+        ${pkgs.labwc-menu-generator}/bin/labwc-menu-generator -I -d > /home/${osConfig.myOptions.userAccount.username}/.config/labwc/menu.xml
+      '';
       systemd.user.services.labwc-menu-gen = {
         Unit = {
           Description = "Generates labwc root menu";
         };
         Service = {
           Type = "oneshot";
-          ExecStart = "${lib.getExe pkgs.labwc-menu-generator} > /home/${osConfig.myOptions.userAccount.username}/.config/labwc/menu.xml";
+          ExecStart = "${pkgs.bash}/bin/bash /home/${osConfig.myOptions.userAccount.username}/.local/bin/menu-gen.sh";
         };
         Install = {
           WantedBy = ["default.target"];
