@@ -178,22 +178,12 @@
               default = true;
               description = "hyprland desktop";
             };
-            swayosd.enable = lib.mkOption {
-              type = lib.types.bool;
-              default = true;
-              description = "enable swayosd";
-            };
           };
           labwc = {
             enable = lib.mkOption {
               type = lib.types.bool;
               default = false;
               description = "labwc desktop";
-            };
-            swayosd.enable = lib.mkOption {
-              type = lib.types.bool;
-              default = true;
-              description = "enable swayosd";
             };
           };
           labwc-glass = {

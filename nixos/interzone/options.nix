@@ -46,15 +46,15 @@
           size = 11;
         };
         terminal = {
-          # name = "Aporetic Serif Mono";
-          name = "Terminess Nerd Font";
+          name = "Aporetic Serif Mono";
+          # name = "Terminess Nerd Font";
           size = 12;
         };
       };
     };
     bundles = {
-      base.starshipFormat = 1;
-      # base.starshipFormat = 2;
+      # base.starshipFormat = 1;
+      base.starshipFormat = 2;
       desktopBase.silentBoot.enable = true;
       desktopBase.mpv.profile = "fast";
       desktopBase.plymouth.enable = false;
