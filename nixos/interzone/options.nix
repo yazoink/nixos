@@ -27,7 +27,7 @@
       colorscheme = "moonfly";
       wallpaper = {
         type = "color";
-        color.hex = "353C3F";
+        color.hex = "696969";
         image = {
           fillType = "fill";
           path = pkgs.fetchurl {

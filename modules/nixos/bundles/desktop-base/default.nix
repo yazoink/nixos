@@ -2,6 +2,7 @@
 {
   config,
   lib,
+  pkgs,
   ...
 }: {
   imports = [
@@ -31,5 +32,9 @@
       gnomeKeyring.enable = true;
       polkit.enable = true;
     };
+    environment.systemPackages = with pkgs; [
+      libva-utils
+      mesa-demos
+    ];
   };
 }

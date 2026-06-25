@@ -37,6 +37,18 @@ in
         swaybg
         libnotify
       ];
+      systemd.user.services.labwc-menu-gen = {
+        Unit = {
+          Description = "Generates labwc root menu";
+        };
+        Service = {
+          Type = "oneshot";
+          ExecStart = "${lib.getExe pkgs.labwc-menu-generator} > /home/${osConfig.userAccount.username}/.config/labwc/menu.xml";
+        };
+        Install = {
+          WantedBy = ["default.target"];
+        };
+      };
       wayland.windowManager.labwc = lib.mkMerge [
         {
           enable = true;
