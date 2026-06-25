@@ -15,9 +15,7 @@
       };
     };
   };
-  config = {
-    imports = [
-      ./stylix
-    ];
-  };
+  imports = [
+    ./stylix
+  ];
 }
