@@ -18,12 +18,12 @@ in {
           package = osConfig.desktopTheme.stylix.icons.package;
         };
       }
-      (import ./gtk {inherit config osConfig;})
-      (import ./qt {inherit config pkgs osConfig;})
+      (import ./gtk {inherit config osConfig lib;})
+      (import ./qt {inherit config pkgs osConfig lib;})
 
-      (import ./imv {inherit config pkgs osConfig;})
-      (import ./kitty {inherit config pkgs osConfig;})
-      (import ./firefox {inherit config pkgs osConfig;})
+      (import ./imv {inherit config pkgs osConfig lib;})
+      (import ./kitty {inherit config pkgs osConfig lib;})
+      (import ./firefox {inherit config pkgs osConfig lib;})
     ]
   );
 }
