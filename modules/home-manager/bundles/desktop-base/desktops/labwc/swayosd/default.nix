@@ -18,8 +18,8 @@ in {
   xdg.configFile."swayosd/style.css".text = ''
     window#osd {
       padding: 0px;
-      padding: 10px 15px;
-      border-radius: 999px;
+      padding: 8px 16px;
+      border-radius: 16px;
       background-color: #${config.desktopTheme.rice.labwc.barColor};
       border: 1px solid #${base16Scheme.base01};
     }
