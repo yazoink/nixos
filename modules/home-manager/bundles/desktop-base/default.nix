@@ -6,7 +6,7 @@
   inputs,
   ...
 }:
-lib.mkMerge (lib.mkIf osConfig.myOptions.bundles.desktopBase.enable [
+lib.mkIf osConfig.myOptions.bundles.desktopBase.enable (lib.mkMerge [
   {
     bundles.desktopBase = builtins.trace "enabled desktopBase" {
       xdg.enable = true;
