@@ -7,7 +7,7 @@
 }: let
   inherit (osConfig.myOptions.desktopTheme) terminalPadding;
 in {
-  config = lib.mkIf (osConfig.myOptions.bundles.desktopBase.enable && (osConfig.myOptions.defaultApps.terminal.command == "kitty" || osConfig.myOptions.defaultApps.terminal.command == "kitty")) {
+  config = lib.mkIf (osConfig.myOptions.bundles.desktopBase.enable && (osConfig.myOptions.defaultApps.terminal.command == "kitty")) {
     # home.packages = with pkgs; [ueberzugpp];
     programs.kitty = {
       enable = true;
@@ -21,10 +21,6 @@ in {
         window_padding_width = terminalPadding;
         single_window_padding_width = terminalPadding;
         confirm_os_window_close = 0;
-        text_composition_strategy =
-          if (config.stylix.polarity == "light")
-          then "legacy"
-          else "platform";
       };
     };
   };

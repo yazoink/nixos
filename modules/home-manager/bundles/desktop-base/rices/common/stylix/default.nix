@@ -5,7 +5,9 @@
   lib,
   config,
   ...
-}: {
+}: let
+  inherit (osConfig.myOptions) bundles defaultApps;
+in {
   config = lib.mkIf osConfig.desktopTheme.stylix.enable (
     lib.mkMerge [
       {
@@ -18,7 +20,10 @@
       }
       (import ./gtk {inherit config osConfig;})
       (import ./qt {inherit config pkgs osConfig;})
-      (import ./zathura {inherit lib config pkgs osConfig;})
+
+      (lib.mkIf (bundles.desktopBase.enable && defaultApps.imageViewer.command == "imv") import ./imv {inherit config pkgs osConfig;})
+      (lib.mkIf (bundles.desktopBase.enable && defaultApps.terminal.command == "kitty") import ./kitty {inherit config pkgs osConfig;})
+      (lib.mkIf (bundles.desktopBase.enable && defaultApps.webBrowser.command == "firefox") import ./firefox {inherit config pkgs osConfig;})
     ]
   );
 }

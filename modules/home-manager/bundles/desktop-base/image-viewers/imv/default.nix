@@ -10,12 +10,11 @@
       enable = true;
       settings = {
         options = {
-          background = config.stylix.base16Scheme.base00;
           fullscreen = false;
           width = 640;
           height = 480;
           overlay = false;
-          overlay_font = "${config.stylix.fonts.sansSerif.name}:${builtins.toString config.stylix.fonts.sizes.applications}";
+          overlay_font = "sans:${builtins.toString config.gtk.font.size}";
           scaling_mode = "full";
         };
         aliases.x = "close";
