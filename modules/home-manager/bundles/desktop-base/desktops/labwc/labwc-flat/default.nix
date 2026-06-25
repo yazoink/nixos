@@ -23,7 +23,6 @@ in {
     */
     (import ./eww {inherit config osConfig lib pkgs;})
     (import ./mako {inherit config osConfig lib pkgs;}) # either fnott or mako
-    (import ./swayidle {inherit config osConfig lib pkgs;})
     (import ./hyprlock {inherit config osConfig lib pkgs;})
     (import ./swayosd {inherit config osConfig lib pkgs;})
     (import ./wofi {inherit config osConfig lib pkgs;})
