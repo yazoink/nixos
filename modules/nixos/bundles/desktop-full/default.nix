@@ -1,23 +1,14 @@
-# fully featured desktop
 {
-  config,
   lib,
+  pkgs,
+  config,
+  inputs,
+  pkgs-stable,
   ...
-}: {
-  imports = [
-    ./gamemode
-    ./mpd
-    ./mullvad
-    ./printing
-  ];
-
-  config = lib.mkIf config.myOptions.bundles.desktopFull.enable {
-    myOptions.bundles.desktopBase.enable = true;
-    bundles.desktopFull = {
-      gamemode.enable = true;
-      mpd.enable = true;
-      mullvad.enable = true;
-      printing.enable = true;
-    };
-  };
-}
+}:
+lib.mkIf config.myOptions.bundles.desktopFull.enable (lib.mkMerge [
+  (import ./gamemode {inherit config lib pkgs inputs pkgs-stable;})
+  (import ./mpd {inherit config lib pkgs inputs pkgs-stable;})
+  (import ./mullvad {inherit config lib pkgs inputs pkgs-stable;})
+  (import ./printing {inherit config lib pkgs inputs pkgs-stable;})
+])
