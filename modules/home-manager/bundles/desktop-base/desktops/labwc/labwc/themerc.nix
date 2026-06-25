@@ -21,12 +21,14 @@ in {
     # The global padding.{width,height} of openbox are not supported because
     # the default labwc button geometry deviates from that of openbox
     #
-    window.titlebar.padding.width: 12
-    window.titlebar.padding.height: 12
+    window.titlebar.padding.width: 8
+    window.titlebar.padding.height: 8
 
     # window border
     window.active.border.color: #${base16Scheme.base01}
     window.inactive.border.color: #${base16Scheme.base01}
+
+    window.*.shadow.size: 16
 
     # ToggleKeybinds status indicator
     window.active.indicator.toggled-keybind.color: #${base16Scheme.base08}
