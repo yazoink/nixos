@@ -9,20 +9,8 @@
   imports = [
     ./hardware-configuration.nix
     ./options.nix
-    ../../modules/nixos
     # inputs.nixos-hardware.nixosModules.lenovo-thinkpad-x220
   ];
-
-  home-manager = {
-    extraSpecialArgs = {inherit inputs pkgs-stable;};
-    useGlobalPkgs = true;
-    useUserPackages = true;
-    users."${config.myOptions.userAccount.username}" = {
-      imports = [
-        ../../home-manager
-      ];
-    };
-  };
 
   environment.systemPackages = with pkgs; [prismlauncher];
 

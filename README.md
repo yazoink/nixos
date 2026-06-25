@@ -2,6 +2,30 @@
 
 My NixOS desktop configs with home-manager.
 
+## Structure
+
+```
+nixos/
+|_ default.nix -- general global configs
+|_ options/ -- declaration of system config options (set in /hosts/<hostname>/options.nix)
+hosts/ -- host configs
+|_ <hostname>
+|  |_ default.nix -- general host config (i.e. graphics drivers, hostname)
+|  |_ hardware-configuration.nix -- generated hardware config
+|  |_ options.nix -- system configuration options (declared in /nixos/options)
+home-manager/ -- general home-manager config
+modules/ -- system modules
+|_ home-manager/ -- home-manager modules
+|  |_ bundles/ -- bundles of modules that can be toggled in /hosts/<hostname>/options.nix
+|  |  |_ <bundle>/
+|  |  |  |_ <module>/
+|  |  |  |_ <module>/
+|  |_ features/ -- misc modules that can be toggled in /hosts/<hostname>/options.nix
+|  |  |_ <module>/
+|  |  |_ <module>/
+
+```
+
 ## Rices
 
 ### Labwc

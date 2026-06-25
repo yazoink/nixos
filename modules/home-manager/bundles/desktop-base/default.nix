@@ -17,7 +17,7 @@ lib.mkIf osConfig.myOptions.bundles.desktopBase.enable (lib.mkMerge [
   (import ./gui-text-editors {inherit osConfig config lib pkgs inputs;})
   (import ./image-viewers {inherit osConfig config lib pkgs inputs;})
   (import ./media-players {inherit osConfig config lib pkgs inputs;})
-  (import ./rices {inherit osConfig config lib pkgs inputs;})
+  (import ./desktops {inherit osConfig config lib pkgs inputs;})
   (import ./terminals {inherit osConfig config lib pkgs inputs;})
   (import ./web-browsers {inherit osConfig config lib pkgs inputs;})
   (import ./xdg {inherit osConfig config lib pkgs inputs;})

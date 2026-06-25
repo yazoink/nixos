@@ -19,5 +19,5 @@ in
     (import ./fonts {inherit config lib pkgs inputs pkgs-stable;})
     (import ./gnome-keyring {inherit config lib pkgs inputs pkgs-stable;})
     (import ./polkit {inherit config lib pkgs inputs pkgs-stable;})
-    (import ./rices {inherit config lib pkgs inputs pkgs-stable;})
+    (import ./desktops {inherit config lib pkgs inputs pkgs-stable;})
   ])

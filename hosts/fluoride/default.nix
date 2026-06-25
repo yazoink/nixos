@@ -9,22 +9,7 @@
   imports = [
     ./hardware-configuration.nix
     ./options.nix
-    ../../modules/nixos
-    inputs.home-manager.nixosModules.home-manager
-    inputs.stylix.nixosModules.stylix
-    inputs.sops-nix.nixosModules.sops
   ];
-
-  home-manager = {
-    useGlobalPkgs = true;
-    useUserPackages = true;
-    extraSpecialArgs = {inherit inputs pkgs-stable;};
-    users."${config.myOptions.userAccount.username}" = {
-      imports = [
-        ../../home-manager
-      ];
-    };
-  };
 
   boot = {
     kernelParams = ["amd_iommu=on"];
