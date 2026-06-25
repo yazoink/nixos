@@ -18,10 +18,6 @@ in
     (import ./file-managers {inherit config lib pkgs inputs pkgs-stable;})
     (import ./fonts {inherit config lib pkgs inputs pkgs-stable;})
     (import ./gnome-keyring {inherit config lib pkgs inputs pkgs-stable;})
-    (lib.mkIf desktopBase.plymouth.enable
-      (import ./plymouth {inherit config lib pkgs inputs pkgs-stable;}))
     (import ./polkit {inherit config lib pkgs inputs pkgs-stable;})
     (import ./rices {inherit config lib pkgs inputs pkgs-stable;})
-    (lib.mkIf desktopBase.silentBoot.enable
-      (import ./silent-boot {inherit config lib pkgs inputs pkgs-stable;}))
   ])

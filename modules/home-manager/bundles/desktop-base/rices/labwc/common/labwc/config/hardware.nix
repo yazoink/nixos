@@ -1,11 +1,11 @@
 {osConfig, ...}: let
-  inherit (osConfig.myOptions.hardwareFeatures.laptop) labwcTouchpadScrollFactor;
+  inherit (osConfig.myOptions.hardwareFeatures.laptop) touchpadScrollFactor;
 in {
   libinput = {
     device = [
       {
         "@category" = "touchpad";
-        scrollFactor = labwcTouchpadScrollFactor;
+        scrollFactor = touchpadScrollFactor;
       }
     ];
   };

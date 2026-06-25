@@ -53,7 +53,6 @@
     bundles = {
       # base.starshipFormat = 1;
       base.starshipFormat = 2;
-      desktopBase.silentBoot.enable = true;
       desktopBase.mpv.profile = "fast";
       desktopBase.plymouth.enable = false;
       # desktopBase.enable = true;
@@ -76,8 +75,7 @@
       h264ify.enable = true;
       laptop = {
         enable = true;
-        hyprlandTouchpadScrollFactor = 0.15;
-        labwcTouchpadScrollFactor = 0.15;
+        TouchpadScrollFactor = 0.15;
         batteryName = "BAT0";
       };
     };

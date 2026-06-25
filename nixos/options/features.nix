@@ -12,6 +12,14 @@
       type = lib.types.bool;
       default = false;
     };
+    plymouth.enable = lib.mkOption {
+      type = lib.types.bool;
+      default = false;
+    };
+    silentBoot.enable = lib.mkOption {
+      type = lib.types.bool;
+      default = true;
+    };
     wine.enable = lib.mkOption {
       type = lib.types.bool;
       default = false;

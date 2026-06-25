@@ -9,6 +9,12 @@
   inherit (config.myOptions) features hardwareFeatures;
 in
   lib.mkMerge [
+    (lib.mkIf features.silentBoot.enable
+      (import ./silent-boot {inherit pkgs-stable config lib pkgs inputs;}))
+
+    (lib.mkIf features.plymouth.enable
+      (import ./plymouth {inherit pkgs-stable config lib pkgs inputs;}))
+
     (lib.mkIf features.retroarch.enable
       (import ./retroarch {inherit pkgs-stable config lib pkgs inputs;}))
 

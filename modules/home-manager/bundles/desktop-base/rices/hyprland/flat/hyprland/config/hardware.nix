@@ -6,7 +6,7 @@
   inherit (osConfig.networking) hostName;
   inherit
     (osConfig.myOptions.hardwareFeatures.laptop)
-    hyprlandTouchpadScrollFactor
+    touchpadScrollFactor
     isThinkPad
     ;
 in
@@ -19,7 +19,7 @@ in
         numlock_by_default = true;
         touchpad = {
           disable_while_typing = true;
-          scroll_factor = hyprlandTouchpadScrollFactor;
+          scroll_factor = touchpadScrollFactor;
         };
       };
     }

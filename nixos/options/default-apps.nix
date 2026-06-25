@@ -16,14 +16,14 @@
       command = lib.mkOption {
         type = lib.types.str;
         default = "vesktop";
-        description = "Options: vesktop, abaddon, dissent, legcord";
+        description = "Options: vesktop";
       };
     };
     guiTextEditor = {
       command = lib.mkOption {
         type = lib.types.str;
         default = "pluma";
-        description = "Options: pluma, codium";
+        description = "Options: pluma";
       };
     };
     documentReader = {
@@ -57,7 +57,7 @@
     terminal = {
       command = lib.mkOption {
         type = lib.types.str;
-        default = "kitty";
+        default = "foot";
         description = "Options: foot, footclient, alacritty, kitty";
       };
     };

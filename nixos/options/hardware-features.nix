@@ -64,11 +64,8 @@
         type = lib.types.bool;
         default = false;
       };
-      hyprlandTouchpadScrollFactor = lib.mkOption {
-        type = lib.types.number;
-        default = 1;
-      };
-      labwcTouchpadScrollFactor = lib.mkOption {
+      # used in hyprland and labwc
+      touchpadScrollFactor = lib.mkOption {
         type = lib.types.number;
         default = 1;
       };
