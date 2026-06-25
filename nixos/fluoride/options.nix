@@ -38,7 +38,6 @@
       colorscheme = "rose-pine";
       # colorscheme = "camellia";
       # colorscheme = "paradise";
-      rice.openbox.enable = false;
       rice.labwc-glass.enable = true;
       rice.hyprland-flat.enable = false;
       # name = "everblush";

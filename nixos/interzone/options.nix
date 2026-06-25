@@ -19,7 +19,6 @@
     };
     userAccount.username = "gene";
     desktopTheme = {
-      rice.openbox.enable = false;
       rice.labwc-glass.enable = false;
       rice.labwc-flat.enable = true;
       rice.hyprland-flat.enable = false;
