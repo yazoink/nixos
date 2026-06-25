@@ -51,6 +51,7 @@
       fluoride = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs system pkgs-stable;};
         modules = [
+          inputs.home-manager.nixosModules.home-manager
           ./options
           ./nixos/fluoride
         ];
@@ -60,6 +61,7 @@
       cyberia = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs system pkgs-stable;};
         modules = [
+          inputs.home-manager.nixosModules.home-manager
           ./options
           ./nixos/cyberia
         ];
@@ -69,6 +71,7 @@
       stardust = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs system pkgs-stable;};
         modules = [
+          inputs.home-manager.nixosModules.home-manager
           ./options
           ./nixos/stardust
         ];
@@ -77,6 +80,7 @@
       interzone = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs system pkgs-stable;};
         modules = [
+          inputs.home-manager.nixosModules.home-manager
           ./options
           ./nixos/interzone
         ];

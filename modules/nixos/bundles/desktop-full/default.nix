@@ -8,7 +8,7 @@
 }:
 lib.mkIf config.myOptions.bundles.desktopFull.enable (lib.mkMerge [
   {
-    myOptions.bundles.desktopBase.enable = true;
+    myOptions.bundles.desktopBase.enable = lib.mkForce true;
   }
   (import ./gamemode {inherit config lib pkgs inputs pkgs-stable;})
   (import ./mpd {inherit config lib pkgs inputs pkgs-stable;})

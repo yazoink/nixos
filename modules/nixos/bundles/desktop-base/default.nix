@@ -8,7 +8,7 @@
 }:
 lib.mkIf config.myOptions.bundles.desktopFull.enable (lib.mkMerge [
   {
-    myOptions.bundles.base.enable = true;
+    myOptions.bundles.base.enable = lib.mkForce true;
   }
   (import ./acpi {inherit config lib pkgs inputs pkgs-stable;})
   (import ./audio {inherit config lib pkgs inputs pkgs-stable;})
