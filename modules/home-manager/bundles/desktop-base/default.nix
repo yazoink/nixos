@@ -8,9 +8,6 @@
 }:
 lib.mkIf osConfig.myOptions.bundles.desktopBase.enable (lib.mkMerge [
   {
-    bundles.desktopBase = builtins.trace "enabled desktopBase" {
-      xdg.enable = true;
-    };
     home.packages = with pkgs; [keepassxc];
   }
   (import ./dconf {inherit osConfig config lib pkgs inputs;})
