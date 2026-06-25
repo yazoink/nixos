@@ -7,14 +7,6 @@
   ...
 }:
 lib.mkMerge [
-  {
-    stylix.icons = {
-      enable = true;
-      dark = osConfig.desktopTheme.stylix.icons.name;
-      light = osConfig.desktopTheme.stylix.icons.name;
-      package = osConfig.desktopTheme.stylix.icons.package;
-    };
-  }
   (import ./gtk {inherit config osConfig lib;})
   (import ./qt {inherit config pkgs osConfig lib;})
 

@@ -1,47 +1,12 @@
+# common configs
 {
-  imports = [
-    ./carob
-    ./caroline
-    ./manuscript
-    ./rose-pine
-    ./twilight
-    ./swamp
-    ./mountain
-    ./terracotta
-    ./atelier-savanna
-    ./darkmoss
-    ./gruvbox-dark-hard
-    ./gruvbox-material-dark-hard
-    ./biscuit-de-sol-dark
-    ./biscuit-de-sol-light
-    ./biscuit-de-mar-dark
-    ./biscuit-de-mar-light
-    ./everblush
-    ./levuaska
-    ./mountain-peek
-    ./black-metal-khold
-    ./oxocarbon
-    ./henna
-    ./paradise
-    ./jellybeans
-    ./far
-    ./haze
-    ./fyry
-    ./terracotta-light
-    ./rose-pine-dawn
-    ./vase
-    ./vesper
-    ./petrichor-dew
-    ./crayon
-    ./unnamed-1
-    ./moonfly
-    ./da-one-black
-    ./jardo-brighter
-    ./catppuccin-mocha
-    ./i-cant-believe-its-not-butter
-    ./idk_what_this_one_is_called
-    ./posterpole
-    ./camellia
-    ./saga
-  ];
-}
+  osConfig,
+  lib,
+  pkgs,
+  ...
+}: let
+  inherit (osConfig.myOptions.desktopTheme) colorscheme;
+in
+  lib.mkMerge [
+    (import ./${colorscheme} {inherit pkgs;})
+  ]

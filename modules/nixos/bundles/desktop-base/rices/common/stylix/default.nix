@@ -20,6 +20,12 @@
         grub.enable = false;
         qt.enable = false;
       };
+      icons = {
+        enable = true;
+        light = lib.mkDefault "Papirus";
+        dark = lib.mkDefault "Papirus";
+        package = lib.mkDefault pkgs.papirus-icon-theme;
+      };
       cursor = {
         size = lib.mkDefault 32;
         name = lib.mkDefault "Posy_Cursor";
