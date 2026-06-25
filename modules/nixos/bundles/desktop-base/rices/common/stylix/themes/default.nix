@@ -2,6 +2,7 @@
 {
   lib,
   pkgs,
+  config,
   ...
 }: let
   inherit (config.myOptions.desktopTheme) colorscheme;
