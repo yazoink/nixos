@@ -22,7 +22,7 @@
       ;:vexpand "true"
       :halign "start"
       :orientation "vertical"
-      :spacing 5
+      :spacing 4
       :space-evenly false
       :valign "center"
       :hexpand false
