@@ -13,7 +13,6 @@
   accentColor = colors.base0D;
 in {
   stylix.targets.firefox = {
-    enable = true;
     firefoxGnomeTheme.enable = true;
     profileNames = [username];
   };
