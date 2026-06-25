@@ -66,7 +66,7 @@ lib.mkIf osConfig.myOptions.bundles.desktopBase.enable (lib.mkMerge [
     (import ./web-browsers/librewolf {inherit osConfig config lib pkgs inputs;}))
   (lib.mkIf
     (osConfig.myOptions.defaultApps.webBrowser.command == "zen-twilight")
-    (import ./web-browsers/zen-twilight {inherit osConfig config lib pkgs inputs;}))
+    (import ./web-browsers/zen {inherit osConfig config lib pkgs inputs;}))
 
   # file managers
   (lib.mkIf
