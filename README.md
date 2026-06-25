@@ -24,13 +24,13 @@ modules/ -- system modules
 |  |  |_ <module>/
 |  |  |_ <module>/
 |_ nixos/ -- system modules
-|  |_ bundles/ -- bundles of modules that can be toggled in /hosts/<hostname>/options.nix
-|  |  |_ <bundle>/
-|  |  |  |_ <module>/
-|  |  |  |_ <module>/
-|  |_ features/ -- misc modules that can be toggled in /hosts/<hostname>/options.nix
-|  |  |_ <module>/
-|  |  |_ <module>/
+   |_ bundles/ -- bundles of modules that can be toggled in /hosts/<hostname>/options.nix
+   |  |_ <bundle>/
+   |  |  |_ <module>/
+   |  |  |_ <module>/
+   |_ features/ -- misc modules that can be toggled in /hosts/<hostname>/options.nix
+      |_ <module>/
+      |_ <module>/
 ```
 
 ## Rices
