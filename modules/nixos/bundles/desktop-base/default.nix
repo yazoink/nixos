@@ -22,6 +22,6 @@ in
       (import ./plymouth {inherit config lib pkgs inputs pkgs-stable;}))
     (import ./polkit {inherit config lib pkgs inputs pkgs-stable;})
     (import ./rices {inherit config lib pkgs inputs pkgs-stable;})
-    (lib.mkIf desktopBase.silent-boot.enable
+    (lib.mkIf desktopBase.silentBoot.enable
       (import ./silent-boot {inherit config lib pkgs inputs pkgs-stable;}))
   ])
