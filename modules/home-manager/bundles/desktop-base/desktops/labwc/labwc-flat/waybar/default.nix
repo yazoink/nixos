@@ -201,7 +201,7 @@
        "format": "",
        "tooltip": true,
        "tooltip-format": "Application menu (Mod+P, Mod+R)",
-       "on-click": "${../scripts/wofi.sh}"
+       "on-click": "${../../common/scripts/wofi.sh}"
     }
   '';
   quickAccessModuleLaptop = ''
