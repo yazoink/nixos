@@ -11,7 +11,6 @@
     then 15
     else 0;
   inherit (config.lib.stylix) colors;
-  inherit (osConfig.desktopTheme) base16Accent;
 in {
   config = lib.mkIf (osConfig.myOptions.bundles.desktopBase.enable && osConfig.myOptions.defaultApps.webBrowser.command == "zen-twilight") {
     defaultApps.webBrowser.desktopFile = "zen.desktop";

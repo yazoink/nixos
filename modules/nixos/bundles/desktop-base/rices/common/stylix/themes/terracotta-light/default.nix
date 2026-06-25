@@ -4,8 +4,6 @@
   ...
 }: {
   config = lib.mkIf (config.myOptions.bundles.desktopBase.enable && config.myOptions.desktopTheme.colorscheme == "terracotta-light") {
-    desktopTheme.base16Accent = "base0F";
-
     stylix = {
       polarity = "light";
       base16Scheme = {

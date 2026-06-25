@@ -1,8 +1,10 @@
-{pkgs, config, lib, ...}:
 {
+  pkgs,
+  config,
+  lib,
+  ...
+}: {
   config = lib.mkIf (config.myOptions.bundles.desktopBase.enable && config.myOptions.desktopTheme.colorscheme == "henna") {
-    desktopTheme.base16Accent = "base0C";
-
     stylix = {
       base16Scheme = {
         base00 = "10151a";

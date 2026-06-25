@@ -5,8 +5,7 @@
   ...
 }: {
   config = lib.mkIf (config.myOptions.bundles.desktopBase.enable && config.myOptions.desktopTheme.colorscheme == "catppuccin-mocha") {
-    desktopTheme.base16Accent = "base0D";
-    desktopTheme.icons = {
+    desktopTheme.stylix.icons = {
       name = "Papirus";
       package = pkgs.catppuccin-papirus-folders;
     };

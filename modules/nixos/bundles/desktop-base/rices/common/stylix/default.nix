@@ -5,18 +5,16 @@
   ...
 }: {
   options = {
-    base16Accent = lib.mkOption {
-      type = lib.types.str;
-      description = "options: base09, base0A, base0B, base0C, base0D, base0E, base0F";
-    };
-    icons = {
-      name = lib.mkOption {
-        type = lib.types.str;
-        default = "Papirus";
-      };
-      package = lib.mkOption {
-        type = lib.types.package;
-        default = pkgs.papirus-icon-theme;
+    desktopTheme.stylix = {
+      icons = {
+        name = lib.mkOption {
+          type = lib.types.str;
+          default = "Papirus";
+        };
+        package = lib.mkOption {
+          type = lib.types.package;
+          default = pkgs.papirus-icon-theme;
+        };
       };
     };
   };

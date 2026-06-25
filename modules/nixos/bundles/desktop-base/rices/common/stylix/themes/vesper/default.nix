@@ -5,8 +5,6 @@
   ...
 }: {
   config = lib.mkIf (config.myOptions.bundles.desktopBase.enable && config.myOptions.desktopTheme.colorscheme == "vesper") {
-    desktopTheme.base16Accent = "base0D";
-
     stylix = {
       base16Scheme = {
         base00 = "101010";

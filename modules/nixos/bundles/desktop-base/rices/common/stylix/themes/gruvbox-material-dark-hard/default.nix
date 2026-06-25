@@ -8,8 +8,7 @@
   cursors = pkgs.callPackage ./gruvbox-material-dark-hard-cursors.nix {};
 in {
   config = lib.mkIf (config.myOptions.bundles.desktopBase.enable && config.myOptions.desktopTheme.colorscheme == "gruvbox-material-dark-hard") {
-    desktopTheme.base16Accent = "base0D";
-    desktopTheme.icons = {
+    desktopTheme.stylix.icons = {
       name = "Gruvbox-Plus-Dark";
       package = pkgs.gruvbox-plus-icons;
     };

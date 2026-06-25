@@ -1,7 +1,7 @@
 # Documentation
 
-Mainly so I remember how this thing works.     
-     
+Mainly so I remember how this thing works.
+
 Basically, there are two "levels" of this config. The higher level consists of the custom configuration options declared in `options/default.nix` and set in `nixos/<hostname>/options.nix` and the lower level is everything else. The higher level allows for easy toggling and changing of anything that might need toggling or changing across the system. Ideally, once a host is set up, these are the only options that need to be touched for its configuration.
 
 ## Custom Options
@@ -23,22 +23,6 @@ In the case of the latter, the option should not be enabled in `modules/<home-ma
 Enables a module which serves as a utility for building the system (such as a script that's run on a rebuild to help configure a specific module).
 
 Depending on the module, `utils.<name>` and `bundles.<bundle>.<name>` may also contain other options such as `.package`, etc.
-
-### desktopTheme.base16Accent
-
-Sets the accent color for the base16 colorscheme used to to theme the desktop.
-This option is set for each individual theme in `modules/nixos/features/theme/themes/<name>/default.nix`.
-
-#### options:
-
-- base08
-- base09
-- base0A
-- base0B
-- base0C
-- base0D (default)
-- base0E
-- base0F
 
 ## How To Add a Host
 

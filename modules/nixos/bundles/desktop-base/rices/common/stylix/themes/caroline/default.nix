@@ -8,8 +8,7 @@
   carolineIcons = pkgs.callPackage ./caroline-icons.nix {};
 in {
   config = lib.mkIf (config.myOptions.bundles.desktopBase.enable && config.myOptions.desktopTheme.colorscheme == "caroline") {
-    desktopTheme.base16Accent = "base0D";
-    desktopTheme.icons = {
+    desktopTheme.stylix.icons = {
       name = "caroline-papirus-blue";
       package = carolineIcons;
     };

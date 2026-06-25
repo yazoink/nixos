@@ -5,8 +5,6 @@
   ...
 }: {
   config = lib.mkIf (config.myOptions.bundles.desktopBase.enable && config.myOptions.desktopTheme.colorscheme == "atelier-savanna") {
-    desktopTheme.base16Accent = "base0F";
-
     stylix = {
       base16Scheme = {
         base00 = "171C19";

@@ -7,8 +7,7 @@
   manuscriptTheme = pkgs.callPackage ./manuscript-theme.nix {};
 in {
   config = lib.mkIf (config.myOptions.bundles.desktopBase.enable && config.myOptions.desktopTheme.colorscheme == "manuscript") {
-    desktopTheme.base16Accent = "base0A";
-    desktopTheme.icons = {
+    desktopTheme.stylix.icons = {
       name = "Manuscript-Icons";
       package = manuscriptTheme;
     };

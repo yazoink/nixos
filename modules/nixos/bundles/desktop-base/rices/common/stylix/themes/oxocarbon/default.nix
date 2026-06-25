@@ -1,8 +1,10 @@
-{pkgs, config, lib, ...}:
 {
+  pkgs,
+  config,
+  lib,
+  ...
+}: {
   config = lib.mkIf (config.myOptions.bundles.desktopBase.enable && config.myOptions.desktopTheme.colorscheme == "oxocarbon") {
-    desktopTheme.base16Accent = "base09";
-
     stylix = {
       base16Scheme = {
         base00 = "161616";

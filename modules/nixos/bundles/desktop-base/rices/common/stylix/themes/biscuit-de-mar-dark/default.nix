@@ -8,8 +8,7 @@
   icons = pkgs.callPackage ./biscuit-icons.nix {};
 in {
   config = lib.mkIf (config.myOptions.bundles.desktopBase.enable && config.myOptions.desktopTheme.colorscheme == "biscuit-de-mar-dark") {
-    desktopTheme.base16Accent = "base0D";
-    desktopTheme.icons = {
+    desktopTheme.stylix.icons = {
       name = "papirus-biscuit-dark";
       package = icons;
     };

@@ -7,8 +7,7 @@
   carobTheme = pkgs.callPackage ./carob-theme.nix {};
 in {
   config = lib.mkIf (config.myOptions.bundles.desktopBase.enable && config.myOptions.desktopTheme.colorscheme == "carob") {
-    desktopTheme.base16Accent = "base0D";
-    desktopTheme.icons = {
+    desktopTheme.stylix.icons = {
       name = "Carob";
       package = carobTheme;
     };

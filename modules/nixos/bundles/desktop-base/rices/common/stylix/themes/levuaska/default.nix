@@ -8,8 +8,7 @@
   icons = pkgs.callPackage ./levuaska-icons.nix {};
 in {
   config = lib.mkIf (config.myOptions.bundles.desktopBase.enable && config.myOptions.desktopTheme.colorscheme == "levuaska") {
-    desktopTheme.base16Accent = "base0D";
-    desktopTheme.icons = {
+    desktopTheme.stylix.icons = {
       name = "Papirus-Levuaska";
       package = icons;
     };

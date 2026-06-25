@@ -9,8 +9,7 @@
   icons = pkgs.callPackage ./everblush-icons.nix {};
 in {
   config = lib.mkIf (config.myOptions.bundles.desktopBase.enable && config.myOptions.desktopTheme.colorscheme == "everblush") {
-    desktopTheme.base16Accent = "base0D";
-    desktopTheme.icons = {
+    desktopTheme.stylix.icons = {
       name = "Everblush-Icons";
       package = icons;
     };

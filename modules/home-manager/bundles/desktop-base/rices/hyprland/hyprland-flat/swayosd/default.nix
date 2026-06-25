@@ -28,7 +28,7 @@ in {
     }
 
     window#osd progress {
-      background-color: #${base16Scheme."${osConfig.desktopTheme.base16Accent}"};
+      background-color: #${base16Scheme.base0D};
     }
   '';
 }

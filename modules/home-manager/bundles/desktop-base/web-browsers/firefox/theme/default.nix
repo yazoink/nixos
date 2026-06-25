@@ -10,7 +10,7 @@
   };
   inherit (osConfig.myOptions.userAccount) username;
   inherit (config.lib.stylix) colors;
-  accentColor = colors.${osConfig.desktopTheme.base16Accent};
+  accentColor = colors.base0D;
 in {
   stylix.targets.firefox = {
     enable = true;

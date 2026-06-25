@@ -10,9 +10,9 @@
       {
         stylix.icons = {
           enable = true;
-          dark = osConfig.desktopTheme.icons.name;
-          light = osConfig.desktopTheme.icons.name;
-          package = osConfig.desktopTheme.icons.package;
+          dark = osConfig.desktopTheme.stylix.icons.name;
+          light = osConfig.desktopTheme.stylix.icons.name;
+          package = osConfig.desktopTheme.stylix.icons.package;
         };
       }
       (import ./gtk {inherit config osConfig;})

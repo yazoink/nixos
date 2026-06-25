@@ -331,7 +331,7 @@ in {
         @define-color unfocused #${base16Scheme.base04};
         @define-color urgent #${base16Scheme.base08};
         @define-color border #${base16Scheme.base01};
-        @define-color accent #${base16Scheme.${osConfig.desktopTheme.base16Accent}};
+        @define-color accent #${base16Scheme.base0D};
 
         * {
           all: unset;

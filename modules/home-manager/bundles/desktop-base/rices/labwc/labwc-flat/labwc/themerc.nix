@@ -3,7 +3,6 @@
   osConfig,
 }: let
   inherit (config.stylix) base16Scheme;
-  inherit (osConfig.desktopTheme) base16Accent;
 in {
   home.file.".themes/my-labwc/labwc".source = ./icons;
   home.file.".config/labwc/themerc-override".text = ''
@@ -138,7 +137,7 @@ in {
     osd.window-switcher.style-thumbnail.item.icon.size: 52
 
     osd.window-switcher.preview.border.width: 1
-    osd.window-switcher.preview.border.color: #${base16Scheme.${osConfig.desktopTheme.base16Accent}}
+    osd.window-switcher.preview.border.color: #${base16Scheme.base0D}
 
     osd.workspace-switcher.boxes.width: 20
     osd.workspace-switcher.boxes.height: 20
@@ -156,11 +155,11 @@ in {
     # snapping.overlay.region.border.enabled:
     # snapping.overlay.edge.border.enabled:
 
-    snapping.overlay.region.bg.color: #${base16Scheme.${base16Accent}}80
-    snapping.overlay.edge.bg.color: #${base16Scheme.${base16Accent}}80
+    snapping.overlay.region.bg.color: #${base16Scheme.base0D}80
+    snapping.overlay.edge.bg.color: #${base16Scheme.base0D}80
     snapping.overlay.region.border.width: 1
     snapping.overlay.edge.border.width: 1
-    snapping.overlay.region.border.color: #${base16Scheme.${base16Accent}}
-    snapping.overlay.edge.border.color: #${base16Scheme.${base16Accent}}
+    snapping.overlay.region.border.color: #${base16Scheme.base0D}
+    snapping.overlay.edge.border.color: #${base16Scheme.base0D}
   '';
 }
