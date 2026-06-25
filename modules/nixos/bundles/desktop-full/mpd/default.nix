@@ -1,6 +1,7 @@
 {
   pkgs,
   config,
+  ...
 }: let
   inherit (config.myOptions.userAccount) username;
 in {
