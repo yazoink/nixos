@@ -2,15 +2,19 @@
   osConfig,
   lib,
   pkgs,
+  config,
+  inputs,
   ...
 }: {
-  config = lib.mkIf osConfig.myOptions.bundles.desktopBase.enable {
-    bundles.desktopBase = builtins.trace "enabled desktopBase" {
-      direnv.enable = true;
-      xdg.enable = true;
+  config =
+    lib.mkIf osConfig.myOptions.bundles.desktopBase.enable
+    {
+      bundles.desktopBase = builtins.trace "enabled desktopBase" {
+        direnv.enable = true;
+        xdg.enable = true;
+      };
+      home.packages = with pkgs; [keepassxc];
     };
-    home.packages = with pkgs; [keepassxc];
-  };
 
   imports = [
     ./rices

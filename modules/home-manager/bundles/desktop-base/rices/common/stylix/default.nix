@@ -5,9 +5,7 @@
   lib,
   config,
   ...
-}: let
-  inherit (osConfig.myOptions) bundles defaultApps;
-in {
+}: {
   config = lib.mkIf osConfig.desktopTheme.stylix.enable (
     lib.mkMerge [
       {
@@ -23,7 +21,12 @@ in {
 
       (import ./imv {inherit config pkgs osConfig lib;})
       (import ./kitty {inherit config pkgs osConfig lib;})
-      (import ./firefox {inherit config pkgs osConfig lib;})
+      (lib.mkIf
+        (osConfig.defaultApps.webBrowser.command == "zen-twilight")
+        (import ./firefox {inherit config pkgs osConfig lib;}))
+      (lib.mkIf
+        (osConfig.defaultApps.webBrowser.command == "zen-twilight")
+        (import ./zen {inherit config pkgs osConfig lib;}))
     ]
   );
 }

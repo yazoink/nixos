@@ -10,6 +10,7 @@
   };
   inherit (osConfig.myOptions.userAccount) username;
   inherit (config.lib.stylix) colors;
+  inherit (osConfig.myOptions) defaultApps;
   accentColor = colors.base0D;
 in {
   stylix.targets.firefox = {
