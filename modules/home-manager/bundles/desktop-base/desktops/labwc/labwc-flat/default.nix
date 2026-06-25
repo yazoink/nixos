@@ -9,12 +9,6 @@
 }: let
   inherit (osConfig.myOptions.desktopTheme.rice) labwc;
 in {
-  options = {
-    desktopTheme.rice.labwc.barColor = lib.mkOption {
-      type = lib.types.str;
-      default = config.stylix.base16Scheme.base00;
-    };
-  };
   config = lib.mkIf labwc.enable (lib.mkMerge [
     (import ./eww {inherit config osConfig lib pkgs;})
     (import ./mako {inherit config osConfig lib pkgs;})
