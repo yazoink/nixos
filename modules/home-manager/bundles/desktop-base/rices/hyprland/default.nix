@@ -12,5 +12,5 @@ in
   lib.mkMerge [
     # flat
     (lib.mkIf hyprland-flat.enable
-      (import ./hyprland-flat {inherit osConfig config lib pkgs inputs;}))
+      (import ./flat {inherit osConfig config lib pkgs inputs;}))
   ]

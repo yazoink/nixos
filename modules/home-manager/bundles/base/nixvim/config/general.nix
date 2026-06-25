@@ -3,9 +3,7 @@
   config,
   lib,
   ...
-}: let
-  inherit (config.stylix) base16Scheme;
-in {
+}: {
   opts = {
     number = true;
     #relativenumber = true;

@@ -1,5 +1,5 @@
 {
-  config,
+  osConfig,
   lib,
   pkgs,
   ...
@@ -39,65 +39,54 @@
   };
   scripts = pkgs.callPackage ./scripts.nix {};
 in {
-  options = {
-    bundles.base.shellConfig.enable = lib.mkOption {
-      type = lib.types.bool;
-      default = false;
+  home.packages = [scripts];
+  programs.zsh = {
+    enable = true;
+    autocd = true;
+    autosuggestion.enable = true;
+    syntaxHighlighting.enable = true;
+    enableCompletion = true;
+    history.ignoreDups = true;
+    plugins = [
+      {
+        name = "zsh-nix-shell";
+        file = "nix-shell.plugin.zsh";
+        src = pkgs.fetchFromGitHub {
+          owner = "chisui";
+          repo = "zsh-nix-shell";
+          rev = "v0.8.0";
+          sha256 = "1lzrn0n4fxfcgg65v0qhnj7wnybybqzs4adz7xsrkgmcsr0ii8b7";
+        };
+      }
+    ];
+
+    initContent = ''
+      #PROMPT="%F{blue}>%f%F{red}>%f%F{yellow}>%f "
+      #eval "$(starship init zsh)"
+    '';
+
+    /*
+      oh-my-zsh = {
+      enable = true;
+      #theme = "robbyrussell";
+      plugins = [
+        "copyfile"
+        "copypath"
+        "colorize"
+        "colored-man-pages"
+      ];
     };
+    */
+
+    shellAliases = myAliases;
   };
 
-  imports = [
-    ./starship-formats
-  ];
-
-  config = lib.mkIf config.bundles.base.shellConfig.enable {
-    home.packages = [scripts];
-    programs.zsh = {
+  programs = {
+    starship = {
       enable = true;
-      autocd = true;
-      autosuggestion.enable = true;
-      syntaxHighlighting.enable = true;
-      enableCompletion = true;
-      history.ignoreDups = true;
-      plugins = [
+      enableZshIntegration = true;
+      settings = lib.mkMerge [
         {
-          name = "zsh-nix-shell";
-          file = "nix-shell.plugin.zsh";
-          src = pkgs.fetchFromGitHub {
-            owner = "chisui";
-            repo = "zsh-nix-shell";
-            rev = "v0.8.0";
-            sha256 = "1lzrn0n4fxfcgg65v0qhnj7wnybybqzs4adz7xsrkgmcsr0ii8b7";
-          };
-        }
-      ];
-
-      initContent = ''
-        #PROMPT="%F{blue}>%f%F{red}>%f%F{yellow}>%f "
-        #eval "$(starship init zsh)"
-      '';
-
-      /*
-        oh-my-zsh = {
-        enable = true;
-        #theme = "robbyrussell";
-        plugins = [
-          "copyfile"
-          "copypath"
-          "colorize"
-          "colored-man-pages"
-        ];
-      };
-      */
-
-      shellAliases = myAliases;
-    };
-
-    programs = {
-      starship = {
-        enable = true;
-        enableZshIntegration = true;
-        settings = {
           add_newline = true;
           command_timeout = 2500;
           directory = {
@@ -111,16 +100,17 @@ in {
           nix_shell = {
             symbol = " ";
           };
-        };
-      };
+        }
+        (import ./starship-formats {inherit osConfig lib;})
+      ];
+    };
 
-      eza = {
-        enable = true;
-        enableZshIntegration = true;
-        enableBashIntegration = false;
-        icons = "never";
-        git = true;
-      };
+    eza = {
+      enable = true;
+      enableZshIntegration = true;
+      enableBashIntegration = false;
+      icons = "never";
+      git = true;
     };
   };
 }

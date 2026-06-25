@@ -1,39 +1,14 @@
 {
-  pkgs,
   osConfig,
   lib,
+  pkgs,
+  config,
+  inputs,
   ...
-}: {
-  imports = [
-    ./btop
-    ./garfetch
-    ./git
-    ./nixvim
-    # ./pswdgen
-    ./pswdrs
-    ./shell-config
-    ./ssh
-    ./tmux
-    ./yazi
-    ./fastfetch
-  ];
-
-  config = lib.mkIf osConfig.myOptions.bundles.base.enable {
-    bundles.base = builtins.trace "home-manager base features set" {
-      btop.enable = true;
-      garfetch.enable = true;
-      git.enable = true;
-      nixvim.enable = true;
-      # pswdgen.enable = true;
-      pswdrs.enable = true;
-      shellConfig.enable = true;
-      tmux.enable = true;
-      yazi.enable = true;
-      fastfetch.enable = true;
-    };
-
+}:
+lib.mkIf osConfig.myOptions.bundles.desktopBase.enable (lib.mkMerge [
+  {
     home.packages = with pkgs; [
-      ### terminal utilities ###
       # tldr
       jq
       fzf
@@ -44,11 +19,21 @@
       s-tui
       stress
     ];
-
     xdg.configFile."nixpkgs/config.nix".text = ''
       {
         allowUnfree = true;
       }
     '';
-  };
-}
+  }
+  (import ./btop {inherit osConfig config lib pkgs inputs;})
+  (import ./fastfetch {inherit osConfig config lib pkgs inputs;})
+  (import ./garfetch {inherit osConfig config lib pkgs inputs;})
+  (import ./git {inherit osConfig config lib pkgs inputs;})
+  (import ./nixvim {inherit osConfig config lib pkgs inputs;})
+  # (import ./pswdgen {inherit osConfig config lib pkgs inputs;})
+  (import ./pswdrs {inherit osConfig config lib pkgs inputs;})
+  (import ./shell-config {inherit osConfig config lib pkgs inputs;})
+  (import ./ssh {inherit osConfig config lib pkgs inputs;})
+  (import ./tmux {inherit osConfig config lib pkgs inputs;})
+  (import ./yazi {inherit osConfig config lib pkgs inputs;})
+])

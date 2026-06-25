@@ -16,10 +16,10 @@ in
       # flat
       (lib.mkIf
         labwc-flat.enable
-        (import ./labwc-flat {inherit osConfig config lib pkgs inputs;}))
+        (import ./flat {inherit osConfig config lib pkgs inputs;}))
       # glass
       (lib.mkIf
         labwc-glass.enable
-        (import ./labwc-glass {inherit osConfig config lib pkgs inputs;}))
+        (import ./glass {inherit osConfig config lib pkgs inputs;}))
     ]
   )
