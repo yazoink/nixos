@@ -6,7 +6,6 @@
 }: {
   programs.zathura = {
     extraConfig = ''
-      set font "${config.stylix.fonts.sansSerif.name} ${builtins.toString config.stylix.fonts.sizes.applications}"
       set selection-clipboard clipboard
 
       map J zoom out

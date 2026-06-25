@@ -1,3 +1,4 @@
+# stylix theming
 {
   osConfig,
   pkgs,
