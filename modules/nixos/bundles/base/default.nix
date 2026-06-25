@@ -6,7 +6,7 @@
   pkgs-stable,
   ...
 }:
-lib.mkIf config.myOptions.bundles.base.enable (lib.mkMerge [
+lib.mkIf config.myOptions.bundles.base.enable (lib.mkMerge builtins.trace "test?????" [
   {
     security.wrappers."mount.cifs" = {
       program = "mount.cifs";
