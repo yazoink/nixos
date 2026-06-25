@@ -17,6 +17,7 @@
       }
       (import ./gtk {inherit config osConfig;})
       (import ./qt {inherit config pkgs osConfig;})
+      (import ./zathura {inherit lib config pkgs osConfig;})
     ]
   );
 }

@@ -35,7 +35,7 @@
   taskbarModuleLaptop = ''
     "wlr/taskbar": {
       "format": "{icon}",
-      "icon-theme": "${osConfig.desktopTheme.icons.name}",
+      "icon-theme": "${config.gtk.iconTheme.name}",
       "icon-size": 18,
       "tooltip-format": "{title}",
       "on-click": "minimize-raise",
