@@ -21,9 +21,9 @@ in {
       (import ./gtk {inherit config osConfig;})
       (import ./qt {inherit config pkgs osConfig;})
 
-      (lib.mkIf (bundles.desktopBase.enable && defaultApps.imageViewer.command == "imv") import ./imv {inherit config pkgs osConfig;})
-      (lib.mkIf (bundles.desktopBase.enable && defaultApps.terminal.command == "kitty") import ./kitty {inherit config pkgs osConfig;})
-      (lib.mkIf (bundles.desktopBase.enable && defaultApps.webBrowser.command == "firefox") import ./firefox {inherit config pkgs osConfig;})
+      (import lib.mkIf (bundles.desktopBase.enable && defaultApps.imageViewer.command == "imv") ./imv {inherit config pkgs osConfig;})
+      (import lib.mkIf (bundles.desktopBase.enable && defaultApps.terminal.command == "kitty") ./kitty {inherit config pkgs osConfig;})
+      (import lib.mkIf (bundles.desktopBase.enable && defaultApps.webBrowser.command == "firefox") ./firefox {inherit config pkgs osConfig;})
     ]
   );
 }
