@@ -5,7 +5,13 @@
   (box
     :orientation "horizontal"
     :space-evenly "false"
-    (label :text "${text}" :class "${class}")
+    :halign "start"
+    :hexpand "true"
+    (label 
+      :text "${text}" 
+      :class "${class}" 
+      :wrap-mode "word"
+    )
     (box
       :halign "end"
       :hexpand "true"

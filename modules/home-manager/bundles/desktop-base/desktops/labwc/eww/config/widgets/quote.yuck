@@ -3,7 +3,21 @@
     :orientation "vertical"
     :class "quote"
     :space-evenly "false"
-    (left-text :text '"${text}"\\n' :class "quote-text")
+    (box
+      :orientation "horizontal"
+      :space-evenly "false"
+      (label 
+        :text "\"${text}\"" 
+        :class "quote-text" 
+        :wrap true
+        :wrap-mode "word"
+        :lines 2
+      )
+      (box
+        :halign "start"
+        :hexpand "true"
+      )
+    )
     (right-text :text "~ ${author}" :class "quote-author")
   )
 )

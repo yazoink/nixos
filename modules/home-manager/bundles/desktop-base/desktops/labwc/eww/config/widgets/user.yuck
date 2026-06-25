@@ -11,14 +11,21 @@
     :spacing 20
     ;(hline)
     ;(separator)
+    (image
+      :path "${image}"
+      :image-width 60
+      :image-height 60
+      :halign "end"
+      :class "profile-picture"
+    )
     (box
       ;:vexpand "true"
-      :halign "end"
+      :halign "start"
       :orientation "vertical"
       :spacing 5
-      :space-evenly "true"
+      :space-evenly false
       :valign "center"
-      :hexpand "true"
+      :hexpand false
       (left-text
         :class "username-and-hostname bold"
         :text "${username-and-hostname}"
@@ -27,13 +34,6 @@
         :text "${os-version}"
         :class "os-version italic"
       )
-    )
-    (image
-      :path "${image}"
-      :image-width 60
-      :image-height 60
-      :halign "end"
-      :class "profile-picture"
     )
   )
 )

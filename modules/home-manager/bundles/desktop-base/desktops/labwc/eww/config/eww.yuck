@@ -3,5 +3,4 @@
 (include "./windows/closer.yuck")
 (include "./windows/calendar.yuck")
 (include "./windows/confirm.yuck")
-(include "./windows/corners.yuck")
 (include "./windows/power.yuck")

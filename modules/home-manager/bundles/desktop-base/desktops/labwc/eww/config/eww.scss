@@ -12,7 +12,7 @@ $margin: 5px;
 
 @import "colours";
 
-$round: 15px;
+$round: 16px;
 
 * {
   all: unset;
@@ -21,7 +21,7 @@ $round: 15px;
 
 .power, .confirm {
   background: none;
-  border-radius: 15px;
+  border-radius: 16px;
 }
 
 .confirm-text {
@@ -29,28 +29,36 @@ $round: 15px;
   font-size: 15pt;
 }
 
+.confirm-button {
+  min-width: 75px;
+}
+
 .power-box, .confirm-box, .calendar-box {
   // box-shadow: 0 0 5px -5px rgba(0, 0, 0, 0.2);
-  padding: 15px;
+  padding: 16px;
   border: 1px solid $border;
-  border-radius: 15px;
+  border-radius: 16px;
   background-color: $bg;
   margin: $margin;
 }
 
-.power-box {
-  padding-top: 25px;
-}
-
 .user-box {
-  padding: 15px;
-  border-radius: 5px;
+  padding: 16px;
+  border-radius: 8px;
   background-color: $bg2;
 }
 
+.username-and-hostname {
+  font-size: 15pt;
+}
+
+.os-version {
+  font-size: 13pt;
+}
+
 button {
-  padding: 10px;
-  border-radius: 5px;
+  padding: 8px;
+  border-radius: 8px;
   background-color: $bg2;
 }
 
@@ -59,15 +67,15 @@ button:hover {
 }
 
 .power-button-box {
-  padding-top: 5px;
-  padding-bottom: 5px;
-  padding-right: 5px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-right: 4px;
 }
 
 .power-button-box button {
   font-family: "Font Awesome 7 Free";
-  font-size: 15pt;
-  padding: 10px;
+  font-size: 19pt;
+  padding: 8px;
 }
 
 .power-button-lock label {
@@ -101,9 +109,10 @@ button:hover {
 
 .heading {
   font-weight: bold;
-  font-size: 21pt;
-  margin: 5px;
-  padding-bottom: 10px;
+  font-size: 24pt;
+  margin: 4px;
+  padding-bottom: 8px;
+  padding-top: 8px;
 }
 
 .os-version {
@@ -120,31 +129,35 @@ button:hover {
 }
 
 .hline {
-  // border-top: 1px solid $fg;
-  // opacity: 0.15;
-  border-top: 2px dashed $bg3;
+  border-top: 1px solid $fg;
+  opacity: 0.15;
+  // border-top: 2px dashed $bg3;
 }
 
 .grid-list-box, .text-box {
   background-color: $bg2;
-  padding: 15px;
-  border-radius: 5px;
+  padding: 16px;
+  border-radius: 8px;
 }
 
 .quote {
   font-style: italic;
   background-color: $bg2;
-  padding: 15px;
-  border-radius: 5px;
+  padding: 16px;
+  border-radius: 8px;
+  margin: 8px 0;
+  margin-left: -4px;
+  min-width: 200px;
 }
 
 .quote-author {
   opacity: 0.5;
+  margin-top: 8px;
 }
 
 .pretty-time {
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 8px;
+  padding-bottom: 8px;
 }
 
 .pretty-time-date {
@@ -181,20 +194,20 @@ tooltip {
   background-color: $bg;
   opacity: 1.0;
   border: 1px solid $border;
-  border-radius: 10px;
+  border-radius: 8px;
   padding: 0;
 }
 
 tooltip label {
-  margin: 5px;
+  margin: 4px;
   padding: 0;
   color: $fg;
 }
 
 .cal {
   background-color: $bg2;
-  padding: 10px;
-  border-radius: 5px;
+  padding: 8px;
+  border-radius: 8px;
 }
 
 calendar.header {
@@ -235,92 +248,4 @@ calendar:selected {
 
 .purple {
   color: $purple;
-}
-
-.fakecornersl {
-  transition: box-shadow 500ms, border-radius 500ms, margin 500ms;
-  margin: 0;
-  &.active {
-    margin: 0px;
-    margin-top: 0;
-    border-radius: $round + 10px; 
-    box-shadow: 0px 0px 0px 50px $bg;
-    &.locked {
-      margin: 0px;
-    }
-  }
-  &.inactive {
-    border-radius: 0;
-    box-shadow: none;
-  }
-}
-
-.fakecornersr {
-  transition: box-shadow 500ms, border-radius 500ms;
-  &.active {
-    border-top-right-radius: $round + 10px; 
-    border-bottom-right-radius: $round + 10px; 
-    box-shadow: 
-      20px -20px 0px $bg,
-      20px 20px 0px $bg;
-  }
-  &.inactive {
-    border-radius: 0;
-    box-shadow: none;
-  }
-}
-
-.filler {
-  transition: border-radius 500ms, background-color 500ms;
-  margin: 0px;
-  margin-top: 10px;
-  margin-left: -1px;
-  margin-right: -1px;
-  border-top-left-radius: $round + 10px;
-  border-top-right-radius: $round + 10px;
-  box-shadow: 
-    0px -26px 0px 5px $bg;
-
-  &.inactive {
-    background-color: $bg;
-    border-radius: 0;
-  }
-}
-
-.fillerl {
-  @extend .filler;
-  margin: 0;
-  border-top-left-radius: 0;
-  box-shadow: 
-    20px -20px 0px -10px $bg;
-}
-
-.fillerr {
-  @extend .filler;
-  margin: 0;
-  border-top-right-radius: 0;
-  box-shadow: 
-    -20px -20px 0px -10px $bg;
-}
-
-.fillerrs {
-  @extend .filler;
-  margin: 0;
-  border-top-right-radius: 0;
-  box-shadow: 
-    -20px 0px 0px 0px $bg;
-}
-
-.fillerls {
-  @extend .filler;
-  margin: 0;
-  border-top-left-radius: 0;
-  box-shadow: 
-    20px 0px 0px 0px $bg;
-}
-
-.launchcover {
-  border-radius: $round; 
-  margin: 5px;
-  box-shadow: 0px 0px 0px 10px $bg;
 }

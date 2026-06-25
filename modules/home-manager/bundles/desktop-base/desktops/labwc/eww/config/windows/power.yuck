@@ -21,25 +21,24 @@
     :halign "center"
     :space-evenly "false"
     :class "power-box"
-    :spacing 5
     (separator)
     (label :text "Have a nice day :)" :class "heading")
-    (quote 
-      :text "Thou shalt not blow pot smoke in the face\\n of thy pet." 
-      :author "William S. Burroughs"
+    (box
+      :halign "fill"
+      :valign "fill"
+      :vexpand "true"
+      :hexpand "true"
+      :valign "center"
+      (user :image "./images/profile_image.jpg")
     )
     (box
       :orientation "horizontal"
-      :space-evenly "false"
-      :spacing 5
+      :space-evenly false
+      :spacing 8
       (power-buttons)
-      (box
-        :halign "fill"
-        :valign "fill"
-        :vexpand "true"
-        :hexpand "true"
-        :valign "center"
-        (user :image "./images/profile_image.jpg")
+      (quote 
+        :text "Thou shalt not blow pot smoke in the face of thy pet." 
+        :author "William S. Burroughs"
       )
     )
     (resource-usage-grid)

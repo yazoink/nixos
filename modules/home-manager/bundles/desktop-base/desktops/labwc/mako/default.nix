@@ -16,7 +16,7 @@
       actions = "true";
       icons = "true";
       anchor = "bottom-right";
-      border-radius = "15";
+      border-radius = "18";
       background-color = "#${config.stylix.base16Scheme.base00}";
       border-color = "#${config.stylix.base16Scheme.base01}";
       text-color = "#${config.stylix.base16Scheme.base05}";

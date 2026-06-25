@@ -18,10 +18,11 @@
     (separator)
     (label :text "${thing}" :class "confirm-text")
     ;(user :image "./images/profile_image_rounded4.png")
-    (hline)
     (box
       :orientation "horizontal"
-      :space-evenly "true"
+      :space-evenly true
+      :halign "center"
+      :hexpand true
       :spacing 10
       :class "confirm-buttons"
       (button

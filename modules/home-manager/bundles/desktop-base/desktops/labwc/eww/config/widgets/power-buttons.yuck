@@ -4,18 +4,18 @@
     :space-evenly "false"
     :valign "center"
     :class "power-button-box"
-    :spacing 10
+    :spacing 8
     ; (left-text :text "Power Options" :class "bold")
     (box
       :orientation "vertical"
       :halign "center"
       :space-evenly "true"
-      :spacing 10
+      :spacing 8
       (box
         :orientation "horizontal"
         :halign "center"
         :space-evenly "true"
-        :spacing 10
+        :spacing 8
         (button
           :class "power-button-lock"
           :onclick "bash ./scripts/lock.sh"
@@ -33,7 +33,7 @@
         :orientation "horizontal"
         :halign "center"
         :space-evenly "true"
-        :spacing 10
+        :spacing 8
         (button
           :class "power-button-reboot"
           :onclick "bash ./scripts/confirm_prompt.sh 'Reboot system?' 'systemctl reboot' & disown"

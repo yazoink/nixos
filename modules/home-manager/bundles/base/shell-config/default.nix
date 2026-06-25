@@ -11,6 +11,7 @@
     "rm" = "rm -v";
     "mkd" = "mkdir -pv";
     "nixos" = "cd ~/nixos";
+    "cpdir" = "wl-copy \"$(pwd)\"";
     "ff" = "fastfetch";
     #"ls" = "ls -hN --color=auto";
     "ls" = "eza -l -T -L=1";
@@ -18,6 +19,7 @@
     "diff" = "diff --color=auto";
     "ip" = "ip -color=auto";
     "vim" = "nvim";
+    "v" = "nvim";
     "make" = "make -j$(nproc)";
     "vpssh" = "ssh vps";
     "ga" = "git add";
