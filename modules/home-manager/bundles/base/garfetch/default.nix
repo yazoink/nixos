@@ -1,13 +1,13 @@
 {
   pkgs,
-  nixosConfig,
+  osConfig,
   ...
 }: let
   garfetch = pkgs.callPackage ./garfetch.nix {};
 in {
   home.packages = [garfetch];
   home.file.".config/garfetch".source =
-    if (nixosConfig.networking.hostName == "cyberia")
-    then ./cyberia-config
-    else ./fluoride-config;
+    if (osConfig.networking.hostName == "fluoride")
+    then ./config-2
+    else ./config-1;
 }
