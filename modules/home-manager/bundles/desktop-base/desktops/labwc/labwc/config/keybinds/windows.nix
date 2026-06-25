@@ -26,6 +26,13 @@
       "@name" = "ToggleMaximize";
     };
   }
+  # raise
+  {
+    "@key" = "W-S-Return";
+    action = {
+      "@name" = "Raise";
+    };
+  }
   # toggle pin
   {
     "@key" = "W-x";
