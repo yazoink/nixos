@@ -6,9 +6,9 @@
   inputs,
   ...
 }: let
-  inherit (osConfig.myOptions.desktopTheme.rice) hyprland;
+  inherit (osConfig.myOptions.desktopTheme.rice) hyprland-flat;
 in {
-  config = lib.mkIf hyprland.enable (lib.mkMerge [
+  config = lib.mkIf hyprland-flat.enable (lib.mkMerge [
     (import ./display-manager {inherit config osConfig lib pkgs;})
     (import ./eww {inherit config osConfig lib pkgs;})
     # (import ./fnott {inherit config osConfig lib pkgs;})
