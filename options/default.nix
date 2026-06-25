@@ -227,7 +227,7 @@
           terminal = {
             name = lib.mkOption {
               type = lib.types.str;
-              default = "Aporetic Serif Mono";
+              default = "aporetic-serif-mono";
               description = ''
                 See nixos/modules/nixos/features/theme/fonts/terminal for
                 options.
@@ -244,7 +244,7 @@
           desktop = {
             name = lib.mkOption {
               type = lib.types.str;
-              default = "Gabarito";
+              default = "gabarito";
               description = ''
                 See nixos/modules/nixos/features/theme/fonts/desktop for
                 options.
@@ -255,7 +255,7 @@
             };
             size = lib.mkOption {
               type = lib.types.number;
-              default = 12;
+              default = 11;
             };
           };
         };

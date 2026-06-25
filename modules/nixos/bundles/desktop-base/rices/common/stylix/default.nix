@@ -5,6 +5,8 @@
   ...
 }: let
   theme = config.myOptions.desktopTheme.colorscheme;
+  monoFont = config.myOptions.desktopTheme.fonts.terminal.name;
+  sansFont = config.myOptions.desktopTheme.fonts.desktop.name;
 in {
   environment.systemPackages = with pkgs; [
     gtk-engine-murrine
@@ -43,7 +45,7 @@ in {
             name = "TeX Gyre Schola";
           };
         }
-        (import ./fonts {inherit pkgs lib;})
+        (import ./fonts {inherit pkgs lib monoFont sansFont;})
       ];
       image = config.myOptions.desktopTheme.wallpaper.image.path;
     }

@@ -1,9 +1,11 @@
 {
   pkgs,
   lib,
+  monoFont,
+  sansFont,
   ...
 }:
 lib.mkMerge [
-  (import ./desktop {inherit pkgs;})
-  (import ./terminal {inherit pkgs;})
+  (import ./desktop {inherit pkgs sansFont;})
+  (import ./terminal {inherit pkgs monoFont;})
 ]

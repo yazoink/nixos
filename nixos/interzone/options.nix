@@ -41,12 +41,11 @@
       };
       fonts = {
         desktop = {
-          name = "Gabarito";
+          name = "gabarito";
           size = 11;
         };
         terminal = {
-          name = "Aporetic Serif Mono";
-          # name = "Terminess Nerd Font";
+          name = "aporetic-serif-mono";
           size = 12;
         };
       };
