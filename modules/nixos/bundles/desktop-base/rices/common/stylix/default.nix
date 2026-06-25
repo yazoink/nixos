@@ -20,12 +20,11 @@
       };
     };
   };
+  imports = [
+    ./themes
+    ./fonts
+  ];
   config = lib.mkIf config.desktopTheme.stylix.enable {
-    imports = [
-      ./themes
-      ./fonts
-    ];
-
     environment.systemPackages = with pkgs; [
       gtk-engine-murrine
     ];
