@@ -11,7 +11,6 @@
     };
   };
   config = lib.mkIf config.bundles.desktopFull.printing.enable {
-    bundles.base.avahi.enable = true;
     services.printing = {
       enable = true;
       browsing = true;
