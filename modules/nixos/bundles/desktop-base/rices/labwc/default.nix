@@ -1,0 +1,6 @@
+# labwc rices
+{
+  imports = [
+    ./common
+  ];
+}

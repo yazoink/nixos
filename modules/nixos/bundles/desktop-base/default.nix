@@ -6,7 +6,7 @@
   ...
 }: {
   imports = [
-    ./desktops
+    ./rices
     ./file-managers
     ./acpi
     ./audio
@@ -16,7 +16,6 @@
     ./plymouth
     ./polkit
     ./silent-boot
-    ./theme
   ];
 
   config = lib.mkIf config.myOptions.bundles.desktopBase.enable {

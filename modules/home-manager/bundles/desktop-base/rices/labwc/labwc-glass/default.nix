@@ -7,9 +7,9 @@
   inputs,
   ...
 }: let
-  inherit (osConfig.myOptions.desktopTheme.rice) labwc-glass;
+  inherit (osConfig.myOptions.desktopTheme.rice.labwc-glass) enable;
 in {
-  config = lib.mkIf labwc-glass.enable (lib.mkMerge [
+  config = lib.mkIf enable (lib.mkMerge [
     (import ./eww {inherit config osConfig lib pkgs;})
     (import ./hyprlock {inherit config osConfig lib pkgs;})
     (import ./swayosd {inherit config osConfig lib pkgs;})

@@ -5,7 +5,7 @@
   config,
   ...
 }: {
-  config = lib.mkIf osConfig.myOptions.bundles.desktopBase.enable (
+  config = lib.mkIf osConfig.desktopTheme.stylix.enable (
     lib.mkMerge [
       {
         stylix.icons = {

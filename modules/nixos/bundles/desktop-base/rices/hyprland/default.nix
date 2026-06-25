@@ -1,0 +1,6 @@
+# hyprland rices
+{
+  imports = [
+    ./common
+  ];
+}

@@ -13,7 +13,7 @@
   };
 
   imports = [
-    ./desktops
+    ./rices
 
     ./gui-text-editors
     ./document-readers
