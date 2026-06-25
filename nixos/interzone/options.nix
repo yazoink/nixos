@@ -22,7 +22,7 @@
       rice.openbox.enable = false;
       rice.labwc-glass.enable = false;
       rice.labwc-flat.enable = true;
-      rice.hyprland.enable = false;
+      rice.hyprland-flat.enable = false;
       # zenBrowserShowBorders = false;
       colorscheme = "moonfly";
       wallpaper = {

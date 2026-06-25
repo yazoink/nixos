@@ -40,7 +40,7 @@
       # colorscheme = "paradise";
       rice.openbox.enable = false;
       rice.labwc-glass.enable = true;
-      rice.hyprland.enable = false;
+      rice.hyprland-flat.enable = false;
       # name = "everblush";
       wallpaper = {
         type = "image";
