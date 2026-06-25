@@ -54,7 +54,6 @@
       # base.starshipFormat = 1;
       base.starshipFormat = 2;
       desktopBase.mpv.profile = "fast";
-      desktopBase.plymouth.enable = false;
       # desktopBase.enable = true;
       desktopFull.enable = true;
       desktopFull.vesktop.bloat = false;
