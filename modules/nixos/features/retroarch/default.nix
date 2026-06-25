@@ -1,9 +1,4 @@
-{
-  pkgs,
-  config,
-  lib,
-  ...
-}: let
+{pkgs, ...}: let
   retroarchWithCores = pkgs.retroarch.withCores (cores:
     with cores; [
       mgba
@@ -21,9 +16,7 @@
       ppsspp
     ]);
 in {
-  config = lib.mkIf config.myOptions.features.retroarch.enable {
-    environment.systemPackages = [
-      retroarchWithCores
-    ];
-  };
+  environment.systemPackages = [
+    retroarchWithCores
+  ];
 }

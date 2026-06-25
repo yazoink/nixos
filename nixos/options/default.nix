@@ -1,3 +1,4 @@
+# options for system configuration, defined in ../../hosts/<hostname>/options.nix
 {
   imports = [
     ./bundles.nix
