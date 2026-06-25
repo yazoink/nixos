@@ -13,7 +13,7 @@ in
     (lib.mkIf (command == "alacritty")
       (import ./alacritty {inherit osConfig config lib pkgs inputs;}))
 
-    (lib.mkIf (command == "foot")
+    (lib.mkIf (command == "footclient" || command == "foot")
       (import ./foot {inherit osConfig config lib pkgs inputs;}))
 
     (lib.mkIf (command == "kitty")
