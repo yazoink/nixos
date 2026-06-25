@@ -1,5 +1,5 @@
 {
-  imports = builtins.trace "????" [
+  imports = [
     ./base
     ./desktop-base
     ./desktop-full

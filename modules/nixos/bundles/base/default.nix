@@ -8,7 +8,7 @@
 }:
 lib.mkIf config.myOptions.bundles.base.enable (lib.mkMerge [
   {
-    security.wrappers."mount.cifs" = builtins.trace "test?????" {
+    security.wrappers."mount.cifs" = builtins.trace "base: ${config.myOptions.bundles.base.enable}" {
       program = "mount.cifs";
       source = "${lib.getBin pkgs.cifs-utils}/bin/mount.cifs";
       owner = "root";
