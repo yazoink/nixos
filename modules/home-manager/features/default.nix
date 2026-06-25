@@ -17,7 +17,7 @@ in
       (import ./lutgen {inherit osConfig config lib pkgs inputs;}))
     (lib.mkIf features.obsidian.enable
       (import ./obsidian {inherit osConfig config lib pkgs inputs;}))
-    (lib.mkIf features.virt-manager.enable
+    (lib.mkIf features.virtManager.enable
       (import ./virt-manager {inherit osConfig config lib pkgs inputs;}))
     (lib.mkIf features.vscode.enable
       (import ./vscode {inherit osConfig config lib pkgs inputs;}))
