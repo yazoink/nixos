@@ -1,3 +1,4 @@
+# common configs for labwc-glass theme
 {
   config,
   osConfig,
