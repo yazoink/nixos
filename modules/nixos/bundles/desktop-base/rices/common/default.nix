@@ -1,21 +1,11 @@
 # common configs
 {
-  config,
   lib,
   pkgs,
+  config,
   inputs,
   ...
-}: {
-  options = {
-    desktopTheme = {
-      stylix.enable = lib.mkOption {
-        type = lib.types.bool;
-        default = true;
-        description = "use stylix";
-      };
-    };
-  };
-  imports = [
-    ./stylix
-  ];
-}
+}:
+lib.mkMerge [
+  (import ./stylix {inherit config lib pkgs inputs;})
+]

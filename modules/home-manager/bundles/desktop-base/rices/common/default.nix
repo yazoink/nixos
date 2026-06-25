@@ -8,6 +8,5 @@
   ...
 }:
 lib.mkMerge [
-  (lib.mkIf osConfig.desktopTheme.stylix.enable
-    (import ./stylix {inherit osConfig config lib pkgs inputs;}))
+  (import ./stylix {inherit osConfig config lib pkgs inputs;})
 ]
