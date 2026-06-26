@@ -270,7 +270,7 @@
     "reload_style_on_change": true,
     "layer": "top",
     "mode": "dock",
-    "exclusive": "true",
+    "exclusive": false,
     "position": "${barPosition}",
     "spacing": 7,
     "height": ${builtins.toString barHeight},
