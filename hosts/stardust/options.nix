@@ -4,16 +4,6 @@
   ...
 }: {
   myOptions = builtins.trace "options set" {
-    defaultApps = {
-      discordClient = "vesktop";
-      fileManager = "thunar";
-      guiTextEditor = "pluma";
-      documentReader = "zathura";
-      mediaPlayer = "mpv";
-      imageViewer = "imv";
-      terminal = "foot";
-      webBrowser = "zen-twilight";
-    };
     userAccount = {
       username = "gene";
     };
@@ -61,6 +51,16 @@
     bundles = {
       base.starshipFormat = 1;
       desktopFull.enable = true;
+    };
+    defaultApps = {
+      discordClient = "vesktop";
+      fileManager = "thunar";
+      guiTextEditor = "pluma";
+      documentReader = "zathura";
+      mediaPlayer = "mpv";
+      imageViewer = "imv";
+      terminal = "foot";
+      webBrowser = "zen-twilight";
     };
     features = {
       # etterna.enable = true;
