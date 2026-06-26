@@ -6,13 +6,6 @@
 in {
   home.file.".themes/my-labwc/labwc".source = ./icons;
   home.file.".config/labwc/themerc-override".text = ''
-    # This file contains all themerc options with default values
-    #
-    # System-wide and local themes can be overridden by creating a copy of this
-    # file and renaming it to $HOME/.config/labwc/themerc-override. Be careful
-    # though - if you only want to override a small number of specific options,
-    # make sure all other lines are commented out or deleted.
-
     # general
     border.width: 1
 
@@ -27,7 +20,7 @@ in {
     window.active.border.color: #${base16Scheme.base01}
     window.inactive.border.color: #${base16Scheme.base01}
 
-    window.*.shadow.size: 16
+    # window.*.shadow.size: 16
 
     # ToggleKeybinds status indicator
     window.active.indicator.toggled-keybind.color: #${base16Scheme.base08}
@@ -76,8 +69,8 @@ in {
     window.active.button.desk.pressed.image.color: #${base16Scheme.base05}
 
     # window drop-shadows
-    window.active.shadow.size: 10
-    window.inactive.shadow.size: 10
+    window.active.shadow.size: 16
+    window.inactive.shadow.size: 16
     window.active.shadow.color: #00000040
     window.inactive.shadow.color: #00000040
 
