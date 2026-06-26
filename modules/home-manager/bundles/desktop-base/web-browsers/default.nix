@@ -23,7 +23,7 @@
     brave = "brave.desktop";
     firefox = "firefox.desktop";
     librewolf = "librewolf.desktop";
-    zen = "zen-twilight.desktop";
+    zen-twilight = "zen-twilight.desktop";
   };
 in
   makeCfg name desktopFiles.${name}
