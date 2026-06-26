@@ -36,7 +36,8 @@
     }
   ];
 in
-  builtins.listToAttrs (builtins.map (name: desktopFile: fileManagers.name fileManagers.desktopFile) cfgFor)
+  lib.lists.forEach fileManagers (f:
+    cfgFor f.name f.desktopFile)
 /*
   lib.mkMerge [
   # nemo
