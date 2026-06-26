@@ -36,8 +36,9 @@
     }
   ];
 in
-  lib.lists.forEach fileManagers (f:
-    cfgFor f.name f.desktopFile)
+  builtins.listToAttrs
+  (lib.lists.forEach fileManagers (f:
+      cfgFor f.name f.desktopFile))
 /*
   lib.mkMerge [
   # nemo
