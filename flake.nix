@@ -53,7 +53,6 @@
           inputs.home-manager.nixosModules.home-manager
           ./nixos
           ./hosts/stardust
-          ./modules/nixos
         ];
       };
 

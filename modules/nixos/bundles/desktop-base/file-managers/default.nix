@@ -1,5 +1,7 @@
 {
   pkgs,
   fileManager,
+  lib,
   ...
-}: (import (./. + "/${fileManager}") {inherit pkgs;})
+}:
+lib.mkMerge [(import (./. + "/${fileManager}") {inherit pkgs;})]

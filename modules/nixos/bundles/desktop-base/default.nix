@@ -16,5 +16,5 @@ in
     (import ./gnome-keyring {inherit config lib pkgs inputs pkgs-stable;})
     (import ./polkit {inherit config lib pkgs inputs pkgs-stable;})
     (import ./desktops {inherit config lib pkgs inputs pkgs-stable;})
-    (import ./file-managers {inherit pkgs fileManager;})
+    (import ./file-managers {inherit pkgs lib fileManager;})
   ]
