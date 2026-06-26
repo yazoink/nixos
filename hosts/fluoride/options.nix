@@ -44,12 +44,16 @@
       wallpaper = {
         type = "image";
         image = {
-          fillType = "fill";
+          fillType = "tile";
           path = pkgs.fetchurl {
             # url = "https://raw.githubusercontent.com/yazoink/wallpapers/refs/heads/main/trees-and-leaves/wall1.jpg";
             # hash = "sha256-H8Hsm73MPbqrKl4RUiAhKUlkXPSntyghB95PpTmkuKM=";
-            url = "https://raw.githubusercontent.com/yazoink/wallpapers/refs/heads/main/flowers/a_group_of_purple_flowers2.png";
-            hash = "sha256-QmP4czF4Mp2UN0kOBrVmo/VRCdpfDETQPwesxdYjRJs=";
+
+            # url = "https://raw.githubusercontent.com/yazoink/wallpapers/refs/heads/main/flowers/a_group_of_purple_flowers2.png";
+            # hash = "sha256-QmP4czF4Mp2UN0kOBrVmo/VRCdpfDETQPwesxdYjRJs=";
+
+            url = "https://github.com/yazoink/wallpapers/blob/main/tiling/flowers5.jpg?raw=true";
+            hash = "";
           };
         };
       };
