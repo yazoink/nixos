@@ -6,5 +6,5 @@
 }: let
   name = config.myOptions.defaultApps.fileManager;
 in {
-  imports = [((./. + "/${name}") {inherit lib pkgs;})];
+  imports = [(./. + "/${name}")];
 }
