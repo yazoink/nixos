@@ -9,15 +9,15 @@
   inherit (config.myOptions) bundles;
 in
   lib.mkMerge [
-    (lib.mkIf bundles.base.enable
+    (lib.mkIf config.myOptions.bundles.base.enable
       (import ./base {inherit config lib pkgs inputs pkgs-stable;}))
 
-    (lib.mkIf bundles.desktopBase.enable (lib.mkMerge [
+    (lib.mkIf config.myOptions.bundles.desktopBase.enable (lib.mkMerge [
       {bundles.base.enable = true;}
       (import ./desktop-base {inherit config lib pkgs inputs pkgs-stable;})
     ]))
 
-    (lib.mkIf bundles.desktopFull.enable (lib.mkMerge [
+    (lib.mkIf config.myOptions.bundles.desktopFull.enable (lib.mkMerge [
       {bundles.desktopBase.enable = true;}
       (import ./desktop-full {inherit config lib pkgs inputs pkgs-stable;})
     ]))
