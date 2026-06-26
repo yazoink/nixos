@@ -1,5 +1,7 @@
 {
   pkgs,
   fileManager,
+  lib,
   ...
-}: (import (./. + "/${fileManager}") {inherit pkgs;})
+}:
+lib.mkIf lib.path.subpath.isValid fileManager (import (./. + "/${fileManager}") {inherit pkgs;})
