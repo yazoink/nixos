@@ -53,6 +53,7 @@
           inputs.home-manager.nixosModules.home-manager
           ./nixos
           ./hosts/stardust
+          ./modules/nixos
         ];
       };
 
@@ -62,6 +63,7 @@
           inputs.home-manager.nixosModules.home-manager
           ./nixos
           ./hosts/cyberia
+          ./modules/nixos
         ];
       };
 
@@ -71,6 +73,7 @@
           inputs.home-manager.nixosModules.home-manager
           ./nixos
           ./hosts/interzone
+          ./modules/nixos
         ];
       };
     };
