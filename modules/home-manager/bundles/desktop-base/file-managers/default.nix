@@ -36,7 +36,7 @@
     }
   ];
 in
-  makeCfg (fileManagers.${fileManager})
+  makeCfg (map fileManagers.${fileManager})
 /*
   lib.mkMerge [
   # nemo
