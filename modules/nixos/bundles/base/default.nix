@@ -6,7 +6,7 @@
   pkgs-stable,
   ...
 }:
-lib.mkIf config.myOptions.bundles.base.enable (lib.mkMerge [
+lib.mkMerge [
   {
     security.wrappers."mount.cifs" = {
       program = "mount.cifs";
@@ -61,4 +61,4 @@ lib.mkIf config.myOptions.bundles.base.enable (lib.mkMerge [
   (import ./sops {inherit config lib pkgs inputs pkgs-stable;})
   (import ./ssh {inherit config lib pkgs inputs pkgs-stable;})
   (import ./user {inherit config lib pkgs inputs pkgs-stable;})
-])
+]

@@ -2,6 +2,4 @@
   pkgs,
   fileManager,
   ...
-}: {
-  config = import (./. + "/${fileManager}") {inherit pkgs;};
-}
+}: config = (import (./. + "/${fileManager}") {inherit pkgs;})
