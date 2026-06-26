@@ -1,13 +1,11 @@
 {
-  osConfig,
+  pkgs-stable,
   lib,
   pkgs,
   config,
   inputs,
   ...
 }: let
-  inherit (osConfig.myOptions.defaultApps) terminal;
-  makeCfg = name:
-    import (./. + "/${name}") {inherit osConfig config lib pkgs inputs;};
+  inherit (config.myOptions.defaultApps) terminal;
 in
-  makeCfg terminal
+  import (./. + "/${terminal}") {inherit pkgs-stable config lib pkgs inputs;}

@@ -10,7 +10,7 @@ in [
     "@key" = "W-Return";
     action = {
       "@name" = "Execute";
-      "@command" = "${defaultApps.terminal.command}";
+      "@command" = "${defaultApps.terminal}";
     };
   }
   # launcher
@@ -65,7 +65,7 @@ in [
     "@key" = "W-w";
     action = {
       "@name" = "Execute";
-      "@command" = "${defaultApps.webBrowser.command}";
+      "@command" = "${defaultApps.webBrowser}";
     };
   }
   # launch file manager
@@ -73,7 +73,7 @@ in [
     "@key" = "W-e";
     action = {
       "@name" = "Execute";
-      "@command" = "${defaultApps.fileManager.command}";
+      "@command" = "${defaultApps.fileManager}";
     };
   }
   # restart waybar

@@ -7,7 +7,5 @@
   ...
 }: let
   inherit (config.myOptions.defaultApps) fileManager;
-  makeCfg = name:
-    import (./. + "/${name}") {inherit pkgs-stable config lib pkgs inputs;};
 in
-  makeCfg fileManager
+  import (./. + "/${fileManager}") {inherit pkgs-stable config lib pkgs inputs;}

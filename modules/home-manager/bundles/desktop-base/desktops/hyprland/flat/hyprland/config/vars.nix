@@ -14,9 +14,9 @@
         else "${../../scripts/swaybg.sh} -t ${desktopTheme.wallpaper.image.path}"
       );
 in {
-  "$terminal" = "${defaultApps.terminal.command}";
-  "$browser" = "${defaultApps.webBrowser.command}";
-  "$fileManager" = "${defaultApps.fileManager.command}";
+  "$terminal" = "${defaultApps.terminal}";
+  "$browser" = "${defaultApps.webBrowser}";
+  "$fileManager" = "${defaultApps.fileManager}";
   "$menu" = "pkill walker || walker";
   "$screenshot" = "bash ${../../scripts/screenshot} -s";
   "$screenshotFullscreen" = "bash ${../../scripts/screenshot}";

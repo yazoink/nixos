@@ -11,7 +11,7 @@
       documentReader = "zathura";
       mediaPlayer = "mpv";
       imageViewer = "imv";
-      terminal = "footclient";
+      terminal = "foot";
       webBrowser = "zen-twilight";
     };
     userAccount = {
