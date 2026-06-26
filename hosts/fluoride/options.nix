@@ -38,7 +38,7 @@
       colorscheme = "rose-pine";
       # colorscheme = "camellia";
       # colorscheme = "paradise";
-      rice.labwc-glass.enable = true;
+      rice.labwc-flat.enable = true;
       rice.hyprland-flat.enable = false;
       # name = "everblush";
       wallpaper = {
