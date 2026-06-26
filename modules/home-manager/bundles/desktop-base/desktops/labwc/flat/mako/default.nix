@@ -4,12 +4,15 @@
   lib,
   osConfig,
   ...
-}: {
+}: let
+  inherit (config.lib.stylix) colors;
+  inherit (config.gtk) font iconTheme;
+in {
   home.packages = with pkgs; [
     libnotify
   ];
   stylix.targets.mako.enable = false;
-  services.mako = {
+  services.mako = with colors; {
     enable = true;
     settings = {
       layer = "overlay";
@@ -17,17 +20,17 @@
       icons = "true";
       anchor = "bottom-right";
       border-radius = "18";
-      background-color = "#${config.stylix.base16Scheme.base00}";
-      border-color = "#${config.stylix.base16Scheme.base01}";
-      text-color = "#${config.stylix.base16Scheme.base05}";
-      progress-color = "over #${config.stylix.base16Scheme.base05}";
+      background-color = "#${base00}";
+      border-color = "#${base02}";
+      text-color = "#${base05}";
+      progress-color = "over #${base05}";
       border-size = "1";
-      font = "${config.stylix.fonts.sansSerif.name} ${toString config.stylix.fonts.sizes.popups}";
+      font = "${font.name} ${toString font.size}";
       padding = "15";
       margin = "5,0,0";
       outer-margin = "5";
       default-timeout = "5000";
-      icon-path = "/run/current-system/sw/share/icons/${config.gtk.iconTheme.name}";
+      icon-path = "/run/current-system/sw/share/icons/${iconTheme.name}";
     };
     /*
       extraConfig = ''
