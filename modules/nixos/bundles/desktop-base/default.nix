@@ -6,8 +6,9 @@
   pkgs-stable,
   ...
 }: let
-  inherit (config.myOptions.bundles) desktopBase;
-  fileManager = config.myOptions.defaultApps.fileManager;
+  inherit (config) myOptions;
+  inherit (myOptions.bundles) desktopBase;
+  fileManager = myOptions.defaultApps.fileManager;
 in
   lib.mkIf desktopBase.enable (lib.mkMerge [
     {
