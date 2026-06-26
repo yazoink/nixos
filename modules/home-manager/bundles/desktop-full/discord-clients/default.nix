@@ -1,4 +1,3 @@
-# common configs
 {
   osConfig,
   lib,
@@ -7,9 +6,8 @@
   inputs,
   ...
 }: let
-  inherit (osConfig.myOptions.defaultApps.discordClient) command;
+  inherit (osConfig.myOptions.defaultApps) discordClient;
+  makeCfg = name:
+    import (./. + "/${name}") {inherit osConfig config lib pkgs inputs;};
 in
-  lib.mkMerge [
-    (lib.mkIf (command == "vesktop")
-      (import ./vesktop {inherit osConfig config lib pkgs inputs;}))
-  ]
+  makeCfg discordClient

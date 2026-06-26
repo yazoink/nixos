@@ -20,7 +20,7 @@
     ];
   desktopFiles = {
     atril = "atril.desktop";
-    zathura = "zathura.desktop";
+    zathura = "org.pwmt.zathura.desktop";
   };
 in
   makeCfg documentReader desktopFiles.${documentReader}

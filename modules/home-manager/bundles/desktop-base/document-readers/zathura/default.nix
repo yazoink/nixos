@@ -17,13 +17,6 @@ in {
       map b toggle_page_mode # Toggle dual page mode
 
       set pages-per-row 1
-
-      set smooth-scroll "true"
     '';
-  };
-  xdg.mimeApps.defaultApplications = {
-    "application/pdf" = [desktopFile];
-    "image/vnd.djvu" = [desktopFile];
-    "application/epub+zip" = [desktopFile];
   };
 }

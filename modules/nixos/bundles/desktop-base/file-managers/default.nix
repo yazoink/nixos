@@ -1,19 +1,13 @@
 {
+  pkgs-stable,
   lib,
   pkgs,
   config,
   inputs,
   ...
 }: let
-  inherit (config.myOptions.defaultApps.fileManager) command;
+  inherit (config.myOptions.defaultApps) fileManager;
+  makeCfg = name:
+    import (./. + "/${name}") {inherit pkgs-stable config lib pkgs inputs;};
 in
-  lib.mkMerge [
-    (lib.mkIf (command == "nemo")
-      (import ./nemo {inherit config lib pkgs inputs;}))
-
-    (lib.mkIf (command == "pcmanfm")
-      (import ./pcmanfm {inherit config lib pkgs inputs;}))
-
-    (lib.mkIf (command == "thunar")
-      (import ./thunar {inherit config lib pkgs inputs;}))
-  ]
+  makeCfg fileManager

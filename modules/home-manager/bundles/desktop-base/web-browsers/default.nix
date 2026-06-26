@@ -1,4 +1,3 @@
-# common configs
 {
   osConfig,
   lib,
@@ -7,18 +6,24 @@
   inputs,
   ...
 }: let
-  inherit (osConfig.myOptions.defaultApps.webBrowser) command;
+  inherit (osConfig.myOptions.defaultApps) webBrowser;
+  makeCfg = name: desktopFile:
+    lib.mkMerge [
+      (import (./. + "/${name}") {inherit osConfig config lib pkgs inputs;})
+      {
+        xdg.mimeApps.defaultApplications = {
+          "x-scheme-handler/https" = [desktopFile];
+          "x-scheme-handler/http" = [desktopFile];
+          "x-scheme-handler/ftp" = [desktopFile];
+          "x-scheme-handler/mailto" = [desktopFile];
+        };
+      }
+    ];
+  desktopFiles = {
+    brave = "brave.desktop";
+    firefox = "firefox.desktop";
+    librewolf = "librewolf.desktop";
+    zen = "zen-twilight.desktop";
+  };
 in
-  lib.mkMerge [
-    (lib.mkIf (command == "brave")
-      (import ./brave {inherit osConfig config lib pkgs inputs;}))
-
-    (lib.mkIf (command == "firefox")
-      (import ./firefox {inherit osConfig config lib pkgs inputs;}))
-
-    (lib.mkIf (command == "librewolf")
-      (import ./librewolf {inherit osConfig config lib pkgs inputs;}))
-
-    (lib.mkIf (command == "zen-twilight")
-      (import ./zen {inherit osConfig config lib pkgs inputs;}))
-  ]
+  makeCfg webBrowser desktopFiles.${webBrowser}

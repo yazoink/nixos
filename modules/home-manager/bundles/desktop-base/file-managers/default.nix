@@ -1,4 +1,3 @@
-# common configs
 {
   osConfig,
   lib,
@@ -7,16 +6,20 @@
   inputs,
   ...
 }: let
-  inherit (osConfig.myOptions.defaultApps.fileManager) command;
+  inherit (osConfig.myOptions.defaultApps) fileManager;
+  makeCfg = name: desktopFile:
+    lib.mkMerge [
+      (import (./. + "/${name}") {inherit osConfig config lib pkgs inputs;})
+      {
+        xdg.mimeApps.defaultApplications = {
+          "inode/directory" = [desktopFile]; # Directories
+        };
+      }
+    ];
+  desktopFiles = {
+    nemo = "nemo.desktop";
+    pcmanfm = "pcmanfm.desktop";
+    thunar = "thunar.desktop";
+  };
 in
-  lib.mkMerge [
-    # nemo
-    (lib.mkIf (command == "nemo")
-      (import ./nemo {inherit osConfig config lib pkgs inputs;}))
-    # pcmanfm
-    (lib.mkIf (command == "pcmanfm")
-      (import ./pcmanfm {inherit osConfig config lib pkgs inputs;}))
-    # thunar
-    (lib.mkIf (command == "thunar")
-      (import ./thunar {inherit osConfig config lib pkgs inputs;}))
-  ]
+  makeCfg fileManager desktopFiles.${fileManager}

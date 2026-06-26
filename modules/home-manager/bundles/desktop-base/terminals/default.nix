@@ -1,4 +1,3 @@
-# common configs
 {
   osConfig,
   lib,
@@ -7,15 +6,8 @@
   inputs,
   ...
 }: let
-  inherit (osConfig.myOptions.defaultApps.terminal) command;
+  inherit (osConfig.myOptions.defaultApps) terminal;
+  makeCfg = name:
+    import (./. + "/${name}") {inherit osConfig config lib pkgs inputs;};
 in
-  lib.mkMerge [
-    (lib.mkIf (command == "alacritty")
-      (import ./alacritty {inherit osConfig config lib pkgs inputs;}))
-
-    (lib.mkIf (command == "footclient" || command == "foot")
-      (import ./foot {inherit osConfig config lib pkgs inputs;}))
-
-    (lib.mkIf (command == "kitty")
-      (import ./kitty {inherit osConfig config lib pkgs inputs;}))
-  ]
+  makeCfg terminal

@@ -1,4 +1,3 @@
-# common configs
 {
   osConfig,
   lib,
@@ -7,10 +6,27 @@
   inputs,
   ...
 }: let
-  inherit (osConfig.myOptions.defaultApps.guiTextEditor) command;
+  inherit (osConfig.myOptions.defaultApps) guiTextEditor;
+  makeCfg = name: desktopFile:
+    lib.mkMerge [
+      (import (./. + "/${name}") {inherit osConfig config lib pkgs inputs;})
+      {
+        xdg.mimeApps.defaultApplications = {
+          "text/plain" = [desktopFile];
+          "text/x-markdown" = [desktopFile];
+          "text/x-tex" = [desktopFile];
+          "text/x-python" = [desktopFile];
+          "text/x-ruby" = [desktopFile];
+          "text/x-readme" = [desktopFile];
+          "text/x-java" = [desktopFile];
+          "application/x-shellscript" = [desktopFile];
+          "application/xml" = [desktopFile];
+          "inode/x-empty" = [desktopFile];
+        };
+      }
+    ];
+  desktopFiles = {
+    pluma = "pluma.desktop";
+  };
 in
-  lib.mkMerge [
-    # pluma
-    (lib.mkIf (command == "pluma")
-      (import ./pluma {inherit osConfig config lib pkgs inputs;}))
-  ]
+  makeCfg guiTextEditor desktopFiles.${guiTextEditor}

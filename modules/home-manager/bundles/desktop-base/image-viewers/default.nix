@@ -1,4 +1,3 @@
-# common configs
 {
   osConfig,
   lib,
@@ -7,13 +6,29 @@
   inputs,
   ...
 }: let
-  inherit (osConfig.myOptions.defaultApps.imageViewer) command;
+  inherit (osConfig.myOptions.defaultApps) imageViewer;
+  makeCfg = name: desktopFile:
+    lib.mkMerge [
+      (import (./. + "/${name}") {inherit osConfig config lib pkgs inputs;})
+      {
+        xdg.mimeApps.defaultApplications = {
+          "image/bmp" = [desktopFile];
+          "image/gif" = [desktopFile];
+          "image/svg+xml" = [desktopFile];
+          "image/tiff" = [desktopFile];
+          "image/png" = [desktopFile];
+          "image/jpeg" = [desktopFile];
+          "image/jp2" = [desktopFile];
+          "image/avif" = [desktopFile];
+          "image/webp" = [desktopFile];
+          "image/heif" = [desktopFile];
+          "image/x-pixmap" = [desktopFile];
+        };
+      }
+    ];
+  desktopFiles = {
+    imv = "imv-dir.desktop";
+    ristretto = "org.xfce.ristretto.desktop";
+  };
 in
-  lib.mkMerge [
-    # imv
-    (lib.mkIf (command == "imv")
-      (import ./imv {inherit osConfig config lib pkgs inputs;}))
-    # ristretto
-    (lib.mkIf (command == "ristretto")
-      (import ./ristretto {inherit osConfig config lib pkgs inputs;}))
-  ]
+  makeCfg imageViewer desktopFiles.${imageViewer}
