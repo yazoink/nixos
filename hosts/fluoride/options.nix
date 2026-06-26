@@ -56,7 +56,7 @@
             # hash = "sha256-UnDjygcXsn3x1sN3Q6VbU9l62l1EhI9DbqN1dXRknNk=";
 
             url = "https://github.com/wallace-aph/tiles-and-such/blob/master/Floral/Elfst40.jpg?raw=true";
-            hash = "";
+            hash = "sha256-kjDhlUcTDh5Ywsq4BZSwZn3IfW375e54L1air75PN4I=";
           };
         };
       };
