@@ -21,22 +21,16 @@
         };
       }
     ];
-  fileManagers = [
-    {
-      name = "nemo";
-      desktopFile = "nemo.desktop";
-    }
-    {
-      name = "pcmanfm";
-      desktopFile = "pcmanfm.desktop";
-    }
-    {
-      name = "thunar";
-      desktopFile = "thunar.desktop";
-    }
-  ];
+  desktopFiles = {
+    nemo = "nemo.desktop";
+    pcmanfm = "pcmanfm.desktop";
+    thunar = "thunar.desktop";
+  };
 in
-  makeCfg (map fileManagers.${fileManager})
+  makeCfg {
+    name = fileManager;
+    desktopFile = desktopFiles.${fileManager};
+  }
 /*
   lib.mkMerge [
   # nemo
