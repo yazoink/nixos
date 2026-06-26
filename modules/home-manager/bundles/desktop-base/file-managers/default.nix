@@ -35,7 +35,7 @@
       }
     ];
 in
-  builtins.listToAttrs (map cfgFor fileManagers)
+  builtins.listToAttrs (builtins.map cfgFor fileManagers)
 /*
   lib.mkMerge [
   # nemo
