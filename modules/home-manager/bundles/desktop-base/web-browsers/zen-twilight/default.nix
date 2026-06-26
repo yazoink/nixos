@@ -9,7 +9,6 @@
     if osConfig.myOptions.desktopTheme.zenBrowserShowBorders
     then 15
     else 0;
-  desktopFile = "zen.desktop";
 in {
   home = {
     sessionVariables = {
@@ -168,11 +167,5 @@ in {
         "dom.text_fragments.create_text_fragment.enabled" = true;
       };
     };
-  };
-  xdg.mimeApps.defaultApplications = {
-    "x-scheme-handler/https" = [desktopFile];
-    "x-scheme-handler/http" = [desktopFile];
-    "x-scheme-handler/ftp" = [desktopFile];
-    "x-scheme-handler/mailto" = [desktopFile];
   };
 }
