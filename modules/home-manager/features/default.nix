@@ -24,5 +24,5 @@ in
     (lib.mkIf features.wine.enable
       (import ./wine {inherit osConfig config lib pkgs inputs;}))
     (lib.mkIf features.garfetch.enable
-      (import ./wine {inherit osConfig config lib pkgs inputs;}))
+      (import ./garfetch {inherit osConfig config lib pkgs inputs;}))
   ]

@@ -1,3 +1,4 @@
+# desktop configs
 {
   pkgs-stable,
   lib,
