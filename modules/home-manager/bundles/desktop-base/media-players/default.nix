@@ -6,7 +6,7 @@
   inputs,
   ...
 }: let
-  inherit (osConfig.myOptions.defaultApps) mediaPlayer;
+  name = osConfig.myOptions.defaultApps.mediaPlayer;
   makeCfg = name: desktopFile:
     lib.mkMerge [
       (import (./. + "/${name}") {inherit osConfig config lib pkgs inputs;})
@@ -99,4 +99,4 @@
     vlc = "vlc.desktop";
   };
 in
-  makeCfg mediaPlayer desktopFiles.${mediaPlayer}
+  makeCfg name desktopFiles.${name}

@@ -1,11 +1,11 @@
 {
-  pkgs-stable,
+  osConfig,
   lib,
   pkgs,
   config,
   inputs,
   ...
 }: let
-  inherit (config.myOptions.defaultApps) discordClient;
+  name = osConfig.myOptions.defaultApps.discordClient;
 in
-  import (./. + "/${discordClient}") {inherit pkgs-stable config lib pkgs inputs;}
+  import (./. + "/${name}") {inherit osConfig config lib pkgs inputs;}

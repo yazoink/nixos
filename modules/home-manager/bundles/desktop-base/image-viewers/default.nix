@@ -6,7 +6,7 @@
   inputs,
   ...
 }: let
-  inherit (osConfig.myOptions.defaultApps) imageViewer;
+  name = osConfig.myOptions.defaultApps.imageViewer;
   makeCfg = name: desktopFile:
     lib.mkMerge [
       (import (./. + "/${name}") {inherit osConfig config lib pkgs inputs;})
@@ -31,4 +31,4 @@
     ristretto = "org.xfce.ristretto.desktop";
   };
 in
-  makeCfg imageViewer desktopFiles.${imageViewer}
+  makeCfg name desktopFiles.${name}

@@ -6,7 +6,7 @@
   inputs,
   ...
 }: let
-  inherit (osConfig.myOptions.defaultApps) guiTextEditor;
+  name = osConfig.myOptions.defaultApps.guiTextEditor;
   makeCfg = name: desktopFile:
     lib.mkMerge [
       (import (./. + "/${name}") {inherit osConfig config lib pkgs inputs;})
@@ -29,4 +29,4 @@
     pluma = "pluma.desktop";
   };
 in
-  makeCfg guiTextEditor desktopFiles.${guiTextEditor}
+  makeCfg name desktopFiles.${name}

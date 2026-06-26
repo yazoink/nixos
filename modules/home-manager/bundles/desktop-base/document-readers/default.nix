@@ -6,7 +6,7 @@
   inputs,
   ...
 }: let
-  inherit (osConfig.myOptions.defaultApps) documentReader;
+  name = osConfig.myOptions.defaultApps.documentReader;
   makeCfg = name: desktopFile:
     lib.mkMerge [
       (import (./. + "/${name}") {inherit osConfig config lib pkgs inputs;})
@@ -23,4 +23,4 @@
     zathura = "org.pwmt.zathura.desktop";
   };
 in
-  makeCfg documentReader desktopFiles.${documentReader}
+  makeCfg name desktopFiles.${name}

@@ -6,7 +6,7 @@
   inputs,
   ...
 }: let
-  inherit (osConfig.myOptions.defaultApps) webBrowser;
+  name = osConfig.myOptions.defaultApps.webBrowser;
   makeCfg = name: desktopFile:
     lib.mkMerge [
       (import (./. + "/${name}") {inherit osConfig config lib pkgs inputs;})
@@ -26,4 +26,4 @@
     zen = "zen-twilight.desktop";
   };
 in
-  makeCfg webBrowser desktopFiles.${webBrowser}
+  makeCfg name desktopFiles.${name}

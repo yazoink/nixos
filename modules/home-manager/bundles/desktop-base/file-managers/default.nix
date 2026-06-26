@@ -6,7 +6,7 @@
   inputs,
   ...
 }: let
-  inherit (osConfig.myOptions.defaultApps) fileManager;
+  name = osConfig.myOptions.defaultApps.fileManager;
   makeCfg = name: desktopFile:
     lib.mkMerge [
       (import (./. + "/${name}") {inherit osConfig config lib pkgs inputs;})
@@ -22,4 +22,4 @@
     thunar = "thunar.desktop";
   };
 in
-  makeCfg fileManager desktopFiles.${fileManager}
+  makeCfg name desktopFiles.${name}

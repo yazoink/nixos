@@ -6,6 +6,6 @@
   inputs,
   ...
 }: let
-  inherit (config.myOptions.defaultApps) terminal;
+  name = config.myOptions.defaultApps.terminal;
 in
-  import (./. + "/${terminal}") {inherit pkgs-stable config lib pkgs inputs;}
+  import (./. + "/${name}") {inherit pkgs-stable config lib pkgs inputs;}
