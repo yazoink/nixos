@@ -10,37 +10,37 @@
       default = "nemo";
       description = "Options: thunar, pcmanfm, nemo";
     };
-    discordClient = lib.mkOption {
+    discordClient.command = lib.mkOption {
       type = lib.types.str;
       default = "vesktop";
       description = "Options: vesktop";
     };
-    guiTextEditor = lib.mkOption {
+    guiTextEditor.command = lib.mkOption {
       type = lib.types.str;
       default = "pluma";
       description = "Options: pluma";
     };
-    documentReader = lib.mkOption {
+    documentReader.command = lib.mkOption {
       type = lib.types.str;
       default = "zathura";
       description = "Options: atril, zathura";
     };
-    mediaPlayer = lib.mkOption {
+    mediaPlayer.command = lib.mkOption {
       type = lib.types.str;
       default = "mpv";
       description = "Options: vlc, mpv, celluloid";
     };
-    webBrowser = lib.mkOption {
+    webBrowser.command = lib.mkOption {
       type = lib.types.str;
       default = "zen-twilight";
       description = "Options: firefox, zen-twilight, brave, librewolf";
     };
-    imageViewer = lib.mkOption {
+    imageViewer.command = lib.mkOption {
       type = lib.types.str;
       default = "imv";
       description = "Options: ristretto, imv";
     };
-    terminal = lib.mkOption {
+    terminal.command = lib.mkOption {
       type = lib.types.str;
       default = "foot";
       description = "Options: foot, footclient, alacritty, kitty";
