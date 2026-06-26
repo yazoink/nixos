@@ -53,7 +53,7 @@
             # hash = "sha256-QmP4czF4Mp2UN0kOBrVmo/VRCdpfDETQPwesxdYjRJs=";
 
             url = "https://github.com/yazoink/wallpapers/blob/main/tiling/flowers5.jpg?raw=true";
-            hash = "";
+            hash = "sha256-UnDjygcXsn3x1sN3Q6VbU9l62l1EhI9DbqN1dXRknNk=";
           };
         };
       };
