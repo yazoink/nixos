@@ -4,7 +4,7 @@
   ...
 }: let
   garfetch = pkgs.callPackage ./garfetch.nix {};
-  inherit (osConfig.features.garfetch) style;
+  inherit (osConfig.myOptions.features.garfetch) style;
 in {
   home.packages = [garfetch];
   home.file.".config/garfetch".source = ./. + "/config-${builtins.toString style}";
