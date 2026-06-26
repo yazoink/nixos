@@ -67,7 +67,7 @@ in {
 
     # window drop-shadows
     window.active.shadow.size: 60
-    window.inactive.shadow.size: 40
+    window.inactive.shadow.size: 50
     window.active.shadow.color: #00000040
     window.inactive.shadow.color: #00000030
 
