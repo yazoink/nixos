@@ -52,8 +52,11 @@
             # url = "https://raw.githubusercontent.com/yazoink/wallpapers/refs/heads/main/flowers/a_group_of_purple_flowers2.png";
             # hash = "sha256-QmP4czF4Mp2UN0kOBrVmo/VRCdpfDETQPwesxdYjRJs=";
 
-            url = "https://github.com/yazoink/wallpapers/blob/main/tiling/flowers5.jpg?raw=true";
-            hash = "sha256-UnDjygcXsn3x1sN3Q6VbU9l62l1EhI9DbqN1dXRknNk=";
+            # url = "https://github.com/yazoink/wallpapers/blob/main/tiling/flowers5.jpg?raw=true";
+            # hash = "sha256-UnDjygcXsn3x1sN3Q6VbU9l62l1EhI9DbqN1dXRknNk=";
+
+            url = "https://github.com/wallace-aph/tiles-and-such/blob/master/Floral/Elfst40.jpg?raw=true";
+            hash = "";
           };
         };
       };
