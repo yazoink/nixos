@@ -5,7 +5,7 @@
   # the Desktop Base bundle except for Discord, which is in Desktop Full.
 
   options.myOptions.defaultApps = {
-    fileManager = lib.mkOption {
+    fileManager.command = lib.mkOption {
       type = lib.types.str;
       default = "nemo";
       description = "Options: thunar, pcmanfm, nemo";
@@ -20,7 +20,7 @@
       default = "pluma";
       description = "Options: pluma";
     };
-    documentReader.command = lib.mkOption {
+    documentReader = lib.mkOption {
       type = lib.types.str;
       default = "zathura";
       description = "Options: atril, zathura";

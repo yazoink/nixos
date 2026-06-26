@@ -1,4 +1,3 @@
-# common configs
 {
   osConfig,
   lib,
@@ -7,13 +6,21 @@
   inputs,
   ...
 }: let
-  inherit (osConfig.myOptions.defaultApps.documentReader) command;
+  inherit (osConfig.myOptions.defaultApps) documentReader;
+  makeCfg = name: desktopFile:
+    lib.mkMerge [
+      (import (./. + "/${name}") {inherit osConfig config lib pkgs inputs;})
+      {
+        xdg.mimeApps.defaultApplications = {
+          "application/pdf" = [desktopFile];
+          "image/vnd.djvu" = [desktopFile];
+          "application/epub+zip" = [desktopFile];
+        };
+      }
+    ];
+  desktopFiles = {
+    atril = "atril.desktop";
+    zathura = "zathura.desktop";
+  };
 in
-  lib.mkMerge [
-    # atril
-    (lib.mkIf (command == "atril")
-      (import ./atril {inherit osConfig config lib pkgs inputs;}))
-    #zathura
-    (lib.mkIf (command == "zathura")
-      (import ./zathura {inherit osConfig config lib pkgs inputs;}))
-  ]
+  makeCfg fileManager desktopFiles.${documentReader}
