@@ -2,4 +2,4 @@
   pkgs,
   fileManager,
   ...
-}: (import (./. + "/${fileManager}"))
+}: (import (./. + "/${fileManager}") {inherit pkgs;})
