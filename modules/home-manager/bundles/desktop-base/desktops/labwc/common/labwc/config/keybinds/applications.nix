@@ -92,15 +92,7 @@ in [
       "@command" = "${wallpaperCommand} -q";
     };
   }
-  # restart foot server
-  {
-    "@key" = "W-S-f";
-    action = {
-      "@name" = "Execute";
-      "@command" = "${../../../scripts/restart-foot-server.sh}";
-    };
-  }
-  # launch poer menu
+  # launch power menu
   {
     "@key" = "W-S-q";
     action = {
