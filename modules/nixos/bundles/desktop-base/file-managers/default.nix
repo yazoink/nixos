@@ -4,6 +4,6 @@
   config,
   ...
 }: let
-  name = builtins.trace "${config.myOptions.defaultApps.fileManager}" config.myOptions.defaultApps.fileManager;
+  name = config.myOptions.defaultApps.fileManager;
 in
-  import (./. + "/${name}") {inherit lib pkgs;}
+  import builtins.trace "${config.myOptions.defaultApps.fileManager}" (./. + "/${name}") {inherit lib pkgs;}
