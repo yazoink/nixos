@@ -12,7 +12,7 @@ in {
   programs.wofi = {
     enable = true;
     settings = {
-      term = osConfig.myOptions.defaultApps.terminal.command;
+      term = osConfig.myOptions.defaultApps.terminal;
       width = "25%";
       height = "45%";
       show_all = false;

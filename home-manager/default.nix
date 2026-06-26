@@ -20,7 +20,7 @@ in {
     homeDirectory = "/home/${username}";
     sessionVariables = {
       EDITOR = "nvim";
-      BROWSER = "${osConfig.myOptions.defaultApps.webBrowser.command}";
+      BROWSER = "${osConfig.myOptions.defaultApps.webBrowser}";
       STEAM_EXTRA_COMPAT_TOOLS_PATH = "\${HOME}/.steam/root/compatibilitytools.d";
       KRITA_NO_STYLE_OVERRIDE = 1;
     };
