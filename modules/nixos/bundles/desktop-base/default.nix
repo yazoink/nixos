@@ -6,15 +6,18 @@
   pkgs-stable,
   ...
 }: let
-  fileManager = config.myOptions.defaultApps.fileManager;
+  inherit (config.myOptions.bundles) desktopBase;
 in
-  lib.mkMerge [
+  lib.mkIf desktopBase.enable (lib.mkMerge [
+    {
+      myOptions.bundles.base.enable = lib.mkForce true;
+    }
     (import ./acpi {inherit config lib pkgs inputs pkgs-stable;})
     (import ./audio {inherit config lib pkgs inputs pkgs-stable;})
     (import ./dconf {inherit config lib pkgs inputs pkgs-stable;})
+    (import ./file-managers {inherit config lib pkgs inputs pkgs-stable;})
     (import ./fonts {inherit config lib pkgs inputs pkgs-stable;})
     (import ./gnome-keyring {inherit config lib pkgs inputs pkgs-stable;})
     (import ./polkit {inherit config lib pkgs inputs pkgs-stable;})
     (import ./desktops {inherit config lib pkgs inputs pkgs-stable;})
-    (import ./file-managers {inherit pkgs lib fileManager;})
-  ]
+  ])
