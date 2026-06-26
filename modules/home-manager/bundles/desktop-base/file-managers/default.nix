@@ -8,13 +8,9 @@
   ...
 }: let
   inherit (osConfig.myOptions.defaultApps) fileManager;
-  makeCfg = {
-    name,
-    desktopFile,
-    ...
-  }:
+  makeCfg = name: desktopFile:
     lib.mkMerge [
-      (import (./. + "/${name}"))
+      (import (./. + "/${name}") {inherit osConfig config lib pkgs inputs;})
       {
         xdg.mimeApps.defaultApplications = {
           "inode/directory" = [desktopFile]; # Directories
@@ -27,10 +23,7 @@
     thunar = "thunar.desktop";
   };
 in
-  makeCfg {
-    name = fileManager;
-    desktopFile = desktopFiles.${fileManager};
-  }
+  makeCfg fileManager desktopFiles.${fileManager}
 /*
   lib.mkMerge [
   # nemo
