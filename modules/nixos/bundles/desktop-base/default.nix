@@ -6,7 +6,7 @@
   pkgs-stable,
   ...
 }: let
-  inherit (config) myOptions;
+  myOptions = config.myOptions;
   inherit (myOptions.bundles) desktopBase;
   fileManager = myOptions.defaultApps.fileManager;
 in
