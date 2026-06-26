@@ -1,5 +1,5 @@
 {
-  pkgs-stable,
+  osConfig,
   lib,
   pkgs,
   config,
@@ -8,4 +8,4 @@
 }: let
   name = config.myOptions.defaultApps.terminal;
 in
-  import (./. + "/${name}") {inherit pkgs-stable config lib pkgs inputs;}
+  import (./. + "/${name}") {inherit osConfig config lib pkgs inputs;}
