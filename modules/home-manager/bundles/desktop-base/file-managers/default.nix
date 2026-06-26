@@ -8,7 +8,7 @@
   ...
 }: let
   inherit (osConfig.myOptions.defaultApps) fileManager;
-  cfgFor = {
+  makeCfg = {
     name,
     desktopFile,
     ...
@@ -36,9 +36,7 @@
     }
   ];
 in
-  builtins.listToAttrs
-  (lib.lists.forEach fileManagers (f:
-      cfgFor f))
+  makeCfg fileManagers.${fileManager}
 /*
   lib.mkMerge [
   # nemo
