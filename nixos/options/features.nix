@@ -8,6 +8,17 @@
   # enabled.
 
   options.myOptions.features = {
+    garfetch = {
+      enable = lib.mkOption {
+        type = lib.types.bool;
+        default = false;
+      };
+      style = lib.mkOption {
+        type = lib.types.number;
+        default = 1;
+        description = "options: 1, 2";
+      };
+    };
     lutgen.enable = lib.mkOption {
       type = lib.types.bool;
       default = false;

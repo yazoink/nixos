@@ -41,7 +41,7 @@
         }
         {
           type =
-            if (osConfig.networking.hostName == "fluoride")
+            if (osConfig.networking.hostName == "stardust")
             then "gpu"
             else "display";
         }

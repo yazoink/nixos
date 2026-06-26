@@ -22,6 +22,11 @@ in
           scroll_factor = touchpadScrollFactor;
         };
       };
+      monitor = [
+        "DP-1,highres,auto,1.25"
+        "DP-2,highres,auto,1.25"
+        ",preferred,auto,1"
+      ];
     }
     (lib.mkIf isThinkPad {
       input.kb_model = "thinkpad";
@@ -32,15 +37,5 @@ in
           sensitivity = 0.5;
         }
       ];
-    })
-    (lib.mkIf (hostName == "fluoride") {
-      monitor = [
-        "DP-1,highres,auto,1.25"
-        "DP-2,highres,auto,1.25"
-        ",preferred,auto,1"
-      ];
-    })
-    (lib.mkIf (hostName != "fluoride") {
-      monitor = [",preferred,auto,1"];
     })
   ]

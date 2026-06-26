@@ -23,4 +23,6 @@ in
       (import ./vscode {inherit osConfig config lib pkgs inputs;}))
     (lib.mkIf features.wine.enable
       (import ./wine {inherit osConfig config lib pkgs inputs;}))
+    (lib.mkIf features.garfetch.enable
+      (import ./wine {inherit osConfig config lib pkgs inputs;}))
   ]

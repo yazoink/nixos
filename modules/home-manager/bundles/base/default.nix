@@ -27,7 +27,6 @@ lib.mkIf osConfig.myOptions.bundles.base.enable (lib.mkMerge [
   }
   (import ./btop {inherit osConfig config lib pkgs inputs;})
   (import ./fastfetch {inherit osConfig config lib pkgs inputs;})
-  (import ./garfetch {inherit osConfig config lib pkgs inputs;})
   (import ./git {inherit osConfig config lib pkgs inputs;})
   (import ./vim {inherit osConfig config lib pkgs inputs;})
   # (import ./pswdgen {inherit osConfig config lib pkgs inputs;})

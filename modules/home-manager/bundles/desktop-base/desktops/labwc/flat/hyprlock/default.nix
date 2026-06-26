@@ -7,13 +7,8 @@
     template = ./hyprlock-colors.conf.mustache;
     extension = "conf";
   };
-  fractionalScaling =
-    if (osConfig.networking.hostName == "fluoride")
-    then "1"
-    else "2";
 in {
   xdg.configFile = {
-    # "hypr/hyprlock-colors.conf".source = confFile;
     "hypr/hyprlock.conf".text = ''
       source = ${confFile}
 
@@ -24,7 +19,6 @@ in {
         hide_cursor = false
         grace = 0
         ignore_empty_input = true
-        fractional_scaling = ${fractionalScaling}
       }
 
       background {

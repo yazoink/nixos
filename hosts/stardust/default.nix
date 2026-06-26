@@ -37,5 +37,5 @@
 
   services.xserver.videoDrivers = ["amdgpu" "modesetting" "fbdev"];
 
-  networking.hostName = "fluoride";
+  networking.hostName = "stardust";
 }

@@ -47,12 +47,12 @@
     pkgs-stable = nixpkgs-stable.legacyPackages.${system};
   in {
     nixosConfigurations = {
-      fluoride = nixpkgs.lib.nixosSystem {
+      stardust = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs system pkgs-stable;};
         modules = [
           inputs.home-manager.nixosModules.home-manager
           ./nixos
-          ./hosts/fluoride
+          ./hosts/stardust
         ];
       };
 

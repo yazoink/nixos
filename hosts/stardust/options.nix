@@ -35,8 +35,8 @@
       username = "gene";
     };
     desktopTheme = {
-      # colorscheme = "biscuit-de-mar-light";
-      colorscheme = "swamp-light";
+      colorscheme = "biscuit-de-mar-light";
+      # colorscheme = "swamp-light";
       # colorscheme = "camellia";
       # colorscheme = "paradise";
       rice.labwc-flat.enable = true;
@@ -81,6 +81,10 @@
     };
     features = {
       # etterna.enable = true;
+      garfetch = {
+        enable = true;
+        style = 2;
+      };
       steam.enable = true;
       gamescope.enable = true;
       virtManager.enable = true;
