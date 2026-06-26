@@ -7,7 +7,7 @@
   ...
 }: let
   desktopBase = config.myOptions.bundles.desktopBase;
-  fileManager = "${config.myOptions.defaultApps.fileManager}";
+  fileManager = config.myOptions.defaultApps.fileManager;
 in
   lib.mkIf desktopBase.enable (lib.mkMerge [
     {
