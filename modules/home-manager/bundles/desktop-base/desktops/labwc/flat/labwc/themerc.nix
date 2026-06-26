@@ -66,9 +66,9 @@ in {
     window.active.button.desk.pressed.image.color: #${base05}
 
     # window drop-shadows
-    window.active.shadow.size: 32
-    window.inactive.shadow.size: 32
-    window.active.shadow.color: #00000040
+    window.active.shadow.size: 60
+    window.inactive.shadow.size: 40
+    window.active.shadow.color: #00000060
     window.inactive.shadow.color: #00000040
 
     # Note that "menu", "iconify", "max", "close" buttons colors can be defined
