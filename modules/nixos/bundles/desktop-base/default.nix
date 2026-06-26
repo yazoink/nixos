@@ -7,7 +7,7 @@
   ...
 }: let
   myOptions = config.myOptions;
-  inherit (myOptions.bundles) desktopBase;
+  desktopBase = myOptions.bundles.desktopBase;
   fileManager = myOptions.defaultApps.fileManager;
 in
   lib.mkIf desktopBase.enable (lib.mkMerge [
