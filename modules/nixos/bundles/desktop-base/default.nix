@@ -6,7 +6,9 @@
   pkgs-stable,
   ...
 }: let
-  inherit (config.myOptions.bundles) desktopBase;
+  # inherit (config.myOptions.bundles) desktopBase;
+  desktopBase = config.myOptions.bundles.desktopBase;
+  fileManager = config.myOptions.defaultApps.fileManager;
 in
   lib.mkIf desktopBase.enable (lib.mkMerge [
     {
@@ -15,7 +17,7 @@ in
     (import ./acpi {inherit config lib pkgs inputs pkgs-stable;})
     (import ./audio {inherit config lib pkgs inputs pkgs-stable;})
     (import ./dconf {inherit config lib pkgs inputs pkgs-stable;})
-    (import ./file-managers {inherit config lib pkgs inputs pkgs-stable;})
+    (import ./file-managers {inherit config lib pkgs inputs pkgs-stable fileManager;})
     (import ./fonts {inherit config lib pkgs inputs pkgs-stable;})
     (import ./gnome-keyring {inherit config lib pkgs inputs pkgs-stable;})
     (import ./polkit {inherit config lib pkgs inputs pkgs-stable;})
