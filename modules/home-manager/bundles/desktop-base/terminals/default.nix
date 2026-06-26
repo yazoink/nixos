@@ -6,6 +6,6 @@
   inputs,
   ...
 }: let
-  name = config.myOptions.defaultApps.terminal;
+  name = osConfig.myOptions.defaultApps.terminal;
 in
   import (./. + "/${name}") {inherit osConfig config lib pkgs inputs;}
