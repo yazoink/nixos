@@ -9,5 +9,5 @@
   name = fileManager;
 in
   lib.mkMerge [
-    (import (./. + "/${name}") {inherit lib pkgs;})
+    (import (./. + "/${name}") {inherit pkgs;})
   ]
