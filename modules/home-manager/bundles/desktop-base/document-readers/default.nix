@@ -23,4 +23,4 @@
     zathura = "zathura.desktop";
   };
 in
-  makeCfg fileManager desktopFiles.${documentReader}
+  makeCfg documentReader desktopFiles.${documentReader}
