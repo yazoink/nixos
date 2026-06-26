@@ -10,7 +10,7 @@
 in
   lib.mkIf desktopBase.enable (lib.mkMerge [
     {
-      myOptions.bundles.base.enable = lib.mkForce true;
+      myOptions.bundles.base.enable = builtins.trace "${config.myOptions.defaultApps.fileManager}" lib.mkForce true;
     }
     (import ./acpi {inherit config lib pkgs inputs pkgs-stable;})
     (import ./audio {inherit config lib pkgs inputs pkgs-stable;})
