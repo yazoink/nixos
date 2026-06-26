@@ -3,6 +3,6 @@
   pkgs,
   ...
 }: let
-  # name = config.myOptions.defaultApps.fileManager;
+  name = config.myOptions.defaultApps.fileManager;
   fileManager = "thunar";
-in (import (./. + "/${fileManager}") {inherit lib pkgs;})
+in (import (./. + "/${name}") {inherit lib pkgs;})
