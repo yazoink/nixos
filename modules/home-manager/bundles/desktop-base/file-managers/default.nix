@@ -8,6 +8,18 @@
   ...
 }: let
   inherit (osConfig.myOptions.defaultApps) fileManager;
+  cfgFor = {
+    name,
+    desktopFile,
+  }:
+    lib.mkMerge [
+      (import (./. + "/${name}"))
+      {
+        xdg.mimeApps.defaultApplications = {
+          "inode/directory" = [desktopFile]; # Directories
+        };
+      }
+    ];
   fileManagers = [
     {
       name = "nemo";
@@ -22,18 +34,6 @@
       desktopFile = "thunar.desktop";
     }
   ];
-  cfgFor = {
-    name,
-    desktopFile,
-  }:
-    lib.mkMerge [
-      (import (./. + "/${name}"))
-      {
-        xdg.mimeApps.defaultApplications = {
-          "inode/directory" = [desktopFile]; # Directories
-        };
-      }
-    ];
 in
   builtins.listToAttrs (builtins.map cfgFor fileManagers)
 /*
