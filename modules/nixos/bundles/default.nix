@@ -14,12 +14,13 @@ in
       (import ./base {inherit config lib pkgs inputs pkgs-stable;}))
 
     (lib.mkIf bundles.desktopBase.enable (lib.mkMerge [
-      {bundles.base.enable = true;}
+      (import ./base {inherit config lib pkgs inputs pkgs-stable;})
       (import ./desktop-base {inherit fileManager config lib pkgs inputs pkgs-stable;})
     ]))
 
     (lib.mkIf bundles.desktopFull.enable (lib.mkMerge [
       {bundles.desktopBase.enable = true;}
+      (import ./desktop-base {inherit fileManager config lib pkgs inputs pkgs-stable;})
       (import ./desktop-full {inherit config lib pkgs inputs pkgs-stable;})
     ]))
   ]
