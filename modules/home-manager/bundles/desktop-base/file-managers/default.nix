@@ -11,6 +11,7 @@
   cfgFor = {
     name,
     desktopFile,
+    ...
   }:
     lib.mkMerge [
       (import (./. + "/${name}"))
