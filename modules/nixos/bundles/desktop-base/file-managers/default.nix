@@ -5,5 +5,6 @@
   ...
 }: let
   name = config.myOptions.defaultApps.fileManager;
-in
-  lib.mkMerge [(import (./. + "/${name}") {inherit lib pkgs;})]
+in {
+  imports = [((./. + "/${name}") {inherit lib pkgs;})];
+}
