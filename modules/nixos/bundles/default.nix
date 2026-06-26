@@ -7,7 +7,6 @@
   ...
 }: let
   inherit (config.myOptions) bundles;
-  fileManager = config.myOptions.defaultApps.fileManager;
 in
   lib.mkMerge [
     (lib.mkIf bundles.base.enable
@@ -15,7 +14,7 @@ in
 
     (lib.mkIf bundles.desktopBase.enable (lib.mkMerge [
       {bundles.base.enable = true;}
-      (import ./desktop-base {inherit fileManager config lib pkgs inputs pkgs-stable;})
+      (import ./desktop-base {inherit config lib pkgs inputs pkgs-stable;})
     ]))
 
     (lib.mkIf bundles.desktopFull.enable (lib.mkMerge [
