@@ -5,31 +5,14 @@
 }: {
   myOptions = builtins.trace "options set" {
     defaultApps = {
-      discordClient = {
-        command = "vesktop";
-      };
-      fileManager = {
-        command = "thunar";
-      };
-      guiTextEditor = {
-        command = "pluma";
-      };
-      documentReader = {
-        command = "zathura";
-      };
-      mediaPlayer = {
-        command = "mpv";
-      };
-      imageViewer = {
-        command = "imv";
-      };
-      terminal = {
-        command = "footclient";
-        # command = "urxvt";
-      };
-      webBrowser = {
-        command = "zen-twilight";
-      };
+      discordClient = "vesktop";
+      fileManager = "thunar";
+      guiTextEditor = "pluma";
+      documentReader = "zathura";
+      mediaPlayer = "mpv";
+      imageViewer = "imv";
+      terminal = "footclient";
+      webBrowser = "zen-twilight";
     };
     userAccount = {
       username = "gene";
