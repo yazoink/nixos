@@ -36,7 +36,7 @@
     }
   ];
 in
-  makeCfg fileManagers.${fileManager}
+  makeCfg (builtins.listToAttrs fileManagers.${fileManager})
 /*
   lib.mkMerge [
   # nemo
