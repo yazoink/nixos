@@ -38,7 +38,7 @@
 in
   builtins.listToAttrs
   (lib.lists.forEach fileManagers (f:
-      cfgFor f.name f.desktopFile))
+      cfgFor f))
 /*
   lib.mkMerge [
   # nemo
