@@ -7,8 +7,8 @@
   ...
 }: {
   imports = [
-    ./hardware-configuration.nix
     ./options.nix
+    ./hardware-configuration.nix
   ];
 
   boot = {
