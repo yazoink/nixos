@@ -1,5 +1,4 @@
 {
-  osConfig,
   lib,
   pkgs,
   ...
@@ -9,7 +8,7 @@
     timeouts = [
       {
         timeout = 1000;
-        command = "${lib.getExe pkgs.chayang} && ${lib.getExe pkgs.hyprlock}";
+        command = "${lib.getExe pkgs.hyprlock}";
       }
       {
         timeout = 1500;

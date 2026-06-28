@@ -1,8 +1,4 @@
-{
-  config,
-  osConfig,
-  ...
-}: let
+{config, ...}: let
   confFile = config.lib.stylix.colors {
     template = ./hyprlock-colors.conf.mustache;
     extension = "conf";
