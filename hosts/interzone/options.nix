@@ -53,8 +53,37 @@
     bundles = {
       # base.starshipFormat = 1;
       base.starshipFormat = 2;
-      desktopBase.mpv.profile = "fast";
-      # desktopBase.enable = true;
+      desktopBase = {
+        mpv.profile = "fast";
+        desktop = {
+          windowManager = {
+            name = "labwc";
+            labwc = {
+              style = "flat";
+            };
+          };
+          colorscheme = "moonfly";
+          fonts.desktop = {
+            name = "gabarito";
+            size = 11;
+          };
+          fonts.terminal = {
+            name = "aporetic-serif-mono";
+            size = 12;
+          };
+          wallpaper = {
+            type = "color";
+            color.hex = "696969";
+            image = {
+              fillType = "fill";
+              path = pkgs.fetchurl {
+                url = "https://github.com/yazoink/wallpapers/blob/main/trees-and-leaves/wall1.jpg?raw=true";
+                hash = "sha256-H8Hsm73MPbqrKl4RUiAhKUlkXPSntyghB95PpTmkuKM=";
+              };
+            };
+          };
+        };
+      };
       desktopFull.enable = true;
       desktopFull.vesktop.bloat = false;
     };
