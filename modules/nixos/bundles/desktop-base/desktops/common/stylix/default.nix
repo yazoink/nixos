@@ -4,7 +4,7 @@
   lib,
   ...
 }: let
-  inherit (config.myOptions.bundles.desktopBase.desktop) desktop;
+  inherit (config.myOptions.bundles.desktopBase) desktop;
   theme = desktop.colorscheme;
   monoFont = desktop.fonts.terminal;
   sansFont = desktop.fonts.desktop;
