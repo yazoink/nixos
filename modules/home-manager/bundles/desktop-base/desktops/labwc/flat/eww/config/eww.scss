@@ -214,7 +214,7 @@ tooltip label {
 }
 
 .day-names label {
-  color: $green;
+  color: $blue;
   padding: 4px;
   padding-bottom: 2px;
 }
@@ -224,8 +224,7 @@ tooltip label {
 }
 
 calendar:selected {
-  color: $bg;
-  background-color: $blue;
+  color: $blue;
   border-radius: 4px;
 }
 
