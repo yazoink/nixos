@@ -4,8 +4,9 @@
   pkgs,
   config,
   inputs,
+  defaultApps,
   ...
 }: let
-  name = osConfig.myOptions.defaultApps.discordClient;
+  name = defaultApps.discordClient;
 in
   import (./. + "/${name}") {inherit osConfig config lib pkgs inputs;}

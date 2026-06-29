@@ -1,10 +1,10 @@
 {
   pkgs,
   lib,
-  config,
+  defaultApps,
   ...
 }: let
-  inherit (config.myOptions.defaultApps) fileManager;
+  inherit (defaultApps) fileManager;
 in
   lib.mkMerge [
     (lib.mkIf (fileManager == "nemo")

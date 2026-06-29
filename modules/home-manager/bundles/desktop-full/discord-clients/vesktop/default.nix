@@ -35,7 +35,7 @@ in {
         callTimer.enable = lib.mkIf bloat true;
         ClearURLs.enable = true;
         copyFileContents.enable = lib.mkIf bloat true;
-        CopyUserURLs.enable = lib.mkIf bloat true;
+        CopyUserUrls.enable = lib.mkIf bloat true;
         decor.enable = lib.mkIf bloat true;
         experiments = {
           enable = true;
