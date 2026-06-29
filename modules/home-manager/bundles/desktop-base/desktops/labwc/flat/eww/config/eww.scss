@@ -213,10 +213,21 @@ calendar.day-names {
 
 .calendar {
   background-color: $bg2;
-  padding: 4px;
+  padding: 12px;
   border-radius: 8px;
   .day-names label {
-    color: $blue;
+    color: $yellow;
+    padding: 4px;
+  }
+  .cal {
+    padding: 2px;
+  }
+}
+
+calendar {
+  &:selected {
+    color: $bg;
+    background-color: $blue;
   }
 }
 
@@ -232,11 +243,6 @@ calendar.button {
 calendar.day-number {
   padding: 2px;
   margin: 0;
-}
-
-calendar:selected {
-  color: $bg;
-  background-color: $blue;
 }
 
 .red {
