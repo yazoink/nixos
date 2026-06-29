@@ -1,10 +1,9 @@
 {
-  config,
   lib,
-  osConfig,
+  vesktop,
   ...
 }: let
-  inherit (osConfig.myOptions.bundles.desktopFull.vesktop) bloat;
+  inherit (vesktop) bloat;
 in {
   programs.nixcord = {
     enable = true;
@@ -35,7 +34,7 @@ in {
         callTimer.enable = lib.mkIf bloat true;
         ClearURLs.enable = true;
         copyFileContents.enable = lib.mkIf bloat true;
-        CopyUserUrls.enable = lib.mkIf bloat true;
+        copyUserUrls.enable = lib.mkIf bloat true;
         decor.enable = lib.mkIf bloat true;
         experiments = {
           enable = true;

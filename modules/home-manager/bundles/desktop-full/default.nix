@@ -70,7 +70,10 @@ in
     (import ./audtousd {inherit osConfig config lib pkgs inputs;})
     (import ./cava {inherit osConfig config lib pkgs inputs;})
     (import ./color-scripts {inherit osConfig config lib pkgs inputs;})
-    (import ./discord-clients {inherit osConfig config lib pkgs inputs defaultApps;})
+    (import ./discord-clients {
+      inherit osConfig config lib pkgs inputs defaultApps;
+      inherit (desktopFull) vesktop;
+    })
     (import ./gimp {inherit osConfig config lib pkgs inputs;})
     (import ./kjtocal {inherit osConfig config lib pkgs inputs;})
     (import ./lyricli {inherit osConfig config lib pkgs inputs;})
