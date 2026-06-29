@@ -17,6 +17,8 @@
   #
   # Desktop Full: The modules and packages needed for a working console and
   # fully-featured desktop.
+  #
+  # Art: tablet drivers and software for making art.
 
   options.myOptions.bundles = {
     base = {
@@ -165,6 +167,19 @@
       };
     };
     desktopFull = {
+      enable = lib.mkOption {
+        type = lib.types.bool;
+        default = false;
+      };
+      vesktop = {
+        bloat = lib.mkOption {
+          type = lib.types.bool;
+          default = true;
+          description = "Setting to false installs less plugins.";
+        };
+      };
+    };
+    art = {
       enable = lib.mkOption {
         type = lib.types.bool;
         default = false;

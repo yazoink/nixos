@@ -86,6 +86,7 @@
       };
       desktopFull.enable = true;
       desktopFull.vesktop.bloat = false;
+      art.enable = true;
     };
     features = {
       virtManager.enable = true;

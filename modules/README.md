@@ -41,7 +41,7 @@ bundles may also have configurable options in themselves:
 
 ## Available Bundles
 
-The bundles currently available are: `base`, `desktopBase`, and `desktopFull`.
+The bundles currently available are: `base`, `desktopBase` `desktopFull`, and `art`.
 
 ### Base
 
@@ -90,3 +90,7 @@ Example:
 `myOptions.bundles.desktopFull.enable = true;`
 
 `desktopFull` includes all the configurations included in `base`, and `desktopBase`, plus a variety of extras.
+
+### art
+
+Software for making art, plus tablet drivers.

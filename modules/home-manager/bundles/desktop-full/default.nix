@@ -23,7 +23,6 @@ in
           ### gui file editors ###
           audacity
           libreoffice-qt
-          # inkscape
           # olive-editor
           shotcut
           kid3-qt
@@ -40,7 +39,7 @@ in
           #gnome-clocks
           #gnome-disk-utility
           gnome-font-viewer
-          # galculator
+          galculator
           # d-spy
           filezilla
 
@@ -74,7 +73,6 @@ in
       inherit osConfig config lib pkgs inputs defaultApps;
       inherit (desktopFull) vesktop;
     })
-    (import ./gimp {inherit osConfig config lib pkgs inputs;})
     (import ./kjtocal {inherit osConfig config lib pkgs inputs;})
     (import ./lyricli {inherit osConfig config lib pkgs inputs;})
     # (import ./mpdris2 {inherit osConfig config lib pkgs inputs;})
