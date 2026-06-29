@@ -39,8 +39,11 @@
                 # url = "https://github.com/wallace-aph/tiles-and-such/blob/master/Floral/Elfst40.jpg?raw=true";
                 # hash = "sha256-kjDhlUcTDh5Ywsq4BZSwZn3IfW375e54L1air75PN4I=";
 
-                url = "https://github.com/wallace-aph/tiles-and-such/blob/master/Floral/9.jpg?raw=true";
-                hash = "sha256-Hvm41hRGVo11hlUVdV6Pju8FKMO5zstX9U7tLNweisg=";
+                # url = "https://github.com/wallace-aph/tiles-and-such/blob/master/Floral/9.jpg?raw=true";
+                # hash = "sha256-Hvm41hRGVo11hlUVdV6Pju8FKMO5zstX9U7tLNweisg=";
+
+                url = "https://github.com/wallace-aph/tiles-and-such/blob/master/Personal/dolphin2.png?raw=true";
+                hash = "";
               };
             };
           };

@@ -153,3 +153,10 @@ menuitem:hover {
 #custom-search {
   color: @accent;
 }
+
+#custom-search,
+#custom-power {
+  padding-left: 12px;
+  padding-right: 12px;
+  font-size: 12pt;
+}
