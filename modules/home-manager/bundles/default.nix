@@ -4,5 +4,6 @@
     ./desktop-base
     ./desktop-full
     ./art
+    ./dev
   ];
 }

@@ -1,8 +1,4 @@
 {lib, ...}: {
-  # ----- HARDWARE FEATURES ----- #
-  #
-  # Miscellaneous modules and packages not included in any bundles -- for
-  # specific hardware.
   options.myOptions.hardwareFeatures = {
     bootloader = {
       type = lib.mkOption {

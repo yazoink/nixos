@@ -3,23 +3,6 @@
   pkgs,
   ...
 }: {
-  # ----- BUNDLES ----- #
-  #
-  # These are bundles of modules and packages that suit different system
-  # configurations.
-  #
-  #
-  # Base: The base modules and packages needed to get a working console.
-  #
-  # Desktop Base: The modules and packages for a working console + basic
-  # desktop. It provides a file manager, terminal, media player, document
-  # reader, image viewer, text editor, and web browser but no extra apps.
-  #
-  # Desktop Full: The modules and packages needed for a working console and
-  # fully-featured desktop.
-  #
-  # Art: tablet drivers and software for making art.
-
   options.myOptions.bundles = {
     base = {
       enable = lib.mkOption {
@@ -184,12 +167,11 @@
         type = lib.types.bool;
         default = false;
       };
-      vesktop = {
-        bloat = lib.mkOption {
-          type = lib.types.bool;
-          default = true;
-          description = "Setting to false installs less plugins.";
-        };
+    };
+    dev = {
+      enable = lib.mkOption {
+        type = lib.types.bool;
+        default = false;
       };
     };
   };

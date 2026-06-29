@@ -1,12 +1,4 @@
 {lib, ...}: {
-  # ----- FEATURES ----- #
-  #
-  # Miscellaneous modules and packages not in any bundle to be freely
-  # enabled.
-  #
-  # Most, if not all require at least the Desktop Base bundle to be
-  # enabled.
-
   options.myOptions.features = {
     garfetch = {
       enable = lib.mkOption {

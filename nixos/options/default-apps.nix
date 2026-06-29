@@ -1,9 +1,4 @@
 {lib, ...}: {
-  # ----- DEFAULT APPS ----- #
-  #
-  # The apps to install for specific uses. All of these are included in
-  # the Desktop Base bundle except for Discord, which is in Desktop Full.
-
   options.myOptions.defaultApps = {
     fileManager = lib.mkOption {
       type = lib.types.str;
