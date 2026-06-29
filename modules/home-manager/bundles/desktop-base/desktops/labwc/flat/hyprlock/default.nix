@@ -1,4 +1,8 @@
-{config, ...}: let
+{
+  config,
+  pkgs,
+  ...
+}: let
   confFile = config.lib.stylix.colors {
     template = ./hyprlock-colors.conf.mustache;
     extension = "conf";
@@ -108,7 +112,7 @@ in {
 
       label {
         monitor =
-        text = cmd[] date "+%d %b %Y"
+        text = cmd[] ${pkgs.coreutils}/bin/date "+%d %b %Y"
         color = $fg
         font_family = $font
         halign = center
