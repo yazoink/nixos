@@ -2,8 +2,8 @@ window#waybar {
   color: @fg;
   background-color: @bg;
   color: @fg;
-  font-weight: bold;
   border-top: 1px solid @border;
+  font-weight: bold;
 }
 
 #taskbar button {

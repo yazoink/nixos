@@ -11,16 +11,7 @@
   iconSize = font.size - 2;
   barHeight = 46;
   barPosition = "bottom";
-  taskbarModule = ''
-    "wlr/taskbar": {
-      "format": "{icon}",
-      "icon-theme": "${config.gtk.iconTheme.name}",
-      "icon-size": 26,
-      "tooltip-format": "{title}",
-      "on-click": "minimize-raise",
-      "on-click-middle": "close"
-    }
-  '';
+  taskbarModule = import ./modules/taskbar.nix {inherit config;};
   workspacesModule = ''
     "ext/workspaces": {
       "on-click": "activate",
