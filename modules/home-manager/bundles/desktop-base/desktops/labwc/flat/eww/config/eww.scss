@@ -204,6 +204,10 @@ tooltip label {
   color: $fg;
 }
 
+.cal button {
+  background-color: transparent;
+}
+
 .cal {
   background-color: $bg2;
   padding: 8px;
