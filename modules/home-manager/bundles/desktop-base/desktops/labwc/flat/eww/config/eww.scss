@@ -211,8 +211,7 @@ tooltip label {
 }
 
 calendar.header {
-  background-color: $bg2;
-  border-bottom: 1px solid $bg3;
+  background-color: transparent;
   border-radius: 0px;
 }
 
@@ -226,8 +225,8 @@ calendar.day-number {
 }
 
 calendar:selected {
-  color: $blue;
-  background-color: $bg3;
+  color: $bg;
+  background-color: $blue;
 }
 
 .red {
