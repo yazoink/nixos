@@ -42,11 +42,11 @@ in {
             --input-color: #${base05-hex} !important;
             --zen-native-inner-radius: 16px !important;
             --zen-toolbar-height: 48px !important;
-            --toolbarbutton-hover-background: #${base01-hex} !important;
+            --toolbarbutton-hover-background: rgba(${base05-rgb-r}, ${base05-rgb-r}, ${base05-rgb-r}, 0.09) !important;
             --panel-color: #${base05-hex} !important;
-            --panel-border-color: #${base01-hex} !important;
+            --panel-border-color: #${base02-hex} !important;
             --panel-border-radius: 15px !important;
-            --zen-toolbar-element-bg: #${base01-hex} !important;
+            --zen-toolbar-element-bg: rgba(${base05-rgb-r}, ${base05-rgb-r}, ${base05-rgb-r}, 0.09) !important;
           }
 
           .zen-toolbar-background {
