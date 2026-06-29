@@ -16,9 +16,12 @@
     :spacing 15
     :halign "fill"
     (pretty-time)
-    (calendar
-      :show-details "true"
-      :class "cal"
+    (box
+      :class "calendar-background"
+      (calendar
+        :show-details "true"
+        :class "cal"
+      )
     )
   )
 )
