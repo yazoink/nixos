@@ -5,51 +5,14 @@
 }: {
   myOptions = {
     defaultApps = {
-      discordClient = {
-        command = "vesktop";
-      };
-      webBrowser.command = "zen-twilight";
-      terminal = {
-        # command = "urxvt";
-        command = "footclient";
-      };
-      mediaPlayer.command = "mpv";
-      documentReader.command = "zathura";
-      fileManager.command = "thunar";
+      discordClient = "vesktop";
+      webBrowser = "zen-twilight";
+      terminal = "foot";
+      mediaPlayer = "mpv";
+      documentReader = "zathura";
+      fileManager = "thunar";
     };
     userAccount.username = "gene";
-    desktopTheme = {
-      rice.labwc-glass.enable = false;
-      rice.labwc-flat.enable = true;
-      rice.hyprland-flat.enable = false;
-      # zenBrowserShowBorders = false;
-      colorscheme = "moonfly";
-      wallpaper = {
-        type = "color";
-        color.hex = "696969";
-        image = {
-          fillType = "fill";
-          path = pkgs.fetchurl {
-            url = "https://github.com/yazoink/wallpapers/blob/main/trees-and-leaves/wall1.jpg?raw=true";
-            hash = "sha256-H8Hsm73MPbqrKl4RUiAhKUlkXPSntyghB95PpTmkuKM=";
-          };
-        };
-      };
-      windowGaps = {
-        inner = 5;
-        outer = 10;
-      };
-      fonts = {
-        desktop = {
-          name = "gabarito";
-          size = 11;
-        };
-        terminal = {
-          name = "aporetic-serif-mono";
-          size = 12;
-        };
-      };
-    };
     bundles = {
       # base.starshipFormat = 1;
       base.starshipFormat = 2;
