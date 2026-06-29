@@ -3,9 +3,7 @@
   lib,
   pkgs,
   ...
-}: let
-  desktopFile = "brave.desktop";
-in {
+}: {
   programs.chromium = {
     enable = true;
     package = pkgs.brave;
@@ -24,11 +22,5 @@ in {
       "--enable-features=UseOzonePlatform --ozone-platform=wayland"
       # "--disable-features=WebRtcAllowInputVolumeAdjustment"
     ];
-  };
-  xdg.mimeApps.defaultApplications = {
-    "x-scheme-handler/https" = [desktopFile];
-    "x-scheme-handler/http" = [desktopFile];
-    "x-scheme-handler/ftp" = [desktopFile];
-    "x-scheme-handler/mailto" = [desktopFile];
   };
 }

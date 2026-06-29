@@ -15,7 +15,10 @@ in
     (import ./acpi {inherit config lib pkgs inputs pkgs-stable;})
     (import ./audio {inherit config lib pkgs inputs pkgs-stable;})
     (import ./dconf {inherit config lib pkgs inputs pkgs-stable;})
-    (import ./file-managers {inherit config lib pkgs inputs pkgs-stable;})
+    (import ./file-managers {
+      config = config;
+      inherit lib pkgs inputs pkgs-stable;
+    })
     (import ./fonts {inherit config lib pkgs inputs pkgs-stable;})
     (import ./gnome-keyring {inherit config lib pkgs inputs pkgs-stable;})
     (import ./polkit {inherit config lib pkgs inputs pkgs-stable;})

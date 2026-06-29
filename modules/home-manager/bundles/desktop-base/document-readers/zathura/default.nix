@@ -1,6 +1,4 @@
-{config, ...}: let
-  desktopFile = "org.pwmt.zathura.desktop";
-in {
+{config, ...}: {
   programs.zathura = {
     enable = true;
     extraConfig = ''

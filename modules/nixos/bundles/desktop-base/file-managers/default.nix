@@ -4,8 +4,9 @@
   config,
   ...
 }: let
-  inherit (config.myOptions.defaultApps) fileManager;
+  name = config.myOptions.defaultApps.fileManager;
 in
+  (import ./. "/${name}")
   lib.mkMerge [
     (lib.mkIf (fileManager == "nemo")
       (import ./nemo {inherit pkgs;}))
