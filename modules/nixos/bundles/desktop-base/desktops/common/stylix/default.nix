@@ -38,7 +38,7 @@ in {
           sizes = {
             applications = sansFont.size;
             desktop = sansFont.size;
-            popups = sansFont.desktop.size;
+            popups = sansFont.size;
             terminal = sansFont.size;
           };
           serif = {
