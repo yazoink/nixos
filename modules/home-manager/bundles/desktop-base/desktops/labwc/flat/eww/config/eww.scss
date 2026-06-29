@@ -34,14 +34,15 @@ $round: 16px;
 }
 
 .power-box, .confirm-box, .calendar-box {
-  box-shadow: 0 0 50px rgba(0, 0, 0, 0.4);
+  // box-shadow: 0 0 50px rgba(0, 0, 0, 0.4);
   padding: 16px;
   border: 1px solid $border;
   border-radius: 16px;
   background-color: $bg;
-  margin: 60px;
-  margin-bottom: $margin;
-  margin-right: $margin;
+  // margin: 60px;
+  // margin-bottom: $margin;
+  // margin-right: $margin;
+  margin: $margin;
 }
 
 .user-box {
