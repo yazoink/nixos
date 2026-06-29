@@ -9,7 +9,6 @@
   inherit (config.gtk) font;
   inherit (osConfig.myOptions.hardwareFeatures) laptop;
   iconSize = font.size - 2;
-  barHeight = 50;
   barPosition = "bottom";
   taskbarModule = ''
     "wlr/taskbar": {
