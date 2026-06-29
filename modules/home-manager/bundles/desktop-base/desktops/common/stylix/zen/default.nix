@@ -64,7 +64,7 @@ in {
             }
             &,
              &::before {
-              border: 1px solid #${base01-hex} !important;
+              border: 1px solid #${base02-hex} !important;
             }
           }
 
@@ -100,14 +100,14 @@ in {
           :is(menupopup, panel) {
             &::part(content) {
               border-radius: 16px !important;
-              border: 1px solid #${base01-hex} !important;
+              border: 1px solid #${base02-hex} !important;
               box-shadow: none !important;
             }
           }
 
           .menupopup-arrowscrollbox {
              border-radius: 16px !important;
-             border: 1px solid #${base01-hex} !important;
+             border: 1px solid #${base02-hex} !important;
              box-shadow: none !important;
           }
 
@@ -117,7 +117,7 @@ in {
 
           menuitem {
           &:hover {
-            background-color: #${base01-hex} !important;
+            background-color: rgba(${base05-rgb-r}, ${base05-rgb-r}, ${base05-rgb-r}, 0.09) !important;
             }
           }
 
@@ -127,8 +127,8 @@ in {
 
           menuseparator {
             &::before {
-              border-top: 1px solid #${base01-hex} !important;
-              /*border-top: 2px dashed #${base01-hex} !important;*/
+              border-top: 1px solid #${base02-hex} !important;
+              /*border-top: 2px dashed #${base02-hex} !important;*/
               content: "";
               display: block;
               flex: 1;
@@ -161,7 +161,7 @@ in {
           }
 
           .urlbar-background {
-            background-color: #${base01-hex} !important;
+            background-color: rgba(${base05-rgb-r}, ${base05-rgb-r}, ${base05-rgb-r}, 0.09) !important;
           }
 
           .content-shortcuts {
@@ -283,7 +283,7 @@ in {
 
           .tab-background {
             &:is([selected], [multiselected]) {
-              background-color: #${base01-hex} !important;
+              background-color: rgba(${base05-rgb-r}, ${base05-rgb-r}, ${base05-rgb-r}, 0.09) !important;
               outline-color: transparent;
             }
           }
@@ -301,13 +301,13 @@ in {
             & .urlbar-background {
               background: #${base00-hex} !important;
               outline: none !important;
-              border: 1px solid #${base01-hex} !important;
+              border: 1px solid #${base02-hex} !important;
               border-radius: 15px !important;
             }
           }
 
           .urlbar-input-container {
-            background: #${base01-hex} !important;
+            background-color: rgba(${base05-rgb-r}, ${base05-rgb-r}, ${base05-rgb-r}, 0.09) !important;
           }
 
           .urlbar[breakout][breakout-extend] {
@@ -328,7 +328,7 @@ in {
 
           .urlbarView-body-inner {
             #urlbar[open] > .urlbarView > .urlbarView-body-outer > & {
-              border-top: 1px solid #${base01-hex} !important;
+              border-top: 1px solid #${base02-hex} !important;
             }
           }
       '';

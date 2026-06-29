@@ -12,7 +12,7 @@ in {
       padding: 8px 16px;
       border-radius: 16px;
       background-color: #${base00};
-      border: 1px solid #${base01};
+      border: 1px solid #${base02};
     }
 
     window#osd #container {
