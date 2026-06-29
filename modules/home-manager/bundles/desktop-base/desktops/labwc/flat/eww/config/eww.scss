@@ -204,13 +204,6 @@ tooltip label {
   color: $fg;
 }
 
-calendar.day-names {
-  background: transparent;
-}
-
-.calendar-background {
-}
-
 .calendar {
   background-color: $bg2;
   padding: 12px 10px;
@@ -220,6 +213,7 @@ calendar.day-names {
 .day-names label {
   color: $yellow;
   padding: 4px;
+  padding-bottom: 2px;
 }
 
 .cal {
