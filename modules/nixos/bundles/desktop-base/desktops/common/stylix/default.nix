@@ -8,7 +8,7 @@
   theme = desktop.colorscheme;
   monoFont = desktop.fonts.terminal;
   sansFont = desktop.fonts.desktop;
-  image = desktop.wallpaper.image;
+  image = desktop.wallpaper.image.path;
 in {
   environment.systemPackages = with pkgs; [
     gtk-engine-murrine
