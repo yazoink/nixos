@@ -8,8 +8,8 @@ window#waybar {
 
 #taskbar button {
   background: @bg2;
-  margin: 8px 4px;
-  padding: 8px;
+  margin: 8px 2px;
+  padding: 4px;
   border-radius: 8px;
 }
 
