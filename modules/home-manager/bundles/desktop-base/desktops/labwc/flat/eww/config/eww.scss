@@ -34,12 +34,14 @@ $round: 16px;
 }
 
 .power-box, .confirm-box, .calendar-box {
-  // box-shadow: 0 0 5px -5px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.4);
   padding: 16px;
   border: 1px solid $border;
   border-radius: 16px;
   background-color: $bg;
-  margin: $margin;
+  margin: 60px;
+  margin-bottom: $margin;
+  margin-right: $margin;
 }
 
 .user-box {
@@ -211,7 +213,7 @@ tooltip label {
 }
 
 .day-names label {
-  color: $yellow;
+  color: $green;
   padding: 4px;
   padding-bottom: 2px;
 }

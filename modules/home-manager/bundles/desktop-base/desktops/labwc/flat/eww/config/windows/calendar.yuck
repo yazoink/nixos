@@ -22,7 +22,7 @@
     :orientation "vertical"
     :space-evenly "false"
     :class "calendar-box"
-    :spacing 15
+    :spacing 16
     :halign "fill"
     (pretty-time)
     (box :class "calendar" :orientation "v"
