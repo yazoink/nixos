@@ -14,8 +14,8 @@ in {
     window.titlebar.padding.height: 12
 
     # window border
-    window.active.border.color: #${base02}
-    window.inactive.border.color: #${base02}
+    window.active.border.color: #${base01}
+    window.inactive.border.color: #${base01}
 
     # ToggleKeybinds status indicator
     window.active.indicator.toggled-keybind.color: #${base08}
@@ -80,7 +80,7 @@ in {
     menu.width.min: 20
     menu.width.max: 200
     menu.border.width: 1
-    menu.border.color: #${base02}
+    menu.border.color: #${base01}
     menu.items.bg.color: #${base00}
     menu.items.text.color: #${base05}
     menu.items.active.bg.color: #${base01}
@@ -97,7 +97,7 @@ in {
 
     # on screen display (window-cycle dialog)
     osd.bg.color: #${base00}
-    osd.border.color: #${base02}
+    osd.border.color: #${base01}
     osd.border.width: 1
     osd.label.text.color: #${base05}
 

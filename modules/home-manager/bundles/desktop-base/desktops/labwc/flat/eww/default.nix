@@ -17,7 +17,7 @@ in {
       force = true;
     };
     "widgets/_colours.scss".text = with colors; ''
-      $border: #${base02};
+      $border: #${base01};
       $bg: #${base00};
       $bg2: rgba(${base05-rgb-r}, ${base05-rgb-g}, ${base05-rgb-b}, 0.09);
       $bg3: #${base02};

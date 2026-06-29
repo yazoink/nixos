@@ -73,7 +73,7 @@ in {
         @define-color fg #${base05};
         @define-color unfocused #${base04};
         @define-color urgent #${base08};
-        @define-color border #${base02};
+        @define-color border #${base01};
         @define-color accent #${base0D};
 
         * {

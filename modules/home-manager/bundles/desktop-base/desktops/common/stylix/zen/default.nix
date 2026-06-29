@@ -37,7 +37,7 @@
             --zen-toolbar-height: 48px !important;
             --toolbarbutton-hover-background: rgba(${base05-rgb-r}, ${base05-rgb-r}, ${base05-rgb-r}, 0.09) !important;
             --panel-color: #${base05-hex} !important;
-            --panel-border-color: #${base02-hex} !important;
+            --panel-border-color: #${base01-hex} !important;
             --panel-border-radius: 15px !important;
             --zen-toolbar-element-bg: rgba(${base05-rgb-r}, ${base05-rgb-r}, ${base05-rgb-r}, 0.09) !important;
           }
@@ -57,7 +57,7 @@
             }
             &,
              &::before {
-              border: 1px solid #${base02-hex} !important;
+              border: 1px solid #${base01-hex} !important;
             }
           }
 
@@ -93,14 +93,14 @@
           :is(menupopup, panel) {
             &::part(content) {
               border-radius: 16px !important;
-              border: 1px solid #${base02-hex} !important;
+              border: 1px solid #${base01-hex} !important;
               box-shadow: none !important;
             }
           }
 
           .menupopup-arrowscrollbox {
              border-radius: 16px !important;
-             border: 1px solid #${base02-hex} !important;
+             border: 1px solid #${base01-hex} !important;
              box-shadow: none !important;
           }
 
@@ -120,8 +120,8 @@
 
           menuseparator {
             &::before {
-              border-top: 1px solid #${base02-hex} !important;
-              /*border-top: 2px dashed #${base02-hex} !important;*/
+              border-top: 1px solid #${base01-hex} !important;
+              /*border-top: 2px dashed #${base01-hex} !important;*/
               content: "";
               display: block;
               flex: 1;
@@ -294,7 +294,7 @@
             & .urlbar-background {
               background: #${base00-hex} !important;
               outline: none !important;
-              border: 1px solid #${base02-hex} !important;
+              border: 1px solid #${base01-hex} !important;
               border-radius: 15px !important;
             }
           }
@@ -321,7 +321,7 @@
 
           .urlbarView-body-inner {
             #urlbar[open] > .urlbarView > .urlbarView-body-outer > & {
-              border-top: 1px solid #${base02-hex} !important;
+              border-top: 1px solid #${base01-hex} !important;
             }
           }
       '';

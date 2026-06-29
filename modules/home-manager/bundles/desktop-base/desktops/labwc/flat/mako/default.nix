@@ -21,7 +21,7 @@ in {
       anchor = "bottom-right";
       border-radius = "18";
       background-color = "#${base00}";
-      border-color = "#${base02}";
+      border-color = "#${base01}";
       text-color = "#${base05}";
       progress-color = "over #${base05}";
       border-size = "1";
