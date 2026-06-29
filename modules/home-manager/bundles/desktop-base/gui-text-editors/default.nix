@@ -29,6 +29,8 @@
   desktopFiles = {
     pluma = "pluma.desktop";
     gedit = "gedit.desktop";
+    featherpad = "featherpad.desktop";
+    mousepad = "org.xfce.mousepad";
   };
 in
   makeCfg name desktopFiles.${name}

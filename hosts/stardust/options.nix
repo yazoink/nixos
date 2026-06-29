@@ -56,7 +56,7 @@
     defaultApps = {
       discordClient = "vesktop";
       fileManager = "thunar";
-      guiTextEditor = "gedit";
+      guiTextEditor = "featherpad";
       documentReader = "zathura";
       mediaPlayer = "mpv";
       imageViewer = "imv";

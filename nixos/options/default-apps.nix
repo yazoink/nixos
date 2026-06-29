@@ -12,8 +12,8 @@
     };
     guiTextEditor = lib.mkOption {
       type = lib.types.str;
-      default = "gedit";
-      description = "Options: pluma, gedit";
+      default = "featherpad";
+      description = "Options: pluma, gedit, featherpad, mousepad";
     };
     documentReader = lib.mkOption {
       type = lib.types.str;
