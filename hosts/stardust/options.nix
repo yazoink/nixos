@@ -13,7 +13,7 @@
               style = "flat";
             };
           };
-          colorscheme = "biscuit-de-mar-dark";
+          colorscheme = "camellia";
           fonts.desktop = {
             name = "gabarito";
             size = 11;
