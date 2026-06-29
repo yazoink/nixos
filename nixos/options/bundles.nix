@@ -1,4 +1,8 @@
-{lib, ...}: {
+{
+  lib,
+  pkgs,
+  ...
+}: {
   # ----- BUNDLES ----- #
   #
   # These are bundles of modules and packages that suit different system
@@ -49,6 +53,108 @@
       enable = lib.mkOption {
         type = lib.types.bool;
         default = false;
+      };
+      desktop = {
+        colorscheme = lib.mkOption {
+          type = lib.types.str;
+          default = "paradise";
+          description = "options: see modules/nixos/bundles/desktop-base/desktop/common/stylix/themes";
+        };
+        fonts = {
+          desktop = {
+            name = lib.mkOption {
+              type = lib.types.str;
+              default = "gabarito";
+              description = "See nixos/modules/nixos/bundles/desktop-base/desktops/common/stylix/fonts/desktop for options.";
+            };
+            size = lib.mkOption {
+              type = lib.types.number;
+              default = 11;
+            };
+          };
+          terminal = {
+            name = lib.mkOption {
+              type = lib.types.str;
+              default = "aporetic-serif-mono";
+              description = "See nixos/modules/nixos/bundles/desktop-base/desktops/common/stylix/fonts/terminal for options.";
+            };
+            size = lib.mkOption {
+              type = lib.types.number;
+              default = 12;
+            };
+          };
+        };
+        wallpaper = {
+          type = lib.mkOption {
+            type = lib.types.str;
+            description = "Options: image, color";
+            default = "image";
+          };
+          image = {
+            fillType = lib.mkOption {
+              type = lib.types.str;
+              description = "Options: fill, tile";
+              default = "fill";
+            };
+            path = lib.mkOption {
+              type = lib.types.path;
+              description = ''
+                Path to wallpaper. Required for stylix, even if color is set.
+              '';
+              default = pkgs.fetchurl {
+                url = "https://raw.githubusercontent.com/yazoink/wallpapers/refs/heads/main/trees-and-leaves/andrei-lazarev-QtM-8j_1o3Q.jpg";
+                hash = "";
+              };
+            };
+          };
+          color = {
+            hex = lib.mkOption {
+              type = lib.types.str;
+              default = "000000";
+            };
+          };
+        };
+        terminalPadding = lib.mkOption {
+          type = lib.types.number;
+          default = 32;
+        };
+        windowManager = {
+          name = lib.mkOption {
+            type = lib.types.str;
+            default = "labwc";
+            description = "options: labwc, hyprland";
+          };
+          labwc = {
+            style = lib.mkOption {
+              type = lib.types.str;
+              default = "flat";
+              description = "options: flat, glass";
+            };
+          };
+          hyprland = {
+            style = lib.mkOption {
+              type = lib.types.str;
+              default = "flat";
+              description = "options: flat";
+            };
+            windowGaps = {
+              outer = lib.mkOption {
+                type = lib.types.number;
+                default = 5;
+              };
+              inner = lib.mkOption {
+                type = lib.types.number;
+                default = 3;
+              };
+            };
+          };
+        };
+      };
+      zenBrowser = {
+        showBorders = lib.mkOption {
+          type = lib.types.bool;
+          default = true;
+        };
       };
       mpv = {
         profile = lib.mkOption {

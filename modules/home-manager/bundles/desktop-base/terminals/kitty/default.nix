@@ -1,12 +1,4 @@
-{
-  config,
-  lib,
-  osConfig,
-  pkgs,
-  ...
-}: let
-  inherit (osConfig.myOptions.desktopTheme) terminalPadding;
-in {
+{terminalPadding, ...}: {
   # home.packages = with pkgs; [ueberzugpp];
   programs.kitty = {
     enable = true;

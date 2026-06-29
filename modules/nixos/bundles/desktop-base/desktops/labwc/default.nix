@@ -5,12 +5,15 @@
   config,
   inputs,
   pkgs-stable,
+  windowManager,
   ...
 }: let
-  inherit (config.myOptions.desktopTheme.rice) labwc-flat labwc-glass;
+  # inherit (windowManager.labwc) style;
 in
   lib.mkMerge [
+    # common WM configs
+    (import ../common/stylix {inherit pkgs-stable config lib pkgs inputs;})
+
     # common labwc configs
-    (lib.mkIf (labwc-flat.enable || labwc-glass.enable)
-      (import ./common {inherit pkgs-stable config lib pkgs inputs;}))
+    (import ./common {inherit pkgs-stable config lib pkgs inputs;})
   ]

@@ -44,7 +44,7 @@
   taskbarModuleDesktop = ''
     "wlr/taskbar": {
       "format": "{icon} {title:.17}",
-      "icon-theme": "${osConfig.desktopTheme.icons.name}",
+      "icon-theme": "${config.gtk.iconTheme.name}",
       "icon-size": 18,
       "tooltip-format": "{title}",
       "on-click": "minimize-raise",

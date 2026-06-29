@@ -7,6 +7,10 @@
   ...
 }:
 lib.mkMerge [
+  # common (all WMs)
+  (import ../../common/stylix {inherit config osConfig lib pkgs;})
+
+  # theme specific
   (import ./display-manager {inherit config osConfig lib pkgs;})
   (import ./eww {inherit config osConfig lib pkgs;})
   (import ./mako {inherit config osConfig lib pkgs;}) # either fnott or mako

@@ -4,7 +4,7 @@
   osConfig,
   ...
 }: let
-  inherit (config.stylix) base16Scheme;
+  inherit (config.lib.stylix) colors;
   # style = config.lib.stylix.colors {
   #   template = ./style.css.mustache;
   #   extension = ".css";
@@ -14,21 +14,21 @@ in {
     enable = true;
   };
   # xdg.configFile."swayosd/style.css".source = style;
-  xdg.configFile."swayosd/style.css".text = ''
+  xdg.configFile."swayosd/style.css".text = with colors; ''
     window#osd {
       padding: 0px;
       padding: 10px 15px;
       border-radius: 999px;
-      background-color: #${base16Scheme.base00};
-      border: 1px solid #${base16Scheme.base01};
+      background-color: #${base00};
+      border: 1px solid #${base01};
     }
 
     window#osd #container {
-      color: #${base16Scheme.base05};
+      color: #${base05};
     }
 
     window#osd progress {
-      background-color: #${base16Scheme.base0D};
+      background-color: #${base0D};
     }
   '';
 }

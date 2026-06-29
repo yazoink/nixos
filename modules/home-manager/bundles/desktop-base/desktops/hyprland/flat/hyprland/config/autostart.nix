@@ -1,6 +1,4 @@
-{osConfig, ...}: let
-  inherit (osConfig.myOptions.defaultApps) terminal;
-in {
+{...}: {
   exec-once = [
     # "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
     "$wallpaper -q"

@@ -4,9 +4,11 @@
   lib,
   ...
 }: let
-  theme = config.myOptions.desktopTheme.colorscheme;
-  monoFont = config.myOptions.desktopTheme.fonts.terminal.name;
-  sansFont = config.myOptions.desktopTheme.fonts.desktop.name;
+  inherit (config.myOptions.bundles.desktopBase.desktop) desktop;
+  theme = desktop.colorscheme;
+  monoFont = desktop.fonts.terminal;
+  sansFont = desktop.fonts.desktop;
+  image = desktop.wallpaper.image;
 in {
   environment.systemPackages = with pkgs; [
     gtk-engine-murrine
@@ -34,10 +36,10 @@ in {
       fonts = lib.mkMerge [
         {
           sizes = {
-            applications = config.myOptions.desktopTheme.fonts.desktop.size;
-            desktop = config.myOptions.desktopTheme.fonts.desktop.size;
-            popups = config.myOptions.desktopTheme.fonts.desktop.size;
-            terminal = config.myOptions.desktopTheme.fonts.terminal.size;
+            applications = sansFont.size;
+            desktop = sansFont.size;
+            popups = sansFont.desktop.size;
+            terminal = sansFont.size;
           };
           serif = {
             package = pkgs.gyre-fonts;
@@ -45,9 +47,13 @@ in {
             name = "TeX Gyre Schola";
           };
         }
-        (import ./fonts {inherit pkgs lib monoFont sansFont;})
+        (import ./fonts {
+          inherit pkgs lib;
+          monoFont = monoFont.name;
+          sansFont = sansFont.name;
+        })
       ];
-      image = config.myOptions.desktopTheme.wallpaper.image.path;
+      image = image;
     }
     (import ./themes {inherit pkgs theme;})
   ];

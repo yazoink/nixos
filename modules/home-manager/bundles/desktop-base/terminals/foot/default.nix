@@ -1,6 +1,4 @@
-{osConfig, ...}: let
-  inherit (osConfig.myOptions.desktopTheme) terminalPadding;
-in {
+{terminalPadding, ...}: {
   programs.foot = {
     enable = true;
     #server.enable = lib.mkIf (osConfig.myOptions.defaultApps.terminal.command == "footclient") true;

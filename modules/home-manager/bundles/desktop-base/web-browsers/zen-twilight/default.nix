@@ -6,7 +6,7 @@
   ...
 }: let
   borders =
-    if osConfig.myOptions.desktopTheme.zenBrowserShowBorders
+    if osConfig.myOptions.bundles.desktopBase.desktop.zenBrowser.showBorders
     then 16
     else 0;
 in {

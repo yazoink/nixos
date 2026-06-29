@@ -6,15 +6,15 @@
   pkgs,
   ...
 }: let
-  inherit (osConfig.myOptions) desktopTheme;
+  inherit (osConfig.myOptions.bundles.desktopBase.desktop) wallpaper;
   wallpaperCommand =
-    if (desktopTheme.wallpaper.type == "color")
-    then "${../scripts/swaybg.sh} -c ${desktopTheme.wallpaper.color.hex}"
+    if (wallpaper.type == "color")
+    then "${../scripts/swaybg.sh} -c ${wallpaper.color.hex}"
     else
       (
-        if (osConfig.myOptions.desktopTheme.wallpaper.image.fillType == "fill")
-        then "${../scripts/swaybg.sh} -i ${desktopTheme.wallpaper.image.path}"
-        else "${../scripts/swaybg.sh} -t ${desktopTheme.wallpaper.image.path}"
+        if (wallpaper.image.fillType == "fill")
+        then "${../scripts/swaybg.sh} -i ${wallpaper.image.path}"
+        else "${../scripts/swaybg.sh} -t ${wallpaper.image.path}"
       );
 in {
   home.packages = with pkgs; [

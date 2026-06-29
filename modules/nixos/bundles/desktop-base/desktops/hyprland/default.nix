@@ -5,12 +5,15 @@
   config,
   inputs,
   pkgs-stable,
+  windowManager,
   ...
 }: let
-  inherit (config.myOptions.desktopTheme.rice) hyprland-flat;
+  # inherit (windowManager.labwc) style;
 in
   lib.mkMerge [
+    # common WM configs
+    (import ../common/stylix {inherit pkgs-stable config lib pkgs inputs;})
+
     # common hyprland configs
-    (lib.mkIf hyprland-flat.enable
-      (import ./common {inherit pkgs-stable config lib pkgs inputs;}))
+    (import ./common {inherit pkgs-stable config lib pkgs inputs;})
   ]

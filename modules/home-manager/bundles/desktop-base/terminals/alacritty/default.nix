@@ -1,6 +1,4 @@
-{osConfig, ...}: let
-  inherit (osConfig.myOptions.desktopTheme) terminalPadding;
-in {
+{terminalPadding, ...}: {
   # home.packages = with pkgs; [ueberzugpp];
   programs.alacritty = {
     enable = true;

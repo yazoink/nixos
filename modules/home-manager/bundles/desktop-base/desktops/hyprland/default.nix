@@ -5,12 +5,8 @@
   pkgs,
   config,
   inputs,
+  windowManager,
   ...
 }: let
-  inherit (osConfig.myOptions.desktopTheme.rice) hyprland-flat;
-in
-  lib.mkMerge [
-    # flat
-    (lib.mkIf hyprland-flat.enable
-      (import ./flat {inherit osConfig config lib pkgs inputs;}))
-  ]
+  inherit (windowManager.hyprland) style;
+in (import (./. + "/${style}") {inherit osConfig config lib pkgs inputs;})

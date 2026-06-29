@@ -6,14 +6,19 @@
   config,
   inputs,
   ...
-}:
-lib.mkMerge [
-  # common configs
-  (import ./common {inherit pkgs-stable config lib pkgs inputs;})
+}: let
+  inherit (config.myOptions.bundles.desktopBase.desktop) windowManager;
+in
+  lib.mkMerge [
+    # hyprland configs
+    (
+      lib.mkIf (windowManager.name == "hyprland")
+      (import ./hyprland {inherit pkgs-stable config lib pkgs inputs windowManager;})
+    )
 
-  # hyprland configs
-  (import ./hyprland {inherit pkgs-stable config lib pkgs inputs;})
-
-  # labwc configs
-  (import ./labwc {inherit pkgs-stable config lib pkgs inputs;})
-]
+    # labwc configs
+    (
+      lib.mkIf (windowManager.name == "labwc")
+      (import ./labwc {inherit pkgs-stable config lib pkgs inputs windowManager;})
+    )
+  ]

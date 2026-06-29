@@ -1,17 +1,14 @@
-{
-  config,
-  osConfig,
-  ...
-}: let
-  inherit (osConfig.myOptions) defaultApps desktopTheme;
+{osConfig, ...}: let
+  inherit (osConfig.myOptions) defaultApps;
+  inherit (osConfig.myOptions.bundles.desktopBase.desktop) wallpaper;
   wallpaperCommand =
-    if (desktopTheme.wallpaper.type == "color")
-    then "${../../scripts/swaybg.sh} -i ${desktopTheme.wallpaper.color.hex}"
+    if (wallpaper.type == "color")
+    then "${../../scripts/swaybg.sh} -i ${wallpaper.color.hex}"
     else
       (
-        if (osConfig.myOptions.desktopTheme.wallpaper.image.fillType == "fill")
-        then "${../../scripts/swaybg.sh} -i ${desktopTheme.wallpaper.image.path}"
-        else "${../../scripts/swaybg.sh} -t ${desktopTheme.wallpaper.image.path}"
+        if (wallpaper.image.fillType == "fill")
+        then "${../../scripts/swaybg.sh} -i ${wallpaper.image.path}"
+        else "${../../scripts/swaybg.sh} -t ${wallpaper.image.path}"
       );
 in {
   "$terminal" = "${defaultApps.terminal}";

@@ -3,9 +3,9 @@
   osConfig,
   ...
 }: let
-  inherit (config.stylix) base16Scheme;
-  inherit (osConfig.myOptions.desktopTheme.windowGaps) inner outer;
-  borderColor = "rgb(${base16Scheme.base01})";
+  inherit (config.lib.stylix) colors;
+  inherit (osConfig.myOptions.bundles.desktopBase.desktops.hyprland.windowGaps) inner outer;
+  borderColor = "rgb(${colors.base01})";
 in {
   debug = {
     disable_logs = false;
@@ -44,7 +44,7 @@ in {
     enable_swallow = true;
     swallow_regex = "(foot|kitty|alacritty|Alacritty)";
     force_default_wallpaper = 0;
-    font_family = config.stylix.fonts.sansSerif.name;
+    font_family = config.gtk.font.name;
   };
   ecosystem = {
     no_donation_nag = true;
