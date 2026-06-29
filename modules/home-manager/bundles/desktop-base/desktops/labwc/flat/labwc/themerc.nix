@@ -17,8 +17,6 @@ in {
     window.active.border.color: #${base02}
     window.inactive.border.color: #${base02}
 
-    # window.*.shadow.size: 16
-
     # ToggleKeybinds status indicator
     window.active.indicator.toggled-keybind.color: #${base08}
 
@@ -68,8 +66,8 @@ in {
     # window drop-shadows
     window.active.shadow.size: 60
     window.inactive.shadow.size: 50
-    window.active.shadow.color: #00000040
-    window.inactive.shadow.color: #00000030
+    window.active.shadow.color: #00000050
+    window.inactive.shadow.color: #00000040
 
     # Note that "menu", "iconify", "max", "close" buttons colors can be defined
     # individually by inserting the type after the button node, for example:
