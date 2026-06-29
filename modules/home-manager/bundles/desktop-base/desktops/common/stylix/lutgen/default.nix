@@ -1,6 +1,4 @@
-{config, ...}: let
-  inherit (config.lib.stylix) colors;
-in {
+{colors, ...}: {
   xdg.configFile."lutgen/current".text = with colors; ''
     ${base00}
     ${base01}

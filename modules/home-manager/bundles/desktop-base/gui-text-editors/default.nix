@@ -4,9 +4,10 @@
   pkgs,
   config,
   inputs,
+  defaultApps,
   ...
 }: let
-  name = osConfig.myOptions.defaultApps.guiTextEditor;
+  name = defaultApps.guiTextEditor;
   makeCfg = name: desktopFile:
     lib.mkMerge [
       (import (./. + "/${name}") {inherit osConfig config lib pkgs inputs;})

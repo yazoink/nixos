@@ -2,14 +2,14 @@
   osConfig,
   config,
   lib,
+  colors,
   ...
 }: let
-  userChrome = config.lib.stylix.colors {
+  userChrome = colors {
     template = ./gnomeTheme.css.mustache;
     extension = ".css";
   };
   inherit (osConfig.myOptions.userAccount) username;
-  inherit (config.lib.stylix) colors;
   inherit (osConfig.myOptions) defaultApps;
   accentColor = colors.base0D;
 in {

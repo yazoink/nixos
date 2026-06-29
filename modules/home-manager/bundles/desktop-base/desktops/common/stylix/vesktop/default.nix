@@ -1,5 +1,5 @@
-{config, ...}: let
-  themeFile = config.lib.stylix.colors {
+{colors, ...}: let
+  themeFile = colors {
     template = ./my.theme.css.mustache;
     extension = ".css";
   };

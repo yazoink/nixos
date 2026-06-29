@@ -1,5 +1,5 @@
-{osConfig, ...}: let
-  name = osConfig.myOptions.defaultApps.fileManager;
+{defaultApps, ...}: let
+  name = defaultApps.fileManager;
   makeCfg = name: desktopFile: {
     xdg.mimeApps.defaultApplications = {
       "inode/directory" = [desktopFile]; # Directories

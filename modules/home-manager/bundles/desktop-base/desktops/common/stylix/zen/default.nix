@@ -1,11 +1,4 @@
-{
-  config,
-  lib,
-  osConfig,
-  ...
-}: let
-  inherit (config.lib.stylix) colors;
-in {
+{colors, ...}: {
   stylix.targets.zen-browser = {
     enable = false;
     profileNames = ["hi"];

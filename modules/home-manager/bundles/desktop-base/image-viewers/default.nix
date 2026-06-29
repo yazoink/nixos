@@ -4,9 +4,10 @@
   pkgs,
   config,
   inputs,
+  defaultApps,
   ...
 }: let
-  name = osConfig.myOptions.defaultApps.imageViewer;
+  name = defaultApps.imageViewer;
   makeCfg = name: desktopFile:
     lib.mkMerge [
       (import (./. + "/${name}") {inherit osConfig config lib pkgs inputs;})

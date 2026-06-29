@@ -5,8 +5,9 @@
   pkgs,
   config,
   inputs,
+  desktop,
   ...
 }: let
-  inherit (osConfig.myOptions.bundles.desktopBase.desktop) windowManager;
+  inherit (desktop) windowManager;
 in (import (./. + "/${windowManager.name}")
   {inherit osConfig config lib pkgs inputs windowManager;})

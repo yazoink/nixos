@@ -4,12 +4,14 @@
   pkgs,
   config,
   inputs,
+  defaultApps,
+  zenBrowser,
   ...
 }: let
-  name = osConfig.myOptions.defaultApps.webBrowser;
+  name = defaultApps.webBrowser;
   makeCfg = name: desktopFile:
     lib.mkMerge [
-      (import (./. + "/${name}") {inherit osConfig config lib pkgs inputs;})
+      (import (./. + "/${name}") {inherit osConfig config lib pkgs inputs zenBrowser;})
       {
         xdg.mimeApps.defaultApplications = {
           "x-scheme-handler/https" = [desktopFile];

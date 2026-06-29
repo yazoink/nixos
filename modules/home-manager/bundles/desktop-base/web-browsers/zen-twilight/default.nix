@@ -3,10 +3,11 @@
   lib,
   osConfig,
   pkgs,
+  zenBrowser,
   ...
 }: let
   borders =
-    if osConfig.myOptions.bundles.desktopBase.zenBrowser.showBorders
+    if zenBrowser.showBorders
     then 16
     else 0;
 in {

@@ -1,9 +1,5 @@
-{
-  config,
-  osConfig,
-  ...
-}: let
-  gtkrcFile = config.lib.stylix.colors {
+{colors, ...}: let
+  gtkrcFile = colors {
     template = ./gtkrc.mustache;
     extension = ".css";
   };
@@ -30,13 +26,13 @@ in {
   };
   stylix = {
     targets.gtk = {
-      extraCss = with config.stylix.base16Scheme; ''
+      extraCss = with colors; ''
         @define-color headerbar_bg_color #${base00};
         @define-color dialog_bg_color #${base00};
         @define-color popover_bg_color #${base00};
         @define-color sidebar_bg_color #${base00};
-        @define-color accent_color #${config.stylix.base16Scheme.base0D};
-        @define-color accent_bg_color #${config.stylix.base16Scheme.base0D};
+        @define-color accent_color #${base0D};
+        @define-color accent_bg_color #${base0D};
 
          /* No (default) title bar on wayland */
         headerbar.default-decoration {

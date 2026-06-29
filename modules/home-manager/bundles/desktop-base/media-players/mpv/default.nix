@@ -1,8 +1,8 @@
-{osConfig, ...}: {
+{mpv, ...}: {
   programs.mpv = {
     enable = true;
     config = {
-      profile = osConfig.myOptions.bundles.desktopBase.mpv.profile;
+      profile = mpv.profile;
       vo = "gpu-next";
       hwdec = "auto";
       priority = "high";

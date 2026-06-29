@@ -4,9 +4,10 @@
   pkgs,
   config,
   inputs,
+  defaultApps,
   ...
 }: let
-  name = osConfig.myOptions.defaultApps.documentReader;
+  name = defaultApps.documentReader;
   makeCfg = name: desktopFile:
     lib.mkMerge [
       (import (./. + "/${name}") {inherit osConfig config lib pkgs inputs;})

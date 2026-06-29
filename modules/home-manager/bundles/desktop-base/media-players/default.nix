@@ -4,12 +4,14 @@
   pkgs,
   config,
   inputs,
+  defaultApps,
+  mpv,
   ...
 }: let
-  name = osConfig.myOptions.defaultApps.mediaPlayer;
+  name = defaultApps.mediaPlayer;
   makeCfg = name: desktopFile:
     lib.mkMerge [
-      (import (./. + "/${name}") {inherit osConfig config lib pkgs inputs;})
+      (import (./. + "/${name}") {inherit osConfig config lib pkgs inputs mpv;})
       {
         xdg.mimeApps.defaultApplications = {
           "video/ogg" = [desktopFile];
