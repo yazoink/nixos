@@ -13,7 +13,7 @@ lib.mkMerge [
   # common (labwc)
   (import ../common/display-manager {inherit config osConfig lib pkgs;})
   (import ../common/kanshi {inherit config osConfig lib pkgs;})
-  (import ../common/scripts {inherit config osConfig lib pkgs;})
+  (import ../common/labwc {inherit config osConfig lib pkgs;})
   (import ../common/swayidle {inherit config osConfig lib pkgs;})
 
   # theme specific
