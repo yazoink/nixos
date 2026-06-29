@@ -204,7 +204,8 @@ tooltip label {
   color: $fg;
 }
 
-.cal button {
+.cal button,
+.cal.day-name {
   background-color: transparent;
 }
 
