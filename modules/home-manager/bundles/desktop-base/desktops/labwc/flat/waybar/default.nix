@@ -21,7 +21,10 @@
   powerModule = import ./modules/power.nix;
   idleInhibitorModule = import ./modules/idle-inhibitor.nix;
   searchModule = import ./modules/search.nix;
-  quickAccessModule = import ./modules/quick-access.nix {inherit lib laptop;};
+  quickAccessModule =
+    if laptop.enable
+    then import ./modules/quick-access/laptop.nix
+    else import ./modules/quick-access/desktop.nix;
   separatorModule = import ./modules/separator.nix;
   barConfig = ''
     "reload_style_on_change": true,
