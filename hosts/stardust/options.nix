@@ -53,7 +53,7 @@
     defaultApps = {
       discordClient = "vesktop";
       fileManager = "thunar";
-      guiTextEditor = "pluma";
+      guiTextEditor = "gedit";
       documentReader = "zathura";
       mediaPlayer = "mpv";
       imageViewer = "imv";

@@ -12,7 +12,7 @@ in
   lib.mkIf art.enable (lib.mkMerge [
     {
       home.packages = with pkgs; [
-        inkscape
+        # inkscape
         krita
       ];
     }

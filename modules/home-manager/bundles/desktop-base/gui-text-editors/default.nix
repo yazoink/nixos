@@ -28,6 +28,7 @@
     ];
   desktopFiles = {
     pluma = "pluma.desktop";
+    gedit = "gedit.desktop";
   };
 in
   makeCfg name desktopFiles.${name}
