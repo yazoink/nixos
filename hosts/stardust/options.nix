@@ -43,7 +43,7 @@
                 # hash = "sha256-Hvm41hRGVo11hlUVdV6Pju8FKMO5zstX9U7tLNweisg=";
 
                 url = "https://github.com/wallace-aph/tiles-and-such/blob/master/Personal/dolphin2.png?raw=true";
-                hash = "";
+                hash = "sha256-nIGun7CKuyTPCLR9R6n00gscK0O3U/HGw/HW7Lne+fs=";
               };
             };
           };
