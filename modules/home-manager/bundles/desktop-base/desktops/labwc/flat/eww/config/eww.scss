@@ -209,9 +209,15 @@ calendar.day-names {
 }
 
 .calendar-background {
+}
+
+.calendar {
   background-color: $bg2;
-  padding: 8px;
+  padding: 4px;
   border-radius: 8px;
+  .day-names {
+    color: $blue;
+  }
 }
 
 calendar.header {
