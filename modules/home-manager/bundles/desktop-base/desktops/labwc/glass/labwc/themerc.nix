@@ -1,4 +1,4 @@
-{config}: let
+{config, ...}: let
   base16Scheme = config.lib.stylix.colors;
 in {
   # home.file.".themes/my-labwc/labwc".source = ./icons;
