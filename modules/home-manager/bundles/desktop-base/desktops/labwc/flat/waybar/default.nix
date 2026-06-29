@@ -9,7 +9,7 @@
   inherit (config.gtk) font;
   inherit (osConfig.myOptions.hardwareFeatures) laptop;
   iconSize = font.size - 2;
-  barHeight = 46;
+  barHeight = 50;
   barPosition = "bottom";
   taskbarModule = import ./modules/taskbar.nix {inherit config;};
   workspacesModule = import ./modules/workspaces {inherit lib pkgs;};

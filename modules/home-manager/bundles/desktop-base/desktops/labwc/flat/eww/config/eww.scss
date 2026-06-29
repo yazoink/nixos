@@ -209,18 +209,18 @@ tooltip label {
 
 .calendar {
   background-color: $bg2;
-  padding: 12px 10px;
+  padding: 8px;
   border-radius: 8px;
 }
 
-.day-names label {
-  // color: $blue;
-  padding: 4px;
-  padding-bottom: 2px;
+calendar.header {
+  margin-bottom: 4px;
+  border-bottom: 1px solid $bg2;
 }
 
-.cal {
-  padding: 2px 6px;
+calendar.day-number {
+  padding: 2px;
+  margin: 0;
 }
 
 calendar:selected {
