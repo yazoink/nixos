@@ -2,8 +2,7 @@
   laptop,
   lib,
   ...
-}:
-lib.mkMerge [
+}: (lib.mkMerge [
   (lib.mkIf laptop.enable ''
     "group/quick-access": {
       "orientation": "inherit",
@@ -56,4 +55,4 @@ lib.mkMerge [
       ]
     }
   '')
-]
+])
