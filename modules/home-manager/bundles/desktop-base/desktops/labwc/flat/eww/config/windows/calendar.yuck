@@ -1,5 +1,5 @@
-(defpoll month_year :interval "24h"
-    "date '+%B %Y'")
+;(defpoll month_year :interval "24h"
+;    "date '+%B %Y'")
 (defpoll calendar_day :interval "10h"
 	"date '+%d'")
 (defpoll calendar_month :interval "10h"
@@ -29,15 +29,15 @@
       (box :class "cal-box"
         :orientation "v"
         :space-evenly "false"
-        (label :class "month-year" :text month_year)
+        ;(label :class "month-year" :text month_year)
         (box :class "day-names" :orientation "h" :space-evenly "true"
-          (label :text "Su")
-          (label :text "Mo")
-          (label :text "Tu")
-          (label :text "We")
-          (label :text "Th")
-          (label :text "Fr")
-          (label :text "Sa")
+          (label :text "Sun")
+          (label :text "Mon")
+          (label :text "Tue")
+          (label :text "Wed")
+          (label :text "Thu")
+          (label :text "Fri")
+          (label :text "Sat")
         )
         (calendar :class "cal" 
           :show-details false :show-heading false :show-day-names false
