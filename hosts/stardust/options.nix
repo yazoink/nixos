@@ -47,13 +47,13 @@
     bundles = {
       base.starshipFormat = 1;
       desktopBase = {
-        windowManager = {
-          name = "labwc";
-          labwc = {
-            style = "flat";
-          };
-        };
         desktop = {
+          windowManager = {
+            name = "labwc";
+            labwc = {
+              style = "flat";
+            };
+          };
           colorscheme = "biscuit-de-mar-dark";
           fonts.desktop = {
             name = "gabarito";
