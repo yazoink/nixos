@@ -8,7 +8,7 @@ window#waybar {
 
 #taskbar button {
   background: @bg2;
-  margin: 8px 4px;
+  margin: 6px 2px;
   padding: 4px;
   border-radius: 8px;
 }
@@ -42,8 +42,8 @@ window#waybar {
 #workspaces-group,
 #custom-search,
 #custom-power {
-  margin-top: 8px;
-  margin-bottom: 8px;
+  margin-top: 6px;
+  margin-bottom: 6px;
   background-color: @bg2;
   border-radius: 8px;
   padding-top: 4px;

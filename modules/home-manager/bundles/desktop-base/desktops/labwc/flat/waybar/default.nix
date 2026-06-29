@@ -272,7 +272,7 @@
     "mode": "dock",
     "exclusive": false,
     "position": "${barPosition}",
-    "spacing": 7,
+    "spacing": 4,
     "height": ${builtins.toString barHeight},
     "modules-left": [
       "custom/search",
