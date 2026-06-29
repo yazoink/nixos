@@ -45,6 +45,7 @@
       };
       desktopFull.enable = true;
       art.enable = true;
+      dev.enable = true;
     };
     defaultApps = {
       discordClient = "vesktop";

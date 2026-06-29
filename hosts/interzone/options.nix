@@ -87,6 +87,7 @@
       desktopFull.enable = true;
       desktopFull.vesktop.bloat = false;
       art.enable = true;
+      dev.enable = true;
     };
     features = {
       virtManager.enable = true;
