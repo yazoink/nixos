@@ -35,13 +35,17 @@ modules/ -- system modules
 
 ## Rices
 
-### Labwc
+### Labwc "flat"
 
 ("moonfly" colorscheme)
 
 ![rice](./assets/moonfly1.png)
 ![rice](./assets/moonfly2.png)
 ![rice](./assets/moonfly3.png)
+
+("camellia" colorscheme)
+
+![rice](./assets/camellia1.png)
 
 ### Labwc "glass"
 
@@ -51,7 +55,7 @@ modules/ -- system modules
 ![rice](./assets/glass2.png)
 ![rice](./assets/glass3.png)
 
-### Hyprland
+### Hyprland "flat"
 
 ("paradise" colorscheme)
 
