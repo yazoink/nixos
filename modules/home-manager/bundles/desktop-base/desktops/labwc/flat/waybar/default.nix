@@ -326,7 +326,7 @@ in {
     "waybar/style.css".text = with colors;
       ''
         @define-color bg #${base00};
-        @define-color bg2 #${base01};
+        @define-color bg2 rgba(${base05-rgb-r}, ${base05-rgb-g}, ${base05-rgb-b}, 0.9);
         @define-color fg #${base05};
         @define-color unfocused #${base04};
         @define-color urgent #${base08};
