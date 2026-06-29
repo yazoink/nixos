@@ -11,7 +11,6 @@
 in
   lib.mkIf art.enable (lib.mkMerge [
     {
-      hardwareFeatures.opentabletdriver.enable = true;
       home.packages = with pkgs; [
         inkscape
         krita
