@@ -5,10 +5,9 @@
   osConfig,
   ...
 }: let
-  inherit (config.stylix) base16Scheme fonts;
+  inherit (config.lib.stylix) colors;
   inherit (osConfig.myOptions.hardwareFeatures) laptop;
-  inherit (osConfig.myOptions) desktopTheme;
-  iconSize = desktopTheme.fonts.desktop.size - 2;
+  iconSize = config.gtk.font.size - 2;
   barPosition = "bottom";
   notifsModule = ''
     "custom/notification": {
@@ -356,18 +355,18 @@ in {
         }
       '';
     # "waybar/menus/power.xml".source = ./power.xml;
-    "waybar/style.css".text =
+    "waybar/style.css".text = with colors;
       ''
-        @define-color bg #${base16Scheme.base00};
-        @define-color bg2 #${base16Scheme.base01};
-        @define-color bg3 #${base16Scheme.base02};
-        @define-color bg4 #${base16Scheme.base03};
-        @define-color fg #${base16Scheme.base05};
-        @define-color unfocused #${base16Scheme.base04};
-        @define-color urgent #${base16Scheme.base08};
-        @define-color border #${base16Scheme.base02};
-        @define-color accent #${base16Scheme.base0D};
-        @define-color yellow #${base16Scheme.base0A};
+        @define-color bg #${base00};
+        @define-color bg2 #${base01};
+        @define-color bg3 #${base02};
+        @define-color bg4 #${base03};
+        @define-color fg #${base05};
+        @define-color unfocused #${base04};
+        @define-color urgent #${base08};
+        @define-color border #${base02};
+        @define-color accent #${base0D};
+        @define-color yellow #${base0A};
 
         * {
           all: unset;
@@ -381,7 +380,7 @@ in {
 
         tooltip label,
         menuitem {
-          font-size: ${builtins.toString desktopTheme.fonts.desktop.size}pt;
+          font-size: ${builtins.toString config.gtk.font.size}pt;
         }
 
         #custom-tray-icon,

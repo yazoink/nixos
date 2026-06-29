@@ -4,7 +4,7 @@
   osConfig,
   ...
 }: let
-  inherit (config.stylix) base16Scheme;
+  base16Scheme = config.lib.stylix.colors;
   # style = config.lib.stylix.colors {
   #   template = ./style.css.mustache;
   #   extension = ".css";

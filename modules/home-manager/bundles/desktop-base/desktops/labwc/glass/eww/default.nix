@@ -4,7 +4,7 @@
   osConfig,
   ...
 }: let
-  inherit (config.stylix) base16Scheme;
+  inherit (config.lib.stylix) colors;
   margin = 8;
 in {
   home.packages = with pkgs; [eww font-awesome];
@@ -17,18 +17,18 @@ in {
       recursive = true;
       force = true;
     };
-    "widgets/_colours.scss".text = ''
-      $border: #${base16Scheme.base02};
-      $bg: #${base16Scheme.base00};
-      $bg2: #${base16Scheme.base01};
-      $bg3: #${base16Scheme.base02};
-      $bg4: #${base16Scheme.base03};
-      $fg: #${base16Scheme.base05};
-      $red: #${base16Scheme.base08};
-      $yellow: #${base16Scheme.base0A};
-      $green: #${base16Scheme.base0B};
-      $blue: #${base16Scheme.base0D};
-      $purple: #${base16Scheme.base0E};
+    "widgets/_colours.scss".text = with colors; ''
+      $border: #${base02};
+      $bg: #${base00};
+      $bg2: #${base01};
+      $bg3: #${base02};
+      $bg4: #${base03};
+      $fg: #${base05};
+      $red: #${base08};
+      $yellow: #${base0A};
+      $green: #${base0B};
+      $blue: #${base0D};
+      $purple: #${base0E};
       $margin: ${builtins.toString margin}px;
     '';
   };

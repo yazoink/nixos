@@ -1,8 +1,5 @@
-{
-  config,
-  osConfig,
-}: let
-  inherit (config.stylix) base16Scheme;
+{config}: let
+  base16Scheme = config.lib.stylix.colors;
 in {
   # home.file.".themes/my-labwc/labwc".source = ./icons;
   home.file.".themes/my-labwc/labwc/close.xbm".source = ./icon2.xbm;

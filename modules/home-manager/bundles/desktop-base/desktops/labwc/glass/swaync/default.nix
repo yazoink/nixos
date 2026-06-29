@@ -72,7 +72,7 @@
         };
       };
     };
-    style = with config.stylix.base16Scheme;
+    style = with config.lib.stylix.colors;
       ''
         :root {
           --base00: #${base00};

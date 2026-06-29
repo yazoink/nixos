@@ -8,7 +8,7 @@ in {
     "hypr/hyprlock.conf".text = ''
       source = ${confFile}
 
-      $font = ${config.stylix.fonts.sansSerif.name}
+      $font = ${config.gtk.font.name}
       $radius = 16
 
       general {
