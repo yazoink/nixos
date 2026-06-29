@@ -8,7 +8,7 @@
 }: let
   borders =
     if zenBrowser.showBorders
-    then 16
+    then 8
     else 0;
 in {
   home = {
