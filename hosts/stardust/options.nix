@@ -8,7 +8,7 @@
       username = "gene";
     };
     desktopTheme = {
-      colorscheme = "biscuit-de-mar-light";
+      colorscheme = "biscuit-de-mar-dark";
       # colorscheme = "swamp-light";
       # colorscheme = "camellia";
       # colorscheme = "paradise";
