@@ -8,3 +8,5 @@ if [[ "$mode" == *"do-not-disturb"* ]]; then
 else
     makoctl mode -a do-not-disturb
 fi
+
+pkill -SIGRTMIN+8 waybar
