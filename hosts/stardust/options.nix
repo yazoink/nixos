@@ -11,6 +11,7 @@
             name = "labwc";
             labwc = {
               style = "flat";
+              kanshi.enable = true;
             };
           };
           colorscheme = "camellia";

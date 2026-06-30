@@ -115,6 +115,10 @@
               default = "flat";
               description = "options: flat, glass";
             };
+            kanshi.enable = lib.mkOption {
+              type = lib.types.bool;
+              default = false;
+            };
           };
           hyprland = {
             style = lib.mkOption {

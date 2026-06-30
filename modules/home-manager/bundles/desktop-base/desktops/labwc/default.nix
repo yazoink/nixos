@@ -9,4 +9,7 @@
   ...
 }: let
   inherit (windowManager.labwc) style;
-in (import (./. + "/${style}") {inherit osConfig config lib pkgs inputs;})
+in (import (./. + "/${style}") {
+  inherit osConfig config lib pkgs inputs;
+  inherit (windowManager) labwc;
+})
