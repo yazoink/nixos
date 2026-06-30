@@ -8,12 +8,9 @@
   windowManager,
   ...
 }: let
-  # inherit (windowManager.labwc) style;
+  inherit (windowManager.labwc) style;
 in
   lib.mkMerge [
-    # common WM configs
     (import ../common/stylix {inherit pkgs-stable config lib pkgs inputs;})
-
-    # common hyprland configs
-    (import ./common {inherit pkgs-stable config lib pkgs inputs;})
+    (import ./. "/${style}" {inherit pkgs-stable config lib pkgs inputs;})
   ]
