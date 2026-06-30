@@ -12,5 +12,6 @@
 in
   lib.mkMerge [
     (import ../common/stylix {inherit pkgs-stable config lib pkgs inputs;})
-    (import ./. "/${style}" {inherit pkgs-stable config lib pkgs inputs;})
+    (lib.mkIf (style == "flat")
+      (import ./flat {inherit pkgs-stable config lib pkgs inputs;}))
   ]
