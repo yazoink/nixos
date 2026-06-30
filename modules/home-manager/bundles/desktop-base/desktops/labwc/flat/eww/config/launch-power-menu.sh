@@ -10,7 +10,6 @@ eww --config="$config" active-windows | grep -q power
 
 eww --config "$config" open closer-window
 eww --config "$config" open power
-echo "pwd $(pwd)"
 
 if [[ $? == 0 ]]; then
     while true; do

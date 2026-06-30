@@ -1,22 +1,20 @@
 #!/usr/bin/env bash
 
-config="$EWW_CONFIG_DIR"
-
-eww --config="$config" active-windows | grep -q calendar-window
+eww active-windows | grep -q calendar-window
 [[ $? == 0 ]] && {
-    eww --config "$config" close calendar-window
+    eww close calendar-window
     exit 0
 }
 
-eww --config "$config" open closer-window
-eww --config "$config" open calendar-window
+eww open closer-window
+eww open calendar-window
 
 if [[ $? == 0 ]]; then
     while true; do
         sleep 0.5
-        eww --config "$config" active-windows | grep -q "calendar-window"
+        eww active-windows | grep -q "calendar-window"
         if [[ $? -ne 0 ]]; then
-            eww --config "$config" close closer-window
+            eww close closer-window
             exit 0
         fi
     done
