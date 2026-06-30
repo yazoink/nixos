@@ -7,4 +7,4 @@ if [[ $? != 0 ]]; then
     wofi --show drun
 fi
 
-eww close-all
+eww closer-window
