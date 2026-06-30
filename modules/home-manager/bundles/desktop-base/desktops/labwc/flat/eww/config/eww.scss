@@ -209,8 +209,12 @@ tooltip label {
 
 .calendar {
   background-color: $bg2;
-  padding: 8px;
+  padding: 12px;
   border-radius: 8px;
+}
+
+calendar {
+  padding: 2px;
 }
 
 calendar.header {
