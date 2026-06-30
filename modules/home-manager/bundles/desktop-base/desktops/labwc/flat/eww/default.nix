@@ -7,16 +7,13 @@
   margin = 4;
 in {
   home.packages = with pkgs; [eww font-awesome];
-  # requires EWW_CONFIG_DIR env variable to be set to work
-  # toggle power menu with launch-power-menu.sh
-  # launch corners with launch-corners.sh
   xdg.configFile = {
-    "widgets" = {
+    "eww" = {
       source = ./config;
       recursive = true;
       force = true;
     };
-    "widgets/_colours.scss".text = with colors; ''
+    "eww/_colours.scss".text = with colors; ''
       $border: #${base01};
       $bg: #${base00};
       $bg2: rgba(${base05-rgb-r}, ${base05-rgb-g}, ${base05-rgb-b}, 0.09);

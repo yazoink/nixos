@@ -12,12 +12,12 @@ in {
   # toggle power menu with launch-power-menu.sh
   # launch corners with launch-corners.sh
   xdg.configFile = {
-    "widgets" = {
+    "eww" = {
       source = ./config;
       recursive = true;
       force = true;
     };
-    "widgets/_colours.scss".text = with colors; ''
+    "eww/_colours.scss".text = with colors; ''
       $border: #${base02};
       $bg: #${base00};
       $bg2: #${base01};

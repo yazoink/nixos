@@ -5,17 +5,14 @@ config="$EWW_CONFIG_DIR"
 eww --config="$config" active-windows | grep -q power
 [[ $? == 0 ]] && {
     eww --config "$config" close-all
-    echo "closed power"
     exit 0
 }
 
-echo "opening power menu"
 eww --config "$config" open closer-window
 eww --config "$config" open power
 echo "pwd $(pwd)"
 
 if [[ $? == 0 ]]; then
-    echo "power menu opened"
     while true; do
         sleep 0.5
         eww --config "$config" active-windows | grep -q "power"
