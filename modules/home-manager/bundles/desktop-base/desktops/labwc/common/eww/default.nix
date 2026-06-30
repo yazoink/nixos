@@ -19,6 +19,6 @@ in {
       force = true;
     };
     "eww/launch-calendar.sh".source = ./config/launch-calendar.sh;
-    "eww/launch-power.sh".source = ./config/launch-power.sh;
+    "eww/launch-power-menu.sh".source = ./config/launch-power-menu.sh;
   };
 }
