@@ -9,4 +9,4 @@ else
     makoctl mode -a do-not-disturb
 fi
 
-pkill -SIGRTMIN+8 waybar
+pkill -RTMIN+8 waybar
