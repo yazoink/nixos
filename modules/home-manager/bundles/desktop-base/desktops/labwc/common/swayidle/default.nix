@@ -12,8 +12,8 @@
       }
       {
         timeout = 1500;
-        command = "${lib.getExe pkgs.wlopm} --off \\*";
-        resumeCommand = "${lib.getExe pkgs.wlopm} --on \\*";
+        command = "${lib.getExe pkgs.wlopm} --off *";
+        resumeCommand = "${lib.getExe pkgs.wlopm} --on *";
       }
       {
         timeout = 10000;
