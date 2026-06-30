@@ -14,7 +14,7 @@ in {
       force = true;
     };
     "eww/windows" = {
-      source = ./config/widgets;
+      source = ./config/windows;
       recursive = true;
       force = true;
     };
