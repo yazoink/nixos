@@ -14,12 +14,12 @@
       };
       listener = [
         {
-          timeout = 300; # 5 mins
-          on-timeout = "${lib.getExe pkgs.chayang} -d 15 && ${lib.getExe pkgs.wlopm} --off \\*";
+          timeout = 310;
+          on-timeout = "${lib.getExe pkgs.wlopm} --off \\*";
           on-resume = "${lib.getExe pkgs.wlopm} --on \\*";
         }
         {
-          timeout = 330;
+          timeout = 300; # 5 mins
           on-timeout = "loginctl lock-session";
         }
         {
