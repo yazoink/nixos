@@ -23,7 +23,7 @@
       :space-evenly true
       :halign "center"
       :hexpand true
-      :spacing 10
+      :spacing 8
       :class "confirm-buttons"
       (button
         :class "confirm-button bold"
