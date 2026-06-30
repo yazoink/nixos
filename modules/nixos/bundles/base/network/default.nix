@@ -114,28 +114,6 @@ in {
           };
         };
 
-        home2 = {
-          connection = {
-            id = "$HOME_2_SSID";
-            type = "wifi";
-            autoconnect = true;
-          };
-          wifi = {
-            mode = "infrastructure";
-            ssid = "HOME_2_SSID";
-          };
-          wifi-security = {
-            key-mgmt = "wpa-psk";
-            psk = "$HOME_2_PASSWORD";
-          };
-          ipv4 = {
-            method = "auto";
-          };
-          ipv6 = {
-            method = "auto";
-          };
-        };
-
         hotspot = {
           connection = {
             id = "$HOTSPOT_SSID";
