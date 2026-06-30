@@ -26,6 +26,20 @@
       "@name" = "ToggleMaximize";
     };
   }
+  # toggle shade
+  {
+    "@key" = "W-A-s";
+    action = {
+      "@name" = "ToggleShade";
+    };
+  }
+  # toggle always on top
+  {
+    "@key" = "W-t";
+    action = {
+      "@name" = "ToggleAlwaysOnTop";
+    };
+  }
   # raise
   {
     "@key" = "W-S-Return";

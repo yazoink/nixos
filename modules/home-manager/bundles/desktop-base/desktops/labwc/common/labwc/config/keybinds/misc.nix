@@ -7,11 +7,30 @@
       "@command" = "labwc -r; notify-send 'labwc' 'Configuration reloaded'";
     };
   }
-  # show desktop
+  # toggle keybinds
   {
-    "@key" = "W-S-d";
+    "@key" = "W-S-k";
     action = {
-      "@name" = "ToggleShowDesktop";
+      "@name" = "ToggleKeybinds";
+    };
+  }
+  # toggle magnify
+  {
+    "@key" = "W-A-m";
+    action = {
+      "@name" = "ToggleMagnify";
+    };
+  }
+  {
+    "@key" = "W-equal";
+    action = {
+      "@name" = "ZoomIn";
+    };
+  }
+  {
+    "@key" = "W-minus";
+    action = {
+      "@name" = "ZoomOut";
     };
   }
 ]

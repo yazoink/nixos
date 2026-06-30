@@ -7,5 +7,6 @@
     "wl-clip-persist --clipboard regular &"
     "wayland-pipewire-idle-inhibit &"
     "swayidle &"
+    "eww daemon &"
   ];
 }
