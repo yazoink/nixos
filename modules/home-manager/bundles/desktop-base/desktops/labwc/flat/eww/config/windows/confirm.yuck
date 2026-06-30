@@ -15,7 +15,7 @@
     :class "confirm-box"
     :spacing 15
     :halign "fill"
-    (separator)
+    ;(separator)
     (label :text "${thing}" :class "confirm-text")
     ;(user :image "./images/profile_image_rounded4.png")
     (box
