@@ -13,7 +13,7 @@
     "tooltip-format": "Systray"
   },
   "tray": {
-    "icon-size": 14,
+    "icon-size": 15,
     "spacing": 4
   }
 ''
