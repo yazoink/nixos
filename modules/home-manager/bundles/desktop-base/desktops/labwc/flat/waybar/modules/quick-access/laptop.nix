@@ -5,9 +5,9 @@
     "group/volume-expander",
     "group/backlight-expander",
     "group/battery-expander",
-    "group/tray-expander"
+    "group/tray-expander",
     "custom/dnd",
-    "idle_inhibitor",
+    "idle_inhibitor"
     ]
   },
   "custom/left-arrow": {
