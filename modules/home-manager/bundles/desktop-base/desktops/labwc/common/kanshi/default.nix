@@ -2,11 +2,10 @@
   services.kanshi = {
     enable = true;
     systemdTarget = "labwc-session.target";
-    settings = [
-      {
-        output.criteria = "Dell Inc. DELL U2715H 6VY7R72K01YS";
-        output.scale = 1.5;
-      }
-    ];
   };
+  xdg.configFile."kanshi/config".text = ''
+    output "Dell Inc. DELL U2715H 6VY7R72K01YS" {
+      scale 1.5
+    }
+  '';
 }
