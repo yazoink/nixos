@@ -24,9 +24,12 @@ in {
       };
       icons = {
         enable = true;
-        light = lib.mkDefault "Papirus";
-        dark = lib.mkDefault "Papirus";
-        package = lib.mkDefault pkgs.papirus-icon-theme;
+        # light = lib.mkDefault "Papirus";
+        # dark = lib.mkDefault "Papirus";
+        # package = lib.mkDefault pkgs.papirus-icon-theme;
+        light = lib.mkDefault "Zafiro-icons-Light";
+        dark = lib.mkDefault "Zafiro-icons-Dark";
+        package = lib.mkDefault pkgs.zafiro-icons;
       };
       cursor = {
         size = lib.mkDefault 32;
