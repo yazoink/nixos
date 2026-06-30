@@ -8,8 +8,8 @@
     timeouts = [
       {
         timeout = 1000;
-        command = "${lib.getExe pkgs.chayang} -d 15 && ${lib.getExe pkgs.wlopm} --off \*";
-        resumeCommand = "${lib.getExe pkgs.wlopm} --on \*";
+        command = "${lib.getExe pkgs.chayang} -d 15 && ${lib.getExe pkgs.wlopm} --off \\*";
+        resumeCommand = "${lib.getExe pkgs.wlopm} --on \\*";
       }
       {
         timeout = 1500;
