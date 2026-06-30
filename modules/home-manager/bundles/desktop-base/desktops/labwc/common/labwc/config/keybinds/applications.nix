@@ -90,7 +90,7 @@ in [
     "@key" = "W-S-e";
     action = {
       "@name" = "Execute";
-      "@command" = "eww reload";
+      "@command" = "bash ${../../../scripts/reload-eww.sh}";
     };
   }
   # power menu

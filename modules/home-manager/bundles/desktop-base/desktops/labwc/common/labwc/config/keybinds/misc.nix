@@ -4,7 +4,7 @@
     "@key" = "W-S-r";
     action = {
       "@name" = "Execute";
-      "@command" = "labwc -r; notify-send 'labwc' 'Configuration reloaded'";
+      "@command" = "bash ${../../../scripts/reload-labwc.sh}";
     };
   }
   # toggle keybinds
