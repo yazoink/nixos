@@ -21,6 +21,10 @@
         "@title" = "Nicotine+";
         "@serverDecoration" = "yes";
       }
+      {
+        "@title" = "File Roller";
+        "@serverDecoration" = "yes";
+      }
     ];
   };
 }

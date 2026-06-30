@@ -5,6 +5,6 @@ pkill wofi
 if [[ $? != 0 ]]; then
     eww open closer-window
     wofi --show drun
-else
-    eww close-all
 fi
+
+eww close-all
