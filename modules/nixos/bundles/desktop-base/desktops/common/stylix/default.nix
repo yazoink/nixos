@@ -30,9 +30,6 @@ in {
         # light = lib.mkDefault "Zafiro-icons-Light";
         # dark = lib.mkDefault "Zafiro-icons-Dark";
         # package = lib.mkDefault pkgs.zafiro-icons;
-        # light = lib.mkDefault "Zafiro-icons-Light";
-        # dark = lib.mkDefault "Zafiro-icons-Dark";
-        # package = lib.mkDefault pkgs.zafiro-icons;
       };
       cursor = {
         size = lib.mkDefault 32;
