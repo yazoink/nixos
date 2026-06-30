@@ -4,7 +4,6 @@
     "modules": [
     "group/volume-expander",
     "idle_inhibitor",
-    "group/bluetooth-expander",
     "group/backlight-expander",
     "group/battery-expander",
     "group/tray-expander"
