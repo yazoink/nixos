@@ -3,8 +3,8 @@
 mode="$(makoctl mode)"
 
 if [[ "$mode" == *"do-not-disturb"* ]]; then
-    mode -r do-not-disturb
+    makoctl mode -r do-not-disturb
     notify-send "Notifications" "Do not disturb disabled"
 else
-    mode -a do-not-disturb
+    makoctl mode -a do-not-disturb
 fi
