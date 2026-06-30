@@ -9,7 +9,7 @@
       general = {
         ignore_dbus_inhibit = false;
         lock_cmd = "pidof hyprlock || hyprlock";
-        # after_sleep_cmd = "${lib.getExe pkgs.wlopm} --on \\*";
+        after_sleep_cmd = "${lib.getExe pkgs.wlopm} --on \\*";
         # before_sleep_cmd = "loginctl lock-session";
       };
       listener = [
