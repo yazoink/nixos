@@ -27,6 +27,7 @@ window#waybar {
   color: @unfocused;
 }
 
+#custom-dnd,
 #tray-expander,
 #idle_inhibitor,
 #bluetooth-expander,

@@ -30,7 +30,10 @@ in {
       margin = "5,0,0";
       outer-margin = "5";
       default-timeout = "5000";
-      icon-path = "/run/current-system/sw/share/icons/${iconTheme.name}";
+      # icon-path = "/run/current-system/sw/share/icons/${iconTheme.name}";
+      "mode=do-not-disturb" = {
+        invisible = 1;
+      };
     };
     /*
       extraConfig = ''

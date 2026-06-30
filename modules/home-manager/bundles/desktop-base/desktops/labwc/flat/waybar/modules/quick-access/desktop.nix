@@ -3,6 +3,7 @@
     "orientation": "inherit",
     "modules": [
     "group/volume-expander",
+    "custom/dnd",
     "idle_inhibitor",
     "group/tray-expander"
     ]

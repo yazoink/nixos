@@ -22,6 +22,7 @@
   idleInhibitorModule = import ./modules/idle-inhibitor.nix;
   bluetoothModule = import ./modules/bluetooth.nix;
   searchModule = import ./modules/search.nix;
+  dndModule = import ./modules/dnd;
   quickAccessModule =
     if laptop.enable
     then import ./modules/quick-access/laptop.nix
@@ -65,6 +66,7 @@ in {
         ${searchModule},
         ${powerModule},
         ${clockModule},
+        ${dndModule},
         ${quickAccessModule}
       }
     '';
@@ -99,6 +101,7 @@ in {
         }
 
         #custom-tray-icon,
+        #custom-dnd,
         #bluetooth-icon,
         #idle_inhibitor,
         #battery.icon,
