@@ -13,6 +13,8 @@
     "nixos" = "cd ~/nixos";
     "cpdir" = "wl-copy \"$(pwd)\"";
     "ff" = "fastfetch";
+    "themefetch" = "fastfetch --config examples/5.jsonc";
+    "fff" = "fastfetch --config examples/27.jsonc";
     #"ls" = "ls -hN --color=auto";
     "ls" = "eza -l -T -L=1";
     "grep" = "grep --color=auto";
