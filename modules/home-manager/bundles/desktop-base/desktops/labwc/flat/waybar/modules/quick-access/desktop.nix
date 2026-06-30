@@ -3,13 +3,13 @@
     "orientation": "inherit",
     "modules": [
     "group/volume-expander",
+    "group/tray-expander",
     "custom/dnd",
-    "idle_inhibitor",
-    "group/tray-expander"
+    "idle_inhibitor"
     ]
   },
   "custom/left-arrow": {
-    "format": "",
+    "format": "",
     "tooltip": false
   },
   "group/quick-access-slider": {

@@ -42,7 +42,7 @@ in {
             applications = sansFont.size;
             desktop = sansFont.size;
             popups = sansFont.size;
-            terminal = sansFont.size;
+            terminal = monoFont.size;
           };
           serif = {
             package = pkgs.gyre-fonts;
