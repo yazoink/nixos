@@ -15,6 +15,7 @@ lib.mkMerge [
   (import ../common/kanshi {inherit config osConfig lib pkgs;})
   (import ../common/labwc {inherit config osConfig lib pkgs;})
   (import ../common/swayidle {inherit config osConfig lib pkgs;})
+  (import ../common/eww {inherit config osConfig lib pkgs;})
 
   # theme specific
   (import ./eww {inherit config osConfig lib pkgs;})
