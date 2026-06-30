@@ -3,11 +3,11 @@
     "orientation": "inherit",
     "modules": [
     "group/volume-expander",
-    "custom/dnd",
-    "idle_inhibitor",
     "group/backlight-expander",
     "group/battery-expander",
     "group/tray-expander"
+    "custom/dnd",
+    "idle_inhibitor",
     ]
   },
   "custom/left-arrow": {
