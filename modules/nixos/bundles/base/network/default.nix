@@ -2,7 +2,9 @@
   pkgs,
   config,
   ...
-}: {
+}: let
+  inherit (config.networking) hostName;
+in {
   # https://discourse.nixos.org/t/cannot-connect-to-wpa-enterprise-network/22912/9
   # https://github.com/janik-haag/nm2nix
 
@@ -41,7 +43,7 @@
   networking.hosts = {
     "127.0.0.1" = ["localhost"];
     "::1" = ["localhost"];
-    "127.0.1.1" = ["nixserver1.localdomain" "${config.networking.hostName}"];
+    "127.0.1.1" = ["${hostName}.localdomain" "${hostName}"];
   };
 
   systemd.services.NetworkManager-wait-online.enable = false;
