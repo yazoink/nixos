@@ -3,6 +3,8 @@
     "orientation": "inherit",
     "modules": [
     "group/volume-expander",
+    "idle_inhibitor",
+    "group/bluetooth-expander",
     "group/tray-expander"
     ]
   },

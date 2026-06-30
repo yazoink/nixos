@@ -20,6 +20,7 @@
   backlightModule = import ./modules/backlight.nix;
   powerModule = import ./modules/power.nix;
   idleInhibitorModule = import ./modules/idle-inhibitor.nix;
+  bluetoothModule = import ./modules/bluetooth.nix;
   searchModule = import ./modules/search.nix;
   quickAccessModule =
     if laptop.enable
@@ -56,6 +57,8 @@ in {
         ${workspacesModule},
         ${taskbarModule},
         ${volumeModule},
+        ${bluetoothModule},
+        ${idleInhibitorModule},
         ${backlightModule},
         ${batteryModule},
         ${trayModule},
@@ -96,6 +99,8 @@ in {
         }
 
         #custom-tray-icon,
+        #bluetooth-icon,
+        #idle_inhibitor,
         #battery.icon,
         #wireplumber.icon,
         #custom-backlight-icon,

@@ -28,6 +28,8 @@ window#waybar {
 }
 
 #tray-expander,
+#idle_inhibitor,
+#bluetooth-expander,
 #battery-expander,
 #backlight-expander {
   margin-left: 12px;
@@ -136,6 +138,7 @@ menuitem:hover {
 }
 
 #tray,
+#bluetooth,
 #battery.percentage,
 #wireplumber.volume,
 #backlight {
