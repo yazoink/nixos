@@ -8,11 +8,18 @@
 in {
   home.packages = with pkgs; [eww font-awesome];
   xdg.configFile = {
-    "eww" = {
-      source = ./config;
+    "eww/widgets" = {
+      source = ./config/widgets;
       recursive = true;
       force = true;
     };
+    "eww/windows" = {
+      source = ./config/widgets;
+      recursive = true;
+      force = true;
+    };
+    "eww/eww.scss".source = ./config/eww.scss;
+    "eww/eww.yuck".source = ./config/eww.yuck;
     "eww/_colours.scss".text = with colors; ''
       $border: #${base01};
       $bg: #${base00};

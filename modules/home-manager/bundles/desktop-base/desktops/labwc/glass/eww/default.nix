@@ -1,28 +1,30 @@
 {
   pkgs,
   config,
-  osConfig,
   ...
 }: let
   inherit (config.lib.stylix) colors;
-  margin = 8;
+  margin = 4;
 in {
   home.packages = with pkgs; [eww font-awesome];
-  # requires EWW_CONFIG_DIR env variable to be set to work
-  # toggle power menu with launch-power-menu.sh
-  # launch corners with launch-corners.sh
   xdg.configFile = {
-    "eww" = {
-      source = ./config;
+    "eww/widgets" = {
+      source = ./config/widgets;
       recursive = true;
       force = true;
     };
+    "eww/windows" = {
+      source = ./config/widgets;
+      recursive = true;
+      force = true;
+    };
+    "eww/eww.scss".source = ./config/eww.scss;
+    "eww/eww.yuck".source = ./config/eww.yuck;
     "eww/_colours.scss".text = with colors; ''
       $border: #${base02};
       $bg: #${base00};
-      $bg2: #${base01};
+      $bg2: rgba(${base05-rgb-r}, ${base05-rgb-g}, ${base05-rgb-b}, 0.09);
       $bg3: #${base02};
-      $bg4: #${base03};
       $fg: #${base05};
       $red: #${base08};
       $yellow: #${base0A};
