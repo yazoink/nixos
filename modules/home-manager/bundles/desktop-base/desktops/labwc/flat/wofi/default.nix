@@ -1,8 +1,4 @@
-{
-  config,
-  osConfig,
-  ...
-}: let
+{config, ...}: let
   style = config.lib.stylix.colors {
     template = ./style.css.mustache;
     extension = ".css";
@@ -12,21 +8,11 @@ in {
   programs.wofi = {
     enable = true;
     settings = {
-      term = osConfig.myOptions.defaultApps.terminal;
       width = "25%";
       height = "45%";
-      show_all = false;
-      allow_markup = true;
-      always_parse_args = true;
-      print_command = true;
-      allow_images = true;
-      sort_order = "alphabetical";
-      key_expand = "Tab";
       yoffset = -39;
       xoffset = 5;
       location = "bottom_left";
-      display_generic = true;
-      prompt = "Search...";
     };
     style =
       ''

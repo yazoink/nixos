@@ -4,6 +4,7 @@
   osConfig,
   lib,
   pkgs,
+  labwc,
   ...
 }:
 lib.mkMerge [
@@ -17,6 +18,10 @@ lib.mkMerge [
   (import ../common/swayidle {inherit config osConfig lib pkgs;})
   (import ../common/eww {inherit config osConfig lib pkgs;})
   (import ../common/hyprlock {inherit config osConfig lib pkgs;})
+  (import ../common/swayosd {inherit config osConfig lib pkgs;})
+  (import ../common/wofi {inherit config osConfig lib pkgs;})
+  (lib.mkIf labwc.kanshi.enable
+    (import ../common/kanshi {inherit config osConfig lib pkgs;}))
 
   # theme specific
   (import ./eww {inherit config osConfig lib pkgs;})
