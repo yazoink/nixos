@@ -113,9 +113,10 @@ button:hover {
 .heading {
   font-weight: bold;
   font-size: 24pt;
-  margin: 4px;
-  padding-bottom: 8px;
-  padding-top: 8px;
+  margin: 0;
+  padding: 0;
+  margin-top: 4px;
+  padding-bottom: 4px;
 }
 
 .os-version {
@@ -183,6 +184,9 @@ button:hover {
   font-family: "Font Awesome 7 Free";
   font-weight: bold;
   font-size: 7pt;
+  margin: 0;
+  padding: 0;
+  margin-top: 16px;
 }
 
 .separator-center {
