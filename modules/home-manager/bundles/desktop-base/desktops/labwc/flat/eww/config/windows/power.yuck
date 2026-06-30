@@ -24,14 +24,6 @@
     (separator)
     (label :text "Have a nice day :)" :class "heading")
     (box
-      :halign "fill"
-      :valign "fill"
-      :vexpand "true"
-      :hexpand "true"
-      :valign "center"
-      (user :image "./images/profile_image.jpg")
-    )
-    (box
       :orientation "horizontal"
       :space-evenly false
       :spacing 8
@@ -41,6 +33,14 @@
         :author "William S. Burroughs"
       )
     )
-    (resource-usage-grid)
+    (box
+      :halign "fill"
+      :valign "fill"
+      :vexpand "true"
+      :hexpand "true"
+      :valign "center"
+      (user :image "./images/profile_image.jpg")
+    )
+    ;(resource-usage-grid)
   )
 )
