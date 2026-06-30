@@ -117,20 +117,4 @@ in [
       "@command" = "${wallpaperCommand} -q";
     };
   }
-  # launch power menu
-  {
-    "@key" = "W-S-q";
-    action = {
-      "@name" = "Execute";
-      "@command" = "bash $EWW_CONFIG_DIR/launch-power-menu.sh";
-    };
-  }
-  # launch calendar
-  {
-    "@key" = "W-S-c";
-    action = {
-      "@name" = "Execute";
-      "@command" = "bash $EWW_CONFIG_DIR/launch-calendar.sh";
-    };
-  }
 ]
