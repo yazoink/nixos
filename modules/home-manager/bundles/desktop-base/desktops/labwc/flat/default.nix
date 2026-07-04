@@ -21,6 +21,7 @@ lib.mkMerge [
   (import ../common/swayosd {inherit config osConfig lib pkgs;})
   (import ../common/wofi {inherit config osConfig lib pkgs;})
   (import ../common/screenshot {inherit config osConfig lib pkgs;})
+  (import ../common/color {inherit config osConfig lib pkgs;})
   (lib.mkIf labwc.kanshi.enable
     (import ../common/kanshi {inherit config osConfig lib pkgs;}))
 

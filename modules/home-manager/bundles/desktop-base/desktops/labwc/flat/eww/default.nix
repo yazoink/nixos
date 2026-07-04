@@ -164,7 +164,7 @@ in {
             )
             (button
               :class "launcher-button picker"
-              :onclick "bash ./scripts/launch_app.sh hyprpicker &"
+              :onclick "bash ./scripts/launch_app.sh color &"
               :tooltip "Open colour picker"
               (label :text "" :class "icon")
             )
