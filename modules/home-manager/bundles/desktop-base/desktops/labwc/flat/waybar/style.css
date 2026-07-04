@@ -55,7 +55,7 @@ window#waybar {
   padding-right: 12px;
 }
 
-#taskbar-button:hover,
+#taskbar button:hover,
 #workspaces-group:hover,
 #custom-menu:hover,
 #clock:hover {
