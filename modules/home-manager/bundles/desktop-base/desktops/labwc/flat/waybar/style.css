@@ -58,7 +58,7 @@ window#waybar {
 #taskbar-button:hover,
 #workspaces-group:hover,
 #custom-menu:hover,
-#clock: hover {
+#clock:hover {
   background-image: linear-gradient(@bg2, @bg2);
 }
 
