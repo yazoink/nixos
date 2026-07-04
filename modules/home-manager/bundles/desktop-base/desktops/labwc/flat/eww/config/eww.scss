@@ -27,8 +27,9 @@ $inner-radius: 8px;
 }
 
 .hline {
-  border-bottom: 1px solid $fg;
-  opacity: 0.2;
+  border-bottom: 1px solid $surface;
+  // border-bottom: 1px solid $fg;
+  // opacity: 0.2;
 }
 
 .icon {
