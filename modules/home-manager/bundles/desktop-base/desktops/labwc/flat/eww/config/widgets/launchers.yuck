@@ -122,7 +122,7 @@
       (button
         :class "launcher-button shutdown"
         :tooltip "Open power menu"
-        :onclick "bash ./scripts/launch_app.sh \"bash ./scripts/toggle_var.sh 'power_visible'\" &"
+        :onclick "bash ./scripts/launch_app.sh 'eww update power_visible=true' &"
         (label :text "" :class "icon")
       )
     )
