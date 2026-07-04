@@ -17,7 +17,7 @@ in {
     };
     "eww/widgets/launchers.yuck".text = with defaultApps; ''
       (defvar dnd false)
-      (defpoll dnd_icon :interval "17s"  "bash ./scripts/dnd_icon.sh")
+      (defpoll :run-while control_panel_visible dnd_icon :interval "17s"  "bash ./scripts/dnd_icon.sh")
 
       (defwidget app-button [name desc icon launch]
         (button

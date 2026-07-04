@@ -1,5 +1,5 @@
 (defpoll cpu :run-while monitor_visible :interval "17s" "bash ./scripts/cpu.sh")
-(defpoll temp :interval "17s"  `sensors | grep Tctl | awk '{print $2}' | sed 's/\+//g;s/\.[0-9]°C//g'`)
+(defpoll temp :run-while monitor_visible :interval "17s"  `sensors | grep Tctl | awk '{print $2}' | sed 's/\+//g;s/\.[0-9]°C//g'`)
 
 (defwidget monitor []
   (revealer
