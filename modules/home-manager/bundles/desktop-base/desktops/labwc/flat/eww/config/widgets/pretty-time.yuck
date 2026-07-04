@@ -1,6 +1,6 @@
-(defpoll :run-while calendar_visible hour :initial "idk" :interval "30s" `date +%I`)
-(defpoll :run-while calendar_visible minute :initial "idk" :interval "30s" `date +%M`)
-(defpoll :run-while calendar_visible date :initial "idk" :interval "30s" `date '+%A %B %d %Y'`)
+(defpoll hour :run-while calendar_visible :initial "idk" :interval "30s" `date +%I`)
+(defpoll minute :run-while calendar_visible :initial "idk" :interval "30s" `date +%M`)
+(defpoll date :run-while calendar_visible :initial "idk" :interval "30s" `date '+%A %B %d %Y'`)
 
 (defwidget pretty-time []
   (box
