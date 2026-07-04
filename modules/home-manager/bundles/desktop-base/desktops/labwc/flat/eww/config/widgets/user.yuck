@@ -1,6 +1,6 @@
-(defpoll :run-while control_panel_visible username :initial "" :interval "24h" `whoami`)
-(defpoll :run-while control_panel_visible hostname :initial "" :interval "24h" `hostname`)
-(defpoll :run-while control_panel_visible os-version :initial "idk" :interval "24h" 'bash ./scripts/get_os.sh')
+(defpoll username :run-while control_panel_visible :initial "" :interval "24h" `whoami`)
+(defpoll hostname :run-while control_panel_visible :initial "" :interval "24h" `hostname`)
+(defpoll os-version :run-while control_panel_visible :initial "idk" :interval "24h" 'bash ./scripts/get_os.sh')
 
 (defwidget user []
   (box
