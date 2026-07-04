@@ -20,7 +20,6 @@ else
             fi
             eww update music_visible=false
             eww update weather_visible=false
-            sleep=true
             ;;
         "weather_visible")
             if [[ $(eww get monitor_visible) == true ]] || [[ $(eww get music_visible) == true ]]; then
@@ -29,7 +28,6 @@ else
             eww update music_visible=false
             eww update monitor_visible=false
             eww poll weather_tz weather_temp weather_apparent_temp weather_icon weather_colour
-            sleep=true
             ;;
         "lock_selected")
             eww update exit_selected=false
