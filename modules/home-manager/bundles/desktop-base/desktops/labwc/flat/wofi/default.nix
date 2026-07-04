@@ -14,6 +14,7 @@ in {
       # xoffset = 5;
       # location = "bottom_left";
       location = 0;
+      use_search_box = false;
     };
     style =
       ''
