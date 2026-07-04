@@ -55,6 +55,13 @@ window#waybar {
   padding-right: 12px;
 }
 
+#taskbar-button:hover,
+#workspaces-group:hover,
+#custom-menu:hover,
+#clock: hover {
+  background-image: linear-gradient(@bg2, @bg2);
+}
+
 #window {
   margin-left: -8px;
 }
