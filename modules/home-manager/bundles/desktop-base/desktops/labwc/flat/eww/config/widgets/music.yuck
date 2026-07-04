@@ -41,7 +41,7 @@
               :wrap true 
               :wrap-mode "word"
               :limit-width 25
-              :lines 2 
+              :lines 3 
               :justify "center"
             )
             (label 
