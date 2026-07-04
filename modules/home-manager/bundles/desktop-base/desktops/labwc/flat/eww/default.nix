@@ -77,7 +77,7 @@ in {
           (app-button
             :name "File Manager"
             :desc "${defaultApps.fileManager}"
-            :icon "${defaultApps.fileManager}"
+            :icon "folder"
             :launch "bash ./scripts/launch_app.sh \"${defaultApps.fileManager} $HOME\" &"
           )
           (app-button
