@@ -7,7 +7,11 @@
     ]
   },
   "custom/left-arrow": {
-    "format": "",
+    "format" : "{}",
+    "exec-on-event": true,
+    "on-click": "pkill -SIGRTMIN+7 waybar",
+    "signal": 7,
+    "exec": "bash ${./arrow.sh}",
     "tooltip": false
   },
   "group/quick-access-slider": {

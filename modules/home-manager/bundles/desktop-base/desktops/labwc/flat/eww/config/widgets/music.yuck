@@ -27,7 +27,7 @@
         :space-evenly false
         :tooltip "Open music player"
         (button
-          :onclick "eww update control_panel_visible=false & foot -e ncmpcpp &"
+          :onclick "bash ./scripts/launch_app.sh 'foot -e ncmpcpp' &"
           (box
             :class "music-info"
             :orientation "v"
