@@ -7,3 +7,5 @@ if [ $v == true ]; then
 else
     eww update control_panel_visible=true
 fi
+
+pkill -SIGRTMIN+9 waybar

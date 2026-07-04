@@ -93,22 +93,6 @@ in [
       "@command" = "bash ${../../../scripts/reload-eww.sh}";
     };
   }
-  # power menu
-  {
-    "@key" = "W-S-q";
-    action = {
-      "@name" = "Execute";
-      "@command" = "bash /home/${username}/.config/eww/launch-power-menu.sh";
-    };
-  }
-  # calendar
-  {
-    "@key" = "W-S-c";
-    action = {
-      "@name" = "Execute";
-      "@command" = "bash /home/${username}/.config/eww/launch-calendar.sh";
-    };
-  }
   # reset wallpaper
   {
     "@key" = "W-S-w";

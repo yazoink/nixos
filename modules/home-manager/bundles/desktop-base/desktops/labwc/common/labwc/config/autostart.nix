@@ -6,7 +6,6 @@
     "nm-applet &"
     "wl-clip-persist --clipboard regular &"
     "wayland-pipewire-idle-inhibit &"
-    "swayidle &"
-    "${../../scripts/launch-eww.sh} &"
+    "bash ${../../scripts/launch-eww.sh} &"
   ];
 }

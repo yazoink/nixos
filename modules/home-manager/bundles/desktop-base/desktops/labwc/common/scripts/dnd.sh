@@ -10,3 +10,4 @@ else
 fi
 
 pkill -RTMIN+8 waybar
+eww poll dnd_icon
