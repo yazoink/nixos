@@ -1,4 +1,4 @@
-(defvar lock_selected true)
+(defvar lock_selected false)
 (defvar exit_selected false)
 (defvar reboot_selected false)
 (defvar shutdown_selected false)

@@ -3,9 +3,7 @@
     "orientation": "inherit",
     "modules": [
     "group/volume-expander",
-    "group/tray-expander",
-    "custom/dnd",
-    "idle_inhibitor"
+    "group/tray-expander"
     ]
   },
   "custom/left-arrow": {
