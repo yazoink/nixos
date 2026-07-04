@@ -4,12 +4,18 @@ JSON_FILE="/tmp/weather.json"
 
 function update_json() {
     err=$(curl -s -w "%{http_code}" -o "/tmp/weather.json" "https://api.open-meteo.com/v1/forecast?latitude=-37.814&longitude=144.9633&hourly=temperature_2m&current=temperature_2m,precipitation,cloud_cover,apparent_temperature,wind_speed_10m,is_day&timezone=auto&forecast_days=3")
+    if [ $err == 200 ]; then
+        echo true
+    else
+        echo false
+    fi
+    exit 0
 }
 
 if [ ! -f "$JSON_FILE" ]; then
     case "$1" in
         "-i" | "--icon") echo "" ;;
-        "-u" | "--update") echo "false" ;;
+        "-u" | "--update") update_json ;;
         *) echo "n/a" ;;
     esac
     exit 0

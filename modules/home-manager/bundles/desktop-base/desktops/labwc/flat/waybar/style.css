@@ -43,7 +43,7 @@ window#waybar {
 #clock,
 #quick-access,
 #workspaces-group,
-#custom-search,
+#custom-menu,
 #custom-power {
   margin-top: 8px;
   margin-bottom: 8px;
@@ -154,7 +154,7 @@ menuitem:hover {
   color: @bg2;
 }
 
-#custom-search {
+#custom-menu {
   color: @accent;
 }
 

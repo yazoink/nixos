@@ -102,7 +102,7 @@
       )
       (button
         :class "launcher-button shot"
-        :onclick "eww update control_panel_visible=false & screenshot &"
+        :onclick "eww update control_panel_visible=false & screenshot -s &"
         :tooltip "Take screenshot"
         (label :text "" :class "icon")
       )

@@ -21,7 +21,7 @@
   powerModule = import ./modules/power.nix;
   idleInhibitorModule = import ./modules/idle-inhibitor.nix;
   bluetoothModule = import ./modules/bluetooth.nix;
-  searchModule = import ./modules/search.nix;
+  menuModule = import ./modules/menu;
   dndModule = import ./modules/dnd;
   quickAccessModule =
     if laptop.enable
@@ -37,7 +37,7 @@
     "spacing": 4,
     "height": ${builtins.toString barHeight},
     "modules-left": [
-      "custom/search",
+      "custom/menu",
       "group/workspaces-group"
     ],
     "modules-center": [
@@ -46,7 +46,6 @@
     "modules-right": [
       "group/quick-access-slider",
       "clock",
-      "custom/power"
     ]
   '';
 in {
@@ -63,8 +62,7 @@ in {
         ${backlightModule},
         ${batteryModule},
         ${trayModule},
-        ${searchModule},
-        ${powerModule},
+        ${menuModule},
         ${clockModule},
         ${dndModule},
         ${quickAccessModule}
