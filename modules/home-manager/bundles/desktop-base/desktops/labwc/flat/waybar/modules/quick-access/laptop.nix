@@ -15,7 +15,7 @@
   "group/quick-access-slider": {
     "orientation": "inherit",
     "drawer": {
-      "click-to-reveal": true,
+      "click-to-reveal": false,
       "transition-duration": 1000,
       "children-class": "tray-group-item"
     },
