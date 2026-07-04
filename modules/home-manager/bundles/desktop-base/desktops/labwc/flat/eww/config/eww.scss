@@ -284,8 +284,6 @@ $inner-radius: 8px;
 }
 
 .monitor-box {
-  // border-radius: $inner-radius;
-  // background-color: $surface;
   margin-bottom: $padding;
   border-radius: $inner-radius;
   background: $surface;
@@ -294,21 +292,18 @@ $inner-radius: 8px;
     background-color: $surface;
     border-radius: $inner-radius;
     min-height: 50px;
-  }
-  .monitor-item label {
-    padding: $padding-small;
-    font-size: 1.5em;
-  }
-  .icon {
-    padding: 0;
-  }
-  .icon {
-    border-top-left-radius: $inner-radius;
-    border-bottom-left-radius: $inner-radius;
-    color: $bg;
-  }
-  .usage {
-    color: $fg;
+    .usage {
+      font-size: 1.3em;
+      color: $fg;
+      // font-weight: bold;
+    }
+    .icon {
+      border-top-left-radius: $inner-radius;
+      border-bottom-left-radius: $inner-radius;
+      color: $bg;
+      padding: $padding;
+      font-size: 2.2em;
+    }
   }
 }
 
