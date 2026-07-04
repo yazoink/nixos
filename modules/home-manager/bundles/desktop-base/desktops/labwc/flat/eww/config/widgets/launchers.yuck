@@ -60,13 +60,13 @@
       :name "File Manager"
       :desc "Thunar"
       :icon "thunar"
-      :launch "bash ./scripts/launch_app.sh 'thunar $HOME' &"
+      :launch "bash ./scripts/launch_app.sh \"thunar $HOME\" &"
     )
     (app-button
       :name "Terminal"
       :desc "Foot"
       :icon "terminal"
-      :launch "bash ./scripts/launch_app.sh 'foot -D $HOME' &"
+      :launch "bash ./scripts/launch_app.sh \"foot -D $HOME\" &"
     )
     (app-button
       :name "Office Suite"
