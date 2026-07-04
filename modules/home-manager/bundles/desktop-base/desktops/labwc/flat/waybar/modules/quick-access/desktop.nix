@@ -9,8 +9,8 @@
   "custom/left-arrow": {
     "format" : "{}",
     "exec-on-event": true,
-    "on-click": "pkill -SIGRTMIN+7 waybar",
-    "signal": 7,
+    "on-click": "pkill -SIGRTMIN+10 waybar",
+    "signal": 10,
     "exec": "bash ${./arrow.sh}",
     "tooltip": false
   },
