@@ -5,7 +5,7 @@
 }: let
   inherit (config.lib.stylix) colors;
 in {
-  home.packages = with pkgs; [eww font-awesome];
+  home.packages = with pkgs; [eww font-awesome jq curl];
   xdg.configFile = {
     "eww" = {
       source = ./config;

@@ -9,12 +9,11 @@
 
 (defvar music_visible false)
 (defvar monitor_visible false)
-(defvar weather_visible true)
+(defvar weather_visible false)
 (defvar menu_visible true)
 (defvar control_panel_visible true)
 (defvar power_visible false)
-(defvar calendar_visible true)
-(defvar closer_open false)
+(defvar calendar_visible false)
 
 (defwindow control-center
   :monitor 0
