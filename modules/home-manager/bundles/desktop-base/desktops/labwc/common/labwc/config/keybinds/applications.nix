@@ -101,12 +101,4 @@ in [
       "@command" = "${wallpaperCommand} -q";
     };
   }
-  # do not disturb
-  {
-    "@key" = "W-S-d";
-    action = {
-      "@name" = "Execute";
-      "@command" = "bash ${../../../scripts/dnd.sh}";
-    };
-  }
 ]
