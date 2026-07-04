@@ -1,9 +1,12 @@
 {
   pkgs,
   config,
+  osConfig,
   ...
 }: let
   inherit (config.lib.stylix) colors;
+  inherit (osConfig.myOptions) defaultApps;
+  dollarSign = "$";
 in {
   home.packages = with pkgs; [eww font-awesome jq curl];
   xdg.configFile = {
@@ -12,6 +15,139 @@ in {
       recursive = true;
       force = true;
     };
+    "eww/widgets/launchers.yuck".text = with defaultApps; ''
+      (defvar dnd false)
+      (defpoll dnd_icon :interval "17s"  "bash ./scripts/dnd_icon.sh")
+
+      (defwidget app-button [name desc icon launch]
+        (button
+          :class "app-button"
+          :onclick "${dollarSign}{launch}"
+          :tooltip "Open ${dollarSign}{name}"
+          (box
+            :class "app-button-box"
+            :orientation "horizontal"
+            :halign "fill"
+            :space-evenly false
+            :spacing 8
+            (image :icon "${dollarSign}{icon}" :icon-size "dialog" :class "icon")
+            (box
+              :class "name-desc"
+              :orientation "vertical"
+              :space-evenly false
+              :valign "center"
+              :halign "start"
+              :hexpand true
+              (label :text "${dollarSign}{name}" :class "name" :halign "start")
+              (label :text "${dollarSign}{desc}" :class "desc" :halign "start")
+            )
+            (label :text "" :halign "end" :class "arrow")
+          )
+        )
+      )
+
+      (defwidget apps []
+        (box
+          :class "apps-box"
+          :orientation "vertical"
+          :halign "start"
+          :valign "start"
+          :spacing 8
+          :space-evenly false
+          :halign "fill"
+          :valign "fill"
+          :vexpand true
+          :hexpand true
+          (box
+            :orientation "h"
+            :space-evenly false
+            :spacing 8
+            :halign "start"
+            :class "apps-label"
+            (label :text "" :class "base0A" )
+            (label :text "Quick Access")
+          )
+          (box :class "hline")
+          (app-button
+            :name "Web Browser"
+            :desc "${defaultApps.webBrowser}"
+            :icon "web-browser"
+            :launch "bash ./scripts/launch_app.sh ${defaultApps.webBrowser} &"
+          )
+          (app-button
+            :name "File Manager"
+            :desc "${defaultApps.fileManager}"
+            :icon "${defaultApps.fileManager}"
+            :launch "bash ./scripts/launch_app.sh \"${defaultApps.fileManager} $HOME\" &"
+          )
+          (app-button
+            :name "Terminal"
+            :desc "${defaultApps.terminal}"
+            :icon "terminal"
+            :launch "bash ./scripts/launch_app.sh \"${defaultApps.terminal} -D $HOME\" &"
+          )
+          (app-button
+            :name "Office Suite"
+            :desc "libreoffice"
+            :icon "libreoffice"
+            :launch "bash ./scripts/launch_app.sh libreoffice &"
+          )
+        )
+      )
+
+      (defwidget launchers []
+        (box
+          :orientation "v"
+          :class "launchers-box"
+          :space-evenly false
+          (box
+            :orientation "v"
+            :valign "start"
+            :spacing 8
+            :space-evenly false
+            :vexpand true
+            (button
+              :class "launcher-button search"
+              :onclick "bash ./scripts/launch_app.sh 'wofi --show drun' &"
+              :tooltip "Search applications"
+              (label :text "" :class "icon")
+            )
+            (button
+              :class "launcher-button picker"
+              :onclick "bash ./scripts/launch_app.sh hyprpicker &"
+              :tooltip "Open colour picker"
+              (label :text "" :class "icon")
+            )
+            (button
+              :class "launcher-button shot"
+              :onclick "bash ./scripts/launch_app.sh 'screenshot -s' &"
+              :tooltip "Take screenshot"
+              (label :text "" :class "icon")
+            )
+          )
+          (box
+            :orientation "v"
+            :valign "end"
+            :spacing 8
+            :space-evenly true
+            :vexpand true
+            (button
+              :class "launcher-button dnd"
+              :tooltip "Toggle do-not-disturb"
+              :onclick "bash ./scripts/dnd.sh &"
+              (label :text dnd_icon :class "icon")
+            )
+            (button
+              :class "launcher-button shutdown"
+              :tooltip "Open power menu"
+              :onclick "bash ./scripts/launch_app.sh 'eww update power_visible=true' &"
+              (label :text "" :class "icon")
+            )
+          )
+        )
+      )
+
+    '';
     "eww/_colours.scss".text = with colors; ''
       $base00: #${base00};
       $base01: #${base01};
