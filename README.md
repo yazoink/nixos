@@ -41,11 +41,6 @@ modules/ -- system modules
 
 ![rice](./assets/moonfly1.png)
 ![rice](./assets/moonfly2.png)
-![rice](./assets/moonfly3.png)
-
-("camellia" colorscheme)
-
-![rice](./assets/camellia1.png)
 
 ### Labwc "glass"
 
