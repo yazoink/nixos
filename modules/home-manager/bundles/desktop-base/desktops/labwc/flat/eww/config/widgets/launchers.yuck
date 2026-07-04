@@ -60,13 +60,13 @@
       :name "File Manager"
       :desc "Thunar"
       :icon "thunar"
-      :launch "bash ./scripts/launch_app.sh 'thunar ~' &"
+      :launch "bash ./scripts/launch_app.sh 'thunar $HOME' &"
     )
     (app-button
       :name "Terminal"
       :desc "Foot"
       :icon "terminal"
-      :launch "bash ./scripts/launch_app.sh foot &"
+      :launch "bash ./scripts/launch_app.sh 'foot -D $HOME' &"
     )
     (app-button
       :name "Office Suite"
@@ -90,19 +90,19 @@
       :vexpand true
       (button
         :class "launcher-button search"
-        :onclick "eww update control_panel_visible=false & wofi --show drun &"
+        :onclick "bash ./scripts/launch_app.sh 'wofi --show drun' &"
         :tooltip "Search applications"
         (label :text "" :class "icon")
       )
       (button
         :class "launcher-button picker"
-        :onclick "eww update control_panel_visible=false & hyprpicker &"
+        :onclick "bash ./scripts/launch_app.sh hyprpicker &"
         :tooltip "Open colour picker"
         (label :text "" :class "icon")
       )
       (button
         :class "launcher-button shot"
-        :onclick "eww update control_panel_visible=false & screenshot -s &"
+        :onclick "bash ./scripts/launch_app.sh 'screenshot -s' &"
         :tooltip "Take screenshot"
         (label :text "" :class "icon")
       )
@@ -122,7 +122,7 @@
       (button
         :class "launcher-button shutdown"
         :tooltip "Open power menu"
-        :onclick "bash ./scripts/toggle_var.sh 'power_visible'& bash ./scripts/toggle_var.sh 'control_panel_visible'"
+        :onclick "bash ./scripts/launch_app.sh \"bash ./scripts/toggle_var.sh 'power_visible'\" &"
         (label :text "" :class "icon")
       )
     )
