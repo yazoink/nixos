@@ -39,6 +39,8 @@
               :class "song"
               :text "${song}" 
               :wrap true 
+              :wrap-mode "word"
+              :limit-width 25
               :lines 2 
               :justify "center"
             )
