@@ -54,25 +54,25 @@
       :name "Web Browser"
       :desc "Zen Twilight"
       :icon "web-browser"
-      :launch "bash ./scripts/launch.sh zen-twilight &"
+      :launch "bash ./scripts/launch_app.sh zen-twilight &"
     )
     (app-button
       :name "File Manager"
       :desc "Thunar"
       :icon "thunar"
-      :launch "bash ./scripts/launch.sh \"thunar ~\" &"
+      :launch "bash ./scripts/launch_app.sh \"thunar ~\" &"
     )
     (app-button
       :name "Terminal"
       :desc "Foot"
       :icon "terminal"
-      :launch "bash ./scripts/launch.sh foot &"
+      :launch "bash ./scripts/launch_app.sh foot &"
     )
     (app-button
       :name "Office Suite"
       :desc "Libreoffice"
       :icon "libreoffice"
-      :launch "bash ./scripts/launch.sh libreoffice &"
+      :launch "bash ./scripts/launch_app.sh libreoffice &"
     )
   )
 )
