@@ -60,7 +60,7 @@
       :name "File Manager"
       :desc "Thunar"
       :icon "thunar"
-      :launch "bash ./scripts/launch_app.sh \"thunar ~\" &"
+      :launch "bash ./scripts/launch_app.sh 'thunar ~' &"
     )
     (app-button
       :name "Terminal"
