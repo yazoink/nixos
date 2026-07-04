@@ -7,6 +7,6 @@
     "wl-clip-persist --clipboard regular &"
     "wayland-pipewire-idle-inhibit &"
     "swayidle &"
-    "eww daemon &"
+    "${../../scripts/launch-eww.sh} &"
   ];
 }

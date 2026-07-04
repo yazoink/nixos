@@ -1,0 +1,44 @@
+(defpoll cpu :run-while monitor_visible :interval "17s" "bash ./scripts/cpu.sh")
+(defpoll temp :interval "17s"  `sensors | grep Tctl | awk '{print $2}' | sed 's/\+//g;s/\.[0-9]°C//g'`)
+
+(defwidget monitor []
+  (revealer
+    :transition "slideup"
+    :reveal monitor_visible
+    (box
+      :class "monitor-box"
+      :orientation "v"
+      :spacing 8
+      (box
+        :orientation "h"
+        :space-evenly true
+        :spacing 8
+        (box
+          :class "monitor-item cpu base08"
+          (label :text "" :class "icon")
+          (label :text "${round(cpu, 0)}%" :class "usage")
+        )
+        (box
+          :class "monitor-item ram base0A"
+          (label :text "" :class "icon")
+          (label :text "${round(EWW_RAM.used_mem_perc, 0)}%" :class "usage")
+        )
+      )
+      (box
+        :orientation "h"
+        :space-evenly true
+        :spacing 8
+        (box
+          :class "monitor-item disk base0B"
+          (label :text "" :class "icon")
+          (label :text "${round(EWW_DISK["/"].used_perc, 0)}%" :class "usage")
+        )
+        (box
+          :class "monitor-item temp base0D"
+          (label :text "" :class "icon")
+          (label :text "${temp}°C" :class "usage")
+        )
+      )
+    )
+  )
+)

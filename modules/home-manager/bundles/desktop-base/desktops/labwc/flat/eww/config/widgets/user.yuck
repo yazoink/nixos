@@ -1,39 +1,46 @@
-(defpoll username-and-hostname :initial "idk" :interval "24h" 'echo "$(whoami) @ $(hostname)"')
+(defpoll username :initial "" :interval "24h" `whoami`)
+(defpoll hostname :initial "" :interval "24h" `hostname`)
 (defpoll os-version :initial "idk" :interval "24h" 'bash ./scripts/get_os.sh')
 
-(defwidget user [image]
+(defwidget user []
   (box
     :class "user-box"
     :orientation "horizontal"
-    :valign "end"
-    :halign "fill"
-    :space-evenly "false"
+    :valign "start"
     :spacing 16
-    ;(hline)
-    ;(separator)
-    (image
-      :path "${image}"
-      :image-width 60
-      :image-height 60
-      :halign "end"
-      :class "profile-picture"
+    :space-evenly false
+    :halign "fill"
+    :hexpand true
+    (box
+      :class "profile-image"
+      :vexpand false 
+      :hexpand false 
+      :style "background-image: url('./images/profile_image.jpg');"
     )
     (box
-      ;:vexpand "true"
-      :halign "start"
+      :class "username-hostname-os"
       :orientation "vertical"
-      :spacing 4
       :space-evenly false
+      :spacing 4
       :valign "center"
-      :hexpand false
-      (left-text
-        :class "username-and-hostname bold"
-        :text "${username-and-hostname}"
+      (box
+        :class "username-hostname"
+        :halign "start"
+        :hexpand true
+        :space-evenly false
+        :spacing: 4
+        :orientation "horizontal"
+        (label :text "${username}" :class "username" :halign "start")
+        (label :text "@" :class "at")
+        (label :text "${hostname}" :class "hostname")
       )
-      (left-text
-        :text "${os-version}"
-        :class "os-version italic"
-      )
+      (label :text "${os-version}" :class "os-version" :halign "start")
     )
+    (button 
+      :class "reveal-button" 
+      :halign "end"
+      :hexpand true 
+      :onclick "bash ./scripts/toggle_var.sh menu_visible"
+      {menu_visible ? "" : ""})
   )
 )

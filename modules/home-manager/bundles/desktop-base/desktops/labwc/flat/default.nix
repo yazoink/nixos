@@ -16,10 +16,11 @@ lib.mkMerge [
   (import ../common/kanshi {inherit config osConfig lib pkgs;})
   (import ../common/labwc {inherit config osConfig lib pkgs;})
   (import ../common/hypridle {inherit config osConfig lib pkgs;})
-  (import ../common/eww {inherit config osConfig lib pkgs;})
+  # (import ../common/eww {inherit config osConfig lib pkgs;})
   (import ../common/hyprlock {inherit config osConfig lib pkgs;})
   (import ../common/swayosd {inherit config osConfig lib pkgs;})
   (import ../common/wofi {inherit config osConfig lib pkgs;})
+  (import ../common/screenshot {inherit config osConfig lib pkgs;})
   (lib.mkIf labwc.kanshi.enable
     (import ../common/kanshi {inherit config osConfig lib pkgs;}))
 

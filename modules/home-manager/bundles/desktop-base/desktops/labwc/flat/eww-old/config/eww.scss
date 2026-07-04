@@ -1,0 +1,258 @@
+$border: #1C2326;
+$bg: #141B1E;
+$bg2: #232A2D;
+$bg3: #353C3F;
+$fg: #DADADA;
+$red: #E57474;
+$yellow: #E5C76B;
+$green: #8CCF7E;
+$blue: #67B0E8;
+$purple: #C47FD5;
+$margin: 5px;
+
+@import "colours";
+
+$round: 16px;
+
+* {
+  all: unset;
+  color: $fg;
+}
+
+.power, .confirm {
+  background: none;
+  border-radius: 16px;
+}
+
+.confirm-text {
+  font-weight: bold;
+  font-size: 15pt;
+}
+
+.confirm-button {
+  min-width: 75px;
+}
+
+.power-box, .confirm-box, .calendar-box {
+  // box-shadow: 0 0 50px rgba(0, 0, 0, 0.4);
+  padding: 16px;
+  border: 1px solid $border;
+  border-radius: 16px;
+  background-color: $bg;
+  // margin: 60px;
+  // margin-bottom: $margin;
+  // margin-right: $margin;
+  margin: $margin;
+}
+
+.user-box {
+  padding: 16px;
+  border-radius: 8px;
+  background-color: $bg2;
+}
+
+.username-and-hostname {
+  font-size: 15pt;
+}
+
+.os-version {
+  font-size: 13pt;
+}
+
+button {
+  padding: 8px;
+  border-radius: 8px;
+  background-color: $bg2;
+}
+
+button:hover {
+  background-color: $bg3;
+}
+
+.power-button-box {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-right: 4px;
+}
+
+.power-button-box button {
+  font-family: "Font Awesome 7 Free";
+  font-size: 19pt;
+  padding: 8px;
+}
+
+.power-button-lock label {
+  color: $blue;
+}
+
+.power-button-exit label {
+  color: $green;
+}
+
+.power-button-reboot label {
+  color: $yellow;
+}
+
+.power-button-shutdown label {
+  color: $red;
+}
+
+// .user-box {
+//   border: 1px solid $border2;
+//   // background-color: $border2;
+//   padding: 10px;
+//   border-radius: 5px;
+// }
+
+.profile-picture {
+  // border-radius: 5px;
+  // border: 1px solid $fg;
+  // box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+}
+
+.heading {
+  font-weight: bold;
+  font-size: 24pt;
+  margin: 0;
+  padding: 0;
+  margin-top: 4px;
+  padding-bottom: 4px;
+}
+
+.os-version {
+  font-size: unset;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.italic {
+  font-style: italic;
+  opacity: 0.5;
+}
+
+.hline {
+  // border-top: 1px solid $bg3;
+  // opacity: 0.15;
+  // border-top: 2px dashed $bg3;
+}
+
+.grid-list-box, .text-box {
+  background-color: $bg2;
+  padding: 16px;
+  border-radius: 8px;
+}
+
+.quote {
+  font-style: italic;
+  background-color: $bg2;
+  padding: 16px;
+  border-radius: 8px;
+  margin: 8px 0;
+  margin-left: -4px;
+  min-width: 200px;
+}
+
+.quote-author {
+  opacity: 0.5;
+  margin-top: 8px;
+}
+
+.pretty-time {
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.pretty-time-date {
+  font-size: 13pt;
+  font-style: italic;
+  opacity: 0.5;
+}
+
+.pretty-time-clock {
+  font-size: 40pt;
+  font-weight: bold;
+}
+
+.pretty-time-separator {
+  font-size: 5pt;
+  font-family: "Font Awesome 7 Free";
+}
+
+.separator {
+  font-family: "Font Awesome 7 Free";
+  font-weight: bold;
+  font-size: 7pt;
+  margin: 0;
+  padding: 0;
+  margin-top: 16px;
+}
+
+.separator-center {
+  font-size: 11pt;
+}
+
+.separator-edge {
+  font-size: 3pt;
+}
+
+tooltip {
+  background-color: $bg;
+  opacity: 1.0;
+  border: 1px solid $border;
+  border-radius: 8px;
+  padding: 0;
+}
+
+tooltip label {
+  margin: 4px;
+  padding: 0;
+  color: $fg;
+}
+
+.calendar {
+  background-color: $bg2;
+  padding: 12px;
+  border-radius: 8px;
+}
+
+calendar {
+  padding: 2px;
+}
+
+calendar.header {
+  margin-bottom: 4px;
+  border-bottom: 1px solid $bg2;
+}
+
+calendar.day-number,
+calendar.week-number {
+  padding: 2px;
+}
+
+calendar:selected {
+  color: $blue;
+  border-radius: 4px;
+  background-color: $bg2;
+}
+
+.red {
+  color: $red;
+}
+
+.yellow {
+  color: $yellow;
+}
+
+.blue {
+  color: $blue;
+}
+
+.green {
+  color: $green;
+}
+
+.purple {
+  color: $purple;
+}

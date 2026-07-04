@@ -1,51 +1,95 @@
-(defwidget power-buttons []
+(defvar lock_selected true)
+(defvar exit_selected false)
+(defvar reboot_selected false)
+(defvar shutdown_selected false)
+
+(defwidget yes_no [action cmd]
   (box
-    :orientation "vertical"
-    :space-evenly "false"
-    :valign "center"
-    :class "power-button-box"
-    :spacing 8
-    ; (left-text :text "Power Options" :class "bold")
+    :orientation "v"
+    :spacing 4
+    :space-evenly false
+    (label :text action :class "action")
     (box
-      :orientation "vertical"
-      :halign "center"
-      :space-evenly "true"
-      :spacing 8
-      (box
-        :orientation "horizontal"
-        :halign "center"
-        :space-evenly "true"
-        :spacing 8
-        (button
-          :class "power-button-lock"
-          :onclick "bash ./scripts/lock.sh"
-          :tooltip "Lock (l)"
-          ""
-        )
-        (button
-          :class "power-button-exit"
-          :onclick "bash ./scripts/confirm_prompt.sh 'Exit window manager?' 'labwc --exit' & disown"
-          :tooltip "Exit (e)"
-          ""
-        )
+      :orientation "h"
+      :spacing 4
+      :valign "center"
+      (button :onclick "eww update power_visible=false & ${cmd}" :class "yes base0B" "")
+      (button :onclick "eww update power_visible=false" :class "no base08" "")
+    )
+  )
+)
+
+(defwidget power_buttons []
+  (box
+    :orientation "h"
+    :class "power-buttons-box"
+    :halign "start"
+    :space-evenly false
+    :vexpand false
+    :valign "end"
+    :spacing 8
+    (box
+      :orientation "h"
+      :space-evenly false
+      :class "power-button"
+      (button
+        :class "lock ${lock_selected ? "selected" : ""}"
+        :onclick "bash ./scripts/toggle_var.sh lock_selected &"
+        :tooltip "Lock screen"
+        (label :text "" :class "icon")
       )
-      (box
-        :orientation "horizontal"
-        :halign "center"
-        :space-evenly "true"
-        :spacing 8
-        (button
-          :class "power-button-reboot"
-          :onclick "bash ./scripts/confirm_prompt.sh 'Reboot system?' 'systemctl reboot' & disown"
-          :tooltip "Reboot (r)"
-          ""
-        )
-        (button
-          :class "power-button-shutdown"
-          :onclick "bash ./scripts/confirm_prompt.sh 'Shut down system?' 'shutdown now' & disown"
-          :tooltip "Shutdown (s)"
-          ""
-        )
+      (revealer
+        :transition "slideright"
+        :reveal lock_selected
+        (yes_no :action "Lock screen" :cmd "hyprlock &")
+      )
+    )
+    (box
+      :orientation "h"
+      :space-evenly false
+      :class "power-button"
+      (button
+        :class "exit ${exit_selected ? "selected" : ""}"
+        :onclick "bash ./scripts/toggle_var.sh exit_selected &"
+        :tooltip "Exit desktop"
+        (label :text "" :class "icon")
+      )
+      (revealer
+        :transition "slideright"
+        :reveal exit_selected
+        (yes_no :action "Exit desktop" :cmd "labwc --exit &")
+      )
+    )
+    (box
+      :orientation "h"
+      :space-evenly false
+      :class "power-button"
+      (button
+        :class "reboot ${reboot_selected ? "selected" : ""}"
+        :onclick "bash ./scripts/toggle_var.sh reboot_selected &"
+        :tooltip "Reboot system"
+        (label :text "" :class "icon")
+      )
+      (revealer
+        :transition "slideright"
+        :reveal reboot_selected
+        (yes_no :action "Reboot" :cmd "systemctl reboot &")
+      )
+    )
+    (box
+      :orientation "h"
+      :space-evenly false
+      :class "power-button"
+      (button
+        :class "shutdown ${shutdown_selected ? "selected" : ""}"
+        :onclick "bash ./scripts/toggle_var.sh shutdown_selected &"
+        :tooltip "Shut down system"
+        (label :text "" :class "icon")
+      )
+      (revealer
+        :transition "slideright"
+        :reveal shutdown_selected
+        (yes_no :action "Shut down" :cmd "shutdown now &")
       )
     )
   )

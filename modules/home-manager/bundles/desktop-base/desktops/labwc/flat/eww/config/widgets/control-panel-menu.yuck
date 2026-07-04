@@ -1,0 +1,75 @@
+(defwidget control_panel_menu []
+  (revealer
+    :transition "slideup"
+    :reveal menu_visible
+    (box
+      :orientation "v"
+      :space-evenly false
+      :class "menu-container"
+      (box
+        :orientation "v"
+        :space-evenly false
+        (weather)
+        (monitor)
+        (music)
+      )
+      (box
+        :class "menu-box"
+        :halign "fill"
+        :space-evenly true
+        :hexpand true
+        (box
+          :orientation "h"
+          :halign "center"
+          :space-evenly false
+          :spacing 8
+          (button
+            :onclick "bash ./scripts/toggle_var.sh music_visible &"
+            :tooltip "Music controls"
+            :class "music ${music_visible ? "selected" : ""}"
+            (box
+              :orientation "h"
+              :space-evenly false
+              (label :text "" :class "icon")
+              (revealer
+                :transition "slideright"
+                :reveal music_visible
+                (label :text "Music")
+              )
+            )
+          )
+          (button
+            :class "monitor ${monitor_visible ? "selected" : ""}"
+            :onclick "bash ./scripts/toggle_var.sh monitor_visible &"
+            :tooltip "Resource monitor"
+            (box
+              :orientation "h"
+              :space-evenly false
+              (label :text "" :class "icon")
+              (revealer
+                :transition "slideright"
+                :reveal monitor_visible
+                (label :text "Resources")
+              )
+            )
+          )
+          (button
+            :class "weather ${weather_visible ? "selected" : ""}"
+            :onclick "bash ./scripts/toggle_var.sh weather_visible &"
+            :tooltip "Weather"
+            (box
+              :orientation "h"
+              :space-evenly false
+              (label :text "" :class "icon")
+              (revealer
+                :transition "slideright"
+                :reveal weather_visible
+                (label :text "Weather")
+              )
+            )
+          )
+        )
+      )
+    )
+  )
+)

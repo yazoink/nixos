@@ -1,0 +1,130 @@
+(defvar dnd false)
+(defpoll dnd_icon :interval "17s"  "bash ./scripts/dnd_icon.sh")
+
+(defwidget app-button [name desc icon launch]
+  (button
+    :class "app-button"
+    :onclick "${launch}"
+    :tooltip "Open ${name}"
+    (box
+      :class "app-button-box"
+      :orientation "horizontal"
+      :halign "fill"
+      :space-evenly false
+      :spacing 8
+      (image :icon "${icon}" :icon-size "dialog" :class "icon")
+      (box
+        :class "name-desc"
+        :orientation "vertical"
+        :space-evenly false
+        :valign "center" 
+        :halign "start"
+        :hexpand true
+        (label :text "${name}" :class "name" :halign "start")
+        (label :text "${desc}" :class "desc" :halign "start")
+      )
+      (label :text "" :halign "end" :class "arrow")
+    )
+  )
+)
+
+(defwidget apps []
+  (box
+    :class "apps-box"
+    :orientation "vertical"
+    :halign "start"
+    :valign "start"
+    :spacing 8
+    :space-evenly false
+    :halign "fill"
+    :valign "fill"
+    :vexpand true
+    :hexpand true
+    (box
+      :orientation "h"
+      :space-evenly false
+      :spacing 8
+      :halign "start"
+      :class "apps-label"
+      (label :text "" :class "base0A" )
+      (label :text "Quick Access")
+    )
+    (box :class "hline")
+    (app-button
+      :name "Web Browser"
+      :desc "Zen Twilight"
+      :icon "web-browser"
+      :launch "eww update control_panel_visible=false & zen-twilight &"
+    )
+    (app-button
+      :name "File Manager"
+      :desc "Thunar"
+      :icon "thunar"
+      :launch "eww update control_panel_visible=false & thunar ~ &"
+    )
+    (app-button
+      :name "Terminal"
+      :desc "Foot"
+      :icon "terminal"
+      :launch "eww update control_panel_visible=false & foot ~ & eww -c . close control-center"
+    )
+    (app-button
+      :name "Office Suite"
+      :desc "Libreoffice"
+      :icon "libreoffice"
+      :launch "eww update control_panel_visible=false & libreoffice &"
+    )
+  )
+)
+
+(defwidget launchers []
+  (box
+    :orientation "v"
+    :class "launchers-box"
+    :space-evenly false
+    (box
+      :orientation "v"
+      :valign "start"
+      :spacing 8
+      :space-evenly false
+      :vexpand true
+      (button
+        :class "launcher-button search"
+        :onclick "eww update control_panel_visible=false & wofi --show drun &"
+        :tooltip "Search applications"
+        (label :text "" :class "icon")
+      )
+      (button
+        :class "launcher-button picker"
+        :onclick "eww update control_panel_visible=false & hyprpicker &"
+        :tooltip "Open colour picker"
+        (label :text "" :class "icon")
+      )
+      (button
+        :class "launcher-button shot"
+        :onclick "eww update control_panel_visible=false & screenshot &"
+        :tooltip "Take screenshot"
+        (label :text "" :class "icon")
+      )
+    )
+    (box
+      :orientation "v"
+      :valign "end"
+      :spacing 8
+      :space-evenly true
+      :vexpand true
+      (button
+        :class "launcher-button dnd"
+        :tooltip "Toggle do-not-disturb"
+        :onclick "bash ./scripts/dnd.sh &"
+        (label :text dnd_icon :class "icon")
+      )
+      (button
+        :class "launcher-button shutdown"
+        :tooltip "Open power menu"
+        :onclick "bash ./scripts/toggle_var.sh 'power_visible'& bash ./scripts/toggle_var.sh 'control_panel_visible'"
+        (label :text "" :class "icon")
+      )
+    )
+  )
+)

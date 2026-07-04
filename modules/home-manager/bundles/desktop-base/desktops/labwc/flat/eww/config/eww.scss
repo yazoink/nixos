@@ -1,258 +1,453 @@
-$border: #1C2326;
-$bg: #141B1E;
-$bg2: #232A2D;
-$bg3: #353C3F;
-$fg: #DADADA;
-$red: #E57474;
-$yellow: #E5C76B;
-$green: #8CCF7E;
-$blue: #67B0E8;
-$purple: #C47FD5;
-$margin: 5px;
+$base00: #17181C;
+$base01: #1E1F24;
+$base04: #333438;
+$base05: #E4E5E7;
+$base08: #FA3867;
+$base0A: #FEBD16;
+$base0B: #3FD43B;
+$base0D: #53ADE1;
+$base0E: #AD60FF;
 
 @import "colours";
 
-$round: 16px;
+$bg: $base00;
+$fg: $base05;
+$border: $base01;
+$image-shadow: none;
+
+$padding: 16px;
+$padding-small: 8px;
+$padding-tiny: 4px;
+$outer-radius: 16px;
+$inner-radius: 8px;
 
 * {
   all: unset;
   color: $fg;
 }
 
-.power, .confirm {
-  background: none;
-  border-radius: 16px;
-}
-
-.confirm-text {
-  font-weight: bold;
-  font-size: 15pt;
-}
-
-.confirm-button {
-  min-width: 75px;
-}
-
-.power-box, .confirm-box, .calendar-box {
-  // box-shadow: 0 0 50px rgba(0, 0, 0, 0.4);
-  padding: 16px;
-  border: 1px solid $border;
-  border-radius: 16px;
-  background-color: $bg;
-  // margin: 60px;
-  // margin-bottom: $margin;
-  // margin-right: $margin;
-  margin: $margin;
-}
-
-.user-box {
-  padding: 16px;
-  border-radius: 8px;
-  background-color: $bg2;
-}
-
-.username-and-hostname {
-  font-size: 15pt;
-}
-
-.os-version {
-  font-size: 13pt;
-}
-
-button {
-  padding: 8px;
-  border-radius: 8px;
-  background-color: $bg2;
-}
-
-button:hover {
-  background-color: $bg3;
-}
-
-.power-button-box {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-right: 4px;
-}
-
-.power-button-box button {
-  font-family: "Font Awesome 7 Free";
-  font-size: 19pt;
-  padding: 8px;
-}
-
-.power-button-lock label {
-  color: $blue;
-}
-
-.power-button-exit label {
-  color: $green;
-}
-
-.power-button-reboot label {
-  color: $yellow;
-}
-
-.power-button-shutdown label {
-  color: $red;
-}
-
-// .user-box {
-//   border: 1px solid $border2;
-//   // background-color: $border2;
-//   padding: 10px;
-//   border-radius: 5px;
-// }
-
-.profile-picture {
-  // border-radius: 5px;
-  // border: 1px solid $fg;
-  // box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
-}
-
-.heading {
-  font-weight: bold;
-  font-size: 24pt;
-  margin: 0;
-  padding: 0;
-  margin-top: 4px;
-  padding-bottom: 4px;
-}
-
-.os-version {
-  font-size: unset;
-}
-
-.bold {
-  font-weight: bold;
-}
-
-.italic {
-  font-style: italic;
-  opacity: 0.5;
-}
-
 .hline {
-  // border-top: 1px solid $bg3;
-  // opacity: 0.15;
-  // border-top: 2px dashed $bg3;
+  border-bottom: 1px solid $fg;
+  opacity: 0.2;
 }
 
-.grid-list-box, .text-box {
-  background-color: $bg2;
-  padding: 16px;
-  border-radius: 8px;
-}
-
-.quote {
-  font-style: italic;
-  background-color: $bg2;
-  padding: 16px;
-  border-radius: 8px;
-  margin: 8px 0;
-  margin-left: -4px;
-  min-width: 200px;
-}
-
-.quote-author {
-  opacity: 0.5;
-  margin-top: 8px;
-}
-
-.pretty-time {
-  padding-top: 8px;
-  padding-bottom: 8px;
-}
-
-.pretty-time-date {
-  font-size: 13pt;
-  font-style: italic;
-  opacity: 0.5;
-}
-
-.pretty-time-clock {
-  font-size: 40pt;
-  font-weight: bold;
-}
-
-.pretty-time-separator {
-  font-size: 5pt;
-  font-family: "Font Awesome 7 Free";
-}
-
-.separator {
+.icon {
   font-family: "Font Awesome 7 Free";
   font-weight: bold;
-  font-size: 7pt;
-  margin: 0;
-  padding: 0;
-  margin-top: 16px;
+  font-size: 1.6em;
+}
+.picker label {
+  color: $base0D;
 }
 
-.separator-center {
-  font-size: 11pt;
+.shot label {
+  color: $base0B;
 }
 
-.separator-edge {
-  font-size: 3pt;
+.dnd label {
+  color: $base0A;
+}
+
+.search label {
+  color: $base0E;
+}
+
+.shutdown label {
+  color: $base08;
+}
+
+.calendar-box {
+  padding: $padding;
+  border-radius: $outer-radius;
+  background: $bg;
+  border: 1px solid $border;
+  .pretty-time {
+    padding-top: $padding-small;
+    padding-bottom: $padding-small;
+    .date {
+      font-size: 13pt;
+      font-style: italic;
+      opacity: 0.5;
+    }
+    .clock {
+      font-size: 40pt;
+      font-weight: bold;
+    }
+    .separator {
+      font-size: 5pt;
+      font-family: "Font Awesome 7 Free";
+    }
+  }
+  .calendar {
+    background-color: $surface;
+    padding: $padding-small;
+    border-radius: $inner-radius;
+  }
+  calendar {
+    padding: 2px;
+  }
+  calendar.header {
+    margin-bottom: 4px;
+    border-bottom: 1px solid $surface;
+  }
+  calendar.day-number,
+  calendar.week-number {
+    padding: 2px;
+  }
+  calendar:selected {
+    color: $base0D;
+    border-radius: 4px;
+    background-color: $surface;
+  }
+}
+
+.control-center-box {
+  padding: $padding;
+  border-radius: $outer-radius;
+  background: $bg;
+  border: 1px solid $border;
+  .user-box {
+    margin-bottom: $padding-tiny;
+    .reveal-button {
+      padding-right: calc($padding + 12px);
+      opacity: 0.4;
+      font-size: 1.3em;
+    }
+    .profile-image {
+      background-size: cover;
+      background-position: center;
+      min-height: 70px;
+      box-shadow: $image-shadow;
+      min-width: 70px;
+      border-radius: $inner-radius;
+      border: 1px solid $base04;
+    }
+    .username-hostname {
+      font-weight: bold;
+      font-size: 1.5rem;
+      .username {
+      }
+      .at {
+        color: $base0D;
+      }
+      .hostname {
+      }
+    }
+    .os-version {
+      opacity: 0.4;
+      font-style: italic;
+    }
+  }
+
+  .apps-box {
+    background: $surface;
+    border-radius: $inner-radius;
+    padding: $padding-small;
+    min-width: 250px;
+    .apps-label {
+      font-family: "sans", "Font Awesome 7 Free";
+      font-weight: bold;
+      font-size: 1.2em;
+      padding: $padding-tiny;
+    }
+    .arrow {
+      opacity: 0.4;
+      padding: $padding-tiny;
+    }
+    .app-button {
+      padding: $padding-small;
+      border-radius: $inner-radius;
+      .name {
+        font-weight: bold;
+        // font-size: 1.1em;
+      }
+      .desc {
+        opacity: 0.4;
+      }
+      &:hover {
+        background: $surface;
+      }
+    }
+  }
+
+  .launchers-box {
+    background-color: $surface;
+    border-radius: $inner-radius;
+    padding: $padding-small;
+    .launcher-button {
+      background-color: $surface;
+      border-radius: $inner-radius;
+      padding: $padding-small;
+      min-width: 30px;
+      min-height: 30px;
+      &:hover {
+        background-image: linear-gradient($surface);
+      }
+    }
+  }
+}
+
+.menu-container {
+  padding: $padding;
+  border-radius: $outer-radius;
+  background: $bg;
+  border: 1px solid $border;
+}
+
+.menu-box {
+  border-radius: $inner-radius;
+  .music .icon {
+    color: $base0E;
+  }
+  .monitor .icon {
+    color: $base0B;
+  }
+  .weather .icon {
+    color: $base0A;
+  }
+  .selected {
+    .icon {
+      border-top-left-radius: $inner-radius;
+      border-bottom-left-radius: $inner-radius;
+    }
+    &.music .icon {
+      background-color: $base0E;
+      color: $bg;
+    }
+    &.monitor .icon {
+      background-color: $base0B;
+      color: $bg;
+    }
+    &.weather .icon {
+      background-color: $base0A;
+      color: $bg;
+    }
+  }
+  button {
+    background-color: $surface;
+    border-radius: $inner-radius;
+    font-weight: bold;
+    font-family: "sans", "Font Awesome 7 Free";
+    label {
+      padding: $padding-small;
+    }
+    .icon {
+      font-size: 1.6em;
+    }
+    &:hover {
+      background-image: linear-gradient($surface);
+    }
+  }
+}
+
+.music-box {
+  margin-bottom: $padding;
+  border-radius: $inner-radius;
+  background: $surface;
+  .album-cover {
+    border-radius: $inner-radius;
+    background-size: cover;
+    background-position: center;
+    min-height: 115px;
+    min-width: 115px;
+    margin: $padding;
+    margin-right: 0;
+    border-radius: $inner-radius;
+    box-shadow: $image-shadow;
+    border: 1px solid $base04;
+  }
+  button {
+    background-color: transparent;
+  }
+  .music-info-controls {
+    margin: $padding;
+    .music-info {
+      margin: $padding-small;
+      .song {
+        font-weight: bold;
+      }
+      .artist {
+        opacity: 0.4;
+      }
+    }
+    .controls button {
+      padding: $padding-small calc($padding-small + $padding-tiny);
+      background-color: $surface;
+      font-weight: bold;
+      font-size: 0.8em;
+      border-radius: $inner-radius;
+      &:hover {
+        background-image: linear-gradient($surface);
+      }
+    }
+  }
+}
+
+.monitor-box {
+  // border-radius: $inner-radius;
+  // background-color: $surface;
+  margin-bottom: $padding;
+  border-radius: $inner-radius;
+  background: $surface;
+  padding: $padding;
+  .monitor-item {
+    background-color: $surface;
+    border-radius: $inner-radius;
+    min-height: 50px;
+  }
+  .monitor-item label {
+    padding: $padding-small;
+    font-size: 1.5em;
+  }
+  .icon {
+    padding: 0;
+  }
+  .icon {
+    border-top-left-radius: $inner-radius;
+    border-bottom-left-radius: $inner-radius;
+    color: $bg;
+  }
+  .usage {
+    color: $fg;
+  }
+}
+
+.power-buttons-box{
+  padding: $padding;
+  border-radius: $outer-radius;
+  background: $bg;
+  border: 1px solid $border;
+  button {
+    background-color: $surface;
+    border-radius: $inner-radius;
+    &.lock, &.exit, &.reboot, &.shutdown {
+      background-color: transparent;
+    }
+    &:hover {
+      background-image: linear-gradient($surface);
+    }
+  }
+  .power-button {
+    background-color: $surface;
+    border-radius: $inner-radius;
+    font-weight: bold;
+    font-size: 1.8em;
+    .yes, .no {
+      padding: $padding-tiny;
+      margin: $padding-small;
+      margin-top: 0;
+      font-size: 1.0em;
+      font-family: "Font Awesome 7 Free";
+      min-width: 35px;
+      min-height: 35px;
+    }
+    .yes {
+      margin-right: 0;
+    }
+    .no {
+      margin-left: 0;
+    }
+    .icon {
+      font-family: "Font Awesome 7 Free";
+      padding: $padding;
+      min-width: 50px;
+      min-height: 50px;
+    }
+    .lock .icon {
+      color: $base0D;
+    }
+    .exit .icon {
+      color: $base0B;
+    }
+    .reboot .icon {
+      color: $base0A;
+    }
+    .shutdown .icon {
+      color: $base08;
+    }
+    .selected {
+      .icon {
+        border-top-left-radius: $inner-radius;
+        border-bottom-left-radius: $inner-radius;
+      }
+      &.lock .icon {
+        background-color: $base0D;
+        color: $bg;
+      }
+      &.exit .icon {
+        background-color: $base0B;
+        color: $bg;
+      }
+      &.reboot .icon {
+        background-color: $base0A;
+        color: $bg;
+      }
+      &.shutdown .icon {
+        background-color: $base08;
+        color: $bg;
+      }
+    }
+  }
+  .action {
+    font-size: 0.6em;
+    padding: $padding-small;
+    padding-bottom: 0;
+  }
+}
+
+.weather-box {
+  margin-bottom: $padding;
+  border-radius: $inner-radius;
+  background: $surface;
+  padding: $padding;
+  .icon {
+    font-size: 5em;
+  }
+  .timezone {
+    opacity: 0.4;
+    font-style: italic;
+  }
+  .temp {
+    font-size: 3em;
+    font-weight: bold;
+  }
+  .apparent_temp {
+    // opacity: 0.4;
+  }
 }
 
 tooltip {
-  background-color: $bg;
-  opacity: 1.0;
+  padding: $padding-small;
+  border-radius: $inner-radius;
+  background: $bg;
   border: 1px solid $border;
-  border-radius: 8px;
-  padding: 0;
 }
 
-tooltip label {
-  margin: 4px;
-  padding: 0;
-  color: $fg;
+.base0D .icon {
+  background-color: $base0D;
+}
+.base0B .icon {
+  background-color: $base0B;
+}
+.base0A .icon {
+  background-color: $base0A;
+}
+.base08 .icon {
+  background-color: $base08;
 }
 
-.calendar {
-  background-color: $bg2;
-  padding: 12px;
-  border-radius: 8px;
+.base0D, .base0D label {
+  color: $base0D;
 }
 
-calendar {
-  padding: 2px;
+.base0B, .base0B label {
+  color: $base0B;
 }
 
-calendar.header {
-  margin-bottom: 4px;
-  border-bottom: 1px solid $bg2;
+.base0A, .base0A label {
+  color: $base0A;
 }
 
-calendar.day-number,
-calendar.week-number {
-  padding: 2px;
-}
-
-calendar:selected {
-  color: $blue;
-  border-radius: 4px;
-  background-color: $bg2;
-}
-
-.red {
-  color: $red;
-}
-
-.yellow {
-  color: $yellow;
-}
-
-.blue {
-  color: $blue;
-}
-
-.green {
-  color: $green;
-}
-
-.purple {
-  color: $purple;
+.base08, .base08 label {
+  color: $base08;
 }

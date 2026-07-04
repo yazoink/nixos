@@ -1,0 +1,38 @@
+(defpoll weather_updater :run-while weather_visible :interval "10m" `bash ./scripts/weather.sh -u`)
+(defpoll weather_temp :run-while weather_visible :interval "24h" `bash ./scripts/weather.sh -t`)
+(defpoll weather_apparent_temp :run-while weather_visible :interval "24h" `bash ./scripts/weather.sh -at`)
+(defpoll weather_icon :run-while weather_visible :interval "24h" `bash ./scripts/weather.sh -i`)
+(defpoll weather_tz :run-while weather_visible :interval "24h" `bash ./scripts/weather.sh -tz`)
+(defpoll weather_colour :run-while weather_visible :interval "24h" `bash ./scripts/weather.sh -c`)
+
+(defwidget weather []
+  (revealer
+    :transition "slideup"
+    :reveal weather_visible
+    (box
+      :class "weather-box"
+      :orientation "v"
+      :spacing 8
+      :space-evenly false
+      :halign "fill"
+      (label :text weather_tz :class "timezone")
+      (box
+        :orientation "h"
+        :spacing 8
+        :space-evenly false
+        :halign "center"
+        :hexpand true
+        (label :text weather_icon :class "icon ${weather_colour}" :halign "center")
+        (box
+          :orientation "v"
+          :valign "center"
+          :space-evenly false
+          :halign "center"
+          :hexpand true
+          (label :text weather_temp :class "temp" :halign "start")
+          (label :text weather_apparent_temp :class "apparent_temp" :halign "start")
+        )
+      )
+    )
+  )
+)

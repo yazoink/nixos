@@ -1,7 +1,7 @@
 ''
   "clock": {
     "format": "{:%I:%M %p}",
-    "on-click": "bash $EWW_CONFIG_DIR/launch-calendar.sh",
+    "on-click": "bash ${../../../common/scripts/calendar.sh}",
     "tooltip": true,
     "tooltip-format": "Open calendar (Mod+Shift+C)"
   }
