@@ -2,7 +2,7 @@
   "custom/menu": {
     "format" : "{}",
     "tooltip": true,
-    "tooltip-format": "Open control panel (Mod+Shift+M)",
+    "tooltip-format": "Open control panel (Mod+Ctrl+M)",
     "exec-on-event": true,
     "interval": 60,
     "on-click": "bash ${../../../../common/scripts/control-panel.sh}; pkill -SIGRTMIN+9 waybar",
