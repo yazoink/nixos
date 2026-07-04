@@ -27,7 +27,7 @@
         :space-evenly false
         :tooltip "Open music player"
         (button
-          :onclick "foot -e ncmpcpp &"
+          :onclick "eww update control_panel_visible=false & foot -e ncmpcpp &"
           (box
             :class "music-info"
             :orientation "v"

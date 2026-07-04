@@ -7,11 +7,11 @@
 (include "./widgets/pretty-time.yuck")
 (include "./widgets/control-panel-menu.yuck")
 
-(defvar music_visible false)
+(defvar music_visible true)
 (defvar monitor_visible false)
 (defvar weather_visible false)
 (defvar menu_visible true)
-(defvar control_panel_visible true)
+(defvar control_panel_visible false)
 (defvar power_visible false)
 (defvar calendar_visible false)
 

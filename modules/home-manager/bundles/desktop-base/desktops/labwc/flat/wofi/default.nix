@@ -8,11 +8,12 @@ in {
   programs.wofi = {
     enable = true;
     settings = {
-      width = "25%";
+      width = "35%";
       height = "45%";
-      yoffset = -39;
-      xoffset = 5;
-      location = "bottom_left";
+      # yoffset = -39;
+      # xoffset = 5;
+      # location = "bottom_left";
+      location = 0;
     };
     style =
       ''
