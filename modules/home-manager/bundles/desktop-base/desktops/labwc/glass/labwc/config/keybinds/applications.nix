@@ -1,6 +1,14 @@
 {osConfig, ...}: let
   inherit (osConfig.myOptions.userAccount) username;
 in [
+  # lock screen
+  {
+    "@key" = "W-C-l";
+    action = {
+      "@name" = "Execute";
+      "@command" = "hyprlock";
+    };
+  }
   # power menu
   {
     "@key" = "W-S-q";

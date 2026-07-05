@@ -45,14 +45,6 @@ in [
       "@command" = "screenshot";
     };
   }
-  # lock screen
-  {
-    "@key" = "W-C-l";
-    action = {
-      "@name" = "Execute";
-      "@command" = "hyprlock";
-    };
-  }
   # pick colour
   {
     "@key" = "W-c";
