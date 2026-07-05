@@ -16,6 +16,7 @@ in {
       ssh_config = {owner = username;};
       discord_token = {owner = username;};
       factorio_token = {owner = username;};
+      password = {owner = username;};
     };
   };
 }

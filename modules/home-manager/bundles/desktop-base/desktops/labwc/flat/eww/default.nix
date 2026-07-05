@@ -19,6 +19,21 @@ in {
       recursive = true;
       force = true;
     };
+    "eww/scripts/password.sh".text = ''
+            #!/usr/bin/env bash
+
+      PASSWORD="$(cat ${osConfig.sops.secrets.password.path})"
+
+      if [ "$1" == "$PASSWORD" ]; then
+          eww update lock_visible=false
+          eww close lock
+          if [ $(cat "/tmp/lock_dnd") == true ]; then
+              makoctl mode -r do-not-disturb
+          fi
+      else
+          eww update password=""
+      fi
+    '';
     "eww/widgets/monitor.yuck".text = ''
       (defpoll cpu :run-while monitor_visible :interval "17s" "bash ./scripts/cpu.sh")
       (defpoll temp :run-while monitor_visible :interval "17s"  `${tempCmd}`)
