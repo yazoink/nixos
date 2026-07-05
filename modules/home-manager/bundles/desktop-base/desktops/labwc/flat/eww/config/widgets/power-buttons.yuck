@@ -8,6 +8,7 @@
     :orientation "v"
     :spacing 8
     :space-evenly false
+    :valign "center"
     (label :text action :class "action")
     (box
       :orientation "h"
