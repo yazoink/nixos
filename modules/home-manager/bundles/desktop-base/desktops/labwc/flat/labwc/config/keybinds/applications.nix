@@ -4,7 +4,8 @@
     "@key" = "W-C-l";
     action = {
       "@name" = "Execute";
-      "@command" = "lock";
+      # "@command" = "lock";
+      "@command" = "hyprlock";
     };
   }
   # do not disturb
