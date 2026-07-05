@@ -55,7 +55,7 @@
         (box
           :class "controls"
           :orientation "h"
-          :spacing 8
+          :spacing 4
           :halign "center"
           :hexpand true
           (button :class "prev" :onclick "bash ./scripts/music_info.sh --prev; eww -c . poll" "")
