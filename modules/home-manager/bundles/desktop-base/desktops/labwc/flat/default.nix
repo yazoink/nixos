@@ -16,7 +16,7 @@ lib.mkMerge [
   (import ../common/kanshi {inherit config osConfig lib pkgs;})
   (import ../common/labwc {inherit config osConfig lib pkgs;})
   (import ../common/hypridle {inherit config osConfig lib pkgs;})
-  # (import ../common/eww {inherit config osConfig lib pkgs;})
+  # (import ../common/eww {inherit config osConfig lib pkgs;}) # used for old eww config
   (import ../common/hyprlock {inherit config osConfig lib pkgs;})
   (import ../common/swayosd {inherit config osConfig lib pkgs;})
   (import ../common/wofi {inherit config osConfig lib pkgs;})
@@ -33,4 +33,5 @@ lib.mkMerge [
   (import ./swayosd {inherit config osConfig lib pkgs;})
   (import ./waybar {inherit config osConfig lib pkgs;})
   (import ./wofi {inherit config osConfig lib pkgs;})
+  (import ./dnd {inherit config osConfig lib pkgs;})
 ]

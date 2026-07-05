@@ -34,7 +34,7 @@ in [
     "@key" = "W-s";
     action = {
       "@name" = "Execute";
-      "@command" = "bash ${../../../scripts/screenshot} -s";
+      "@command" = "screenshot -s";
     };
   }
   # fullscreen screenshot
@@ -42,7 +42,7 @@ in [
     "@key" = "W-S-s";
     action = {
       "@name" = "Execute";
-      "@command" = "bash ${../../../scripts/screenshot}";
+      "@command" = "screenshot";
     };
   }
   # lock screen
@@ -58,7 +58,7 @@ in [
     "@key" = "W-c";
     action = {
       "@name" = "Execute";
-      "@command" = "${../../../scripts/color.sh}";
+      "@command" = "color";
     };
   }
   # launch browser

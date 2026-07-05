@@ -184,7 +184,7 @@ in {
             (button
               :class "launcher-button dnd"
               :tooltip "Toggle do-not-disturb"
-              :onclick "bash ./scripts/dnd.sh &"
+              :onclick "dnd &"
               (label :text dnd_icon :class "icon")
             )
             (button

@@ -4,7 +4,7 @@
     "@key" = "W-S-d";
     action = {
       "@name" = "Execute";
-      "@command" = "bash ${../../../../common/scripts/dnd.sh}";
+      "@command" = "bash ${../../../scripts/dnd.sh}";
     };
   }
   # power menu
@@ -12,7 +12,7 @@
     "@key" = "W-S-q";
     action = {
       "@name" = "Execute";
-      "@command" = "bash ${../../../../common/scripts/power.sh}";
+      "@command" = "bash ${../../../scripts/power.sh}";
     };
   }
   # calendar
@@ -20,7 +20,7 @@
     "@key" = "W-S-c";
     action = {
       "@name" = "Execute";
-      "@command" = "bash ${../../../../common/scripts/calendar.sh}";
+      "@command" = "bash ${../../../scripts/calendar.sh}";
     };
   }
   # calendar
@@ -28,7 +28,7 @@
     "@key" = "W-C-m";
     action = {
       "@name" = "Execute";
-      "@command" = "bash ${../../../../common/scripts/control-panel.sh}";
+      "@command" = "bash ${../../../scripts/control-panel.sh}";
     };
   }
 ]
