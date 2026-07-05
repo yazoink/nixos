@@ -12,6 +12,7 @@
       key_expand = "Tab";
       display_generic = true;
       prompt = "Search...";
+      sort_order = "default";
     };
   };
 }
