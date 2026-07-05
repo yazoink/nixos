@@ -1,20 +1,20 @@
 {...}: {
   base16Scheme = {
-    base00 = "171C19";
-    base01 = "232A25";
-    base02 = "526057";
-    base03 = "5F6D64";
-    base04 = "78877D";
-    base05 = "DFE7E2";
-    base06 = "DFE7E2";
-    base07 = "ECF4EE";
-    base08 = "B16139";
-    base09 = "9F713C";
-    base0A = "A07E3B";
-    base0B = "489963";
-    base0C = "1C9AA0";
-    base0D = "478C90";
-    base0E = "55859B";
-    base0F = "867469";
+    base00 = "161617";
+    base01 = "222223";
+    base02 = "2E2E2F";
+    base03 = "3A393B";
+    base04 = "525154";
+    base05 = "C9C7CD";
+    base06 = "C9C7CD";
+    base07 = "C9C7CD";
+    base08 = "EA83A5";
+    base09 = "F5A191";
+    base0A = "E6B99D";
+    base0B = "90B99F";
+    base0C = "ACA0CF";
+    base0D = "E19ECA";
+    base0E = "EA83A5";
+    base0F = "F5A091";
   };
 }
