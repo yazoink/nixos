@@ -1,4 +1,12 @@
 {...}: [
+  # lock screen
+  {
+    "@key" = "W-C-l";
+    action = {
+      "@name" = "Execute";
+      "@command" = "lock";
+    };
+  }
   # do not disturb
   {
     "@key" = "W-S-d";
