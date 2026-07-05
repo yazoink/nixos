@@ -34,5 +34,5 @@ lib.mkMerge [
   (import ./waybar {inherit config osConfig lib pkgs;})
   (import ./wofi {inherit config osConfig lib pkgs;})
   (import ./dnd {inherit config osConfig lib pkgs;})
-  (import ./lock {inherit config osConfig lib pkgs;})
+  # (import ./lock {inherit config osConfig lib pkgs;})
 ]
