@@ -6,13 +6,15 @@
 (defwidget yes_no [action cmd]
   (box
     :orientation "v"
-    :spacing 4
+    :spacing 8
     :space-evenly false
-    (label :text action :class "action" :halign "start")
+    (label :text action :class "action")
     (box
       :orientation "h"
-      :spacing 4
+      :spacing 8
+      :space-evenly false
       :valign "center"
+      :halign "center"
       (button :onclick "eww update power_visible=false & ${cmd}" :class "yes base0B" "")
       (button :onclick "eww update power_visible=false" :class "no base08" "")
     )
@@ -51,13 +53,13 @@
       (button
         :class "exit ${exit_selected ? "selected" : ""}"
         :onclick "bash ./scripts/toggle_var.sh exit_selected &"
-        :tooltip "Exit desktop"
+        :tooltip "Log out"
         (label :text "" :class "icon")
       )
       (revealer
         :transition "slideright"
         :reveal exit_selected
-        (yes_no :action "Exit desktop" :cmd "labwc --exit &")
+        (yes_no :action "Log out" :cmd "labwc --exit &")
       )
     )
     (box
@@ -83,13 +85,13 @@
       (button
         :class "shutdown ${shutdown_selected ? "selected" : ""}"
         :onclick "bash ./scripts/toggle_var.sh shutdown_selected &"
-        :tooltip "Shut down system"
+        :tooltip "Power off"
         (label :text "" :class "icon")
       )
       (revealer
         :transition "slideright"
         :reveal shutdown_selected
-        (yes_no :action "Shut down" :cmd "shutdown now &")
+        (yes_no :action "Power off" :cmd "shutdown now &")
       )
     )
   )

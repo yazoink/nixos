@@ -12,12 +12,13 @@ $base0E: #AD60FF;
 
 $bg: $base00;
 $fg: $base05;
+$disabled: rgba(255, 255, 255, 0.4);
+$surface: rgba(255, 255, 255, 0.09);
+$surface-lighter: rgba(255, 255, 255, 0.18);
 $border: $base01;
 $image-shadow: none;
 
-$padding: 16px;
-$padding-small: 8px;
-$padding-tiny: 4px;
+$padding: 8px;
 $outer-radius: 16px;
 $inner-radius: 8px;
 
@@ -27,15 +28,17 @@ $inner-radius: 8px;
 }
 
 .hline {
-  border-bottom: 1px solid $surface;
-  // border-bottom: 1px solid $fg;
-  // opacity: 0.2;
+  border-bottom: 1px solid $fg;
+  opacity: 0.2;
 }
 
 .icon {
   font-family: "Font Awesome 7 Free";
   font-weight: bold;
-  font-size: 1.6em;
+  font-size: 18pt;
+  min-width: 30px;
+  min-height: 30px;
+  padding: $padding;
 }
 .picker label {
   color: $base0D;
@@ -63,8 +66,8 @@ $inner-radius: 8px;
   background: $bg;
   border: 1px solid $border;
   .pretty-time {
-    padding-top: $padding-small;
-    padding-bottom: $padding-small;
+    padding-top: $padding;
+    padding-bottom: $padding;
     .date {
       font-size: 13pt;
       font-style: italic;
@@ -81,11 +84,11 @@ $inner-radius: 8px;
   }
   .calendar {
     background-color: $surface;
-    padding: $padding-small;
     border-radius: $inner-radius;
+    padding: $padding;
   }
-  calendar {
-    padding: 2px;
+  calendar:indeterminate {
+    color: $disabled;
   }
   calendar.header {
     margin-bottom: 4px;
@@ -108,11 +111,10 @@ $inner-radius: 8px;
   background: $bg;
   border: 1px solid $border;
   .user-box {
-    margin-bottom: $padding-tiny;
     .reveal-button {
-      padding-right: calc($padding + 12px);
+      padding-right: 27px;
       opacity: 0.4;
-      font-size: 1.3em;
+      font-size: 15pt;
     }
     .profile-image {
       background-size: cover;
@@ -125,7 +127,7 @@ $inner-radius: 8px;
     }
     .username-hostname {
       font-weight: bold;
-      font-size: 1.5rem;
+      font-size: 18pt;
       .username {
       }
       .at {
@@ -143,24 +145,24 @@ $inner-radius: 8px;
   .apps-box {
     background: $surface;
     border-radius: $inner-radius;
-    padding: $padding-small;
+    padding: $padding;
     min-width: 250px;
     .apps-label {
       font-family: "sans", "Font Awesome 7 Free";
       font-weight: bold;
-      font-size: 1.2em;
-      padding: $padding-tiny;
+      font-size: 14pt;
     }
     .arrow {
       opacity: 0.4;
-      padding: $padding-tiny;
+      padding: $padding;
     }
     .app-button {
-      padding: $padding-small;
       border-radius: $inner-radius;
+      .icon {
+        padding-right: 0;
+      }
       .name {
         font-weight: bold;
-        // font-size: 1.1em;
       }
       .desc {
         opacity: 0.4;
@@ -174,13 +176,12 @@ $inner-radius: 8px;
   .launchers-box {
     background-color: $surface;
     border-radius: $inner-radius;
-    padding: $padding-small;
+    padding: $padding;
+    .icon {
+    }
     .launcher-button {
       background-color: $surface;
       border-radius: $inner-radius;
-      padding: $padding-small;
-      min-width: 30px;
-      min-height: 30px;
       &:hover {
         background-image: linear-gradient($surface);
       }
@@ -189,10 +190,13 @@ $inner-radius: 8px;
 }
 
 .menu-container {
-  padding: $padding;
   border-radius: $outer-radius;
   background: $bg;
   border: 1px solid $border;
+  padding: $padding;
+}
+
+.menu-content {
 }
 
 .menu-box {
@@ -228,12 +232,10 @@ $inner-radius: 8px;
     background-color: $surface;
     border-radius: $inner-radius;
     font-weight: bold;
-    font-family: "sans", "Font Awesome 7 Free";
     label {
-      padding: $padding-small;
+      padding: $padding;
     }
     .icon {
-      font-size: 1.6em;
     }
     &:hover {
       background-image: linear-gradient($surface);
@@ -263,7 +265,7 @@ $inner-radius: 8px;
   .music-info-controls {
     margin: $padding;
     .music-info {
-      margin: $padding-small;
+      margin: $padding;
       .song {
         font-weight: bold;
       }
@@ -272,10 +274,12 @@ $inner-radius: 8px;
       }
     }
     .controls button {
-      padding: $padding-small calc($padding-small + $padding-tiny);
+      padding: $padding;
       background-color: $surface;
       font-weight: bold;
-      font-size: 0.8em;
+      font-size: 10pt;
+      min-width: 15px;
+      min-height: 15px;
       border-radius: $inner-radius;
       &:hover {
         background-image: linear-gradient($surface);
@@ -285,6 +289,8 @@ $inner-radius: 8px;
 }
 
 .monitor-box {
+  // border-radius: $inner-radius;
+  // background-color: $surface;
   margin-bottom: $padding;
   border-radius: $inner-radius;
   background: $surface;
@@ -293,17 +299,18 @@ $inner-radius: 8px;
     background-color: $surface;
     border-radius: $inner-radius;
     min-height: 50px;
+    min-width: 115px;
+    // font-weight: bold;
     .usage {
-      font-size: 1.3em;
+      font-size: 13pt;
       color: $fg;
-      // font-weight: bold;
+      padding: $padding;
     }
     .icon {
       border-top-left-radius: $inner-radius;
       border-bottom-left-radius: $inner-radius;
       color: $bg;
-      padding: $padding-small;
-      font-size: 2.2em;
+      font-size: 22pt;
     }
   }
 }
@@ -327,27 +334,26 @@ $inner-radius: 8px;
     background-color: $surface;
     border-radius: $inner-radius;
     font-weight: bold;
-    font-size: 1.8em;
+    .icon {
+      min-width: 75px;
+      min-height: 75px;
+      font-size: 40pt;
+    }
     .yes, .no {
-      padding: $padding-tiny;
-      margin: $padding-small;
+      margin: $padding;
       margin-top: 0;
-      font-size: 1.0em;
       font-family: "Font Awesome 7 Free";
-      min-width: 35px;
-      min-height: 35px;
+      label {
+        min-width: 40px;
+        min-height: 40px;
+        font-size: 16pt;
+      }
     }
     .yes {
       margin-right: 0;
     }
     .no {
       margin-left: 0;
-    }
-    .icon {
-      font-family: "Font Awesome 7 Free";
-      padding: $padding;
-      min-width: 50px;
-      min-height: 50px;
     }
     .lock .icon {
       color: $base0D;
@@ -385,8 +391,8 @@ $inner-radius: 8px;
     }
   }
   .action {
-    font-size: 0.6em;
-    padding: $padding-small;
+    font-size: 13pt;
+    padding: $padding;
     padding-bottom: 0;
   }
 }
@@ -397,23 +403,28 @@ $inner-radius: 8px;
   background: $surface;
   padding: $padding;
   .icon {
-    font-size: 5em;
+    font-size: 58pt;
+    padding: 0;
   }
   .timezone {
     opacity: 0.4;
     font-style: italic;
   }
+  .temp-apparent-temp {
+    padding: $padding 0;
+  }
   .temp {
-    font-size: 3em;
+    font-size: 40pt;
     font-weight: bold;
   }
   .apparent_temp {
+    font-size: 13pt;
     // opacity: 0.4;
   }
 }
 
 tooltip {
-  padding: $padding-small;
+  padding: $padding;
   border-radius: $inner-radius;
   background: $bg;
   border: 1px solid $border;

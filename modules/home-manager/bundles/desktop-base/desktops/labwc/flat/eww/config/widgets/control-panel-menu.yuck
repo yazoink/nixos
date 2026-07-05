@@ -7,6 +7,7 @@
       :space-evenly false
       :class "menu-container"
       (box
+        :class "menu-content"
         :orientation "v"
         :space-evenly false
         (weather)

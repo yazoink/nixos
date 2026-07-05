@@ -31,14 +31,16 @@ in {
             :class "monitor-box"
             :orientation "v"
             :spacing 8
+            :halign "fill"
+            :hexpand true
             (box
               :orientation "h"
-              :space-evenly true
               :spacing 8
+              :halign "center"
               (box
                 :class "monitor-item cpu base08"
                 (label :text "" :class "icon")
-                (label :text "${dollarSign}{round(cpu, 0)}%" :class "usage")
+                (label :text "${dollarSign}{cpu}%" :class "usage")
               )
               (box
                 :class "monitor-item ram base0A"
@@ -48,8 +50,8 @@ in {
             )
             (box
               :orientation "h"
-              :space-evenly true
               :spacing 8
+              :halign "center"
               (box
                 :class "monitor-item disk base0B"
                 (label :text "" :class "icon")

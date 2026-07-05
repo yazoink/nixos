@@ -12,25 +12,24 @@
     (box
       :class "weather-box"
       :orientation "v"
-      :spacing 8
       :space-evenly false
       :halign "fill"
       (label :text weather_tz :class "timezone")
       (box
         :orientation "h"
-        :spacing 8
         :space-evenly false
         :halign "center"
         :hexpand true
-        (label :text weather_icon :class "icon ${weather_colour}" :halign "center")
+        (label :text weather_icon :class "icon ${weather_colour}")
         (box
+          :class "temp-apparent-temp"
           :orientation "v"
           :valign "center"
           :space-evenly false
           :halign "center"
           :hexpand true
-          (label :text weather_temp :class "temp" :halign "start")
-          (label :text weather_apparent_temp :class "apparent_temp" :halign "start")
+          (label :text weather_temp :class "temp")
+          (label :text weather_apparent_temp :class "apparent_temp")
         )
       )
     )
