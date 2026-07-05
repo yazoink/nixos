@@ -86,7 +86,7 @@ in {
         fail_color = rgb(b66467)
         font_color = $fg
         fade_on_empty = false
-        placeholder_text = enter password...
+        placeholder_text = Enter password...
         fail_text = authentication failed!
         swap_font_color = true
         halign = center
