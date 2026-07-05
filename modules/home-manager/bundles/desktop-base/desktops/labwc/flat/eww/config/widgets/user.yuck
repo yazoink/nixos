@@ -7,7 +7,7 @@
     :class "user-box"
     :orientation "horizontal"
     :valign "start"
-    :spacing 16
+    :spacing 8
     :space-evenly false
     :halign "fill"
     :hexpand true
@@ -21,14 +21,12 @@
       :class "username-hostname-os"
       :orientation "vertical"
       :space-evenly false
-      :spacing 4
       :valign "center"
       (box
         :class "username-hostname"
         :halign "start"
         :hexpand true
         :space-evenly false
-        :spacing: 4
         :orientation "horizontal"
         (label :text "${username}" :class "username" :halign "start")
         (label :text "@" :class "at")

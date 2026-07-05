@@ -25,7 +25,6 @@
   (box
     :orientation "h"
     :class "power-buttons-box"
-    :halign "start"
     :space-evenly false
     :vexpand false
     :valign "end"
