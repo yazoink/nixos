@@ -159,6 +159,7 @@ $inner-radius: 8px;
     .app-button {
       border-radius: $inner-radius;
       .icon {
+        padding: calc($padding / 2);
         padding-right: 0;
       }
       .name {
