@@ -52,13 +52,13 @@
       (button
         :class "exit ${exit_selected ? "selected" : ""}"
         :onclick "bash ./scripts/toggle_var.sh exit_selected &"
-        :tooltip "Log out"
+        :tooltip "Exit desktop"
         (label :text "" :class "icon")
       )
       (revealer
         :transition "slideright"
         :reveal exit_selected
-        (yes_no :action "Log out" :cmd "labwc --exit &")
+        (yes_no :action "Exit desktop" :cmd "labwc --exit &")
       )
     )
     (box
