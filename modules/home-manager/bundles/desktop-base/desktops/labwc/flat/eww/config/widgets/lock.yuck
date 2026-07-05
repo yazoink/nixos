@@ -1,0 +1,116 @@
+(defvar password "")
+
+(defwidget input_window []
+  (box
+    :orientation "v"
+    :spacing 8
+    :space-evenly false
+    :hexpand true
+    :vexpand true
+    :halign "center"
+    :valign "center"
+    (label :text "" :class "lock-icon")
+
+  (box
+    :class "window"
+    :orientation "h"
+    :spacing 8
+    :space-evenly false
+    (box
+      :class "profile-image"
+      :vexpand false 
+      :hexpand false 
+      :style "background-image: url('./images/profile_image.jpg');"
+    )
+    (box
+      :orientation "v"
+      :spacing 8
+      :space-evenly false
+      ;(label :text "${time}" :class "time" :halign "end")
+      (label :text "${username}" :class "username" :halign "start")
+      (input
+        :value password
+        :password true
+        :onaccept "bash ./scripts/password.sh '{}'"
+      )
+    )
+  )
+  )
+)
+
+(defwidget lock_power_buttons []
+  (box
+    :orientation "h"
+    :class "power-buttons-box"
+    :space-evenly false
+    :halign "start"
+    :valign "end"
+    :hexpand true
+    :spacing 8
+    (box
+      :orientation "h"
+      :space-evenly false
+      :class "power-button"
+      :vexpand false
+      (button
+        :class "exit ${exit_selected ? "selected" : ""}"
+        :onclick "bash ./scripts/toggle_var.sh exit_selected &"
+        :tooltip "Log out"
+        (label :text "" :class "icon")
+      )
+      (revealer
+        :transition "slideright"
+        :reveal exit_selected
+        (button :halign "center" :valign "center" :onclick "labwc --exit &" :class "yes base0B" "")
+      )
+    )
+    (box
+      :orientation "h"
+      :space-evenly false
+      :class "power-button"
+      (button
+        :class "reboot ${reboot_selected ? "selected" : ""}"
+        :onclick "bash ./scripts/toggle_var.sh reboot_selected &"
+        :tooltip "Reboot system"
+        (label :text "" :class "icon")
+      )
+      (revealer
+        :transition "slideright"
+        :reveal reboot_selected
+        (button :halign "center" :valign "center" :onclick "systemctl reboot &" :class "yes base0B" "")
+      )
+    )
+    (box
+      :orientation "h"
+      :space-evenly false
+      :halign "center"
+      :class "power-button"
+      (button
+        :class "shutdown ${shutdown_selected ? "selected" : ""}"
+        :onclick "bash ./scripts/toggle_var.sh shutdown_selected &"
+        :tooltip "Shut down system"
+        (label :text "" :class "icon")
+      )
+      (revealer
+        :transition "slideright"
+        :reveal shutdown_selected
+        (button :halign "center" :valign "center" :onclick "shutdown now &" :class "yes base0B" "")
+      )
+    )
+  )
+)
+
+
+(defwidget lock_widget []
+  (box
+    :class "lock"
+    :halign "fill"
+    :valign "fill"
+    :hexpand true
+    :vexpand true
+    :orientation "v"
+    :space-evenly false
+    (input_window)
+    (lock_power_buttons)
+  )
+)

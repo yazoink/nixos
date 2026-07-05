@@ -6,6 +6,7 @@
 (include "./widgets/weather.yuck")
 (include "./widgets/pretty-time.yuck")
 (include "./widgets/control-panel-menu.yuck")
+(include "./widgets/lock.yuck")
 
 (defvar music_visible true)
 (defvar monitor_visible false)
@@ -14,6 +15,7 @@
 (defvar control_panel_visible false)
 (defvar power_visible false)
 (defvar calendar_visible false)
+(defvar lock_visible false)
 
 (defwindow control-center
   :monitor 0
@@ -99,3 +101,15 @@
   )
 )
 
+(defwindow lock []
+  :monitor 0
+  :geometry (geometry
+    :width "100%"
+    :height "100%"
+  )
+  :stacking "fg"
+  :exclusive true
+  :focusable "true"
+  :namespace "eww_lock"
+  (lock_widget)
+)

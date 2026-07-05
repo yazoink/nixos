@@ -424,6 +424,92 @@ $inner-radius: 8px;
   }
 }
 
+.lock {
+  // background-image: url("images/wallpaper.png");
+  // background-image: radial-gradient($surface, transparent);
+  background-color: rgba(0, 0, 0, 0.2);
+  .lock-icon {
+    background-color: transparent;
+    font-size: 24pt;
+    font-weight: bold;
+    // text-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+  }
+  .window {
+    padding: $padding;
+    border-radius: $outer-radius;
+    background: $bg;
+    border: 1px solid $border;
+    min-width: 255px;
+    .profile-image {
+      background-size: cover;
+      background-position: center;
+      min-height: 75px;
+      box-shadow: $image-shadow;
+      min-width: 75px;
+      border-radius: $inner-radius;
+      border: 1px solid $base04;
+    }
+    .username {
+      font-size: 22pt;
+      font-weight: bold;
+    }
+    .time {
+      opacity: 0.4;
+    }
+    entry {
+      background-color: $surface;
+      padding: $padding;
+      border-radius: $inner-radius;
+    }
+  }
+  .lock-clock-box {
+    border-radius: $outer-radius;
+    background: $bg;
+    border: 1px solid $border;
+    margin: 4px;
+    padding: $padding;
+    font-weight: bold;
+    font-size: 16pt;
+    .separator label {
+      font-size: 2pt;
+    }
+  }
+  .power-buttons-box {
+    // border: none;
+    // background-color: $surface;
+    // border-radius: $inner-radius;
+    border-radius: $outer-radius;
+    background: $bg;
+    border: 1px solid $border;
+    margin: 4px;
+    .action {
+      font-size: 0pt;
+      padding: 0;
+      padding-bottom: 0;
+    }
+    .power-button {
+      background-color: $surface;
+      border-radius: $inner-radius;
+      font-weight: bold;
+      .icon {
+        min-width: 30px;
+        min-height: 30px;
+        font-size: 18pt;
+      }
+      .yes {
+        font-family: "Font Awesome 7 Free";
+        margin: $padding;
+        label {
+          padding: 0;
+          min-width: 30px;
+          min-height: 30px;
+          font-size: 12pt;
+        }
+      }
+    }
+  }
+}
+
 tooltip {
   padding: $padding;
   border-radius: $inner-radius;
