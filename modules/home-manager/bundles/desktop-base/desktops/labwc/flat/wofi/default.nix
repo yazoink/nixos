@@ -16,6 +16,7 @@ in {
       location = 0;
       use_search_box = false;
       close_on_focus_loss = true;
+      prompt = "Run";
     };
     style =
       ''

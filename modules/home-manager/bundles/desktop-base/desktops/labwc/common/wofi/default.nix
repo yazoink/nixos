@@ -11,7 +11,6 @@
       allow_images = true;
       key_expand = "Tab";
       display_generic = true;
-      prompt = "Search...";
       sort_order = "alphabetical";
     };
   };

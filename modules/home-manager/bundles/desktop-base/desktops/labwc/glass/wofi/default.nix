@@ -17,6 +17,7 @@ in {
       yoffset = -33;
       xoffset = 0;
       location = "bottom_left";
+      prompt = "Search...";
     };
     style =
       ''
