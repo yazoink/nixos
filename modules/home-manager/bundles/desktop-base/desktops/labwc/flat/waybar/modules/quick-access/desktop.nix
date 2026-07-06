@@ -13,7 +13,7 @@
   "group/quick-access-slider": {
     "orientation": "inherit",
     "drawer": {
-      "click-to-reveal": false,
+      "click-to-reveal": true,
       "transition-duration": 1000,
       "children-class": "tray-group-item"
     },

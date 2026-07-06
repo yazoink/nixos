@@ -33,33 +33,6 @@ modules/ -- system modules
       |_ <module>/
 ```
 
-## Rices
-
-### Labwc "flat"
-
-("moonfly" colorscheme)
-
-![rice](./assets/moonfly1.png)
-![rice](./assets/moonfly2.png)
-
-### Labwc "glass"
-
-("rose-pine" colorscheme)
-
-![rice](./assets/glass1.png)
-![rice](./assets/glass2.png)
-![rice](./assets/glass3.png)
-
-### Hyprland "flat"
-
-("paradise" colorscheme)
-
-![rice](./assets/paradise1.png)
-![rice](./assets/paradise2.png)
-![rice](./assets/paradise3.png)
-![rice](./assets/paradise4.png)
-![rice](./assets/paradise5.png)
-
 ## Features
 
 - Consistent theming across Gtk/Qt and pretty much everything else
