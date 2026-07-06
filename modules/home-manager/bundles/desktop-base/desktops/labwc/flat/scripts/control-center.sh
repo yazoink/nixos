@@ -6,7 +6,7 @@ if [ $v == true ]; then
     eww update control_center_visible=false
 else
     "$HOME"/.config/eww/control_center/scripts/get_apps.py update
-    "$HOME"/.config/eww/control_center/scripts/get_apps.py onchange ""
+    # "$HOME"/.config/eww/control_center/scripts/get_apps.py onchange ""
     eww update control_center_visible=true
 fi
 
