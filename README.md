@@ -33,6 +33,11 @@ modules/ -- system modules
       |_ <module>/
 ```
 
+## Rice
+
+[rice.webm](https://github.com/user-attachments/assets/af6f39d2-75c4-43dd-b41d-85dff25853e3)
+Labwc ("flat" theme) + Moonfly colourscheme
+
 ## Features
 
 - Consistent theming across Gtk/Qt and pretty much everything else
