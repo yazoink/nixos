@@ -150,13 +150,12 @@ if len(argv) > 1:
         subprocess.Popen(f"eww update search_results='{yuck}'", shell=True)
     elif argv[1] == "onaccept":  # open app / close launcher
         apps = get_apps()
-        subprocess.Popen(f"eww update user_input=''", shell=True)
+        subprocess.Popen(
+            "eww update control_center_visible=false & pkill -SIGRTMIN+9 waybar & eww update user_input='' &",
+            shell=True,
+        )
         selected = int(
             subprocess.check_output(f"eww get selected", text=True, shell=True)
-        )
-        subprocess.Popen(
-            "eww update control_center_visible=false; pkill -SIGRTMIN+9 waybar",
-            shell=True,
         )
         if selected != -1:  # open app
             subprocess.Popen(
