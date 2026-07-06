@@ -9,3 +9,7 @@ eww daemon
 eww open control_center
 eww open calendar
 eww open power
+
+if [ "$1" == "notify" ]; then
+    notify-send "Eww" "Configuration reloaded"
+fi

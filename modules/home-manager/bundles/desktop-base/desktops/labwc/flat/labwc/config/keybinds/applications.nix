@@ -4,7 +4,7 @@
     "@key" = "W-S-e";
     action = {
       "@name" = "Execute";
-      "@command" = "bash ${../../../scripts/launch-eww.sh}";
+      "@command" = "bash ${../../../scripts/launch-eww.sh} notify";
     };
   }
   # lock screen
