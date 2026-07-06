@@ -77,14 +77,6 @@ in [
       "@command" = "${../../../scripts/waybar.sh}";
     };
   }
-  # reload eww
-  {
-    "@key" = "W-S-e";
-    action = {
-      "@name" = "Execute";
-      "@command" = "bash ${../../../scripts/reload-eww.sh}";
-    };
-  }
   # reset wallpaper
   {
     "@key" = "W-S-w";

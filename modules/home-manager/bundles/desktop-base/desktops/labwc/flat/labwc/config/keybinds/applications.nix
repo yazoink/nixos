@@ -1,4 +1,12 @@
 {...}: [
+  # reload eww
+  {
+    "@key" = "W-S-e";
+    action = {
+      "@name" = "Execute";
+      "@command" = "bash ${../../../scripts/launch-eww.sh}";
+    };
+  }
   # lock screen
   {
     "@key" = "W-C-l";
