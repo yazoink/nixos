@@ -14,21 +14,6 @@ in [
       "@command" = "${defaultApps.terminal}";
     };
   }
-  # launcher
-  {
-    "@key" = "W-p";
-    action = {
-      "@name" = "Execute";
-      "@command" = "${../../../scripts/wofi.sh}";
-    };
-  }
-  {
-    "@key" = "W-r";
-    action = {
-      "@name" = "Execute";
-      "@command" = "${../../../scripts/wofi.sh}";
-    };
-  }
   # selective screenshot
   {
     "@key" = "W-s";

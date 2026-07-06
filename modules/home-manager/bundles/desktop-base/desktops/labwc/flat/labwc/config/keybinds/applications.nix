@@ -1,4 +1,19 @@
 {...}: [
+  # launcher
+  {
+    "@key" = "W-p";
+    action = {
+      "@name" = "Execute";
+      "@command" = "${../../../scripts/wofi.sh}";
+    };
+  }
+  {
+    "@key" = "W-r";
+    action = {
+      "@name" = "Execute";
+      "@command" = "${../../../scripts/wofi.sh}";
+    };
+  }
   # reload eww
   {
     "@key" = "W-S-e";

@@ -14,7 +14,7 @@ in {
       # xoffset = 5;
       # location = "bottom_left";
       location = 0;
-      # use_search_box = false;
+      use_search_box = false;
       close_on_focus_loss = true;
     };
     style =

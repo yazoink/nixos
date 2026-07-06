@@ -1,6 +1,21 @@
 {osConfig, ...}: let
   inherit (osConfig.myOptions.userAccount) username;
 in [
+  # launcher
+  {
+    "@key" = "W-p";
+    action = {
+      "@name" = "Execute";
+      "@command" = "${../../../scripts/wofi.sh}";
+    };
+  }
+  {
+    "@key" = "W-r";
+    action = {
+      "@name" = "Execute";
+      "@command" = "${../../../scripts/wofi.sh}";
+    };
+  }
   # lock screen
   {
     "@key" = "W-C-l";
