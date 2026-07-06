@@ -155,7 +155,7 @@ if len(argv) > 1:
             subprocess.check_output(f"eww get selected", text=True, shell=True)
         )
         subprocess.Popen(
-            "eww update control_center_visible=false",
+            "eww update control_center_visible=false; pkill -SIGRTMIN+9 waybar",
             shell=True,
         )
         if selected != -1:  # open app
