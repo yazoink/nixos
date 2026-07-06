@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-v="$(eww get control_panel_visible)"
+v="$(eww get control_center_visible)"
 
 if [[ $v == true ]]; then
     echo ""
