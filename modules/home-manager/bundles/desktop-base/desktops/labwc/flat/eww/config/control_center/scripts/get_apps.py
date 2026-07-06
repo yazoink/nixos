@@ -12,7 +12,7 @@ def make_entry(app):
     return f"""
         (button
             :class "entry${{selected == {app["index"]} ? " selected" : ""}}"
-            :onclick "${{selected == {app["index"]} ? "./control_center/scripts/search_launch.sh \\\"{app["exec"]}\\\" & eww -c . update control_center_visible=false" : "eww -c . update selected={app["index"]}"}}"
+            :onclick "${{selected == {app["index"]} ? "./control_center/scripts/search_launch.sh \\\"{app["exec"]}\\\" & eww update control_center_visible=false" : "eww update selected={app["index"]}"}}"
             :tooltip "{app["exec"]}"
             (box
                 :orientation "h"
@@ -105,7 +105,7 @@ def get_apps():
         if argv[2] != "":  # search not blank
             apps_arr = search(argv[2], apps_arr)
             selected = 0
-    subprocess.Popen(f"eww -c . update selected={selected}", shell=True)
+    subprocess.Popen(f"eww update selected={selected}", shell=True)
     return apps_arr
 
 
@@ -147,15 +147,15 @@ if len(argv) > 1:
             )
             """
 
-        subprocess.Popen(f"eww -c . update search_results='{yuck}'", shell=True)
+        subprocess.Popen(f"eww update search_results='{yuck}'", shell=True)
     elif argv[1] == "onaccept":  # open app / close launcher
         apps = get_apps()
-        subprocess.Popen(f"eww -c . update user_input=''", shell=True)
+        subprocess.Popen(f"eww update user_input=''", shell=True)
         selected = int(
-            subprocess.check_output(f"eww -c . get selected", text=True, shell=True)
+            subprocess.check_output(f"eww get selected", text=True, shell=True)
         )
         subprocess.Popen(
-            "eww -c . update control_center_visible=false",
+            "eww update control_center_visible=false",
             shell=True,
         )
         if selected != -1:  # open app
