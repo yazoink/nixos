@@ -26,6 +26,26 @@ in {
     setAsDefaultBrowser = true;
     # nativeMessagingHosts = [pkgs.firefoxpwa]; broken?
     policies = {
+      /*
+        ExtensionSettings = {
+        "internet_archive_downloader@timelegend.net" = {
+          install_url = "https://addons.mozilla.org/firefox/downloads/file/4749757/internet_archive_downloader-1.2.2.xpi";
+          installation_mode = "force_installed";
+        };
+      };
+      */
+      ExtensionSettings = with builtins; let
+        extension = shortId: uuid: {
+          name = uuid;
+          value = {
+            install_url = "https://addons.mozilla.org/en-US/firefox/downloads/latest/${shortId}/latest.xpi";
+            installation_mode = "force_installed";
+          };
+        };
+      in
+        listToAttrs [
+          (extension "internet_archive_downloader" "internet_archive_downloader@timelegend.net")
+        ];
       AutofillAddressEnabled = false;
       AutofillCreditCardEnabled = false;
       DisableAppUpdate = true;
