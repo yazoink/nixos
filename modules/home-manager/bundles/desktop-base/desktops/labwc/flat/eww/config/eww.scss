@@ -252,8 +252,8 @@ $inner-radius: 8px;
     border-radius: $inner-radius;
     background-size: cover;
     background-position: center;
-    min-height: 115px;
-    min-width: 115px;
+    min-height: 125px;
+    min-width: 125px;
     margin: $padding;
     margin-right: 0;
     border-radius: $inner-radius;
@@ -269,6 +269,7 @@ $inner-radius: 8px;
       margin: $padding;
       .song {
         font-weight: bold;
+        font-size: 14pt;
       }
       .artist {
         opacity: 0.4;
