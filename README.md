@@ -36,7 +36,7 @@ modules/ -- system modules
 ## Rice
 
 [![Video](https://github.com/user-attachments/assets/1fe316c4-8f29-4ab0-813a-3e14e2a0cabf)]
-[<img width="1366" height="768" alt="20260706_14:21:19_screenshot" src="https://github.com/user-attachments/assets/2dba3c61-0df8-4680-a5af-c21f816c2cd1" />](https://www.youtube.com/embed/<VIDEO_ID>)
+[<img width="1366" height="768" alt="20260706_14:21:19_screenshot" src="https://github.com/user-attachments/assets/2dba3c61-0df8-4680-a5af-c21f816c2cd1" />]([https://www.youtube.com/embed/<VIDEO_ID>](https://github.com/user-attachments/assets/1fe316c4-8f29-4ab0-813a-3e14e2a0cabf))
 
 ## Features
 
