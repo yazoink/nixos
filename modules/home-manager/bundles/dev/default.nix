@@ -19,7 +19,6 @@ in
         gcc
         gnumake
         clang-tools
-        python3
         typst
         (python3.withPackages (python-pkgs:
           with python-pkgs; [
