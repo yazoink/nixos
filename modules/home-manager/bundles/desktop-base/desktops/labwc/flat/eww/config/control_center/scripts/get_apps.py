@@ -12,7 +12,7 @@ def make_entry(app):
     return f"""
         (button
             :class "entry${{selected == {app["index"]} ? " selected" : ""}}"
-            :onclick "${{selected == {app["index"]} ? "./control_center/scripts/search_launch.sh \\\"{app["exec"]}\\\" & eww update control_center_visible=false" : "eww update selected={app["index"]}"}}"
+            :onclick "${{selected == {app["index"]} ? "./control_center/scripts/search_launch.sh \\\"{app["exec"]}\\\" & eww update control_center_visible=false & pkill -SIGRTMIN+9 waybar &" : "eww update selected={app["index"]}"}}"
             :tooltip "{app["exec"]}"
             (box
                 :orientation "h"
