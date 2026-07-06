@@ -80,6 +80,7 @@ in {
             floccus
             control-panel-for-twitter
             keepassxc-browser
+            istilldontcareaboutcookies
           ]
           (lib.mkIf osConfig.myOptions.hardwareFeatures.h264ify.enable [enhanced-h264ify])
         ];
