@@ -21,6 +21,10 @@ in
         clang-tools
         python3
         typst
+        (python3.withPackages (python-pkgs:
+          with python-pkgs; [
+            pygobject3
+          ]))
       ];
     }
   ])

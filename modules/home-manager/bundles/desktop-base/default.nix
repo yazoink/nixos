@@ -12,7 +12,9 @@
 in
   lib.mkIf desktopBase.enable (lib.mkMerge [
     {
-      home.packages = with pkgs; [keepassxc];
+      home.packages = with pkgs; [
+        keepassxc
+      ];
     }
     (import ./dconf {inherit osConfig config lib pkgs inputs;})
     (import ./direnv {inherit osConfig config lib pkgs inputs;})

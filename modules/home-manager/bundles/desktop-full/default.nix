@@ -43,17 +43,6 @@ in
           # d-spy
           filezilla
 
-          ### programming ####
-          texliveFull
-          zig
-          php
-          cmake
-          gcc
-          gnumake
-          clang-tools
-          python3
-          typst
-
           ### misc ###
           tty-solitaire
           cbonsai
