@@ -12,7 +12,17 @@
     then "sensors | grep Tctl | awk '{print $2}' | sed 's/\\+//g;s/\\.[0-9]°C//g'"
     else "sensors | grep 'Core 0' | awk '{print $3}' | sed 's/\\+//g;s/\\.[0-9]°C//g'";
 in {
-  home.packages = with pkgs; [eww font-awesome jq curl lm_sensors python313Packages.pygobject3];
+  home.packages = with pkgs; [
+    eww
+    font-awesome
+    jq
+    curl
+    lm_sensors
+    (python3.withPackages (python-pkgs:
+      with python-pkgs; [
+        pygobject3
+      ]))
+  ];
   xdg.configFile = {
     "eww" = {
       source = ./config;
