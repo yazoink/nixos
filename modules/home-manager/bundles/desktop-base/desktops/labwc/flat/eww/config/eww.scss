@@ -467,7 +467,9 @@ $inner-radius: 8px;
       }
       &.selected {
         background-color: $base0D;
-        color: $bg;
+        label {
+          color: $bg;
+        }
         .arrow, .desc {
           opacity: 0.8;
         }
