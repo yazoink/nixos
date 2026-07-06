@@ -424,73 +424,91 @@ $inner-radius: 8px;
   }
 }
 
-.outer-box {
-  all: unset;
-  .icon {
-    padding: 0;
-    margin: 0;
+.lock {
+  // background-image: url("images/wallpaper.png");
+  // background-image: radial-gradient($surface, transparent);
+  background-color: rgba(0, 0, 0, 0.2);
+  .lock-icon {
+    background-color: transparent;
+    font-size: 24pt;
+    font-weight: bold;
+    // text-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
   }
-  .search {
-  }
-  // background-color: $bg;
-  // border-radius: $outer-radius;
-  // padding: $padding;
-  // border: 1px solid $border;
-  min-width: calc(300px + calc($padding * 2));
-  min-height: calc(305px + calc($padding * 2));
-  .search-results {
-    min-width: 300px;
-    min-height: 305px;
-    background-color: $surface;
-    border-radius: $inner-radius;
+  .window {
     padding: $padding;
-    .no-results {
-      font-size: 16pt;
-      padding: $padding;
+    border-radius: $outer-radius;
+    background: $bg;
+    border: 1px solid $border;
+    min-width: 255px;
+    .profile-image {
+      background-size: cover;
+      background-position: center;
+      min-height: 75px;
+      box-shadow: $image-shadow;
+      min-width: 75px;
+      border-radius: $inner-radius;
+      border: 1px solid $base04;
+    }
+    .username {
+      font-size: 22pt;
       font-weight: bold;
+    }
+    .time {
       opacity: 0.4;
     }
-    .entry {
-      min-height: 70px;
+    entry {
+      background-color: $surface;
+      padding: $padding;
       border-radius: $inner-radius;
-      padding: calc($padding / 2);
-      padding: 0 $padding;
-      .name {
-        font-weight: bold;
+    }
+  }
+  .lock-clock-box {
+    border-radius: $outer-radius;
+    background: $bg;
+    border: 1px solid $border;
+    margin: 4px;
+    padding: $padding;
+    font-weight: bold;
+    font-size: 16pt;
+    .separator label {
+      font-size: 2pt;
+    }
+  }
+  .power-buttons-box {
+    // border: none;
+    // background-color: $surface;
+    // border-radius: $inner-radius;
+    border-radius: $outer-radius;
+    background: $bg;
+    border: 1px solid $border;
+    margin: 4px;
+    .action {
+      font-size: 0pt;
+      padding: 0;
+      padding-bottom: 0;
+    }
+    .power-button {
+      background-color: $surface;
+      border-radius: $inner-radius;
+      font-weight: bold;
+      .icon {
+        min-width: 30px;
+        min-height: 30px;
+        font-size: 18pt;
       }
-      .desc,
-      .arrow {
-        opacity: 0.4;
-      }
-      &:hover {
-        background-image: linear-gradient($surface, $surface);
-      }
-      &.selected {
-        background-color: $base0D;
-        color: $bg;
-        .arrow, .desc {
-          opacity: 0.8;
+      .yes {
+        font-family: "Font Awesome 7 Free";
+        margin: $padding;
+        label {
+          padding: 0;
+          min-width: 30px;
+          min-height: 30px;
+          font-size: 12pt;
         }
       }
     }
   }
-  .search-bar {
-    background-color: $surface;
-    border-radius: $inner-radius;
-    .icon {
-      padding: $padding;
-      background-color: $base0D;
-      border-top-left-radius: $inner-radius;
-      border-bottom-left-radius: $inner-radius;
-      color: $bg;
-    }
-    entry {
-      // font-size: 13pt;
-      // font-weight: bold;
-    }
-  }
 }
-
 
 tooltip {
   padding: $padding;

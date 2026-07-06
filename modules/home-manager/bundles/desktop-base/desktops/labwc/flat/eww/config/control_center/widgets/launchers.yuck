@@ -1,0 +1,50 @@
+(defvar dnd false)
+(defpoll dnd_icon :run-while control_center_visible :interval "17s"  "bash ./control_center/scripts/dnd_icon.sh")
+
+(defwidget launchers []
+  (box
+    :orientation "v"
+    :class "launchers-box"
+    :space-evenly false
+    (box
+      :orientation "v"
+      :valign "start"
+      :spacing 8
+      :space-evenly false
+      :vexpand true
+      (button
+        :class "launcher-button picker"
+        :onclick "bash ./scripts/launch_app.sh color &"
+        :tooltip "Open colour picker"
+        (label :text "" :class "icon")
+      )
+      (button
+        :class "launcher-button shot"
+        :onclick "bash ./scripts/launch_app.sh 'screenshot -s' &"
+        :tooltip "Take screenshot"
+        (label :text "" :class "icon")
+      )
+      (button
+        :class "launcher-button dnd"
+        :tooltip "Toggle do-not-disturb"
+        :onclick "dnd &"
+        (label :text dnd_icon :class "icon")
+      )
+    )
+    (box
+      :orientation "v"
+      :valign "end"
+      :spacing 8
+      :space-evenly true
+      :vexpand true
+      (button
+        :class "launcher-button shutdown"
+        :tooltip "Open power menu"
+        :onclick "bash ./scripts/launch_app.sh 'eww -c . update power_visible=true' &"
+        (label :text "" :class "icon")
+      )
+    )
+  )
+)
+
+

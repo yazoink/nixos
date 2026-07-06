@@ -1,0 +1,35 @@
+(defvar user_input "")
+(defvar search_results "")
+;(defvar show_search false)
+(defvar selected -1)
+
+(defwidget search []
+  (box ; main window
+    :class "outer-box"
+    :orientation "v"
+    :space-evenly false
+    :spacing 8
+    (box ; results
+      :class "inner-box"
+      :halign "fill"
+      :orientation "v"
+      :valign "end"
+      (literal :content search_results)
+    )
+    (box
+      :orientation "h"
+      :space-evenly false
+      :halign "fill"
+      :class "search-bar"
+      :spacing 8
+      (label :text "" :class "icon search" :halign "start")
+      (input ; search bar
+        :value user_input 
+        :onchange "./control_center/scripts/get_apps.py onchange '{}' &" 
+        :onaccept "./control_center/scripts/get_apps.py onaccept '{}' &"
+        :halign "fill"
+        :hexpand true
+      )
+    )
+  )
+)

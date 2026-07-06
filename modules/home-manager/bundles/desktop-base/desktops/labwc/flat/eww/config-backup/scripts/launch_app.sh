@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 
-eww -c . update control_center_visible=false
+eww update control_panel_visible=false
 pkill -SIGRTMIN+9 waybar
 $1 & disown
-

@@ -1,0 +1,98 @@
+(defvar lock_selected true)
+(defvar exit_selected false)
+(defvar reboot_selected false)
+(defvar shutdown_selected false)
+
+(defwidget yes_no [action cmd]
+  (box
+    :orientation "v"
+    :spacing 8
+    :space-evenly false
+    :valign "center"
+    (label :text action :class "action")
+    (box
+      :orientation "h"
+      :spacing 8
+      :space-evenly false
+      :valign "center"
+      :halign "center"
+      (button :onclick "eww -c . update power_visible=false & ${cmd}" :class "yes base0B" "")
+      (button :onclick "eww -c . update power_visible=false" :class "no base08" "")
+    )
+  )
+)
+
+(defwidget power_buttons []
+  (box
+    :orientation "h"
+    :class "power-buttons-box"
+    :space-evenly false
+    :vexpand false
+    :valign "end"
+    :spacing 8
+    (box
+      :orientation "h"
+      :space-evenly false
+      :class "power-button"
+      (button
+        :class "lock ${lock_selected ? "selected" : ""}"
+        :onclick "bash ./scripts/toggle_var.sh lock_selected &"
+        :tooltip "Lock screen"
+        (label :text "" :class "icon")
+      )
+      (revealer
+        :transition "slideright"
+        :reveal lock_selected
+        (yes_no :action "Lock screen" :cmd "hyprlock &")
+      )
+    )
+    (box
+      :orientation "h"
+      :space-evenly false
+      :class "power-button"
+      (button
+        :class "exit ${exit_selected ? "selected" : ""}"
+        :onclick "bash ./scripts/toggle_var.sh exit_selected &"
+        :tooltip "Exit desktop"
+        (label :text "" :class "icon")
+      )
+      (revealer
+        :transition "slideright"
+        :reveal exit_selected
+        (yes_no :action "Exit desktop" :cmd "labwc --exit &")
+      )
+    )
+    (box
+      :orientation "h"
+      :space-evenly false
+      :class "power-button"
+      (button
+        :class "reboot ${reboot_selected ? "selected" : ""}"
+        :onclick "bash ./scripts/toggle_var.sh reboot_selected &"
+        :tooltip "Reboot system"
+        (label :text "" :class "icon")
+      )
+      (revealer
+        :transition "slideright"
+        :reveal reboot_selected
+        (yes_no :action "Reboot" :cmd "systemctl reboot &")
+      )
+    )
+    (box
+      :orientation "h"
+      :space-evenly false
+      :class "power-button"
+      (button
+        :class "shutdown ${shutdown_selected ? "selected" : ""}"
+        :onclick "bash ./scripts/toggle_var.sh shutdown_selected &"
+        :tooltip "Power off"
+        (label :text "" :class "icon")
+      )
+      (revealer
+        :transition "slideright"
+        :reveal shutdown_selected
+        (yes_no :action "Power off" :cmd "shutdown now &")
+      )
+    )
+  )
+)

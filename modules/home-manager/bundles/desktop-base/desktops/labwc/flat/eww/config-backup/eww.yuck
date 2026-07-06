@@ -1,0 +1,115 @@
+(include "./widgets/user.yuck")
+(include "./widgets/launchers.yuck")
+(include "./widgets/music.yuck")
+(include "./widgets/power-buttons.yuck")
+(include "./widgets/monitor.yuck")
+(include "./widgets/weather.yuck")
+(include "./widgets/pretty-time.yuck")
+(include "./widgets/control-panel-menu.yuck")
+(include "./widgets/lock.yuck")
+
+(defvar music_visible true)
+(defvar monitor_visible false)
+(defvar weather_visible false)
+(defvar menu_visible true)
+(defvar control_panel_visible false)
+(defvar power_visible false)
+(defvar calendar_visible false)
+(defvar lock_visible false)
+
+(defwindow control-center
+  :monitor 0
+  :geometry (geometry
+    :x 4
+    :y 4
+    :anchor "bottom left"
+  )
+  :stacking "fg"
+  :exclusive false
+  :focusable "ondemand"
+  (revealer
+    :transition "slideup"
+    :reveal control_panel_visible
+    (box
+      :orientation "vertical"
+      :space-evenly false
+      :spacing 4
+      (control_panel_menu)
+      (box
+        :class "control-center-box"
+        :orientation "vertical"
+        :halign "fill"
+        :space-evenly false
+        :spacing 8
+        (user)
+        (box
+          :class "control-center-body"
+          :orientation "horizontal"
+          :space-evenly "false"
+          :halign "fill"
+          :valign "start"
+          :spacing 8
+          (apps)
+          (launchers)
+        )
+      )
+    )
+  )
+)
+
+(defwindow power
+  :monitor 0
+  :geometry (geometry
+    :x 4
+    :y 4
+    :anchor "bottom center"
+  )
+  :stacking "fg"
+  :exclusive false
+  :focusable "ondemand"
+  (revealer
+    :transition "slideup"
+    :reveal power_visible
+    (power_buttons)
+  )
+)
+
+(defwindow calendar
+  :monitor 0
+  :geometry (geometry
+    :x 4
+    :y 4
+    :anchor "bottom right"
+  )
+  :stacking "fg"
+  :exclusive false
+  :focusable "ondemand"
+  (revealer
+    :transition "slideup"
+    :reveal calendar_visible
+    (box
+      :orientation "vertical"
+      :space-evenly false
+      :class "calendar-box"
+      :spacing 8
+      :halign "fill"
+      (pretty-time)
+      (box :class "calendar" :orientation "v"
+        (calendar :class "cal" :halign "center")
+      )
+    )
+  )
+)
+
+(defwindow lock []
+  :monitor 0
+  :geometry (geometry
+    :width "100%"
+    :height "100%"
+  )
+  :stacking "fg"
+  :exclusive true
+  :focusable "true"
+  :namespace "eww_lock"
+  (lock_widget)
+)

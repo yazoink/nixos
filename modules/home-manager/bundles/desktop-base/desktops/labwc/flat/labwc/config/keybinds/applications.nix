@@ -37,7 +37,7 @@
     "@key" = "W-C-m";
     action = {
       "@name" = "Execute";
-      "@command" = "bash ${../../../scripts/control-panel.sh}";
+      "@command" = "bash ${../../../scripts/control-center.sh}";
     };
   }
 ]

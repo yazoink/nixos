@@ -1,0 +1,79 @@
+(defvar menu_item 0)
+
+(defwidget control_center_menu []
+  (revealer
+    :transition "slideup"
+    :reveal menu_visible
+    (box
+      :orientation "v"
+      :space-evenly false
+      :class "menu-container"
+      (stack
+        :selected menu_item
+        :class "menu-content"
+        :same-size false
+        :transition "slideleft"
+        (music)
+        (monitor)
+        (weather)
+      )
+      (box
+        :class "menu-box"
+        :halign "fill"
+        :space-evenly true
+        :hexpand true
+        (box
+          :orientation "h"
+          :halign "center"
+          :space-evenly false
+          :spacing 8
+          (button
+            :onclick "eww -c . update menu_item=0"
+            :tooltip "Music controls"
+            :class "music ${menu_item == 0 ? "selected" : ""}"
+            (box
+              :orientation "h"
+              :space-evenly false
+              (label :text "" :class "icon")
+              (revealer
+                :transition "slideright"
+                :reveal {menu_item == 0 ? true : false}
+                (label :text "Music")
+              )
+            )
+          )
+          (button
+            :class "monitor ${menu_item == 1 ? "selected" : ""}"
+            :onclick "eww -c . update menu_item=1"
+            :tooltip "Resource monitor"
+            (box
+              :orientation "h"
+              :space-evenly false
+              (label :text "" :class "icon")
+              (revealer
+                :transition "slideright"
+                :reveal {menu_item == 1 ? true : false}
+                (label :text "Resources")
+              )
+            )
+          )
+          (button
+            :class "weather ${menu_item == 2 ? "selected" : ""}"
+            :onclick "eww -c . update menu_item=2"
+            :tooltip "Weather"
+            (box
+              :orientation "h"
+              :space-evenly false
+              (label :text "" :class "icon")
+              (revealer
+                :transition "slideright"
+                :reveal {menu_item == 2 ? true : false}
+                (label :text "Weather")
+              )
+            )
+          )
+        )
+      )
+    )
+  )
+)
