@@ -1,4 +1,11 @@
 {...}: [
+  {
+    "@key" = "Escape";
+    action = {
+      "@name" = "Execute";
+      "@command" = "eww update control_center_visible=false";
+    };
+  }
   # launcher
   {
     "@key" = "W-p";

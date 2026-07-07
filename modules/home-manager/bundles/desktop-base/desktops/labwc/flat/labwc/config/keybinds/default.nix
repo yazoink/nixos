@@ -5,7 +5,7 @@
   ...
 }: {
   keyboard = {
-    default = true;
+    default = false;
     keybind = lib.mkMerge [
       (import ./applications.nix {inherit config osConfig lib;})
     ];
