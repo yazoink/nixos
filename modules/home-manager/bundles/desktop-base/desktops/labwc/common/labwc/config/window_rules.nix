@@ -2,6 +2,14 @@
   windowRules = {
     windowRule = [
       {
+        "@identifier" = "VsCodium";
+        "@serverDecoration" = "yes";
+      }
+      {
+        "@identifier" = "VsCode";
+        "@serverDecoration" = "yes";
+      }
+      {
         "@identifier" = "imv";
         "@serverDecoration" = "yes";
       }
