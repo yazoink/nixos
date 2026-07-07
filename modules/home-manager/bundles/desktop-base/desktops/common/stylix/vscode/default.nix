@@ -1,10 +1,10 @@
 {...}: {
   stylix.targets = {
     vscode = {
-      profiles = ["default"];
+      profileNames = ["default"];
     };
     vscodium = {
-      profiles = ["default"];
+      profileNames = ["default"];
     };
   };
 }
