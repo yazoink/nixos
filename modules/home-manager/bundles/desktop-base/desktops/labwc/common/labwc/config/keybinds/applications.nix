@@ -12,7 +12,6 @@ in [
     action = {
       "@name" = "Execute";
       "@command" = "${defaultApps.terminal}";
-      "@onRelease" = true;
     };
   }
   # selective screenshot
