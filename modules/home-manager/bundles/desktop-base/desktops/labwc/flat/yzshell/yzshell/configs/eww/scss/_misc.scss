@@ -1,0 +1,77 @@
+$padding: 8px;
+$outer-radius: 16px;
+$inner-radius: 8px;
+
+* {
+  all: unset;
+  color: $fg;
+}
+
+.hline {
+  border-bottom: 1px solid $fg;
+  opacity: 0.2;
+}
+
+.icon {
+  font-family: "Font Awesome 7 Free";
+  font-weight: bold;
+  font-size: 18pt;
+  min-width: 30px;
+  min-height: 30px;
+  padding: $padding;
+}
+.picker label {
+  color: $base0D;
+}
+
+.shot label {
+  color: $base0B;
+}
+
+.dnd label {
+  color: $base0A;
+}
+
+.search label {
+  color: $base0E;
+}
+
+.shutdown label {
+  color: $base08;
+}
+
+tooltip {
+  padding: $padding;
+  border-radius: $inner-radius;
+  background: $bg;
+  border: 1px solid $border;
+}
+
+.base0D .icon {
+  background-color: $base0D;
+}
+.base0B .icon {
+  background-color: $base0B;
+}
+.base0A .icon {
+  background-color: $base0A;
+}
+.base08 .icon {
+  background-color: $base08;
+}
+
+.base0D, .base0D label {
+  color: $base0D;
+}
+
+.base0B, .base0B label {
+  color: $base0B;
+}
+
+.base0A, .base0A label {
+  color: $base0A;
+}
+
+.base08, .base08 label {
+  color: $base08;
+}

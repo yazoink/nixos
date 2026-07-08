@@ -1,0 +1,316 @@
+#!/usr/bin/env bash
+
+# requires env vars: YZSHELL_CMD (command to run yzshell) and YZSHELL_DIR (directory containing required files)
+
+export YZSHELL_BASE_CONFIG_DIR="${YZSHELL_BASE_DIR}/configs"
+
+export YZSHELL_EWW_DIR="${HOME}/.config/widgets" # dir containing eww conf
+export YZSHELL_EWW_CSS_COLOURS_FILE="${YZSHELL_EWW_DIR}/scss/_colours.scss" # eww colourscheme css path
+
+
+export YZSHELL_ASSETS_DIR="${YZSHELL_DIR}/assets" # dir containing misc assets
+export YZSHELL_IMAGES_DIR="${YZSHELL_ASSETS_DIR}/images" # dir containing images
+
+export YZSHELL_FUNCTIONS_DIR="${YZSHELL_DIR}/functions" # dir containing scipts/modules
+export YZSHELL_BASE_CONFIG_DIR="${YZSHELL_DIR}/configs" # dir containing .config files to be copied
+export YZSHELL_COLOURS_DIR="${YZSHELL_DIR}/colourschemes" # dir containing colourschemes
+
+export YZSHELL_CACHE_DIR="/tmp/yzshell"
+export YZSHELL_WEATHER_CACHE_FILE="${YZSHELL_CACHE_DIR}/weather.json"
+export YZSHELL_APP_SEARCH_CACHE_FILE="${YZSHELL_CACHE_DIR}/apps.json"
+
+export YZSHELL_WAYBAR_DIR="${HOME}/.config/bar"
+export YZSHELL_WAYBAR_CSS_COLOURS_FILE="${YZSHELL_WAYBAR_DIR}/colours.css" # eww colourscheme css path
+export YZSHELL_WAYBAR_LOG_FILE="${YZSHELL_CACHE_DIR}/waybar.log"
+
+export YZSHELL_MAKO_DIR="${HOME}/.config/notifs"
+export YZSHELL_MAKO_CONF_FILE="${YZSHELL_MAKO_DIR}/config"
+export YZSHELL_MAKO_COLOURS_FILE="${YZSHELL_MAKO_DIR}/colours"
+
+export TERM="foot"
+export BATTERY_NAME="BAT0"
+export WAYBAR_SHOW_BATTERY=false
+export WAYBAR_SHOW_BACKLIGHT=false
+export COLOURSCHEME="camellia"
+
+export PROFILE_IMAGE="${YZSHELL_IMAGES_DIR}/profile_image.jpg"
+export MUSIC_DIR="${HOME}/mu"
+
+if sensors | grep 'Core 0'; then
+    export TEMPS_CMD="sensors | grep 'Core 0' | awk '{print \$3}' | sed 's/\\+//g;s/\\.[0-9]°C//g'"
+else
+    export TEMPS_CMD="sensors | grep Tctl | awk '{print \$2}' | sed 's/\\+//g;s/\\.[0-9]°C//g'"
+fi
+
+export WM=""
+export WM_EXIT_CMD=""
+if [[ "$XDG_CURRENT_DESKTOP" == *"labwc"* ]]; then
+    export WM="labwc"
+    export WM_EXIT_CMD="labwc --exit"
+fi
+
+source "${YZSHELL_FUNCTIONS_DIR}/get/get.sh"
+source "${YZSHELL_FUNCTIONS_DIR}/cmd/cmd.sh"
+source "${YZSHELL_FUNCTIONS_DIR}/update/update.sh"
+source "${YZSHELL_FUNCTIONS_DIR}/configure/configure.sh"
+
+
+function launch_window() {
+    name="$1"
+    update_cmd="$2"
+    eww -c "${YZSHELL_EWW_DIR}/${name}" daemon &> /dev/null & disown
+    eval $update_cmd
+    eww -c "${YZSHELL_EWW_DIR}/${name}" open "$name" &
+}
+
+function kill_window() {
+    name="$1"
+    eww -c "${YZSHELL_EWW_DIR}/${name}" kill
+}
+
+function reload_window() {
+    name=""
+    [ ! -z "$1" ] && name="$1"
+    eww -c "${YZSHELL_EWW_DIR}/${name}" reload > /dev/null 2>&1
+}
+
+function window_logs() {
+    name="$1"
+    eww -c "${YZSHELL_EWW_DIR}/${name}" logs
+}
+
+# make individual options for these
+function ensure_dirs() {
+    case "$1" in
+        "cache")
+            if [[ ! -d "$YZSHELL_CACHE_DIR" ]]; then
+                mkdir -p "$YZSHELL_CACHE_DIR"
+                chmod -R 755 "$YZSHELL_CACHE_DIR"
+            fi
+            ;;
+        "eww")
+            if [ ! -d "$YZSHELL_EWW_DIR" ]; then
+                mkdir -p "$YZSHELL_EWW_DIR"
+                chmod -R 755 "$YZSHELL_EWW_DIR"
+            fi
+            ;;
+        "waybar")
+            if [ ! -d "$YZSHELL_WAYBAR_DIR" ]; then
+                mkdir -p "$YZSHELL_WAYBAR_DIR"
+                chmod -R 755 "$YZSHELL_WAYBAR_DIR"
+            fi
+            ;;
+        "mako")
+            if [ ! -d "$YZSHELL_MAKO_DIR" ]; then
+                mkdir -p "$YZSHELL_MAKO_DIR"
+                chmod -R 755 "$YZSHELL_MAKO_DIR"
+            fi
+            ;;
+        "")
+            ensure_dirs "cache"
+            ensure_dirs "eww"
+            ensure_dirs "waybar"
+            ensure_dirs "mako"
+            ;;
+    esac
+}
+
+
+function launch_yzshell() {
+    pidof yzshell && kill_yzshell
+    configure
+    launch_window "control_center" "update search_cache && update search_results"
+    launch_window "power"
+    launch_window "calendar"
+    reload "notifs"
+}
+
+function kill_yzshell() {
+    while pidof waybar; do pkill waybar; done
+    while pidof eww; do pkill eww; done
+    while pidof mako; do pkill mako; done
+}
+
+function window_visible() {
+    window="$1"
+    [[ $(eww -c "${YZSHELL_EWW_DIR}/${window}" get "${window}_visible") == true ]] && return 0
+    return 1
+}
+
+function reload() {
+    case "$1" in
+        "power" | "control_center" | "calendar") reload_window "$1" ;;
+        "bar") hide "bar"; show "bar" ;;
+        "notifs")
+            while pidof mako; do pkill mako; done
+            exec mako -c "$YZSHELL_MAKO_CONF_FILE" &
+            ;;
+        "")
+            reload "bar"
+            reload "control_center"
+            reload "calendar"
+            reload "power"
+            reload "notifs"
+            ;;
+        *)
+            echo "Window '$1' does not exist."
+            exit 1
+            ;;
+    esac
+}
+
+function hide() {
+    case "$1" in
+        "power") eww -c "${YZSHELL_EWW_DIR}/power" update power_visible=false ;;
+        "control_center")
+            eww -c "${YZSHELL_EWW_DIR}/control_center" update control_center_visible=false
+            pkill -SIGRTMIN+9 waybar
+            eww -c "${YZSHELL_EWW_DIR}/control_center" update selected=-1
+            eww -c "${YZSHELL_EWW_DIR}/control_center" update user_input=""
+            ;;
+        "calendar") eww -c "${YZSHELL_EWW_DIR}/calendar" update calendar_visible=false ;;
+        "bar" | "notifs") pkill "$1" ;;
+        "")
+            echo "No window specified"
+            exit 1
+            ;;
+        *)
+            echo "Window '$1' does not exist."
+            exit 1
+            ;;
+    esac
+}
+
+function show() {
+    case "$1" in
+        "power") eww -c "${YZSHELL_EWW_DIR}/power" update power_visible=true ;;
+        "control_center")
+            update "search_results"
+            eww -c "${YZSHELL_EWW_DIR}/control_center" update control_center_visible=true
+            pkill -SIGRTMIN+9 waybar
+            ;;
+        "calendar") eww -c "${YZSHELL_EWW_DIR}/calendar" update calendar_visible=true ;;
+        "bar")
+            waybar -c "${YZSHELL_WAYBAR_DIR}/config.jsonc" \
+                -s "${YZSHELL_WAYBAR_DIR}/style.css" &> "$YZSHELL_WAYBAR_LOG_FILE" & disown
+            ;;
+        "")
+            echo "No window specified"
+            exit 1
+            ;;
+        *)
+            echo "Window '$1' does not exist."
+            exit 1
+            ;;
+    esac
+}
+
+function toggle() {
+    case "$1" in
+        "power" | "calendar" | "control_center")
+            if window_visible "$1"; then
+                hide "$1"
+            else
+                show "$1"
+            fi
+            ;;
+        "bar")
+            pidof waybar
+            if [ $? == 0 ]; then
+                hide "bar"
+            else
+                show "bar"
+            fi
+            ;;
+        "")
+            echo "No window specified"
+            exit 1
+            ;;
+        *)
+            echo "Window '$1' does not exist."
+            exit 1
+            ;;
+    esac
+}
+
+function inspector() {
+    case "$1" in
+        "power" | "calendar" | "control_center")
+            eww -c "${YZSHELL_EWW_DIR}/$1" inspector ;;
+        "")
+            echo "No window specified"
+            exit 1
+            ;;
+        *)
+            echo "Window '$1' does not exist."
+            exit 1
+            ;;
+    esac
+}
+
+function logs() {
+    case "$1" in
+        "power") window_logs "power" ;;
+        "control_center") window_logs "control_center" ;;
+        "calendar") window_logs "calendar" ;;
+        "bar") cat "$YZSHELL_WAYBAR_LOG_FILE" ;;
+        "")
+            echo "No window specified"
+            exit 1
+            ;;
+        *)
+            echo "Window '$1' does not exist."
+            exit 1
+            ;;
+    esac
+}
+
+function help() {
+    echo "yzshell
+    usage: yzshell [command]
+
+    commands:
+        - launch
+        - kill
+        - restart
+        - toggle <window>
+        - logs <window>
+        - show <window>
+        - hide <window>
+        - inspector <window>
+        - update <arg>
+        - cmd <arg>
+        - get <arg>
+
+    windows:
+        - control_center
+        - power
+        - calendar
+    "
+}
+
+function main() {
+    case "$1" in
+        "kill") kill_yzshell ;;
+        "toggle") toggle "$2" ;;
+        "show") show "$2" ;;
+        "hide") hide "$2" ;;
+        "logs") logs "$2" ;;
+        "reload") reload "$2" ;;
+        "inspector") inspector "$2" ;;
+        "launch" | "") launch_yzshell ;;
+        "update") update "${@:2}" ;;
+        "cmd") cmd "${@:2}" ;;
+        "get") get "${@:2}" ;;
+        "colourscheme")
+            ensure_dirs "waybar"
+            ensure_dirs "eww"
+            ensure_dirs "mako"
+            configure "colours" "$2"
+            reload
+            ;;
+        *) help ;;
+    esac
+}
+
+main "$@"

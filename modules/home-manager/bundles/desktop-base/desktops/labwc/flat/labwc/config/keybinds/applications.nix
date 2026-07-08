@@ -29,7 +29,7 @@
     "@key" = "W-S-e";
     action = {
       "@name" = "Execute";
-      "@command" = "bash ${../../../scripts/launch-eww.sh} notify";
+      "@command" = "yzshell";
     };
   }
   # lock screen
@@ -54,7 +54,7 @@
     "@key" = "W-S-q";
     action = {
       "@name" = "Execute";
-      "@command" = "bash ${../../../scripts/power.sh}";
+      "@command" = "yzshell toggle power";
     };
   }
   # calendar
@@ -62,7 +62,7 @@
     "@key" = "W-S-c";
     action = {
       "@name" = "Execute";
-      "@command" = "bash ${../../../scripts/calendar.sh}";
+      "@command" = "yzshell toggle control_center";
     };
   }
   # calendar
@@ -70,7 +70,7 @@
     "@key" = "W-C-m";
     action = {
       "@name" = "Execute";
-      "@command" = "bash ${../../../scripts/control-center.sh}";
+      "@command" = "yzshell toggle calendar";
     };
   }
 ]

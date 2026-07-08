@@ -1,0 +1,84 @@
+@import "../scss/colours";
+@import "../scss/misc";
+
+.power-buttons-box{
+  padding: $padding;
+  border-radius: $outer-radius;
+  background: $bg;
+  border: 1px solid $border;
+  button {
+    background-color: $surface;
+    border-radius: $inner-radius;
+    &.lock, &.exit, &.reboot, &.shutdown {
+      background-color: transparent;
+    }
+    &:hover {
+      background-image: linear-gradient($surface);
+    }
+  }
+  .power-button {
+    background-color: $surface;
+    border-radius: $inner-radius;
+    font-weight: bold;
+    .icon {
+      min-width: 75px;
+      min-height: 75px;
+      font-size: 40pt;
+    }
+    .yes, .no {
+      margin: $padding;
+      margin-top: 0;
+      font-family: "Font Awesome 7 Free";
+      label {
+        min-width: 40px;
+        min-height: 40px;
+        font-size: 16pt;
+      }
+    }
+    .yes {
+      margin-right: 0;
+    }
+    .no {
+      margin-left: 0;
+    }
+    .lock .icon {
+      color: $base0D;
+    }
+    .exit .icon {
+      color: $base0B;
+    }
+    .reboot .icon {
+      color: $base0A;
+    }
+    .shutdown .icon {
+      color: $base08;
+    }
+    .selected {
+      .icon {
+        border-top-left-radius: $inner-radius;
+        border-bottom-left-radius: $inner-radius;
+      }
+      &.lock .icon {
+        background-color: $base0D;
+        color: $bg;
+      }
+      &.exit .icon {
+        background-color: $base0B;
+        color: $bg;
+      }
+      &.reboot .icon {
+        background-color: $base0A;
+        color: $bg;
+      }
+      &.shutdown .icon {
+        background-color: $base08;
+        color: $bg;
+      }
+    }
+  }
+  .action {
+    font-size: 13pt;
+    padding: $padding;
+    padding-bottom: 0;
+  }
+}

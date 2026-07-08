@@ -1,0 +1,33 @@
+
+(defpoll hour :run-while calendar_visible :initial "idk" :interval "30s" `date +%I`)
+(defpoll minute :run-while calendar_visible :initial "idk" :interval "30s" `date +%M`)
+(defpoll date :run-while calendar_visible :initial "idk" :interval "30s" `date '+%A %B %d %Y'`)
+
+(defwidget calendar_clock []
+  (box
+    :orientation "vertical"
+    :space-evenly false
+    :spacing 0
+    :class "pretty-time"
+    (box
+      :orientation "horizontal"
+      :space-evenly false
+      :spacing 4
+      :halign "center"
+      :class "clock"
+      (label :text "${hour}")
+      (box
+        :orientation "vertical"
+        :space-evenly "true"
+        :valign "center"
+        :spacing 4
+        :class "separator"
+        (label :text "" :class "base08")
+        (label :text "" :class "base0B")
+        (label :text "" :class "base0D")
+      )
+      (label :text "${minute}")
+    )
+    (label :text "${date}" :class "date")
+  )
+)

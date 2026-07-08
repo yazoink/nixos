@@ -1,0 +1,51 @@
+(defvar music_visible true)
+(defvar monitor_visible false)
+(defvar weather_visible false)
+(defvar menu_visible true)
+(defvar control_center_visible false)
+
+(include "./widgets/top_menu/top_menu.yuck")
+(include "./widgets/launchers.yuck")
+(include "./widgets/user.yuck")
+(include "./widgets/search.yuck")
+
+(defwindow control_center
+  :monitor 0
+  :geometry (geometry
+    :x 4
+    :y 4
+    :anchor "bottom left"
+  )
+  :stacking "fg"
+  :exclusive false
+  :focusable "ondemand"
+  (revealer
+    :transition "slideup"
+    :reveal control_center_visible
+    (box
+      :orientation "vertical"
+      :space-evenly false
+      :spacing 4
+      (control_center_menu)
+      (box
+        :class "control-center-box"
+        :orientation "vertical"
+        :halign "fill"
+        :space-evenly false
+        :spacing 8
+        (user)
+        (box
+          :class "control-center-body"
+          :orientation "horizontal"
+          :space-evenly "false"
+          :halign "fill"
+          :valign "start"
+          :spacing 8
+          ;(apps)
+          (search)
+          (launchers)
+        )
+      )
+    )
+  )
+)

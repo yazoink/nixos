@@ -1,0 +1,20 @@
+(defvar power_visible false)
+
+(include "./widgets/buttons.yuck")
+
+(defwindow power
+  :monitor 0
+  :geometry (geometry
+    :x 4
+    :y 4
+    :anchor "bottom center"
+  )
+  :stacking "fg"
+  :exclusive false
+  :focusable "ondemand"
+  (revealer
+    :transition "slideup"
+    :reveal power_visible
+    (power_buttons)
+  )
+)

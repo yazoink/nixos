@@ -1,0 +1,88 @@
+(defvar lock_selected true)
+(defvar exit_selected false)
+(defvar reboot_selected false)
+(defvar shutdown_selected false)
+(defvar power_buttons_arr `[
+  {
+    "class": "lock",
+    "icon": "",
+    "desc": "Lock screen",
+    "cmd": "hyprlock"
+  },
+  {
+    "class": "exit",
+    "icon": "",
+    "desc": "Exit desktop",
+    "cmd": "${get_env("WM_EXIT_CMD")}"
+  },
+  {
+    "class": "reboot",
+    "icon": "",
+    "desc": "Reboot",
+    "cmd": "systemctl reboot"
+  },
+  {
+    "class": "shutdown",
+    "icon": "",
+    "desc": "Power off",
+    "cmd": "shutdown now"
+  }
+]`)
+(defvar selected "lock")
+
+(defwidget yes_no [action cmd]
+  (box
+    :orientation "v"
+    :spacing 8
+    :space-evenly false
+    :valign "center"
+    (label :text action :class "action")
+    (box
+      :orientation "h"
+      :spacing 8
+      :space-evenly false
+      :valign "center"
+      :halign "center"
+      (button :onclick "${get_env("YZSHELL_CMD")} hide power &" :class "yes base0B" "")
+      (button :onclick "${get_env("YZSHELL_CMD")} hide power &" :class "no base08" "")
+    )
+  )
+)
+
+(defwidget power_button [class icon desc cmd]
+  (box
+    :orientation "h"
+    :space-evenly false
+    :class "power-button"
+    (button
+      :class "${class} ${selected == class ? "selected" : ""}"
+      :onclick {selected == class ? "${EWW_CMD} update selected=''" : "${EWW_CMD} update selected='${class}'"}
+      :tooltip desc
+      (label :text icon :class "icon")
+    )
+    (revealer
+      :transition "slideright"
+      :reveal {selected == class}
+      (yes_no :action desc :cmd cmd)
+    )
+  )
+)
+
+(defwidget power_buttons []
+  (box
+    :orientation "h"
+    :class "power-buttons-box"
+    :space-evenly false
+    :vexpand false
+    :valign "end"
+    :spacing 8
+    (for button in power_buttons_arr
+      (power_button
+        :class {button["class"]}
+        :icon {button["icon"]}
+        :desc {button["desc"]}
+        :cmd {button["cmd"]}
+      )
+    )
+  )
+)

@@ -1,0 +1,42 @@
+(defpoll cpu :run-while monitor_visible :interval "17s" "${get_env("YZSHELL_CMD")} get cpu_perc")
+(defpoll temp :run-while monitor_visible :interval "17s" `${get_env("TEMPS_CMD")}`)
+
+(defwidget monitor []
+  (box
+    :class "monitor-box"
+    :orientation "v"
+    :spacing 8
+    :halign "fill"
+    :hexpand true
+    (box
+      :orientation "h"
+      :spacing 8
+      :halign "center"
+      (box
+        :class "monitor-item cpu base08"
+        (label :text "" :class "icon")
+        (label :text "${cpu}%" :class "usage")
+      )
+      (box
+        :class "monitor-item ram base0A"
+        (label :text "" :class "icon")
+        (label :text "${round(EWW_RAM.used_mem_perc, 0)}%" :class "usage")
+      )
+    )
+    (box
+      :orientation "h"
+      :spacing 8
+      :halign "center"
+      (box
+        :class "monitor-item disk base0B"
+        (label :text "" :class "icon")
+        (label :text "${round(EWW_DISK["/"].used_perc, 0)}%" :class "usage")
+      )
+      (box
+        :class "monitor-item temp base0D"
+        (label :text "" :class "icon")
+        (label :text "${temp}°C" :class "usage")
+      )
+    )
+  )
+)

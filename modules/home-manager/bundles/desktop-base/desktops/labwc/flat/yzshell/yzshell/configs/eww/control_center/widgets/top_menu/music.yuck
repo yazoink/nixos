@@ -1,0 +1,64 @@
+(defpoll song :run-while music_visible :interval "3s"  "${get_env("YZSHELL_CMD")} get music_song")
+(defpoll song_artist :run-while music_visible :interval "3s"  "${get_env("YZSHELL_CMD")} get music_artist")
+(defpoll song_status :run-while music_visible :interval "3s"  "${get_env("YZSHELL_CMD")} get music_status")
+(defpoll cover_art :run-while music_visible :interval "2s"  "${get_env("YZSHELL_CMD")} get music_cover")
+
+(defwidget music []
+  (box
+    :class "music-box"
+    :orientation "h"
+    :space-evenly false
+    :spacing 8
+    (box
+      :class "album-cover"
+      :vexpand "false" 
+      :hexpand "false" 
+      :style "background-image: url('${cover_art}');"
+    )
+    (box
+      :orientation "v"
+      :class "music-info-controls"
+      :halign "center"
+      :valign "center"
+      :hexpand true
+      :space-evenly false
+      :tooltip "Open music player"
+      (button
+        :onclick "${get_env("YZSHELL_CMD")} hide control_center & foot -e ncmpcpp &"
+        (box
+          :class "music-info"
+          :orientation "v"
+          :halign "center"
+          :valign "center"
+          :hexpand true
+          :space-evenly false
+          (label 
+            :class "song"
+            :text "${song}" 
+            :wrap true 
+            :wrap-mode "word"
+            :limit-width 25
+            :lines 3 
+            :justify "center"
+          )
+          (label 
+            :class "artist"
+            :text "${song_artist}" 
+            :wrap false 
+            :justify "center"
+          )
+        )
+      )
+      (box
+        :class "controls"
+        :orientation "h"
+        :spacing 4
+        :halign "center"
+        :hexpand true
+        (button :class "prev" :onclick "${get_env("YZSHELL_CMD")} cmd music_prev" "")
+        (button :class "toggle" :onclick "${get_env("YZSHELL_CMD")} cmd music_toggle" song_status)
+        (button :class "next" :onclick "${get_env("YZSHELL_CMD")} cmd music_next" "")
+      )
+    )
+  )
+)

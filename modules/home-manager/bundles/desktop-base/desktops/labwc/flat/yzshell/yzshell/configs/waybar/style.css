@@ -1,0 +1,197 @@
+* {
+  all: unset;
+}
+
+@import "colours.css";
+
+window#waybar,
+tooltip label,
+menuitem {
+  font-family: "sans", "Font Awesome 7 Free";
+}
+
+#custom-tray-icon,
+#custom-dnd,
+#bluetooth-icon,
+#idle_inhibitor,
+#battery.icon,
+#wireplumber.icon,
+#custom-backlight-icon,
+#idle_inhibitor,
+#custom-search,
+#custom-power,
+#custom-left-arrow {
+  font-family: "Font Awesome 7 Free";
+  font-size: 10pt;
+}
+
+window#waybar {
+  color: @fg;
+  background-color: @bg;
+  color: @fg;
+  border-top: 1px solid @border;
+  font-weight: bold;
+}
+
+#taskbar button {
+  background: @bg2;
+  margin: 8px 2px;
+  padding: 4px;
+  border-radius: 8px;
+}
+
+#taskbar button.active {
+  /* border-bottom: 2px solid @accent; */
+  background-color: @accent;
+}
+
+#taskbar button.minimized {
+  opacity: 0.5;
+}
+
+#custom-left-arrow {
+  font-size: 10pt;
+  color: @unfocused;
+}
+
+#custom-dnd,
+#tray-expander,
+#idle_inhibitor,
+#bluetooth-expander,
+#battery-expander,
+#backlight-expander {
+  margin-left: 12px;
+}
+
+#quick-access {
+  margin-left: 4px;
+}
+
+#clock,
+#quick-access,
+#workspaces-group,
+#custom-menu,
+#custom-power {
+  margin-top: 8px;
+  margin-bottom: 8px;
+  background-color: @bg2;
+  border-radius: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+#taskbar button:hover,
+#workspaces-group:hover,
+#custom-menu:hover,
+#clock:hover {
+  background-image: linear-gradient(@bg2, @bg2);
+}
+
+#window {
+  margin-left: -8px;
+}
+
+#custom-workspaces {
+  margin-right: 4px;
+}
+
+/*#workspaces {
+  font-size: 0;
+  padding-right: 0;
+  background-color: @bg2;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+#workspaces button {
+  color: transparent;
+  margin-left: 5px;
+  margin-right: 5px;
+  padding-left: 7px;
+  padding-right: 7px;
+  background-color: @unfocused;
+  border-radius: 100px;
+}
+
+#workspaces button.active {
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: @accent;
+  color: @bg;
+}*/
+
+.modules-left {
+  margin-left: 8px;
+}
+
+.modules-right {
+  margin-right: 8px;
+}
+
+tooltip {
+  background-color: @bg;
+  border: 1px solid @border;
+  border-radius: 16px;
+}
+
+tooltip label {
+  padding: 5px;
+  font-weight: normal;
+  color: @fg;
+}
+
+menu {
+  font-weight: normal;
+  background-color: @bg;
+  color: @fg;
+  padding: 8px;
+  border: 1px solid @border;
+  border-radius: 16px;
+}
+
+menuitem {
+  padding: 8px 16px;
+  border-radius: 4px;
+}
+
+/*.arrow.up,
+.arrow.down,
+.arrow.left,
+.arrow.right {
+  color: @fg;
+}*/
+
+menuitem:hover {
+  background-color: @bg2;
+}
+
+#tray,
+#bluetooth,
+#battery.percentage,
+#wireplumber.volume,
+#backlight {
+  margin-left: 8px;
+}
+
+#custom-power {
+  color: @urgent;
+}
+
+#custom-separator {
+  color: @bg2;
+}
+
+#custom-menu {
+  color: @accent;
+}
+
+#custom-search,
+#custom-power {
+}

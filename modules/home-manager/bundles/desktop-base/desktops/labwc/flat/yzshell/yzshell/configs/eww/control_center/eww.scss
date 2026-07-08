@@ -1,0 +1,309 @@
+@import "../scss/colours";
+@import "../scss/misc";
+
+.control-center-box {
+  padding: $padding;
+  border-radius: $outer-radius;
+  background: $bg;
+  border: 1px solid $border;
+  .user-box {
+    .reveal-button {
+      padding-right: 27px;
+      opacity: 0.4;
+      font-size: 15pt;
+    }
+    .profile-image {
+      background-size: cover;
+      background-position: center;
+      min-height: 70px;
+      box-shadow: $image-shadow;
+      min-width: 70px;
+      border-radius: $inner-radius;
+      border: 1px solid $base04;
+    }
+    .username-hostname {
+      font-weight: bold;
+      font-size: 18pt;
+      .username {
+      }
+      .at {
+        color: $base0D;
+      }
+      .hostname {
+      }
+    }
+    .os-version {
+      opacity: 0.4;
+      font-style: italic;
+    }
+  }
+
+  .apps-box {
+    background: $surface;
+    border-radius: $inner-radius;
+    padding: $padding;
+    min-width: 250px;
+    .apps-label {
+      font-family: "sans", "Font Awesome 7 Free";
+      font-weight: bold;
+      font-size: 14pt;
+    }
+    .arrow {
+      opacity: 0.4;
+      padding: $padding;
+    }
+    .app-button {
+      border-radius: $inner-radius;
+      .icon {
+        padding: calc($padding / 2);
+        padding-right: 0;
+      }
+      .name {
+        font-weight: bold;
+      }
+      .desc {
+        opacity: 0.4;
+      }
+      &:hover {
+        background: $surface;
+      }
+    }
+  }
+
+  .launchers-box {
+    background-color: $surface;
+    border-radius: $inner-radius;
+    padding: $padding;
+    .icon {
+    }
+    .launcher-button {
+      background-color: $surface;
+      border-radius: $inner-radius;
+      &:hover {
+        background-image: linear-gradient($surface);
+      }
+    }
+  }
+}
+
+.menu-container {
+  border-radius: $outer-radius;
+  background: $bg;
+  border: 1px solid $border;
+  padding: $padding;
+}
+
+.menu-content {
+}
+
+.menu-box {
+  border-radius: $inner-radius;
+  .music .icon {
+    color: $base0E;
+  }
+  .monitor .icon {
+    color: $base0B;
+  }
+  .weather .icon {
+    color: $base0A;
+  }
+  .selected {
+    .icon {
+      border-top-left-radius: $inner-radius;
+      border-bottom-left-radius: $inner-radius;
+    }
+    &.music .icon {
+      background-color: $base0E;
+      color: $bg;
+    }
+    &.monitor .icon {
+      background-color: $base0B;
+      color: $bg;
+    }
+    &.weather .icon {
+      background-color: $base0A;
+      color: $bg;
+    }
+  }
+  button {
+    background-color: $surface;
+    border-radius: $inner-radius;
+    font-weight: bold;
+    label {
+      padding: $padding;
+    }
+    .icon {
+    }
+    &:hover {
+      background-image: linear-gradient($surface);
+    }
+  }
+}
+
+.music-box {
+  margin-bottom: $padding;
+  border-radius: $inner-radius;
+  background: $surface;
+  .album-cover {
+    border-radius: $inner-radius;
+    background-size: cover;
+    background-position: center;
+    min-height: 125px;
+    min-width: 125px;
+    margin: $padding;
+    margin-right: 0;
+    border-radius: $inner-radius;
+    box-shadow: $image-shadow;
+    border: 1px solid $base04;
+  }
+  button {
+    background-color: transparent;
+  }
+  .music-info-controls {
+    margin: $padding;
+    .music-info {
+      margin: $padding;
+      .song {
+        font-weight: bold;
+        font-size: 14pt;
+      }
+      .artist {
+        opacity: 0.4;
+      }
+    }
+    .controls button {
+      padding: $padding;
+      background-color: $surface;
+      font-weight: bold;
+      font-size: 10pt;
+      min-width: 15px;
+      min-height: 15px;
+      border-radius: $inner-radius;
+      &:hover {
+        background-image: linear-gradient($surface);
+      }
+    }
+  }
+}
+
+.monitor-box {
+  // border-radius: $inner-radius;
+  // background-color: $surface;
+  margin-bottom: $padding;
+  border-radius: $inner-radius;
+  background: $surface;
+  padding: $padding;
+  .monitor-item {
+    background-color: $surface;
+    border-radius: $inner-radius;
+    min-height: 50px;
+    min-width: 115px;
+    // font-weight: bold;
+    .usage {
+      font-size: 13pt;
+      color: $fg;
+      padding: $padding;
+    }
+    .icon {
+      border-top-left-radius: $inner-radius;
+      border-bottom-left-radius: $inner-radius;
+      color: $bg;
+      font-size: 22pt;
+    }
+  }
+}
+
+.weather-box {
+  margin-bottom: $padding;
+  border-radius: $inner-radius;
+  background: $surface;
+  padding: $padding;
+  .icon {
+    font-size: 58pt;
+    padding: 0;
+  }
+  .timezone {
+    opacity: 0.4;
+    font-style: italic;
+  }
+  .temp-apparent-temp {
+    padding: $padding 0;
+  }
+  .temp {
+    font-size: 40pt;
+    font-weight: bold;
+  }
+  .apparent_temp {
+    font-size: 13pt;
+    // opacity: 0.4;
+  }
+}
+
+.outer-box {
+  all: unset;
+  .icon {
+    padding: 0;
+    margin: 0;
+  }
+  .search {
+  }
+  // background-color: $bg;
+  // border-radius: $outer-radius;
+  // padding: $padding;
+  // border: 1px solid $border;
+  min-width: calc(300px + calc($padding * 2));
+  min-height: calc(305px + calc($padding * 2));
+  .search-results {
+    min-width: 300px;
+    min-height: 305px;
+    background-color: $surface;
+    border-radius: $inner-radius;
+    padding: $padding;
+    .no-results {
+      font-size: 16pt;
+      padding: $padding;
+      font-weight: bold;
+      opacity: 0.4;
+    }
+    .entry {
+      min-height: 70px;
+      border-radius: $inner-radius;
+      padding: calc($padding / 2);
+      padding: 0 $padding;
+      .name {
+        font-weight: bold;
+      }
+      .desc,
+      .arrow {
+        opacity: 0.4;
+      }
+      &:hover {
+        background-image: linear-gradient($surface, $surface);
+      }
+      &.selected {
+        background-color: $base0D;
+        label {
+          color: $bg;
+        }
+        .arrow, .desc {
+          opacity: 0.8;
+        }
+      }
+    }
+  }
+  .search-bar {
+    background-color: $surface;
+    border-radius: $inner-radius;
+    .icon {
+      padding: $padding;
+      background-color: $base0D;
+      border-top-left-radius: $inner-radius;
+      border-bottom-left-radius: $inner-radius;
+      color: $bg;
+    }
+    entry {
+      // font-size: 13pt;
+      // font-weight: bold;
+    }
+  }
+}
