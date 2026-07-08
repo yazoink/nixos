@@ -19,6 +19,10 @@ pkgs.stdenv.mkDerivation rec {
     waybar
     font-awesome
     wtype
+    hyprpicker
+    wl-clipboard
+    grim
+    slurp
     (python3.withPackages (python-pkgs:
       with python-pkgs; [
         pygobject3

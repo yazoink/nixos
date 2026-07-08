@@ -1,8 +1,10 @@
 #!/usr/bin/env bash
 
+source "${YZSHELL_FUNCTIONS_DIR}/cmd/screenshot.sh"
+
 function cmd() {
     case "$1" in
-        # confirms search selection -- opens app or closes launcher
+            # confirms search selection -- opens app or closes launcher
         "search_confirm")
             # get currently selected app
             selected=$(eww -c "${YZSHELL_EWW_DIR}/control_center" get selected)
@@ -15,20 +17,27 @@ function cmd() {
             fi
             hide "control_center"
             ;;
-        "music_next") 
-            mpc -q next 
-            get "music_cover" 
+        "music_next")
+            mpc -q next
+            get "music_cover"
             eww -c "${YZSHELL_EWW_DIR}/control_center" poll song song_artist song_status cover_art
             ;;
-        "music_prev") 
+        "music_prev")
             mpc -q prev
-            get "music_cover" 
+            get "music_cover"
             eww -c "${YZSHELL_EWW_DIR}/control_center" poll song song_artist song_status cover_art
             ;;
-        "music_toggle") 
+        "music_toggle")
             mpc -q toggle
             eww -c "${YZSHELL_EWW_DIR}/control_center" poll song_status
             ;;
+        "pick_colour")
+            c="$(hyprpicker)"
+            [ "$c" != "" ] && wl-copy "$c" \
+                && notify-send "$c" "Copied to clipboard."
+            ;;
+        "screenshot_full") screenshot "full" ;;
+        "screenshot_select") screenshot "select" ;;
         "")
             echo "No argument specified."
             exit 1

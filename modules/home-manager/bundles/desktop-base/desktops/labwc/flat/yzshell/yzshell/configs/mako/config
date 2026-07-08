@@ -8,7 +8,7 @@ layer=overlay
 margin=4,0,0
 outer-margin=4
 padding=16
-font=sans
+font=sans 11
 
 [mode=do-not-disturb]
 invisible=1

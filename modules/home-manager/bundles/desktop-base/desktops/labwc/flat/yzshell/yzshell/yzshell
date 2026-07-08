@@ -35,6 +35,7 @@ export COLOURSCHEME="camellia"
 
 export PROFILE_IMAGE="${YZSHELL_IMAGES_DIR}/profile_image.jpg"
 export MUSIC_DIR="${HOME}/mu"
+export SCREENSHOT_DIR="${HOME}/pic/screenshots"
 
 if sensors | grep 'Core 0'; then
     export TEMPS_CMD="sensors | grep 'Core 0' | awk '{print \$3}' | sed 's/\\+//g;s/\\.[0-9]°C//g'"
@@ -106,11 +107,18 @@ function ensure_dirs() {
                 chmod -R 755 "$YZSHELL_MAKO_DIR"
             fi
             ;;
+        "screenshot")
+            if [ ! -d "$SCREENSHOT_DIR" ]; then
+                mkdir -p "$SCREENSHOT_DIR"
+                chmod -R 755 "$SCREENSHOT_DIR"
+            fi
+            ;;
         "")
             ensure_dirs "cache"
             ensure_dirs "eww"
             ensure_dirs "waybar"
             ensure_dirs "mako"
+            ensure_dirs "screenshot"
             ;;
     esac
 }

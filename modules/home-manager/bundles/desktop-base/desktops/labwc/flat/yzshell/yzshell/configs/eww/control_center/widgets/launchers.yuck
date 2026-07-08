@@ -14,13 +14,13 @@
       :vexpand true
       (button
         :class "launcher-button picker"
-        :onclick "${get_env("YZSHELL_CMD")} hide control_center & color &"
+        :onclick "${get_env("YZSHELL_CMD")} hide control_center & ${get_env("YZSHELL_CMD")} cmd 'pick_colour' &"
         :tooltip "Open colour picker"
         (label :text "" :class "icon")
       )
       (button
         :class "launcher-button shot"
-        :onclick "${get_env("YZSHELL_CMD")} hide control_center & screenshot -s &"
+        :onclick "${get_env("YZSHELL_CMD")} hide control_center & ${get_env("YZSHELL_CMD")} cmd screenshot_select &"
         :tooltip "Take screenshot"
         (label :text "" :class "icon")
       )

@@ -24,12 +24,12 @@
       "@command" = "${../../../scripts/wofi.sh}";
     };
   }
-  # reload eww
+  # reload shell
   {
-    "@key" = "W-S-e";
+    "@key" = "W-S-y";
     action = {
       "@name" = "Execute";
-      "@command" = "yzshell";
+      "@command" = "yzshell restart";
     };
   }
   # lock screen
@@ -46,7 +46,7 @@
     "@key" = "W-S-d";
     action = {
       "@name" = "Execute";
-      "@command" = "bash ${../../../scripts/dnd.sh}";
+      "@command" = "yzshell update dnd";
     };
   }
   # power menu
@@ -62,15 +62,15 @@
     "@key" = "W-S-c";
     action = {
       "@name" = "Execute";
-      "@command" = "yzshell toggle control_center";
+      "@command" = "yzshell toggle calendar";
     };
   }
-  # calendar
+  # control_center
   {
     "@key" = "W-C-m";
     action = {
       "@name" = "Execute";
-      "@command" = "yzshell toggle calendar";
+      "@command" = "yzshell toggle control_center";
     };
   }
 ]
