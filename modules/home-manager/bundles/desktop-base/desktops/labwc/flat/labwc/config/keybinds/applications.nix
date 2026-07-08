@@ -29,7 +29,7 @@
     "@key" = "W-S-y";
     action = {
       "@name" = "Execute";
-      "@command" = "yzshell restart";
+      "@command" = "yzshell reload";
     };
   }
   # lock screen
