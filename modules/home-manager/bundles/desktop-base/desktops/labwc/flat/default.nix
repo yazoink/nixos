@@ -17,7 +17,7 @@ lib.mkMerge [
   (import ../common/hypridle {inherit config osConfig lib pkgs;})
   # (import ../common/eww {inherit config osConfig lib pkgs;}) # used for old eww config
   (import ../common/hyprlock {inherit config osConfig lib pkgs;}) # using eww lock
-  (import ../common/swayosd {inherit config osConfig lib pkgs;})
+  # (import ../common/swayosd {inherit config osConfig lib pkgs;})
   (import ../common/wofi {inherit config osConfig lib pkgs;})
   (import ../common/screenshot {inherit config osConfig lib pkgs;})
   (import ../common/color {inherit config osConfig lib pkgs;})
