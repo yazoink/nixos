@@ -14,7 +14,8 @@ in {
   stylix.targets.mako.enable = false;
   services.mako = with colors; {
     enable = true;
-    settings = {
+    /*
+      settings = {
       layer = "overlay";
       actions = "true";
       icons = "true";
