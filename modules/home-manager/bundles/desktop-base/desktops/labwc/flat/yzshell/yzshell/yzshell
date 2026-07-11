@@ -2,6 +2,13 @@
 
 # requires env vars: YZSHELL_CMD (command to run yzshell) and YZSHELL_DIR (directory containing required files)
 
+export YZSHELL_FUNCTIONS_DIR="${YZSHELL_DIR}/functions" # dir containing scipts/modules
+
+source "${YZSHELL_FUNCTIONS_DIR}/get/get.sh"
+source "${YZSHELL_FUNCTIONS_DIR}/cmd/cmd.sh"
+source "${YZSHELL_FUNCTIONS_DIR}/update/update.sh"
+source "${YZSHELL_FUNCTIONS_DIR}/configure/configure.sh"
+
 export YZSHELL_BASE_CONFIG_DIR="${YZSHELL_BASE_DIR}/configs"
 
 export YZSHELL_EWW_DIR="${HOME}/.config/widgets" # dir containing eww conf
@@ -11,13 +18,16 @@ export YZSHELL_EWW_CSS_COLOURS_FILE="${YZSHELL_EWW_DIR}/scss/_colours.scss" # ew
 export YZSHELL_ASSETS_DIR="${YZSHELL_DIR}/assets" # dir containing misc assets
 export YZSHELL_IMAGES_DIR="${YZSHELL_ASSETS_DIR}/images" # dir containing images
 
-export YZSHELL_FUNCTIONS_DIR="${YZSHELL_DIR}/functions" # dir containing scipts/modules
 export YZSHELL_BASE_CONFIG_DIR="${YZSHELL_DIR}/configs" # dir containing .config files to be copied
 export YZSHELL_COLOURS_DIR="${YZSHELL_DIR}/colourschemes" # dir containing colourschemes
 
 export YZSHELL_CACHE_DIR="/tmp/yzshell"
 export YZSHELL_WEATHER_CACHE_FILE="${YZSHELL_CACHE_DIR}/weather.json"
 export YZSHELL_APP_SEARCH_CACHE_FILE="${YZSHELL_CACHE_DIR}/apps.json"
+export YZSHELL_COLOURSCHEME_CACHE_FILE="${YZSHELL_CACHE_DIR}/colourscheme"
+export YZSHELL_WALLPAPER_DIR_CACHE_FILE="${YZSHELL_CACHE_DIR}/wallpaper_dir"
+export YZSHELL_WALLPAPER_FILE_CACHE_FILE="${YZSHELL_CACHE_DIR}/wallpaper_file"
+export YZSHELL_WALLPAPER_FILL_CACHE_FILE="${YZSHELL_CACHE_DIR}/wallpaper_fill"
 
 export YZSHELL_WAYBAR_DIR="${HOME}/.config/bar"
 export YZSHELL_WAYBAR_CSS_COLOURS_FILE="${YZSHELL_WAYBAR_DIR}/colours.css" # eww colourscheme css path
@@ -31,11 +41,14 @@ export TERM="foot"
 export BATTERY_NAME="BAT0"
 export WAYBAR_SHOW_BATTERY=false
 export WAYBAR_SHOW_BACKLIGHT=false
-export COLOURSCHEME="camellia"
 
 export PROFILE_IMAGE="${YZSHELL_IMAGES_DIR}/profile_image.jpg"
 export MUSIC_DIR="${HOME}/mu"
 export SCREENSHOT_DIR="${HOME}/pic/screenshots"
+
+export YZSHELL_USER_CONFIG_DIR="${HOME}/.config/yzshell"
+export YZSHELL_USER_CONFIG_FILE="${YZSHELL_USER_CONFIG_DIR}/config"
+export YZSHELL_USER_COLOURS_DIR="${YZSHELL_USER_CONFIG_DIR}/colourschemes"
 
 if sensors | grep 'Core 0'; then
     export TEMPS_CMD="sensors | grep 'Core 0' | awk '{print \$3}' | sed 's/\\+//g;s/\\.[0-9]°C//g'"
@@ -50,16 +63,16 @@ if [[ "$XDG_CURRENT_DESKTOP" == *"labwc"* ]]; then
     export WM_EXIT_CMD="labwc --exit"
 fi
 
-source "${YZSHELL_FUNCTIONS_DIR}/get/get.sh"
-source "${YZSHELL_FUNCTIONS_DIR}/cmd/cmd.sh"
-source "${YZSHELL_FUNCTIONS_DIR}/update/update.sh"
-source "${YZSHELL_FUNCTIONS_DIR}/configure/configure.sh"
+#if [ -f "$YZSHELL_USER_CONFIG_FILE" ]; then
+#    source "$YZSHELL_USER_CONFIG_FILE"
+#    [ ! -z "$colourscheme" ] && export COLOURSCHEME="$colourscheme"
+#fi
 
 
 function launch_window() {
     name="$1"
     update_cmd="$2"
-    eww -c "${YZSHELL_EWW_DIR}/${name}" daemon &> /dev/null & disown
+    eww -c "${YZSHELL_EWW_DIR}/${name}" daemon & disown
     eval $update_cmd
     eww -c "${YZSHELL_EWW_DIR}/${name}" open "$name" &
 }
@@ -70,13 +83,15 @@ function kill_window() {
 }
 
 function reload_window() {
-    name=""
-    [ ! -z "$1" ] && name="$1"
-    eww -c "${YZSHELL_EWW_DIR}/${name}" reload > /dev/null 2>&1
+    name="$1"
+    update_cmd="$2"
+    eval $update_cmd
+    eww -c "${YZSHELL_EWW_DIR}/${name}" reload &
 }
 
 function window_logs() {
     name="$1"
+    echo "$YZSHELL_EWW_DIR"
     eww -c "${YZSHELL_EWW_DIR}/${name}" logs
 }
 
@@ -125,11 +140,14 @@ function ensure_dirs() {
 
 
 function launch_yzshell() {
-    pidof yzshell && kill_yzshell
+    kill_yzshell
     configure
-    launch_window "control_center" "update search_cache && update search_results"
+    launch_window "control_center" "update 'search_cache' && update 'search_results'"
     launch_window "power"
     launch_window "calendar"
+    launch_window "screenshot"
+    launch_window "settings" "update 'wallpaper' & update 'wallpaper_dir' & update 'colourschemes' &"
+    show "bar"
     reload "notifs"
 }
 
@@ -137,6 +155,7 @@ function kill_yzshell() {
     while pidof waybar; do pkill waybar; done
     while pidof eww; do pkill eww; done
     while pidof mako; do pkill mako; done
+    while pidof swaybg; do pkill swaybg; done
 }
 
 function window_visible() {
@@ -147,17 +166,30 @@ function window_visible() {
 
 function reload() {
     case "$1" in
-        "power" | "control_center" | "calendar") reload_window "$1" ;;
+        "power" | "calendar" | "screenshot") reload_window "$1" "$2" ;;
         "bar") hide "bar"; show "bar" ;;
+        "control_center")
+            reload_window "control_center"
+            update "search_cache"
+            update "search_results"
+            ;;
+        "settings")
+            reload_window "settings"
+            update "wallpaper"
+            update "wallpaper_dir"
+            update "colourschemes"
+            ;;
         "notifs")
             while pidof mako; do pkill mako; done
             exec mako -c "$YZSHELL_MAKO_CONF_FILE" &
             ;;
         "")
             reload "bar"
-            reload "control_center"
+            reload "control_center" "update 'search_cache' && update 'search_results'"
             reload "calendar"
             reload "power"
+            reload "screenshot"
+            reload "settings" "update 'wallpaper' & update 'wallpaper_dir' & update 'colourschemes' &"
             reload "notifs"
             ;;
         *)
@@ -169,6 +201,8 @@ function reload() {
 
 function hide() {
     case "$1" in
+        "settings") eww -c "${YZSHELL_EWW_DIR}/settings" update settings_visible=false ;;
+        "screenshot") eww -c "${YZSHELL_EWW_DIR}/screenshot" update screenshot_visible=false ;;
         "power") eww -c "${YZSHELL_EWW_DIR}/power" update power_visible=false ;;
         "control_center")
             eww -c "${YZSHELL_EWW_DIR}/control_center" update control_center_visible=false
@@ -191,7 +225,14 @@ function hide() {
 
 function show() {
     case "$1" in
+        "settings")
+            eww -c "${YZSHELL_EWW_DIR}/settings" update settings_visible=true
+            ;;
         "power") eww -c "${YZSHELL_EWW_DIR}/power" update power_visible=true ;;
+        "screenshot")
+            update "screenshot_output"
+            eww -c "${YZSHELL_EWW_DIR}/screenshot" update screenshot_visible=true
+            ;;
         "control_center")
             update "search_results"
             eww -c "${YZSHELL_EWW_DIR}/control_center" update control_center_visible=true
@@ -215,7 +256,7 @@ function show() {
 
 function toggle() {
     case "$1" in
-        "power" | "calendar" | "control_center")
+        "power" | "calendar" | "control_center" | "screenshot" | "settings")
             if window_visible "$1"; then
                 hide "$1"
             else
@@ -243,7 +284,7 @@ function toggle() {
 
 function inspector() {
     case "$1" in
-        "power" | "calendar" | "control_center")
+        "power" | "calendar" | "control_center" | "screenshot" | "settings")
             eww -c "${YZSHELL_EWW_DIR}/$1" inspector ;;
         "")
             echo "No window specified"
@@ -258,9 +299,11 @@ function inspector() {
 
 function logs() {
     case "$1" in
+        "settings") window_logs "settings" ;;
         "power") window_logs "power" ;;
         "control_center") window_logs "control_center" ;;
         "calendar") window_logs "calendar" ;;
+        "screenshot") window_logs "screenshot" ;;
         "bar") cat "$YZSHELL_WAYBAR_LOG_FILE" ;;
         "")
             echo "No window specified"
@@ -286,9 +329,39 @@ function help() {
         - show <window>
         - hide <window>
         - inspector <window>
-        - update <arg>
-        - cmd <arg>
-        - get <arg>
+        - update <option>
+          options:
+          - search_cache
+          - search_results
+          - dnd
+          - weather_cache
+        - cmd <option>
+          options:
+          - search_confirm
+          - music_next
+          - music_prev
+          - music_toggle
+          - pick_colour
+          - screenshot_full
+          - screenshot_select
+        - get <option>
+          options:
+          - dnd_icon
+          - os_version
+          - music_artist
+          - music_song
+          - music_status
+          - music_cover
+          - cpu_temp
+          - cpu_perc
+          - weather_temp
+          - weather_apparent_temp
+          - weather_icon
+          - weather_icon_colour
+          - weather_timezone
+          - bar_menu_icon
+        - colourscheme <name>
+          the name of the colourscheme would be the name of its respective file in '${YZSHELL_COLOURS_DIR}' or '${YZSHELL_USER_COLOURS_DIR}', omitting the '.json' (i.e. 'camellia.json' would equate to 'camellia')
 
     windows:
         - control_center
@@ -311,10 +384,11 @@ function main() {
         "cmd") cmd "${@:2}" ;;
         "get") get "${@:2}" ;;
         "colourscheme")
+            echo "$2" > "$YZSHELL_COLOURSCHEME_CACHE_FILE"
             ensure_dirs "waybar"
             ensure_dirs "eww"
             ensure_dirs "mako"
-            configure "colours" "$2"
+            configure
             reload
             ;;
         *) help ;;

@@ -4,9 +4,56 @@ source "${YZSHELL_FUNCTIONS_DIR}/update/search.sh"
 
 function update() {
     case "$1" in
-         # updates the json file storing app list
+        "colourschemes")
+            eww -c "${YZSHELL_EWW_DIR}/settings" \
+                update colourschemes="$("$YZSHELL_FUNCTIONS_DIR"/update/colourschemes.py)"
+            # "$YZSHELL_FUNCTIONS_DIR"/update/colourschemes.py
+            ;;
+        "wallpaper")
+            file="${YZSHELL_IMAGES_DIR}/wallpapers/dolphins-tile.png"
+            if [ ! -z "$2" ]; then
+                file="$2"
+            elif [ -f "$YZSHELL_WALLPAPER_FILE_CACHE_FILE" ]; then
+                file="$(cat "$YZSHELL_WALLPAPER_FILE_CACHE_FILE")"
+            fi
+            update wallpaper_file "$file"
+            while pidof swaybg; do pkill swaybg; done
+            fill="tile"
+            if [ ! -z "$3" ]; then
+                echo "??"
+                fill="$3"
+            elif [ -f "$YZSHELL_WALLPAPER_FILL_CACHE_FILE" ]; then
+                echo "????"
+                fill="$(cat "$YZSHELL_WALLPAPER_FILL_CACHE_FILE")"
+            fi
+            update wallpaper_fill "$fill"
+            swaybg -i "$file" -m "$fill" &
+            ;;
+        "wallpaper_dir")
+            eww -c "${YZSHELL_EWW_DIR}/settings" update wallpapers='[]'
+            dir="${YZSHELL_IMAGES_DIR}/wallpapers"
+            if [ -f "$YZSHELL_WALLPAPER_DIR_CACHE_FILE" ]; then
+                [ -d "$(cat "$YZSHELL_WALLPAPER_DIR_CACHE_FILE")" ] \
+                    && dir="$(cat "$YZSHELL_WALLPAPER_DIR_CACHE_FILE")"
+            fi
+            if [ ! -z "$2" ]; then
+                [ -d "$2" ] && dir="$2"
+            fi
+            eww -c "${YZSHELL_EWW_DIR}/settings" update wallpaper_dir="$dir"
+            eww -c "${YZSHELL_EWW_DIR}/settings" update wallpapers="$(get available_wallpapers "$dir")"
+            echo "$dir" > "$YZSHELL_WALLPAPER_DIR_CACHE_FILE"
+            ;;
+        "wallpaper_fill")
+            eww -c "${YZSHELL_EWW_DIR}/settings" update fill="$2"
+            echo "$2" > "$YZSHELL_WALLPAPER_FILL_CACHE_FILE"
+            ;;
+        "wallpaper_file")
+            eww -c "${YZSHELL_EWW_DIR}/settings" update current_wallpaper="$2"
+            echo "$2" > "$YZSHELL_WALLPAPER_FILE_CACHE_FILE"
+            ;;
+            # updates the json file storing app list
         "search_cache") update_search_cache "$YZSHELL_APP_SEARCH_CACHE_FILE" "$TERM" ;;
-        # refreshes the search results, takes search string as optional arg
+            # refreshes the search results, takes search string as optional arg
         "search_results")
             selected=-1
 
@@ -41,6 +88,8 @@ function update() {
                 echo false
             fi
             ;;
+        "screenshot_output")
+            eww -c "${YZSHELL_EWW_DIR}/screenshot" update output="${SCREENSHOT_DIR}/$(date +%Y%m%d_%H:%M:%S_screenshot).png" ;;
         "")
             echo "No argument specified."
             exit 1

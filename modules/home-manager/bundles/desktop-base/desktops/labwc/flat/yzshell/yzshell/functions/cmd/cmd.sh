@@ -11,8 +11,7 @@ function cmd() {
             if [ $selected -gt -1 ]; then
                 # get launch command of selected app
                 c="$(eww -c "${YZSHELL_EWW_DIR}/control_center" get search_results \
-                    | jq ".[${selected}].cmd" \
-                    | sed 's/^\"//g;s/\"$//g')"
+                    | jq -r ".[${selected}].cmd")"
                 (cd "$HOME"; eval $c) & disown
             fi
             hide "control_center"
@@ -36,8 +35,8 @@ function cmd() {
             [ "$c" != "" ] && wl-copy "$c" \
                 && notify-send "$c" "Copied to clipboard."
             ;;
-        "screenshot_full") screenshot "full" ;;
-        "screenshot_select") screenshot "select" ;;
+        "screenshot_full") screenshot "full" "$2" ;;
+        "screenshot_select") screenshot "select" "$2" ;;
         "")
             echo "No argument specified."
             exit 1

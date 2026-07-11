@@ -1,3 +1,4 @@
+# nix-build -E 'with import <nixpkgs> {}; callPackage ./yzshell.nix {}'
 {
   pkgs,
   lib,
@@ -23,6 +24,7 @@ pkgs.stdenv.mkDerivation rec {
     wl-clipboard
     grim
     slurp
+    swaybg
     (python3.withPackages (python-pkgs:
       with python-pkgs; [
         pygobject3

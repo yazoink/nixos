@@ -13,6 +13,12 @@
       :space-evenly false
       :vexpand true
       (button
+        :class "launcher-button settings"
+        :tooltip "Open shell settings"
+        :onclick "${get_env("YZSHELL_CMD")} hide control_center & ${get_env("YZSHELL_CMD")} show settings &"
+        (label :text "" :class "icon")
+      )
+      (button
         :class "launcher-button picker"
         :onclick "${get_env("YZSHELL_CMD")} hide control_center & ${get_env("YZSHELL_CMD")} cmd 'pick_colour' &"
         :tooltip "Open colour picker"
@@ -20,7 +26,7 @@
       )
       (button
         :class "launcher-button shot"
-        :onclick "${get_env("YZSHELL_CMD")} hide control_center & ${get_env("YZSHELL_CMD")} cmd screenshot_select &"
+        :onclick "${get_env("YZSHELL_CMD")} hide control_center & ${get_env("YZSHELL_CMD")} show screenshot &"
         :tooltip "Take screenshot"
         (label :text "" :class "icon")
       )

@@ -1,0 +1,86 @@
+(defvar settings_visible false)
+(defvar fill "fill")
+(defvar menu_item 0)
+
+(include "./widgets/wallpaper.yuck")
+(include "./widgets/colours.yuck")
+
+(defwindow settings
+  :monitor 0
+  :geometry (geometry
+    :x 4
+    :y 4
+    :anchor "bottom center"
+  )
+  :stacking "fg"
+  :exclusive false
+  :focusable "ondemand"
+  (revealer
+    :transition "slideup"
+    :reveal settings_visible
+    (box
+      :orientation "v"
+      :class "settings-box"
+      :space-evenly false
+      :vexpand false
+      :spacing 8
+      (box
+        :class "settings-menu"
+        :orientation "h"
+        :halign "fill"
+        :space-evenly true
+        :hexpand true
+        (box
+          :orientation "h"
+          :halign "center"
+          :space-evenly false
+          :spacing 8
+          (button
+            :onclick "${EWW_CMD} update menu_item=0"
+            :tooltip "Wallpaper settings"
+            :class "wallpaper ${menu_item == 0 ? "selected" : ""}"
+            (box
+              :orientation "h"
+              :space-evenly false
+              (label :text "" :class "icon")
+              (revealer
+                :transition "slideright"
+                :reveal {menu_item == 0 ? true : false}
+                (label :text "Wallpaper")
+              )
+            )
+          )
+          (button
+            :onclick "${EWW_CMD} update menu_item=1"
+            :tooltip "Colourscheme settings"
+            :class "colours ${menu_item == 1 ? "selected" : ""}"
+            (box
+              :orientation "h"
+              :space-evenly false
+              (label :text "" :class "icon")
+              (revealer
+                :transition "slideright"
+                :reveal {menu_item == 1 ? true : false}
+                (label :text "Colourscheme")
+              )
+            )
+          )
+          (button
+            :onclick "${get_env("YZSHELL_CMD")} hide settings"
+            :tooltip "Close settings"
+            :class "close ${menu_item == 1 ? "selected" : ""}"
+            (label :text "" :class "icon")
+          )
+        )
+      )
+      (stack
+        :selected menu_item
+        :class "settings-content"
+        :same-size false
+        :transition "slideleft"
+        (wallpaper)
+        (colourschemes)
+      )
+    )
+  )
+)

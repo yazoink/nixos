@@ -1,0 +1,113 @@
+@import "../scss/colours";
+@import "../scss/misc";
+
+.settings-box {
+  padding: $padding;
+  border-radius: $outer-radius;
+  background: $bg;
+  border: 1px solid $border;
+  button {
+    background-color: $surface;
+    border-radius: $inner-radius;
+    label, image {
+      padding: $padding;
+    }
+    &:hover {
+      background-image: linear-gradient($surface, $surface);
+    }
+  }
+  entry {
+    background-color: $surface;
+    border-radius: $inner-radius;
+    padding: $padding;
+  }
+  .settings-menu {
+    border-radius: $inner-radius;
+    font-weight: bold;
+    .wallpaper .icon {
+      color: $base0E;
+    }
+    .colours .icon {
+      color: $base0B;
+    }
+    .close label {
+      color: $base08;
+    }
+    .selected {
+      .icon {
+        border-top-left-radius: $inner-radius;
+        border-bottom-left-radius: $inner-radius;
+      }
+      &.wallpaper .icon {
+        background-color: $base0E;
+        color: $bg;
+      }
+      &.colours .icon {
+        background-color: $base0B;
+        color: $bg;
+      }
+    }
+  }
+  .colours-scroller {
+    min-height: 250px;
+    // background-color: $surface;
+    // border-radius: $inner-radius;
+    .colours-box {
+      font-weight: bold;
+      // padding: $padding;
+      border-radius: $inner-radius;
+      .scheme-button {
+        .scheme-name {
+          font-size: 15pt;
+        }
+        padding: $padding;
+        &:hover {
+          background-image: none;
+        }
+      }
+      label {
+        padding: 0;
+      }
+      .scheme-colours label {
+        min-width: 35px;
+        min-height: 35px;
+        color: transparent;
+        border-radius: $inner-radius;
+      }
+    }
+  }
+  .wp-scroller {
+    min-height: 300px;
+    min-width: 530px;
+    background-color: $surface;
+    border-radius: $inner-radius;
+    .wp-button-box {
+      padding: $padding;
+      button {
+        label {
+          padding-top: 0;
+        }
+        image {
+          padding-bottom: 0;
+        }
+      }
+    }
+  }
+  .wp-box {
+    button {
+      &.selected {
+        background-color: $base0D;
+        color: $bg;
+        border-radius: $inner-radius;
+        label {
+          color: $bg;
+        }
+      }
+      &:hover {
+        background-image: linear-gradient($surface);
+      }
+      image {
+      }
+    }
+  }
+}

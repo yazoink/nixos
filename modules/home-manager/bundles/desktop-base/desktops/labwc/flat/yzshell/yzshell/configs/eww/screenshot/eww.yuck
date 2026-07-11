@@ -1,0 +1,53 @@
+(defvar screenshot_visible false)
+(defvar output "")
+
+(defwindow screenshot
+  :monitor 0
+  :geometry (geometry
+    :x 4
+    :y 4
+    :anchor "bottom center"
+  )
+  :stacking "fg"
+  :exclusive false
+  :focusable "ondemand"
+  (revealer
+    :transition "slideup"
+    :reveal screenshot_visible
+    (box
+      :orientation "h"
+      :class "screenshot-box"
+      :space-evenly false
+      :vexpand false
+      :spacing 8
+      (input
+        :value output
+        :onchange "${EWW_CMD} update output='{}'"
+        :tooltip "Save to"
+      )
+      (box
+        :orientation "h"
+        :class "screenshot-buttons-box"
+        :space-evenly false
+        :vexpand false
+        :valign "end"
+        :spacing 8
+        (button
+          :onclick "${get_env("YZSHELL_CMD")} cmd 'screenshot_full' '${output}' 'sleep' &"
+          :tooltip "Take a fullscreen screenshot"
+          (label :text "" :class "icon screenshot-full")
+        )
+        (button
+          :onclick "${get_env("YZSHELL_CMD")} cmd 'screenshot_select' '${output}' &"
+          :tooltip "Take a selective screenshot"
+          (label :text "" :class "icon screenshot-select")
+        )
+        (button
+          :onclick "${get_env("YZSHELL_CMD")} hide 'screenshot'"
+          :tooltip "Cancel"
+          (label :text "" :class "icon screenshot-cancel")
+        )
+      )
+    )
+  )
+)

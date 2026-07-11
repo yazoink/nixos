@@ -5,6 +5,9 @@ source "${YZSHELL_FUNCTIONS_DIR}/get/cpu_perc.sh"
 
 function get() {
     case "$1" in
+        "available_wallpapers")
+            "$YZSHELL_FUNCTIONS_DIR"/get/available_wallpapers.py "$2"
+            ;;
         "dnd_icon")
             mode="$(makoctl mode)"
             if [[ "$mode" == *"do-not-disturb"* ]]; then
@@ -69,6 +72,7 @@ function get() {
                 echo ""
             fi
             ;;
+        "eww_var") eww -c "${YZSHELL_EWW_DIR}/${2}" get "$3" ;;
         "")
             echo "No argument specified."
             exit 1
