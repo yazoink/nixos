@@ -21,7 +21,6 @@ in
     (import ./vesktop {inherit config pkgs osConfig lib colors;})
     (import ./lutgen {inherit config pkgs osConfig lib colors;})
     (import ./gedit {inherit config pkgs osConfig lib colors;})
-    (import ./vscode {inherit config pkgs osConfig lib colors;})
     {
       xdg.configFile."colors.css".text = with colors; ''
         @define-color base00 #${base00};

@@ -1,5 +1,6 @@
 {wallpaperCommand, ...}: {
   autostart = [
+    "waybar &"
     "${wallpaperCommand} -q &"
     "poweralertd &"
     "nm-applet &"

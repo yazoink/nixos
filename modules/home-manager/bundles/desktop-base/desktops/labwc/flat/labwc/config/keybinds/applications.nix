@@ -1,14 +1,4 @@
 {...}: [
-  /*
-    {
-    "@key" = "Escape";
-    action = {
-      "@name" = "Execute";
-      "@command" = "eww update control_center_visible=false";
-      "@onRelease" = true;
-    };
-  }
-  */
   # launcher
   {
     "@key" = "W-p";
@@ -24,12 +14,12 @@
       "@command" = "${../../../scripts/wofi.sh}";
     };
   }
-  # reload shell
+  # reload eww
   {
-    "@key" = "W-S-y";
+    "@key" = "W-S-e";
     action = {
       "@name" = "Execute";
-      "@command" = "yzshell reload";
+      "@command" = "bash ${../../../scripts/launch-eww.sh} notify";
     };
   }
   # lock screen
@@ -46,7 +36,7 @@
     "@key" = "W-S-d";
     action = {
       "@name" = "Execute";
-      "@command" = "yzshell update dnd";
+      "@command" = "bash ${../../../scripts/dnd.sh}";
     };
   }
   # power menu
@@ -54,7 +44,7 @@
     "@key" = "W-S-q";
     action = {
       "@name" = "Execute";
-      "@command" = "yzshell toggle power";
+      "@command" = "bash ${../../../scripts/power.sh}";
     };
   }
   # calendar
@@ -62,15 +52,15 @@
     "@key" = "W-S-c";
     action = {
       "@name" = "Execute";
-      "@command" = "yzshell toggle calendar";
+      "@command" = "bash ${../../../scripts/calendar.sh}";
     };
   }
-  # control_center
+  # calendar
   {
     "@key" = "W-C-m";
     action = {
       "@name" = "Execute";
-      "@command" = "yzshell toggle control_center";
+      "@command" = "bash ${../../../scripts/control-center.sh}";
     };
   }
 ]

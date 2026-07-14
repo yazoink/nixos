@@ -7,7 +7,6 @@
       "files.autoSave" = "on";
       "window.zoomLevel" = 1;
     };
-    mutableExtensionsDir = false;
     profiles.default.extensions = with pkgs.vscode-extensions; [
       hars.cppsnippets
       ms-vscode.cpptools

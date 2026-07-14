@@ -19,16 +19,16 @@ in {
       actions = "true";
       icons = "true";
       anchor = "bottom-right";
-      border-radius = "16";
+      border-radius = "18";
       background-color = "#${base00}";
       border-color = "#${base01}";
       text-color = "#${base05}";
       progress-color = "over #${base05}";
       border-size = "1";
       font = "${font.name} ${toString font.size}";
-      padding = "16";
-      margin = "4,0,0";
-      outer-margin = "4";
+      padding = "15";
+      margin = "5,0,0";
+      outer-margin = "5";
       default-timeout = "5000";
       # icon-path = "/run/current-system/sw/share/icons/${iconTheme.name}";
       "mode=do-not-disturb" = {

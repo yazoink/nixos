@@ -66,7 +66,6 @@
     };
     features = {
       # etterna.enable = true;
-      vscode.enable = true;
       garfetch = {
         enable = true;
         style = 2;

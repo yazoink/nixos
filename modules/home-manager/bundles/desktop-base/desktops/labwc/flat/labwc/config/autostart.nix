@@ -1,5 +1,5 @@
 {...}: {
   autostart = [
-    "yzshell &"
+    "bash ${../../scripts/launch-eww.sh} &"
   ];
 }
